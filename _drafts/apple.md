@@ -6,45 +6,94 @@ title: Apple versus FBI and Software Transparency
 {{ page.title }}
 ================
 
-The Apple versus FBI showdown[] has quickly become
-one of the most crucial flashpoints of the ``New Crypto Wars''[].
-In brief, the FBI invoked the All Writs Act,
-a catch-all provision for assistance of law enforcement
-dating from shortly after the Constitution and Bill of Rights were ratified,
-to demand that Apple create a custom version of its iOS
-to help the FBI decrypt the contents of an employer-provided iPhone
-used by one of the San Bernardino killers.
-While the FBI most certainly has the expertise in-house
-to create such a backdoored version of iOS,
-Apple's devices are designed to reject any modified version of iOS
-unless it is digitally signed with a secret key
+The [Apple versus FBI showdown](http://www.nytimes.com/2016/02/18/technology/apple-timothy-cook-fbi-san-bernardino.html)
+has quickly become
+one of the most crucial flashpoints of the
+&ldquo;[new Crypto War.](http://www.dailydot.com/politics/tim-cook-encryption-iphone-hero-businessman/)&rdquo;
+The FBI invoked
+[the All Writs Act of 1789](https://www.washingtonpost.com/news/volokh-conspiracy/wp/2016/02/19/preliminary-thoughts-on-the-apple-iphone-order-in-the-san-bernardino-case-part-2-the-all-writs-act/),
+a catch-all authority for assistance of law enforcement,
+demanding that Apple create a custom version of its iOS
+to help the FBI decrypt an iPhone used by one of the
+[San Bernardino shooters](http://www.newyorker.com/magazine/2016/02/22/preparing-for-apocalypse-in-san-bernardino).
+While Apple probably [could comply](http://blog.trailofbits.com/2016/02/17/apple-can-comply-with-the-fbi-court-order/),
+it is
+[fighting the order](https://cryptome.org/2016/02/usg-apple-016.pdf)
+on the grounds that 
+&ldquo;the government demands that Apple create a back door
+to defeat the encryption on the iPhone,
+making its users’ most confidential and personal information vulnerable
+to hackers, identity thieves, hostile foreign agents,
+and unwarranted government surveillance.
+&rdquo;
+
+Indeed,
+demanding that a private company
+[create a new forensic instrument](http://www.zdziarski.com/blog/?p=5645)
+to the government's order,
+weakening the security of Apple's own devices and
+[exposing their users' innermost secrets](http://www.slate.com/articles/technology/technology/2016/02/apple_and_the_fbi_think_iphones_are_safes_a_philosopher_explains_what_they.single.html),
+may
+[violate the first amendment](http://motherboard.vice.com/read/fbis-case-against-apple-could-violate-free-speech) &ndash;
+and at any rate is
+&ldquo;[like asking General Motors to build a new truck
+with a fifth wheel by next month.](https://www.eff.org/deeplinks/2016/02/technical-perspective-apple-iphone-case)&rdquo;
+While the FBI could probably create their own a backdoored version of iOS,
+Apple's devices accept only software updates digitally signed with a secret key
 that presumably only Apple controls.
-*Presumably*.  We'll come back to that.
+*Presumably*.  Let's come back to that.
 
-One of the most interesting and unusual features of this particular legal case
-is *how quickly the public learned about it*.
+One of the most interesting and unusual features of this particular case
+is how quickly we, the public,
+[learned about it from Apple](http://www.apple.com/customer-letter/).
 The FBI could have quietly delivered this order under seal,
-as it has done with similar decryption-assistance demands [to apple]
-and [to other companies].
-Apple even reportedly[] *requested* that the order be sealed,
-but the FBI chose to to create a big, public showdown.
-The facts of the case undermine the FBI's claims
-of this particular iPhone's importance to fight terrorism:
-e.g., that the killers are already long dead,
-that the mountain of metadata the FBI already has about the killers
-revealed no hint of connections to other terrorists,
-and that the iPhone in question was an employer-provided work phone
-that the killers did not bother to destroy
-as they did their two personal phones[].
-The unmistakable Occam's Razor conclusion from these facts,
-as many have concluded[],
-is that the FBI is far less interested in the data
-than in the court precedent from winning such a public battle.
+as it has done with
+[similar decryption-assistance demands to Apple](http://www.wsj.com/articles/justice-department-seeks-to-force-apple-to-extract-data-from-about-12-other-iphones-1456202213) &ndash;
+as well as to other companies [such as Lavabit](http://www.theguardian.com/commentisfree/2014/may/20/why-did-lavabit-shut-down-snowden-email),
+the now-defunct E-mail provider that Edward Snowden used.
 
-In short, it appears [the FBI is playing politics],
-carefully choosing a battleground on which they think they can win
-[using the terrorism card],
-even if the specific iPhone in question has little or no intelligence value.
+Apple even [reportedly requested that the FBI's order be sealed](http://www.nytimes.com/2016/02/19/technology/how-tim-cook-became-a-bulwark-for-digital-privacy.html?smprod=nytcore-iphone&smid=nytcore-iphone-share),
+but the FBI wanted the public showdown.
+The facts of the case [undermine the FBI's claims](https://www.techdirt.com/articles/20160220/22412933661/no-fbi-does-not-need-info-farooks-iphone-this-is-entirely-about-precedent.shtml)
+of urgently needing this iPhone's contents decrypted:
+the killers were already long dead,
+the mountain of metadata the FBI already had about the killers
+revealed no hint of connections to other terrorists,
+and the iPhone in question was an employer-provided work phone
+that the killers did not bother to destroy
+as they did their two personal phones.
+The Occam's Razor interpretation of the facts suggest
+that the FBI is far less interested in the data
+than in [the court precedent](http://www.macworld.com/article/3034355/ios/why-the-fbis-request-to-apple-will-affect-civil-rights-for-a-generation.html)
+a legal win would establish.
+
+In short, it appears the FBI is &ldquo;[playing politics](https://medium.com/@thegrugq/feeble-noise-pollution-627acb5931a2#.nv513bwae)&rdquo;
+via a
+&ldquo;[carefully planned legal battle&hellip;months in the making.](http://www.theguardian.com/technology/2016/feb/17/inside-the-fbis-encryption-battle-with-apple?CMP=twt_gu)&rdquo;
+The iPhone in question represents a strategically-chosen battleground
+on which the FBI thinks it can
+[win using the terrorism card](https://bgr.com/2016/02/17/fbi-vs-apple-smartphone-encryption/) &ndash;
+even if this particular iPhone in fact has
+[little or no intelligence value](https://theintercept.com/2016/02/26/farooks-iphone-is-probably-useless-even-the-police-say-so/).
+
+Lining up in Apple's defense are
+[a majority of the American public](http://www.reuters.com/article/us-apple-encryption-poll-idUSKCN0VX159);
+public-interest organizations such as
+[ALCU](https://www.aclu.org/blog/speak-freely/why-were-defending-apple), 
+[EFF](https://www.eff.org/deeplinks/2016/03/deep-dive-why-forcing-apple-write-and-sign-code-violates-first-amendment),
+and 
+[CDT](https://cdt.org/blog/cdt-files-brief-in-support-of-apple-and-strong-encryption/);
+many
+[technology giants](http://www.apple.com/pr/library/2016/03/03Amicus-Briefs-in-Support-of-Apple.html)
+including Google, Intel, Microsoft, Cisco, and Amazon;
+newspapers such as the
+[New York Times](http://www.nytimes.com/2016/02/19/opinion/why-apple-is-right-to-challenge-an-order-to-help-the-fbi.html)
+and the
+[Wall Street Journal](http://www.wsj.com/article_email/apple-is-right-on-encryption-1456877827-lMyQjAxMTE2NzAzMjQwNzI3Wj),
+the
+[UN High Commissioner for Human Rights](http://www.ohchr.org/EN/NewsEvents/Pages/DisplayNews.aspx?NewsID=17138&LangID=E);
+and even the former
+[former director of the NSA](http://money.cnn.com/2016/01/13/technology/nsa-michael-hayden-encryption/index.html).
 
 The Secrecy Alternative
 -----------------------
@@ -75,14 +124,16 @@ to aquire secret backdoors.
 Governments can of course exploit software[] bugs or physical attacks[]
 to break into personal devices,
 but secret backdoors will continue to be most attractive:
-it is much easier and less risky
-to exploit a security flaw *you inserted*
-than an accidental flaw you must find and design an exploit for.
+it is easier, cheaper, and less risky to exploit a known backdoor
+than to &ldquo;[reach into the treasure chest and engineer a custom exploit.](https://freedom-to-tinker.com/blog/dwallach/apple-the-fbi-and-the-san-bernadino-iphone/)&rdquo;
 
-In the case of Apple's devices,
-there is a technologically straightforward way the US government could
-secretly aquire a universal backdoor to Apple's devices:
-simply demand a copy of Apple's secret software and firmware signing keys.
+Nearly all of today's personal devices, including Apple's,
+already have a ready-made ``backdoor'' ripe for exploitation,
+in the form of
+[automatic software updates validated by digital signatures](http://arstechnica.com/security/2016/02/most-software-already-has-a-golden-key-backdoor-its-called-auto-update/).
+One way the US government could
+aquire a universal backdoor to Apple's devices is
+simply by demanding a copy of Apple's secret software signing keys.
 The government already showed a willingness to do exactly this,
 in demanding the secret master keys to Lavabit's encrypted E-mail service
 while investigating Snowden.
@@ -130,8 +181,10 @@ embedded in the device,
 which cryptographically identifies the software maker
 via a mathematical relationship with the secret signing key,
 It is already a security best-practice
-for software makers to keep sensitive software signing keys offline -
-perhaps in HSMs or even split across multiple HSMs -
+for software makers to keep particularly sensitive signing keys offline -
+perhaps in HSMs or even split across multiple HSMs,
+[as ICANN does](http://www.theguardian.com/technology/2014/feb/28/seven-people-keys-worldwide-internet-security-web)
+in its [DNSSEC key signing ceremony](https://www.cloudflare.com/dnssec/root-signing-ceremony/).
 but such measures do not prevent the *organization* from being coerced
 into secret misuses of these signing keys.
 
@@ -249,4 +302,4 @@ that every software images they ever sign is publicly disclosed
 before any of their devices, anywhere, will consider it valid -
 even if the device and/or its network connectivity
 is completely under the attacker's control.
-
+ 
