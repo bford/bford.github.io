@@ -98,16 +98,14 @@ and even the former
 The Secrecy Alternative
 -----------------------
 
-Important as this public battle is, however,
-we should not forget that the FBI and other government agencies
-around the world
-can and often have pursued the same goals outside the light of public scrutiny.
-In this regard, the Apple versus FBI is the exception, not the rule.
-We must remember the result of the last major public battle
-over encryption backdoors:
-the first ``Crypto Wars'',
-in which the US government attempted to impose on everyone
-a key escrow encryption system embodied in the infamous [Clipper Chip].
+Important as this public battle is,
+the FBI and governments around the world
+can and often have pursued the same goals away from public scrutiny.
+Apple versus FBI is more the exception than the rule.
+Recall the result of
+[the first Crypto Wars](https://www.newamerica.org/oti/doomed-to-repeat-history-lessons-from-the-crypto-wars-of-the-1990s/),
+in which the US government attempted to mandate
+key escrow encryption embodied in the infamous [Clipper Chip].
 While the government lost the public battle,
 we know now from Snowden's revelations
 that the government did not give up on their goals of compromising encryption.
