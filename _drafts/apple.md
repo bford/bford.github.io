@@ -3,8 +3,6 @@ layout: post
 title: Apple, FBI, and Software Transparency
 ---
 
-{{ page.title }}
-
 Apple, FBI, and Software Transparency
 ================
 
@@ -98,7 +96,7 @@ and the
 [Wall Street Journal](http://www.wsj.com/article_email/apple-is-right-on-encryption-1456877827-lMyQjAxMTE2NzAzMjQwNzI3Wj),
 the
 [UN High Commissioner for Human Rights](http://www.ohchr.org/EN/NewsEvents/Pages/DisplayNews.aspx?NewsID=17138&LangID=E);
-and even the former
+and even the
 [former director of the NSA](http://money.cnn.com/2016/01/13/technology/nsa-michael-hayden-encryption/index.html).
 
 The Secrecy Alternative, Past and Future
@@ -142,7 +140,7 @@ The Software Update Backdoor
 ----------------------------
 
 Nearly all of today's personal devices, including Apple's,
-already have a ready-made ``backdoor'' ripe for exploitation,
+already have a ready-made &ldquo;backdoor&rdquo; ripe for exploitation,
 in the form of
 [automatic software updates validated by digital signatures](http://arstechnica.com/security/2016/02/most-software-already-has-a-golden-key-backdoor-its-called-auto-update/).
 One way the US government could
@@ -179,7 +177,7 @@ Software Transparency via Decentralized Witness Cosigning
 
 In [IEEE Security & Privacy 2016](http://www.ieee-security.org/TC/SP2016/)
 we will present a paper
-([preliminary draft available here](http://arxiv.org/abs/1503.08768))
+([preliminary draft available here](http://dedis.cs.yale.edu/dissent/papers/witness-abs))
 introducing *decentralized witness cosigning*,
 a technological mechanism by software makers such as Apple
 could protect their users
@@ -222,9 +220,9 @@ the device's update mechanism verifies that it has been signed
 not only by the software maker but also by a threshold number
 of the designated witnesses.
 In essence, the device does not accept any software image
-unless it arrives with a cryptographic ``proof''
-that this *particular* software image has been publicly observed by -
-and placed under the scrutiny of -
+unless it arrives with a cryptographic &ldquo;proof&rdquo;
+that this *particular* software image has been publicly observed by &ndash;
+and placed under the scrutiny of &ndash;
 a decentralized group of independent parties scattered around the world
 in different jurisdictions.
 
@@ -251,7 +249,7 @@ causing delays and consuming battery power.
 The key technical contribution of our research is a distributed protocol
 that makes large, decentralized witness cosigning groups practical.
 I will spare you the details for now, but those interested can
-[find them here](http://arxiv.org/abs/1503.08768).
+[find them here](http://dedis.cs.yale.edu/dissent/papers/witness-abs).
 The oversimplified summary is that the protocol involves compressing
 hundreds or thousands of signatures into a single one
 that can be verified almost as simply and efficiently
@@ -269,8 +267,8 @@ and is a well-understood property that
 [long predates our work](https://www.cs.bu.edu/~reyzin/multisig.html).
 Again, our contribution is to make witness cosigning groups scale.
 
-How Do Witnesses Tell If There's a Backdoor?
---------------------------------------------
+How Does Anyone Know If There's a Backdoor?
+-------------------------------------------
 
 Unfortunately,
 independent witnesses cannot necessarily determine immediately,
@@ -304,6 +302,31 @@ However, the witnesses would still be able to tell that an iOS image *exists*
 that has been signed but not widely distributed,
 again likely drawing suspicion and careful public scrutiny.
 
+Of course, Apple &ndash; or a malicious Apple employee &ndash;
+could still slip a subtle backdoor (or security &ldquo;bug&rdquo;)
+into the standard iOS releases that everyone runs.
+Accidental bugs and backdoors alike can persist for years without being noticed,
+as [the Juniper incident](http://www.wired.com/2015/12/researchers-solve-the-juniper-mystery-and-they-say-its-partially-the-nsas-fault/)
+amply demonstrates.
+Open source software naturally offers a transparency advantage,
+especially with
+[reproducible builds](https://wiki.debian.org/ReproducibleBuilds) &ndash;
+but even source-level backdoors can be
+[devilishly tricky](http://www.underhanded-c.org/).
+
+Nevertheless,
+techniques and tools for analysing both source and binary software
+is constantly improving,
+and decentralized witness cosigning can ensure that
+*all* releases of a software distribution are publicly known
+and exposed to analysis by talented security researchers and white-hat hackers
+around the world.
+An attacker who slips a backdoor into a public software release
+inherently faces a risk that the backdoor could be discovered at any time.
+Witness cosigning prevents attackers from sidestepping that risk of discovery,
+even by secretly deploying the backdoored software only on targeted devices
+under attacker-controlled conditions.
+
 Proactive versus Retroactive Transparency Approaches
 ----------------------------------------------------
 
@@ -314,6 +337,7 @@ used to secure Web connections
 [has similar weaknesses](http://resources.infosecinstitute.com/cybercrime-exploits-digital-certificates/).
 PKI transparency mechanisms such as
 [Convergence](http://convergence.io),
+[Sovereign Keys](https://www.eff.org/sovereign-keys),
 [Certificate Transparency](https://www.certificate-transparency.org),
 [AKI](https://www.cs.cmu.edu/~xia/resources/Documents/kim-www13.pdf), and
 [ARPKI](https://www.cs.cmu.edu/~xia/resources/Documents/basin_ccs14.pdf)
@@ -414,3 +438,8 @@ even if the device and/or its network connectivity
 is under the control of an attacker who does *not*
 exhibit the FBI's momentary taste for publicity.
  
+The public debate over backdoors in personal devices
+is of critical importance to our security, privacy, and personal freedom.
+But equally important is ensuring that this time
+the debate *stays* public.
+
