@@ -1,14 +1,16 @@
 ---
 layout: post
-title: Apple versus FBI and Software Transparency
+title: Apple, FBI, and Software Transparency
 ---
 
 {{ page.title }}
+
+Apple, FBI, and Software Transparency
 ================
 
 The [Apple versus FBI showdown](http://www.nytimes.com/2016/02/18/technology/apple-timothy-cook-fbi-san-bernardino.html)
 has quickly become
-one of the most crucial flashpoints of the
+a crucial flashpoint of the
 &ldquo;[new Crypto War.](http://www.dailydot.com/politics/tim-cook-encryption-iphone-hero-businessman/)&rdquo;
 The FBI invoked
 [the All Writs Act of 1789](https://www.washingtonpost.com/news/volokh-conspiracy/wp/2016/02/19/preliminary-thoughts-on-the-apple-iphone-order-in-the-san-bernardino-case-part-2-the-all-writs-act/),
@@ -43,19 +45,23 @@ Apple's devices accept only software updates digitally signed with a secret key
 that presumably only Apple controls.
 *Presumably*.  Let's come back to that.
 
+Why All the Publicity?
+----------------------
+
 One of the most interesting and unusual features of this particular case
 is how quickly we, the public,
 [learned about it from Apple](http://www.apple.com/customer-letter/).
 The FBI could have quietly delivered this order under seal,
 as it has done with
 [similar decryption-assistance demands to Apple](http://www.wsj.com/articles/justice-department-seeks-to-force-apple-to-extract-data-from-about-12-other-iphones-1456202213) &ndash;
-as well as to other companies [such as Lavabit](http://www.theguardian.com/commentisfree/2014/may/20/why-did-lavabit-shut-down-snowden-email),
-the now-defunct E-mail provider that Edward Snowden used.
+as well as to other companies
+[such as Lavabit](http://www.newyorker.com/tech/elements/how-lavabit-melted-down[),
+the [now-defunct](http://www.theguardian.com/commentisfree/2014/may/20/why-did-lavabit-shut-down-snowden-email) E-mail provider that Edward Snowden used.
 
 Apple even [reportedly requested that the FBI's order be sealed](http://www.nytimes.com/2016/02/19/technology/how-tim-cook-became-a-bulwark-for-digital-privacy.html?smprod=nytcore-iphone&smid=nytcore-iphone-share),
 but the FBI wanted the public showdown.
 The facts of the case [undermine the FBI's claims](https://www.techdirt.com/articles/20160220/22412933661/no-fbi-does-not-need-info-farooks-iphone-this-is-entirely-about-precedent.shtml)
-of urgently needing this iPhone's contents decrypted:
+of urgently needing this iPhone's contents:
 the killers were already long dead,
 the mountain of metadata the FBI already had about the killers
 revealed no hint of connections to other terrorists,
@@ -63,7 +69,7 @@ and the iPhone in question was an employer-provided work phone
 that the killers did not bother to destroy
 as they did their two personal phones.
 The Occam's Razor interpretation of the facts suggest
-that the FBI is far less interested in the data
+that the FBI is far less interested in the data itself
 than in [the court precedent](http://www.macworld.com/article/3034355/ios/why-the-fbis-request-to-apple-will-affect-civil-rights-for-a-generation.html)
 a legal win would establish.
 
@@ -95,35 +101,45 @@ the
 and even the former
 [former director of the NSA](http://money.cnn.com/2016/01/13/technology/nsa-michael-hayden-encryption/index.html).
 
-The Secrecy Alternative
------------------------
+The Secrecy Alternative, Past and Future
+----------------------------------------
 
 Important as this public battle is,
 the FBI and governments around the world
-can and often have pursued the same goals away from public scrutiny.
+can and often have pursued the same goals in secret:
 Apple versus FBI is more the exception than the rule.
 Recall the result of
 [the first Crypto Wars](https://www.newamerica.org/oti/doomed-to-repeat-history-lessons-from-the-crypto-wars-of-the-1990s/),
 in which the US government attempted to mandate
-key escrow encryption embodied in the infamous [Clipper Chip].
-While the government lost the public battle,
-we know now from Snowden's revelations
-that the government did not give up on their goals of compromising encryption.
-Instead they merely moved their efforts back into the shadows,
-for example by successfully slipping a backdoored random number generator
-into a NIST standard,
-allowing them -
-or any hacker managing to re-key the backdoor[] -
-to compromise all cryptographic algorithms on a device[].
+key escrow encryption embodied in the infamous
+[Clipper Chip](http://arstechnica.com/information-technology/2015/12/what-the-government-shouldve-learned-about-backdoors-from-the-clipper-chip/).
+While the government lost that public battle,
+they did not give up but merely
+[moved their efforts to compromise encryption back into the shadows](http://www.nytimes.com/2013/09/06/us/nsa-foils-much-internet-encryption.html?_r=0).
 
-Even if we win this next public round of the Crypto Wars,
+For example, the NSA apparently
+[slipped a backdoor a NIST standard for random number generation](https://www.lawfareblog.com/nsas-subversion-nists-algorithm),
+allowing the holder of a secret
+to compromise all cryptographic algorithms on a device.
+Demonstrating the perils of keeping a backdoor
+only accessible to &ldquo;the good guys,&rdquo;
+an unknown attacker recently managed to &ldquo;re-key&rdquo;
+and take over a latent copy of this backdoored random number generator
+[in Juniper Networks routers](http://www.wired.com/2015/12/researchers-solve-the-juniper-mystery-and-they-say-its-partially-the-nsas-fault/).
+
+Even if sanity prevails in this new round of the Crypto Wars,
 we can count on continued attempts by the US and governments around the world
 to aquire secret backdoors.
-Governments can of course exploit software[] bugs or physical attacks[]
-to break into personal devices,
-but secret backdoors will continue to be most attractive:
+Governments can of course
+exploit [software bugs](http://motherboard.vice.com/read/apple-fbi-should-ask-the-nsa-to-hack-shooters-iphone)
+or [physical vulnerabilities](http://www.bloomberg.com/news/articles/2016-03-04/who-needs-apple-when-the-fbi-could-hack-terrorist-iphone-itself)
+to break into personal devices.
+Secret backdoors will continue to be most attractive, however:
 it is easier, cheaper, and less risky to exploit a known backdoor
 than to &ldquo;[reach into the treasure chest and engineer a custom exploit.](https://freedom-to-tinker.com/blog/dwallach/apple-the-fbi-and-the-san-bernadino-iphone/)&rdquo;
+
+The Software Update Backdoor
+----------------------------
 
 Nearly all of today's personal devices, including Apple's,
 already have a ready-made ``backdoor'' ripe for exploitation,
@@ -133,15 +149,16 @@ One way the US government could
 aquire a universal backdoor to Apple's devices is
 simply by demanding a copy of Apple's secret software signing keys.
 The government already showed a willingness to do exactly this,
-in demanding the secret master keys to Lavabit's encrypted E-mail service
+in demanding the
+[master keys to Lavabit's encrypted E-mail service](http://www.newyorker.com/tech/elements/how-lavabit-melted-down)
 while investigating Snowden.
 This might not be entirely trivial if Apple's software signing keys
-are held in [hardware security modules]
+are [held in hardware security modules](https://www.thawte.com/code-signing/whitepaper/best-practices-for-code-signing-certificates.pdf)
 designed to thwart the extraction or cloning of secret keys.
-In that case, however, the government could instead
-simply bring its backdoored version of iOS to Apple
-and demand that Apple produce the required digital signature for it,
-while keeping this entire process
+In that case, however, the government could still simply
+demand that Apple use its secret key to produce a valid digital signature
+for the FBI's backdoored version of iOS,
+while keeping this process
 and the existence of this backdoored iOS secret.
 
 Even if Apple wins this public battle, therefore,
@@ -149,23 +166,25 @@ they will still rightfully face post-Snowden fears and suspicions -
 from companies and governments around the world -
 as to whether Apple can still be secretly coerced into
 helping to sign backdoored software and firmware images.
-And this risk is by no means specific to Apple,
+This risk is by no means specific to Apple,
 but faced by any organization that creates and releases software.
-This risk even broadly applies to open source software,
+Even open source software is not immune,
 because you cannot be certain whether a software update
 represents a correctly-compiled or backdoored version of a source release
-unless you compile it yourself, which precious few users do.
+[unless you build it yourself](https://wiki.debian.org/ReproducibleBuilds),
+which precious few users do.
 
 Software Transparency via Decentralized Witness Cosigning
 ---------------------------------------------------------
 
-In a paper to appear in May at IEEE Security & Privacy 2016
-(a preliminary draft is available here),
-we introduce *decentralized witness cosigning*,
-a technological mechanism by which Apple
-and other software and firmware makers
-could protect their users from secretly backdoored versions of their software -
-and thereby protect *themselves* and their finanical bottom lines from
+In [IEEE Security & Privacy 2016](http://www.ieee-security.org/TC/SP2016/)
+we will present a paper
+([preliminary draft available here](http://arxiv.org/abs/1503.08768))
+introducing *decentralized witness cosigning*,
+a technological mechanism by software makers such as Apple
+could protect their users
+from secretly backdoored versions of their software &ndash;
+and in turn protect *themselves* and their finanical bottom lines from
 worldwide fears and suspicions about the possibility of backdoored software.
 
 With conventional digital signatures,
@@ -177,16 +196,19 @@ Any well-designed update mechanism refuses to accept any software image
 unless it has been authenticated using a *digital certificate*
 embedded in the device,
 which cryptographically identifies the software maker
-via a mathematical relationship with the secret signing key,
-It is already a security best-practice
-for software makers to keep particularly sensitive signing keys offline -
+via a mathematical relationship with the secret signing key.
+[Best practices for software signing](https://www.thawte.com/code-signing/whitepaper/best-practices-for-code-signing-certificates.pdf)
+are already
+to keep particularly sensitive signing keys offline,
 perhaps in HSMs or even split across multiple HSMs,
 [as ICANN does](http://www.theguardian.com/technology/2014/feb/28/seven-people-keys-worldwide-internet-security-web)
-in its [DNSSEC key signing ceremony](https://www.cloudflare.com/dnssec/root-signing-ceremony/).
-but such measures do not prevent the *organization* from being coerced
+in its ornate
+[DNSSEC key signing ceremony](https://www.cloudflare.com/dnssec/root-signing-ceremony/).
+But as noted above,
+such measures do not prevent the *organization* from being coerced
 into secret misuses of these signing keys.
 
-With decentralized witness cosigning, in contrast,
+With decentralized witness cosigning,
 a software maker imprints their devices and software update mechanisms
 with a digital certificate corresponding not just to their own secret key
 but also to secret keys held by a group of independent *witnesses*.
@@ -198,78 +220,150 @@ of the software maker's commitment to transparency.
 In turn, before accepting any software image
 the device's update mechanism verifies that it has been signed
 not only by the software maker but also by a threshold number
-(e.g., at least two-thirds) of the designated group of witnesses.
+of the designated witnesses.
 In essence, the device does not accept any software image
 unless it arrives with a cryptographic ``proof''
 that this *particular* software image has been publicly observed by -
 and placed under the scrutiny of -
-a large, decentralized group of independent parties around the world.
+a decentralized group of independent parties scattered around the world
+in different jurisdictions.
 
-Of course,
-independent witnesses cannot necessarily determine immediately
-whether or not a particular software image actually contains a backdoor,
-especially in the common case where the source code is proprietary
+The Scalability of Witness Cosigning
+------------------------------------
+
+Technically, it is quite easy to implement witness cosigning
+if the group of witnesses is small.
+A software maker could simply gather a list of individual signatures
+for each new software release,
+in much the same way people have handled
+[public petitions](http://ecssba.rutgers.edu/docs/petuniv.html)
+for hundreds of years.
+If we want the group of witnesses to be large, however &ndash;
+and we *do*, to ensure that compromising transparency would
+require not just a few but hundreds or even thousands of witnesses
+to be colluding maliciously &ndash;
+then gathering hundreds or thousands of individual signatures
+for each software release could become painful and inefficient.
+Worse, every device needing to validate a purported update
+would need to check all these signatures individually,
+causing delays and consuming battery power.
+
+The key technical contribution of our research is a distributed protocol
+that makes large, decentralized witness cosigning groups practical.
+I will spare you the details for now, but those interested can
+[find them here](http://arxiv.org/abs/1503.08768).
+The oversimplified summary is that the protocol involves compressing
+hundreds or thousands of signatures into a single one
+that can be verified almost as simply and efficiently
+verifying a normal individual signature.
+For illustration,
+a traditional many-signature performed this way might look as follows:
+
+> ![What a classic petition would look like as a cryptographic multisignature](fig/multisig.svg)
+
+Superposing standard pencil-and-paper signatures this way
+would of course offer little or no security,
+but such superposition *can* be made secure with modern digital signatures.
+This is one of the remarkable properties of modern cryptography,
+and is a well-understood property that
+[long predates our work](https://www.cs.bu.edu/~reyzin/multisig.html).
+Again, our contribution is to make witness cosigning groups scale.
+
+How Do Witnesses Tell If There's a Backdoor?
+--------------------------------------------
+
+Unfortunately,
+independent witnesses cannot necessarily determine immediately,
+during the witness cosigning process,
+whether or not a particular software image actually contains a backdoor.
+This is especially true in the common case where the source code is proprietary
 and the software maker signs and releases only binary images.
 Nevertheless, the witnesses can still proactively ensure *transparency*
-by ensuring that *every correctly-signed software image in existence*
+by ensuring proactively that
+*every correctly-signed software image in existence*
 has been disclosed, cataloged, and subjected to public scrutiny.
+
 For example, if future Apple devices adopted decentralized witness cosigning,
-and the FBI attempted to coerce Apple secretly into signing
+and a government attempted to coerce Apple secretly into signing
 a backdoored version of iOS version 11.2.1,
 then the only way Apple could do so would be to submit
 the backdoored iOS version to the independent witnesses for cosigning.
 Even though those witnesses could not necessarily recognize the backdoor,
-they would immediately notice that two different iOS images
-labeled "version 11.2.1" have been signed
-(the standard one and the backdoored one),
-immediately raising alarms and drawing the attention of security companies
-around the world to perform a careful inspection
+they could immediately notice that two different iOS images
+labeled "version 11.2.1" have been signed:
+the standard one and the backdoored one.
+This inconsistency alone should
+immediately raise alarms and drawing the attention of security companies
+around the world, who could then perform a careful inspection
 of the differences between the two software images.
-The FBI could of course coerce Apple to give the backdoored image
-a different version number that most customers never receive
-(e.g., "11.2.1LE" or "11.2.1.1") -
-but the witnesses would still be able to tell that an iOS image *exists*
+
+A government could of course coerce Apple to give the backdoored image
+a different version number that most customers never receive:
+e.g., "11.2.1LE" or "11.2.1.1".
+However, the witnesses would still be able to tell that an iOS image *exists*
 that has been signed but not widely distributed,
 again likely drawing suspicion and careful public scrutiny.
 
-Proactive versus Retroactive Transparency
------------------------------------------
+Proactive versus Retroactive Transparency Approaches
+----------------------------------------------------
 
 Decentralized witness cosigning is by no means the first
 cryptographic transparency mechanism.
-For example, the Public Key Infrastructure (PKI)[]
-used to secure Web connections has long been known to have similar weaknesses,
-and PKI transparency mechanisms such as [Moxie's],
-Certificate Transparency, AKI/ARPKI, etc.
-have been been proposed proposed as part of this problem.
-Certificate Transparency is now a standard part of the Chrome browser.
-Related mechanisms such as Perspectives[] and CONIKS[]
-address the closely-related problem of transparently binding
-users' names, E-mail addresses, or telephone numbers to
-the cryptographic keys needed to support end-to-end encrypted messaging.
+For example, the Public Key Infrastructure (PKI)
+used to secure Web connections
+[has similar weaknesses](http://resources.infosecinstitute.com/cybercrime-exploits-digital-certificates/).
+PKI transparency mechanisms such as
+[Convergence](http://convergence.io),
+[Certificate Transparency](https://www.certificate-transparency.org),
+[AKI](https://www.cs.cmu.edu/~xia/resources/Documents/kim-www13.pdf), and
+[ARPKI](https://www.cs.cmu.edu/~xia/resources/Documents/basin_ccs14.pdf)
+chip away at this problem.
+Certificate Transparency is now
+[standard in the Chrome browser](https://www.certificate-transparency.org/certificate-transparency-in-chrome).
+Related mechanisms such as 
+[Perspectives](https://www.cs.cmu.edu/~perspectives/perspectives_usenix08.pdf)
+and
+[CONIKS](http://www.coniks.org)
+address closely-related problems for Secure Shell (SSH) connections
+and end-to-end encrypted messaging, respectively.
 
-All of these prior transparency mechanisms have a crucial weakness, however:
-they can only *retroactively* detect if a secret signing key has been misused.
-Existing transparency mechanisms do not substantially increase
-the number of independent signing keys an attacker must control
-before a device accepts a compromised software image or PKI certificate,
-but instead rely on the victim device
-to communicate actively or *gossip* the images or certificates it has seen
-with other entities on the Internet -
-*after* the victim has already accepted the compromised digital signature.
+Prior transparency mechanisms have two crucial weaknesses, however:
+they do not significantly increase the number of secret keys
+an attacker must control to compromise any client device,
+and client devices cannot even retroactively detect such compromise
+unless they can actively communicate with multiple well-known Internet servers.
+For example, even with Certificate Transparency,
+an attacker can forge an
+[Extended Validation (EV) certificate for Chrome](https://www.certificate-transparency.org/ev-ct-plan)
+after compromising or coercing only three parties:
+one Certificate Authority (CA) and
+two [log servers](https://www.certificate-transparency.org/known-logs).
+Since many CAs and log servers are in US jurisdiction,
+such an attack is clearly within reach of the US government.
+If such an attack does occur,
+Certificate Transparency cannot detect it unless
+the victim device has a chance to communicate or *gossip*
+the fake certificate
+with other parties on the Internet &ndash;
+*after* it has already accepted and started
+using the fake digital certificate.
 
-This retroactive transparency approach has two critical weaknesses,
-which are especially severe with respect to the software transparency problem
-at issue in the Apple versus FBI case.
-First, if the device accepts and starts running a backdoored software update
+Retroactive Mechanisms are Insufficient for Software Transparency
+-----------------------------------------------------------------
+
+These weaknesses are especially severe
+in the domain of software transparency,
+the issue in the Apple versus FBI case.
+First, if a personal device accepts and starts running
+a backdoored software update
 before the device has had a chance to gossip
 information about the update with other parties on the Internet,
 then the backdoored software can be designed to evade transparency
 simply by disabling the retroactive transparency mechanism in the code.
-Second, even if the attacker neglects to take this step,
-or cannot for whatever reason,
-the attacker can still evade transparency if the attacker is in control
-of the device or its only Internet access paths.
+Second, even if the attacker for some reason
+cannot or simply neglects to take this step,
+the attacker can still evade transparency by controlling
+either the device or its Internet access paths.
 In the FBI versus Apple case, for example,
 the FBI could trivially evade a retroactive transparency mechanism
 and keep a backdoored iOS image secret
@@ -284,20 +378,39 @@ or corporate Internet gateway can defeat retroactive transparency mechanisms
 by persistently blocking a victim device's access
 to transparency servers elsewhere on the Internet.
 Even if the user's device is mobile,
-a state intelligence service such as China's ``Great Firewall''[]
+a state intelligence service such as China's
+&ldquo;[Great Firewall](http://edition.cnn.com/2015/10/25/asia/china-war-internet-great-firewall/)&rdquo;
 could defeat retroactive transparency mechanisms by persistently blocking
 connections from a targeted victim's devices to external transparency servers,
-in the same way that China already blocks connections to many websites[]
-and the Tor anonymity network[], for example.
+in the same way that China already blocks connections to many websites
+and [to the Tor anonymity network](https://blog.torproject.org/category/tags/china).
 
-Decentralized witness cosigning solves these weaknesses
-by providing *proactive transparency*,
-enabling devices to verify a standalong cryptographic ``proof of transparency''
-*before* accepting or relying on the software update in any way.
-Thus, with decentralized witness cosigning,
-companies such as Apple can offer a strong guarantee to their customers
+Conclusion
+----------
+
+In short, retroactive transparency methods unfortunately
+cannot actually guarantee transparency
+if an attacker is in control of the target device or its Internet access path,
+as in the current FBI versus Apple scenario.
+Even if Apple's software updates were protected with an
+analog of Certificate Transparency,
+the FBI could still *secretly* force Apple or any software maker
+to sign a backdoored software update,
+coerce two US-based log cervers to sign fake log entries,
+and keep the targeted device offline
+so that it cannot gossip the fake software update metadata with anyone.
+
+Decentralized witness cosigning is currently the only known method
+of guaranteeing transparency and public accountability even in this scenario.
+Witness cosigning solves this problem by offering *proactive transparency*,
+enabling devices to verify a standalone cryptographic proof
+that the purported software update has been seen by many independent parties,
+*before* the device accepts or runs the software update.
+In this way,
+companies such as Apple could offer a strong guarantee to their customers
 that every software images they ever sign is publicly disclosed
-before any of their devices, anywhere, will consider it valid -
+before any of their devices, anywhere, will consider it valid &ndash;
 even if the device and/or its network connectivity
-is completely under the attacker's control.
+is under the control of an attacker who does *not*
+exhibit the FBI's momentary taste for publicity.
  
