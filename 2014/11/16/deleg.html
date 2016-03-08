@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Delegative Democracy Revisited &middot; Bryan Ford</title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.16-DEV" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://bford.github.io/css/normalize.css">
+        <link rel="stylesheet" href="http://bford.github.io/css/highlight.css">
+        <link rel="stylesheet" href="http://bford.github.io/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Bryan Ford&#39;s Blog" href="http://bford.github.io/">Bryan Ford&#39;s Blog</a>
+                            </h1>
+                        
+                        <a class="button-square" href="http://bford.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Delegative Democracy Revisited</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2014-11-16" itemprop="datePublished">Sun, Nov 16, 2014</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+            <span itemprop="name">
+                <a href="http://bford.info/" itemprop="url" rel="author">Bryan Ford</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p>Over a decade ago I wrote up some ideas
+I called &ldquo;<a href="http://www.brynosaurus.com/deleg/">Delegative Democracy</a>,&rdquo;
+which has also become known as
+&ldquo;<a href="http://p2pfoundation.net/Liquid_Democracy">Liquid Democracy</a>.&rdquo;
+My <a href="http://www.brynosaurus.com/deleg/deleg.pdf">draft paper from 2002</a>
+took a first stab at laying out the general idea,
+though I never finished or tried to publish it.
+Since a lot has happened in this space since then,
+and I get regular inquiries about it,
+I thought it was high time to revisit the idea
+and review more recent developments.</p>
+
+<h2 id="the-basic-idea:c3ae62c8000679a68bb94bd778dd80b1">The Basic Idea</h2>
+
+<p>Many people including myself like the participatory ideal embodied in
+<a href="http://en.wikipedia.org/wiki/Direct_democracy">direct democracy</a>,
+but this ideal does not readily scale beyond small communities.
+As I will shortly be moving to <a href="http://epfl.ch">EPFL</a>,
+I look forward to learning first-hand
+how the Swiss make direct democracy work for them &mdash;
+but Switzerland is a small country divided into even smaller,
+fairly autonomous cantons.
+A basic criticism of direct democracy is that
+expecting that <em>every</em> eligible voter to
+attend <em>all</em> the meetings and keep up with <em>all</em> the issues,
+rather than actually getting more people involved,
+may instead disenfranchise those without infinite spare time or patience.</p>
+
+<p>Delegative democracy attempts to make direct democracy scale,
+by allowing anyone who cannot participate directly in a particular vote
+to <em>delegate</em> their vote to someone they trust
+to participate and vote on their behalf.
+This process may be viewed as a mechanized equivalent
+of seeking advice from a friend and voting based on that advice.
+Delegative democracy differs from representative democracy
+in the principle that each voter should have free, <em>individual</em>
+choice of their delegate &mdash;
+not just a choice among a restricted set of career politicians &mdash;
+just as we already make a free, individual choice of our friends.
+Further, voters may choose to participate in <em>some</em> meetings directly,
+overriding their delegate&rsquo;s choices in those meetings,
+and voters may revoke or change their delegation at any time.</p>
+
+<p>While corporate governance practice often allows the related idea of
+<a href="http://en.wikipedia.org/wiki/Proxy_voting">proxy voting</a>,
+a proxy vote often amounts to a &ldquo;pre-packaged mandate&rdquo;:
+e.g., a directive to cast an unconditional YES or NO vote on my behalf
+regardless of what new information might be presented at the meeting
+or what discussion might ensue.
+The spirit of delegative democracy is closer to representative democracy,
+in that delegation is not about delivering my &ldquo;canned decision&rdquo;
+but about asking my trusted delegate to <em>participate</em>
+in the full deliberative process on my behalf.
+My delegate can and is expected to listen and engage in the debate,
+consider the information available,
+and make what his views as the best decision on that basis.
+If I dislike his decision,
+I can choose a different delegate before the next vote.</p>
+
+<h2 id="origins-of-the-idea:c3ae62c8000679a68bb94bd778dd80b1">Origins of the Idea</h2>
+
+<p>Perhaps unsurprisingly,
+I was only one of many people to think along these lines over the decades.
+In Lewis Carrol&rsquo;s
+<a href="http://books.google.com/books?id=ZCovAAAAYAAJ">Principles of Parliamentary Representation</a>
+of 1884,
+candidates could &ldquo;club&rdquo; their votes together,
+allowing a candidate who received more votes than required to win a seat
+to delegate the &ldquo;excess&rdquo; votes toward the election of other candidates.
+James C. Miller in 1969 foresaw electronic voting and proposed a
+<a href="http://link.springer.com/article/10.1007/BF01718736">delegate proxy voting scheme</a>,
+to enable more widespread &mdash; and more propoportional &mdash;
+representation in political decisions.</p>
+
+<p>Starting around 2002
+the Internet exploded with reinventions
+of this and similar ideas.
+Besides my
+<a href="http://www.brynosaurus.com/deleg/deleg.pdf">Delegative Democracy</a> proposal,
+there was
+Dennis Lomax&rsquo;s
+<a href="http://web.archive.org/web/20031220012108/www.beyondpolitics.org/Beyond_Politics_Intro.htm">Beyond Politics</a>,
+Jio Ito&rsquo;s
+<a href="http://joi.ito.com/joiwiki/EmergentDemocracyPaper">Emergent Democracy</a>,
+Sayke&rsquo;s
+<a href="https://web.archive.org/web/20040616144517/http://www.twiste
+dmatrix.com/wiki/python/LiquidDemocracy">Liquid Democracy</a> and
+<a href="https://web.archive.org/web/20040518131300/http://twistedmatrix.com/wiki/python/LiquidDemocracyVotingSystem">voting system</a>,
+Mikael Nordfors&rsquo;
+<a href="https://archive.org/details/politics_Democracy2.1">Democracy 2.1</a>,
+James Green-Armytage&rsquo;s
+<a href="https://web.archive.org/web/20090528052745/http://fc.antioch.edu/~james_green-armytage/vm/proxy.htm">delegable proxy system</a>, and
+Mark Rosst&rsquo;s
+<a href="http://www.newciv.org/nl/newslog.php/_v45/__show_article/_a000009-000320.htm">Structural Deep Democracy</a>.
+The idea of allowing voters to delegate their participation
+to individually-chosen representatives
+is central to all of these proposals, though details differ.</p>
+
+<h2 id="academic-research:c3ae62c8000679a68bb94bd778dd80b1">Academic Research</h2>
+
+<p>Exploration of this idea in the academic literature has been more sparse,
+no doubt in part because it&rsquo;s hard to convince reviewers of the novelty
+of an idea that&rsquo;s been around in some form since the 1880s or 1960s,
+depending on how you count.
+However, Rodriguez et al&rsquo;s
+<a href="http://public.lanl.gov/jhw/Jen/Publications_files/Smarto-Share.pdf">Smartocracy</a>
+develops a trust network and decision ranking algorithm
+embodying a form of delegative democracy.
+Paolo Boldi et al developed
+<a href="http://www-kdd.isti.cnr.it/~bonchi/votingSN.pdf">Viscous Democracy</a>,
+a transitive proxy voting algorithm
+based on Google&rsquo;s
+<a href="http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf">PageRank</a>
+and in a vein similar to
+<a href="http://groups.yahoo.com/group/sd-2/">Structural Deep Democracy</a>.
+Wybo Wiersma explored the
+<a href="http://www.wybowiersma.net/pub/AltFutures2013/Wiersma,Wybo,Transitive_delegative_democracy_through_Facebook.pdf">integration of delegative democracy into social networking systems</a> such as FaceBook.</p>
+
+<p>Taking an economics perspective,
+<a href="http://inside.bard.edu/~armytage/research.html">James Green-Armytage</a>
+has developed an
+<a href="http://inside.bard.edu/~armytage/proxy.pdf">axiomatic model and analysis</a>
+of delegate proxy voting systems.
+His work formally models the
+<em>expressive loss</em> of alternative voting systems &mdash;
+the collective decision-making &ldquo;error&rdquo; induced by voters who may have
+limited information about issues and/or
+limited choices of possible representatives.
+This analysis mathematically confirms the intuition motivating
+all the incarnations of delegative democracy:
+namely, that <em>voluntary</em> and <em>free</em> choice of delegation
+yields decisions with no more error (and most likely less)
+than conventional alternatives such as direct or representative democracy.</p>
+
+<p>Yefim Leifman has explored ways to
+<a href="http://eprint.iacr.org/2014/351.pdf">implement transitive delegation schemes
+using cryptography</a>.
+This is a topic I am particularly interested in as well,
+since a major motivation for my
+<a href="http://dedis.cs.yale.edu/dissent/">Dissent project</a>
+was to build practical anonymous communication systems
+that would be good not only for <em>communication</em>
+but also for secure <em>deliberation</em> mechanisms such as voting.
+I hope more system-builders and security/privacy researchers
+will be bold enough to venture into this space.</p>
+
+<h2 id="delegative-liquid-democracy-in-the-real-world:c3ae62c8000679a68bb94bd778dd80b1">Delegative/Liquid Democracy in the Real World</h2>
+
+<p>Increasing participation and engagement in political discourse
+has long been a basic goal of many Internet democracy efforts.
+<a href="http://demoex.org">Demoex</a>,
+an experiment to build political parties based on online direct democracy,
+succeeded in Sweeden from 2002
+<a href="https://pernor.wordpress.com">until this year</a>,
+as recounted in
+<em><a href="http://www.amazon.com/gp/product/B00A414T9I">The Little Horse from Athens</a></em>
+by Per Norbäck.
+While Demoex pursued something closer to traditional direct democracy,
+it relied heavily on online participation
+and made provision for voters to obtain voting advice from others.</p>
+
+<p>Perhaps the most exciting development is that
+starting around 2006,
+free software organizations in Germany began building
+two different software platforms for delegation-based
+online discussion and deliberation:
+<a href="http://liquidfeedback.org">LiquidFeedback</a> and
+<a href="https://adhocracy.de">Adhocracy</a>.
+LiquidFeedback was adopted and used for the past several years by the
+<a href="http://en.wikipedia.org/wiki/Pirate_Party_Germany">German Pirate Party</a>,
+as recounted in an
+<a href="http://www.liquid-democracy-journal.org/issue/1/The_Liquid_Democracy_Journal-Issue001-02-Five_years_of_Liquid_Democracy_in_Germany.html">article by Björn Swierczek</a>
+(<a href="http://www.liquid-democracy-journal.org/issue/1/The_Liquid_Democracy_Journal-Issue001-03-Fuenf_Jahre_Liquid_Democracy_in_Deutschland.html">original German version</a>).
+Further information on these tools and their adoption is now available in
+<a href="http://principles.liquidfeedback.org">a book</a> and
+<a href="http://www.liquid-democracy-journal.org">an electronic journal</a>.</p>
+
+<p>These success stories with delegative democracy in Germany
+have started to get noticed and studied internationally.
+Articles in
+<a href="http://www.spiegel.de/international/germany/liquid-democracy-web-platform-makes-professor-most-powerful-pirate-a-818683.html">Spiegel</a> and
+<a href="http://techpresident.com/news/wegov/22154/how-german-pirate-partys-liquid-democracy-works">techPresident</a>
+cover the German Pirate Party&rsquo;s use of Liquid Democracy,
+and
+<a href="http://www.bostonglobe.com/ideas/2014/10/31/text-aye-matey-the-pirate-party-push-for-direct-democracy/X8dl2dKD73HiXGTXd1yuDP/story.html">The Boston Globe</a>
+recently covered the party&rsquo;s attempt at a foothold in the US.
+There are academic studies of the Pirate Party&rsquo;s use of Liquid Democracy
+by
+<a href="http://opendatalabs.org/adhocracy/Bachelorarbeit%20Friedrich%20Lindenberg.pdf">Friedrich Lindenberg in Germany</a>
+(<a href="https://translate.google.com/translate?sl=de&amp;tl=en&amp;js=y&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;u=http%3A%2F%2Fopendatalabs.org%2Fadhocracy%2FBachelorarbeit%2520Friedrich%2520Lindenberg.pdf&amp;edit-text=">auto-translation</a>),
+<a href="http://books.google.com/books?id=WzoJBAAAQBAJ&amp;pg=PA403">Anna Litvinenko in Russia</a>, and
+<a href="http://www.scribd.com/doc/83203862/DELEGATIVE-DEMOCRACY-IS-THE-PIRATENPARTEI-LIQUID-DEMOCRACY-PROPOSAL-FIT-FOR-GERMANY">Andrea Cangialosi in Italy</a>.
+Back in Germany,
+<a href="http://www.ma-politikmanagement.de/xd/public/content/index.html?pid=868">Anja Adler</a>
+at the
+<a href="http://www.ma-politikmanagement.de">NRW School of Governance</a>
+recently interviewed me as part of her thesis studying liquid democracy;
+I look forward to seeing the result.</p>
+
+<h2 id="where-to-next:c3ae62c8000679a68bb94bd778dd80b1">Where To Next?</h2>
+
+<p>I still believe strongly in the idea of delegative democracy,
+regardless of what we decide to call it.
+Participatory approaches to democracy are important because they address
+a fundamental security flaw in representative democracy,
+which in practice allows small groups of elite political insiders
+to control and limit voting to choices
+&ldquo;<a href="http://en.wikiquote.org/wiki/Helen_Keller">between Tweedledum and Tweedledee</a>.&rdquo;
+Delegation is important because it addresses
+a basic scaling flaw of direct democracy,
+which becomes a critical security flaw
+once those members of a community with other demands
+on their time and attention
+are drowned out and driven away by a vocal minority
+with the time and determination to do nothing but push their agenda.</p>
+
+<p>I see delegation as just one of many improvements needed
+to address scaling and security weaknesses
+in traditional democratic processes, however.
+I am concerned that current tools for delegative democracy
+appear to be designed with limited attention to other security concerns.
+The current tools depend on a single centralized server
+that all users must simply trust,
+and offer no cryptographic protections
+either to ensure the integrity of the deliberation process,
+or to offer privacy, anonymity, or coercion-resistance to voting users.
+All of these issues and many others, if inadequately addressed,
+could easily become <em>different</em> but equally critical security flaws
+in the overall deliberative process
+as it scales up and meets real-world adversaries.</p>
+
+<p>I found this comment by
+<a href="http://www.kuro5hin.org/user/uid:26945">godix</a> in a
+<a href="http://www.kuro5hin.org/story/2003/7/16/201556/896">a kuro5hin discussion</a>
+to be both amusing and apt. [sic]</p>
+
+<blockquote>
+<p>I can easily see the following quotes if this idea ever took hold:</p>
+
+<p>&ldquo;Congradulations on your new high paying job at monolithic multinational
+  corperation. Just a few forms to fill out and you&rsquo;ll be earning three
+  figures. First off is the tax form, next is your health insurance, then
+  we&rsquo;ll be needing to you proxy your vote to the CEO&hellip;.&rdquo;</p>
+
+<p>&ldquo;Hi, I&rsquo;m Monica from Friends. Sign your vote over to me. I don&rsquo;t know shit
+  about politics really, but I&rsquo;m famous. Thank you for giving me political
+  power along with fame and wealth you mindless drones.&rdquo;</p>
+
+<p>&ldquo;No child/wife of mine is going to vote while they live in my house.  Sign
+  it over or get the fuck out.&rdquo;</p>
+
+<p>&ldquo;Hello, we know many of you are there are used to voting straight
+  Republican/Democrat. To continue this fine tradition would you please sign
+  your vote over to the DNC/GOP?&rdquo;</p>
+
+<p>&ldquo;Hi, this is the President speaking. This nation decided I was qualified
+  enough to run the free world but COngress is causing me problems. If you
+  support me please sign over your vote. In return I&rsquo;ll make sure I&rsquo;m elected
+  again and Congress isn&rsquo;t. Thank you for your support.&rdquo;</p>
+
+<p>&ldquo;Hi, you may know me, I&rsquo;m Bill Gates. I&rsquo;m getting sick of government
+  investigations. The next one million people to sign their vote over to me
+  gets a free copy of Windows 2045. This time we fixed the bugs. No,
+  seriously, we did.&rdquo;</p>
+</blockquote>
+
+<p>We ultimately need not only secure, scalable deliberative processes
+such as delegative democracy,
+but secure and scalable <em>implementations</em> of those processes
+with strong, decentralized integrity and privacy protections.
+As I alluded to above,
+building the technical infrastructure needed
+integrity-protected, privacy- and anonymity-preserving communication &mdash;
+in a decentralized model where
+no single person, organization, or server needs to be blindly trusted
+&mdash;
+has been one of the key goals of my group&rsquo;s
+<a href="http://dedis.cs.yale.edu/dissent/">Dissent project</a>
+for the past several years.</p>
+
+<p>I believe we now have all the key cryptographic tools and protocols
+we need to create secure implementations of delegative democracy.
+To oversimplify things just a bit,
+what remains is SMOP, a &ldquo;small matter of programming.&rdquo;
+I would be happy to work with any talented coder/activists
+interested in collaborating to make this happen.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="http://twitter.com/share?text=Delegative%20Democracy%20Revisited&url=http%3a%2f%2fbford.github.io%2f2014%2f11%2f16%2fdeleg.html"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbford.github.io%2f2014%2f11%2f16%2fdeleg.html"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fbford.github.io%2f2014%2f11%2f16%2fdeleg.html"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Bryan Ford&#39;s Blog" href="http://bford.github.io/">Bryan Ford&#39;s Blog</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2015 / Powered by <a href="http://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="http://bford.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="http://bford.github.io/js/jquery.fitvids.js"></script>
+        <script src="http://bford.github.io/js/scripts.js"></script>
+    </body>
+</html>
+
