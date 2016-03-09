@@ -378,7 +378,8 @@ under attacker-controlled conditions.&lt;/p&gt;
 cryptographic transparency mechanism.
 For example, the Public Key Infrastructure (PKI)
 used to secure Web connections
-&lt;a href=&#34;http://resources.infosecinstitute.com/cybercrime-exploits-digital-certificates/&#34;&gt;similar weaknesses&lt;/a&gt; similar to software update systems.
+&lt;a href=&#34;http://resources.infosecinstitute.com/cybercrime-exploits-digital-certificates/&#34;&gt;also has weaknesses&lt;/a&gt;
+similar to software update systems.
 PKI transparency mechanisms such as
 &lt;a href=&#34;http://convergence.io&#34;&gt;Convergence&lt;/a&gt;,
 &lt;a href=&#34;https://www.eff.org/sovereign-keys&#34;&gt;Sovereign Keys&lt;/a&gt;,
