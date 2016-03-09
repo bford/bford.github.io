@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Backdoors, Trusted Servers, and Deanonymization &middot; Bryan Ford</title>
+        <meta name="description" content="Ghostwriter example description">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.16-DEV" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://bford.github.io/css/normalize.css">
+        <link rel="stylesheet" href="http://bford.github.io/css/highlight.css">
+        <link rel="stylesheet" href="http://bford.github.io/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Bryan Ford&#39;s Blog" href="http://bford.github.io/">Bryan Ford&#39;s Blog</a>
+                            </h1>
+                        
+                        <a class="button-square" href="http://bford.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/brynosaurus">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/bford/">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/baford">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://plus.google.com/u/0/&#43;BryanFord">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Backdoors, Trusted Servers, and Deanonymization</h1>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    
+
+<h1 id="page-title:7d8de8e35d448be369b4641e7d346cee">{{ page.title }}</h1>
+
+<p>To my knowledge there are currently only two fundamentally distinct approaches
+to achieving strong anonymity online,
+and the same legendary computing figure, David Chaum,
+pioneered both.
+His first approach,
+<a href="http://www.freehaven.net/anonbib/cache/chaum-mix.pdf">mixes</a>,
+relay messages over multi-hop paths around the network
+to obscure their source and destinations.
+State-of-the-art deployed anonymity systems such as
+<a href="https://www.torproject.org/">Tor</a>
+are highly evolved and performance-optimized variants
+of this basic relaying idea.</p>
+
+<p>Chaum&rsquo;s second approach,
+<a href="http://www.freehaven.net/anonbib/cache/chaum-dc.pdf">dining cryptographers</a>,
+instead uses information-coding principles to hide the sender of a message
+among a group of nodes all of whom seem to be spewing gibberish at once.
+It&rsquo;s as if you are listening to a crowd
+<a href="http://www.christianpublishers.org/Speaking%20in%20Tongues-1.jpg">speaking in tongues</a>
+but what you hear is a single unified voice,
+emanating from no one in particular,
+elucidating the Ten Commandments with perfect clarity.
+Chaum then moved away from anonymity systems
+to other projects such as the first major attempt at practical electronic cash
+(yes, he was also the &ldquo;first&rdquo; Satoshi Nakamoto),
+and secure electronic voting systems.
+While several research projects,
+including Cornell&rsquo;s
+<a href="https://www.cs.cornell.edu/people/egs/herbivore/">Herbivore</a>
+and my own
+<a href="http://dedis.cs.yale.edu/dissent/">Dissent</a>
+have made progress toward making the dining cryptographers practical,
+it has not (yet) made it into widely-deployed systems.</p>
+
+<p>Given Chaum&rsquo;s status as &ldquo;the father of online anonymity&rdquo;,
+it stands to reason
+that his first venture <em>back</em> into anonymity in many years
+would get some attention.
+Today at <a href="http://www.realworldcrypto.com/rwc2016">Real World Crypto</a>,
+he presented
+<a href="http://eprint.iacr.org/2016/008.pdf">cMix</a>,
+an interesting new take on the mix approach
+that aims to achieve better scalability, lower latencies,
+and sufficiently low computation costs on client devices
+to be practical for use in energy-conscious mobile phone apps.
+I had the pleasure of learning about cMix directly from David
+and discussing it with him at some length last year,
+but my recent move to <a href="http://www.epfl.ch/">EPFL</a> and other time demands
+prevented me from being able to take a more active role in the project.
+The design of cMix is definitely interesting and contains some promising ideas,
+but that is not what this blog post is about.</p>
+
+<h2 id="ending-the-crypto-war-or-stoking-the-flames:7d8de8e35d448be369b4641e7d346cee">Ending the Crypto War, or Stoking the Flames?</h2>
+
+<p>Earlier today before Chaum&rsquo;s talk, Wired also released
+<a href="http://www.wired.com/2016/01/david-chaum-father-of-online-anonymity-plan-to-end-the-crypto-wars/">an article on it</a>
+containing a statement that will doubtless attract
+a lot more attention than anything in the technical paper on cMix:</p>
+
+<pre><code>Chaum is also building into PrivaTegrity another feature that’s sure to be far more controversial: a carefully controlled backdoor that allows anyone doing something “generally recognized as evil” to have their anonymity and privacy stripped altogether.
+</code></pre>
+
+<p>Well before Chaum&rsquo;s talk even began,
+Twitter was ablaze with discussion about Chaum&rsquo;s &ldquo;backdoor&rdquo; in PrivaTegrity.</p>
+
+<p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">The main benefit of Chaum&#39;s new system, as far as I can tell, is that it is a political gift to FBI Director Comey. <a href="https://t.co/64Au0lXxuL">https://t.co/64Au0lXxuL</a></p>&mdash; Christopher Soghoian (@csoghoian) <a href="https://twitter.com/csoghoian/status/684730483503149056">January 6, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I&#39;m heartbroken to see that Chaum is proposing key escrow for everyone on the planet: <a href="https://t.co/zWZ3bUQsJf">https://t.co/zWZ3bUQsJf</a> What happened to David Chaum?</p>&mdash; Jacob Appelbaum (@ioerror) <a href="https://twitter.com/ioerror/status/684763375260270592">January 6, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<h2 id="but-where-s-the-backdoor:7d8de8e35d448be369b4641e7d346cee">But Where&rsquo;s the Backdoor?</h2>
+
+<p>One important observation, however, is that the word &ldquo;backdoor&rdquo;
+appears nowhere in the actual
+<a href="http://eprint.iacr.org/2016/008.pdf">technical paper on cMix</a> written by
+Chaum and his collaborators.
+While cMix is the anonymous communication protocol Chaum is proposing,
+PrivaTegrity is a larger system built on cMix
+to provide anonymous chat and other anonymous interaction applications
+directly usable to ordinary users.
+In essence, cMix is just an &ldquo;engine&rdquo; whereas PrivaTegrity is the car.
+So where is this supposed &ldquo;backdoor&rdquo; &emdash; in the engine or the car?</p>
+
+<p>The only part of the technical cMix paper that even suggests
+the &ldquo;backdoor&rdquo; idea (without using that term)
+is section IX.B., two brief paragraphs on the paper&rsquo;s second-to-last page.
+The first is the most crucial:</p>
+
+<pre><code>Independent from cMix, PrivaTegrity addresses potential
+</code></pre>
+
+<p>abuse of anonymity services by establishing a trust model
+that offers a balance of anonymity and accountability. On the
+one hand, PrivaTegrity aims to provide privacy at a technical
+level that is not penetrable by nation states. On the other
+hand, PrivaTegrity aims to provide integrity, both prior restraint
+and accountability after the fact, that is inescapably tied to
+individuals. Only if all of the mixing nodes cooperate, can the
+senders and receivers of messages be linked or identified.</p>
+
+<p>In essence, cMix routes users&rsquo; messages through a series of mixing nodes
+(the Wired article talks about nine servers in different countries),
+such that none of the servers can individually unmask an anonymous user,
+but all of the servers (or their operators) together can unmask a user
+that they collectively agree to be deserving of such treatment.</p>
+
+<p>This property is by no means new, unusual, or unique to cMix, however:
+in fact a huge number of cryptographic and distributed systems
+have this essential security property.
+No one really knows how to build secure systems
+in which you need to trust <em>no one at all</em>.
+Instead the best we can really do is to <em>split</em> trust across multiple entities
+that we hope are at least somewhat independent,
+so that no one entity needs to be fully trusted.</p>
+
+<p>This is exactly the same security principle that motivates
+<a href="http://www.deansafe.com/uncodrsawisa.html">safes with two keys</a>.
+If both keys are required to open the safe and are held by different employees,
+then a single dishonest employee working alone will be unable to raid it
+without somehow aquiring the other key.
+But if the two key-holders conspire,
+the two-key mechanism will do nothing to stop them.</p>
+
+<h2 id="trust-splitting-in-anonymity-systems:7d8de8e35d448be369b4641e7d346cee">Trust Splitting in Anonymity Systems</h2>
+
+<p>Essentially all of the practical anonymity systems,
+both deployed and proposed in research,
+embody this limited trust-splitting property in some fashion.
+Several years ago my group
+<a href="http://dedis.cs.yale.edu/dissent/papers/eurosec12-abs">coined the term &ldquo;anytrust&rdquo;</a>
+for this security model in the context of anonymity systems,
+because users need only assume that &ldquo;any one&rdquo; of the servers is honest
+and not colluding with all the others against them.
+Users don&rsquo;t even need to know or guess which server is honest;
+one merely <em>needs to exist</em>.
+Once again, we did not by any means invent this security model;
+it has been in use in many ways and under many names for decades
+in cryptography and distributed systems practice.</p>
+
+<p>Users of the well-known <a href="https://www.torproject.org/">Tor</a> anonymity system,
+for example,
+depend for their security on a small group of
+<em>directory authorities</em> &emdash;
+of which <a href="https://twitter.com/kristovatlas/status/684845884576796673">there are currently 10</a> &emdash;
+to keep track of and let Tor clients know the set of relays
+available to help anonymize their messages.
+If &hellip;</p>
+
+<p>PrivaTegrity</p>
+
+<p>is Chaum&rsquo;s &ldquo;backdoor&rdquo; a technical feature?
+no, just a common architectural weakness.</p>
+
+<p>Tor has it&hellip; (examples)</p>
+
+<p>Can we eliminate such trusted server groups?  Yes, but it&rsquo;s hard.</p>
+
+<p>Does CT fix it?  Not quite.</p>
+
+<p>The policy question: are backdoors needed/good in an anonymity systems?</p>
+
+<p>What would the processes be for controlled deanonymization of a user,
+supposing one created a system and set it up like Chaum&rsquo;s
+on the (policy) basis that server operators would cooperate
+to deanonymize users under &ldquo;the right conditions&rdquo;?</p>
+
+<p>who picks those 9 server operators?  Who funds them?
+(The power of the purse is strong&hellip;)
+If a nation-state comes to them and says,
+&ldquo;we&rsquo;ll block your service and thus destroy a big part of your legal business
+unless you help us deanonymize these people who we call &lsquo;terrorists&rsquo;
+but the rest of the world calls &lsquo;political dissidents&rsquo;&ldquo;,
+what do they do?</p>
+
+<p>sybil problem, multiple possible levels of response&hellip;</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="http://twitter.com/share?text=Backdoors%2c%20Trusted%20Servers%2c%20and%20Deanonymization&url=http%3a%2f%2fbford.github.io%2f2016%2f03%2f08%2fbackdoors%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbford.github.io%2f2016%2f03%2f08%2fbackdoors%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fbford.github.io%2f2016%2f03%2f08%2fbackdoors%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Bryan Ford&#39;s Blog" href="http://bford.github.io/">Bryan Ford&#39;s Blog</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2016 / Powered by <a href="http://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="http://bford.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="http://bford.github.io/js/jquery.fitvids.js"></script>
+        <script src="http://bford.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

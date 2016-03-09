@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Apple, FBI, and Software Transparency &middot; Bryan Ford</title>
+        <meta name="description" content="Ghostwriter example description">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.16-DEV" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://bford.github.io/css/normalize.css">
+        <link rel="stylesheet" href="http://bford.github.io/css/highlight.css">
+        <link rel="stylesheet" href="http://bford.github.io/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Bryan Ford&#39;s Blog" href="http://bford.github.io/">Bryan Ford&#39;s Blog</a>
+                            </h1>
+                        
+                        <a class="button-square" href="http://bford.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/brynosaurus">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/bford/">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/baford">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://plus.google.com/u/0/&#43;BryanFord">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Apple, FBI, and Software Transparency</h1>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    
+
+<p>The <a href="http://www.nytimes.com/2016/02/18/technology/apple-timothy-cook-fbi-san-bernardino.html">Apple versus FBI showdown</a>
+has quickly become
+a crucial flashpoint of the
+&ldquo;<a href="http://www.dailydot.com/politics/tim-cook-encryption-iphone-hero-businessman/">new Crypto War</a>.&rdquo;
+On February 16 the FBI invoked
+<a href="https://www.washingtonpost.com/news/volokh-conspiracy/wp/2016/02/19/preliminary-thoughts-on-the-apple-iphone-order-in-the-san-bernardino-case-part-2-the-all-writs-act/">the All Writs Act of 1789</a>,
+a catch-all authority for assistance of law enforcement,
+demanding that Apple create a custom version of its iOS
+to help the FBI decrypt an iPhone used by one of the
+<a href="http://www.newyorker.com/magazine/2016/02/22/preparing-for-apocalypse-in-san-bernardino">San Bernardino shooters</a>.
+The fact that the FBI allowed Apple to disclose the order publicly,
+<a href="http://www.apple.com/customer-letter/">on the same day</a>,
+represents a rare exception to the government&rsquo;s normal penchant for secrecy.</p>
+
+<p>The reasons behind the FBI&rsquo;s unusually loud entrance are important &ndash;
+but even more so is the risk that after the present flurry concludes,
+the FBI and other government agencies will revert
+to more shadowy methods of compelling companies to backdoor their software.
+This blog post explores these software transparency risks,
+and how <a href="http://dedis.cs.yale.edu/dissent/papers/witness-abs">new technical measures</a>
+could help ensure that the public debate over software backdoors
+<em>remains</em> public.</p>
+
+<h2 id="the-decryption-assistance-order:daca22b8e12080abaf8bf3354448169b">The Decryption Assistance Order</h2>
+
+<p>Apple and other technology companies regularly comply with
+government orders for data in their possession.
+The controversial order&rsquo;s key distinction, however,
+is that the data is <em>not</em> in Apple&rsquo;s posession but on an encrypted iPhone,
+and the order requires Apple
+to create <em>new software</em> to help the FBI circumvent that iPhone&rsquo;s security.
+While Apple is probably <a href="http://blog.trailofbits.com/2016/02/17/apple-can-comply-with-the-fbi-court-order/">technically able to comply with the FBI&rsquo;s order</a>,
+it is
+<a href="https://cryptome.org/2016/02/usg-apple-016.pdf">fighting the order</a>
+on the grounds that
+&ldquo;the government demands that Apple create a back door
+to defeat the encryption on the iPhone,
+making its users’ most confidential and personal information vulnerable
+to hackers, identity thieves, hostile foreign agents,
+and unwarranted government surveillance.
+&rdquo;</p>
+
+<p>Indeed,
+demanding that a private company
+<a href="http://www.zdziarski.com/blog/?p=5645">create a new forensic instrument</a>
+to the government&rsquo;s order,
+weakening the security of Apple&rsquo;s own devices and
+<a href="http://www.slate.com/articles/technology/technology/2016/02/apple_and_the_fbi_think_iphones_are_safes_a_philosopher_explains_what_they.single.html">exposing their users&rsquo; innermost secrets</a>,
+may
+<a href="http://motherboard.vice.com/read/fbis-case-against-apple-could-violate-free-speech">violate the first amendment</a>.
+At any rate, the order is
+&ldquo;<a href="https://www.eff.org/deeplinks/2016/02/technical-perspective-apple-iphone-case">like asking General Motors to build a new truck
+with a fifth wheel by next month.</a>&rdquo;</p>
+
+<p>The FBI could probably create their own backdoored version of iOS.
+However, Apple&rsquo;s devices accept only software updates digitally
+signed with a secret key
+that presumably only Apple controls.
+<em>Presumably</em>.  We&rsquo;ll come back to that.</p>
+
+<h2 id="why-all-the-publicity:daca22b8e12080abaf8bf3354448169b">Why All the Publicity?</h2>
+
+<p>One of the most interesting and unusual features of this particular case
+is how quickly we, the public,
+<a href="http://www.apple.com/customer-letter/">learned about it from Apple</a>.
+The FBI could have quietly delivered this order under seal,
+as it has done with
+<a href="http://www.wsj.com/articles/justice-department-seeks-to-force-apple-to-extract-data-from-about-12-other-iphones-1456202213">similar decryption-assistance demands to Apple</a> &ndash;
+as well as to other companies
+<a href="http://www.newyorker.com/tech/elements/how-lavabit-melted-down[">such as Lavabit</a>,
+the <a href="http://www.theguardian.com/commentisfree/2014/may/20/why-did-lavabit-shut-down-snowden-email">now-defunct</a> E-mail provider that Edward Snowden used.</p>
+
+<p>Apple even <a href="http://www.nytimes.com/2016/02/19/technology/how-tim-cook-became-a-bulwark-for-digital-privacy.html?smprod=nytcore-iphone&amp;smid=nytcore-iphone-share">reportedly requested that the FBI&rsquo;s order be sealed</a>,
+but the FBI wanted the public showdown.
+The facts of the case <a href="https://www.techdirt.com/articles/20160220/22412933661/no-fbi-does-not-need-info-farooks-iphone-this-is-entirely-about-precedent.shtml">undermine the FBI&rsquo;s claims</a>
+of urgently needing this iPhone&rsquo;s contents:
+the killers were already long dead,
+the mountain of metadata the FBI already had about the killers
+revealed no hint of connections to other terrorists,
+and the iPhone in question was an employer-provided work phone
+that the killers did not bother to destroy
+as they did their two personal phones.
+The Occam&rsquo;s Razor interpretation of the facts suggest
+that the FBI is far less interested in the data itself
+than in <a href="http://www.macworld.com/article/3034355/ios/why-the-fbis-request-to-apple-will-affect-civil-rights-for-a-generation.html">the court precedent</a>
+a legal win would establish.</p>
+
+<p>In short, it appears the FBI is &ldquo;<a href="https://medium.com/@thegrugq/feeble-noise-pollution-627acb5931a2#.nv513bwae">playing politics</a>&rdquo;
+via a
+&ldquo;<a href="http://www.theguardian.com/technology/2016/feb/17/inside-the-fbis-encryption-battle-with-apple?CMP=twt_gu">carefully planned legal battle&hellip;months in the making.</a>&rdquo;
+The iPhone in question represents a strategically-chosen battleground
+on which the FBI thinks it can
+<a href="https://bgr.com/2016/02/17/fbi-vs-apple-smartphone-encryption/">win using the terrorism card</a> &ndash;
+even if this particular iPhone in fact has
+<a href="https://theintercept.com/2016/02/26/farooks-iphone-is-probably-useless-even-the-police-say-so/">little or no intelligence value</a>.</p>
+
+<p>Lining up in Apple&rsquo;s defense are
+<a href="http://www.reuters.com/article/us-apple-encryption-poll-idUSKCN0VX159">a majority of the American public</a>;
+public-interest organizations such as
+<a href="https://www.aclu.org/blog/speak-freely/why-were-defending-apple">ALCU</a>,
+<a href="https://www.eff.org/deeplinks/2016/03/deep-dive-why-forcing-apple-write-and-sign-code-violates-first-amendment">EFF</a>,
+and
+<a href="https://cdt.org/blog/cdt-files-brief-in-support-of-apple-and-strong-encryption/">CDT</a>;
+many
+<a href="http://www.apple.com/pr/library/2016/03/03Amicus-Briefs-in-Support-of-Apple.html">technology giants</a>
+including Google, Intel, Microsoft, Cisco, and Amazon;
+newspapers such as the
+<a href="http://www.nytimes.com/2016/02/19/opinion/why-apple-is-right-to-challenge-an-order-to-help-the-fbi.html">New York Times</a>
+and the
+<a href="http://www.wsj.com/article_email/apple-is-right-on-encryption-1456877827-lMyQjAxMTE2NzAzMjQwNzI3Wj">Wall Street Journal</a>,
+the
+<a href="http://www.ohchr.org/EN/NewsEvents/Pages/DisplayNews.aspx?NewsID=17138&amp;LangID=E">UN High Commissioner for Human Rights</a>;
+even the
+<a href="http://money.cnn.com/2016/01/13/technology/nsa-michael-hayden-encryption/index.html">former NSA director</a>
+and
+<a href="http://fortune.com/2016/03/03/apple-support-former-government-officials/">other former top US government officials</a>.</p>
+
+<h2 id="the-secrecy-alternative-past-and-future:daca22b8e12080abaf8bf3354448169b">The Secrecy Alternative, Past and Future</h2>
+
+<p>Important as this public battle is,
+the FBI and governments around the world
+can and often have pursued the same goals in secret:
+Apple versus FBI is more the exception than the rule.
+Recall the result of
+<a href="https://www.newamerica.org/oti/doomed-to-repeat-history-lessons-from-the-crypto-wars-of-the-1990s/">the first Crypto Wars</a>,
+in which the US government attempted to mandate
+key escrow encryption embodied in the infamous
+<a href="http://arstechnica.com/information-technology/2015/12/what-the-government-shouldve-learned-about-backdoors-from-the-clipper-chip/">Clipper Chip</a>.
+While the government lost that public battle,
+they did not give up but merely
+<a href="http://www.nytimes.com/2013/09/06/us/nsa-foils-much-internet-encryption.html?_r=0">shifted their efforts to compromise encryption back into the shadows</a>.</p>
+
+<p>For example, the NSA apparently
+<a href="https://www.lawfareblog.com/nsas-subversion-nists-algorithm">slipped a backdoor into a NIST standard for random number generation</a>,
+allowing the holder of a secret
+to compromise all cryptographic algorithms on a device.
+Demonstrating the perils of trying to keep a backdoor
+accessible only to &ldquo;the good guys,&rdquo;
+an unknown attacker recently managed to &ldquo;re-key&rdquo;
+and take over a latent copy of this backdoored random number generator
+<a href="http://www.wired.com/2015/12/researchers-solve-the-juniper-mystery-and-they-say-its-partially-the-nsas-fault/">in Juniper Networks routers</a>.</p>
+
+<p>Even if sanity prevails in this new round of the Crypto Wars,
+we can count on continued attempts by the US and governments around the world
+to aquire secret backdoors.
+Governments can of course
+exploit <a href="http://motherboard.vice.com/read/apple-fbi-should-ask-the-nsa-to-hack-shooters-iphone">software bugs</a>
+or <a href="http://www.bloomberg.com/news/articles/2016-03-04/who-needs-apple-when-the-fbi-could-hack-terrorist-iphone-itself">physical vulnerabilities</a>
+to break into personal devices,
+but secret backdoors will remain an attractive Siren song.
+It is easier, cheaper, and less risky to exploit a known backdoor
+than to &ldquo;<a href="https://freedom-to-tinker.com/blog/dwallach/apple-the-fbi-and-the-san-bernadino-iphone/">reach into the treasure chest and engineer a custom exploit</a>.&rdquo;</p>
+
+<h2 id="the-software-update-backdoor:daca22b8e12080abaf8bf3354448169b">The Software Update Backdoor</h2>
+
+<p>Nearly all of today&rsquo;s personal devices, including Apple&rsquo;s,
+already have a ready-made &ldquo;backdoor&rdquo; ripe for exploitation,
+in the form of
+<a href="http://arstechnica.com/security/2016/02/most-software-already-has-a-golden-key-backdoor-its-called-auto-update/">automatic software updates validated by digital signatures</a>.
+One way the US government could
+aquire a universal backdoor to Apple&rsquo;s devices is
+simply by demanding a copy of Apple&rsquo;s secret software signing keys.
+The government already showed a willingness to do exactly this,
+in demanding the
+<a href="http://www.newyorker.com/tech/elements/how-lavabit-melted-down">master keys to Lavabit&rsquo;s encrypted E-mail service</a>
+while investigating Snowden.
+This might not be entirely trivial if Apple&rsquo;s software signing keys
+are <a href="https://www.thawte.com/code-signing/whitepaper/best-practices-for-code-signing-certificates.pdf">held in hardware security modules</a>
+designed to thwart the extraction or cloning of secret keys.
+In that case, however, the government could still simply
+demand that Apple use its secret key to produce a valid digital signature
+for the FBI&rsquo;s backdoored version of iOS,
+while keeping this process
+and the existence of this backdoored iOS secret.</p>
+
+<p>Even if Apple wins this public battle, therefore,
+they will still face well-founded post-Snowden fears and suspicions &ndash;
+from companies and governments around the world &ndash;
+as to whether Apple can be coerced into
+secretly helping to sign backdoored software and firmware images.
+This risk is by no means specific to Apple,
+but faced by <em>any</em> organization that creates and releases software.
+Even open source software is not immune,
+because you cannot be certain whether a software update
+represents a correctly-compiled or backdoored version of a source release
+<a href="https://wiki.debian.org/ReproducibleBuilds">unless you build it yourself</a>,
+which precious few users do.</p>
+
+<h2 id="software-transparency-via-decentralized-witness-cosigning:daca22b8e12080abaf8bf3354448169b">Software Transparency via Decentralized Witness Cosigning</h2>
+
+<p>In <a href="http://www.ieee-security.org/TC/SP2016/">IEEE Security &amp; Privacy 2016</a>
+we will present a paper
+(<a href="http://dedis.cs.yale.edu/dissent/papers/witness-abs">preliminary draft available here</a>)
+introducing <em>decentralized witness cosigning</em>,
+a technological means by software makers such as Apple
+could protect their users
+from secretly backdoored versions of their software &ndash;
+and in turn protect <em>themselves</em> and their financial bottom lines from
+worldwide fears and suspicions about the possibility of backdoored software.</p>
+
+<p>With conventional digital signatures,
+as currently used for most software and firmware signing processes,
+a single party (e.g., Apple) holds the secret key
+needed to produce valid software images
+that devices and their software update systems will accept.
+Any well-designed update system refuses to accept any software image
+unless it has been authenticated using a <em>digital certificate</em>
+embedded in the device,
+which cryptographically identifies the software maker
+via a mathematical relationship with the secret signing key.
+<a href="https://www.thawte.com/code-signing/whitepaper/best-practices-for-code-signing-certificates.pdf">Best practices for software signing</a>
+are already
+to keep particularly sensitive signing keys offline,
+perhaps in HSMs or even split across multiple HSMs,
+<a href="http://www.theguardian.com/technology/2014/feb/28/seven-people-keys-worldwide-internet-security-web">as ICANN does</a>
+in its ornate
+<a href="https://www.cloudflare.com/dnssec/root-signing-ceremony/">DNSSEC key signing ceremony</a>.
+But as noted above,
+such measures do not prevent the <em>organization</em> from being coerced
+into secret misuse of these signing keys.</p>
+
+<p>With decentralized witness cosigning,
+a software maker imprints their devices and software update systems
+with a digital certificate corresponding not just to their own secret key
+but also to secret keys held by a group of independent <em>witnesses</em>.
+These witnesses might include other cooperating software companies,
+public-interest organizations such as ALCU, EFF, or CDT,
+or major corporate customers or governments around the world
+desiring not just verbal but also technological assurances
+of the software maker&rsquo;s commitment to transparency.
+In turn, before accepting any software image
+the device&rsquo;s update system verifies that it has been signed
+not only by the software maker but also by a threshold number
+of the designated witnesses.
+In essence, the device does not accept any software image
+unless it arrives with a cryptographic &ldquo;proof&rdquo;
+that this <em>particular</em> software image has been publicly observed by &ndash;
+and thereby placed under the scrutiny of &ndash;
+a decentralized group of independent parties scattered around the world
+in different jurisdictions.</p>
+
+<h2 id="the-scalability-of-witness-cosigning:daca22b8e12080abaf8bf3354448169b">The Scalability of Witness Cosigning</h2>
+
+<p>Technically, it is quite easy to implement witness cosigning
+if the number of witnesses is small.
+A software maker could simply gather a list of individual signatures
+for each new software release,
+in much the same way people have handled
+<a href="http://ecssba.rutgers.edu/docs/petuniv.html">public petitions</a>
+for hundreds of years.
+If we want the group of witnesses to be large, however &ndash;
+and we <em>do</em>, to ensure that compromising transparency would
+require not just a few but hundreds or even thousands of witnesses
+to be colluding maliciously &ndash;
+then gathering hundreds or thousands of individual signatures
+for each software release could become painful and inefficient.
+Worse, every device needing to validate a software download or update
+would need to check all these signatures individually,
+causing delays and consuming battery power.</p>
+
+<p>The key technical contribution of our research is a distributed protocol
+that automates this process and
+makes large, decentralized witness cosigning groups practical.
+I will spare you the details, but those interested can
+<a href="http://dedis.cs.yale.edu/dissent/papers/witness-abs">find them here</a>.
+The oversimplified summary is that the protocol involves compressing
+hundreds or thousands of signatures into a single one
+that can be verified almost as simply and efficiently
+verifying a normal individual signature.
+For illustration,
+a traditional many-signature petition handled this way might look as follows:</p>
+
+
+<figure >
+    
+        <img src="multisig.svg" />
+    
+    
+    <figcaption>
+        <h4>What a classic petition would look like as a cryptographic multisignature</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Superposing standard pencil-and-paper signatures this way
+would of course offer little or no security,
+but such superposition <em>can</em> be made secure with modern digital signatures.
+This is one of the remarkable properties of modern cryptography,
+and is a well-understood property that
+<a href="https://www.cs.bu.edu/~reyzin/multisig.html">long predates our work</a>.
+Again, our main contribution is to make witness cosigning scale.</p>
+
+<h2 id="how-does-anyone-know-if-there-s-a-backdoor:daca22b8e12080abaf8bf3354448169b">How Does Anyone Know If There&rsquo;s a Backdoor?</h2>
+
+<p>Unfortunately,
+independent witnesses cannot necessarily determine immediately,
+during the witness cosigning process,
+whether or not a particular software image actually contains a backdoor.
+This is especially true in the common case where the source code is proprietary
+and the software maker signs and releases only binary images.
+Nevertheless, the witnesses can still proactively ensure <em>transparency</em>
+by ensuring that
+<em>every correctly-signed software image in existence</em>
+has been disclosed, cataloged, and made subject to public scrutiny.</p>
+
+<p>For example, if future Apple devices adopted decentralized witness cosigning,
+and a government attempted to coerce Apple secretly into signing
+a backdoored version of iOS version 11.2.1,
+then the only way Apple could do so would be to submit
+the backdoored iOS version to the independent witnesses for cosigning.
+Even though those witnesses could not necessarily recognize the backdoor,
+they could immediately notice that two different iOS images
+labeled &ldquo;version 11.2.1&rdquo; have been signed:
+the standard one and the backdoored one.
+This inconsistency alone should
+immediately raise alarms and draw the attention of security companies
+around the world, who could carefully inspect
+the differences between the two software images.</p>
+
+<p>A government could of course coerce Apple to give the backdoored image
+a different version number that most of their customers never receive:
+e.g., &ldquo;11.2.1fbi&rdquo; &ndash;
+or a more anonymous &ldquo;11.2.1.1.&rdquo;
+However, the witnesses would still be able to tell that an iOS image <em>exists</em>
+that has been signed but not widely distributed,
+again likely drawing suspicion and careful scrutiny by security experts.</p>
+
+<p>Of course, Apple &ndash; or a malicious Apple employee &ndash;
+could still slip a subtle backdoor or security &ldquo;bug&rdquo;
+into the standard iOS releases that <em>everyone</em> runs.
+Accidental bugs and backdoors alike can persist for years without being noticed,
+as <a href="http://www.wired.com/2015/12/researchers-solve-the-juniper-mystery-and-they-say-its-partially-the-nsas-fault/">the Juniper incident</a>
+amply demonstrates.
+Open source software offers a transparency advantage,
+especially with
+<a href="https://wiki.debian.org/ReproducibleBuilds">reproducible builds</a> &ndash;
+but even source-level backdoors can be
+<a href="http://www.underhanded-c.org/">devilishly</a>
+<a href="https://underhandedcrypto.com/">tricky</a>.</p>
+
+<p>Nevertheless,
+techniques and tools for analysing both source and binary software
+is constantly improving,
+and decentralized witness cosigning can ensure that
+<em>all</em> releases of a software distribution are publicly known
+and exposed to this analysis by talented security researchers
+and white-hat hackers
+around the world.
+An attacker who slips a backdoor into a public software release
+inherently faces a risk that the backdoor could be discovered at any time.
+Witness cosigning prevents attackers from sidestepping that risk of discovery,
+even by secretly deploying the backdoored software only on targeted devices
+under attacker-controlled conditions.</p>
+
+<h2 id="proactive-versus-retroactive-transparency-approaches:daca22b8e12080abaf8bf3354448169b">Proactive versus Retroactive Transparency Approaches</h2>
+
+<p>Decentralized witness cosigning is by no means the first
+cryptographic transparency mechanism.
+For example, the Public Key Infrastructure (PKI)
+used to secure Web connections
+<a href="http://resources.infosecinstitute.com/cybercrime-exploits-digital-certificates/">has similar weaknesses</a>.
+PKI transparency mechanisms such as
+<a href="http://convergence.io">Convergence</a>,
+<a href="https://www.eff.org/sovereign-keys">Sovereign Keys</a>,
+<a href="https://www.certificate-transparency.org">Certificate Transparency</a>,
+<a href="https://www.cs.cmu.edu/~xia/resources/Documents/kim-www13.pdf">AKI</a>, and
+<a href="https://www.cs.cmu.edu/~xia/resources/Documents/basin_ccs14.pdf">ARPKI</a>
+chip away at this problem.
+Certificate Transparency is now
+<a href="https://www.certificate-transparency.org/certificate-transparency-in-chrome">standard in the Chrome browser</a>.
+<a href="https://dl.acm.org/citation.cfm?id=2660311">Application Transparency</a>
+is a proposed variant of Certificate Transparency
+adapted to software downloads and updates.
+Related proposals such as
+<a href="https://www.cs.cmu.edu/~perspectives/perspectives_usenix08.pdf">Perspectives</a>
+and
+<a href="http://www.coniks.org">CONIKS</a>
+address closely-related problems for Secure Shell (SSH) connections
+and end-to-end encrypted messaging, respectively.</p>
+
+<p>These prior transparency mechanisms have two crucial weaknesses, however:
+they do not significantly increase the number of secret keys
+an attacker must control to compromise any personal device,
+and personal devices cannot even retroactively detect such compromise
+unless they can actively communicate with multiple well-known Internet servers.
+For example, even with Certificate Transparency,
+an attacker can forge an
+<a href="https://www.certificate-transparency.org/ev-ct-plan">Extended Validation (EV) certificate for Chrome</a>
+after compromising or coercing only three parties:
+one Certificate Authority (CA) and
+two <a href="https://www.certificate-transparency.org/known-logs">log servers</a>.
+Since many CAs and log servers are in US jurisdiction,
+such an attack is clearly within reach of the US government.
+If such an attack does occur,
+Certificate Transparency cannot detect it unless
+the victim device has a chance to communicate or <em>gossip</em>
+the fake certificate
+with other parties on the Internet &ndash;
+after it has already accepted and started
+using the fake digital certificate.</p>
+
+<h2 id="gossip-mechanisms-can-t-guarantee-software-transparency:daca22b8e12080abaf8bf3354448169b">Gossip Mechanisms Can&rsquo;t Guarantee Software Transparency</h2>
+
+<p>These weaknesses are especially severe
+in the domain of software transparency,
+the central issue in the Apple versus FBI case.
+First, if a personal device accepts and starts running
+a backdoored software update
+before the device has had a chance to gossip
+information about the update with other parties on the Internet,
+then the backdoored software can evade transparency
+simply by disabling gossip in the updated code.
+Second, even if for some reason the attacker
+cannot or neglects to take this obvious step,
+the attacker can still evade transparency by controlling
+either the device or its Internet access paths.
+In the FBI versus Apple case, for example,
+the FBI could trivially evade gossip-based transparency,
+and keep its backdoored iOS image secret,
+by keeping the device disconnected from the rest of the Internet
+after installing their backdoored software update.
+(They probably plan to anyway,
+to ensure that no &ldquo;<a href="http://www.theguardian.com/technology/2016/mar/04/san-bernardino-da-baffles-security-community-lying-dormant-cyber-pathogen-iphone">cyber pathogens</a>&rdquo; escape.)</p>
+
+<p>This weakness of gossip-based transparency
+also applies to attackers who may not control the device itself
+but control the device&rsquo;s Internet access path.
+For example, a compromised Internet service provider (ISP)
+or corporate Internet gateway can defeat gossip-based transparency
+by persistently blocking a victim&rsquo;s access
+to transparency servers elsewhere on the Internet.
+Even if the user&rsquo;s device is mobile,
+a state intelligence service such as China&rsquo;s
+&ldquo;<a href="http://edition.cnn.com/2015/10/25/asia/china-war-internet-great-firewall/">Great Firewall</a>&rdquo;
+could defeat gossip-based transparency by persistently blocking
+connections from a targeted victim&rsquo;s devices to global transparency servers,
+in the same way that China already blocks connections to many websites
+and <a href="https://blog.torproject.org/category/tags/china">to the Tor anonymity network</a>.</p>
+
+<h2 id="conclusion:daca22b8e12080abaf8bf3354448169b">Conclusion</h2>
+
+<p>The noisy Apple versus FBI battle is merely the visible tip
+of a looming software integrity iceberg,
+illustrating both the importance of software transparency mechanisms
+and the technical challenges in securing them.
+Current gossip-based methods
+cannot actually guarantee transparency
+if an attacker is in control of the target device or its Internet access path,
+as in the current FBI versus Apple scenario.
+Even if software updates were guarded by
+<a href="https://www.certificate-transparency.org/">Certificate Transparency</a> or
+<a href="http://dl.acm.org/citation.cfm?id=2660311">Application Transparency</a>,
+the FBI could still secretly force Apple
+to sign a backdoored software update,
+coerce two US-based log cervers to sign fake log entries
+while keeping both the software update and the fake logs secret,
+and isolating the targeted device offline
+so that it cannot gossip the fake update metadata with anyone.</p>
+
+<p>Decentralized witness cosigning is currently the only known method
+of ensuring transparency and public accountability in such situations.
+Taking a proactive approach,
+witness cosigning provides devices with a standalone cryptographic proof
+that a software update has been observed by many independent parties,
+<em>before</em> the device accepts or runs the software.
+In this way,
+companies such as Apple could offer their customers
+a strong guarantee
+that every valid software image in existence has been publicly disclosed
+before any of their devices, anywhere, will consider it valid &ndash;
+even if the device and/or its network
+is controlled by an attacker who does <em>not</em>
+exhibit the FBI&rsquo;s fleeting taste for publicity.</p>
+
+<p>The present public debate over backdoors in personal devices
+is of critical importance to our security, privacy, and personal freedom.
+But equally important is ensuring that this time
+the debate <em>stays</em> public.</p>
+
+<hr />
+
+<p>I wish to thank
+<a href="https://tonyarcieri.com/">Tony Arcieri</a>,
+<a href="https://www.lbarman.ch/">Ludovic Barman</a>,
+<a href="http://jbonneau.com/">Joseph Bonneau</a>,
+<a href="https://github.com/nikkolasg">Nicolas Gailly</a>,
+<a href="https://github.com/ineiti">Linus Gasser</a>,
+<a href="http://www.slideshare.net/IsmailKhoffi">Ismail Khoffi</a>,
+<a href="https://zerobyte.io/">Philipp Jovanovic</a>,
+<a href="https://josephhall.org/">Joseph Lorenzo Hall</a>,
+<a href="https://www.jmporup.com/">J.M. Porup</a>,
+<a href="https://www.technologyreview.com/contributor/tom-simonite/">Tom Simonite</a>,
+<a href="https://www.internetsociety.org/who-we-are/staff/robin-wilton">Robin Wilton</a>,
+for helpful feedback on early drafts of this post.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="http://twitter.com/share?text=Apple%2c%20FBI%2c%20and%20Software%20Transparency&url=http%3a%2f%2fbford.github.io%2f2016%2f03%2f10%2fapple"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbford.github.io%2f2016%2f03%2f10%2fapple"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fbford.github.io%2f2016%2f03%2f10%2fapple"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Bryan Ford&#39;s Blog" href="http://bford.github.io/">Bryan Ford&#39;s Blog</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2016 / Powered by <a href="http://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="http://bford.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="http://bford.github.io/js/jquery.fitvids.js"></script>
+        <script src="http://bford.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

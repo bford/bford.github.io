@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Delegative Voting &middot; Bryan Ford</title>
+        <title>An advanced crypto library for Go &middot; Bryan Ford</title>
         <meta name="description" content="Ghostwriter example description">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
@@ -62,25 +62,57 @@
 
 
 <div class="container">
-    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <article class="post-container">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Delegative Voting</h1>
+    <h1 class="post-title">An advanced crypto library for Go</h1>
     
-    <p class="post-date">
-        <span>Published <time datetime="2002-10-21" itemprop="datePublished">Mon, Oct 21, 2002</time></span>
-        <span>by</span>
-        <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
-            <span itemprop="name">
-                <a href="http://bford.info/" itemprop="url" rel="author">Bryan Ford</a>
-            </span>
-        </span>
-    </p>
 </header>
 
-        <div class="post-content clearfix" itemprop="articleBody">
+        <div class="post-content clearfix">
     
 
-    <html><meta http-equiv="refresh" content="0; url=http://www.brynosaurus.com/log/2002/1021-DelegativeVoting/"></html>
+    
+
+<h1 id="page-title:87f9e1c8dc11be26c13a5a9e4721c08b">{{ page.title }}</h1>
+
+<p>Interesting features:</p>
+
+<ul>
+<li><p>An abstract group arithmetic framework for public-key cryptography
+based on the discrete logarithm problem.</p></li>
+
+<li><p>Several alternative concrete instantiations of this abstract
+group arithmetic framework,
+based on the NIST elliptic curve implementations in the Go standard library
+and in the OpenSSL crypto library,
+and implementations of both generic Edwards curves
+and an adaptation of Adam Langley&rsquo;s Ed25519-curve-specific
+optimized group arithmetic code to the abstract group API.</p></li>
+
+<li><p>Implementations of a number of advanced crypto algorithms
+built on this abstract group arithmetic framework,
+and hence automatically compatible woth both integer group
+and any suitable elliptic curves:</p>
+
+<ul>
+<li><p>Shamir Verifiable Secret Sharing (VSS),
+the standard foundation for t-of-n threshold cryptographic techniques.</p></li>
+
+<li><p>An implementation of the general Camenisch/Stadler framework
+for proofs of knowledge based on the discrete-logarithm problem.
+For example&hellip;</p></li>
+
+<li><p>Anonymous and pseudonymous public-key encryption and signatures,
+where the sender or receiver are identified only as an anonymous member
+of some explicit <em>set</em> of public keys, without revealing anything
+about which member of the set signed the message or is to receive it.</p></li>
+
+<li><p>C. Andrew Neff&rsquo;s cryptographic protocol for proving
+the correctness of a shuffle.</p></li>
+</ul></li>
+</ul>
+
+<p>&hellip;</p>
 
 </div>
 
@@ -88,27 +120,25 @@
     
 
     <div class="share">
-        <a class="icon-twitter" href="http://twitter.com/share?text=Delegative%20Voting&url=http%3a%2f%2fbford.github.io%2f2002%2f10%2f21%2fdeleg-voting%2f"
+        <a class="icon-twitter" href="http://twitter.com/share?text=An%20advanced%20crypto%20library%20for%20Go&url=http%3a%2f%2fbford.github.io%2f2016%2f03%2f08%2fcrypto%2f"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fa fa-twitter"></i>
             <span class="hidden">Twitter</span>
         </a>
 
-        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbford.github.io%2f2002%2f10%2f21%2fdeleg-voting%2f"
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbford.github.io%2f2016%2f03%2f08%2fcrypto%2f"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <i class="fa fa-facebook"></i>
             <span class="hidden">Facebook</span>
         </a>
 
-        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fbford.github.io%2f2002%2f10%2f21%2fdeleg-voting%2f"
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fbford.github.io%2f2016%2f03%2f08%2fcrypto%2f"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
            <i class="fa fa-google-plus"></i>
             <span class="hidden">Google+</span>
         </a>
     </div>
 </footer>
-
-        
     </article>
 </div>
 
