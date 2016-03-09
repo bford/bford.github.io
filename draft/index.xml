@@ -113,9 +113,9 @@ even if this particular iPhone in fact has
 &lt;a href=&#34;https://theintercept.com/2016/02/26/farooks-iphone-is-probably-useless-even-the-police-say-so/&#34;&gt;little or no intelligence value&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Lining up in Apple&amp;rsquo;s defense are
-&lt;a href=&#34;http://www.reuters.com/article/us-apple-encryption-poll-idUSKCN0VX159&#34;&gt;a majority of the American public&lt;/a&gt;;
-public-interest organizations such as
-&lt;a href=&#34;https://www.aclu.org/blog/speak-freely/why-were-defending-apple&#34;&gt;ALCU&lt;/a&gt;,
+&lt;a href=&#34;http://www.reuters.com/article/us-apple-encryption-poll-idUSKCN0VX159&#34;&gt;a plurality of the American public&lt;/a&gt;;
+public-interest organizations such as the
+&lt;a href=&#34;https://www.aclu.org/blog/speak-freely/why-were-defending-apple&#34;&gt;ACLU&lt;/a&gt;,
 &lt;a href=&#34;https://www.eff.org/deeplinks/2016/03/deep-dive-why-forcing-apple-write-and-sign-code-violates-first-amendment&#34;&gt;EFF&lt;/a&gt;,
 and
 &lt;a href=&#34;https://cdt.org/blog/cdt-files-brief-in-support-of-apple-and-strong-encryption/&#34;&gt;CDT&lt;/a&gt;;
@@ -167,7 +167,7 @@ or &lt;a href=&#34;http://www.bloomberg.com/news/articles/2016-03-04/who-needs-a
 to break into personal devices,
 but secret backdoors will remain an attractive Siren song.
 It is easier, cheaper, and less risky to exploit a known backdoor
-than to &amp;ldquo;&lt;a href=&#34;https://freedom-to-tinker.com/blog/dwallach/apple-the-fbi-and-the-san-bernadino-iphone/&#34;&gt;reach into the treasure chest and engineer a custom exploit&lt;/a&gt;.&amp;rdquo;&lt;/p&gt;
+than to &amp;ldquo;&lt;a href=&#34;https://freedom-to-tinker.com/blog/dwallach/apple-the-fbi-and-the-san-bernadino-iphone/&#34;&gt;reach into the treasure chest&amp;hellip;and engineer a custom exploit&lt;/a&gt;.&amp;rdquo;&lt;/p&gt;
 
 &lt;h2 id=&#34;the-software-update-backdoor:daca22b8e12080abaf8bf3354448169b&#34;&gt;The Software Update Backdoor&lt;/h2&gt;
 
@@ -176,7 +176,7 @@ already have a ready-made &amp;ldquo;backdoor&amp;rdquo; ripe for exploitation,
 in the form of
 &lt;a href=&#34;http://arstechnica.com/security/2016/02/most-software-already-has-a-golden-key-backdoor-its-called-auto-update/&#34;&gt;automatic software updates validated by digital signatures&lt;/a&gt;.
 One way the US government could
-aquire a universal backdoor to Apple&amp;rsquo;s devices is
+acquire a universal backdoor to Apple&amp;rsquo;s devices is
 simply by demanding a copy of Apple&amp;rsquo;s secret software signing keys.
 The government already showed a willingness to do exactly this,
 in demanding the
@@ -242,7 +242,7 @@ a software maker imprints their devices and software update systems
 with a digital certificate corresponding not just to their own secret key
 but also to secret keys held by a group of independent &lt;em&gt;witnesses&lt;/em&gt;.
 These witnesses might include other cooperating software companies,
-public-interest organizations such as ALCU, EFF, or CDT,
+public-interest organizations such as the ACLU, EFF, or CDT,
 or major corporate customers or governments around the world
 desiring not just verbal but also technological assurances
 of the software maker&amp;rsquo;s commitment to transparency.
@@ -360,7 +360,7 @@ but even source-level backdoors can be
 
 &lt;p&gt;Nevertheless,
 techniques and tools for analysing both source and binary software
-is constantly improving,
+are constantly improving,
 and decentralized witness cosigning can ensure that
 &lt;em&gt;all&lt;/em&gt; releases of a software distribution are publicly known
 and exposed to this analysis by talented security researchers
@@ -473,9 +473,9 @@ Even if software updates were guarded by
 &lt;a href=&#34;http://dl.acm.org/citation.cfm?id=2660311&#34;&gt;Application Transparency&lt;/a&gt;,
 the FBI could still secretly force Apple
 to sign a backdoored software update,
-coerce two US-based log cervers to sign fake log entries
+coerce two US-based log servers to sign fake log entries
 while keeping both the software update and the fake logs secret,
-and isolating the targeted device offline
+and isolate the targeted device offline
 so that it cannot gossip the fake update metadata with anyone.&lt;/p&gt;
 
 &lt;p&gt;Decentralized witness cosigning is currently the only known method
@@ -510,6 +510,7 @@ the debate &lt;em&gt;stays&lt;/em&gt; public.&lt;/p&gt;
 &lt;a href=&#34;https://zerobyte.io/&#34;&gt;Philipp Jovanovic&lt;/a&gt;,
 &lt;a href=&#34;https://josephhall.org/&#34;&gt;Joseph Lorenzo Hall&lt;/a&gt;,
 &lt;a href=&#34;https://www.technologyreview.com/contributor/tom-simonite/&#34;&gt;Tom Simonite&lt;/a&gt;,
+and
 &lt;a href=&#34;https://www.internetsociety.org/who-we-are/staff/robin-wilton&#34;&gt;Robin Wilton&lt;/a&gt;,
 for helpful feedback on early drafts of this post.&lt;/p&gt;
 </description>
