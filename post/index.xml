@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Bryan Ford&#39;s Blog</title>
-    <link>http://bford.github.io/post/</link>
-    <description>Recent content in Posts on Bryan Ford&#39;s Blog</description>
+    <title>Post-rsses on Bryan Ford&#39;s Blog</title>
+    <link>http://bford.github.io/post/index.xml</link>
+    <description>Recent content in Post-rsses on Bryan Ford&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 10 Mar 2016 00:00:00 +0000</lastBuildDate>
@@ -50,7 +50,7 @@ and how &lt;a href=&#34;http://dedis.cs.yale.edu/dissent/papers/witness-abs&#34;
 could help ensure that the public debate over software backdoors
 &lt;em&gt;remains&lt;/em&gt; public.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-decryption-assistance-order:daca22b8e12080abaf8bf3354448169b&#34;&gt;The Decryption Assistance Order&lt;/h2&gt;
+&lt;h2 id=&#34;the-decryption-assistance-order&#34;&gt;The Decryption Assistance Order&lt;/h2&gt;
 
 &lt;p&gt;Apple and other technology companies regularly comply with
 government orders for data in their possession.
@@ -86,7 +86,7 @@ signed with a secret key
 that presumably only Apple controls.
 &lt;em&gt;Presumably&lt;/em&gt;.  We&amp;rsquo;ll come back to that.&lt;/p&gt;
 
-&lt;h2 id=&#34;why-all-the-publicity:daca22b8e12080abaf8bf3354448169b&#34;&gt;Why All the Publicity?&lt;/h2&gt;
+&lt;h2 id=&#34;why-all-the-publicity&#34;&gt;Why All the Publicity?&lt;/h2&gt;
 
 &lt;p&gt;One of the most interesting and unusual features of this particular case
 is how quickly we, the public,
@@ -143,7 +143,7 @@ even the
 and
 &lt;a href=&#34;http://fortune.com/2016/03/03/apple-support-former-government-officials/&#34;&gt;other former top US government officials&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-secrecy-alternative-past-and-future:daca22b8e12080abaf8bf3354448169b&#34;&gt;The Secrecy Alternative, Past and Future&lt;/h2&gt;
+&lt;h2 id=&#34;the-secrecy-alternative-past-and-future&#34;&gt;The Secrecy Alternative, Past and Future&lt;/h2&gt;
 
 &lt;p&gt;Important as this public battle is,
 the FBI and governments around the world
@@ -179,7 +179,7 @@ but secret backdoors will remain an attractive Siren song.
 It is easier, cheaper, and less risky to exploit a known backdoor
 than to &amp;ldquo;&lt;a href=&#34;https://freedom-to-tinker.com/blog/dwallach/apple-the-fbi-and-the-san-bernadino-iphone/&#34;&gt;reach into the treasure chest&amp;hellip;and engineer a custom exploit&lt;/a&gt;.&amp;rdquo;&lt;/p&gt;
 
-&lt;h2 id=&#34;the-software-update-backdoor:daca22b8e12080abaf8bf3354448169b&#34;&gt;The Software Update Backdoor&lt;/h2&gt;
+&lt;h2 id=&#34;the-software-update-backdoor&#34;&gt;The Software Update Backdoor&lt;/h2&gt;
 
 &lt;p&gt;Nearly all of today&amp;rsquo;s personal devices, including Apple&amp;rsquo;s,
 already have a ready-made &amp;ldquo;backdoor&amp;rdquo; ripe for exploitation,
@@ -214,7 +214,7 @@ represents a correctly-compiled or backdoored version of a source release
 &lt;a href=&#34;https://wiki.debian.org/ReproducibleBuilds&#34;&gt;unless you build it yourself&lt;/a&gt;,
 which precious few users do.&lt;/p&gt;
 
-&lt;h2 id=&#34;software-transparency-via-decentralized-witness-cosigning:daca22b8e12080abaf8bf3354448169b&#34;&gt;Software Transparency via Decentralized Witness Cosigning&lt;/h2&gt;
+&lt;h2 id=&#34;software-transparency-via-decentralized-witness-cosigning&#34;&gt;Software Transparency via Decentralized Witness Cosigning&lt;/h2&gt;
 
 &lt;p&gt;In &lt;a href=&#34;http://www.ieee-security.org/TC/SP2016/&#34;&gt;IEEE Security &amp;amp; Privacy 2016&lt;/a&gt;
 we will present a paper
@@ -267,7 +267,7 @@ and thereby placed under the scrutiny of &amp;ndash;
 a decentralized group of independent parties scattered around the world
 in different jurisdictions.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-scalability-of-witness-cosigning:daca22b8e12080abaf8bf3354448169b&#34;&gt;The Scalability of Witness Cosigning&lt;/h2&gt;
+&lt;h2 id=&#34;the-scalability-of-witness-cosigning&#34;&gt;The Scalability of Witness Cosigning&lt;/h2&gt;
 
 &lt;p&gt;Technically, it is quite easy to implement witness cosigning
 if the number of witnesses is small.
@@ -320,7 +320,7 @@ and is a well-understood property that
 &lt;a href=&#34;https://www.cs.bu.edu/~reyzin/multisig.html&#34;&gt;long predates our work&lt;/a&gt;.
 Again, our main contribution is to make witness cosigning scale.&lt;/p&gt;
 
-&lt;h2 id=&#34;how-does-anyone-know-if-there-s-a-backdoor:daca22b8e12080abaf8bf3354448169b&#34;&gt;How Does Anyone Know If There&amp;rsquo;s a Backdoor?&lt;/h2&gt;
+&lt;h2 id=&#34;how-does-anyone-know-if-there-s-a-backdoor&#34;&gt;How Does Anyone Know If There&amp;rsquo;s a Backdoor?&lt;/h2&gt;
 
 &lt;p&gt;Unfortunately,
 independent witnesses cannot necessarily determine immediately,
@@ -382,7 +382,7 @@ Witness cosigning prevents attackers from sidestepping that risk of discovery,
 even by secretly deploying the backdoored software only on targeted devices
 under attacker-controlled conditions.&lt;/p&gt;
 
-&lt;h2 id=&#34;proactive-versus-retroactive-transparency-approaches:daca22b8e12080abaf8bf3354448169b&#34;&gt;Proactive versus Retroactive Transparency Approaches&lt;/h2&gt;
+&lt;h2 id=&#34;proactive-versus-retroactive-transparency-approaches&#34;&gt;Proactive versus Retroactive Transparency Approaches&lt;/h2&gt;
 
 &lt;p&gt;Decentralized witness cosigning is by no means the first
 cryptographic transparency mechanism.
@@ -430,7 +430,7 @@ with other parties on the Internet &amp;ndash;
 after it has already accepted and started
 using the fake digital certificate.&lt;/p&gt;
 
-&lt;h2 id=&#34;gossip-mechanisms-can-t-guarantee-software-transparency:daca22b8e12080abaf8bf3354448169b&#34;&gt;Gossip Mechanisms Can&amp;rsquo;t Guarantee Software Transparency&lt;/h2&gt;
+&lt;h2 id=&#34;gossip-mechanisms-can-t-guarantee-software-transparency&#34;&gt;Gossip Mechanisms Can&amp;rsquo;t Guarantee Software Transparency&lt;/h2&gt;
 
 &lt;p&gt;These weaknesses are especially severe
 in the domain of software transparency,
@@ -468,7 +468,7 @@ connections from a targeted victim&amp;rsquo;s devices to global transparency se
 in the same way that China already blocks connections to many websites
 and &lt;a href=&#34;https://blog.torproject.org/category/tags/china&#34;&gt;to the Tor anonymity network&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion:daca22b8e12080abaf8bf3354448169b&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;The noisy Apple versus FBI battle is merely the visible tip
 of a looming software integrity iceberg,
@@ -590,7 +590,7 @@ controlling only that one account.
 But what if online services could verify that a user is a real &lt;em&gt;person&lt;/em&gt;
 without intrusively demanding to know the user&amp;rsquo;s real &lt;em&gt;name&lt;/em&gt;?&lt;/p&gt;
 
-&lt;h2 id=&#34;pseudonym-parties:fe23a20afac7e671a2c3615c89cb68a9&#34;&gt;Pseudonym Parties&lt;/h2&gt;
+&lt;h2 id=&#34;pseudonym-parties&#34;&gt;Pseudonym Parties&lt;/h2&gt;
 
 &lt;p&gt;Years ago I
 &lt;a href=&#34;http://bford.info/pub/net/sybil.pdf&#34;&gt;proposed a possible solution&lt;/a&gt;
@@ -624,7 +624,7 @@ through Sybil attacks or sockpuppetry,
 would be neutralized without the online service
 having to know anything else about the user.&lt;/p&gt;
 
-&lt;h2 id=&#34;real-people-not-real-names:fe23a20afac7e671a2c3615c89cb68a9&#34;&gt;Real People, Not Real Names&lt;/h2&gt;
+&lt;h2 id=&#34;real-people-not-real-names&#34;&gt;Real People, Not Real Names&lt;/h2&gt;
 
 &lt;p&gt;Tokens distributed at pseudonym parties
 would effectively enable online services to verify
@@ -691,7 +691,7 @@ and I get regular inquiries about it,
 I thought it was high time to revisit the idea
 and review more recent developments.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-basic-idea:c3ae62c8000679a68bb94bd778dd80b1&#34;&gt;The Basic Idea&lt;/h2&gt;
+&lt;h2 id=&#34;the-basic-idea&#34;&gt;The Basic Idea&lt;/h2&gt;
 
 &lt;p&gt;Many people including myself like the participatory ideal embodied in
 &lt;a href=&#34;http://en.wikipedia.org/wiki/Direct_democracy&#34;&gt;direct democracy&lt;/a&gt;,
@@ -738,7 +738,7 @@ and make what his views as the best decision on that basis.
 If I dislike his decision,
 I can choose a different delegate before the next vote.&lt;/p&gt;
 
-&lt;h2 id=&#34;origins-of-the-idea:c3ae62c8000679a68bb94bd778dd80b1&#34;&gt;Origins of the Idea&lt;/h2&gt;
+&lt;h2 id=&#34;origins-of-the-idea&#34;&gt;Origins of the Idea&lt;/h2&gt;
 
 &lt;p&gt;Perhaps unsurprisingly,
 I was only one of many people to think along these lines over the decades.
@@ -777,7 +777,7 @@ The idea of allowing voters to delegate their participation
 to individually-chosen representatives
 is central to all of these proposals, though details differ.&lt;/p&gt;
 
-&lt;h2 id=&#34;academic-research:c3ae62c8000679a68bb94bd778dd80b1&#34;&gt;Academic Research&lt;/h2&gt;
+&lt;h2 id=&#34;academic-research&#34;&gt;Academic Research&lt;/h2&gt;
 
 &lt;p&gt;Exploration of this idea in the academic literature has been more sparse,
 no doubt in part because it&amp;rsquo;s hard to convince reviewers of the novelty
@@ -825,7 +825,7 @@ but also for secure &lt;em&gt;deliberation&lt;/em&gt; mechanisms such as voting.
 I hope more system-builders and security/privacy researchers
 will be bold enough to venture into this space.&lt;/p&gt;
 
-&lt;h2 id=&#34;delegative-liquid-democracy-in-the-real-world:c3ae62c8000679a68bb94bd778dd80b1&#34;&gt;Delegative/Liquid Democracy in the Real World&lt;/h2&gt;
+&lt;h2 id=&#34;delegative-liquid-democracy-in-the-real-world&#34;&gt;Delegative/Liquid Democracy in the Real World&lt;/h2&gt;
 
 &lt;p&gt;Increasing participation and engagement in political discourse
 has long been a basic goal of many Internet democracy efforts.
@@ -878,7 +878,7 @@ at the
 recently interviewed me as part of her thesis studying liquid democracy;
 I look forward to seeing the result.&lt;/p&gt;
 
-&lt;h2 id=&#34;where-to-next:c3ae62c8000679a68bb94bd778dd80b1&#34;&gt;Where To Next?&lt;/h2&gt;
+&lt;h2 id=&#34;where-to-next&#34;&gt;Where To Next?&lt;/h2&gt;
 
 &lt;p&gt;I still believe strongly in the idea of delegative democracy,
 regardless of what we decide to call it.
