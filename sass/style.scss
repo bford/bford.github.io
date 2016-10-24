@@ -57,7 +57,7 @@ ul, ol {
 }
 
 blockquote {
-    border-left: 1px dotted $secondary;
+    border-left: 1px dotted $primary;
     margin: 40px 0;
     padding: 5px 30px;
 
@@ -84,6 +84,14 @@ pre {
     margin: 0 0 20px;
     padding: 10px;
     font-size: 16px;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: $primary;
+    background-color: #F1F0EA;
+    border-radius: 4px
 }
 
 hr {

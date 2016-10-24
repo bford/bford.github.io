@@ -32,7 +32,7 @@
 &lt;img src=&#34;blockchain.jpg&#34; width=&#34;100%&#34;&gt;
 &lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;As the first successful cryptocurrency,
+&lt;p&gt;As the first widely-deployed cryptocurrency,
 &lt;a href=&#34;https://bitcoin.org/&#34;&gt;Bitcoin&lt;/a&gt;
 has proven hugely successful and inspired a
 &lt;a href=&#34;https://www.cryptocoinsnews.com/study-shows-bitcoin-blockchain-investments-near-300-million-first-six-months/&#34;&gt;blockchain fever&lt;/a&gt;
@@ -65,7 +65,7 @@ At a deeper level, our results suggest a fundamental rethinking of the role of b
 
 &lt;p&gt;At least one such &amp;ldquo;rethinking of the role of block rewards&amp;rdquo;
 already exists, however.
-We will let you judge for yourself
+You may judge for yourself
 how &amp;ldquo;fundamental&amp;rdquo; this rethinking is.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://hackingdistributed.com/2016/08/04/byzcoin/&#34;&gt;ByzCoin&lt;/a&gt;
@@ -81,8 +81,9 @@ may be much more resilient to these known incentive-compatibility weaknesses.
 In essence, both the new attacks &amp;mdash;
 and the earlier selfish or stubborn mining attacks &amp;mdash;
 appear to be ineffective against ByzCoin.
-This blog post will informally compare Bitcoin and ByzCoin
-from a perspective of mining incentives.&lt;/p&gt;
+This blog post informally compares the way Bitcoin and ByzCoin
+handle transaction fee incentives,
+deferring the topic of selfish mining to a followup post.&lt;/p&gt;
 
 &lt;h2 id=&#34;instant-gratification-in-bitcoin&#34;&gt;Instant Gratification in Bitcoin&lt;/h2&gt;
 
@@ -302,7 +303,7 @@ of the goose egg for each additional share acquired strategically.&lt;/p&gt;
 
 &lt;h2 id=&#34;transaction-fee-market-incentives&#34;&gt;Transaction Fee Market Incentives&lt;/h2&gt;
 
-&lt;p&gt;The &lt;a href=&#34;http://freedom-to-tinker.com/&#34;&gt;new incentive analysis by Narayanan&amp;rsquo;s group&lt;/a&gt;
+&lt;p&gt;The &lt;a href=&#34;http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/&#34;&gt;new incentive analysis by Narayanan&amp;rsquo;s group&lt;/a&gt;
 in essence observes that,
 as block rewards decrease and transaction fees gradually supplant them
 as the primary motivation for miners to mine,
@@ -341,12 +342,80 @@ and rewards from all microblocks committed by the consensus group
 are distributed to the same miners in the same proportion,
 the precise time a transaction appears
 has almost no bearing on reward distribution.
-Keyblock mining strategy could, at best,
+Strategic keyblock mining might, at best,
 affect transactions committed close to another keyblock mining event
 causing a consensus group shift &amp;mdash;
 but any such effect can at most amount to changing the distribution
 of one share (e.g., &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1008&lt;/sub&gt;) worth of transaction fee profits
 from that microblock.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;This post of course represents only an informal
+and certainly incomplete analysis
+of differences in incentives between Bitcoin and ByzCoin,
+focusing specifically on transaction fees.
+It is quite possible that a full, rigorous analysis of ByzCoin
+may reveal new incentive-compatibility issues that its architecture introduces.
+Further, ByzCoin is still an experimental protocol
+under rapid development and evolution.&lt;/p&gt;
+
+&lt;p&gt;Given these caveats, however,
+ByzCoin&amp;rsquo;s architecture at least appears to be much more resilient
+to several known strategic mining attacks against Bitcoin,
+including the new attacks identified by Narayanan&amp;rsquo;s group.
+By replacing Bitcoin&amp;rsquo;s instant-gratification, winner-take-all reward model
+with a delayed-gratification, investment-dividend model,
+ByzCoin ensures that the distribution of mining profits are fixed
+long before any strategic miner might know about or be able to respond to
+the appearance of a goose egg or other transaction fee variance.&lt;/p&gt;
+
+&lt;p&gt;In short, it does not appear necessary for new cryptocurrencies to
+&amp;ldquo;&lt;a href=&#34;http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/&#34;&gt;make the block reward permanent and accept monetary inflation
+as inevitable&lt;/a&gt;&amp;rdquo;
+as Narayanan suggests.
+Whether inflationary or deflationary monetary policies are preferable
+is an important and highly debatable question,
+but its answer need not be constrained by Bitcoin&amp;rsquo;s technical weaknesses.
+With more sophisticated blockchain architectures such as ByzCoin,
+there is plenty of hope that mining incentives can work
+independent of monetary policy.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;The author wishes to thank
+&lt;a href=&#34;https://twitter.com/lefkok&#34;&gt;Lefteris Kokoris-Kogias&lt;/a&gt;,
+&lt;a href=&#34;https://github.com/Daeinar&#34;&gt;Philipp Jovanovic&lt;/a&gt;,
+&lt;a href=&#34;http://randomwalker.info/&#34;&gt;Arvind Narayanan&lt;/a&gt;, and
+&lt;a href=&#34;https://www.cs.cornell.edu/people/egs/&#34;&gt;Emin Gün Sirer&lt;/a&gt;
+for helpful feedback on early drafts of this post.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Selfish Mining in Bitcoin and ByzCoin</title>
+      <link>http://bford.github.io/2016/xx/xx/selfish/</link>
+      <pubDate>Mon, 31 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://bford.github.io/2016/xx/xx/selfish/</guid>
+      <description>
+
+&lt;p&gt;XXX intro&lt;/p&gt;
+
+&lt;p&gt;summary of selfish mining&lt;/p&gt;
+
+&lt;p&gt;selfish mining as a transparency problem:
+you get to build on a blockchain head you haven&amp;rsquo;t published.&lt;/p&gt;
+
+&lt;p&gt;same as transparency problem in Apple FBI case for example;
+that&amp;rsquo;s what CoSi is for.&lt;/p&gt;
+
+&lt;p&gt;solution: any keyblock you build on is collectively signed,
+and the next block&amp;rsquo;s hash covers the last block&amp;rsquo;s signature.&lt;/p&gt;
+
+&lt;p&gt;if you withhold a block, you can&amp;rsquo;t get a collective signature on it;
+without that collective signature,
+you can&amp;rsquo;t secretly mine a next block on top of it.&lt;/p&gt;
 
 &lt;h2 id=&#34;selfish-mining&#34;&gt;Selfish Mining&lt;/h2&gt;
 

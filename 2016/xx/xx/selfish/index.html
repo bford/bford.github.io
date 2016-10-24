@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Selfish Mining in Bitcoin and ByzCoin &middot; Bryan Ford</title>
+        <meta name="description" content="XXX intro
+summary of selfish mining
+selfish mining as a transparency problem: you get to build on a blockchain head you haven&rsquo;t published.
+same as transparency problem in Apple FBI case for example; that&rsquo;s what CoSi is for.
+solution: any keyblock you build on is collectively signed, and the next block&rsquo;s hash covers the last block&rsquo;s signature.
+if you withhold a block, you can&rsquo;t get a collective signature on it; without that collective signature, you can&rsquo;t secretly mine a next block on top of it.">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.18-DEV" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="http://bford.github.io/css/normalize.css">
+        <link rel="stylesheet" href="http://bford.github.io/css/highlight.css">
+        <link rel="stylesheet" href="http://bford.github.io/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Bryan Ford&#39;s Blog" href="http://bford.github.io/">Bryan Ford&#39;s Blog</a>
+                            </h1>
+                        
+                        <a class="button-square" href="http://bford.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/brynosaurus">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/bford/">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/baford">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://plus.google.com/u/0/&#43;BryanFord">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Selfish Mining in Bitcoin and ByzCoin</h1>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    
+
+<p>XXX intro</p>
+
+<p>summary of selfish mining</p>
+
+<p>selfish mining as a transparency problem:
+you get to build on a blockchain head you haven&rsquo;t published.</p>
+
+<p>same as transparency problem in Apple FBI case for example;
+that&rsquo;s what CoSi is for.</p>
+
+<p>solution: any keyblock you build on is collectively signed,
+and the next block&rsquo;s hash covers the last block&rsquo;s signature.</p>
+
+<p>if you withhold a block, you can&rsquo;t get a collective signature on it;
+without that collective signature,
+you can&rsquo;t secretly mine a next block on top of it.</p>
+
+<h2 id="selfish-mining">Selfish Mining</h2>
+
+<p>Finally, we consider the now much more well-understood problem of
+<a href="http://hackingdistributed.com/2013/11/04/bitcoin-is-broken/">selfish mining</a>.
+A selfish miner strategically withholds some of its successfully mined blocks
+in attempt to gain a higher share of mining rewards,
+by causing other miners to waste effort mining redundant blocks.
+For example, if Greedy Greg successfully mines a new block,
+he might deliberately delay announcing it.
+If Innocent Ivan announces a competing block,
+Greg quickly races to announce and widely distribute his,
+which may reliably overtake Ivan&rsquo;s if Greg is fast and well-connected.
+Alternatively, if Greg manages to mine a <em>second</em> block in private
+before a competing first block appears,
+then Greg is in the enviable position of being able to &ldquo;trump&rdquo;
+and eliminate that competing block once it does appear,
+simply by revealing his longer private blockchain.</p>
+
+<p>While ByzCoin&rsquo;s keyblock mining mechanism alone is still
+vulnerable to selfish mining,
+its microblock commitment process using Byzantine consensus
+provides a clean, simple defense against selfish mining.
+Any transaction microblock the consensus group commits
+contains a cryptographic hash of the latest known keyblock at the time,
+and any newly-mined keyblock must similarly contain
+a cryptographic hash of a recently-committed microblock
+(e.g., within a few microblocks from the head).
+Whenever the consensus group commits a new microblock,
+all honest members verify that the keyblock pointer in the new microblock
+is consistent with those in all prior microblocks,
+ensuring that any new keyblock is &ldquo;locked in&rdquo;
+irreversably once the new keyblock is known.
+This leaves only seconds, rather than minutes,
+in which a selfish miner could
+try to announce and distribute a competing keyblock.
+Further, because each keyblock must reference a recent microblock,
+any newly-mined keyblock becomes invalid and useless
+if its owner fails to announce it
+within a few microblock commitment cycles &mdash;
+again, on the order of seconds rather than minutes.</p>
+
+<p>In essence, ByzCoin&rsquo;s microblock commit mechanism
+enforces transparency on the keyblock mining process,
+ensuring that a selfish ByzCoin miner would likely be faced with
+a vanishingly small probability of profiting from
+any keyblock-withholding strategy.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This post of course represents only an informal,
+and no doubt incomplete, analysis
+of the differences in incentives between Bitcoin and ByzCoin,
+focusing primarily on mining incentives.
+It is quite possible that a full, rigorous incentive analysis of ByzCoin
+may reveal new incentive-compatibility issues that its architecture introduces.
+Further, ByzCoin is still an experimental protocol
+under rapid development and evoluation.</p>
+
+<p>Given these caveats, however,
+ByzCoin&rsquo;s architecture at least appears to be much more resilient
+to the known strategic mining attacks against Bitcoin,
+whether through block withholding or deliberate forking.
+In particular,
+by replacing Bitcoin&rsquo;s instant-gratification, winner-take-all reward model
+with a delayed-gratification, investment-dividend model,
+ByzCoin ensures that the distribution of mining profits are fixed
+long before any strategic miner might know about or be able to respond to
+the appearance of a goose egg or other transaction fee variance.
+By ensuring that keyblocks and microblocks track each other cryptographically,
+ByzCoin forces miners either to announce new keyblocks quickly
+or else lose them,
+making selfish mining unprofitable.</p>
+
+<p>In short, it does not appear necessary for new cryptocurrencies to
+&ldquo;<a href="http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/">make the block reward permanent and accept monetary inflation
+as inevitable</a>&rdquo;
+as Narayanan suggests.
+Whether inflationary or deflationary monetary policies are preferable
+is an important and highly debatable question,
+but it need not be constrained by technical weaknesses of Bitcoin.
+With more sophisticated blockchain architectures such as ByzCoin,
+there is plenty of hope that mining incentives can work
+independent of monetary policy.</p>
+
+<!--
+---
+
+*I wish to thank ...
+for helpful feedback on early drafts of this post.*
+-->
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="http://twitter.com/share?text=Selfish%20Mining%20in%20Bitcoin%20and%20ByzCoin&url=http%3a%2f%2fbford.github.io%2f2016%2fxx%2fxx%2fselfish%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbford.github.io%2f2016%2fxx%2fxx%2fselfish%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fbford.github.io%2f2016%2fxx%2fxx%2fselfish%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Bryan Ford&#39;s Blog" href="http://bford.github.io/">Bryan Ford&#39;s Blog</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2017 / Powered by <a href="http://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="http://bford.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="http://bford.github.io/js/jquery.fitvids.js"></script>
+        <script src="http://bford.github.io/js/scripts.js"></script>
+    </body>
+</html>
+
