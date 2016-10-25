@@ -295,19 +295,19 @@ in strategic miners may be inclined to &ldquo;fight over&rdquo; the goose egg.
 Suppose for example that a goose egg appears in the transaction pool,
 and Innocent Ivan is the first miner lucky enough
 to create a valid Bitcoin block including this transaction.
-But suppose another miner, Greedy Greg, is paying attention and controls
+But suppose another miner, Greedy Griffith, is paying attention and controls
 significant mining power (but still under <sup>1</sup>&frasl;<sub>3</sub> of the total).</p>
 
-<p>Even if Greedy Greg is well aware of Innocent Ivan&rsquo;s new block,
-Greg may be strongly inclined to ignore it and instead try to mine
+<p>Even if Greedy Griffith is well aware of Innocent Ivan&rsquo;s new block,
+Griffith may be strongly inclined to ignore it and instead try to mine
 a <em>competing</em> block in hopes of &ldquo;stealing&rdquo; the goose egg from Ivan.
 To pull off this heist,
-Greg may have to &ldquo;get lucky&rdquo; twice in a row
+Griffith may have to &ldquo;get lucky&rdquo; twice in a row
 and produce <em>two</em> new blocks
 before another miner extends Ivan&rsquo;s chain:
 one block to compete with Ivan&rsquo;s, and a second block
-to convince other miners to ditch Ivan&rsquo;s chain for Greg&rsquo;s.
-Even if this gamble presents fairly long odds for Greg,
+to convince other miners to ditch Ivan&rsquo;s chain for Griffith&rsquo;s.
+Even if this gamble presents fairly long odds for Griffith,
 the spectacular payoff presented by the goose egg makes it worth the risk.</p>
 
 <div style="float:right">
@@ -331,7 +331,7 @@ the spectacular payoff presented by the goose egg makes it worth the risk.</p>
 </center>
 </div>
 
-<p>If <em>multiple</em> miners independently emulate Greedy Greg,
+<p>If <em>multiple</em> miners independently emulate Greedy Griffith,
 this could lead to chaos and large amounts of wasted hash power
 as miners clamor over the goose egg.
 In the worst case, if multiple large mining pools behaved this way,
@@ -361,13 +361,13 @@ only in <em>shares</em> of a goose egg;
 no single miner ever gets the whole egg.
 For example, suppose a goose egg appears at about the time Innocent Ivan
 mines a new keyblock.
-Greedy Greg can try to mine against Ivan&rsquo;s keyblock,
+Greedy Griffith can try to mine against Ivan&rsquo;s keyblock,
 but this will not change the consensus group that distributes the goose egg,
 since new keyblocks must &ldquo;mature&rdquo; for a time (e.g., six blocks)
 before they become active shares in any consensus group.
-Greg would have to displace not only Ivan&rsquo;s keyblock
+Griffith would have to displace not only Ivan&rsquo;s keyblock
 but <em>several blocks before it</em> to affect the profit distribution at all.
-Even if he succeeded, Greg would get only an additional 1/1008th
+Even if he succeeded, Griffith would get only an additional 1/1008th
 of the goose egg for each additional share acquired strategically.</p>
 
 <h2 id="transaction-fee-market-incentives">Transaction Fee Market Incentives</h2>
@@ -392,12 +392,12 @@ by mining <em>against</em> it rather than on top of it.</p>
 greedy deviations that work even better when other miners are greedy.
 For example, if Innocent Ivan has just mined a block that commits
 transactions worth 10 BTC in fees,
-Greedy Greg no longer necessarily needs to mine <em>two</em> blocks
+Greedy Griffith no longer necessarily needs to mine <em>two</em> blocks
 in order to steal Ivan&rsquo;s fees;
-instead Greg might just mine <em>one</em> block that deliberately
+instead Griffith might just mine <em>one</em> block that deliberately
 &ldquo;consumes&rdquo; only a subset of transactions worth 5 BTC of fees,
 deliberately leaving the other 5 BTC worth of fees
-as an incentive for other greedy miners to prefer Greg&rsquo;s chain over Ivan&rsquo;s.</p>
+as an incentive for other greedy miners to prefer Griffith&rsquo;s chain over Ivan&rsquo;s.</p>
 
 <p>Now consider again how ByzCoin affects this situation.
 Since transaction fees are divided equally
