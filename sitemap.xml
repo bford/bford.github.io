@@ -3,7 +3,12 @@
   
   <url>
     <loc>http://bford.github.io/</loc>
-    <lastmod>2016-10-31T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://bford.github.io/2017/06/23/turing50/</loc>
+    <lastmod>2017-06-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -79,6 +84,10 @@
   <url>
     <loc>http://bford.github.io/2002/05/15/deleg/</loc>
     <lastmod>2002-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://bford.github.io/2016/11/13/info/</loc>
   </url>
   
 </urlset>

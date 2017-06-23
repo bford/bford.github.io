@@ -381,5 +381,172 @@ what do they do?&lt;/p&gt;
 </description>
     </item>
     
+    <item>
+      <title>Rethinking Social Media to Escape the Echo Chamber</title>
+      <link>http://bford.github.io/2016/11/13/info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://bford.github.io/2016/11/13/info/</guid>
+      <description>
+
+&lt;p&gt;Hillary Clinton&amp;rsquo;s [electoral college defeat]()
+has provoked many questions about how so many Americans
+could have choosen a
+[misogynistic](),
+[xenophobic](),
+[pathologically lying](),
+[authoritarian]()
+[ideologue]()
+as their next President &amp;ndash;
+and one of many targets of their blame is
+[social media]().
+Compounding its
+[polarizing &amp;ldquo;echo chamber&amp;rdquo; effect](),
+online discussions were tarnished with
+[deliberate misinformation](),
+including
+[incorrect instructions on how to vote]().
+But is the solution for social media companies like Facebook
+to ``do a better job&amp;rdquo; at curating the world&amp;rsquo;s content
+to suppress out false or hateful speech?&lt;/p&gt;
+
+&lt;p&gt;Asking technology companies
+to serve as the world&amp;rsquo;s arbiters of truth and civility
+is not only counterproductive but
+just as profoundly dangerous as the social maladies
+that social media creates or exacerbates.
+We need to rethink social media from the ground up
+to make it &lt;em&gt;more&lt;/em&gt; open and transparent, not less &amp;ndash;
+and most importantly, to infuse online debate with
+some semblance of democratic legitimacy.
+The purpose of this blog post is not to dwell on
+[the many flaws of social media]()
+but to explore how we could get it better.&lt;/p&gt;
+
+&lt;p&gt;What would an ethical, secure, and democratic alternative
+to either conventional ``elitist&amp;rdquo; media
+or the polarizing echo chamber of social media look like?
+It would need to be built on a foundation of equality among
+all &lt;em&gt;real&lt;/em&gt; people;
+it would ensure &lt;em&gt;proportional&lt;/em&gt; speech and accurately expose biases;
+it would counteract polarization by ensuring that
+all participants are exposed to all viewpoints;
+and it would provide strong but proportionate and abuse-resistant
+protections for anonymity and free speech &lt;em&gt;before&lt;/em&gt; the ballot box,
+in order to head off unpleasant surprises being revealed
+only &lt;em&gt;at&lt;/em&gt; the ballot box.&lt;/p&gt;
+
+&lt;h2 id=&#34;foundation-the-equality-of-real-people&#34;&gt;Foundation: The Equality of &lt;em&gt;Real&lt;/em&gt; People&lt;/h2&gt;
+
+&lt;p&gt;When a story or claim appears with 1,000 ``likes&amp;rdquo;,
+how do we know whether 1,000 &lt;em&gt;real&lt;/em&gt; people liked the story,
+or only one real troll and his 999 [sock puppet accounts]()?&lt;/p&gt;
+
+&lt;p&gt;Doesn&amp;rsquo;t mean all people are equally smart, equally capable, equally right,
+or should end up having equal power or influence &lt;em&gt;in the end&lt;/em&gt;.
+It means all people should be given an equal &lt;em&gt;starting point&lt;/em&gt;
+in apportioning power,
+and be free to ``become unequal&amp;rdquo; as their words and actions
+are subject to the review of their peers.&lt;/p&gt;
+
+&lt;p&gt;Need to be able to quantify the number of people&lt;/p&gt;
+
+&lt;p&gt;Need a mechanism to ensure that these are &lt;em&gt;real&lt;/em&gt; people we are counting,
+not fake accounts created
+by whoever has the most time, money, or determination.&lt;/p&gt;
+
+&lt;p&gt;Content-based analysis versus account validation.
+Content-based analysis [has often proven successful](),
+but relies on complex algorithms that &lt;em&gt;someone&lt;/em&gt; must keep updating
+(and making still more complex)
+to keep up with the ``arms race&amp;rdquo;,
+as attackers develop more sophisticated algorithms
+to farm fake accounts that remain under the detection radar.
+Relying on complex algorithms that need to adapt constantly
+creates inherent risks that they will become opaque and vulnerable
+to accidental bias or deliberate attacks,
+such as the secret inclusion of &amp;ldquo;back doors&amp;rdquo; that produces false positives
+designed to close the accounts of and hence disenfranchise populations
+disfavored by the attacker.
+While I believe content-based analysis plays an important scientific role,
+it is unsuitable as a &lt;em&gt;foundation&lt;/em&gt; for ensuring the equality of real people
+in online public discourse.&lt;/p&gt;
+
+&lt;h2 id=&#34;proportional-speech-and-bias-transparency&#34;&gt;Proportional Speech and Bias Transparency&lt;/h2&gt;
+
+&lt;p&gt;Need an objective way to avoid bias,
+or clearly and quantitatively expose it when it exists.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;like wearing blinders&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Pressuring Mark Zuckerberg to deploy Facebook&amp;rsquo;s minions
+to do a better job of censoring fake or misleading social media posts
+does not solve the problem,
+but instead shifts the power to decide between ultimate truth and falsehood
+to precisely the place it does not belong:
+to the anonymous employees and proprietary algorithms
+of corporations that are accountable to no one but their shareholders.&lt;/p&gt;
+
+&lt;p&gt;All relevant algorithms need to be public and accountable.
+Algorithms need to be as simple as possible
+[but no simpler]():
+in particular, not so simplistic as to ignore the many lessons
+from past failures.&lt;/p&gt;
+
+&lt;p&gt;A fake or misleading claim on social media,
+as soon as it starts collecting nontrivial interest,
+needs to become inextricably attached to the counter-claims that debunk it.
+These counter-claims must prominently include
+accurate, quantitative evidence that the debunking experts are trustworthy
+and not &lt;a href=&#34;Ebell guy&#34;&gt;paid lobbyists masquerading as scientists&lt;/a&gt; &amp;ndash;
+together with accurate quantitative measures of the number of people
+(&lt;em&gt;real&lt;/em&gt; people) who support the false statement despite its being debunked.&lt;/p&gt;
+
+&lt;h2 id=&#34;depolarizing-echo-chambers-with-soft-focus-feeds&#34;&gt;Depolarizing Echo Chambers with Soft-Focus Feeds&lt;/h2&gt;
+
+&lt;p&gt;Even when people are willing to hear viewpoints they don&amp;rsquo;t like,
+there is a matter of scalability:
+everyone simply does not have time to listen to everything everyone else says.
+Speech needs to be filtered or summarized.&lt;/p&gt;
+
+&lt;h2 id=&#34;anonymity-and-free-speech-before-the-ballot-box&#34;&gt;Anonymity and Free Speech &lt;em&gt;Before&lt;/em&gt; the Ballot Box&lt;/h2&gt;
+
+&lt;p&gt;one of many explanations, possibly contributing but probably not only factor&amp;hellip;
+other explanations include
+[normal polling errors](),
+[hacking of the election system](),
+[the FBI](), &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Some Trump supporters are certainly racist and xenophobic;
+most of them are probably not,
+but voted Trump for other reasons.
+In order to protect our civilization,
+we the people need to be fully aware of size and malignancy of
+any malignancy affecting it:
+you do not beat a cancerous tumor by ignoring it
+or sanitizing the doctor&amp;rsquo;s diagnosis.
+We need &lt;em&gt;know&lt;/em&gt; the true, complex set of reasons that
+people are inclined to support someone like Trump&lt;/p&gt;
+
+&lt;p&gt;Need regular opportunities for speech
+ensuring that &lt;em&gt;all&lt;/em&gt; voices are represented,
+and [building anger over policies]()
+actually have [a chance to influence policy]()
+before that anger
+explodes in a self-defeating electoral choice
+of an [authoritarian]() [con-artist]()
+and [places freedom and democracy in existential risk]().&lt;/p&gt;
+
+&lt;h2 id=&#34;incentives-who-will-finance-a-decentralized-social-forum&#34;&gt;Incentives: Who Will Finance a Decentralized Social Forum?&lt;/h2&gt;
+
+&lt;!--
+---
+
+*I wish to thank ...
+for helpful feedback on early drafts of this post.*
+--&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

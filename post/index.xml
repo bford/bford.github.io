@@ -6,8 +6,146 @@
     <description>Recent content in Post-rsses on Bryan Ford&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Jun 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://bford.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Technology Governs Us. Will it Govern Us Well?</title>
+      <link>http://bford.github.io/2017/06/23/turing50/</link>
+      <pubDate>Fri, 23 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://bford.github.io/2017/06/23/turing50/</guid>
+      <description>&lt;p&gt;&lt;center&gt;
+&lt;em&gt;This blog post is a transcript of my opening remarks on the panel
+&amp;ldquo;Restoring Personal Privacy without Compromising National Security&amp;rdquo;
+at the &lt;a href=&#34;https://www.acm.org/turing-award-50/conference&#34;&gt;50 Years of the ACM Turing Award Celebration&lt;/a&gt;.&lt;/em&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;We now live in a world in which the rules coded into the technology we use
+plays as important a role in governing our lives as the formal laws written in
+the public law books.
+&lt;a href=&#34;http://harvardmagazine.com/2000/01/code-is-law-html&#34;&gt;Code is law&lt;/a&gt; already,
+for better or worse.
+Unfortunately both the technology and policy communities still tend to treat
+technology as a simple set of tools, like a mechanical watch, home appliance,
+or automobile, which always unquestioningly serves its operator.  A smart watch
+or home appliance can now monitor our behavior and report it to a company or
+government, can enforce remotely-controlled rules determining when and how it
+operates, and can remotely determine what content we are allowed to view or
+when and for whom the smart lock on a door to our own home opens.  Today’s cars
+can already be remotely disabled or attacked, and soon will be capable of
+governing where we can go and when. Technology is no longer just a set of
+obedient tools but, for better or worse, also an inherent part of the system of
+governance that determines what individual freedoms we do and don’t have.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, the mindset of technology as an obedient toolset has led both
+government and industry to deploy technology in ways that undermine
+long-standing governance principles and undermine the basic freedoms and rights
+we depend on democratic governments to uphold: principles such as rule of law,
+separation of powers, and limited warrant-based search.&lt;/p&gt;
+
+&lt;p&gt;The principle of rule-of-law states that the public should have the right to
+know, debate, and challenge the rules that govern their lives.  As technology
+is increasingly critical in enforcing the rules by which we live, we must
+demand and work to ensure that the rule-of-law principle translates properly
+into the digital domain.  We have now have well-understood technology,
+especially cryptographic tools, that can ensure the integrity and correctness
+of publicly-known processes while keeping sensitive details private, consistent
+with rule-of-law principles.  But so far we have seen little to development or
+deployment of these technologies for this purpose.&lt;/p&gt;
+
+&lt;p&gt;Instead, law enforcement and surveillance agencies have shifted ever deeper
+into the shadows. Ed Snowden and other whistleblowers cast much-needed light on
+the proliferating morass of secret law embodied not only formally in the secret
+proceedings of bodies such as the FISA court, but also the &lt;em&gt;de facto&lt;/em&gt; secret law
+embodied in secret mass surveillance technologies, secret stockpiles of
+software exploits, and the secret agency-internal processes that purportedly
+govern their use.  The secrecy and non-transparency of these processes are
+antithetical to democracy and rule of law, whether embodied in secret FISA
+decisions or in code and databases designed and deployed in secret by
+three-letter agencies.&lt;/p&gt;
+
+&lt;p&gt;Separation of powers is intended to prevent any branch of government from
+acquiring too much unaccountable power.  We also have well-understood
+technology to split trust across multiple independently-operated authorities,
+such as Byzantine consensus and threshold cryptography, but again it is rarely
+used. In the “technology as dumb tool” mindset, government deploys
+law-enforcement and surveillence technologies largely in the domain of the
+executive branch.  Only that one branch effectively has any understanding of,
+let alone control over, the deep technological rules and processes that
+determine what protections we do and don’t have from law-enforcement and
+surveillance.  Legislative and judicial oversight becomes merely a fig-leaf,
+along with the whole principle of separation of powers, when no one in the
+legislature or judiciary actually has any understanding of, or control over,
+deep technology systems and processes deployed exclusively in the executive
+branch.&lt;/p&gt;
+
+&lt;p&gt;Finally, our Fourth and Fifth amendments are intended to impose strict limits
+on government searches for law-enforcement or surveillance purposes,
+recognizing that that it is more important to have democratic freedoms to
+defend than to catch every last criminal.  But the obsolete mindset of
+technology as “dumb tools” has led many policy-makers to underestimate the
+centrality of personal devices in our lives.  Policy-makers often treat
+personal devices such as laptops and smartphones, and the encrypted data they
+might contain, as mere possessions similar to the contents of one’s home, and
+claim that law-enforcement agencies are somehow entitled to access to these
+devices.  However, this mindset neglects the reality that we now carry personal
+devices with us everywhere, using them as extensions of our thoughts and
+memories, and to intermediate our most intimate communications.  While the
+possessions in our home enjoy Fourth Amendment protections against unreasonable
+search and seizure, the contents of our minds also have Fifth Amendment
+protections against self-incrimination.  Even if I remember committing a crime,
+the government cannot force me to admit it, even with a warrant: that is, under
+human-rights principles my mind is a legitimate “warrant-proof space.”  Now
+that we rely on mobile personal devices to help us remember and communicate
+wherever we travel, they have effectively become extensions of our minds and
+bodies &amp;ndash; and as wearables and implants proliferate they will become only more
+so.  We must recognize that our Fifth amendment protections are not complete or
+effective today unless they extend the warrant-proof space of our minds to the
+electronic extensions embodied in our personal devices.&lt;/p&gt;
+
+&lt;p&gt;There is no pure technology solution divorced from policy, but there is also no
+pure policy solution divorced from the reality of technology as a de facto
+policy-enforcement mechanism.  We must intelligently integrate technology and
+policy to restore the trustworthiness of democratic processes, rights, and
+freedoms in the digital age.  Again, we have the technology tools to accomplish
+this, but we must use them. Research on this topic that Joan and I and others
+have worked on has demonstrated how technology can be married with policy
+principles for a few proven law-enforcement processes such as
+&lt;a href=&#34;http://dedis.cs.yale.edu/dissent/papers/bandits-abs&#34;&gt;private set-intersection of cell tower dumps&lt;/a&gt;
+and &lt;a href=&#34;http://dedis.cs.yale.edu/dissent/papers/wpes16-chaining-abs&#34;&gt;privacy-preserving contact chaining&lt;/a&gt;.
+We can and must design technology to uphold rule-of-law, by transparently
+enforcing public processes for law enforcement and surveillance while keeping
+details of investigations and non-targeted users private.  We can and must
+design technology to enforce separation of powers, such that systems
+independently operated by each branch cooperate and keep each other in check in
+implementing electronic law-enforcement and surveillance processes.  We must
+work to ensure that technology used in law-enforcement and surveillance
+verifiably adheres to the strict limits the Fourth Amendment allows for search
+of ordinary possessions and business records. Finally, our law-enforcement and
+surveillance technologies must respect the contents of our
+electronically-augmented minds as legitimate warrant-proof spaces essential to
+upholding our freedoms of thought, speech, and association.&lt;/p&gt;
+
+&lt;p&gt;In summary, we must discard the obsolete mindset of technology as merely a set
+of dumb tools and recognize that technology has become, for better worse, an
+integral part of our system of governance that determines what rights and
+freedoms we all do and don’t have.  Technologists need to recognize this, and
+work closely with the policy community to ensure that the policy principles
+underlying our basic individual freedoms are not “lost in translation” to
+digital society.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;The author wishes to thank &lt;a href=&#34;http://www.cs.yale.edu/homes/jf/&#34;&gt;Joan Feigenbaum&lt;/a&gt;
+for organizing the panel, and
+&lt;a href=&#34;https://www.acm.org/turing-award-50/conference&#34;&gt;all the distinguished panelists&lt;/a&gt;
+for thought-provoking discussion and feedback
+on early drafts of this statement.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Untangling Mining Incentives in Bitcoin and ByzCoin</title>
