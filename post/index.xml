@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Post-rsses on Bryan Ford&#39;s Blog</title>
-    <link>http://bford.github.io/post/index.xml</link>
+    <link>https://bford.github.io/post/index.xml</link>
     <description>Recent content in Post-rsses on Bryan Ford&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Jun 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://bford.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bford.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Technology Governs Us. Will it Govern Us Well?</title>
-      <link>http://bford.github.io/2017/06/23/turing50/</link>
+      <link>https://bford.github.io/2017/06/23/turing50/</link>
       <pubDate>Fri, 23 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2017/06/23/turing50/</guid>
+      <guid>https://bford.github.io/2017/06/23/turing50/</guid>
       <description>&lt;p&gt;&lt;center&gt;
 &lt;em&gt;This blog post is a transcript of my opening remarks on the panel
 &amp;ldquo;Restoring Personal Privacy without Compromising National Security&amp;rdquo;
@@ -149,10 +149,10 @@ on early drafts of this statement.&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title>Untangling Mining Incentives in Bitcoin and ByzCoin</title>
-      <link>http://bford.github.io/2016/10/25/mining/</link>
+      <link>https://bford.github.io/2016/10/25/mining/</link>
       <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2016/10/25/mining/</guid>
+      <guid>https://bford.github.io/2016/10/25/mining/</guid>
       <description>
 
 &lt;!--
@@ -533,10 +533,10 @@ for helpful feedback on early drafts of this post.&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title>Apple, FBI, and Software Transparency</title>
-      <link>http://bford.github.io/2016/03/10/apple</link>
+      <link>https://bford.github.io/2016/03/10/apple</link>
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2016/03/10/apple</guid>
+      <guid>https://bford.github.io/2016/03/10/apple</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
@@ -1050,10 +1050,10 @@ for helpful feedback on early drafts of this post.&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title>Let&#39;s verify real people, not real names.</title>
-      <link>http://bford.github.io/2015/10/07/names.html</link>
+      <link>https://bford.github.io/2015/10/07/names.html</link>
       <pubDate>Wed, 07 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2015/10/07/names.html</guid>
+      <guid>https://bford.github.io/2015/10/07/names.html</guid>
       <description>
 
 &lt;p&gt;On Monday the
@@ -1195,10 +1195,10 @@ and we should not wait for industry or government to take the first step.&lt;/p&
     
     <item>
       <title>Delegative Democracy Revisited</title>
-      <link>http://bford.github.io/2014/11/16/deleg.html</link>
+      <link>https://bford.github.io/2014/11/16/deleg.html</link>
       <pubDate>Sun, 16 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2014/11/16/deleg.html</guid>
+      <guid>https://bford.github.io/2014/11/16/deleg.html</guid>
       <description>
 
 &lt;p&gt;Over a decade ago I wrote up some ideas
@@ -1492,10 +1492,10 @@ interested in collaborating to make this happen.&lt;/p&gt;
     
     <item>
       <title>Faculty size and growth in the top 20 Computer Science departments</title>
-      <link>http://bford.github.io/2014/10/22/cs-growth.html</link>
+      <link>https://bford.github.io/2014/10/22/cs-growth.html</link>
       <pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2014/10/22/cs-growth.html</guid>
+      <guid>https://bford.github.io/2014/10/22/cs-growth.html</guid>
       <description>&lt;p&gt;Yesterday the &lt;a href=&#34;http://yaledailynews.com&#34;&gt;Yale Daily News&lt;/a&gt; ran
 &lt;a href=&#34;http://yaledailynews.com/blog/2014/10/21/cs-department-struggles-for-faculty/&#34;&gt;an article on our CS department&amp;rsquo;s faculty shortage&lt;/a&gt;,
 which generated
@@ -1530,7 +1530,7 @@ probably have better and more &amp;ldquo;official&amp;rdquo; data,
 but I don&amp;rsquo;t have that data.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;http://bford.github.io/2014/10/22/cs-growth-charts/size-chart.svg&#34; style=&#34;width:40em&#34; /&gt;
+&lt;img src=&#34;https://bford.github.io/2014/10/22/cs-growth-charts/size-chart.svg&#34; style=&#34;width:40em&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;As the orange line indicates across the left half of the chart indicates,
@@ -1551,7 +1551,7 @@ as captured by the &lt;a href=&#34;https://archive.org/index.php&#34;&gt;Interne
 around September 2004.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;http://bford.github.io/2014/10/22/cs-growth-charts/growth-chart.svg&#34; style=&#34;width:40em&#34; /&gt;
+&lt;img src=&#34;https://bford.github.io/2014/10/22/cs-growth-charts/growth-chart.svg&#34; style=&#34;width:40em&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;The average growth of the CS departments currently in the top 10
@@ -1578,60 +1578,60 @@ Comments or corrections of any inaccuracies are welcome.&lt;/p&gt;
     
     <item>
       <title>Individual Representation</title>
-      <link>http://bford.github.io/2004/11/23/indrep/</link>
+      <link>https://bford.github.io/2004/11/23/indrep/</link>
       <pubDate>Tue, 23 Nov 2004 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2004/11/23/indrep/</guid>
+      <guid>https://bford.github.io/2004/11/23/indrep/</guid>
       <description>&lt;html&gt;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=http://www.brynosaurus.com/log/2004/1123-IndividualRepresentation/&#34;&gt;&lt;/html&gt;
 </description>
     </item>
     
     <item>
       <title>Cache Directory Tagging</title>
-      <link>http://bford.github.io/2004/10/27/cachedir/</link>
+      <link>https://bford.github.io/2004/10/27/cachedir/</link>
       <pubDate>Wed, 27 Oct 2004 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2004/10/27/cachedir/</guid>
+      <guid>https://bford.github.io/2004/10/27/cachedir/</guid>
       <description>&lt;html&gt;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=http://www.brynosaurus.com/cachedir/&#34;&gt;&lt;/html&gt;
 </description>
     </item>
     
     <item>
       <title>Wiki Democracy</title>
-      <link>http://bford.github.io/2004/08/16/wiki-democracy/</link>
+      <link>https://bford.github.io/2004/08/16/wiki-democracy/</link>
       <pubDate>Mon, 16 Aug 2004 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2004/08/16/wiki-democracy/</guid>
+      <guid>https://bford.github.io/2004/08/16/wiki-democracy/</guid>
       <description>&lt;html&gt;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=http://meta.wikimedia.org/wiki/User:Brynosaurus&#34;&gt;&lt;/html&gt;
 </description>
     </item>
     
     <item>
       <title>Service Duality - Vitalizing the Commons</title>
-      <link>http://bford.github.io/2003/07/24/service-duality/</link>
+      <link>https://bford.github.io/2003/07/24/service-duality/</link>
       <pubDate>Thu, 24 Jul 2003 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2003/07/24/service-duality/</guid>
+      <guid>https://bford.github.io/2003/07/24/service-duality/</guid>
       <description>&lt;html&gt;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=http://www.brynosaurus.com/pub/os/duality.pdf&#34;&gt;&lt;/html&gt;
 </description>
     </item>
     
     <item>
       <title>Delegative Voting</title>
-      <link>http://bford.github.io/2002/10/21/deleg-voting/</link>
+      <link>https://bford.github.io/2002/10/21/deleg-voting/</link>
       <pubDate>Mon, 21 Oct 2002 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2002/10/21/deleg-voting/</guid>
+      <guid>https://bford.github.io/2002/10/21/deleg-voting/</guid>
       <description>&lt;html&gt;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=http://www.brynosaurus.com/log/2002/1021-DelegativeVoting/&#34;&gt;&lt;/html&gt;
 </description>
     </item>
     
     <item>
       <title>Delegative Democracy</title>
-      <link>http://bford.github.io/2002/05/15/deleg/</link>
+      <link>https://bford.github.io/2002/05/15/deleg/</link>
       <pubDate>Wed, 15 May 2002 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2002/05/15/deleg/</guid>
+      <guid>https://bford.github.io/2002/05/15/deleg/</guid>
       <description>&lt;html&gt;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=http://www.brynosaurus.com/deleg/deleg.pdf&#34;&gt;&lt;/html&gt;
 </description>
     </item>

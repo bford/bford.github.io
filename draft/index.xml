@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Draft-rsses on Bryan Ford&#39;s Blog</title>
-    <link>http://bford.github.io/draft/index.xml</link>
+    <link>https://bford.github.io/draft/index.xml</link>
     <description>Recent content in Draft-rsses on Bryan Ford&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 31 Oct 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://bford.github.io/draft/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bford.github.io/draft/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Selfish Mining in Bitcoin and ByzCoin</title>
-      <link>http://bford.github.io/2016/xx/xx/selfish/</link>
+      <link>https://bford.github.io/2016/xx/xx/selfish/</link>
       <pubDate>Mon, 31 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2016/xx/xx/selfish/</guid>
+      <guid>https://bford.github.io/2016/xx/xx/selfish/</guid>
       <description>
 
 &lt;p&gt;XXX intro&lt;/p&gt;
@@ -129,10 +129,10 @@ for helpful feedback on early drafts of this post.*
     
     <item>
       <title>An advanced crypto library for Go</title>
-      <link>http://bford.github.io/2016/03/08/crypto/</link>
+      <link>https://bford.github.io/2016/03/08/crypto/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2016/03/08/crypto/</guid>
+      <guid>https://bford.github.io/2016/03/08/crypto/</guid>
       <description>
 
 &lt;h1 id=&#34;page-title&#34;&gt;{{ page.title }}&lt;/h1&gt;
@@ -180,10 +180,10 @@ the correctness of a shuffle.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Backdoors, Trusted Servers, and Deanonymization</title>
-      <link>http://bford.github.io/2016/03/08/backdoors/</link>
+      <link>https://bford.github.io/2016/03/08/backdoors/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2016/03/08/backdoors/</guid>
+      <guid>https://bford.github.io/2016/03/08/backdoors/</guid>
       <description>
 
 &lt;h1 id=&#34;page-title&#34;&gt;{{ page.title }}&lt;/h1&gt;
@@ -369,10 +369,10 @@ what do they do?&lt;/p&gt;
     
     <item>
       <title>How to prove DNSSEC isn&#39;t a key escrow scheme</title>
-      <link>http://bford.github.io/2016/03/08/dnssec/</link>
+      <link>https://bford.github.io/2016/03/08/dnssec/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2016/03/08/dnssec/</guid>
+      <guid>https://bford.github.io/2016/03/08/dnssec/</guid>
       <description>
 
 &lt;h1 id=&#34;page-title&#34;&gt;{{ page.title }}&lt;/h1&gt;
@@ -383,10 +383,10 @@ what do they do?&lt;/p&gt;
     
     <item>
       <title>Rethinking Social Media to Escape the Echo Chamber</title>
-      <link>http://bford.github.io/2016/11/13/info/</link>
+      <link>https://bford.github.io/2016/11/13/info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://bford.github.io/2016/11/13/info/</guid>
+      <guid>https://bford.github.io/2016/11/13/info/</guid>
       <description>
 
 &lt;p&gt;Hillary Clinton&amp;rsquo;s [electoral college defeat]()
