@@ -131,10 +131,10 @@ to make it harder to forge, back-date, or modify important records.</p>
 
 <p>While a promising applicaion,
 current blockchain approaches to document notarization suffer from
-several important caveats and imitations.
+several important caveats and limitations.
 Some are already well-known:
 for example, that
-<a href="https://www.multichain.com/blog/2017/05/blockchain-immutability-myth/">blockchains are not really immutable</a>.
+<a href="https://www.multichain.com/blog/2017/05/blockchain-immutability-myth/">blockchains are not always immutable in practice</a>.
 Further,
 in this use-case the blockchain itself
 really provides only one narrow security property:
@@ -180,21 +180,21 @@ Assume that Alice&rsquo;s &ldquo;electrician&rdquo; certificate is a digital cre
 that was issued by an academic or government organization that Bob trusts,
 and was encoded in an open format
 such as <a href="https://www.blockcerts.org/">Blockcerts</a>
-and &ldquo;notarized&rdquo; by inclusion in a Merkle tree attached to
+and &ldquo;notarized&rdquo; by attaching it to
 a blockchain transaction at the time Alice earned the credential.
 Alice might have obtained this credential months or even years
 before Bob calls Alice to work on his home.</p>
 
 <p>When Alice shows up to the appointment,
 she can use her smart phone to send her credential,
-and a <a href="https://en.wikipedia.org/wiki/Merkle_tree">Merkle tree proof</a>
-of its inclusion in the blockchain,
+and a cryptographic proof of its inclusion in the blockchain
+(typically using <a href="https://en.wikipedia.org/wiki/Merkle_tree">Merkle trees</a>)
 to Bob&rsquo;s smart phone for verification
 (e.g., via Bluetooth, WiFi,
 or scanning a <a href="https://en.wikipedia.org/wiki/QR_code">QR code</a>).
 But then what, precisely, does Bob&rsquo;s device <em>do</em> to verify that
 Alice&rsquo;s credential is indeed on the blockchain?
-Without this verification critical step,
+Without this critical verification step,
 Bob could be showing Alice a forged certificate
 that was never actually notarized,
 or a tampered certificate with the name or date changed.
@@ -226,7 +226,7 @@ that everyone else sees on the public blockchain.</p>
 <a href="http://blockchain.info">blockchain.info</a>
 and verify that it indeed anchors the certificate Alice presented,
 both Bob and <a href="http://blockchain.info">blockchain.info</a>
-must both be online and able to communicate with each other.
+must be online and able to communicate with each other.
 If Bob lives in a remote village in the developing world
 where Internet connectivity is slow and expensive,
 online verification might not be so practical.
@@ -239,7 +239,7 @@ perhaps because that&rsquo;s what Alice showed up to fix.
 Or perhaps Alice is the captain of a
 <a href="https://www.nytimes.com/2017/03/04/business/dealbook/blockchain-ibm-bitcoin.html">container ship</a>
 that just arrived in Bob&rsquo;s port,
-in which case Bob needs to verify thousands of bill-of-lading certificates.
+in which case Bob needs to verify thousands of bills of lading.
 This online verification incurs substantial communication costs
 even when it works &ndash;
 and may force the entire port to shut down during a temporary Internet outage.</p>
@@ -273,7 +273,7 @@ for Bob to verify Alice&rsquo;s certificate,
 and quite secure (though not completely).
 But the sheer size of the blockchain and the continual bandwidth requirements
 of downloading every block is already impractical even for most people
-even with desktop PCs and fast Internet connections,
+with desktop PCs and fast Internet connections,
 let alone people with only a low-power smartphone and limited network bandwidth.</p>
 
 <p>This verification efficiency problem is precisely what motivates
@@ -306,7 +306,10 @@ multiple independent full nodes,
 it consumes more bandwidth and opens more connections.
 Even full nodes and well-connected SPV clients
 remain vulnerable to
-<a href="http://vanbever.eu/pdfs/vanbever_bitcoin_routing_attacks_oakland_2017.pdf">routing-based hijacking and isolation attacks</a>.</p>
+<a href="http://vanbever.eu/pdfs/vanbever_bitcoin_routing_attacks_oakland_2017.pdf">routing-based hijacking and isolation attacks</a>.
+In addition, SPV may not scale to large number of thin clients
+without the development of a specialized
+<a href="https://people.csail.mit.edu/alinush/papers/catena-sp2017.pdf">header relay network</a>.</p>
 
 <p>The fundamental problem is that in a conventional proof-of-work blockchain
 like Bitcoin or Ethereum,
@@ -405,9 +408,9 @@ this set of public keys may continually change &ndash;
 up to once every few minutes.</p>
 
 <p>If Bob wants to verify a certificate Alice notarized on the blockchain
-a year or two,
+a year or two ago,
 that block might have been committed and collectively signed
-by a completely different set of miners (witb different public keys)
+by a completely different set of miners (with different public keys)
 than the set of miners <em>currently</em> committing transactions &ndash;
 or that were committing transactions
 as of the last time Bob&rsquo;s personal device caught up with the blockchain.
@@ -448,6 +451,24 @@ the <em>next</em> consensus group, and</li>
 i.e., which miners&rsquo; public keys were added and/or removed.</li>
 </ol>
 
+<p>The following figure illustrates how this works.
+All committed blocks contain back links represented by hashes,
+as in a conventional blockchain.
+However, once the <em>successor</em> to a given block is committed,
+the consensus group responsible for the previous block
+creates and collectively signs a forward link &ndash;
+a bit like securely issuing an informational &ldquo;addendum&rdquo; for the prior block.
+This new addendum is not covered by the next block&rsquo;s backward hash link &ndash;
+and it can&rsquo;t be, because that would create
+a cryptographically impossible circular dependency.
+The forward link&rsquo;s security is instead assured by the collective signature,
+which encapsulates efficient evidence that a large number of miners
+have witnessed, verified, and signed off on this forward link&rsquo;s correctness.</p>
+
+<p><center>
+<img src="signed-chain.svg" alt="Blockchain with collectively-signed forward links" style="width:70%">
+</center></p>
+
 <p>Using these collectively signed forward links
 supplied by Alice along with the block headers,
 Bob can walk forward in time from his last blockchain reference point
@@ -480,13 +501,18 @@ The fundamental idea of a skip list is to augment a conventional
 <a href="https://en.wikipedia.org/wiki/Linked_list">singly-linked</a> or
 <a href="https://en.wikipedia.org/wiki/Doubly_linked_list">doubly-linked list</a>
 with additional <em>long-distance</em> links,
-which are structurally redendant,
+which are structurally redundant,
 but allow much more efficient traversal and search
 across arbitrary distances along the timeline
 in a logarithmic, rather than linear, number of steps.</p>
 
 <p>Chainiac adapts the skip list idea to blockchains
-by adding long-distance links both forward and backward in time.</p>
+by adding long-distance links both forward and backward in time,
+as illustrated below.</p>
+
+<p><center>
+<img src="skipchain.svg" alt="SkipChain with long-distance forward and backward links" style="width:70%">
+</center></p>
 
 <p>When Chainiac creates a new block,
 that block includes not just one hash link to the immediately prior block,
@@ -560,7 +586,7 @@ to a powerful, patient, and persistent attacker.</p>
 in at least two ways.</p>
 
 <ol>
-<li>A Chainiac blockchain can enforce a maximum forward-link distance:
+<li><p>Chainiac can enforce a maximum forward-link distance:
 one year might be reasonable, for example.
 This policy ensures that all (honest) consensus group members
 securely erase their private keys after at most one year,
@@ -572,8 +598,9 @@ will need to catch up &ldquo;one year at a time&rdquo; &ndash;
 at a cost linear rather than logarithmic in the number of years.
 This is probably not much of a problem in practice,
 since few electronic devices tend to remain in use
-after <em>that</em> many years anyway.</li>
-<li>Another way to strengthen a SkipChain&rsquo;s forward security,
+after <em>that</em> many years anyway.</p></li>
+
+<li><p>Another way to strengthen a SkipChain&rsquo;s forward security,
 which we have not yet implemented but plan to,
 is for consensus group members to use
 <a href="https://en.wikipedia.org/wiki/Key_derivation_function">derived keys</a>
@@ -595,7 +622,7 @@ that sync with the blockchain extremely rarely.
 Devices that sync more regularly,
 either by going online or via peer-to-peer updates,
 remain immune to such an attacker
-because they only ever follow shorter-distance forward links.</li>
+because they only ever follow shorter-distance forward links.</p></li>
 </ol>
 
 <p>Note that even devices that sync regularly with the blockchain
