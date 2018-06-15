@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Posts &middot; Bryan Ford</title>
-        <meta name="description" content="Ghostwriter example description">
+        <title> &middot; Bryan Ford</title>
+        <meta name="description" content="For another thing, I’m personally not a big believer in the practical value of the asynchronous model anyway. I know I’m at odds here with most people with a theory/algorithms background; reasonable people may differ. :) Almost every practical distributed system that ever actually gets deployed has timeouts and such buried in it here, there, everywhere. User-experience expectations are synchronous, not asynchronous: even if the underlying protocol is in principle perfectly capable of tolerating arbitrarily-long adversary-controlled propagation delays among honest nodes, the real users relying on the system are going to start complaining rather soon after the expected/normal amount of transaction time elapses.">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.18-DEV" />
@@ -63,58 +63,44 @@
             <div id="container">
 
 
-<div id="post-index" class="container">
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title"></h1>
+    
+</header>
+
+        <div class="post-content clearfix">
     
 
-    <ol class="post-list">
-        
-        
-            <li class="post-stub">
-    <a href="https://bford.github.io/2003/07/24/service-duality/">
-        <h4 class="post-stub-title">Service Duality - Vitalizing the Commons</h4>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="https://bford.github.io/2002/10/21/deleg-voting/">
-        <h4 class="post-stub-title">Delegative Voting</h4>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="https://bford.github.io/2002/05/15/deleg/">
-        <h4 class="post-stub-title">Delegative Democracy</h4>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="https://bford.github.io/2018/06/16/lausanne/">
-        <h4 class="post-stub-title">Sightseeing Around Lausanne</h4>
-        
-        
-    </a>
-</li>
-        
-    </ol>
+    <p>For another thing, I’m personally not a big believer in the practical value of the asynchronous model anyway.  I know I’m at odds here with most people with a theory/algorithms background; reasonable people may differ. :)  Almost every practical distributed system that ever actually gets deployed has timeouts and such buried in it here, there, everywhere.  User-experience expectations are synchronous, not asynchronous: even if the underlying protocol is in principle perfectly capable of tolerating arbitrarily-long adversary-controlled propagation delays among honest nodes, the real users relying on the system are going to start complaining rather soon after the expected/normal amount of transaction time elapses.  And in environments where we’re truly exposed to hugely-varying latencies and actually need to adapt to them - such as delay-tolerant or interplanetary networking scenarios - then asynchronous consensus protocols and the like are never useful in practice there either because they slow <em>everyone</em> down to the least-common denominator: e.g., if <sup>1</sup>&frasl;<sub>3</sub> of the participants in an async BFT protocol are on Mars, then everyone’s transactions everywhere must necessarily slow down to account for the Mars-Earth latency, which no one doing transactions only on Earth (or only on Mars) will accept.  The only real, practical solution to those kinds of problems are locality-preserving approaches such as Cristina’s Crux project (<a href="https://arxiv.org/abs/1405.0637">https://arxiv.org/abs/1405.0637</a>), which of course is a whole different ball game.</p>
 
-    <div class="post-navigation">
-        
+</div>
 
-    <nav class="pagination" role="navigation">
-        <span class="page-number">Page 2 of 2</span>
-        
-            <a class="newer-posts" href="/post/">&larr; Newer Posts</a>
-        
-        
-    </nav>
+        <footer class="post-footer clearfix">
+    
 
+    <div class="share">
+        <a class="icon-twitter" href="http://twitter.com/share?text=&url=https%3a%2f%2fbford.github.io%2fdraft%2fasync%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbford.github.io%2fdraft%2fasync%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fbford.github.io%2fdraft%2fasync%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
     </div>
+</footer>
+    </article>
 </div>
 
             </div>
@@ -147,3 +133,4 @@
         <script src="https://bford.github.io/js/scripts.js"></script>
     </body>
 </html>
+

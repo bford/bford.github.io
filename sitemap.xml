@@ -3,7 +3,12 @@
   
   <url>
     <loc>https://bford.github.io/</loc>
-    <lastmod>2017-08-01T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.github.io/draft/stake/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -92,7 +97,19 @@
   </url>
   
   <url>
+    <loc>https://bford.github.io/draft/async/</loc>
+  </url>
+  
+  <url>
     <loc>https://bford.github.io/2016/11/13/info/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.github.io/2018/06/16/lausanne/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.github.io/2018/xx/xx/blockchain/</loc>
   </url>
   
 </urlset>

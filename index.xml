@@ -6,8 +6,127 @@
     <description>Recent content on Bryan Ford&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://bford.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Secure, Scalable Proof-of-Stake Blockchains</title>
+      <link>https://bford.github.io/draft/stake/</link>
+      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.github.io/draft/stake/</guid>
+      <description>
+
+&lt;h1 id=&#34;proof-of-what&#34;&gt;Proof-of-What?&lt;/h1&gt;
+
+&lt;p&gt;Currently-deployed permissionless blockchains
+such as Bitcoin and Ethereum rely on
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Proof-of-work_system&#34;&gt;proof-of-work (PoW)&lt;/a&gt;
+to distribute both the computational networking costs,
+and the financial rewards,
+of maintaining and extending the blockchain.
+In proof-of-work systems, participating &lt;em&gt;miners&lt;/em&gt;
+race (&amp;ldquo;work&amp;rdquo;) to compute solutions to cryptographic puzzles.
+These puzzles effectively act like self-printed lottery tickets,
+in that a miniscule fraction of these proof-of-work solutions
+may be easily verified by anyone as &amp;ldquo;winning&amp;rdquo; the lucky miner
+the right to add one block to the blockchain and collect associated rewards.
+Proof-of-work has proven practical and relatively secure,
+at least for cryptocurrencies with sufficient critical mass to deter
+&lt;a href=&#34;https://cryptohustle.com/51-attack-crew-extorts-and-hijacks-blockchains-for-ransom&#34;&gt;ransom or hijacking by powerful attackers&lt;/a&gt;.
+However, it has been
+&lt;a href=&#34;https://pando.com/2013/12/16/bitcoin-has-a-dark-side-its-carbon-footprint/&#34;&gt;recognized for years&lt;/a&gt;
+that proof-of-work blockchains are
+&lt;a href=&#34;https://motherboard.vice.com/en_us/article/d3zn9a/ethereum-mining-transaction-electricity-consumption-bitcoin&#34;&gt;a tremendous waste of energy&lt;/a&gt;.
+Recent estimates show that
+&lt;a href=&#34;http://digiconomist.net/bitcoin-energy-consumption&#34;&gt;Bitcoin now consumes more energy than 60% of the world&amp;rsquo;s countries&lt;/a&gt;,
+and that
+&lt;a href=&#34;http://digiconomist.net/ethereum-energy-consumption&#34;&gt;Ethereum already consumes more energy
+than Cyprus or Cambodia&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Motivated in part by this energy waste and its carbon footprint,
+the cryptocurrency community has developed increasing interest
+in alternative security foundations such as
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Proof-of-stake&#34;&gt;proof-of-stake (PoS)&lt;/a&gt;.
+The essence of this idea is to apportion consensus power
+not according to energy wasted performing useless work,
+but rather according to the amount of &amp;ldquo;stake&amp;rdquo;
+that participants already hold in the system:
+e.g., according to the number of coins they own.
+The underlying principle is not unlike that of a traditional
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Joint-stock_company&#34;&gt;joint-stock company&lt;/a&gt;,
+in which voting power to affect a company&amp;rsquo;s decisions
+(e.g., by electing board members who in turn choose executives)
+is apportioned in proportion to shares of stock (&amp;ldquo;stake&amp;rdquo;)
+held in the company.
+The venerable underlying security principle is that stakeholders
+have an interest in preserving and ideally increasing
+the value of their stake &amp;ndash;
+with bigger stakeholders having more to gain (or lose)
+from good (or bad) decisions &amp;ndash;
+thereby aligning their individual interests with those of the overall system.
+While proof-of-stake conceptually represents
+a sensible and promising alternative to proof-of-work,
+&lt;em&gt;implementing&lt;/em&gt; proof-of-stake systems securely
+&lt;a href=&#34;https://blog.sldx.com/whats-wrong-with-proof-of-stake-77d4f370be15&#34;&gt;is challenging&lt;/a&gt;,
+due to many difficulties well-documented in
+&lt;a href=&#34;http://bitfury.com/content/5-white-papers-research/pos-vs-pow-1.0.2.pdf&#34;&gt;a BitFury white paper&lt;/a&gt;
+and elsewhere.&lt;/p&gt;
+
+&lt;h1 id=&#34;is-proof-of-investment-really-the-answer&#34;&gt;Is Proof-of-Investment Really the Answer?&lt;/h1&gt;
+
+&lt;p&gt;Proof-of-work and proof-of-stake are both
+&lt;em&gt;investment-proportional&lt;/em&gt; security foundations,
+in that they apportion consensus power and mining rewards
+proportionally to prior investment
+(in computational effort or coin purchases, respectively).
+Many other alternatives such as
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Proof-of-space&#34;&gt;proof of space&lt;/a&gt;,
+&lt;a href=&#34;http://dedis.cs.yale.edu/dissent/papers/hotpets14-torpath-abs&#34;&gt;proof of bandwidth&lt;/a&gt;,
+and
+&lt;a href=&#34;https://eprint.iacr.org/2016/145.pdf&#34;&gt;proof of human work&lt;/a&gt;
+similarly fit into the same broad category,
+which might be accurately classified as &lt;em&gt;proof of investment&lt;/em&gt;.
+In the long term,
+I am skeptical that cryptocurrencies based on proof of investment
+will fundamentally transform our society or economy for the better
+(or at all really).
+At the end of the day,
+cryptocurrencies or
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Decentralized_autonomous_organization&#34;&gt;decentralized autonomous organizations&lt;/a&gt;
+based on proof of investment are merely a more-automated
+functional equivalent to the stakeholder-driven joint-stock companies
+that already dominate today&amp;rsquo;s global economy,
+and hence are fundamentally nothing new.&lt;/p&gt;
+
+&lt;p&gt;In other words, proof-of-investment cryptocurrencies
+may put more white-collar office workers out of work and hasten the
+&lt;a href=&#34;https://www.wired.com/brandlab/2015/04/rise-machines-future-lots-robots-jobs-humans/&#34;&gt;rise of the machines&lt;/a&gt;,
+but will ultimately do little to address society&amp;rsquo;s fundamental challenges
+such as
+&lt;a href=&#34;https://www.theguardian.com/business/2017/jan/11/inequality-world-economy-wef-brexit-donald-trump-world-economic-forum-risk-report&#34;&gt;rising economic inequality&lt;/a&gt;.
+For that purpose, I see more promise in truly democratic alternatives
+such as
+&lt;a href=&#34;https://zerobyte.io/publications/2017-BKJGGF-pop.pdf&#34;&gt;proof-of-personhood&lt;/a&gt;
+or
+&lt;a href=&#34;http://proofofindividuality.online/&#34;&gt;proof-of-individuality&lt;/a&gt;,
+which could create a sort of
+&amp;ldquo;permissionless &lt;a href=&#34;https://en.wikipedia.org/wiki/Basic_income&#34;&gt;basic income&lt;/a&gt;&amp;ldquo;
+by apportioning voting and consensus power and currency-mining rewards
+to all &lt;em&gt;human&lt;/em&gt; participants, in a one-person-one-vote distribution.
+But truly democratizing and decentralizing cryptocurrencies
+will require solving many further challenges.
+In the meantime, even if proof-of-stake achieves nothing but
+ending the energy waste and environmental impact of proof-of-work,
+that goal is easily worth pursuing.
+And it&amp;rsquo;s an interesting technical challenge,
+so the rest of this blog post will focus on that.&lt;/p&gt;
+
+&lt;h1 id=&#34;will-the-one-true-blockchain-please-raise-your-hand&#34;&gt;Will the One True Blockchain Please Raise Your Hand?&lt;/h1&gt;
+
+&lt;h1 id=&#34;long-term-attacks&#34;&gt;Long-term Attacks&lt;/h1&gt;
+</description>
+    </item>
     
     <item>
       <title>How Do You Know It&#39;s On the Blockchain? With a SkipChain.</title>
@@ -2587,16 +2706,6 @@ Comments or corrections of any inaccuracies are welcome.&lt;/p&gt;
       
       <guid>https://bford.github.io/2004/08/16/wiki-democracy/</guid>
       <description>&lt;html&gt;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=http://meta.wikimedia.org/wiki/User:Brynosaurus&#34;&gt;&lt;/html&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Service Duality - Vitalizing the Commons</title>
-      <link>https://bford.github.io/2003/07/24/service-duality/</link>
-      <pubDate>Thu, 24 Jul 2003 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.github.io/2003/07/24/service-duality/</guid>
-      <description>&lt;html&gt;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=http://www.brynosaurus.com/pub/os/duality.pdf&#34;&gt;&lt;/html&gt;
 </description>
     </item>
     
