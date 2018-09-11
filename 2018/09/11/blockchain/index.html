@@ -4,8 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>So They&#39;re Selling You a Blockchain &middot; Bryan Ford</title>
-        <meta name="description" content="I think blockchain has a lot of potential, but it is also still a very immature area of technology. There is a lot of noise and confusion about what it is and what properties specific blockchains do and don&rsquo;t provide.
-Blockchain Architecture Questions Has the technical architecture and design been validated through peer review in independently peer-reviewed publication venues? Which venues, and how reputable and selective are they? (For reference, the top systems venues are SOSP and OSDI, the top security/privacy venues are IEEE Security &amp; Privacy and USENIX Security, and the top cryptography venue is CRYPTO.">
+        <meta name="description" content="Blockchain is certainly one of the hot technology topics today. Yes, it&rsquo;s probably in part a hype bubble &ndash; but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFL has been investing years of effort in building next generation blockchain architectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled financial market for cryptocurrencies.">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.18-DEV" />
@@ -65,21 +64,63 @@ Blockchain Architecture Questions Has the technical architecture and design been
 
 
 <div class="container">
-    <article class="post-container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title">So They&#39;re Selling You a Blockchain</h1>
+    <h1 class="post-title" itemprop="name headline">So They&#39;re Selling You a Blockchain</h1>
     
+    <p class="post-date">
+        <span>Published <time datetime="2018-09-11" itemprop="datePublished">Tue, Sep 11, 2018</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+            <span itemprop="name">
+                <a href="http://bford.info/" itemprop="url" rel="author">Bryan Ford</a>
+            </span>
+        </span>
+    </p>
 </header>
 
-        <div class="post-content clearfix">
+        <div class="post-content clearfix" itemprop="articleBody">
     
 
     
 
-<p>I think blockchain has a lot of potential,
-but it is also still a very immature area of technology.
-There is a lot of noise and confusion about what it is
-and what properties specific blockchains do and don&rsquo;t provide.</p>
+<p>Blockchain is certainly one of the hot technology topics today.
+Yes, it&rsquo;s probably in part a hype bubble &ndash;
+but from my perspective as a long-time researcher in decentralized systems
+I believe there is also a lot of potential value in the concept,
+which is why my <a href="https://dedis.epfl.ch/">DEDIS lab at EPFL</a>
+has been investing years of effort in
+<a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/kogias">building</a>
+<a href="https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/nikitin">next</a>
+<a href="http://bford.info/pub/dec/random-abs">generation</a>
+<a href="http://bford.info/pub/dec/omniledger-abs">blockchain</a>
+<a href="https://eprint.iacr.org/2018/209">architectures</a>.
+I also believe the value of the blockchain concept is relatively independent
+of the unpredictable and scam-riddled
+<a href="https://blockonomi.com/bear-market-cryptocurrency/"
+>financial market for cryptocurrencies</a>.</p>
+
+<p>However, the genuine promise of blockchain technology will be realized only
+<i>if blockchains are designed properly and deployed cautiously</i>.
+Several companies evaluating blockchain technologies
+have asked me to help them figure out what to look for
+and what questions to ask in considering alternatives,
+which prompted me to create a list of questions that I thought I&rsquo;d share
+for whatever they may be worth to others.
+This is by no means a complete list,
+and is certainly not &ldquo;unbiased&rdquo;:
+in particular it is strongly oriented towards security- and privacy-related
+questions and issues,
+which is natural since I&rsquo;m a security/privacy researcher.
+But I hope some people might find it useful, for whatever it&rsquo;s worth.
+I&rsquo;m happy to take suggestions to extend the list further,
+and will consider adding them if I agree on their importance &ndash;
+although I given the mountain of (often blockchain-related) E-mail
+I&rsquo;m constantly buried under,
+I can&rsquo;t promise how promptly I&rsquo;ll be able to respond,
+let alone edit and update this post with suggestions.
+So this list is provided purely &ldquo;without warranty&rdquo;:
+take it for whatever it&rsquo;s worth, and of course your mileage may vary.</p>
 
 <hr />
 
@@ -114,7 +155,10 @@ How are software update roll-outs managed and secured?</p>
 <h3 id="how-decentralized-will-the-intended-deployment-be-in-practice">How decentralized will the intended deployment be in practice?</h3>
 
 <p>How many independent organizations will be expected to run consensus nodes,
-initially and in the long term?</p>
+initially and in the long term?
+Stated more bluntly,
+<a href="https://arewedecentralizedyet.com/"
+>are we decentralized yet?</a></p>
 
 <h3 id="does-the-architecture-rely-on-energy-intensive-proof-of-work-mining">Does the architecture rely on energy-intensive proof-of-work mining?</h3>
 
@@ -198,7 +242,8 @@ are manipulated or censored?</p>
 <h3 id="can-offline-or-poorly-connected-devices-securely-verify-blockchain-transactions">Can offline or poorly-connected devices securely verify blockchain transactions?</h3>
 
 <p>Do edge devices designed to scan and verify blockchain-secured credentials
-become inoperative or insecure if they cannot connect to the consensus nodes?
+<a href="https://btc-hijack.ethz.ch/">become inoperative or insecure</a>
+if they cannot connect to the consensus nodes?
 Or can edge devices such as credential scanners
 <a href="https://bford.github.io/2017/08/01/skipchain/">cryptographically verify transactions offline</a>?</p>
 
@@ -360,25 +405,27 @@ for helpful feedback on early drafts of this post.*
     
 
     <div class="share">
-        <a class="icon-twitter" href="http://twitter.com/share?text=So%20They%27re%20Selling%20You%20a%20Blockchain&url=https%3a%2f%2fbford.github.io%2f2018%2fxx%2fxx%2fblockchain%2f"
+        <a class="icon-twitter" href="http://twitter.com/share?text=So%20They%27re%20Selling%20You%20a%20Blockchain&url=https%3a%2f%2fbford.github.io%2f2018%2f09%2f11%2fblockchain%2f"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fa fa-twitter"></i>
             <span class="hidden">Twitter</span>
         </a>
 
-        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbford.github.io%2f2018%2fxx%2fxx%2fblockchain%2f"
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbford.github.io%2f2018%2f09%2f11%2fblockchain%2f"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <i class="fa fa-facebook"></i>
             <span class="hidden">Facebook</span>
         </a>
 
-        <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fbford.github.io%2f2018%2fxx%2fxx%2fblockchain%2f"
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fbford.github.io%2f2018%2f09%2f11%2fblockchain%2f"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
            <i class="fa fa-google-plus"></i>
             <span class="hidden">Google+</span>
         </a>
     </div>
 </footer>
+
+        
     </article>
 </div>
 

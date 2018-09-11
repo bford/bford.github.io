@@ -6,8 +6,333 @@
     <description>Recent content on Bryan Ford&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Sep 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://bford.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>So They&#39;re Selling You a Blockchain</title>
+      <link>https://bford.github.io/2018/09/11/blockchain/</link>
+      <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.github.io/2018/09/11/blockchain/</guid>
+      <description>
+
+&lt;p&gt;Blockchain is certainly one of the hot technology topics today.
+Yes, it&amp;rsquo;s probably in part a hype bubble &amp;ndash;
+but from my perspective as a long-time researcher in decentralized systems
+I believe there is also a lot of potential value in the concept,
+which is why my &lt;a href=&#34;https://dedis.epfl.ch/&#34;&gt;DEDIS lab at EPFL&lt;/a&gt;
+has been investing years of effort in
+&lt;a href=&#34;https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/kogias&#34;&gt;building&lt;/a&gt;
+&lt;a href=&#34;https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/nikitin&#34;&gt;next&lt;/a&gt;
+&lt;a href=&#34;http://bford.info/pub/dec/random-abs&#34;&gt;generation&lt;/a&gt;
+&lt;a href=&#34;http://bford.info/pub/dec/omniledger-abs&#34;&gt;blockchain&lt;/a&gt;
+&lt;a href=&#34;https://eprint.iacr.org/2018/209&#34;&gt;architectures&lt;/a&gt;.
+I also believe the value of the blockchain concept is relatively independent
+of the unpredictable and scam-riddled
+&lt;a href=&#34;https://blockonomi.com/bear-market-cryptocurrency/&#34;
+&gt;financial market for cryptocurrencies&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, the genuine promise of blockchain technology will be realized only
+&lt;i&gt;if blockchains are designed properly and deployed cautiously&lt;/i&gt;.
+Several companies evaluating blockchain technologies
+have asked me to help them figure out what to look for
+and what questions to ask in considering alternatives,
+which prompted me to create a list of questions that I thought I&amp;rsquo;d share
+for whatever they may be worth to others.
+This is by no means a complete list,
+and is certainly not &amp;ldquo;unbiased&amp;rdquo;:
+in particular it is strongly oriented towards security- and privacy-related
+questions and issues,
+which is natural since I&amp;rsquo;m a security/privacy researcher.
+But I hope some people might find it useful, for whatever it&amp;rsquo;s worth.
+I&amp;rsquo;m happy to take suggestions to extend the list further,
+and will consider adding them if I agree on their importance &amp;ndash;
+although I given the mountain of (often blockchain-related) E-mail
+I&amp;rsquo;m constantly buried under,
+I can&amp;rsquo;t promise how promptly I&amp;rsquo;ll be able to respond,
+let alone edit and update this post with suggestions.
+So this list is provided purely &amp;ldquo;without warranty&amp;rdquo;:
+take it for whatever it&amp;rsquo;s worth, and of course your mileage may vary.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;blockchain-architecture-questions&#34;&gt;Blockchain Architecture Questions&lt;/h2&gt;
+
+&lt;h3 id=&#34;has-the-technical-architecture-and-design-been-validated-through-peer-review-in-independently-peer-reviewed-publication-venues&#34;&gt;Has the technical architecture and design been validated through peer review in independently peer-reviewed publication venues?&lt;/h3&gt;
+
+&lt;p&gt;Which venues, and how reputable and selective are they?
+(For reference,
+the top systems venues are
+&lt;a href=&#34;https://www.sigops.org/sosp/sosp17/&#34;&gt;SOSP&lt;/a&gt; and
+&lt;a href=&#34;https://www.usenix.org/conference/osdi18&#34;&gt;OSDI&lt;/a&gt;,
+the top security/privacy venues are
+&lt;a href=&#34;https://www.ieee-security.org/TC/SP2018/&#34;&gt;IEEE Security &amp;amp; Privacy&lt;/a&gt; and
+&lt;a href=&#34;https://www.usenix.org/conference/usenixsecurity17&#34;&gt;USENIX Security&lt;/a&gt;, and
+the top cryptography venue is
+&lt;a href=&#34;https://crypto.iacr.org/&#34;&gt;CRYPTO&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;h3 id=&#34;who-runs-consensus-nodes-in-the-blockchain-architecture-and-how-is-membership-decided&#34;&gt;Who runs consensus nodes in the blockchain architecture, and how is membership decided?&lt;/h3&gt;
+
+&lt;p&gt;Is the blockchain open to anyone (permissionless)
+or run among a fixed set of participants (permissioned)?
+What is the process for adding or removing members,
+and how is that process secured?&lt;/p&gt;
+
+&lt;h3 id=&#34;how-is-the-consensus-group-membership-governed-organizationally-and-technically&#34;&gt;How is the consensus group membership governed, organizationally and technically?&lt;/h3&gt;
+
+&lt;p&gt;Who decides when and how to deploy blockchain upgrades
+that might not be backward-compatible, thus requiring a hard-fork?
+How are software update roll-outs managed and secured?&lt;/p&gt;
+
+&lt;h3 id=&#34;how-decentralized-will-the-intended-deployment-be-in-practice&#34;&gt;How decentralized will the intended deployment be in practice?&lt;/h3&gt;
+
+&lt;p&gt;How many independent organizations will be expected to run consensus nodes,
+initially and in the long term?
+Stated more bluntly,
+&lt;a href=&#34;https://arewedecentralizedyet.com/&#34;
+&gt;are we decentralized yet?&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;does-the-architecture-rely-on-energy-intensive-proof-of-work-mining&#34;&gt;Does the architecture rely on energy-intensive proof-of-work mining?&lt;/h3&gt;
+
+&lt;p&gt;Who deploys and operates the mining nodes?
+What are the energy and environmental costs of this mining,
+and are the trends sustainable?
+How decentralized is the distribution of mining power:
+e.g., how many of the largest miners or pools would need to collude
+to execute a 51% attack, or a 33% attack, on the blockchain?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;security-and-robustness-questions&#34;&gt;Security and Robustness Questions&lt;/h2&gt;
+
+&lt;h3 id=&#34;does-the-system-have-an-open-independent-security-and-privacy-review-and-analysis&#34;&gt;Does the system have an open, independent security and privacy review and analysis?&lt;/h3&gt;
+
+&lt;p&gt;If so, where may that independent security/privacy analysis be found?&lt;/p&gt;
+
+&lt;h3 id=&#34;does-the-blockchain-system-implement-true-byzantine-consensus&#34;&gt;Does the blockchain system implement true Byzantine consensus?&lt;/h3&gt;
+
+&lt;p&gt;Is the consensus scheme fully robust not just to failed (crashed)
+but also fully-compromised (hacked, adversarial) consensus group participants?
+Or does the system rely on non-Byzantine consensus algorithms like Paxos
+that assume all parties are well-behaved and cannot ensure integrity
+if even just one participant is compromised?&lt;/p&gt;
+
+&lt;!--
+### What is the smallest number or fraction of independent organizations holding enough consensus power to compromise the blockchain?
+(see arewedecentralizedyet)
+could be through rewriting history, double-spending,
+quietly censoring transactions to deny service to a competitor,
+creating a prive fake blockchain to show to just one victim
+during a high-value transaction, etc.
+--&gt;
+
+&lt;h3 id=&#34;how-many-compromised-participants-can-the-consensus-protocol-tolerate&#34;&gt;How many compromised participants can the consensus protocol tolerate?&lt;/h3&gt;
+
+&lt;p&gt;What number or percentage of consensus group members participants
+can be fully compromised (e.g., hacked, colluding, or under adversarial control)
+without compromising the integrity of the blockchain
+or the confidentiality of the deta entrusted to it?&lt;/p&gt;
+
+&lt;h3 id=&#34;are-there-single-points-of-failure-or-compromise-outside-of-consensus&#34;&gt;Are there single points of failure or compromise outside of consensus?&lt;/h3&gt;
+
+&lt;p&gt;For example:
+Does the system depend on a centralized Certificate Authority (CA)
+for naming and membership, which if compromised could allow the attacker
+to impersonate any and all of the blockchain participants simultaneously?
+Does the system rely on centralized &amp;ldquo;oracles&amp;rdquo;
+to obtain and report information from the outside world
+that smart contracts might need to depend on,
+such that smart contracts can be misled if that oracle service is hacked?
+Does the system rely on centralized off-chain data- or key-storage services
+to ensure the confidentiality of data or encryption keys
+entrusted to the blockchain,
+such that the compromise of that storage service could make
+all the stored data and/or keys readable and decryptable in bulk
+by an attacker without necessarily leaving access records on the blockchain?
+Does the system rely on a centralized cloud-based
+login, control, and provisioning services that,
+if compromised, could enable an attacker to gain control of
+most or all of the blockchain nodes at once?&lt;/p&gt;
+
+&lt;h3 id=&#34;how-can-i-know-the-blockchain-will-be-available-and-have-adequate-transaction-processing-capacity-when-my-business-needs-it&#34;&gt;How can I know the blockchain will be available and have adequate transaction processing capacity when my business needs it?&lt;/h3&gt;
+
+&lt;p&gt;What are the risks that the potentially-independent actions
+of other parties using the blockchain innocently or deliberately
+consuming enough resources to deny service or limit availability to my business&amp;rsquo;s needs,
+as occurred in
+&lt;a href=&#34;https://www.coindesk.com/ethereums-cryptokitties-blockchain-deluge-sparks-ico-delay/&#34;&gt;the Crypto-Kitties incident&lt;/a&gt;
+for example?&lt;/p&gt;
+
+&lt;h3 id=&#34;what-provisions-prevent-misbehaving-consensus-nodes-from-censoring-transactions&#34;&gt;What provisions prevent misbehaving consensus nodes from censoring transactions?&lt;/h3&gt;
+
+&lt;p&gt;Do relying parties (e.g., mobile apps accessing the blockchain)
+maintain connections to multiple consensus nodes or just one,
+which could be a single point of failure, compromise, or censorship?
+How can relying parties detect and recover if their access attempts
+are manipulated or censored?&lt;/p&gt;
+
+&lt;h3 id=&#34;can-offline-or-poorly-connected-devices-securely-verify-blockchain-transactions&#34;&gt;Can offline or poorly-connected devices securely verify blockchain transactions?&lt;/h3&gt;
+
+&lt;p&gt;Do edge devices designed to scan and verify blockchain-secured credentials
+&lt;a href=&#34;https://btc-hijack.ethz.ch/&#34;&gt;become inoperative or insecure&lt;/a&gt;
+if they cannot connect to the consensus nodes?
+Or can edge devices such as credential scanners
+&lt;a href=&#34;https://bford.github.io/2017/08/01/skipchain/&#34;&gt;cryptographically verify transactions offline&lt;/a&gt;?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;cost-related-questions&#34;&gt;Cost-related Questions&lt;/h2&gt;
+
+&lt;h3 id=&#34;what-are-the-financial-costs-of-blockchain-transactions-currently-and-historically&#34;&gt;What are the financial costs of blockchain transactions, currently and historically?&lt;/h3&gt;
+
+&lt;p&gt;How can I mitigate the risk that unexpected future
+increases in transaction costs,
+whether temporary or permanent,
+could impose economically prohibitive costs to my blockchain-dependent business?&lt;/p&gt;
+
+&lt;h3 id=&#34;what-are-the-energy-and-network-bandwidth-costs-to-resource-constrained-edge-devices-needing-to-interact-with-the-blockchain&#34;&gt;What are the energy and network bandwidth costs to resource-constrained edge devices needing to interact with the blockchain?&lt;/h3&gt;
+
+&lt;p&gt;Do resource-constrained edge devices or mobile apps
+need to maintain connections and gossip with
+multiple consensus group members, or with just one?
+In the former case, what are the energy and bandwidth costs of this gossip?
+In the latter case, can that one reference node, if compromised,
+potentially censor the relying party&amp;rsquo;s access to the blockchain
+or trick it into using
+an &amp;ldquo;alternate-reality&amp;rdquo; blockchain inconsistent with the public one?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;performance-and-scalability-questions&#34;&gt;Performance and Scalability Questions&lt;/h2&gt;
+
+&lt;h3 id=&#34;how-scalable-is-the-architecture-to-many-consensus-participants&#34;&gt;How scalable is the architecture to many consensus participants?&lt;/h3&gt;
+
+&lt;p&gt;What is the maximum number of widely-distributed participants
+for which the blockchain system has been validated and performance-tested?
+Tens, hundreds, thousands, tens of thousands?&lt;/p&gt;
+
+&lt;h3 id=&#34;how-long-does-it-take-to-commit-a-transaction-securely&#34;&gt;How long does it take to commit a transaction securely?&lt;/h3&gt;
+
+&lt;p&gt;How are transaction latencies affected by consensus group size?
+When can I be overwhelmingly certain that a transaction
+can&amp;rsquo;t be reverted or rewritten after commitment?
+Were these transaction latencies tested on a wide-area deployment
+with global speed-of-light delays between consensus nodes,
+or in a local-area environment where all participants are close together?&lt;/p&gt;
+
+&lt;h3 id=&#34;what-is-the-system-s-maximum-demonstrated-transaction-throughput&#34;&gt;What is the system&amp;rsquo;s maximum demonstrated transaction throughput?&lt;/h3&gt;
+
+&lt;p&gt;Was this throughput demonstrated in a wide-area or local-area deployment?
+What processing power and network bandwidth was required?&lt;/p&gt;
+
+&lt;h3 id=&#34;what-does-the-system-s-maximum-transaction-throughput-depend-on&#34;&gt;What does the system&amp;rsquo;s maximum transaction throughput depend on?&lt;/h3&gt;
+
+&lt;p&gt;Can the system&amp;rsquo;s transaction-processing capacity scale gracefully
+as more participants and hardware resources are added to the system
+(e.g., via &lt;a href=&#34;http://bford.info/pub/dec/omniledger-abs&#34;&gt;sharding&lt;/a&gt;),
+or is processing throughput limited to the slowest consensus group member?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;privacy-and-confidentiality-questions&#34;&gt;Privacy and Confidentiality Questions&lt;/h2&gt;
+
+&lt;h3 id=&#34;how-can-the-blockchain-handle-private-confidential-transaction-data&#34;&gt;How can the blockchain handle private, confidential transaction data?&lt;/h3&gt;
+
+&lt;p&gt;Do all the consensus group members see all transaction data,
+or just the participants that are directly involved in a given transaction?
+If confidential transaction data is encrypted,
+how are the secret encryption keys managed, and who holds those keys?
+Are the encryption keys held by a centralized party that, if compromised,
+could leak confidential data in bulk to an attacker?&lt;/p&gt;
+
+&lt;h3 id=&#34;can-the-blockchain-enforce-global-invariants-on-confidential-transaction-data&#34;&gt;Can the blockchain enforce global invariants on confidential transaction data?&lt;/h3&gt;
+
+&lt;p&gt;If the amounts of coin or token in a transaction are encrypted
+and only known to the direct parties to the transaction, for example,
+can those parties collude to create fake coins or tokens &amp;ldquo;out of thin air&amp;rdquo;
+without the knowledge of the other validators or consensus group members?
+Or can the system somehow ensure that &amp;ldquo;the books balance&amp;rdquo; globally
+without revealing transaction amounts?&lt;/p&gt;
+
+&lt;h3 id=&#34;can-the-blockchain-hide-data-that-smart-contracts-depend-on&#34;&gt;Can the blockchain hide data that smart contracts depend on?&lt;/h3&gt;
+
+&lt;p&gt;Does all the data that a smart contract uses in its calculations and decisions
+need to be exposed to all the blockchain miners or validators?
+Is there any approach available if a smart contract
+needs to make a decision based on sensitive confidential data?&lt;/p&gt;
+
+&lt;h3 id=&#34;does-the-blockchain-provide-any-form-of-metadata-privacy-for-transactions&#34;&gt;Does the blockchain provide any form of metadata privacy for transactions?&lt;/h3&gt;
+
+&lt;p&gt;Can the blockchain hide the identities of parties involved in transactions,
+or does it effectively reveal who&amp;rsquo;s transacting with whom
+even if the actual content of the transaction is encrypted?
+Can the blockchain hide or obscure the timing, pattern, or rate of transactions
+in any way,
+limiting information leakage to an observer who might, for example,
+infer that a burst of activity signifies
+an upcoming product release, merger, major trade, or other announcement??&lt;/p&gt;
+
+&lt;!--
+Even if a spy or competitor can&#39;t decrypt the blockchain transactions
+you&#39;re involved in,
+if they can observe the *rate*, *timing*, and *pattern*
+of transactions your business submits
+-- and especially who else is involved in those transactions --
+then they can potentially learn or guess a lot about what you&#39;re doing:
+e.g., guess that a big event is upcoming if they see a burst of transactions
+with your name on it,
+or guess that you&#39;ve signed a major deal with a particular company
+if they start seeing many transactions tagged with your and their identity.
+--&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;smart-contract-questions&#34;&gt;Smart Contract Questions&lt;/h2&gt;
+
+&lt;h3 id=&#34;which-language-s-are-smart-contracts-written-in&#34;&gt;Which language(s) are smart contracts written in?&lt;/h3&gt;
+
+&lt;p&gt;Does the language have a clear and rigorous specification?
+What measures does the language take for mitigating risks
+of critical smart contract bugs?
+Has the specification been validated through independent security analysis
+and/or publication in peer-reviewed venues?&lt;/p&gt;
+
+&lt;h3 id=&#34;what-are-the-costs-of-running-simple-or-complex-smart-contracts&#34;&gt;What are the costs of running simple, or complex, smart contracts?&lt;/h3&gt;
+
+&lt;p&gt;What is the financial cost and latency to run a simple &amp;ldquo;if-then&amp;rdquo; type contract?
+What is the financial cost and latency to run complex smart contract code
+that, for example, needs to include cryptographic algorithms
+to verify non-native signatures or zero-knowledge proofs?&lt;/p&gt;
+
+&lt;h3 id=&#34;what-is-the-recourse-if-something-goes-wrong-due-to-a-smart-contract-bug&#34;&gt;What is the recourse if something goes wrong due to a smart contract bug?&lt;/h3&gt;
+
+&lt;p&gt;Does the blockchain architecture provide a systematic means
+to roll-back or correct for the effects of smart contract bugs?
+How costly are those measures, e.g., do they require a global hard-fork
+as was used to address
+&lt;a href=&#34;https://www.coindesk.com/understanding-dao-hack-journalists/&#34;&gt;the DAO incident&lt;/a&gt;
+for example?
+If there are less-costly measures,
+how are they activated,
+and how does the architecture protect against abuse
+(e.g., via costly over-use or &amp;ldquo;crying wolf&amp;rdquo; attacks)?&lt;/p&gt;
+
+&lt;h3 id=&#34;does-the-smart-contract-virtual-machine-enforce-strict-determinism-in-the-smart-contract-code&#34;&gt;Does the smart contract virtual machine enforce strict determinism in the smart contract code?&lt;/h3&gt;
+
+&lt;p&gt;Or can buggy or maliciously-written smart contract code potentially
+inject random or other nondeterministic results into their output,
+and thereby preventing the validators from agreeing
+on the results of a transaction?&lt;/p&gt;
+
+&lt;!--
+---
+
+*I wish to thank ...
+for helpful feedback on early drafts of this post.*
+--&gt;
+</description>
+    </item>
     
     <item>
       <title>International Scientific Conferences Must Leave the U.S.</title>
@@ -3040,16 +3365,6 @@ Might we say these are the departments &amp;ldquo;bucking for the top 10&amp;rdq
 
 &lt;p&gt;This is all just for what it&amp;rsquo;s worth; no warranties yadda yadda.
 Comments or corrections of any inaccuracies are welcome.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Individual Representation</title>
-      <link>https://bford.github.io/2004/11/23/indrep/</link>
-      <pubDate>Tue, 23 Nov 2004 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.github.io/2004/11/23/indrep/</guid>
-      <description>&lt;html&gt;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=http://www.brynosaurus.com/log/2004/1123-IndividualRepresentation/&#34;&gt;&lt;/html&gt;
 </description>
     </item>
     
