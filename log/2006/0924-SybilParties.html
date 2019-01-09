@@ -1,0 +1,423 @@
+<html>
+<head>
+	<title>Sybil Parties</title>
+</head>
+<body>
+
+<!--#include virtual="/header.html" -->
+
+<center>
+<h1>Sybil Parties:<br>
+An Offline Foundation for Online Accountability</h1>
+<h2>Bryan Ford - September 24, 2006</h2>
+</center>
+
+
+<h3>The Human Recognition Problem</h3>
+
+<p>
+Today's online ecosphere
+continually suffers from its inability 
+to tell who is a genuine, unique human and who isn't.
+Because open-access messaging systems
+cannot isolate or authenticate the <i>human</i> source of messages
+for the purpose of suppressing abuses,
+spam has already relegated USENET to historical obscurity
+[<a href="#Templeton01">Templeton01</a>],
+threatens the usability of E-mail [<a href="#Wouters05">Wouters05</a>],
+and is even
+<a href="http://www.google.com/search?q=skype+spam">advancing on Skype</a>.
+The automated "Turing tests"
+many web sites employ
+lock out visually impaired users
+[<a href="#Chong03">Chong03</a>, <a href="#May05">May05</a>]
+and are vulnerable to attack
+using artificial intelligence <a href="#Chellapilla05">[Chellapilla05]</a>
+or social engineering
+[<a href="#Doctorow04">Doctorow04</a>].
+Wikipedia progressively tightens its editing rules
+to combat the rising tide of anonymous vandalism
+[<a href="#Knight05">Knight05</a>, <a href="#Hafner06">Hafner06</a>,
+	<a href="#Thompson06">Thompson06</a>].
+Voting-based participatory systems
+such as <a href="http://slashdot.org/">Slashdot</a>
+operate reliably only to the extent that
+nobody cares about the results of votes enough
+to bother opening many accounts and stuffing the ballot boxes.
+Banning detected abusers by IP address
+frequently prevents access by other legitimate users
+on the same ISP [<a href="#Kalsey04">Kalsey04</a>],
+and many attacks come from compromized zombie machines
+not under the control of their owners [<a href="#Evers05">Evers05</a>].
+
+<p>
+More serious proposed solutions to these abuses
+typically revolve around authenticating a user's identity in some way
+before granting (full) access.
+Most E-commerce sites already require users to identify themselves
+by entering personal information and a credit card
+or even a bank account number,
+although a few support emerging anonymous payment services
+such as <a href="http://www.paysafecard.com/">paysafecard</a>,
+<a href="http://www.xrost.biz/">Xrost</a>,
+or <a href="http://www.ukash.com/">Ukash</a>.
+Single sign-on initiatives
+such as <a href="https://accountservices.passport.net/ppnetworkhome.srf">
+Microsoft Passport</a>,
+the <a href="http://www.projectliberty.org/">Liberty Alliance</a>,
+and <a href="http://openid.net/">OpenID</a>
+try to centralize a user's personal information
+at a single "identity provider",
+which various online services contact to authenticate the user.
+<i>Identification</i> is often more than we want or need, however:
+anonymous communication and social participation
+is widely viewed as a crucial tool to safeguard basic democratic values
+such as privacy and freedom of speech
+[<a href="#Teich99">Teich99</a>],
+and the rights of minorites <a href="#Stein03">[Stein03]</a>.
+
+<h3>The One Person, One Persona Principle</h3>
+
+<p>
+Often what we need is not to determine <i>who</i> an online user is,
+but merely to ensure that each human participant
+in a given online service or community
+can have only one account or persona at once.
+If online services could reliably enforce
+a <i>one person, one persona</i> rule when appropriate
+without having to obtain and verify personal information,
+then online personas would no longer be disposable
+and thus would provide a degree of accountability.
+Online services could temporarily revoke the access rights of abusers,
+such as E-mail spammers or Wikipedia vandals,
+without affecting innocent users
+or permitting the same abuser to reappear immediately under a different name.
+Voting-based systems for peer review or online democratic deliberation
+could protect voting anonymity while preventing ballot box stuffing.
+
+<p>
+The abuse of an online system
+by creating many illegitimate virtual personas
+is known as a <i>sybil attack</i>,
+after a famous case of multiple personality disorder
+[<a href="#Schreiber75">Schreiber75</a>],
+and there is probably no purely technical way
+to defend against such attacks [<a href="#Douceur02">Douceur02</a>].
+While distinguishing one human from another may be difficult for computers,
+however,
+humans manage this task all the time when we meet in person.
+A relatively informal and inexpensive
+bit of organizational infrastructure
+in the <i>offline</i> world
+might provide exactly the foundation we need
+for anonymous but accountable online participation,
+allowing users to create multiple privacy-preserving online personas
+while protecting online services against sybil attacks.
+
+<h3>Party Time</h3>
+
+<p>
+Suppose that on some particular day of every year -
+let's call it <i>Sybil Day</i> for the moment -
+groups of people interested in having private but accountable online personas
+gather somewhere in their nearby physical neighborhood
+to throw a party.
+Any group of people may organize a such <i>sybil party</i>,
+provided the group follows certain procedures
+standardized by some broader distributed network of sybil party organizers
+and opens itself to oversight by organizers of other parties
+to ensure that the required procedures are followed correctly.
+Outside of this standardized framework,
+each sybil party's organizers are free to run their party as they see fit -
+e.g., as a festive social occasion
+in which participants are invited to bring food and drinks to share
+(hence the term "party"),
+as a conference or workshop
+in which to discuss online social issues and the like,
+or as a purely functional affair minimizing cost and volunteer effort.
+
+<p>
+Regardless of form,
+at the heart of each sybil party is a procedure
+in which each participant
+receives login information granting access to one, and only one,
+anonymous <i>sybil account</i> on a designated web site
+run by the party's organizers or an affiliated organization.
+Sybil accounts store no personal information,
+and no one needs to show identification
+or meet any requirements regarding age, citizenship, home location,
+or other personal characteristics,
+in order to obtain an account.
+A New Yorker visiting Paris on Sybil Day
+can just show up at any sybil party in Paris to get his yearly account,
+and shouldn't even need to know French.
+The only requirement is to be alive
+and able to show up and follow the required procedure.
+As with elections in poor countries
+that have no formal voter registration,
+each participant is marked with indelible ink
+in an obvious place on their body
+as they are given their sybil account,
+preventing them from obtaining several accounts on the same day
+(e.g., at different parties in the same area).
+
+<h3>Using Sybil Accounts to Create Online Personas</h3>
+
+<p>
+A sybil account is not affiliated with any particular online service,
+but acts as a front-end 
+through which users create or renew accounts
+on participating online services.
+A user might login to his sybil account
+and enter <tt>wikipedia.org</tt>,
+for example,
+to create a personal Wikipedia account for himself
+and automatically log him into it.
+The sybil account server is responsible for
+enforcing the <i>one person, one persona</i> rule:
+if the user enters <tt>wikipedia.org</tt> again in his sybil account,
+he simply finds himself in his existing Wikipedia account.
+Since each person can obtain one new sybil account per year,
+online services may expire accounts created this way after a year
+to prevent users from gradually accumulating many accounts,
+and may offer users a way to transition smoothly
+from one year's account to the next,
+but such policies are specific to the online service.
+
+<p>
+A sybil account holder
+may create one personal account on each of
+any number of distinct online services in this way.
+To protect the user's privacy,
+the sybil account server ensures that online service providers
+cannot tell which two accounts on different services
+correspond to the same sybil account,
+and hence the same user,
+unless the user explicitly gives them personal information
+establishing such a link.
+If user uses his sybil account
+to create both a professional profile for himself
+on <a href="http://www.linkedin.com/">LinkedIn</a>
+and a steamy personal profile
+on <a href="http://www.adultfriendfinder.com/">AdultFriendFinder</a>,
+for example,
+no one can tell that the two profiles represent the same person
+even if the two web sites collude or are hacked -
+unless, of course, the user gives away the connection,
+by posting the same photo in both profiles for example.
+Even then, the user could deny the connection,
+claiming that someone had simply downloaded his photo from LinkedIn
+and used it to fabricate an embarrassing profile on AdultFriendFinder,
+and there would be no way to prove the connection existed
+short of compromising the sybil account server.
+In effect, the sybil account server
+expressly defends the user's right to exhibit
+a controlled form of "multiple personality disorder"
+across different services
+in order to protect his privacy.
+
+<p>
+Sybil accounts need not replace existing account creation and login mechanisms,
+but could serve as a "premium" mechanism
+offering rewards to users who make the effort
+to help organize or at least show up at a sybil party once a year.
+E-mail authenticated via a sybil account
+might be exempted from heuristic spam filters,
+for example,
+preventing the loss of legitimate E-mail due to false positives.
+Wikipedia might still allow users to create traditional accounts,
+but could exempt sybil account users
+from IP address bans
+or from waiting periods imposed
+between account creation and editing.
+(An abusive E-mail or Wikipedia user logged in via a sybil account
+can still be banned by his sybil account's pseudonymous identity,
+of course,
+and will be unable to create a fresh sybil account
+until the next Sybil Day.)
+Online services that support peer review by voting
+might require a sybil account in order to cast votes,
+while allowing less sensitive forms of access
+via a traditional account or no account.
+
+<h3>Trust and Security</h3>
+
+<p>
+Unlike identity-based single sign-on schemes,
+users need not trust their sybil account provider
+with their personal information,
+because they never had to provide any personal information
+to obtain the account.
+Users may need to trust the sybil party organizers
+to protect their privacy in the account assignment process:
+e.g., not to try to identify and keep tabs on who was assigned which account.
+Users also must trust the party's designated account server
+to protect the relationship between different online service accounts
+the user obtains via the same sybil account.
+Each sybil party's organizers may run their own server
+or work with a support organization they consider trustworthy;
+each user in turn has a free choice
+of which sybil party in their area to attend,
+and thus which group of organizers to trust.
+
+<p>
+Online service providers must similarly trust sybil party organizers
+and their designated account servers
+to enforce the one person, one persona principle.
+Each service's administrators ultimately choose
+which sybil account servers to trust,
+but the network of sybil party organizers may also need to establish
+a system of mutual oversight and operational peer review
+to monitor each party's health and trustworthiness.
+Initially, each sybil party
+might simply stake its claim to legitimacy
+on the public, online or offline reputations of its organizers.
+
+<h3>Implementation Issues</h3>
+
+There are of course many issues and details to work out
+before implementing such a scheme,
+whose solutions I leave for now as exercises for the reader
+and topics for discussion.
+Here are a few:
+<ul>
+<li>	Is there a safe way to give new users "first-time" sybil accounts
+	immediately when they learn about the system,
+	without forcing them to wait up to nearly a year
+	until the next Sybil Day?
+<li>	Should there be "backup" mechanisms to obtain sybil accounts
+	in case a person is sick or otherwise immobile on Sybil Day,
+	or is at a location where there is not yet any organized sybil party?
+<li>	Might sybil parties be allowed to give users the choice of showing ID
+	and attaching personal information to their sybil account,
+	so that they could use the same account
+	for both anonymous and identity-based single sign-on if they wish to?
+<li>	What specific software
+	do sybil account servers and participating online services need,
+	and what is the protocol by which they interact?
+	Could existing identity-based single sign-on infrastructure
+	be reused and adapted to this purpose?
+<li>	To what extent, if any,
+	should sybil parties and affiliated organizations
+	be allowed or encouraged
+	to build ties or accept the support of governments or corporations?
+</ul>
+
+<h3>Conclusion</h3>
+
+Combating the sybil attacks
+at the heart of many online problems
+such as spam, wiki vandalism, and online ballot box stuffing,
+need not and should not force us to give up our privacy.
+Sybil parties would protect users' ability to maintain
+multiple disconnected, potentially anonymous online personas,
+while ensuring accountability
+and allowing online services to enforce
+the democratic "one person, one vote" principle when appropriate.
+Sybil parties could in this way lead to
+a more healthy, "sybilized" Internet.
+
+<h3>References</h3>
+
+<dl>
+<dt><a name="Chellapilla05">[Chellapilla05]</a>
+<dd>Kumar Chellapilla, Kevin Larson, Patrice Simard, and Mary Czerwinski,
+<a href="http://www.ceas.cc/papers-2005/160.pdf">
+Computers beat Humans at Single Character Recognition in
+Reading based Human Interaction Proofs (HIPs)</a>,
+2nd Conference on E-mail and Anti-Spam, July 2005.
+
+<dt><a name="Chong03">[Chong03]</a>
+<dd>Curtis Chong,
+<a href="http://www.nfb.org/Images/nfb/Publications/bm/bm03/bm0311/bm031104.htm">Graphical Verification: Another Accessibility Challenge</a>,
+The Braille Monitor, November 2003.
+
+<dt><a name="Doctorow04">[Doctorow04]</a>
+<dd>Cory Doctorow,
+<a href="http://www.boingboing.net/2004/01/27/solving_and_creating.html">
+Solving and creating captchas with free porn</a>,
+Boing Boing, January 2004.
+
+<dt><a name="Douceur02">[Douceur02]</a>
+<dd>John R. Douceur,
+<a href="http://www.cs.rice.edu/Conferences/IPTPS02/101.pdf">
+The Sybil Attack</a>,
+1st International Workshop on Peer-to-Peer Systems,
+March 2002.
+
+<dt><a name="Evers05">[Evers05]</a>
+<dd>Joris Evers,
+<a href="http://news.cnet.com/ISPs-versus-the-zombies/2100-7349_3-5793719.html">
+ISPs versus the zombies</a>,
+CNET News, July 19, 2005.
+
+<dt><a name="Hafner06">[Hafner06]</a>
+<dd>Katie Hafner,
+<a href="http://www.nytimes.com/2006/06/17/technology/17wiki.html">
+Growing Wikipedia Refines Its 'Anyone Can Edit' Policy</a>,
+New York Times, June 17, 2006.
+
+<dt><a name="Kalsey04">[Kalsey04]</a>
+<dd>Adam Kalsey,
+<a href="http://kalsey.com/2004/02/why_ip_banning_is_useless/">
+Why IP banning is useless</a>,
+February 2004.
+
+<dt><a name="Knight05">[Knight05]</a>
+<dd>Will Knight,
+<a href="http://www.newscientist.com/article/dn8425">
+Wikipedia tightens editorial rules after complaint</a>,
+New Scientist, December 2005.
+
+<dt><a name="Schreiber75">[Schreiber75]</a>
+<dd>Flora Rheta Schreiber,
+<a href="http://www.amazon.com/exec/obidos/tg/detail/-/0446359408/">
+Sybil: the true story of a woman possessed by
+sixteen separate personalities</a>,
+Warner Books, 1973.
+
+<dt><a name="Stein03">[Stein03]</a>
+<dd>Edward Stein,
+<a href="http://www.law.harvard.edu/students/orgs/crcl/vol38_1/stein.pdf">
+Queers Anonymous: Lesbians, Gay Men, Free Speech, and Cyberspace</a>,
+Harvard Civil Rights-Civil Liberties Law Review, vol. 38(1), 2003.
+
+<dt><a name="Teich99">[Teich99]</a>
+<dd>Al Teich, Mark S. Frankel, Rob Kling, and Ya-ching Lee,
+<a href="http://www.indiana.edu/~tisj/readers/full-text/15-2%20teich.pdf#search=%22Anonymous%20Communication%20Policies%22">
+Anonymous Communication Policies for the Internet:
+Results and Recommendations of the AAAS Conference</a>,
+Information Society, May 1999.
+
+<dt><a name="Templeton01">[Templeton01]</a>
+<dd>Brad Templeton,
+<a href="http://www.oreillynet.com/pub/a/network/2001/12/21/usenet.html">
+I Remember USENET</a>,
+O'Reilly Network, December 2001.
+
+<dt><a name="Thompson06">[Thompson06]</a>
+<dd>Bill Thompson,
+<a href="http://news.bbc.co.uk/2/hi/technology/5286458.stm">
+Not as wiki as it used to be</a>,
+BBC News, August 25, 2006.
+
+<dt><a name="May05">[May05]</a>
+<dd>Matt May,
+<a href="http://www.w3.org/TR/2005/NOTE-turingtest-20051123/">
+Inaccessibility of CAPTCHA:
+Alternatives to Visual Turing Tests on the Web</a>,
+W3C Working Group Note 23,
+November 2005.
+
+<dt><a name="Wouters05">[Wouters05]</a>
+<dd>Paul Wouters,
+<a href="http://www.xtdnet.nl/paul/spam/">
+Personal spam statistics 1997-2004</a>,
+January 2005.
+
+</dl>
+
+
+<!--#include virtual="/footer.html" -->
+
+</body>

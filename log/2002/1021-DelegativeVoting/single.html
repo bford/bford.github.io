@@ -1,0 +1,278 @@
+<html>
+<head>
+	<title>Single-Winner Delegative Voting</title>
+</head>
+<body bgcolor=white text=black link=blue vlink=purple alink=purple>
+
+<center>
+<h1>Single-Winner Delegative Voting</h1>
+<h2>Bryan Ford - October 21, 2002</h2>
+</center>
+
+<table cellspacing=10>
+<tr>
+<td valign=top>
+
+<h3><a href="index.html">Introduction</a></h3>
+
+<h3><a href="single.html">Single-Winner Elections</a></h3>
+
+<ul>
+<li>	<a href="single.html#how">How it works</a>
+<li>	<a href="single.html#advantages">Advantages</a>
+<li>	<a href="single.html#irv">Relationship to IRV</a>
+</ul>
+
+<h3><a href="multi.html">Multiple-Seat Elections</a></h3>
+
+<ul>
+<li>	<a href="multi.html#seats">Seats and Districts</a>
+<li>	<a href="multi.html#how">How it works</a>
+<li>	<a href="multi.html#advantages">Advantages</a>
+<li>	<a href="multi.html#stv">Relationship to STV</a>
+<li>	<a href="multi.html#ideal">The Single-District Ideal</a>
+</ul>
+
+<hr>
+<small>(Copyright 2002 Bryan Ford)</small>
+
+<td valign=top>
+
+<p>
+<h2 id="how">How it works</h2>
+
+<p>
+Single-winner elections are used to elect candidates to offices
+that can inherently be occupied only by one person at a time,
+such as President, Governor, or Treasurer.
+Delegative voting in a single-winner election works as follows.
+Well in advance of the election,
+each candidate submits to the electoral authority
+a list of <i>next-choice candidates</i>,
+in which order is not significant.
+This list indicates which other candidates
+the candidate in question considers to be (most) qualified
+to take the office in his place,
+if he himself is not elected to that office.
+In essence, before the election each candidate
+publicly casts a "approval vote" among all the other candidates.
+The electoral authority publicizes
+the next-choice lists of all the candidates
+along with other public information it makes available to voters
+for consideration.
+
+<p>
+When the popular vote is taken,
+voting and ballot counting is done exactly as in plurality elections:
+each voter simply chooses one from the set of candidates,
+and the counting process merely involves
+totaling the number of votes cast for each candidate.
+The only difference between plurality and delegative voting
+is in how the winner or winners are determined
+after all the ballots have been counted and the raw totals established.
+
+<p>
+To determine the winner of a single-seat election,
+the list of results is sorted
+according to the number of votes each candidate received,
+and the candidate with the smallest number of votes
+is successively eliminated until only one remains.
+When a candidate is eliminated,
+his votes are not simply "lost",
+but are instead transferred to other candidates still in the race.
+The votes received by the eliminated candidate
+are divided evenly among all of the candidates on his next-choice list
+that have <i>not</i> already been eliminated.
+In effect, the votes of an eliminated candidate
+remain "in play" and can affect the outcome of the rest of the election,
+providing an identical "boost" to each of the next-choice candidates.
+
+
+<h2 id="advantages">Advantages</h2>
+
+In contrast with plurality systems,
+which often elect a candidate
+that is supported by far fewer than a majority of voters,
+delegative voting can ensure that the winning candidate
+always receives a majority of the valid votes,
+as long the candidates cast their next-choice "approval" votes intelligently
+(and it is generally in their own best interest to do so).
+The vote transfer mechanism
+eliminates the "spoiler" effect that plagues plurality systems,
+in which two closely-aligned candidates or parties
+lose to a third candidate that is the least popular overall
+because the votes for the first two are divided.
+
+<p>
+As an example, suppose there are three candidates in a close election:
+Left, Center, and Right.
+Left is more closely aligned with Center than with Right,
+and Right is similarly more closely aligned with Center than with Left;
+therefore Left and Right each list ("approve of") Center
+as their sole next-choice candidate.
+Center, not wanting to take sides between the other two candidates,
+might either include both Left and Right on its next-choice list,
+or leave the list empty.
+Suppose the popular vote is then taken:
+Left receives 32% of the votes,
+Center receives 33%,
+and Right receives 35%.
+In a conventional plurality system,
+the Right candidate would win this election
+despite having only a minority of support (35%)
+and despite probably being the <i>least</i> favored
+by up to 32% of the electorate.
+In a delegative election, in contrast,
+the Left candidate would be eliminated first
+and his 32% share of the votes transferred to Center,
+who subsequently wins with a solid 65% majority.
+
+<p>
+Delegative voting removes the effective "lock-out" on smaller parties
+inherent in plurality systems,
+enabling less popular candidates
+to influence the election even if they cannot win it
+and thus giving them a stronger incentive to run.
+This friendliness to secondary candidates
+increases the effective choice voters have
+because it allows them to <i>vote their conscience</i> -
+i.e., for the candidate they really prefer
+rather than for the least undesirable candidate they think can win -
+without wasting their vote
+or risking spoiling the election
+for the mainstream candidate who is most closely aligned to their views.
+Delegative voting also encourages greater cooperation between candidates
+and discourages negative campaigning,
+because mainstream candidates
+often must depend on receiving some transferred votes
+from other candidates in order to win a majority.
+
+
+<h2 id="irv">Relationship to Instant Runoff Voting</h2>
+
+Those familiar with electoral systems
+will immediately notice that this system is similar to
+<a href="http://www.instantrunoff.com/">Instant Runoff Voting (IRV)</a>
+in the way the winner is determined.
+Both alternative systems involve the successive elimination of candidates
+and the automatic transfer of the eliminated candidate's votes.
+In IRV, however,
+voters explicitly rank the candidates in order on their ballots,
+and the ballots of eliminated candidates are transferred
+according to the voters' rankings.
+Delegative voting in contrast
+gives this power to the candidates themselves,
+effectively making their political alignments
+a fixed part of their public "platform".
+
+<p>
+Although DV may seem to give voters less "choice" than IRV
+if the number of candidates is assumed to be fixed,
+DV nevertheless has several important advantages over IRV:
+
+<ul>
+<li>	<b>Simplicity:</b>
+	DV makes the ordinary voter's task simpler, easier to understand,
+	and more familiar to voters accustomed to majority/plurality elections.
+	Experience with IRV and other preferential systems demonstrates
+	that a large percentage of voters in a preferential election
+	either do not mark any second or higher choices at all,
+	or simply follow their party's
+	or first-choice candidate's recommendations anyway
+	when marking their second and successive choices.
+	Therefore most voters are unlikely to miss
+	the preferential-ranking flexibility of IRV.
+
+<li>	<b>Better next-choice decisions:</b>
+	Candidates are often inherently in a better position than voters
+	to make next-choice decisions anyway,
+	because candidates are activists
+	who have to know about and pay close attention to each other
+	in order to campaign and compete effectively,
+	whereas voters usually just pay attention
+	to the one or two candidates they know best and agree with most,
+	showing little knowledge or preference
+	among their less-desirable choices.
+	DV allows voters to focus their attention
+	on their most important decision -
+	picking the candidate who <i>best</i> represents
+	themselves and their interests -
+	without being distracted with ambiguous choices
+	between candidates they don't like or simply don't know about.
+
+<li>	<b>Broad-spectrum candidacy:</b>
+	DV makes up for the loss of preferential ranking flexibility
+	by making it feasible for a much wider range of candidates
+	to run in an election
+	than is practical even with IRV.
+	While IRV can increase the typical effective voter choice
+	from two or at most three competitive candidates in a plurality election
+	to five or ten candidates in an instant-runoff election,
+	the number of candidates in IRV
+	cannot be allowed to grow much beyond this level
+	without making preferential ballots impractically large
+	and risking "voter overload".
+	With an appropriate single-choice ballot design, however,
+	such as the French system
+	in which voters simply insert party- or candidate-supplied cards
+	into a "ballot envelope",
+	DV makes it practical
+	for hundreds or even thousands of candidates
+	to run in a single election.
+
+<li>	<b>Community representation:</b>
+	With a larger number of candidates running in a given election
+	and using their next-choice lists to forge alliances,
+	the candidates in a DV election can focus their popular campaigns
+	on the particular communities with which they are most closely aligned,
+	whether those communities are defined by geography, culture,
+	religion, political ideology, or specific issues.
+	Voters in turn can choose among candidates
+	from their own communities who they know and trust directly,
+	and can ignore the more distant candidates entirely.
+	Candidates build strength and ultimately win office
+	not through mass propaganda,
+	but by building a solid local support base
+	coupled with a strong network of political alliances
+	with other candidates in similar or related communities.
+
+<li>	<b>Transparency:</b>
+	The inter-party relationships and coalitions that IRV encourages
+	are made fully explicit, publicly transparent,
+	and directly measurable in DV.
+	Since smaller candidates directly control the transfer of their votes,
+	mainstream candidates have a strong incentive
+	to court the smaller candidates
+	for inclusion on their next-choice lists
+	and take account of the minority viewpoints they represent.
+
+<li>	<b>Cost:</b>
+	On the practical side,
+	shifting responsibility for the next-choice lists
+	from the voters to the candidates
+	eliminates the need for expensive voting equipment upgrades
+	or re-training of electoral administration staff
+	to deal with the intricacies of preferential ballot counting.
+
+<li>	<b>Speed:</b>
+	The vote counting process itself can proceed much more quickly in DV,
+	because ballots are only counted once rather than multiple times.
+	The runoff elimination process to determine the actual winner
+	only requires the raw totals from the vote count
+	and the previously published next-choice lists of the candidates.
+
+<li>	<b>Security:</b>
+	The simpler vote counting process is less prone to tampering,
+	making DV particularly attractive in unstable or corrupt democracies
+	where the multiple preferential ballot re-shuffling steps
+	involved in IRV elections
+	may be seen as too difficult to implement and monitor effectively.
+	The runoff elimination process in DV is fully independently verifiable
+	because it only requires information that is already public anyway;
+	therefore DV is no less secure than plurality voting.
+</ul>
+
+</table>
+
+</body>
+</html>

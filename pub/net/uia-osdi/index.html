@@ -1,0 +1,2885 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Persistent Personal Names for Globally Connected Mobile Devices</TITLE>
+<META NAME="description" CONTENT="Persistent Personal Names for Globally Connected Mobile Devices">
+<META NAME="keywords" CONTENT="uia-html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="uia-html.css">
+
+</HEAD>
+
+<BODY >
+
+<!--#include virtual="/pub/header.html" -->
+<hr>
+
+<P>
+<H1 ALIGN="CENTER"><BR>Persistent Personal Names
+	for Globally Connected Mobile Devices<BR></H1><DIV>
+
+<P ALIGN="CENTER"><STRONG>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas,
+	Sean Rhea, Frans Kaashoek, Robert Morris</STRONG><br>
+	<I>	Massachusetts Institute of Technology</I></P>
+
+<p align="center">
+<i>Published in <a href="http://www.usenix.org/events/osdi06/">
+	7th USENIX Symposium on Operating Systems Design and Implementation</a>,
+	November 6-8, 2006.</i>
+</p>
+
+</DIV>
+
+<P>
+
+<H3><a href="../uia-osdi-abs.html">Abstract:</a></H3>
+<DIV>
+
+<P>
+The <a href="http://pdos.csail.mit.edu/uia/"><EM>
+Unmanaged Internet Architecture</EM> (UIA)</a>
+provides zero-configuration connectivity among mobile devices
+through <I>personal names</I>.
+Users assign personal names through an ad hoc device introduction process
+requiring no central allocation.
+Once assigned,
+names bind securely to the global identities of their target devices
+independent of network location.
+Each user manages one namespace,
+shared among all the user's devices
+and always available on each device.
+Users can also name other users
+to share resources with trusted acquaintances.
+Devices with naming relationships automatically arrange connectivity when
+possible, both in ad hoc networks
+and using global infrastructure when available.
+A UIA prototype demonstrates these capabilities
+using optimistic replication
+for name resolution and group management
+and a routing algorithm exploiting the user's social network
+for connectivity.
+
+<P>
+</DIV>
+<P>
+
+<P>
+
+<H1><A NAME="SECTION00010000000000000000">
+1 Introduction</A>
+</H1>
+
+<P>
+Network-enabled mobile devices such as 
+laptops,
+smart phones, 
+media players,
+personal digital assistants,
+gaming consoles, and digital cameras
+are becoming ubiquitous in the lives of ordinary people.
+The proliferation of these devices
+makes secure global peer-to-peer connectivity between them
+increasingly important.
+While on a trip, for example,
+a user in a cyber cafe
+may wish to copy photos from his WiFi-enabled camera
+to his PC at home for storage and backup.
+Two users who meet in a park or other off-Internet location
+may wish to connect their WiFi devices
+to exchange photos or other information,
+and later re-establish a connection between the same devices
+over the Internet after returning to their homes,
+without the risk of a third party intercepting the connection.
+A Voice-over-IP user would like his WiMax phone 
+to be easily reachable by his friends wherever he and they are located,
+but not to be reachable by telemarketers.
+
+<P>
+Convenient global communication over the Internet,
+however,
+currently requires the target device
+to have both a global name and a static, public IP address.
+Users must register with central naming authorities to obtain global names,
+and mobile personal devices usually have dynamic IP addresses
+behind firewalls or network address translators&nbsp;[<A
+ HREF="#rfc3027">27</A>].
+Protocols
+such as Dynamic DNS&nbsp;[<A
+ HREF="#rfc2136">49</A>],
+Mobile IP&nbsp;[<A
+ HREF="#rfc3344">37</A>],
+and Virtual Private Networks&nbsp;[<A
+ HREF="#rfc2764">22</A>]
+provide piecemeal solutions
+to these problems,
+but the configuration effort and technical expertise they require
+makes them deployable only by organizations
+with dedicated network administration staff.
+User interface refinements alone cannot overcome this deployment roadblock,
+because the protocols
+depend on centralized resources--global domain names and static, public &ldquo;home&rdquo; IP addresses--that are not part of most consumer-oriented Internet service packages.
+Ordinary users require a solution
+that &ldquo;just works.&rdquo;
+
+<P>
+
+<P>
+
+<P>
+The <a href="http://pdos.csail.mit.edu/uia/"><EM>
+Unmanaged Internet Architecture</EM> (UIA)</a>
+is a peer-to-peer connectivity architecture
+that gives nontechnical users a simple and intuitive way
+to connect their mobile personal devices via convenient <EM>personal names</EM>
+organized into <EM>personal groups</EM>.
+A user can <EM>merge</EM> multiple UIA devices to form a personal group,
+after which the devices work together to offer
+secure remote access to any device in the group from any other.
+The devices forming the group
+present the user with a shared personal namespace,
+which they optimistically replicate&nbsp;[<A
+ HREF="#guy90implementation">26</A>,<A
+ HREF="#kistler91disconnected">28</A>,<A
+ HREF="#terry95managing">47</A>]
+to ensure constant availability on each device
+whether on or off the Internet.
+The devices gossip namespace changes
+as connectivity permits&nbsp;[<A
+ HREF="#demers87antientropy">12</A>],
+and can propagate updates via mobile devices
+carried by the user&nbsp;[<A
+ HREF="#paluska03footloose">36</A>].
+
+<P>
+UIA interprets personal names relative to personal groups,
+so users can assign concise, meaningful names
+like <TT>ipod</TT>
+instead of long globally unique names
+like <TT>ipod.alicesm5186.myisp.com</TT>.
+In this way UIA conforms to the intuitive model
+with which users already manage their cell phones' address books.
+Users normally create personal names
+by <EM>introducing</EM> devices locally, on a common WiFi network for example.
+Once created, these names remain persistently bound
+to their targets
+as devices move.
+Personal names are intended to supplement
+and not replace global DNS names&nbsp;[<A
+ HREF="#rfc1034">33</A>]:
+users can refer to personal names like <TT>phone</TT>
+alongside global names like <TT>usenix.org</TT>
+in the same applications.
+
+<P>
+Different users can introduce their devices
+to name other users
+and link their respective personal groups.
+Bob can refer to his friend Alice as <TT>Alice</TT>,
+and if Alice calls her VoIP phone <TT>phone</TT>
+then Bob can make calls to Alice's phone
+using the name <TT>phone.Alice</TT>.
+In this way, UIA adapts peer-to-peer social networking ideas
+previously explored for
+other purposes&nbsp;[<A
+ HREF="#popescu04turtle">38</A>,<A
+ HREF="#marti04sprout">31</A>,<A
+ HREF="#danezis05sybil">10</A>,<A
+ HREF="#li06f2f">29</A>,<A
+ HREF="#pouwelse06tribler">39</A>]
+to form a user-friendly peer-to-peer naming infrastructure.
+
+Users can also create and collect names into ad hoc <EM>shared groups</EM>
+to reflect common interests or informal organizations.
+
+<P>
+
+<P>
+UIA devices cooperate in an overlay routing protocol 
+to provide robust location-independent connectivity in the face of
+changing IP addresses, Internet routing failures, network address translators,
+or isolation from central network infrastructure.
+Although scalable routing with location-independent node identities
+is inherently challenging in general&nbsp;[<A
+ HREF="#gavoille01spaceefficiency">21</A>],
+UIA focuses on routing among friends and nearby neighbors
+in the user's social network.
+We expect the UIA routing algorithm to scale well
+because each node only consumes storage and bandwidth
+to track other nodes in its immediate neighborhood.
+
+<P>
+UIA makes the following primary contributions,
+expanding on previously proposed ideas&nbsp;[<A
+ HREF="#ford06uia-iptps">19</A>].
+First, UIA introduces a simple and intuitive model
+for connecting mobile devices into <EM>personal groups</EM>,
+providing ad hoc user identities, personal names, and secure remote access,
+without requiring the user to manage keys or certificates explicitly.
+Second, UIA presents a novel gossip and replication protocol
+to manage the naming and group state required by this user model,
+adapting optimistic replication principles
+previously developed for file systems and databases.
+Third, UIA leverages social networking
+to create a scalable overlay routing algorithm
+that can provide robust connectivity among social friends and neighbors
+without relying on central infrastructure.
+
+<P>
+
+<P>
+
+<P>
+
+<P>
+
+<P>
+
+<P>
+The next section introduces the operation of UIA devices
+from a non-technical user's viewpoint.
+Section&nbsp;<A HREF="#sec-design">3</A> describes UIA's design at a high level,
+Section&nbsp;<A HREF="#sec-naming">4</A> presents UIA's naming system in depth,
+followed by the routing layer design in Section&nbsp;<A HREF="#sec-routing">5</A>.
+Section&nbsp;<A HREF="#sec-impl">6</A> summarizes implementation status
+and Section&nbsp;<A HREF="#sec-eval">7</A> evaluates the performance of the prototype.
+Section&nbsp;<A HREF="#sec-future">8</A> discusses future work,
+Section&nbsp;<A HREF="#sec-related">9</A> presents related work,
+and Section&nbsp;<A HREF="#sec-concl">10</A> concludes.
+
+<H1><A NAME="SECTION00020000000000000000"></A>
+<A NAME="sec-exp"></A><BR>
+2 User Experience
+</H1>
+
+<P>
+This section describes UIA's operating principles
+from the perspective of a non-technical user;
+later sections detail
+how the system provides this user experience.
+
+<P>
+
+<H2><A NAME="SECTION00021000000000000000">
+2.1 Introducing Devices</A>
+</H2>
+
+<P>
+A UIA device ideally ships from its manufacturer
+pre-configured with a name for
+itself such as <TT>laptop</TT> or <TT>phone</TT>,
+which the user can keep or change as desired.
+The device learns additional names as its user <I>introduces</I>
+it to other devices owned by the same user or different users.
+The introduction process assigns persistent names
+by which the device can securely refer to other devices.
+
+<P>
+In a typical introduction,
+the owner(s) of two devices bring the devices together physically
+and connect them to a common local-area network.
+Each user then invokes a local-area rendezvous tool
+similar to Bonjour's&nbsp;[<A
+ HREF="#bonjour">2</A>] on his device,
+finds the other device on the network,
+and selects &ldquo;Introduce.&rdquo;
+Each device displays an <EM>introduction key</EM>
+consisting of three words chosen randomly
+from a dictionary,
+as shown in Figure&nbsp;<A HREF="#fig:intro">1</A>.
+Each user then picks the other device's introduction key
+from a list of three random keys.
+If one of the devices has unintentionally connected to the wrong endpoint,
+such as an impersonator on the same network,
+then the matching key is unlikely to appear on the list,
+so the user picks &ldquo;None of the above&rdquo;
+and the introduction procedure aborts.
+Unlike other analogous
+procedures&nbsp;[<A
+ HREF="#dohrmann02publickey">13</A>],
+UIA uses short, user-friendly &ldquo;one-time&rdquo; keys 
+that only need to withstand online and not offline attacks,
+and its multiple-choice design prevents users
+from just clicking &ldquo;OK&rdquo; without actually comparing the keys.
+
+<DIV ALIGN="CENTER"><A NAME="fig:intro"></A><A NAME="304"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1:</STRONG>
+Bob and Alice introduce their devices</CAPTION>
+<TR><TD><DIV ALIGN="CENTER"><IMG
+ WIDTH="1071" HEIGHT="387" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="\includegraphics[width=1.00\textwidth]{intro.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Users can follow the same procedure
+to introduce UIA devices remotely across the Internet,
+as long as one device has a global DNS name or IP address
+and the users have a trustworthy channel
+through which to exchange introduction keys:
+e.g., a phone conversation
+or an authenticated chat session.
+We also envision alternative introduction mechanisms
+adapted to specific rendezvous channels
+such as E-mail, web sites, SMS messages,
+or short-range wireless links;
+the details of particular introduction mechanisms
+are not crucial to the UIA architecture.
+
+<P>
+A user can introduce UIA devices
+either to <I>merge</I> his own devices into a
+<I>personal group</I> sharing a common namespace,
+or to create named
+<I>links</I> from his own group to other users' personal groups.
+The following sections describe these two forms of introduction,
+and other important group management actions,
+with the help of an example scenario
+illustrated in Figure&nbsp;<A HREF="#fig:story">2</A>.
+
+<P>
+
+<TABLE ALIGN="RIGHT" CELLPADDING=15><A NAME="fig:story"></A><A NAME="317"></A>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2:</STRONG>
+Example Personal Device Scenario</CAPTION>
+<TR><TD><DIV ALIGN="CENTER"><IMG
+ WIDTH="394" HEIGHT="1035" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="\includegraphics[width=0.49\textwidth]{story.eps}">
+</DIV></TD></TR>
+</TABLE>
+
+<P>
+
+<H2><A NAME="SECTION00022000000000000000">
+2.2 Device Names and Personal Groups</A>
+</H2>
+
+<P>
+At Time&nbsp;1 in the scenario,
+Bob purchases a new laptop and Internet phone,
+which come pre-configured with the default names <TT>laptop</TT> and <TT>phone</TT>,
+respectively.
+At Time&nbsp;2, Bob uses UIA's local rendezvous tool on each device
+to find the other device on his home WiFi network
+and selects &ldquo;Introduce devices&rdquo; on each.
+Bob chooses the &ldquo;Merge devices&rdquo; option in the introduction dialogs
+(see Figure&nbsp;<A HREF="#fig:intro">1</A>)
+to merge the devices into a personal group.
+
+<P>
+The devices in Bob's group gossip both existing names
+and subsequent changes to the group's namespace
+as physical network connectivity permits.
+Each device attempts to preserve connectivity to other named
+devices as they leave the network and reappear at other locations,
+without user intervention whenever possible.
+Bob now sees his two personal names <TT>phone</TT> and <TT>laptop</TT>
+on both devices,
+and can use these names for local and remote access.
+Working on his laptop at home,
+he uses his personal name <TT>phone</TT>
+to reach the phone via his home WiFi LAN.
+When Bob subsequently takes his laptop on a trip, he can
+remotely access his home phone from his laptop over the Internet
+(e.g., to check his voice messages),
+still using the name <TT>phone</TT>.
+UIA uses cryptography to guarantee that
+an adversary cannot impersonate the device Bob calls <TT>phone</TT>,
+and cannot eavesdrop on his communication.
+
+<P>
+
+<H2><A NAME="SECTION00023000000000000000">
+2.3 User Names and Social Networking</A>
+</H2>
+
+<P>
+With the second form of introduction,
+users link their personal groups together
+and assign <EM>user names</EM> to each other,
+but retain exclusive control over their respective personal groups.
+In the example scenario,
+Bob purchases a new WiFi-enabled cell phone at Time&nbsp;3
+and meets Alice at a cafe
+before he has merged his cell phone
+with his other devices.
+Bob finds Alice's iPod using his cell phone's local rendezvous tool
+and selects &ldquo;Introduce as a new contact&rdquo; (see Figure&nbsp;<A HREF="#fig:intro">1</A>),
+and Alice does likewise.
+Bob's phone suggests Alice's self-chosen user name <TT>Alice</TT>,
+but Bob can override this default
+(e.g., to <TT>Alice-Smith</TT>
+or <TT>Alice-from-OSDI</TT>) if he already knows another Alice.
+
+<P>
+Bob and Alice can now refer to each others' devices
+by combining device names with user names
+in DNS-like dotted notation.
+If Alice runs a web server on her home PC,
+named <TT>PC</TT> in Alice's personal namespace,
+then Bob can connect to Alice's server
+by typing <TT>PC.Alice</TT> into his laptop's web browser,
+exactly as he would use a global DNS name like <TT>usenix.org</TT>.
+
+<P>
+If Alice's personal web server is UIA-aware,
+she can use her name <TT>Bob</TT>
+in the server's access control lists
+so that only Bob's personal devices may browse certain private areas.
+UIA authenticates clients
+so that no one can impersonate Bob's devices
+to gain access to these areas.
+
+<P>
+
+<H2><A NAME="SECTION00024000000000000000">
+2.4 Transitive Merging and Gossip</A>
+</H2>
+
+<P>
+Bob now returns home and merges his cell phone
+with his home phone,
+as shown at Time&nbsp;4 in Figure&nbsp;<A HREF="#fig:story">2</A>.
+Bob's home phone in turn gossips the cell phone's group membership
+to Bob's laptop,
+so the laptop and cell phone can name each other
+without him having to merge them explicitly.
+Alice's devices similarly gossip her new link named <TT>Bob</TT>
+and learn about Bob's three devices,
+after which she can, for example, refer to Bob's laptop
+as <TT>laptop.Bob</TT>.
+
+<P>
+Users can access or edit their personal groups
+from any of their devices
+while other devices are unreachable.
+If Bob and Alice are on a bus together
+and disconnected from the Internet,
+Alice can still reach Bob's laptop
+from her iPod via her name <TT>laptop.Bob</TT>,
+even if they have left their other devices at home.
+Bob and Alice can continue adding names for contacts they meet on the bus,
+and their other devices learn the new names via gossip later
+when they re-connect.
+
+<P>
+
+<H2><A NAME="SECTION00025000000000000000">
+2.5 Resolving Conflicts</A>
+</H2>
+
+<P>
+Unfortunately, both of Bob's phones
+happened to have identical default names of <TT>phone</TT>,
+resulting in their names conflicting
+in his newly merged namespace.
+UIA notifies Bob of the conflict,
+and he can continue using the non-conflicting name <TT>laptop</TT>,
+but must resolve the conflict before the name <TT>phone</TT> will work again.
+Bob resolves the conflict
+on his cell phone at Time&nbsp;5,
+by renaming it <TT>cell</TT>
+while leaving the home phone with the name <TT>phone</TT>.
+Bob's other devices learn the resolved name bindings via gossip,
+as do Alice's devices,
+so Alice now sees Bob's phones
+as <TT>phone.Bob</TT> and <TT>cell.Bob</TT>.
+
+<P>
+If Bob makes conflicting namespace changes
+on two of his devices
+while they are partitioned from each other,
+UIA detects the conflict once the devices reconnect.
+Bob can continue using other non-conflicting names
+in the same group
+while conflicts exist,
+and he can resolve such conflicts at leisure on any of his devices.
+
+<P>
+
+<H2><A NAME="SECTION00026000000000000000">
+2.6 Shared Groups</A>
+</H2>
+
+<P>
+In addition to personal groups,
+users can create <EM>shared groups</EM>
+to help organize and share their personal names.
+Bob and Alice discover at Time&nbsp;6
+that they share an interest in photography,
+and decide to start a photo club
+for themselves and other friends sharing this interest.
+To enable members of the club to find each other easily
+and share photos among their personal devices,
+Bob uses his laptop to create a shared group
+named <TT>PhotoClub</TT> in his personal namespace.
+On creation,
+the shared group's only member is Bob himself.
+To add Alice to the group,
+Bob drags the name <TT>Alice</TT> from his personal group
+into <TT>PhotoClub</TT>,
+copying his name binding for Alice into the shared group
+and making her the second member.
+Bob can similarly add other friends to <TT>PhotoClub</TT>,
+and these names automatically appear in Alice's view of the group 
+the devices gossip the changes.
+
+<P>
+Although Alice can now refer to the new group as <TT>PhotoClub.Bob</TT>,
+she might like this group to appear
+directly in her own personal group
+instead of naming it relative to Bob.
+Alice drags the <TT>PhotoClub</TT> name
+from Bob's personal group into her own,
+giving herself a copy of the name
+leading to the same shared group.
+She can now refer to group members using the same names that Bob uses,
+such as <TT>Charlie.PhotoClub</TT>.
+
+<BR CLEAR="RIGHT">
+
+<H2><A NAME="SECTION00027000000000000000"></A>
+<A NAME="sec-ownership"></A><BR>
+2.7 Group Ownership
+</H2>
+
+<P>
+
+<TABLE ALIGN="RIGHT" CELLPADDING=15><A NAME="fig:groupview"></A><A NAME="369"></A>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3:</STRONG>
+Groups and Ownership</CAPTION>
+<TR><TD><DIV ALIGN="CENTER"><IMG
+ WIDTH="450" HEIGHT="369" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="\includegraphics[width=0.35\textwidth]{groupview.eps}">
+</DIV></TD></TR>
+</TABLE>
+
+<P>
+One or more members of a UIA group
+may be designated as <I>owners</I>,
+or members allowed to modify the group.
+As Figure&nbsp;<A HREF="#fig:groupview">3</A> illustrates,
+Bob's devices <TT>laptop</TT>, <TT>phone</TT>, and <TT>cell</TT>
+are owners of his personal group by default,
+allowing Bob to edit his personal group
+using any of his devices.
+The names <TT>Alice</TT> and <TT>PhotoClub</TT> are not owners,
+so Alice and members of <TT>PhotoClub</TT>
+can only browse and resolve names in Bob's namespace.
+
+<P>
+Groups can own other groups.
+When Bob creates his shared <TT>PhotoClub</TT> group,
+UIA automatically includes a name <TT>Bob</TT> in the new group
+that gives Bob's personal group
+ownership of the new group.
+After adding Alice to the group,
+Bob can give her co-ownership
+by clicking the owner flag by her name in the group listing,
+enabling her to add or remove other members herself.
+Ownership is transitive:
+Bob can modify <TT>PhotoClub</TT> using his laptop
+because Bob's laptop is an owner of Bob's personal group
+and Bob's personal group is an owner of <TT>PhotoClub</TT>.
+
+<P>
+
+<H2><A NAME="SECTION00028000000000000000"></A>
+<A NAME="sec-revoke"></A><BR>
+2.8 Security and Ownership Revocation
+</H2>
+
+<P>
+Returning to the scenario in Figure&nbsp;<A HREF="#fig:story">2</A>,
+Bob loses his cell phone at Time&nbsp;7,
+and he is not sure whether it was stolen or just temporarily misplaced.
+If the cell phone was stolen
+and has no local user authentication
+such as a password or fingerprint reader,
+the thief might obtain
+not only Bob's data on the cell phone itself,
+but also remote access to services authorized to his personal group
+via UIA names.
+UIA devices
+capable of accessing sensitive information remotely
+should therefore provide strong local user authentication,
+and should encrypt personal data (including UIA state)
+stored on the device,
+as Apple's FileVault does for example&nbsp;[<A
+ HREF="#filevault">3</A>].
+The details of local user authentication and encryption are orthogonal to UIA,
+however.
+
+<P>
+To minimize potential damage
+if a thief does break into Bob's user account on his cell phone,
+Bob can revoke the cell phone's ownership
+of his personal group.
+If the cell phone re-appears
+and Bob realizes that he just misplaced it,
+then he can &ldquo;undo&rdquo; the revocation
+and return the phone to its normal status.
+If the cell phone remains missing, however,
+UIA ensures that no one
+can remotely access personal information or services on Bob's other devices
+via the lost phone once the revocation announcement has propagated
+to those devices.
+Similarly, the cell phone loses its access to the files Alice shared with Bob
+as soon as Alice's PC, on which the files reside,
+learns of the revocation from any of Bob's remaining devices.
+
+<P>
+
+<H2><A NAME="SECTION00029000000000000000"></A>
+<A NAME="sec-dispute"></A><BR>
+2.9 Ownership Disputes
+</H2>
+
+<P>
+Revocation cuts both ways:
+a thief might try to &ldquo;hijack&rdquo; Bob's personal group,
+using the stolen cell phone to revoke the ownership of Bob's other devices
+before Bob finds that the phone is missing.
+In UIA's current ownership scheme
+in which all owners have full and equal authority over a group,
+Bob's devices cannot distinguish the &ldquo;real&rdquo; Bob from an impostor
+once a stolen device's local access control is broken.
+UIA therefore allows any device
+to <EM>dispute</EM> another device's revocation of its ownership.
+
+<P>
+In the example scenario,
+when Bob next uses his laptop,
+UIA informs him that his laptop's ownership of his personal group
+has been revoked by the cell phone,
+which Bob realizes was stolen.
+In response, Bob issues
+a revocation of the cell phone's ownership
+from his laptop.
+The two mutual revocations
+effectively split Bob's original personal group
+into two new, independent groups:
+one containing only the cell phone,
+the other containing Bob's remaining devices.
+All existing UIA names referring to Bob's old personal group,
+and any access authorizations based on those names,
+become unusable and must be manually updated
+to point to the appropriate new group.
+Alice's name <TT>Bob</TT> for example
+is now marked &ldquo;disputed&rdquo; in Alice's namespace,
+and Alice's PC rejects attempts by any of Bob's devices
+to access the files she shared with Bob earlier using that UIA name.
+To update her name for Bob and safely renew his access,
+Alice can re-introduce her devices directly to Bob's
+the next time they meet,
+or obtain a fresh link to Bob's new personal group
+from a trusted mutual friend who already has one.
+
+<P>
+Group ownership disputes need not be permanent.
+Suppose two people who co-own a shared group get into an argument,
+and split the group by issuing mutual revocations.
+If the original co-owners later settle their differences,
+they can undo their conflicting revocations
+or simply merge their respective &ldquo;splinter&rdquo; groups back together
+via UIA's normal merge mechanism.
+Links to the original group become unusable during the dispute,
+but function again normally after the dispute is resolved.
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000"></A>
+<A NAME="sec-design"></A><BR>
+3 Basic Design
+</H1>
+
+<P>
+This section outlines UIA's high-level design,
+which consists of separate naming and routing layers
+that together realize the user experience described above.
+Sections&nbsp;<A HREF="#sec-naming">4</A> and&nbsp;<A HREF="#sec-routing">5</A>
+detail the naming and routing layers, respectively.
+
+<P>
+
+<H2><A NAME="SECTION00031000000000000000">
+3.1 Personal Endpoint Identities</A>
+</H2>
+
+<P>
+UIA devices identify each other
+using cryptographically unique <EM>endpoint identifiers</EM> or EIDs.
+Whereas DNS maps a name to an IP address,
+UIA maps a personal device name such as Bob's <TT>laptop</TT>
+to an EID.
+Unlike IP addresses,
+EIDs are <EM>stable</EM>
+and do not change when devices re-connect or move.
+UIA's routing layer tracks mobile hosts by their EIDs
+as they change IP addresses,
+and can forward traffic by EID
+when IP-level communication fails
+due to NAT or other Internet routing discontinuities.
+
+<P>
+A UIA device creates each EID it needs
+automatically 
+by generating a fresh public/private key pair
+and then computing a cryptographic hash of the public key.
+As in SFS&nbsp;[<A
+ HREF="#mazieres99separating">32</A>],
+EIDs are cryptographically unique, self-configuring, and self-certifying,
+but not human-readable.
+As in HIP&nbsp;[<A
+ HREF="#moskowitz03hip-arch">34</A>],
+UIA-aware network transports and applications
+use EIDs in place of IP addresses to identify communication endpoints.
+(UIA can also disguise EIDs as &ldquo;actual&rdquo; IP addresses
+for compatibility with unmodified legacy applications,
+as described later in Section&nbsp;<A HREF="#sec-impl">6</A>.)
+
+<P>
+An EID corresponds to a particular user's presence on a particular device.
+A user who owns or has access to several devices
+has a separate EID for each.
+A device accessed by only one user needs only one EID,
+but a device shared among multiple users
+via some form of login mechanism
+creates a separate EID for each user account.
+Unlike cryptographic host identifiers in SFS and HIP, therefore,
+EIDs are not only stable but <EM>personal</EM>.
+
+<P>
+Personal EIDs allow multiple users of a shared UIA host to run
+independent network services on the device.  Since each user's
+services bind to the user's EID rather than to a host-wide IP
+address, UIA-aware network applications can run exclusively in the
+context of the user and rely on UIA to provide user-granularity
+authentication and access control.
+When Bob connects his laptop to the HTTP port
+at the EID to which <TT>PC.Alice</TT> resolves, he knows he is connecting
+to <EM>Alice's</EM> personal web server and not that of another user with
+an account on the same PC.
+Alice's web server similarly knows that the connection is coming from Bob
+and not from someone else using laptop,
+because her name <TT>laptop.Bob</TT> resolves to an EID
+specific to Bob's account on his laptop.
+
+<P>
+
+<P>
+
+<H2><A NAME="SECTION00032000000000000000"></A>
+<A NAME="sec-naming-princ"></A><BR>
+3.2 Naming Principles
+</H2>
+
+<P>
+Each UIA device
+acts as an ad hoc name server
+to support name lookups and synchronize namespace state across devices.
+UIA names follow the same formatting rules as DNS names,
+consisting of a series of <EM>labels</EM> separated by dots,
+and devices resolve UIA names one label at a time from right to left.
+To resolve the name <TT>PC.Alice</TT>,
+for example,
+Bob's laptop first resolves the rightmost component <TT>Alice</TT>
+to find Alice's personal group,
+and from there resolves the second component <TT>PC</TT>
+to find the EID for Alice's PC as named in Alice's personal group.
+
+<P>
+Whereas DNS resolution
+traverses a strictly hierarchical tree of &ldquo;zones&rdquo;
+starting from a centrally-managed global root zone,
+each UIA device has a unique root for resolving UIA names,
+and users can link UIA groups to form arbitrary graphs.
+After Bob meets Alice at Time&nbsp;3 in Figure&nbsp;<A HREF="#fig:story">2</A>,
+for example,
+Bob's &ldquo;root&rdquo; group for UIA name resolution,
+corresponding to his personal group,
+appears to Alice as a &ldquo;sub-group&rdquo; named <TT>Bob</TT>.
+Conversely,
+Alice's &ldquo;root&rdquo; group appears to Bob
+as a &ldquo;sub-group&rdquo; named <TT>Alice</TT>.
+Since Bob's and Alice's naming relationship forms a cycle
+in the graph of UIA groups,
+Bob could for example refer to his own phone
+via the redundant name <TT>phone.Bob.Alice</TT>.
+
+<P>
+UIA groups may at times contain <EM>label conflicts</EM>,
+or bindings of a single name to multiple distinct targets.
+When Bob at Time&nbsp;4
+merges his new cell phone with its default name <TT>phone</TT>
+into his personal group,
+which already contains another device named <TT>phone</TT>,
+the two <TT>phone</TT> bindings result in a label conflict.
+Label conflicts also arise
+if an ownership dispute splits the <EM>target</EM>
+that a group name refers to,
+as described in Section&nbsp;<A HREF="#sec-dispute">2.9</A>.
+Name resolution fails
+if it encounters a label conflict,
+preventing the user from following ambiguous links
+before resolving the conflict.
+A conflict on one label does not affect the usability
+of other labels in the same group, however.
+
+<P>
+
+<P>
+
+<H2><A NAME="SECTION00033000000000000000">
+3.3 State Management</A>
+</H2>
+
+<P>
+UIA uses
+optimistic replication&nbsp;[<A
+ HREF="#guy90implementation">26</A>,<A
+ HREF="#kistler91disconnected">28</A>,<A
+ HREF="#terry95managing">47</A>]
+to maintain a user's personal UIA namespace across multiple devices,
+guarding namespace state against device loss or failure
+and keeping the namespace available on all devices
+during periods of disconnection or network partitions.
+Each device stores in an append-only log
+all persistent naming state
+for its user's personal group
+and any other groups of interest to the user,
+and uses an epidemic protocol&nbsp;[<A
+ HREF="#demers87antientropy">12</A>]
+to distribute updates of each group's state
+among the devices interested in that group.
+
+<P>
+UIA's epidemic protocol uses a classic two-phase &ldquo;push/pull&rdquo; algorithm.
+In the &ldquo;push&rdquo; phase,
+when a device creates a new log record
+or obtains a previously unknown one from another device,
+it repeatedly pushes the new record to a randomly-chosen peer
+until it contacts a peer that already has the record.
+This <EM>rumor mongering</EM> technique works well
+when few devices have the record,
+propagating the &ldquo;rumor&rdquo; aggressively until it is no longer &ldquo;hot.&rdquo;
+In the &ldquo;pull&rdquo; phase,
+each device periodically contacts a randomly-chosen peer
+to obtain any records it is missing.
+These <EM>anti-entropy</EM> exchanges work best
+when most devices already have a record,
+complementing the rumor mongering phase
+and ensuring that every device reliably obtains all available records.
+
+<H1><A NAME="SECTION00040000000000000000"></A>
+<A NAME="sec-naming"></A><BR>
+4 Naming and Group Management
+</H1>
+
+<P>
+This section describes in detail
+how UIA devices manage and synchronize the namespace state
+comprising their users' personal and shared groups.
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000">
+4.1 Device Log Structure</A>
+</H2>
+
+<P>
+UIA organizes the records comprising a device's log
+into <EM>series</EM>,
+each series representing the sequence of changes a particular device writes
+to a particular group.
+The state defining a group consists of one or more series,
+one for each device that has written to the group.
+All devices participating in a group
+gossip and replicate all records in each of the group's series,
+preserving the order of records in a given series,
+but do not enforce any order between records in
+different series.
+Since UIA separates the naming state for each group by series,
+devices can limit gossip to
+the records relating to groups they're interested in,
+instead of scanning their neighbors' entire device logs.
+
+<P>
+
+<TABLE ALIGN="RIGHT" CELLPADDING=15><A NAME="fig:record-format"></A><A NAME="fig:record-content"></A><A NAME="704"></A>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4:</STRONG>
+Log Record Format</CAPTION>
+<TR><TD><DIV ALIGN="CENTER"><IMG
+ WIDTH="384" HEIGHT="107" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="\includegraphics[width=0.49\textwidth]{record-format.eps}">
+&nbsp;
+</DIV>
+<P>
+<DIV ALIGN="CENTER"></DIV><DIV ALIGN="CENTER"><TABLE CELLPADDING=3 ALIGN="CENTER">
+<TR><TD ALIGN="LEFT"><FONT SIZE="-1"><B>Type</B>		</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT><FONT SIZE="-1"><B>Type-specific Record Content</B> </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-1"> 
+
+</FONT><FONT SIZE="-1"><EM>Create</EM>		</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT><FONT SIZE="-1"><EM>Owner:</EM> endpoint ID (EID) of owner device </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-1"> 
+			</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT><FONT SIZE="-1"><EM>Nonce:</EM> ensures uniqueness of new series ID </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-1"> 
+
+</FONT><FONT SIZE="-1"><EM>Link</EM>		</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT><FONT SIZE="-1"><EM>Label:</EM> human-readable string </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-1"> 
+			</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT><FONT SIZE="-1"><EM>Target:</EM> device (EID) or group (series ID) </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-1"> 
+			</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT><FONT SIZE="-1"><EM>OwnerFlag:</EM> grants group ownership if true </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-1"> 
+
+</FONT><FONT SIZE="-1"><EM>Merge</EM>		</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT><FONT SIZE="-1"><EM>Target:</EM> series ID (SID) to merge with </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-1"> 
+
+</FONT><FONT SIZE="-1"><EM>Cancel</EM>		</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT><FONT SIZE="-1"><EM>Target:</EM> record ID to cancel </FONT></TD>
+</TR>
+</TABLE>
+</DIV>
+</TD></TR>
+</TABLE>
+
+<P>
+As shown in Figure&nbsp;<A HREF="#fig:record-format">4</A>,
+each log record contains a series ID, a sequence number,
+data specific to the record type, and a signature.
+The series ID (SID) uniquely identifies the series to which the record belongs.
+The sequence number orders records within a series.
+The device that owns a series
+signs each record in that series with its private key,
+so that other devices can authenticate copies of records
+they receive indirectly.
+A cryptographic hash of the record
+yields a <EM>Record ID</EM>,
+which uniquely identifies the record for various purposes described later.
+
+<P>
+UIA currently defines four record types,
+listed in Figure&nbsp;<A HREF="#fig:record-content">4</A>
+and summarized briefly below:
+
+<P>
+
+<DL COMPACT>
+<DT>
+<DD><B>Create:</B>
+A <EM>create</EM> record initiates a new series
+owned by the device writing the record,
+as identified in the record's owner field.
+The owner EID fixes the public/private key pair
+other devices use
+to authenticate records in the new series.
+The record ID of the create record
+becomes the new series ID;
+a random nonce ensures the new SID's cryptographic uniqueness.
+The create record itself is not part of the new series:
+its own series ID field is usually empty
+to indicate that it is not part of any series,
+but it can be non-empty 
+for revocation purposes
+as described later.
+
+<P>
+<DT>
+<DD><B>Link:</B>
+A <EM>link</EM> record binds a human-readable label such as <TT>Alice</TT>
+to an endpoint ID or series ID denoting the link's target.
+Links to devices,
+such as Bob's names <TT>laptop</TT> and <TT>phone</TT>,
+contain the EID of the target device.
+Links to groups,
+such as <TT>Alice</TT> and <TT>PhotoClub</TT>,
+contain the SID of some series in the target group.
+A link record has an owner flag
+indicating whether the link grants ownership to the link's target,
+allowing the target to write changes to the group containing the link
+record.
+We refer to a link with its owner flag set
+as a <EM>link-owner record</EM>.
+
+<P>
+<DT>
+<DD><B>Merge:</B>
+A <EM>merge</EM> record joins two series to form a single UIA group.
+The union of all link and cancel records
+in all merged series
+determines the set of names that appear in the group,
+forming a common distributed namespace.
+A merge takes effect only
+if the device that wrote the merge record also owns the target group,
+or if there is a corresponding merge record in the target group
+pointing back to the first group.
+
+<P>
+<DT>
+<DD><B>Cancel:</B>
+A <EM>cancel</EM> record nullifies the effect of a specific previous record,
+specified by the target's record ID.
+With certain restrictions described below,
+link records can be canceled to delete or rename group members.
+Create, merge, and cancel records cannot be canceled.
+</DD>
+</DL>
+<H2><A NAME="SECTION00042000000000000000"></A>
+<A NAME="sec-name-ops"></A><BR>
+4.2 Namespace Operations
+</H2>
+
+<P>
+This section describes how UIA devices implement 
+the important user-visible namespace control operations,
+in terms of the specific records the devices write to their logs
+at the events in the example scenario from Figure&nbsp;<A HREF="#fig:story">2</A>.
+The following section will then explain
+how devices evaluate the contents of their logs
+to determine the effective state of each group at any point in time.
+
+<P>
+
+<H4><A NAME="SECTION00042010000000000000">
+4.2.0.1 Device Initialization:</A>
+</H4>
+
+<P>
+When Bob and Alice install or first start UIA on a device
+at Time&nbsp;1,
+the device first writes a create record to its log,
+forming a new series to represent the user's personal &ldquo;root&rdquo; group
+on that device.
+The device then writes a link record to the new series,
+giving itself a suitable default name
+such as <TT>laptop</TT>.
+The device sets the owner flag in this link record
+to make itself the sole initial owner of the group.
+
+<P>
+
+<H4><A NAME="SECTION00042020000000000000">
+4.2.0.2 Merging Device Groups:</A>
+</H4>
+
+<P>
+
+<P>
+When Bob introduces and merges his devices at Time&nbsp;2
+to form a personal group,
+each device writes to its own root series
+a merge record pointing to the other device's root series.
+These cross-referencing merge records 
+result in a <EM>merge relationship</EM> between the two devices, 
+which begin to gossip the records comprising both series
+so that each device eventually holds a complete copy of each.
+This merging process
+does not actually create any new link records,
+but causes each device to obtain copies
+of the other device's existing link records
+(the laptop's link record for its default name <TT>laptop</TT>
+and the phone's record for its name <TT>phone</TT>)
+and incorporate those names into its own root group.
+
+<P>
+Aside from merging devices' root series via introduction,
+a user can use a single device to merge two arbitrary groups,
+provided the same device already has ownership of both groups.
+If Bob creates two shared sub-groups
+and later decides they should be combined, for example,
+he can merge them on any of his devices.
+The device writes cross-referencing merge records
+to the relevant series,
+exactly as in the introduction scenario.
+
+<P>
+
+<P>
+
+<H4><A NAME="SECTION00042030000000000000">
+4.2.0.3 Meeting Other Users:</A>
+</H4>
+
+<P>
+When Bob and Alice introduce their devices to each other at Time&nbsp;3,
+the devices exchange the series IDs of their respective root series,
+and each device writes a link record to its own root series
+referring to the other device's root series.
+Bob's new link record named <TT>Alice</TT> gives Alice a name
+in his personal group,
+and Alice's new link record named <TT>Bob</TT> likewise
+gives Bob a name in her group.
+The devices do not set the owner flags in these new link records,
+giving Alice and Bob only read-only access to each others' namespaces.
+
+<P>
+
+<H4><A NAME="SECTION00042040000000000000">
+4.2.0.4 Transitive Merge:</A>
+</H4>
+
+<P>
+Individual merge relationships in UIA are always pairwise,
+between exactly two series,
+but merge relationships combine transitively
+to determine effective group membership.
+When Bob introduces his cell phone to his home phone at Time&nbsp;4,
+the two devices
+form a merge relationship between their respective root series.
+Since Bob's home phone and laptop already have a merge relationship,
+Bob's laptop and cell phone transitively learn about each other
+via gossiped records they receive from the home phone,
+and the union of the records
+in the three root series
+determine the contents of the resulting group.
+Since the merged group has two link records named <TT>phone</TT>
+with different target EIDs,
+the devices flag a label conflict on <TT>phone</TT>
+and refuse to resolve this name.
+
+<P>
+
+<H4><A NAME="SECTION00042050000000000000">
+4.2.0.5 Renaming Labels and Resolving Conflicts:</A>
+</H4>
+
+<P>
+When Bob renames his cell phone to <TT>cell</TT> at Time&nbsp;5
+to resolve the conflict,
+his device
+writes to its root series a cancel record
+containing the record ID of the link record
+defining the cell phone's previous name,
+then writes a new link named <TT>cell</TT>
+that is otherwise identical to the original link.
+Since one of the two conflicting link records is now canceled,
+the label conflict disappears,
+and the names <TT>phone</TT> and <TT>cell</TT> become usable on all of Bob's devices
+once they receive the new records via gossip.
+Bob can resolve the conflict on any of his devices,
+because any group owner can cancel
+a link written by another device.
+
+<P>
+The user can also delete a name from a group outright,
+in which case the device writes a cancel record
+without a new link.
+The ownership granted by a link-owner record, however,
+can only be nullified 
+by the revocation process described later in Section&nbsp;<A HREF="#sec-memb-eval">4.3.1</A>.
+
+<P>
+Because UIA implements renames non-atomically
+with a cancel record coupled with a new link record,
+if Bob renames <TT>Alice</TT>
+to <TT>Alice1</TT> on his laptop
+and renames <TT>Alice</TT> to <TT>Alice2</TT> on his phone
+while the two devices are temporarily partitioned,
+on reconnection he will have two names <TT>Alice1</TT> and <TT>Alice2</TT>
+with no conflict detected.
+This corner-case behavior, while perhaps slightly surprising,
+seems acceptable since it &ldquo;loses&rdquo; no information
+and at worst requires Bob to delete one of the resulting redundant names.
+
+<P>
+
+<H4><A NAME="SECTION00042060000000000000">
+4.2.0.6 Creating Groups:</A>
+</H4>
+
+<P>
+Bob uses his laptop at Time&nbsp;6
+to create his shared <TT>PhotoClub</TT> group.
+To create the group,
+the laptop first writes a create record
+to generate a fresh series ID.
+The laptop then writes two link records:
+first, a link named <TT>PhotoClub</TT> in its root series
+pointing to the new series,
+and second, a link named <TT>Bob</TT> in the new series
+pointing back to the root series.
+The laptop sets the owner flag in only the latter link record,
+giving Bob's personal group
+ownership of the new group,
+<EM>without</EM> giving <TT>PhotoGroup</TT>
+ownership of Bob's personal group.
+
+<P>
+Suppose that Bob now uses a different device,
+his cell phone for example,
+to add Alice to <TT>PhotoClub</TT>.
+Bob's cell phone is already an indirect owner of <TT>PhotoClub</TT>,
+because the cell phone is an owner of Bob's personal group
+and Bob's personal group owns <TT>PhotoClub</TT>.
+The cell phone does not yet have a series in <TT>PhotoClub</TT>,
+however,
+to which it can write records:
+initially only the laptop, which created the new group,
+has a series in the group,
+and only it can sign records into that series.
+The cell phone therefore creates its own <TT>PhotoClub</TT> series,
+by writing a create record to form a new series owned by itself,
+and then writing a merge record to this new series
+pointing to the laptop's <TT>PhotoClub</TT> series.
+Although no corresponding merge record
+in the laptop's <TT>PhotoClub</TT> series
+points back to the cell phone's new series
+(in fact the laptop may be offline
+and unable to sign such a record),
+the cell phone's merge record takes effect &ldquo;unilaterally&rdquo;
+by virtue of the cell phone's indirect ownership of <TT>PhotoClub</TT>.
+The cell phone then writes a copy of Bob's link to Alice
+into its new <TT>PhotoClub</TT> series,
+and other devices learn of the new series and the new name
+as they gossip records for <TT>PhotoClub</TT>.
+
+<P>
+
+<H4><A NAME="SECTION00042070000000000000">
+4.2.0.7 Revoking Ownership:</A>
+</H4>
+
+<P>
+When Bob learns at Time&nbsp;7 that his cell phone is missing,
+he uses his laptop to revoke the cell phone's ownership
+of his personal group,
+either by deleting the name <TT>cell</TT> from his personal group
+or by clearing its owner flag.
+To implement this revocation, however,
+Bob's laptop cannot merely write a cancel record
+pointing to the link record for <TT>cell</TT>:
+the cell phone would still own a series in Bob's personal group
+and thus retain &ldquo;hidden&rdquo; control over the group.
+
+<P>
+To revoke the cell phone's ownership, therefore,
+Bob's laptop creates a new personal group for Bob
+and copies the original group's name content into it.
+To create the new group,
+the laptop writes a create record
+whose series ID field is not empty as usual,
+but instead contains the SID of the laptop's original root series.
+The laptop then writes link records to the new series
+corresponding to all the active links in the old series,
+omitting links or ownership flags to be revoked.
+The create record written into the old root series
+indicates to all interested devices
+that the new series forms a group
+that is intended to replace
+or act as a <EM>successor</EM> to the original group.
+
+<P>
+As long as only one such &ldquo;create successor&rdquo; record exists
+in Bob's old personal group,
+all devices treat links to any series in the old group
+as if they linked to the successor group instead.
+Upon receiving via gossip
+the records describing Bob's new group, for example,
+Alice's devices subsequently resolve her name <TT>Bob</TT>
+to the new group,
+and use it to calculate which devices should be given access to resources
+she has authorized Bob to access,
+effectively revoking the cell phone's access.
+
+<P>
+If the cell phone writes a conflicting &ldquo;create successor&rdquo; record
+to <EM>its</EM> series in Bob's original group, however,
+then the original group becomes <EM>disputed</EM>,
+and other devices refuse to resolve links
+to any series in the original group
+as soon as they learn about the dispute.
+Alice's devices thus refuse to resolve her name <TT>Bob</TT>
+and deny access to any resources she authorized using that name.
+Once Alice updates her broken link
+to refer to the correct successor group,
+either by re-introducing with Bob
+or by copying a fresh link from a mutual friend,
+her device writes a new link referring to a series in Bob's new group,
+the old group becomes irrelevant
+and Bob can again access Alice's resources
+via the devices in his new personal group.
+
+<P>
+If link or cancel records exist on Bob's other devices
+that his laptop has not yet received at the time of revocation,
+the laptop cannot copy these change records into the new group
+and they become <EM>orphaned</EM>.
+Bob's devices continue to monitor and gossip records
+in the old group after the revocation, however,
+to detect both orphans and ownership disputes.
+If a device with ownership of the new group detects an orphaned record
+written by itself or another device with ownership of the new group
+(not a revokee),
+it automatically &ldquo;forwards&rdquo; the change
+by writing a corresponding record to the new group.
+
+
+<H2><A NAME="SECTION00043000000000000000">
+4.3 Group State Evaluation</A>
+</H2>
+
+<P>
+This section describes the algorithms UIA devices use
+to determine the current state of a given group
+from the set of log records they have on hand.
+Devices evaluate group state in three stages:
+(1) membership and ownership,
+(2) group successorship, and
+(3) name content.
+
+<P>
+
+<H3><A NAME="SECTION00043100000000000000"></A>
+<A NAME="sec-memb-eval"></A><BR>
+4.3.1 Membership and Ownership
+</H3>
+
+<TABLE ALIGN="RIGHT" CELLPADDING=15><A NAME="fig:memb-eval"></A><A NAME="1049"></A>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5:</STRONG>
+Membership and ownership evaluation pseudocode</CAPTION>
+<TR><TD><IMG
+ WIDTH="348" HEIGHT="346" BORDER="0"
+ SRC="img5.png"
+ ALT="\begin{figure}\begin{small}
+\begin{tabbing}
+{\bf global} $M$: membership table: ...
+...\ \\
+\&gt; until $M$\ and $O$\ stop changing
+\end{tabbing}\end{small}
+\end{figure}"></TD></TR>
+</TABLE>
+
+<P>
+In the first stage,
+a UIA device collects the series IDs referred to by all records in its log,
+and clusters them into sets based on merge relationships
+to form UIA groups.
+At the same time, the device computes the set of device EIDs
+to be considered owners of each group,
+either directly or transitively.
+Group membership and ownership must be computed at the same time
+because they are mutually dependent:
+group membership expansion via merge can introduce additional owners,
+and owner set expansion can place additional merge records under consideration.
+
+<P>
+Figure&nbsp;<A HREF="#fig:memb-eval">5</A> shows pseudocode
+for membership and ownership evaluation.
+The algorithm uses a membership table <IMG
+ WIDTH="21" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$M$">
+mapping each known series ID to a set of series IDs sharing a group,
+and an ownership table <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$O$">
+mapping each group (represented by a set of series IDs)
+to a set of owner device EIDs.
+The algorithm first initializes the entry in <IMG
+ WIDTH="21" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$M$"> for each series
+to a singleton set containing only that series,
+and initializes the owner set entry in <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$O$"> for each such singleton group
+to the EID of the device that owns that series.
+The algorithm then repeatedly merges groups and expands ownership sets
+until it reaches a fixed point.
+The algorithm terminates
+because member and owner sets only grow,
+and each device knows of a finite number of series IDs
+at a given time.
+
+<P>
+
+<P>
+In each iteration,
+the algorithm first follows link-owner records,
+expanding the ownership set of the group containing a link-owner record
+according to the target device EID
+or the current ownership set of the target group,
+as applicable.
+Across iterations,
+this step handles transitive propagation of ownership across multiple groups,
+such as Bob's laptop's ownership of <TT>PhotoClub</TT>
+via the laptop's ownership of Bob's personal group.
+
+<P>
+Second, for each merge record,
+the algorithm expands the ownership set
+of the group containing the merge record
+to include the ownership set of the target group,
+then checks whether the device that wrote the merge record
+is <EM>authorized</EM>
+by virtue of having ownership of the target group.
+The authorization check prevents a device
+from merging a series into an arbitrary group without permission.
+In the symmetric case
+where two merge records refer to each others' series IDs,
+each merge is authorized by the fact
+that the other merge grants ownership of its own series to its target.
+Once a merge is authorized,
+the algorithm combines the SID sets of the respective groups
+to form one group containing all the merged SIDs,
+and similarly combines the respective owner sets.
+
+<BR CLEAR="RIGHT">
+
+<H3><A NAME="SECTION00043200000000000000">
+4.3.2 Group Successorship</A>
+</H3>
+
+<TABLE ALIGN="RIGHT" CELLPADDING=15><A NAME="fig:successor"></A><A NAME="1064"></A>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6:</STRONG>
+Example Group Successorship Scenarios</CAPTION>
+<TR><TD><DIV ALIGN="CENTER"><IMG
+ WIDTH="291" HEIGHT="213" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="\includegraphics[width=0.30\textwidth]{successor.eps}">
+</DIV></TD></TR>
+</TABLE>
+
+<P>
+In the second stage,
+a device computes the <EM>successorship</EM> status
+of each group resulting from the first stage,
+in order to handle revocations and ownership disputes.
+The device first forms a directed graph
+reflecting immediate successor relationships:
+a create record in series <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$A$"> yielding a new series <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$B$">
+makes the group containing <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$B$"> a successor to the group containing <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$A$">.
+Next, the device takes the transitive closure of this graph
+to form a transitive successorship relation:
+if <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$B$"> succeeds <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$A$"> and <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$C$"> succeeds <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$B$">,
+then <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$C$"> transitively succeeds <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$A$">.
+
+<P>
+The device now assigns to every group <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$G$"> one of three states as follows.
+If <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$G$"> has no successors, it is a <EM>head</EM> group:
+no revocations have been performed in the group,
+and links to series IDs in the group resolve normally.
+On the other hand, if there is a second group <IMG
+ WIDTH="21" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$G'$">
+that is a transitive successor to <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$G$">
+and is also a transitive successor to all other transitive successors to <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$G$">,
+then <IMG
+ WIDTH="21" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$G'$"> is the <EM>undisputed successor</EM> to <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$G$">.
+In this case,
+links to series IDs in group <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$G$"> resolve to group <IMG
+ WIDTH="21" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$G'$"> instead.
+Finally, if <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$G$"> has successors but no undisputed successor,
+then group <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$G$"> is <EM>disputed</EM>,
+and links to series IDs in <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$G$"> do not resolve at all.
+
+<P>
+Figure&nbsp;<A HREF="#fig:successor">6</A> illustrates several group successorship scenarios
+and the corresponding results of this algorithm.
+In scenario (1),
+two conflicting revocations have placed group A under dispute;
+A's successor B also has a successor due a second revocation in B
+but B is not under dispute.
+Scenario (2) is like (1)
+except a revocation has also been performed in group C,
+forming a new head group E.
+Scenario (3) shows the result after the warring owners in (2)
+settle their differences and merge their head groups D and E,
+resolving the original dispute over group A.
+
+<BR CLEAR="RIGHT">
+
+<H3><A NAME="SECTION00043300000000000000">
+4.3.3 Name Content</A>
+</H3>
+
+<P>
+In the third and final stage,
+for each head group to be used for name resolution,
+a device computes the group's namespace state as follows.
+Given the set of all link records in every series in the group,
+the device removes all link records targeted by a cancel record
+in any series of the group
+to form the set of <EM>active</EM> links.
+Any device that owns a group
+can cancel a link written by another device,
+but a cancel cannot revoke ownership.
+
+<P>
+The set of <EM>active labels</EM> in a group,
+shown in a namespace browser for example,
+is the set of labels appearing in any active link record in the group.
+To be <EM>usable</EM>,
+all active links for a given label
+must have the same permissions,
+and must target the same device EID
+or SIDs in the same group.
+Otherwise the label is <EM>in conflict</EM>,
+as Bob's home and cell phone are at Time&nbsp;4 in the example.
+If Bob creates identical links on different devices independently,
+such as by separately introducing both his cell phone and his laptop to Alice
+to yield duplicate <TT>Alice</TT> links,
+this action does not create a label conflict
+when Bob merges his home and cell phone together
+because the redundant links have the same target and permissions.
+
+<P>
+
+<H1><A NAME="SECTION00050000000000000000"></A>
+<A NAME="sec-routing"></A><BR>
+5 Routing and Forwarding
+</H1>
+
+<P>
+Once the naming layer has resolved a device name to a
+location-independent EID, UIA's routing layer is responsible for <EM>locating</EM> the target device--finding its current IP address--and <EM>forwarding</EM> traffic to it through other devices if direct connectivity
+is unavailable.
+
+<P>
+Many designs are conceivable that would perform these two functions,
+such as a general-purpose overlay routing algorithm we explored
+previously&nbsp;[<A
+ HREF="#ford03scalable">16</A>].  In this work, however, we adopt a
+simple design that does not attempt to provide connectivity
+between arbitrary devices,
+but is optimized for connecting to devices
+in the user's immediate <EM>social neighborhood</EM>:
+primarily the user's own devices and those
+of friends named in the user's personal group,
+and occasionally &ldquo;friends of friends,&rdquo;
+but rarely more indirect contacts.
+In practice we expect users to create (or copy from other users)
+names in their own personal groups
+for others with whom they wish to interact regularly,
+justifying our assumed usage model.
+
+<P>
+In brief, UIA builds an overlay network
+between devices in its social neighborhood.
+To locate a remote device by its EID,
+a device floods a <I>location</I> request
+through the overlay to discover the EIDs, IP addresses, and ports of
+devices forming a path through the overlay to the target.
+The originating device then connects directly
+to the target's discovered IP
+address and port, or if the target is not directly reachable
+(e.g., because of an intervening NAT),
+<I>forwards</I> traffic to it by source-routing data via the
+existing connections in the discovered path.
+
+<P>
+
+<H2><A NAME="SECTION00051000000000000000"></A>
+<A NAME="sec-routing-overlay"></A><BR>
+5.1 Overlay Construction and Maintenance
+</H2>
+
+<P>
+Each UIA device maintains an open TCP connection with up to a configurable
+number of overlay <I>peers</I>.  Ideally, these peers should be on the
+public Internet, so that a device behind a NAT can receive messages from
+devices outside via its active peering connections.  A device
+should choose other devices when none on the public Internet are
+reachable, however, so that the overlay remains useful in ad hoc
+environments.  Furthermore, the devices of friends should be close to
+each other in the overlay, so that location or forwarding paths
+between them are short.
+
+<P>
+To meet these goals, a device first prefers as peers devices that are
+<I>stable</I>, and secondarily prefers those that are closest to it in
+<I>friendship distance</I>.  A device is considered <I>stable</I> if it
+does not have a private IP address&nbsp;[<A
+ HREF="#rfc1918">41</A>] and has met a
+threshold level of availability in the recent past.  A peer's
+<I>friendship distance</I>
+is roughly the number of labels
+in the local device's shortest name for that peer.
+The rest of this section explains how a device discovers stable
+peers and calculates friendship distances.
+
+<P>
+Each device maintains a <I>potential peer set</I> that contains
+potential peers' EIDs and the times, IP addresses, and ports at which
+the device has connected to those peers in the past.  Initially, a
+device populates this set with the devices to which the
+user has directly introduced the device.  To discover new potential
+peers, a device periodically exchanges its potential peer set with
+those of other devices within a configurable maximum friendship
+distance.  A device adds to the set only those devices to which it is
+able to establish a TCP connection when it discovers them.
+
+<P>
+A device classifies a potential peer as <I>stable</I> if it
+meets an availability threshold (e.g., 90%) at the same public IP
+address and port in the recent past (e.g., the last week).  To monitor
+availability, a device periodically chooses a random potential peer
+and attempts a connection to its last known location.
+A device need not have a static IP address to be classified as
+stable: a device with a dynamic non-private IP address
+that changes infrequently,
+such as a home PC left on and connected via a DSL or cable modem,
+will also typically be classified as stable.  
+
+<P>
+A device computes the <I>friendship distance</I> of each of its
+potential peers by assigning a distance of 1 to its <I>direct peers</I>:
+those the naming layer identifies as devices in the user's personal
+group and in groups to which the user has linked (the user's
+immediate friends).  The device then assigns distances to indirect peers
+transitively, giving the direct peer of a direct peer a 
+distance of 2, for example.
+
+<P>
+To improve robustness, a device manufacturer can seed the
+potential peer sets of its products with
+a set of <EM>default peers</EM>,
+which devices treat as having an infinite friendship distance.
+Two newly-purchased mobile devices,
+after being introduced and exchanging potential peer sets,
+thus have at least one stable peer in common at the outset
+to help them re-connect after a move.
+Once the mobile devices discover other stable peers
+at smaller friendship distances, however, they prefer the new
+devices over the default peers, mitigating the manufacturer's cost in
+providing this robustness-enhancing service.
+
+<P>
+
+<H2><A NAME="SECTION00052000000000000000"></A>
+<A NAME="sec-routing-lookup"></A><BR>
+5.2 Token-limited Flooding
+</H2>
+
+<P>
+To communicate with a remote device, a device first attempts a direct
+TCP connection to the IP address and port at which it last connected to
+the target, if any.  If this connection fails or the originator
+has no address information for the target device, it floods a
+location request through the overlay to locate the target by its EID.
+
+<P>
+UIA uses a <I>token count</I>,
+in place of the traditional hop count&nbsp;[<A
+ HREF="#chawathe03gnutella">6</A>],
+to limit the scope of location request floods.
+The token count bounds the total number of
+<EM>devices</EM> to which a request may be forwarded,
+rather than the number of times each request may be re-broadcast.
+This distinction is
+important for two reasons.  First, although devices seek to connect with
+a fixed number of peers, the number of devices that choose a given
+device depends on the target's stability and popularity,
+so the overlay's degree is highly
+non-uniform.  Hop count is thus a poor predictor of the number of
+devices a request will reach.  Second, the overlay network is highly
+redundant: two friends' devices are likely to share
+many common peers, for example,
+so searching <I>all</I> devices within some
+distance of a request's source is often unnecessary.  
+
+<P>
+Location requests contain the EIDs, IP addresses, and ports of devices
+they have traversed; devices forward responses back through the overlay
+along the same path. 
+
+<P>
+A device with an open TCP connection to a request's target
+immediately responds with the target's IP address and port.  Otherwise,
+it subtracts one token for itself, divides the other tokens among its peers
+not already in the path, distributing any remainder randomly, and
+forwards the request to those peers that receive a non-zero count.
+The device retains the request's target EID and return path
+for a short period,
+waiting for the forwarded requests to complete,
+and replying to the original request when <EM>any</EM> of the
+forwarded ones succeed or when <EM>all</EM> of them have failed.  A
+request also fails if the source has not received a successful response
+within a timeout.
+If a device receives a duplicate request
+for the same EID as an outstanding request
+(e.g., along a different path),
+it forwards the new request anyway according to its token count,
+giving peers for which
+there were not enough tokens in previous instances another chance to
+receive the request.
+
+<P>
+As shown in Section&nbsp;<A HREF="#sec-eval">7</A>, most location requests succeed
+within the near vicinity of the source in the overlay network.  To limit
+the cost of the search, a device thus initially sends each request with a
+limited number of tokens and retries after each failure with a
+multiplicatively increased number, up to some maximum.
+
+<P>
+
+<H2><A NAME="SECTION00053000000000000000">
+5.3 Source-Routed Forwarding</A>
+</H2>
+
+<P>
+To communicate with the target device after receiving a successful
+location response, the originator tries to open a direct connection to
+each device in the response path, starting with the target itself
+and proceeding backwards along the path until a connection succeeds.
+The originator
+then source-routes messages to the target along the tail of the path
+starting with the device to which it connected.
+
+<P>
+Consider for example two devices <i>a</i> and <i>b</i>
+ behind different NATs,
+both of which peer with a common stable device <i>s</i>.
+When <i>a</i> performs a location
+request for <i>b</i>'s EID, it discovers the path 
+<i>a</i> &rarr; <i>s</i> &rarr; <i>b</i>.
+Device <i>a</i> then tries to open a direct connection to <i>b</i>, but <i>b</i>'s NAT
+blocks that connection, so <i>a</i> forwards traffic to <i>b</i> through <i>s</i>
+instead.  Device <i>s</i> itself initiates no location requests,
+but merely forwards traffic along the path specified by <i>a</i>.
+
+<H1><A NAME="SECTION00060000000000000000"></A>
+<A NAME="sec-impl"></A><BR>
+6 Implementation
+</H1>
+
+<P>
+
+<TABLE ALIGN="RIGHT" CELLPADDING=15><A NAME="fig:diagram"></A><A NAME="1385"></A>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7:</STRONG>
+Structure of UIA Prototype Implementation</CAPTION>
+<TR><TD><DIV ALIGN="CENTER"><IMG
+ WIDTH="351" HEIGHT="266" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="\includegraphics[width=0.40\textwidth]{diagram.eps}">
+</DIV></TD></TR>
+</TABLE>
+
+<P>
+A prototype UIA implementation
+currently runs on Linux and Mac OS&nbsp;X.
+As illustrated in Figure&nbsp;<A HREF="#fig:diagram">7</A>,
+the prototype consists of
+two user-level daemons implementing UIA's naming and routing layers,
+respectively,
+and a graphical application for browsing and controlling devices and groups.
+The control application and other UIA-aware applications on the device
+interface directly to the naming and routing daemons via Sun RPC.
+Through these interfaces,
+UIA-aware applications can resolve UIA names to EIDs,
+explore and modify groups on behalf of the user,
+send packets to EIDs,
+receive packets on the device's EID,
+and discover peers on the local-area network.
+
+<P>
+
+<H2><A NAME="SECTION00061000000000000000">
+6.1 Prototype Status</A>
+</H2>
+
+<P>
+The name daemon is written in Python and implements the design described in Section&nbsp;<A HREF="#sec-naming">4</A>,
+providing group creation, merging, named links between groups,
+naming state gossip, state evaluation,
+multi-component name resolution,
+and ownership revocation.
+The name daemon does not yet detect
+and copy orphaned change records across revocations
+as described in Section&nbsp;<A HREF="#sec-name-ops">4.2</A>, however.
+
+<P>
+The prototype routing daemon implements in C++
+the algorithms described in Section&nbsp;<A HREF="#sec-routing">5</A>.
+The router uses Bonjour for local-area device discovery,
+and uses SSL over TCP connections for secure communication.
+
+<P>
+The UIA control application
+allows the user to browse the UIA namespace and create and modify groups,
+as illustrated earlier in Figure&nbsp;<A HREF="#fig:groupview">3</A>,
+and supervises the device introduction process
+as illustrated in Figure&nbsp;<A HREF="#fig:intro">1</A>.
+The control application is still unpolished
+and does not yet fully support
+shared groups or revocation, however.
+
+<P>
+
+<H2><A NAME="SECTION00062000000000000000">
+6.2 Support for Smaller Devices</A>
+</H2>
+
+<P>
+We have ported the UIA prototype to the Nokia 770 Internet Tablet,
+a Linux-based Internet appliance with an ARM processor.
+The naming and routing layers
+have the full functionality of the regular Linux/Mac version of UIA,
+but the port of the GUI control application is not yet complete.
+In general,
+we expect the routing and naming modules
+to port easily among smaller devices,
+while the GUI component requires more modifications
+because of the more specialized and restrictive user interface frameworks
+available on each class of mobile device.
+UIA does not rely on extensive data entry
+or other forms of user interaction
+that are fundamentally difficult to achieve on small devices, however.
+
+<P>
+
+<P>
+
+<H2><A NAME="SECTION00063000000000000000">
+6.3 Legacy Application Support</A>
+</H2>
+
+<P>
+The UIA prototype supports legacy applications
+through a <TT>tun</TT> wrapper and DNS proxy.
+The <TT>tun</TT> wrapper disguises EIDs as device-local IP addresses
+and uses the kernel's <TT>tun</TT> device
+to forward applications' TCP and UDP packets for these special IP addresses
+over UIA's routing layer.
+The DNS proxy similarly intercepts name lookups made by local applications
+and resolves UIA names to device-local IP addresses for the
+corresponding EIDs.
+We have run Apache, Firefox, OpenSSH,
+and Apple's Personal File Sharing
+over UIA using this legacy interface
+without modification or recompilation.
+
+<P>
+UIA's legacy application support layer
+makes the user's personal group
+appear to applications like a global virtual private network,
+by intercepting network-local broadcast packets
+that applications send to UIA's special IP addresses
+and forwarding them securely to each of the user's personal devices.
+Because of this feature,
+many broadcast-based &ldquo;local-area&rdquo; service discovery protocols
+such as Bonjour
+automatically work across all the devices in the user's personal group,
+even when some of the devices are in fact remote.
+We have used Apple's Bonjour-based Personal File Sharing, for example,
+to locate and share files remotely
+between devices in a UIA personal group
+as if they were present on the same LAN.
+
+<P>
+
+<H2><A NAME="SECTION00064000000000000000">
+6.4 Experience with UIA</A>
+</H2>
+
+<P>
+We currently run the UIA prototype on a number of desktop and
+laptop machines in our lab,
+and regularly run existing applications such as SSH over UIA
+to reach our mobile devices via their short personal device names.
+UIA automatically accounts for IP address changes
+and traverses NATs as necessary;
+SSH connections open when we take a laptop home
+need not be restarted.
+Although these uses are already possible
+via alternate protocols
+such as mobile IP,
+the complexity of configuring these alternatives
+has generally deterred even those of us
+with the necessary technical knowledge from deploying them.
+We feel that
+UIA's zero-configuration paradigm for personal naming and connectivity
+provides a crucial missing element in making mobile devices usable.
+
+<P>
+
+<P>
+
+<H1><A NAME="SECTION00070000000000000000"></A>
+<A NAME="sec-eval"></A><BR>
+7 Evaluation
+</H1>
+
+<P>
+UIA's primary goal is convenience and usability by non-technical users,
+a goal that can only be evaluated effectively
+once UIA has been deployed longer and more widely
+in the field.
+We can however evaluate key performance characteristics
+of the routing layer
+through simulation,
+to verify that the proposed design
+is capable of providing
+the desired connectivity on realistic networks.
+
+<P>
+
+<H2><A NAME="SECTION00071000000000000000">
+7.1 Experimental Setup</A>
+</H2>
+
+<P>
+We use as our simulated network
+a crawl of the social networking site Orkut gathered by Li and
+Dabek&nbsp;[<A
+ HREF="#li06f2f">29</A>].
+This graph is merely suggestive; until UIA is more widely deployed, it
+will not be clear how accurately the Orkut graph characterizes UIA's likely
+usage model.  The graph has 2,363 users,
+which we take to represent devices, as if each user owned one device.
+Friend relationships are bidirectional,
+and the number of friends per user is highly skewed: the
+median is only 7, but the most popular user has over 1,000.  
+
+<P>
+Our simulator takes as input a <EM>percent stable</EM> parameter
+and randomly chooses that percent of the devices
+to be <EM>stable</EM> and publicly accessible.
+All other devices the simulator considers to be <EM>mobile</EM> and inaccessible
+except through some stable device, as if behind a NAT.
+We assume that all devices agree as to which devices are stable.
+
+<P>
+Each device chooses 16 peers and allows at most 64 devices to choose it,
+to limit each device's overlay maintenance cost in a real network.
+Devices choose peers in order of friendship distance.
+A device can only choose a given target as a peer
+if the target does not already have 64 peers,
+or if the new device is closer than one of the target's existing peers,
+in which case the target discards
+a random peer at higher friendship distance.
+Since we do not yet have traces
+with which to simulate the network's evolution,
+the simulated devices choose peers in random order,
+iterating until the network reaches a fixed point.
+
+<P>
+The simulator then performs 
+token-limited location requests on the resulting overlay
+between 10,000 random pairs at
+friendship distances 1, 2, and 3.  Each lookup starts with 16
+tokens, and doubles after each failure,
+up to a maximum of 256 tokens.
+The simulator records the percentage of requests that succeed
+after a given number of rounds
+and the total number of messages sent.
+
+<P>
+
+<H2><A NAME="SECTION00071100000000000000">
+7.2 Location Success Rate</A>
+</H2>
+
+<P>
+
+<TABLE ALIGN="RIGHT" CELLPADDING=15><A NAME="fig:lookup-success"></A><A NAME="1462"></A>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8:</STRONG>
+Location request success rate</CAPTION>
+<TR><TD><DIV ALIGN="CENTER"><IMG
+ WIDTH="500" HEIGHT="350" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="\includegraphics[width=0.40\textwidth]{sim/results/success.eps}">
+</DIV></TD></TR>
+</TABLE>
+
+<P>
+An important performance metric for the location algorithm is the number
+of tokens needed to locate a target device successfully.  Using more
+tokens increases the chance of success (assuming that the overlay is
+in fact connected), but also increases the cost of concluding that an
+unreachable device is offline.
+Figure&nbsp;<A HREF="#fig:lookup-success">8</A> shows
+the success rate measured in the simulation
+for locating devices 
+at friendship distance 1.
+Using 256 tokens, the location algorithm achieves greater than a 99.5%
+success rate for 10% or more stable devices.  Using 64 tokens 
+the algorithm achieves 97.5% success for 10% or more stable devices.
+The vast majority of requests--80% of requests at 10% or more stable devices--succeed within the first inexpensive round of 16 tokens.
+
+<P>
+At the far left of the graph
+where few stable devices are available,
+the success rate drops off
+because each stable device can only support 64 peers,
+and there are not enough stable devices for each mobile device to
+choose a full 16 peers, or in some cases any.
+As the percentage of stable devices increases,
+a linearly increasing number of location requests
+are to stable devices that can be contacted directly
+without flooding, thus requiring no tokens.
+
+<P>
+We also measured the success rates
+for locating devices at friendship distances of 2 and 3, 
+though we omit these graphs for space reasons.
+The results for distance 2
+are almost as good as for distance 1,
+presumably because two devices at friendship distance 2 are likely to
+peer with some common stable device at distance 1 from each of them.
+Success rate drops considerably at distance 3, however,
+achieving only 50% success with 256 tokens
+in networks of 40% or more stable devices, for example.
+
+<BR CLEAR="RIGHT">
+
+<H2><A NAME="SECTION00072000000000000000">
+7.3 Messages Sent</A>
+</H2>
+
+<P>
+
+<TABLE ALIGN="RIGHT" CELLPADDING=15><A NAME="fig:lookup-cost"></A><A NAME="1469"></A>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9:</STRONG>
+Mean messages sent per location request</CAPTION>
+<TR><TD><DIV ALIGN="CENTER"><IMG
+ WIDTH="500" HEIGHT="350" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="\includegraphics[width=0.40\textwidth]{sim/results/tok-vs-ttl.eps}">
+</DIV></TD></TR>
+</TABLE>
+
+<P>
+The lower line in
+Figure&nbsp;<A HREF="#fig:lookup-cost">9</A> shows the total number 
+of messages sent during successful token-limited lookup requests
+for devices at friendship distance 1.
+A request's message count is ultimately bounded by its token count,
+but is often much less
+because successful lookups usually do not require all available tokens.
+
+<P>
+At the left edge of the graph,
+there are not enough stable devices for every mobile device
+to have a peer, so few requests succeed.
+Those that do succeed do so cheaply, however,
+because all of the connected mobile devices have clustered
+around the same few stable devices.
+The message count peaks near the point where
+the number of stable devices becomes barely sufficient
+to serve all of the mobile devices,
+so the requests usually succeed
+but only after contacting many devices.
+As the number of stable devices increases further,
+more requests complete without flooding at all, since
+stable targets are reachable directly at their 
+last known IP addresses.
+
+<P>
+To contrast UIA's token-limited scheme
+with flooding limited by hop count&nbsp;[<A
+ HREF="#chawathe03gnutella">6</A>],
+the upper line in the figure shows the total number of messages sent
+for successful hop count-controlled location requests
+in which the originating device knows via an oracle
+the exact hop count required for the search to succeed in one round.
+As the graph shows,
+the token-based scheme requires far fewer messages
+than even this &ldquo;ideal&rdquo; hop count-limited scheme.
+The inefficiency of the hop count scheme results from
+the skewed popularity distribution and redundancy of the friendship graph,
+as discussed in Section&nbsp;<A HREF="#sec-routing-lookup">5.2</A>.
+
+<BR CLEAR="RIGHT">
+
+<H1><A NAME="SECTION00080000000000000000"></A>
+<A NAME="sec-future"></A><BR>
+8 Future Work
+</H1>
+
+<P>
+Although we feel that the current UIA prototype
+demonstrates a promising approach to naming and connecting personal devices,
+many avenues for future work remain,
+some of which are highlighted in this section.
+
+<P>
+
+<H2><A NAME="SECTION00081000000000000000">
+8.1 Naming</A>
+</H2>
+
+<P>
+UIA currently provides no read access control for its namespaces,
+only write access control via group ownership.
+Users may wish to hide certain names,
+such as links to business partners,
+from view of the general public,
+or limit visibility of devices at work to business colleagues
+while allowing family members to see devices at home.
+
+<P>
+The naming layer currently assumes that groups
+are small and change infrequently,
+so that it is reasonable for devices
+always to gossip entire groups
+and store change records forever
+(or until the device is replaced or the user's account wiped).
+A traditional DNS-like remote name resolution protocol
+might usefully supplement UIA's gossip protocol,
+allowing devices to resolve names in large or rarely accessed groups
+held on other devices without replicating the entire group.
+A UIA device might also keep a separate log for each group or series,
+and garbage collect logs of groups the device does not own
+and has not accessed recently.
+A state checkpoint mechanism might similarly enable devices
+to garbage collect old change records for groups they own.
+
+<P>
+
+<P>
+UIA currently assumes that groups are owned by one person
+or a few people managing the group by consensus:
+any group owner can modify the group without restriction.
+Users may wish to configure groups
+so that changes
+require approval from multiple distinct owners,
+or to make some owners more &ldquo;trusted&rdquo; than others.
+Treating a PC locked up in a data center
+as more trustworthy than a laptop or cell phone
+could eliminate the risk of ownership disputes
+if the mobile device is stolen, for example.
+The user would have to think ahead
+and perform more manual configuration, however,
+and the consequences might be worse if
+the trusted PC is compromised.
+
+<P>
+
+<P>
+As an alternative to the digital signature algorithm
+with which UIA normally signs namespace change records,
+we are experimenting with a security framework
+based on proof-carrying authentication&nbsp;[<A
+ HREF="#appel99pca">1</A>].
+In this framework,
+instead of a signature,
+a change record contains a structured <EM>proof</EM>
+that the record's meaning (e.g., &ldquo;resolve name <i>x</i> to EID <i>y</i>&rdquo;)
+has been endorsed by the group owner.
+Proof-carrying authentication enables new types of proofs to be created
+and deployed without changing the verifier's code.
+We have used this mechanism for example to
+create a UIA group whose records are certified
+by MIT's central X.509 certification authority (CA),
+so that <TT>alice.mit</TT> securely maps to the person
+the MIT CA has endorsed as <TT>alice@mit.edu</TT>
+even though UIA
+contains no explicit code to check X.509 certificates.
+
+
+<P>
+
+<H2><A NAME="SECTION00082000000000000000">
+8.2 Routing</A>
+</H2>
+
+<P>
+The UIA routing layer currently uses forwarding for NAT traversal,
+which is a general but inefficient solution.
+As an optimization,
+we plan to incorporate hole punching&nbsp;[<A
+ HREF="#ford05p2p">18</A>],
+a technique that can build direct peer-to-peer connections
+across many types of NAT without forwarding.
+Since this and other NAT traversal
+techniques&nbsp;[<A
+ HREF="#upnp01igd">48</A>,<A
+ HREF="#cheshire05nat">8</A>]
+only work with certain NATs, however,
+UIA will still need forwarding as a fallback
+to provide robust connectivity.
+
+<P>
+The routing layer currently uses TCP for all UIA connectivity,
+including for tunneling the UDP datagrams of legacy applications,
+limiting the prototype's effectiveness for handling real-time data
+such as streaming media.
+We intend to introduce a UDP-based UIA connectivity protocol
+to provide more effective best-effort delivery.
+
+<P>
+
+<P>
+The routing layer's search algorithm
+could use additional hints from the naming layer
+to improve its performance.
+To locate
+<TT>laptop.Charlie.Bob.Alice</TT>, for example,
+it might first locate some device belonging to
+<TT>Bob</TT> and ask that device to locate <TT>laptop.Charlie</TT>.
+
+<P>
+
+<H2><A NAME="SECTION00083000000000000000">
+8.3 Legacy Application Support</A>
+</H2>
+
+<P>
+UIA's legacy application interface
+currently cannot provide each user of a multi-user machine
+with a fully separate TCP/UDP port space for its own EID,
+because the kernel's protocol stack offers no way to ensure that
+only a particular user's applications can bind a socket
+to the device-local IP address representing that user's EID.
+Thus, without enhancing the kernel's transport protocols,
+only UIA-aware applications can make full use of personal EIDs.
+
+Fixing this issue requires changes to kernel-level code
+and is thus less portable.
+
+<P>
+
+<H1><A NAME="SECTION00090000000000000000"></A>
+<A NAME="sec-related"></A><BR>
+9 Related Work
+</H1>
+
+<P>
+UIA builds on a large body of related
+work in the areas of naming systems, location-independent
+identifiers, gossip and optimistic replication protocols,
+and social networks.
+
+<P>
+UIA's personal naming model is inspired in part by
+SDSI/SPKI&nbsp;[<A
+ HREF="#rivest96sdsi">42</A>,<A
+ HREF="#rfc2693">14</A>].
+Like SDSI, UIA allows users to define locally-scoped personal names
+bound to cryptographic targets and groups
+to form decentralized, composable namespaces.
+While SDSI associates public keys with users (principals)
+and expects users to know about and manage their own public keys, however,
+UIA simplifies key management
+by making each device responsible
+for creating and managing its own device-specific key
+invisibly to the user.
+UIA devices form <EM>user</EM> identities
+out of cooperating groups of personal devices,
+which the user builds through simple device introduction and merge.
+
+<P>
+Existing Internet protocols can provide some of UIA's connectivity features,
+but they require configuration effort and technical expertise
+that deters even sophisticated users.
+Dynamic DNS&nbsp;[<A
+ HREF="#rfc2136">49</A>] can name devices with dynamic IP addresses,
+but requires configuration on both the name server and the named device,
+and devices still become inaccessible when
+behind NAT.
+DNS Security&nbsp;[<A
+ HREF="#rfc4033">4</A>]
+cryptographically authenticates DNS names,
+but its administration cost has hindered deployment
+even by the Internet's root naming authorities,
+let alone by ordinary users.
+Mobile IP&nbsp;[<A
+ HREF="#rfc3344">37</A>] gives a mobile
+device the illusion of a fixed IP address,
+but requires setting up a dedicated
+forwarding server at a static, public IP address.
+Virtual Private Networks (VPNs)&nbsp;[<A
+ HREF="#rfc2764">22</A>]
+provide secure remote access to corporate networks,
+but their infrastructure and administration requirements
+make them unsuitable for deployment by average consumers
+for their personal networks.
+
+<P>
+Uniform Communication Identifiers&nbsp;[<A
+ HREF="#etsi01user">15</A>]
+provide a common identifier
+for phone, E-mail, and other forms of communication,
+along with a central address book shareable among
+communication devices.
+HINTS&nbsp;[<A
+ HREF="#maniatis03historic">30</A>] uses name-history trails
+to map obsolete user names to current ones.
+These systems still rely on globally unique names
+with centralized registration and management, however.
+
+<P>
+Bonjour&nbsp;[<A
+ HREF="#bonjour">2</A>] allows devices
+to choose their own names on local-area networks, but
+these names are insecure and ephemeral: any device can
+claim any name, and its name becomes invalid
+as soon as it moves to a different network.  UIA uses Bonjour
+libraries to discover new devices on the local network, 
+but UIA names persist and remain bound
+to the original target device
+despite later migration.
+
+<P>
+UIA builds on host identity ideas
+developed in
+SFS&nbsp;[<A
+ HREF="#mazieres99separating">32</A>],
+HIP&nbsp;[<A
+ HREF="#moskowitz03hip-arch">34</A>],
+JXTA&nbsp;[<A
+ HREF="#gong01jxta">23</A>], and
+<i>i3</i>&nbsp;[<A
+ HREF="#stoica02internet">45</A>],
+introducing cryptographic EIDs that securely identify not just a host
+but a particular <EM>user</EM> on that host.
+Different users of a shared UIA host
+can run independent personal network services
+without conflicting or requiring host-wide configuration,
+and network services can leverage UIA names and EIDs
+to authenticate clients at user granularity.
+
+<P>
+Distributed hash tables
+(DHTs)&nbsp;[<A
+ HREF="#stoica01chord">44</A>,<A
+ HREF="#rowstron01pastry">43</A>,<A
+ HREF="#balakrishnan03looking">5</A>]
+provide scalable lookup of arbitrary flat identifiers
+in large distributed address spaces,
+but tolerate only limited asymmetry or non-transitivity
+in the underlying
+network&nbsp;[<A
+ HREF="#freedman05nontransitive">20</A>].
+UIA's router in contrast handles asymmetries
+such as those caused by NATs,
+but does not attempt to resolve <EM>arbitrary</EM> identifiers reliably:
+UIA instead focuses on reliable routing to devices nearby
+in the user's social network,
+for which scoped flooding&nbsp;[<A
+ HREF="#chawathe03gnutella">6</A>]
+is more suitable.
+
+<P>
+DHT-based naming systems
+such as DDNS&nbsp;[<A
+ HREF="#cox02serving">9</A>],
+<i>i3</i>&nbsp;[<A
+ HREF="#stoica02internet">45</A>], and
+CoDoNS&nbsp;[<A
+ HREF="#ramasubramanian04design">40</A>]
+provide new mechanisms for resolving global names.
+TRIAD&nbsp;[<A
+ HREF="#cheriton00triad">7</A>]
+provides content delivery and NAT traversal
+by routing on global DNS names.
+In place of global names, UIA focuses
+on global connectivity via <EM>personal</EM> names,
+which users can choose without the restriction of global uniqueness.
+In addition,
+UIA's optimistic replication of naming state
+keeps the user's namespace available on his devices
+even while disconnected from the Internet and its global name services.
+
+<P>
+Ficus&nbsp;[<A
+ HREF="#guy90implementation">26</A>,<A
+ HREF="#guy93consistency">24</A>],
+Coda&nbsp;[<A
+ HREF="#kistler91disconnected">28</A>],
+ and Ivy&nbsp;[<A
+ HREF="#muthitacharoen02ivy">35</A>]
+develop optimistic replication algorithms for file systems,
+and Bayou&nbsp;[<A
+ HREF="#terry95managing">47</A>]
+does so for databases.
+Rumor&nbsp;[<A
+ HREF="#guy98rumor">25</A>] and P-Grid&nbsp;[<A
+ HREF="#datta03updates">11</A>]
+explore optimistic data replication on mobile devices,
+Roma&nbsp;[<A
+ HREF="#swierk00roma">46</A>] uses one mobile device
+to offer central management of data on other devices,
+and Footloose&nbsp;[<A
+ HREF="#paluska03footloose">36</A>]
+uses mobile devices the user carries
+to propagate updates among other devices.
+UIA builds on all of this work
+to address distributed naming and ad hoc group management,
+confronting the additional challenge of maintaining consistency
+when not only the <EM>data content</EM> but the <EM>set of participants</EM>
+may change independently on different devices.
+
+<P>
+UIA is a continuation of work begun with Unmanaged Internet
+Protocol&nbsp;[<A
+ HREF="#ford03uip">17</A>,<A
+ HREF="#ford03scalable">16</A>].
+UIA extends the earlier work with its personal naming system,
+and by leveraging the user's social network for routing purposes
+as in sybil-resistant DHTs&nbsp;[<A
+ HREF="#danezis05sybil">10</A>]
+and social data sharing systems
+such as Turtle&nbsp;[<A
+ HREF="#popescu04turtle">38</A>], SPROUT&nbsp;[<A
+ HREF="#marti04sprout">31</A>],
+F2F&nbsp;[<A
+ HREF="#li06f2f">29</A>], and Tribler&nbsp;[<A
+ HREF="#pouwelse06tribler">39</A>].
+
+<H1><A NAME="SECTION000100000000000000000"></A>
+<A NAME="sec-concl"></A><BR>
+10 Conclusion
+</H1>
+
+<P>
+This paper proposes the Unmanaged Internet Architecture
+for introducing, naming, and globally connecting mobile devices.
+UIA gives users persistent personal names for
+conveniently finding and expressing who they want to
+talk to, what devices they wish to access,
+and who can access their own devices.
+
+<P>
+Each device starts with a generic name for itself, such as <TT>laptop</TT>,
+and a cryptographic end-system identifier
+to provide authentic and private communication.
+A user can merge devices to form personal groups,
+which cooperate to maintain a distributed namespace by
+gossiping logs of the user's changes.
+A user's group can name
+both the user's devices and other users' groups;
+users can form links securely either by physical device
+introduction or via other trusted channels.
+Since UIA names are local and personal,
+users need not register with central authorities
+to obtain scarce globally unique names.
+
+<P>
+UIA uses ad hoc routing through social neighbors' devices to cope with a
+spectrum of connectivity environments.
+Scoped flooding ensures robustness when
+groups of devices form isolated islands of connectivity, and a social overlay
+enables devices to find a target's current IP address efficiently
+when they have Internet connectivity.
+
+<P>
+
+<P>
+
+<P>
+ 
+<P>
+
+<H1><A NAME="SECTION000110000000000000000">
+Acknowledgments</A>
+</H1>
+
+<P>
+This research is sponsored by the T-Party Project, a joint research
+program between MIT and Quanta Computer Inc., Taiwan, and by the
+National Science Foundation under Cooperative Agreement ANI-0225660
+(Project IRIS). 
+We would like to thank Martin Abadi, Tom Rodeheffer,
+Nokia Research Center Cambridge, and the USENIX reviewers
+for support and feedback on early paper drafts.
+
+<P>
+
+<H2><A NAME="SECTION000120000000000000000">
+Bibliography</A>
+</H2><DL COMPACT><DD><P></P><DT><A NAME="appel99pca">1</A>
+<DD>
+Andrew&nbsp;W. Appel and Edward&nbsp;W. Felten.
+<BR>Proof-carrying authentication.
+<BR>In <EM>6th ACM CCS</EM>, November 1999.
+
+<P></P><DT><A NAME="bonjour">2</A>
+<DD>
+Apple Computer, Inc.
+<BR>Bonjour.
+<BR>http://developer.apple.com/networking/bonjour/.
+
+<P></P><DT><A NAME="filevault">3</A>
+<DD>
+Apple Computer, Inc.
+<BR>FileVault.
+<BR>http://www.apple.com/macosx/features/filevault/.
+
+<P></P><DT><A NAME="rfc4033">4</A>
+<DD>
+R.&nbsp;Arends, R.&nbsp;Austein, M.&nbsp;Larson, D.&nbsp;Massey, and S.&nbsp;Rose.
+<BR>DNS Security Introduction and Requirements, March 2005.
+<BR>RFC 4033.
+
+<P></P><DT><A NAME="balakrishnan03looking">5</A>
+<DD>
+Hari Balakrishnan et&nbsp;al.
+<BR>Looking up data in P2P systems.
+<BR><EM>Communications of the ACM</EM>, February 2003.
+
+<P></P><DT><A NAME="chawathe03gnutella">6</A>
+<DD>
+Yatin Chawathe et&nbsp;al.
+<BR>Making Gnutella-like P2P systems scalable.
+<BR>In <EM>ACM SIGCOMM</EM>, pages 407-418, August 2003.
+
+<P></P><DT><A NAME="cheriton00triad">7</A>
+<DD>
+David&nbsp;R. Cheriton and Mark Gritter.
+<BR>TRIAD: A new next-generation Internet architecture, July 2000.
+
+<P></P><DT><A NAME="cheshire05nat">8</A>
+<DD>
+Stuart Cheshire, Marc Krochmal, and Kiren Sekar.
+<BR>NAT port mapping protocol, June 2005.
+<BR>Internet-Draft (Work in Progress).
+
+<P></P><DT><A NAME="cox02serving">9</A>
+<DD>
+R.&nbsp;Cox, A.&nbsp;Muthitacharoen, and R.&nbsp;Morris.
+<BR>Serving DNS using Chord.
+<BR>In <EM>1st IPTPS</EM>, March 2002.
+
+<P></P><DT><A NAME="danezis05sybil">10</A>
+<DD>
+G.&nbsp;Danezis, C.&nbsp;Lesniewski-Laas, F.&nbsp;Kaashoek, and R.&nbsp;Anderson.
+<BR>Sybil-resistant DHT routing.
+<BR>In <EM>ESORICS</EM>, 2005.
+
+<P></P><DT><A NAME="datta03updates">11</A>
+<DD>
+A.&nbsp;Datta, M.&nbsp;Hauswirth, and K.&nbsp;Aberer.
+<BR>Updates in highly unreliable, replicated peer-to-peer systems.
+<BR>In <EM>23rd ICDCS</EM>, 2003.
+
+<P></P><DT><A NAME="demers87antientropy">12</A>
+<DD>
+Alan Demers et&nbsp;al.
+<BR>Epidemic algorithms for replicated database maintenance.
+<BR>In <EM>6th PODC</EM>, pages 1-12, New York, NY, 1987.
+
+<P></P><DT><A NAME="dohrmann02publickey">13</A>
+<DD>
+Steve Dohrmann and Carl Ellison.
+<BR>Public-key support for collaborative groups.
+<BR>In <EM>1st Annual PKI Research Workshop</EM>, April 2002.
+
+<P></P><DT><A NAME="rfc2693">14</A>
+<DD>
+C.&nbsp;Ellison et&nbsp;al.
+<BR>SPKI Certificate Theory, 1999.
+<BR>RFC 2693.
+
+<P></P><DT><A NAME="etsi01user">15</A>
+<DD>
+European Telecommunications Standards Institute.
+<BR>User identification solutions in converging networks, April 2001.
+
+<P></P><DT><A NAME="ford03scalable">16</A>
+<DD>
+Bryan Ford.
+<BR>Scalable Internet routing on topology-independent node identities.
+<BR>Technical Report 926, MIT LCS, October 2003.
+
+<P></P><DT><A NAME="ford03uip">17</A>
+<DD>
+Bryan Ford.
+<BR>Unmanaged Internet protocol: Taming the edge network management
+  crisis.
+<BR>In <EM>HotNets-II</EM>, 2003.
+
+<P></P><DT><A NAME="ford05p2p">18</A>
+<DD>
+Bryan Ford.
+<BR>Peer-to-peer communication across network address translators.
+<BR>In <EM>USENIX</EM>,
+  Anaheim, CA, April 2005.
+
+<P></P><DT><A NAME="ford06uia-iptps">19</A>
+<DD>
+Bryan Ford et&nbsp;al.
+<BR>User-Relative Names for Globally Connected Personal Devices.
+<BR>In <EM>5th IPTPS</EM>, February 2006.
+
+<P></P><DT><A NAME="freedman05nontransitive">20</A>
+<DD>
+Michael&nbsp;J. Freedman et&nbsp;al.
+<BR>Non-transitive connectivity and DHTs.
+<BR>In <EM>USENIX WORLDS 2005</EM>, December 2005.
+
+<P></P><DT><A NAME="gavoille01spaceefficiency">21</A>
+<DD>
+Cyril Gavoille and Marc Gengler.
+<BR>Space-efficiency for routing schemes of stretch factor three.
+<BR><EM>JPDC</EM>,
+  61(5):679-687, 2001.
+
+<P></P><DT><A NAME="rfc2764">22</A>
+<DD>
+B.&nbsp;Gleeson et&nbsp;al.
+<BR>A Framework for IP Based Virtual Private Networks, February 2000.
+<BR>RFC 2764.
+
+<P></P><DT><A NAME="gong01jxta">23</A>
+<DD>
+Li&nbsp;Gong.
+<BR>JXTA: A network programming environment.
+<BR><EM>IEEE Internet Computing</EM>, 5(3):88-95, May 2001.
+
+<P></P><DT><A NAME="guy93consistency">24</A>
+<DD>
+R.&nbsp;G. Guy, G.&nbsp;J. Popek, and T.&nbsp;W. Page, Jr.
+<BR>Consistency algorithms for optimisic replication.
+<BR>In <EM>First International Conference on Network Protocols</EM>, 1993.
+
+<P></P><DT><A NAME="guy98rumor">25</A>
+<DD>
+Richard Guy et&nbsp;al.
+<BR>Rumor: Mobile data access through optimistic peer-to-peer
+  replication.
+<BR>In <EM>ER Workshops</EM>, pages 254-265, 1998.
+
+<P></P><DT><A NAME="guy90implementation">26</A>
+<DD>
+Richard&nbsp;G. Guy et&nbsp;al.
+<BR>Implementation of the Ficus replicated file system.
+<BR>In <EM>USENIX Summer Conference</EM>, pages 63-71, June 1990.
+
+<P></P><DT><A NAME="rfc3027">27</A>
+<DD>
+M.&nbsp;Holdrege and P.&nbsp;Srisuresh.
+<BR>Protocol complications with the IP network address translator,
+  January 2001.
+<BR>RFC 3027.
+
+<P></P><DT><A NAME="kistler91disconnected">28</A>
+<DD>
+James&nbsp;J. Kistler and M.&nbsp;Satyanarayanan.
+<BR>Disconnected operation in the Coda file system.
+<BR>In <EM>13th SOSP</EM>, pages 213-225, 1991.
+
+<P></P><DT><A NAME="li06f2f">29</A>
+<DD>
+Jinyang Li and Frank Dabek.
+<BR>F2F: Reliable storage in open networks.
+<BR>In <EM>5th IPTPS</EM>, Santa Barbara, CA, February 2006.
+
+<P></P><DT><A NAME="maniatis03historic">30</A>
+<DD>
+Petros Maniatis and Mary Baker.
+<BR>A historic name-trail service.
+<BR>In <EM>5th WMCSA</EM>, October 2003.
+
+<P></P><DT><A NAME="marti04sprout">31</A>
+<DD>
+Sergio Marti, Prasanna Ganesan, and Hector Garcia-Molina.
+<BR>SPROUT: P2P routing with social networks.
+<BR>In <EM>P2P&amp;DB</EM>, 2004.
+
+<P></P><DT><A NAME="mazieres99separating">32</A>
+<DD>
+D.&nbsp;Mazi&#232;res, M.&nbsp;Kaminsky, M.&nbsp;F. Kaashoek, and E.&nbsp;Witchel.
+<BR>Separating key management from file system security.
+<BR>In <EM>SOSP</EM>, 1999.
+
+<P></P><DT><A NAME="rfc1034">33</A>
+<DD>
+P.&nbsp;Mockapetris.
+<BR>Domain names: concepts and facilities, November 1987.
+<BR>RFC 1034.
+
+<P></P><DT><A NAME="moskowitz03hip-arch">34</A>
+<DD>
+R.&nbsp;Moskowitz and P.&nbsp;Nikander.
+<BR>Host identity protocol architecture, April 2003.
+<BR>Internet-Draft (Work in Progress).
+
+<P></P><DT><A NAME="muthitacharoen02ivy">35</A>
+<DD>
+A.&nbsp;Muthitacharoen, R.&nbsp;Morris, T.&nbsp;Gil, and B.&nbsp;Chen.
+<BR>Ivy: A read/write peer-to-peer file system.
+<BR>In <EM>5th OSDI</EM>, 2002.
+
+<P></P><DT><A NAME="paluska03footloose">36</A>
+<DD>
+J.M. Paluska et&nbsp;al.
+<BR>Footloose: A case for physical eventual consistency and selective
+  conflict resolution.
+<BR>In <EM>5th WMCSA</EM>, 2003.
+
+<P></P><DT><A NAME="rfc3344">37</A>
+<DD>
+C.&nbsp;Perkins, Editor.
+<BR>IP mobility support for IPv4, August 2002.
+<BR>RFC 3344.
+
+<P></P><DT><A NAME="popescu04turtle">38</A>
+<DD>
+B.&nbsp;Popescu, B.&nbsp;Crispo, and A.&nbsp;Tanenbaum.
+<BR>Safe and private data sharing with Turtle.
+<BR>In <EM>12th Workshop on Security Protocols</EM>,
+  2004.
+
+<P></P><DT><A NAME="pouwelse06tribler">39</A>
+<DD>
+J.A. Pouwelse et&nbsp;al.
+<BR>Tribler: A social-based peer-to-peer system.
+<BR>In <EM>5th IPTPS</EM>, February 2006.
+
+<P></P><DT><A NAME="ramasubramanian04design">40</A>
+<DD>
+Venugopalan Ramasubramanian and Emin&nbsp;G&#252;n Sirer.
+<BR>The design and implementation of a next generation name service for
+  the Internet.
+<BR>In <EM>ACM SIGCOMM</EM>, August 2004.
+
+<P></P><DT><A NAME="rfc1918">41</A>
+<DD>
+Y.&nbsp;Rekhter et&nbsp;al.
+<BR>Address allocation for private internets, February 1996.
+<BR>RFC 1918.
+
+<P></P><DT><A NAME="rivest96sdsi">42</A>
+<DD>
+R.L. Rivest and B.&nbsp;Lampson.
+<BR>SDSI: A simple distributed security infrastructure, April 1996.
+<BR>http://theory.lcs.mit.edu/~cis/sdsi.html.
+
+<P></P><DT><A NAME="rowstron01pastry">43</A>
+<DD>
+A.&nbsp;Rowstron and P.&nbsp;Druschel.
+<BR>Pastry: Scalable, distributed object location and routing for
+  large-scale peer-to-peer systems.
+<BR>In <EM>Middleware</EM>, 2001.
+
+<P></P><DT><A NAME="stoica01chord">44</A>
+<DD>
+Ion Stoica et&nbsp;al.
+<BR>Chord: A scalable peer-to-peer lookup service for Internet
+  applications.
+<BR>In <EM>SIGCOMM</EM>, 2001.
+
+<P></P><DT><A NAME="stoica02internet">45</A>
+<DD>
+Ion Stoica et&nbsp;al.
+<BR>Internet indirection infrastructure.
+<BR>In <EM>SIGCOMM</EM>, August 2002.
+
+<P></P><DT><A NAME="swierk00roma">46</A>
+<DD>
+E.&nbsp;Swierk, E.&nbsp;Kiciman, V.&nbsp;Laviano, and M.&nbsp;Baker.
+<BR>The Roma personal metadata service.
+<BR>In <EM>3rd WMCSA</EM>, December 2000.
+
+<P></P><DT><A NAME="terry95managing">47</A>
+<DD>
+Douglas&nbsp;B. Terry et&nbsp;al.
+<BR>Managing update conflicts in Bayou, a weakly connected replicated
+  storage system.
+<BR>In <EM>15th SOSP</EM>, 1995.
+
+<P></P><DT><A NAME="upnp01igd">48</A>
+<DD>
+UPnP Forum.
+<BR>Internet gateway device (IGD) standardized device control protocol,
+  November 2001.
+<BR>http://www.upnp.org/.
+
+<P></P><DT><A NAME="rfc2136">49</A>
+<DD>
+P.&nbsp;Vixie, Editor, S.&nbsp;Thomson, Y.&nbsp;Rekhter, and J.&nbsp;Bound.
+<BR>Dynamic updates in the domain name system, April 1997.
+<BR>RFC 2136.
+</DL>
+
+<P>
+
+<!--#include virtual="/footer.html" -->
+
+</BODY>
+</HTML>

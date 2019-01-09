@@ -1,0 +1,18 @@
+<html>
+<head>
+<meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+<title>Limitations</title>
+</head>
+<body text=#000000 bgcolor=#9999FF link=#000080 vlink=#800000 alink=#000080>
+<center>
+<a href="text0.html">First page</a> <a href="text92.html">Back</a> <a href="text94.html">Continue</a> <a href="text98.html">Last page</a> <a href="index.html">Overview</a> <a href="img93.html">Graphics</a></center><br>
+<h1>Limitations</h1><p>
+<ul><li><h2>What is a packrat parser <i>not</i> good for?</h2>
+<ul><li>General CFG parsing: e.g., ambiguous grammars
+<ul><li>(because of “at-most-one result” limitation)
+</ul><li>Parsing highly “stateful” syntax: e.g., C, C++
+<ul><li>(memoization depends on statelessness)
+</ul><li>Parsing in minimal space
+<ul><li>(LL/LR parser grows with stack depth, not input size)
+</ul></ul></ul></body>
+</html>

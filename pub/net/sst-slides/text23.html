@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slide 24</title>
+</head>
+<body text="#000000" bgcolor="#E6E6FF" link="#0000CC" vlink="#000080" alink="#0000CC">
+<center>
+<a href="text0.html">First page</a> <a href="text22.html">Back</a> <a href="text24.html">Continue</a> <a href="text40.html">Last page</a> <a href="index.html">Overview</a> <a href="img23.html">Graphics</a></center><br>
+<h1>Stream Protocol: Creating Streams</h1>
+<ul><li><h2><b>Goal:</b></h2></li>
+<li><ul><li>Create &amp; start sending data on new stream
+<i>without</i> round-trip handshake delay</li>
+</ul></li><li><h2><b>Challenges:</b></h2></li>
+<li><ul><li>What happens to subsequent data segments
+if initial “create-stream” packet is lost?</li>
+<li>Flow control: may send how much data <i>before</i>
+seeing receiver's initial window update?</li>
+</ul></li></ul></body>
+</html>

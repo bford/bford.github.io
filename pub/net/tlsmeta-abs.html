@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Metadata Protection Considerations for TLS Present and Future</TITLE>
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+</HEAD>
+
+<BODY >
+
+<!--#include virtual="/header.html" -->
+
+<H1 ALIGN="CENTER"><BR>Metadata Protection Considerations for TLS Present and Future<BR></H1>
+
+<center>
+<STRONG>
+Bryan Ford<br>
+<i>EPFL</i>
+</STRONG>
+</center>
+
+<p align="center">
+<a href="https://www.internetsociety.org/events/ndss-symposium-2016/tls-13-ready-or-not-tron-workshop-programme">
+TLS 1.3 Ready or Not (TRON) Workshop</a><br>
+	February 21, 2016
+</p>
+
+<H3>Abstract:</H3>
+TLS 1.3 takes important steps to improve both performance and security, so far
+offers little protection against traffic analysis or fingerprinting using
+unencrypted metadata or other side-channels such as transmission lengths and
+timings. This paper explores metadata protection mechanisms for TLS, including
+already-included provisions (e.g., record padding), provisions not yet included
+but potentially feasible in TLS 1.3 (e.g., optional or encrypted headers), and
+provisions that are likely too ambitious to achieve in TLS 1.3 but may be worth
+considering for a future &ldquo;TLS 2.0&rdquo; (e.g., fully encrypted and
+authenticated negotiation/handshaking). In addition, we briefly explore how
+these metadata protection provisions might apply to the datagram-oriented DTLS,
+or to a version of TLS supporting out-of-order delivery atop TCP. 
+
+
+<H3>Paper:
+<a href="tlsmeta.pdf">PDF</a>
+</H3>
+
+<H3>Talk slides:
+<a href="tlsmeta-slides.pdf">PDF</a>
+</H3>
+
+<!--#include virtual="/footer.html" -->
+
+</BODY>
+</HTML>

@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+<title>Slide 34</title>
+</head>
+<body text=#000000 bgcolor=#E6E6FF link=#0000CC vlink=#000080 alink=#0000CC>
+<center>
+<a href="text0.html">First page</a> <a href="text32.html">Back</a> <a href="text34.html">Continue</a> <a href="text44.html">Last page</a> <a href="index.html">Overview</a> <a href="img33.html">Graphics</a></center><br>
+<h1><b>vxZIP Decoder Architecture</b></h1><p>
+<ul><li><h2>Decoders are ELF executables for x86-32</h2>
+<ul><li>Can be written in any language, safe or unsafe
+<li>Compiled using ordinary tools (GCC)
+</ul><li><h2>Decoders have access to five “system calls”:</h2>
+<ul><li><i>read stdin, write stdout, malloc, next file, exit</i>
+</ul><li><h2>Decoders <b>cannot</b>:</h2>
+<ul><li>open files, windows, devices, network connections, ...
+<li>get system info: user name, current time, OS type, ...
+</ul></ul></body>
+</html>

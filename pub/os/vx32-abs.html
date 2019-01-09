@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Vx32: Lightweight, User-level Sandboxing on the x86</TITLE>
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+</HEAD>
+
+<BODY >
+
+<!--#include virtual="/header.html" -->
+
+<H1 ALIGN="CENTER"><BR>
+Vx32: Lightweight, User-level Sandboxing on the x86
+<BR></H1>
+
+<P ALIGN="CENTER"><STRONG>Bryan Ford and Russ Cox</STRONG><br>
+	<I>Massachusetts Institute of Technology</I></P>
+
+<p align="center">
+<i>Published at the <a href="http://www.usenix.org/events/usenix08/">
+	USENIX Annual Technical Conference</a><br>
+	<b>Awarded Best Student Paper</b><br>
+	June 22-27, 2008, Boston, Massachusetts.</i>
+</p>
+
+<H3>Abstract:</H3>
+
+<P>
+Code sandboxing is useful for many purposes,
+but most sandboxing techniques
+require kernel modifications,
+do not completely isolate guest code,
+or incur substantial performance costs.
+Vx32 is a multipurpose user-level sandbox
+that enables any application
+to load and safely execute one or more guest plug-ins,
+confining each guest to a system call API controlled by the host application
+and to a restricted memory region within the host&rsquo;s address space.
+Vx32
+runs guest code efficiently on several widespread operating systems
+without kernel extensions or special privileges;
+it protects the host program from both reads and writes by its guests;
+and it allows the host to restrict the instruction set available to guests.
+The key to vx32&rsquo;s combination of portability, flexibility, and efficiency
+is its use of x86 segmentation hardware to sandbox the guest&rsquo;s data accesses,
+along with a lightweight instruction translator
+to sandbox guest instructions.</p>
+
+<p>
+We evaluate vx32 using microbenchmarks
+and whole system benchmarks,
+and we examine four applications based on vx32:
+an archival storage system,
+an extensible public-key infrastructure,
+an experimental user-level operating system
+running atop another host OS,
+and a Linux system call jail.
+The first three applications export
+custom APIs independent of the host OS to their guests,
+making their plug-ins binary-portable across host systems.
+Compute-intensive workloads for the first two applications
+exhibit between a 30&#37; slowdown and a 30&#37; <i>speedup</i>
+on vx32 relative to native execution;
+speedups result from vx32&rsquo;s instruction translator
+improving the cache locality of guest code.
+The experimental user-level operating system allows the use of
+the guest OS&rsquo;s applications alongside
+the host&rsquo;s native applications
+and runs faster than whole-system virtual
+machine monitors such as VMware and QEMU.
+The Linux system call jail incurs up to 80&#37; overhead but
+requires no kernel modifications and is delegation-based,
+avoiding concurrency vulnerabilities present in
+other interposition mechanisms.
+
+<H3>Full Paper:
+<a href="vx32.pdf">PDF</a>
+<a href="vx32/">HTML</a>
+</H3>
+
+<H3>Project Home Page:
+<a href="http://pdos.csail.mit.edu/~baford/vm/">
+<tt>http://pdos.csail.mit.edu/~baford/vm/</tt></a>
+</H3>
+
+<!--#include virtual="/footer.html" -->
+
+</BODY>
+</HTML>

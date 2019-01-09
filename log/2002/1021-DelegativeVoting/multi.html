@@ -1,0 +1,475 @@
+<html>
+<head>
+	<title>Multiple-Seat Delegative Elections</title>
+</head>
+<body bgcolor=white text=black link=blue vlink=purple alink=purple>
+
+<center>
+<h1>Multiple-Seat Delegative Elections</h1>
+<h2>Bryan Ford - October 21, 2002</h2>
+</center>
+
+<table cellspacing=10>
+<tr>
+<td valign=top>
+
+<h3><a href="index.html">Introduction</a></h3>
+
+<h3><a href="single.html">Single-Winner Elections</a></h3>
+
+<ul>
+<li>	<a href="single.html#how">How it works</a>
+<li>	<a href="single.html#advantages">Advantages</a>
+<li>	<a href="single.html#irv">Relationship to IRV</a>
+</ul>
+
+<h3><a href="multi.html">Multiple-Seat Elections</a></h3>
+
+<ul>
+<li>	<a href="multi.html#seats">Seats and Districts</a>
+<li>	<a href="multi.html#how">How it works</a>
+<li>	<a href="multi.html#advantages">Advantages</a>
+<li>	<a href="multi.html#stv">Relationship to STV</a>
+<li>	<a href="multi.html#ideal">The Single-District Ideal</a>
+</ul>
+
+<hr>
+<small>(Copyright 2002 Bryan Ford)</small>
+
+<td valign=top>
+
+<p>
+<h2 id="seats">Seats and Districts</h2>
+
+Multiple-seat elections are used for deliberative bodies
+such as congresses, parliaments, or councils,
+which are usually intended
+to be representative of some larger electorate.
+There is a tremendous variety of methods
+by which such bodies can be elected,
+but most schemes involve dividing the electorate up into <i>districts</i>
+along some more-or-less arbitrary lines, usually on a geographic basis,
+so that each district represents an approximately equal number of voters
+and is responsible for electing a given number of seats on the council.
+Districting effectively divides the election of the body <i>a priori</i>
+into several smaller elections for different parts of the council.
+
+<p>
+In common <i>single-member plurality</i> (SMP) systems
+such as those used in the U.S. and Britain,
+each district is represented by one seat on the body,
+and each district uses simple plurality voting
+to elect a representative to that seat.
+Unfortunately, this approach is fraught with problems.
+First, since the representative for each district
+is elected in a single-winner plurality election,
+these elections are vulnerable to spoilers, wasted votes,
+and election of representatives with less than majority support
+in the same way that other single-winner plurality elections are vulnerable.
+Second, SMP often produces highly <i>disproportional</i> results:
+for example,
+large minority groups that are dispersed among multiple districts,
+as racial and ethnic groups often tend to be,
+often find themselves with little or no representation whatsoever
+because their votes do not constitute a majority in any one district.
+Third, the traditional approach is highly vulnerable to <i>gerrymandering</i>,
+or explicit manipulation of the boundaries of districts by leaders in power -
+effectively "choosing their voters before the voters can choose them" -
+so as to help their party or strengthen their positions as incumbents.
+
+<p>
+Delegative voting can be used
+to elect candidates to representative bodies
+using many single-seat districts,
+a smaller number of multiple-seat districts,
+or even all at once in "one big district".
+Using DV with single-member districts
+brings with it the same advantages
+as other single-winner DV elections do over single-winner plurality elections,
+but single-member DV can still produce highly disproportionate results
+across the overall resulting body,
+and is still susceptible to gerrymandering.
+Using DV to elect multiple seats at once
+produces much more proportional results
+and is less susceptible to gerrymandering;
+using DV to elect the entire body at once
+ensures <i>extremely</i> proportional results
+and is not vulnerable to gerrymandering at all
+because there are no districts to manipulate.
+Furthermore, DV is the only proportional representation system known
+that can make it <i>realistically</i> both viable and compelling
+to elect large bodies with hundreds or thousands of seats,
+potentially representing millions or hundreds of millions of electors,
+in a single election consisting of just one enormous district.
+
+<p>
+<h2 id="how">How it works</h2>
+
+<p>
+In a multi-seat delegative election,
+each candidate for a given district
+decides and registers a next-choice list
+well before the election,
+exactly as in single-winner DV.
+Votes are similarly taken and counted
+exactly as in single-winner DV:
+each voter indicates a choice for a single candidate,
+and the primary result from the counting process
+is simply a table indicating
+the total number of votes received by each candidate.
+This raw table of results can then be made publicly available
+and widely distributed.
+
+<p>
+To determine which candidates actually win seats in the election,
+a quota is calculated based on the number of seats in the district
+and the total number of valid votes received by all candidates.
+This quota is calculated as follows:
+
+<p>
+<center>
+<table>
+<tr>
+<td valign=center>
+quota =
+<td valign=center>
+<center>
+number of votes
+<hr>
+(number of candidates + 1)
+</center>
+<td valign=center>
++ 1
+</table>
+</center>
+
+<p>
+The list of candidates is then sorted
+according to the number of votes each received,
+and the list is progressively shortened
+by either electing or eliminating one candidate at a time.
+At each step,
+if the candidate with the most votes
+has exceeded the quota,
+then that candidate is awarded a seat, removed from the list,
+and any <i>surplus</i> votes the candidate received above the quota
+are transferred according to his established next-choice list.
+If on the other hand no candidate has reached the quota,
+then the candidate with the fewest votes is eliminated
+and his votes are similarly transferred according to his next-choice list.
+As with single-winner DV,
+votes to be transferred are divided equally
+between all the candidates on the next-choice list
+that have not yet been elected or eliminated.
+This process continues until all seats have been filled
+or there enough seats available for all remaining candidates.
+
+<p>
+<h2 id="advantages">Advantages</h2>
+
+Multi-seat DV provides the same advantages as single-seat DV
+in that it avoids wasted votes and spoilers,
+and it promotes a broader effective choice of candidates
+by giving parties or candidates that are too small to win seats themselves
+the power to affect the outcome of the election indirectly
+and thereby achieve some degree of influence.
+Furthermore, multi-seat DV
+yields extremely proportional results within a given district.
+A group commanding a given percentage of the popular vote in a district
+is guaranteed to be able to determine that percentage
+of the district's seats on the council,
+rounded down to the nearest seat.
+A group representing majority in the district
+will command a majority on the council as well.
+The level of proportionality of results
+across all the districts electing a body of representatives, of course,
+depends on the number of seats in each district:
+larger districts tend to produce more proportional results.
+
+<p>
+<h2 id="stv">Relationship to Single Transferable Vote</h2>
+
+In the same way that single-winner DV
+is really just a variant of IRV,
+multi-seat DV is actually just a variant of
+<a href="http://www.wikipedia.com/wiki/Single+transferable+vote">
+Single Transferable Vote (STV)</a>.
+Multi-seat DV uses
+essentially the same selection and elimination process as STV
+to determine the winning candidates,
+except that, as with single-winner DV,
+the way a particular vote is transferred
+is determined by the voter's first-choice candidate,
+rather than by an explicit ranking on the ballot itself.
+For this reason,
+multi-seat DV has exactly the same apparent drawback with respect to STV
+as single-winner DV does with respect to IRV:
+given a fixed number of candidates,
+voters have somewhat less flexibility in indicating their preferences.
+On the other hand, multi-seat DV
+also has exactly the same set of advantages over STV,
+such as simplicity, transparency, cost, speed, security,
+and potentially an even broader spectrum of candidates to choose from.
+
+<p>
+Furthermore, the simplicity, speed, and cost advantages of DV
+are even more profound for multi-seat elections
+than they are for single-winner elections,
+because multi-seat STV elections are inherently more complex
+and usually involve a much larger number of vote transfers
+before the complete outcome of the election can be determined.
+The process of electing and eliminating candidates
+and repeatedly re-shuffling their ballots according to successive choices
+can go on for days even if districts are kept fairly small.
+In DV, on the other hand,
+counting ballots is just as quick and easy as it is in plurality systems;
+once the raw tallies for all the candidates are available,
+determining the winners can be done manually in a matter of minutes
+or automatically in a matter of seconds by a simple computer program.
+Further, this program could be widely distributed along with the raw totals
+so that the election results can be independently verified by anyone.
+
+<p>
+Beyond these advantages,
+DV has one additional advantage over STV
+that is unique to multi-seat elections.
+In STV, the transfer of a candidate's surplus votes,
+after the candidate has exceeded the quota and been awarded a seat,
+presents a problem:
+exactly <i>which</i> of the candidate's ballots should be transferred
+and which should be set aside to fill the quota?
+In STV, this question matters at least in theory if not necessarily in practice,
+because different ballots that wind up in one candidate's pile
+can have different next-choice lists.
+If your particular ballot happens to be selected for transfer,
+then your ballot has a chance of affecting the election of other candidates;
+if your ballot is one of the ones set aside to fill the quota,
+then it is "dead" and cannot have any further effect.
+Simply picking an arbitrary set of ballots,
+such as by taking the appropriate number from the top of the candidate's pile,
+might give voters who voted earlier (or later)
+a better chance for their next-choices to influence the election.
+But taking special care to select a "random" sample,
+let alone examining all the ballots
+and ensuring that the set selected for transfer
+is properly "representative" of all the ballots
+by some definition of "representative",
+is more difficult
+and is probably only practical if the counting process is fully automated.
+In contrast, delegative voting sidesteps this issue entirely
+because all of the ballots for a given candidate
+are inherently identical and indistinguishable:
+only numbers have to be shuffled and reshuffled, not ballots.
+
+<p>
+<h2 id="ideal">The Single-District Ideal</h2>
+
+When Thomas Hare first developed the STV system in the 19th century,
+he proposed treating the UK as one vast constituency,
+so that any voter in the country
+could vote for any candidate for the House of Commons
+regardless of geographic location.
+This approach would theoretically provide voters
+with the broadest possible choice of candidates,
+and would also ensure the most proportional possible results.
+
+<p>
+Obviously Hare's proposal was never adopted,
+and in practice STV has only been used
+either for electing fairly small bodies,
+such as the 9-member city council of Cambridge, Massachusetts,
+or by dividing a large body into constituencies
+with only a few seats each,
+such as Northern Ireland which uses constituencies of three to five seats.
+There are a number of reasons for keeping constituency sizes small:
+
+<ul>
+<li>	Probably the most important reason
+	is simply to keep the preferential ballots to a manageable size.
+	Experience with STV shows that voters can manage
+	to find and mark preferences for their favorite candidates
+	among, say, a list of 10-20 candidates for a 5-seat district.
+	The prospect of printing ballots
+	listing hundreds or thousands of candidates for a single constituency,
+	let alone expecting ordinary voters to find and mark preferences
+	for their favorite candidates on such a list,
+	is clearly unrealistic.
+
+<li>	A second practical reason for small constitutencies
+	is to keep the process of counting ballots manageable.
+	With many small constituencies,
+	the ballot counting process after an election
+	can proceed independently and in parallel
+	at various administrative centers throughout a country.
+	But as long as ballots are physical pieces of paper,
+	it would be very difficult to implement the STV counting process
+	in a distributed fashion for one huge constituency;
+	all the ballots cast throughout the entire country
+	would instead probably have to be shipped to one central location,
+	which might take weeks or months to count them all.
+	Of course, automated ballot counting and electronic voting
+	could substantially alleviate this problem,
+	but not until standardized, interoperable automated systems
+	have been pervasively deployed throughout the country,
+	and even in the richest countries this condition is far from being met.
+	Implementing large STV constituencies in a developing country
+	would be out of the question
+	(even ignoring the fact that implementing any preferential system
+	in a country with substantial illiteracy and innumeracy
+	is a highly dubious proposition in the first place).
+
+<li>	A final reason sometimes cited for keeping constituencies small
+	is to encourage candidates to be responsive to their local electorate.
+	However, this argument
+	only really holds water for List-PR systems,
+	because they are party-based rather than candidate-based.
+	Both STV and DV allow for highly effective constituency-based politics,
+	as the discussion below will show.
+</ul>
+
+Under multi-seat delegative voting all of the above problems become solvable.
+Because DV only requires voters to select a single candidate
+rather than to indicate an order of preference between several candidates,
+addressing the first problem above becomes merely
+a matter of choosing an appropriate balloting method.
+Voters in the U.S.
+are accustomed to ballots being pieces of paper printed by the state
+and listing all the official candidates for each office,
+which they must mark or punch before depositing into the box.
+An alternate approach,
+which has been well proven in the context of other electoral systems
+such as France's two-round system,
+is to have the candidates and parties themselves print their own ballots.
+The electoral authority specifies certain aspects of the ballot papers,
+such as their overall size and shape,
+but within these parameters the candidates and parties
+are free to design the ballots as they wish.
+Each ballot paper lists only a single candidate,
+perhaps along with other associated information
+such as party, slogan, or contact information -
+much like a business card.
+At election time,
+the voter selects a ballot paper from the desired candidate,
+inserts it in an envelope provided at the voting location,
+and drops the envelope into the ballot box.
+(The envelope serves to validate the ballot:
+only envelopes containing exactly one ballot will be counted,
+and any ballots found "loose" in the ballot box are discarded.)
+
+<p>
+With this voting mechanism,
+voters never need to worry about finding a desired candidate
+in a list of all possible candidates in a large multi-seat DV election.
+Instead, candidates can pass out their ballot cards
+through whatever channels they choose:
+in person, by mail,
+through the help of volunteers going door-to-door,
+or through the help of sympathetic organizations
+such as social, environmental, or religious groups.
+In addition, to ensure that every voter who shows up at a voting location
+always has several choices at election time
+even if they had no opportunity to receive ballot cards
+directly from candidates (or if they lost their cards),
+each official party would be allowed to provide a stock of ballot cards,
+to be made directly available at the voting location on election day,
+for one particular candidate selected by that party
+as the "default" candidate for that voting location.
+Thus, each voter can vote
+for any candidate they have received a card from directly,
+or can place a local "party-line" vote simply by showing up
+and picking a card from the appropriate party's
+stock of default ballots at their voting location.
+
+<p>
+In this system,
+candidates would have tremendous flexibility in choosing how to campaign.
+Many candidates would naturally focus on a particular local community -
+particularly those candidates selected by their affiliated parties
+to be the "default" candidate for corresponding voting locations.
+Such "geographic" candidates
+could ultimately determine their own geographic districts -
+e.g., which regions to focus on in their campaigns.
+Some candidates might attempt to campaign directly across a large region,
+in order to get as many direct votes as possible from the whole region.
+However, well-organized parties are likely to find it desirable
+to run a large number of candidates each covering fairly small regions,
+so that each of these candidates can cover her own area most effectively
+and even develop personal relationships with her constituents.
+This "saturation" could be highly effective
+even if the party ends up running far more candidates
+than can remotely be expected to win seats,
+because DV allows the smaller candidates to transfer their votes
+to the more popular or established candidates in the party,
+demanding in return the political attention and consideration
+of the larger candidates who do win seats,
+effectively allowing small candidates to become political proxies
+between the larger candidates and particular local communities.
+Other candidates might eschew geographic boundaries entirely
+and campaign within widely dispersed special interest groups,
+such as by mail, electronically,
+or by contacting voters and handing out their ballot cards
+at conferences related to their particularly community of interest.
+In effect,
+by avoiding the <i>a priori</i> establishment of arbitrary district boundaries,
+DV potentially allows the electors in 
+to define their own "virtual constituencies"
+by virtue of the communities in which they choose to campaign.
+
+<p>
+Thus, the first problem above -
+providing voters with a practical way to select
+between a (theoretically) extremely large number of candidates -
+is solved.
+Solving the second problem,
+actually counting the ballots efficiently,
+also becomes relatively straightforward under DV.
+Since the only information needed from the counting process
+is the total number of votes cast for each candidate
+throughout the whole election,
+each voting location can count its ballots independently.
+Although each voting location
+could encounter a large variety of ballot papers in its ballot box,
+most of the ballots are likely to be for a few locally-popular candicates,
+so the counting process can be expected to proceed fairly quickly.
+Counting could be further sped
+by requiring the parties to include
+a bar code or other machine-readable label on their ballot papers.
+Each voting location, having counted the ballots cast at that location,
+then submit its raw numeric totals for each candidate to a central authority,
+which then simply combines the totals from all the voting locations
+to generate a final master list.
+Even if this master list
+contains vote counts for thousands or even millions of candidates,
+determining the winners of the election from this list
+(and from a database containing all of the candidates' next-choice lists)
+is still a straightforward computation
+that can be expected to finish in a matter of seconds.
+
+<p>
+In this way,
+all three major problems with large constituencies are solved,
+making DV apparently the first multi-seat electoral system
+that can realistically provide fully proportional district-free representation
+for bodies and electorates of essentially unlimited size.
+With single-constituency DV
+all cohesive parties and interest groups in the electorate
+can achieve representation in direct proportion to their size,
+completely independently of how concentrated or dispersed they may be.
+Further, there is no opportunity for gerrymandering
+since there are no districts to manipulate.
+Finally,
+since the only votes that are typically "wasted" in a DV election
+are votes that wind up with the last candidate to be eliminated,
+and this number is always less than the quota,
+the maximum possible fraction of "wasted" votes in the election
+decreases rapidly as the number of seats increases.
+Contrast this situation with SMP systems,
+where half or more of the votes in each district is ultimately wasted -
+and <i>all</i> of the votes in those districts that are "locked up"
+through natural demographics or gerrymandering -
+and it appears DV could provide a powerful tool
+for increasing the fairness of representation
+and in turn the effectiveness of a democracy.
+
+</body>
+</html>

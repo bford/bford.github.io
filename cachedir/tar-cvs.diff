@@ -1,0 +1,203 @@
+Index: ChangeLog
+===================================================================
+RCS file: /cvsroot/tar/tar/ChangeLog,v
+retrieving revision 1.119
+diff -u -r1.119 ChangeLog
+--- ChangeLog	19 Aug 2004 13:13:37 -0000	1.119
++++ ChangeLog	20 Aug 2004 10:22:35 -0000
+@@ -1,3 +1,17 @@
++2004-08-20  Bryan Ford  <baford@mit.edu>
++
++	* src/tar.c: New option --exclude-caches, to exclude
++	cache directories automatically on archive creation.
++	Cache directories are directories containing a
++	standardized tag file, as specified at:
++		http://www.brynosaurus.com/cachedir/spec.html	
++	* src/common.h: New variable exclude_caches_option.
++	* src/create.c: New function check_cache_directory(),
++	called from dump_dir0() if exclude_caches_option is set,
++	to check for a cache directory tag and exclude the directory
++	if such a tag is found.
++	* doc/tar.texi: Updated accordingly.
++
+ 2004-08-19  Sergey Poznyakoff  <gray@Mirddin.farlep.net>
+ 
+ 	* scripts/backup.in: Renamed LIBPATH to LIBDIR.
+Index: doc/tar.texi
+===================================================================
+RCS file: /cvsroot/tar/tar/doc/tar.texi,v
+retrieving revision 1.58
+diff -u -r1.58 tar.texi
+--- doc/tar.texi	19 Aug 2004 13:10:01 -0000	1.58
++++ doc/tar.texi	20 Aug 2004 10:23:03 -0000
+@@ -201,6 +201,11 @@
+ @set xref-exclude-from @xref{exclude}
+ @set pxref-exclude-from @pxref{exclude}
+ 
++@set op-exclude-caches @kbd{--exclude-caches}
++@set ref-exclude-from @ref{exclude-caches}
++@set xref-exclude-from @xref{exclude-caches}
++@set pxref-exclude-from @pxref{exclude-caches}
++
+ @set op-extract @kbd{--extract} (@kbd{--get}, @kbd{-x})
+ @set ref-extract @ref{extract}
+ @set xref-extract @xref{extract}
+@@ -2743,6 +2748,11 @@
+ Similar to @samp{--exclude}, except @command{tar} will use the list of
+ patterns in the file @var{file}.  @FIXME-xref{}
+ 
++@item --exclude-caches
++
++Automatically excludes all directories
++containing a cache directory tag.  @FIXME-xref{}
++
+ @item --file=@var{archive}
+ @itemx -f @var{archive}
+ 
+@@ -6144,6 +6154,24 @@
+ @FIXME{do the exclude options files need to have stuff separated by
+ newlines the same as the files-from option does?}
+ 
++@table @kbd
++@item --exclude-caches
++Causes @command{tar} to ignore directories containing a cache directory tag.
++@end table
++
++@findex exclude-caches
++When creating an archive,
++the @samp{--exclude-caches} option
++causes @command{tar} to exclude all directories
++that contain a @dfn{cache directory tag}.
++A cache directory tag is a short file
++with the well-known name @file{CACHEDIR.TAG}
++and having a standard header
++specified in @url{http://www.brynosaurus.com/cachedir/spec.html}.
++Various applications write cache directory tags
++into directories they use to hold regenerable, non-precious data,
++so that such data can be more easily excluded from backups.
++
+ @menu
+ * controlling pattern-patching with exclude::
+ * problems with exclude::
+Index: src/common.h
+===================================================================
+RCS file: /cvsroot/tar/tar/src/common.h,v
+retrieving revision 1.38
+diff -u -r1.38 common.h
+--- src/common.h	3 Aug 2004 04:44:39 -0000	1.38
++++ src/common.h	20 Aug 2004 10:23:05 -0000
+@@ -160,6 +160,9 @@
+ /* Patterns that match file names to be excluded.  */
+ GLOBAL struct exclude *excluded;
+ 
++/* Exclude directories containing a cache directory tag. */
++GLOBAL bool exclude_caches_option;
++
+ /* Specified file containing names to work on.  */
+ GLOBAL const char *files_from_option;
+ 
+Index: src/create.c
+===================================================================
+RCS file: /cvsroot/tar/tar/src/create.c,v
+retrieving revision 1.86
+diff -u -r1.86 create.c
+--- src/create.c	8 Aug 2004 14:20:17 -0000	1.86
++++ src/create.c	20 Aug 2004 10:23:08 -0000
+@@ -922,6 +922,45 @@
+     }
+ }
+ 
++/* Look in directory DIRNAME for a cache directory tag file
++   with the magic name "CACHEDIR.TAG" and a standard header,
++   as described at:
++	http://www.brynosaurus.com/cachedir
++   Applications can write this file into directories they create
++   for use as caches containing purely regenerable, non-precious data,
++   allowing us to avoid archiving them if --exclude-caches is specified. */
++static bool
++check_cache_directory (char *dirname)
++{
++  static char tagname[] = "CACHEDIR.TAG";
++  char *tagpath;
++  int fd;
++  int tag_present = false;
++
++  tagpath = xmalloc(strlen(dirname) + strlen(tagname) + 1);
++  strcpy(tagpath, dirname);
++  strcat(tagpath, tagname);
++
++  fd = open(tagpath, O_RDONLY);
++  if (fd >= 0)
++    {
++      static char taghdr[] = "Signature: 8a477f597d28d172789f06886806bc55";
++      static char tagbuf[43];
++
++      if (read(fd, tagbuf, 43) == 43)
++        {
++	  if (memcmp(taghdr, tagbuf, 43) == 0)
++	    tag_present = true;
++	}
++
++      close(fd);
++    }
++
++  free(tagpath);
++
++  return tag_present;
++}
++
+ static void
+ dump_dir0 (char *directory,
+ 	   struct tar_stat_info *st, int top_level, dev_t parent_device)
+@@ -1012,6 +1051,16 @@
+       return;
+     }
+ 
++  if (exclude_caches_option
++      && check_cache_directory(st->orig_file_name))
++    {
++      if (verbose_option)
++	WARN ((0, 0,
++	       _("%s: contains a cache directory tag; not dumped"),
++	       quotearg_colon (st->orig_file_name)));
++      return;
++    }
++
+   {
+     char const *entry;
+     size_t entry_len;
+Index: src/tar.c
+===================================================================
+RCS file: /cvsroot/tar/tar/src/tar.c,v
+retrieving revision 1.95
+diff -u -r1.95 tar.c
+--- src/tar.c	17 Aug 2004 16:05:03 -0000	1.95
++++ src/tar.c	20 Aug 2004 10:23:11 -0000
+@@ -186,6 +186,7 @@
+   CHECK_LINKS_OPTION,
+   DELETE_OPTION,
+   EXCLUDE_OPTION,
++  EXCLUDE_CACHES_OPTION,
+   FORCE_LOCAL_OPTION,
+   GROUP_OPTION,
+   IGNORE_CASE_OPTION,
+@@ -445,6 +446,8 @@
+    N_("exclude files, given as a PATTERN"), 71 },
+   {"exclude-from", 'X', N_("FILE"), 0,
+    N_("exclude patterns listed in FILE"), 71 },
++  {"exclude-caches", EXCLUDE_CACHES_OPTION, 0, 0,
++   N_("exclude directories containing a cache tag"), 71 },
+   {"ignore-case", IGNORE_CASE_OPTION, 0, 0,
+    N_("exclusion ignores case"), 71 },
+   {"anchored", ANCHORED_OPTION, 0, 0,
+@@ -914,6 +917,10 @@
+       add_exclude (excluded, arg, args->exclude_options | recursion_option);
+       break;
+       
++    case EXCLUDE_CACHES_OPTION:
++      exclude_caches_option = true;
++      break;
++
+     case FORCE_LOCAL_OPTION:
+       force_local_option = true;
+       break;

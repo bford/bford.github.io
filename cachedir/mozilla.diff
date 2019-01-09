@@ -1,0 +1,110 @@
+Index: netwerk/cache/src/nsDiskCacheDevice.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/netwerk/cache/src/nsDiskCacheDevice.cpp,v
+retrieving revision 1.94
+diff -u -p -c -8 -r1.94 nsDiskCacheDevice.cpp
+*** netwerk/cache/src/nsDiskCacheDevice.cpp	22 May 2004 20:02:41 -0000	1.94
+--- netwerk/cache/src/nsDiskCacheDevice.cpp	16 Aug 2004 15:35:06 -0000
+*************** nsDiskCacheDevice::OpenDiskCache()
+*** 859,874 ****
+--- 859,877 ----
+      }
+  
+      // if we don't have a cache directory, create one and open it
+      if (!cacheDirExists) {
+          rv = InitializeCacheDirectory();
+          if (NS_FAILED(rv))  return rv;
+      }
+  
++     // write (or re-write if missing) a tag file into the cache directory.
++     TagCacheDirectory();
++ 
+      if (! mFirstInit)  return NS_OK;  // we're done
+  
+      // Empty Cache Trash
+      PRBool trashDirExists;
+      nsCOMPtr<nsIFile> trashDir;
+      rv = GetCacheTrashDirectory(getter_AddRefs(trashDir));
+      if (NS_FAILED(rv))  return rv;
+      rv = trashDir->Exists(&trashDirExists);
+*************** nsDiskCacheDevice::InitializeCacheDirect
+*** 1090,1105 ****
+--- 1093,1143 ----
+      if (NS_FAILED(rv))  return rv;
+  
+      // reopen the cache map     
+      rv = mCacheMap->Open(mCacheDirectory);
+      return rv;
+  }
+  
+  
++ // Write a standardized "cache directory tag" file into our cache directory,
++ // which backup and other data management software can easily recognize
++ // so as to avoid treating the contents of the disk cache as "precious" data.
++ // See http://www.brynosaurus.com/cachedir/ for more information.
++ void
++ nsDiskCacheDevice::TagCacheDirectory()
++ {
++     nsresult rv;
++ 
++     // create nsILocalFile for the tag file "CACHEDIR.TAG"
++     nsCOMPtr<nsIFile> file;
++     rv = mCacheDirectory->Clone(getter_AddRefs(file));
++     if (NS_FAILED(rv))  return;
++     nsCOMPtr<nsILocalFile> localFile(do_QueryInterface(file, &rv));
++     if (NS_FAILED(rv))  return;
++     rv = localFile->AppendNative(NS_LITERAL_CSTRING("CACHEDIR.TAG"));
++     if (NS_FAILED(rv))  return;
++ 
++     // open the tag file
++     PRFileDesc *tagFD;
++     rv = localFile->OpenNSPRFileDesc(PR_RDWR | PR_CREATE_FILE, 00664, &tagFD);
++     if (NS_FAILED(rv))  return;
++ 
++     // write the magic tag file header
++     static const char tagHdr[] =
++ 	"Signature: 8a477f597d28d172789f06886806bc55\n"
++ 	"# This file is a cache directory tag created by Mozilla.\n"
++ 	"# For information about cache directory tags, see:\n"
++ 	"#\thttp://www.brynosaurus.com/cachedir/\n";
++     (void) PR_Write(tagFD, tagHdr, sizeof(tagHdr)-1);
++ 
++     (void) PR_Close(tagFD);
++ }
++ 
++ 
+  nsresult
+  nsDiskCacheDevice::EvictDiskCacheEntries(PRInt32  targetCapacity)
+  {
+      nsresult rv;
+      
+      if (mCacheMap->TotalSize() < targetCapacity)  return NS_OK;
+  
+      nsDiskCacheEvictor  evictor(this, mCacheMap, &mBindery, targetCapacity, nsnull);
+Index: netwerk/cache/src/nsDiskCacheDevice.h
+===================================================================
+RCS file: /cvsroot/mozilla/netwerk/cache/src/nsDiskCacheDevice.h,v
+retrieving revision 1.30
+diff -u -p -c -8 -r1.30 nsDiskCacheDevice.h
+*** netwerk/cache/src/nsDiskCacheDevice.h	18 Apr 2004 21:59:10 -0000	1.30
+--- netwerk/cache/src/nsDiskCacheDevice.h	16 Aug 2004 15:35:06 -0000
+*************** private:    
+*** 112,127 ****
+--- 112,128 ----
+  
+      nsresult    GetCacheTrashDirectory(nsIFile ** result);
+      nsresult    OpenDiskCache();
+      nsresult    ClearDiskCache();
+      nsresult    DeleteFiles(nsCOMArray<nsIFile> * fileList);
+      nsresult    ListTrashContents(nsCOMArray<nsIFile> ** result);
+      nsresult    MoveCacheToTrash(nsIFile ** result);
+      nsresult    InitializeCacheDirectory();
++     void        TagCacheDirectory();
+  
+  
+      nsresult    EvictDiskCacheEntries(PRInt32  targetCapacity);
+      
+      /**
+       *  Member variables
+       */
+      nsCOMPtr<nsILocalFile>  mCacheDirectory;

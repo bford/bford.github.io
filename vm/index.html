@@ -1,0 +1,315 @@
+<html>
+<head>
+	<title>VX32 Virtual Extension Environment</title>
+<style type="text/css"><!--
+body {
+	background-color: white;
+	color: black;
+	font-family: serif;
+	font-size: medium;
+	line-height: 1.2em;
+	margin-left: 0.5in;
+	margin-right: 0.5in;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-indent: 0in;
+}
+h1.tl {
+	text-indent: 0in;
+	font-weight: bold;
+	font-size: 1.4em;
+	line-height: 1.2em;	/* relative to font-size, dumb css */
+	text-align: center;
+	margin-top: 1em;
+}
+
+h2.au {
+	text-indent: 0in;
+	font-weight: normal;
+	font-size: medium;
+	text-align: center;
+	margin-top: 1.5em;
+	margin-bottom: 3em;
+}
+
+h2.sh {
+	text-indent: 0in;
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 0.05in;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+--></style>
+</head>
+<body bgcolor=white text=black>
+
+<!--#include virtual="../header.html" -->
+</center>
+
+<center>
+<p>
+[
+<a href="#About">about</a> |
+<a href="#Documentation">docs</a> |
+<a href="#Applications">apps</a> |
+<a href="#Code">code</a> |
+<a href="#Warning!">warning!</a> |
+<a href="#Contact">contact</a> |
+<a href="#Links">links</a>
+]
+</p>
+</center>
+
+<h1 class=tl>Vx32: portable, efficient, safe<br>execution of untrusted x86 code</h1>
+
+<h2 class=au><a href="http://www.brynosaurus.com/">Bryan Ford</a><br>
+<a href="http://swtch.com/~rsc/">Russ Cox</a><br><br>
+Computer Science and Artificial Intelligence Laboratory<br>
+Massachusetts Institute of Technology</h2>
+</center>
+
+<a name="About"></a><h2 class=sh>About</h2>
+
+<p>
+Vx32 is a user-mode library that can be linked into arbitrary applications
+that wish to create secure, isolated execution environments in which to run
+untrusted extensions or plug-ins implemented as native x86 code. 
+Vx32 is similar in purpose to the Java or .NET virtual machines, but it runs
+native x86 code, so plug-ins can be written in ANY language,
+not just Java or C#.</p>
+
+<p>
+Vx32 runs on <i>unmodified</i> x86 FreeBSD, Linux, and Mac OS X systems without
+special permissions, privileges, or kernel modules.
+It also runs on x86-64 Linux systems.
+Ports to x86-64 FreeBSD and Mac OS X should not be difficult.
+A port to Windows XP should also be possible.
+</p>
+
+<a name="Documentation"></a><h2 class=sh>Documentation</h2>
+
+<p> 
+The USENIX 2008 paper
+&ldquo;<a href="http://pdos.csail.mit.edu/papers/vx32:usenix08-abs.html">Vx32: Lightweight, User-level Sandboxing on the x86</a>&rdquo;
+explains how vx32 works and gives performance results for running
+various programs under vx32.  
+Some programs even execute faster under vx32 than they do natively!
+</p>
+
+<p>
+There are no manual pages for libvx32 yet.
+To get started writing new vx32 applications,
+the best idea is to look at the sample
+programs vxrun and vxlinux in the vx32 distribution, below.
+</p>
+
+<a name="Applications"></a><h2 class=sh>Applications</h2>
+
+<p>
+Vx32 has been used to build a variety of interesting applications.
+</p>
+
+<p>
+The first was <a href="http://pdos.csail.mit.edu/~baford/vxa/">VXA</a>,
+a future-proof archive format that embeds
+x86 decompressors into archives so that they can be extracted
+in the future without needing to worry about whether the
+tools of the future know that particular compression algorithm.
+VXA runs decompressors safely and efficiently, using vx32.
+VXA is described in detail in the FAST 2005 paper
+&ldquo;<a href="http://www.brynosaurus.com/pub/os/vxa.pdf"
+>VXA: A Virtual Architecture for Durable Compressed Archives</a>.&rdquo;
+</p>
+
+<p>
+Another is Chris Lesniewski-Laas's
+<a href="http://pdos.csail.mit.edu/papers/alpaca-ccs07-abstract.html">Alpaca</a>,
+a proof-carrying authorization scheme based on an interpreted proof
+language.  In Alpaca, high-level concepts such as X.509 certificates
+and RSA encryption
+are implemented in the proof language rather than taken as primitives,
+so that an Alpaca deployment can gracefully adapt when the world
+switches to new authentication mechanisms.  While number theory-based
+algorithms like RSA are very efficient to specify in a mathematical language, 
+iterative round-based hash functions like SHA1 or MD5 are not. 
+Instead, Alpaca allows the introduction of new computations,
+using vx32 to execute untrusted x86 implementations safely and
+efficiently.
+</p>
+
+<p>
+To run the SPEC CPU2006 benchmarks on a variety of systems,
+we used vx32 to write a tiny little user-level operating system that runs 
+statically linked x86 ELF binaries and implements enough of a POSIX-like
+system call interface to handle the variety of SPEC programs.
+This program, called <i>vxrun</i>, could be adapted to create a 
+specialized execution environment that presented a portable 
+interface no matter what the host operating system.
+It would be ideal for implementing secure distributed computations
+in a SETI @Home kind of setting.
+<i>Vxrun</i> is described briefly in the USENIX paper and
+is included in the libvx32 distribution below.
+</p>
+
+<p>
+Inspired by writing a fake operating system, we decided to port
+a real one.  Plan 9 VX (aka 9vx) is a port of the Plan 9 kernel to
+user-level mode on Linux, FreeBSD, and OS X.  9vx runs unmodified
+x86 Plan 9 binaries by invoking vx32 to simulate user-mode execution.
+It implements all the standard low-level operating system
+features&mdash;processes, shared memory, demand paging, 
+preemptive scheduling&mdash;using standard OS interfaces
+like <i>mmap</i>, <i>setitimer</i>, and <i>sigaction</i>,
+with a healthy dose of vx32 to provide the user-mode execution
+that ties everything together.
+</p>
+
+<a name="Code"></a><h2 class=sh>Source Code</h2>
+
+<p>
+<b>Latest version</b>
+</p>
+
+<ul>
+<li><a href="release/vx32-0.12.tar.bz2">vx32-0.12.tar.bz2</a>
+</ul>
+
+<p>This is the most recent version of libvx32.  It also includes source
+code for vxrun and 9vx.
+If you just want to try 9vx, see the binary distribution
+<a href="http://swtch.com/9vx/">here</a>.
+</p>
+
+<p>Vx32 is also available via Mercurial:</p>
+<pre>
+	hg clone <a href="http://hg.pdos.csail.mit.edu/hg/vx32/">http://hg.pdos.csail.mit.edu/hg/vx32/</a>
+</pre>
+<p>Changes to vx32 since version 0.10 are documented in the 
+<a href="http://hg.pdos.csail.mit.edu/hg/vx32/shortlog">mercurial change history</a>.
+</p>
+
+<p>
+VXA and Alpaca are available as part of UIA, the 
+<a href="http://pdos.csail.mit.edu/uia/">Unmanaged Internet Architecture</a>.
+They build against an older version of the vx32 library,
+also included in UIA.  That version approximately
+matches vx32-0.01 below.  They have not yet been
+converted to the new interface.
+</p>
+
+<p>
+<b>Older versions, for reference only:</b>
+</p>
+<ul>
+<li><a href="release/vx32-0.02.tar.bz2">vx32-0.02.tar.bz2</a> (used for USENIX 2008 paper)
+<li><a href="release/vx32-0.01.tar.bz2">vx32-0.01.tar.bz2</a> (used for FAST 2005 paper)
+</ul>
+
+<p>
+<b>Cross compilers</b>
+</p>
+
+<p>
+Libvx32 is an x86 execution library.  It doesn't require a particular binary format,
+but it does provide a simple interface for loading ELF binaries if you care to use ELF.
+VXA, Alpaca, and vxrun all expect ELF binaries.
+We have prepared a version of the gcc toolchain that generates ELF binaries
+compatible with vx32.  On x86 ELF systems like Linux and FreeBSD, you can
+usually get by with the host compilers.
+On non-ELF systems like OS X, you will need to build the cross-compiler 
+toolchain to generate ELF binaries.
+</p>
+
+<ul>
+<li><a href="release/binutils-2.18-vx32.tar.bz2">binutils-2.18-vx32.tar.bz2</a> sources
+<li><a href="release/gcc-4.1.2-vx32.tar.bz2">gcc-4.1.2-vx32.tar.bz2</a> sources
+</ul>
+
+<p>
+To build the compilers:
+</p>
+
+<pre>
+	cd binutils-2.18-vx32
+	./configure --target=vx32
+	make
+	make install
+	
+	cd gcc-4.1.2-vx32
+	./configure --enable-languages=c --disable-libssp --target=vx32
+	make
+	make install
+</pre>
+
+<p>
+Pre-built binaries are also available:
+</p>
+
+<ul>
+<li><a href="release/vx32-gcc-4.1.2-linux.tar.bz2">Linux x86 binaries</a>:
+	compiled on Ubuntu 6.10.
+<li><a href="release/vx32-gcc-4.1.2-freebsd.tar.bz2">FreeBSD x86 binaries</a>:
+	compiled on FreeBSD 5.4.
+<li><a href="release/vx32-gcc-4.1.2-macosx.tar.bz2">Mac OS X x86 binaries</a>:
+	compiled on Mac OS X 10.4.9.
+</ul>
+
+<p>
+The binaries were compiled in the vx32-0.01 days.
+They should still work with newer vx32's, but we haven't tried them recently.
+</p>
+
+<p>
+<b>Licenses</b>
+</p>
+
+<p>
+Libvx32 itself is made available under the terms of the Lesser GNU Public License (LGPL).
+The sample programs and supporting C library are made available under
+a traditional MIT license.
+9vx, because it is derived from Plan 9, is made available under the terms
+of the Lucent Public License 1.02.
+The source code archive contains more details.
+</p>
+
+<a name="Warning!"></a><h2 class=sh>Warning!</h2>
+
+<p>
+Vx32 is a stable research prototype, but it has not been through
+any formal security audits or any other verification.  
+Such a review would be essential before trusting vx32 to handle
+malicious code in the wild.
+<i>USE AT YOUR OWN RISK!</i>
+</p>
+
+<a name="Contact"></a><h2 class=sh>Contact Info</h2>
+
+<p>
+Feel free to contact
+Bryan Ford (baford (at) mit (dot) edu)
+and Russ Cox (rsc (at) swtch (dot) com)
+with questions, comments, and improvements.
+</p>
+
+<a name="Links"></a><h2 class=sh>Related Links</h1>
+
+<ul>
+<li>	<a href="http://pag.csail.mit.edu/~smcc/projects/pittsfield/">
+	PittSFIeld</a>: Secure Fault Isolation (SFI) for the x86.
+<li>	<a href="http://www.dogfish.org/chris/papers/misfit/index.html">
+	MiSFIT</a>: A safe extension system for C++.
+<li>	<a href="http://valgrind.org/">
+	Valgrind</a>: A sophisticated dynamic x86-to-x86 translator
+	for debugging and instrumentation.
+<li>	<a href="http://bochs.sourceforge.net/">
+	Bochs</a>: A mature and portable x86 PC hardware emulator.
+<li>	<a href="http://fabrice.bellard.free.fr/qemu/">
+	QEMU</a>: A faster x86 PC emulator with dynamic binary translation.
+</ul>
+
+<!--#include virtual="../footer.html" -->
+
+</body>
+</html>

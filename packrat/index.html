@@ -1,0 +1,461 @@
+<html>
+<head>
+	<title>Packrat Parsing and
+	Parsing Expression Grammars</title>
+</head>
+<body bgcolor=white text=black link=blue alink=purple vlink=purple>
+
+<!--#include virtual="../header.html" -->
+
+<center>
+<h1>The Packrat Parsing and <br>
+Parsing Expression Grammars Page</h1>
+</center>
+
+<h3>Introduction</h3>
+
+<i>Parsing expression grammars</i> (PEGs) are
+an alternative to context free grammars for formally specifying syntax, and
+<i>packrat parsers</i> are parsers for PEGs
+that operate in guaranteed linear time through the use of memoization.
+For a brief technical summary see
+<a href="http://en.wikipedia.org/wiki/Parsing_expression_grammar">
+the Wikipedia entry on PEGs</a>.
+For more in-depth descriptions see the original
+<a href="/pub/lang/peg">PEG paper</a> and
+<a href="/pub/lang/packrat-icfp02">packrat parsing paper</a>,
+and related papers below.
+Bryan Ford, the maintainer of this site,
+coined the modern terms PEGs and packrat parsing,
+but much of their formal theory existed earlier
+and all the more recent work on this topic is by others.
+
+<h3>Mailing List</h3>
+
+The following mailing list is open to anyone
+wishing to announce software or papers related to PEGs and packrat parsing,
+or discuss ideas and issues:
+
+<blockquote>
+<b><a href="https://lists.csail.mit.edu/mailman/listinfo/peg">
+The PEG Mailing List</a></b>
+</blockquote>
+
+<h3>PEG/Packrat Parsing Bibliography</h3>
+
+The following research papers
+develop and explore PEGs and packrat parsing in detail;
+most were written by various authors working independently.
+The papers are listed chronologically starting from most recent.
+Some of the papers have associated code available online.
+
+<ul>
+<li>
+	<a href="http://www.dcomp.ufs.br/~sergio/docs/repeg.pdf"
+		>From Regular Expressions to Parsing Expression Grammars</a>.
+	<a href="http://www.dcomp.ufs.br/~sergio/">S&eacute;rgio Medeiros</a>,
+	Fabio Mascarenhas, and
+	<a href="http://www.inf.puc-rio.br/%7Eroberto/docs/peg.pdf"
+		>Roberto Ierusalimschy</a>.
+	<a href="http://www.each.usp.br/cbsoft2011/ingles/sblp/sblp_en.html"
+		>SBLP</a>,
+	September 2011.
+
+<li>
+	<a href="http://www.dcomp.ufs.br/~sergio/docs/peglist.pdf"
+		>Parsing Expression Grammars for Structured Data</a>.
+	Fabio Mascarenhas,
+	 <a href="http://www.dcomp.ufs.br/~sergio/">S&eacute;rgio Medeiros</a>,
+	and
+	<a href="http://www.inf.puc-rio.br/%7Eroberto/docs/peg.pdf"
+		>Roberto Ierusalimschy</a>.
+	<a href="http://www.each.usp.br/cbsoft2011/ingles/sblp/sblp_en.html"
+		>SBLP</a>,
+	September 2011.
+
+<li>
+	<b><a href="http://dl.acm.org/citation.cfm?id=1993548">
+	<i>LL(*)</i>: The Foundation of the ANTLR Parser Generator</a></b>.
+	<a href="http://www.cs.usfca.edu/~parrt/">Terence Parr</a> and
+	<a href="http://www.cs.tufts.edu/~kfisher/Kathleen_Fisher/Home.html"
+		>Kathleen Fisher</a>,
+	<a href="http://pldi11.cs.utah.edu/">PLDI</a>,
+	June 2011.
+
+<li>
+	<b><a href="http://www.lmcs-online.org/ojs/viewarticle.php?id=708">
+	TRX: A Formally Verified Parser Interpreter</a>
+	(<a href="http://arxiv.org/pdf/1105.2576">PDF</a>)</b>.
+	<a href="http://www.lmcs-online.org/"
+		>Logical Methods in Computer Science</a>,
+	June 2011.
+
+<li>
+	<b><a href="http://www.romanredz.se/papers/FI2011.pdf">
+	BITES instead of FIRST for Parsing Expression Grammar (PDF)</a></b>.
+	<a href="http://www.romanredz.se/">Roman R. Redziejowski</a>,
+	Fundamenta Informaticae 109(3),
+	2011.
+
+<li>
+	<b><a href="http://tratt.net/laurie/research/publications/html/tratt__direct_left_recursive_parsing_expression_grammars/">Direct Left-Recursive Parsing Expression Grammars</a>
+	(<a href="http://tratt.net/laurie/research/publications/papers/tratt__direct_left_recursive_parsing_expression_grammars.pdf">PDF</a>)</b>.
+	<a href="http://tratt.net/laurie/">Laurence Tratt</a>,
+	Technical report EIS-10-01, Middlesex University,
+	October 2010.
+
+<li>
+	<b><a href="http://www.inf.puc-rio.br/%7Eroberto/docs/ry10-01.pdf"
+		>Converting regexes to Parsing Expression Grammars
+		(PDF)</a></b>.
+	Marcelo Oikawa,
+	<a href="http://www.inf.puc-rio.br/%7Eroberto/docs/peg.pdf"
+		>Roberto Ierusalimschy</a>, and Ana L&uacute;cia de Moura.
+	<a href="http://wiki.dcc.ufba.br/CBSOFT/SBLP2010">SBLP</a>,
+	September 2010.
+
+<li>
+	<b><a href="http://ialab.cs.tsukuba.ac.jp/~mizusima/publications/paste513-mizushima.pdf">Packrat Parsers Can Handle Practical Grammars in Mostly Constant Space (PDF)</a></b>.
+	Kota Mizushima, Atusi Maeda, and Yoshinori Yamaguchi.
+	<a href="http://cseweb.ucsd.edu/paste2010/program.html">PASTE</a>,
+	June 2010.
+
+<li>
+	<b><a href="http://www.romanredz.se/papers/CSP2009.Mouse.pdf">
+	Mouse: From Parsing Expressions to a Practical Parser (PDF)</a></b>.
+	<a href="http://www.romanredz.se/">Roman R. Redziejowski</a>,
+	<a href="http://csp2009.mimuw.edu.pl/">CS&P 2009</a>,
+	September 2009.
+
+<li>
+	<b><a href="http://www.romanredz.se/papers/FI2009.pdf">
+	Applying classical concepts to Parsing Expression Grammar (PDF)</a></b>.
+	<a href="http://www.romanredz.se/">Roman R. Redziejowski</a>,
+	Fundamenta Informaticae 93(1-3),
+	2009.
+
+<li>
+	<b><a href="http://www.inf.puc-rio.br/%7Eroberto/docs/peg.pdf"
+		>A Text Pattern-Matching Tool based on
+		Parsing Expression Grammars (PDF)</a></b>.
+	<a href="http://www.inf.puc-rio.br/~roberto/"
+		>Roberto Ierusalimschy</a>,
+	Software: Practice and Experience 39(3),
+	March 2009.
+
+<li>
+	<b><a href="http://scala-programming-language.1934581.n4.nabble.com/attachment/1956909/0/packrat_parsers.pdf">Packrat Parsing in Scala (PDF)</a></b>.
+	Project Report, Manohar Jonnalagedda, EPFL,
+	January 2009.
+
+<li>
+	<b><a href="http://www.romanredz.se/papers/FI2008.pdf">
+	Some Aspects of Parsing Expression Grammar (PDF)</a></b>.
+	<a href="http://www.romanredz.se/">Roman R. Redziejowski</a>,
+	Fundamenta Informaticae 85(1-4),
+	2008.
+
+<li>
+	<b><a href="http://www.inf.puc-rio.br/~roberto/docs/ry08-4.pdf">
+	A Parsing Machine for PEGs (PDF)</a></b>.
+	S&eacute;rgio Medeiros and Roberto Ierusalimschy.
+	<a href="http://www.dynamic-languages-symposium.org/dls-08/index.html"
+		>DLS</a>,
+	July 2008.
+
+<li>
+	<a href="http://www.cs.ucla.edu/~todd/research/pepm08.pdf"><b>
+	Packrat parsers can support left recursion (PDF)</b></a>.
+	<a href="http://tinlizzie.org/~awarth/">Alessandro Warth</a>,
+	James R. Douglass, and
+	<a href="http://www.cs.ucla.edu/~todd/">Todd Millstein</a>,
+	<a href="http://www.program-transformation.org/PEPM08">PEPM '08</a>,
+	January 2008.
+
+<li>
+	<a href="http://www.mercury.csse.unimelb.edu.au/information/papers/packrat.pdf"><b>
+	DCGs + Memoing = Packrat Parsing: But is it worth it?</b></a>
+	<a href="http://www.cs.mu.oz.au/~rafe/">Ralph Becket</a> and
+	<a href="http://www.cs.mu.oz.au/~zs/">Zoltan Somogyi</a>,
+	<a href="http://www.ist.unomaha.edu/padl2008/">PADL '08</a>,
+	January 2008.
+
+<li>
+	<b><a href="http://tinlizzie.org/~awarth/papers/dls07.pdf">
+	OMeta: an Object-Oriented Language for Pattern Matching (PDF)</a></b>.
+	<a href="http://tinlizzie.org/~awarth/">Alessandro Warth</a> and
+	<a href="http://piumarta.com/cv/bio.html">Ian Piumarta</a>,
+	<a href="http://www.dynamic-languages-symposium.org/dls-07/index.html"
+		>DLS 2007</a>,
+	October 2007.
+
+<li>
+	<b><a href="http://www.chrisseaton.com/katahdin/">
+		A Programming Language Where the Syntax and Semantics
+		Are Mutable at Runtime</a></b>
+	(<a href="http://www.chrisseaton.com/katahdin/katahdin-thesis.pdf"
+		>PDF</a>).
+	<a href="http://www.chrisseaton.com/">Chris Seaton</a>,
+	Master's thesis, University of Bristol, May 2007.
+
+<li>
+	<b><a href="http://www.romanredz.se/papers/FI2007.pdf">
+	Parsing Expression Grammar as a primitive recursive-descent parser
+	with backtracking (PDF)</a></b>
+	<a href="http://www.romanredz.se/">Roman Redziejowski</a>,
+	<a href="http://www2.informatik.hu-berlin.de/ki/CSP2006/">CS&P'2006</a>,
+	September 2006.
+
+<li>
+	<b><a href="http://charybde.homeunix.org/~schmitz/pub/modular.pdf">
+	Modular Syntax Demands Verification (PDF)</a></b>.
+	<a href="http://charybde.homeunix.org/~schmitz/">Sylvain Schmitz</a>,
+	Tech Report I3S/RR-2006-32-FR,
+	Universit&eacute; de Nice,
+	October 2006.
+
+<li>
+	<b><a href="http://www.cs.nyu.edu/rgrimm/papers/pldi06.pdf">
+	Better Extensibility through Modular Syntax (PDF)</a></b>.
+	<a href="http://www.cs.nyu.edu/rgrimm/">Robert Grimm</a>,
+	<a href="http://research.microsoft.com/en-us/um/redmond/events/pldi06/"
+		>PLDI</a>,
+	June 2006.
+
+<li>
+	<b><a href="/pub/lang/peg">Parsing Expression Grammars:
+		A Recognition-Based Syntactic Foundation</a></b>.
+	(<a href="/pub/lang/peg.pdf">PDF</a>).
+	<a href="http://bford.info/">Bryan Ford</a>,
+	<a href="http://www.cs.princeton.edu/~dpw/popl/04/">POPL</a>,
+	January 2004.
+
+<li>
+	<b><a href="/pub/lang/packrat-icfp02">Packrat Parsing:
+		Simple, Powerful, Lazy, Linear Time</a></b>.
+	<a href="http://bford.info/">Bryan Ford</a>,
+	(<a href="/pub/lang/packrat-icfp02.pdf">PDF</a>).
+	<a href="http://icfp2002.cs.brown.edu/">ICFP</a>,
+	October 2002.
+
+<li>
+	<b><a href="/pub/lang/thesis">Packrat Parsing:
+		a Practical Linear-Time Algorithm with Backtracking</a></b>
+	(<a href="/pub/lang/thesis.pdf">PDF</a>).
+	<a href="http://bford.info/">Bryan Ford</a>,
+	Master's thesis, MIT, September 2002.
+
+<li>
+	<b><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4569646">Parsing algorithms with backtrack</a></b>.
+	Alexander Birman and Jeffrey D. Ullman,
+	<a href="http://theory.lcs.mit.edu/~iandc/">
+	Information and Control</a>, 23(1):1-34, August 1973.
+
+<li>
+	<b><a href="ref/birman70tmg.pdf"
+		>The TMG Recognition Schema (PDF)</a></b>.
+	Alexander Birman,
+	Ph.D. dissertation, Princeton, February 1970.
+</ul>
+
+<h3>PEG-related Projects</h3>
+
+The following projects have implemented PEG parsers, parser generators,
+and/or combinator libraries in a variety of languages:
+
+<ul>
+<li><b>Multi-language</b>:
+	<ul>
+	<li>	<a href="http://www.antlr.org/">ANTLR</a>,
+		a well-established parser generator
+		by <a href="http://www.cs.usfca.edu/~parrt/">Terence Parr</a>,
+		supports extensive PEG features
+		and combines packrat parsing with LL parsing techniques.
+
+	<li>	<a href="http://waxeye.org/">Waxeye</a> by
+		<a href="http://orlandohill.com/">Orlando Hill</a>,
+		a PEG-based parser generator supporting
+		C, Java, JavaScript, Python, Ruby, and Scheme.
+
+	<li>	<a href="http://www.parboiled.org/">parboiled</a>
+		is a parser library for Java and Scala
+		that interprets parsers expressed "in-line" in Java/Scala code.
+
+	<li>	<a href="http://code.google.com/p/vembyr/">vembyr</a>
+		supports C++, Python, and Ruby.
+	</ul>
+
+<li><b><a href="http://java.sun.com/">Java</a></b>:
+	<ul>
+	<li>	<a href="http://www.cs.nyu.edu/rgrimm/xtc">
+		<i>Rats!</i></a> by
+		<a href="http://www.cs.nyu.edu/rgrimm/">Robert Grimm</a>,
+		a part of the
+		<a href="http://www.cs.nyu.edu/rgrimm/xtc">
+		eXTensible C</a> project,
+		builds packrat parsers supporting modular, extensible syntax.
+
+	<li>	<a href="http://sourceforge.net/projects/instil-lang">LGI</a>,
+		a dynamic PEG-based parser generator.
+
+	<li>	<a href="http://www.romanredz.se/freesoft.htm">Mouse</a>,
+		a backtracking recursive-descent parser generator by
+		<a href="http://www.romanredz.se/">Roman Redziejowski</a>.
+	</ul>
+
+<li><b><a href="http://www.python.org/">Python</a></b>:
+	<ul>
+	<li>
+	The <a href="http://sourceforge.net/projects/pyparsing">pyparsing</a>
+	monadic parsing combinator library
+	by Paul McGuire
+	now supports packrat parsing.
+
+	<li>
+	<a href="http://codespeak.net/pypy/dist/pypy/doc/rlib.html#parsing">
+	Packrat parsing support</a>
+	has also been incorporated into
+	<a href="http://codespeak.net/pypy/">PyPy</a>.
+
+	<li>
+	<a href="http://fdik.org/pyPEG/">pyPEG</a>
+	is a PEG parser interpreter for Python by Volker Birk.
+	</ul>
+
+<li><b><a href="http://www.haskell.org/">Haskell</a></b>:
+	<ul>
+	<li>
+	<a href="http://repetae.net/computer/frisby/">Frisby</a>
+	by <a href="http://repetae.net/">John Meacham</a>
+	is a monadic packrat parser library for Haskell
+	that uses advanced Haskell type system features
+	to support dynamic specification of composable parsers.
+
+	<li>
+	<a href="http://pdos.csail.mit.edu/~baford/packrat/thesis/">
+	Pappy</a>
+	by <a href="http://www.brynosaurus.com/">Bryan Ford</a>
+	is a simple prototype packrat parser generator for Haskell.
+	<i>Not actively supported</i>.
+	</ul>
+
+<li><b>C, C++</b>:
+	<ul>
+	<li>
+	The <a href="http://code.google.com/p/pegtl/">PEG Template Library</a>
+	for <a href="http://en.wikipedia.org/wiki/C%2B%2B0x">C++0x</a>
+	by Colin Hirsch expresses grammars via C++ templates.
+
+	<li>
+	The <a href="http://piumarta.com/software/peg/">peg/leg</a>
+	parser generator emphasizes convenience for those
+	already familiar with lex/yacc.
+
+	<li>
+	<a href="http://chilon.net/">chilon</a> is a template-based
+	parser library that builds ASTs from the same PEG spec.
+	</ul>
+
+<li><b>C#</b>:
+	<ul>
+	<li>
+	<a href="http://www.codeplex.com/NPEG">NPEG</a> is a library
+	providing objects to build PEGs incrementally in C#.
+
+	<li>
+	<a href="http://ironmeta.sourceforge.net/">IronMeta</a>
+	is a C# implementation of
+	<a href="http://cs.ucla.edu/~awarth/ometa/">OMeta</a>.
+	</ul>
+
+<li><b>JavaScript</b>:
+	<ul>
+	<li>
+	<a href="http://cs.ucla.edu/~awarth/ometa/">OMeta</a>
+	supports PEG-based pattern matching extended to handle
+	arbitrary kinds of data.
+
+	<li>
+	<a href="http://pegjs.majda.cz/">PEG.js</a>
+	is a parser generator that produces fast parsers
+	with excellent error reporting.
+	</ul>
+
+<li><b><a href="http://www.tcl.tk/">Tcl</a></b>:
+	The new
+	<a href="http://tcllib.sourceforge.net/doc/peg.html">
+	grammar::peg</a> module
+	supports grammar definition and parsing using PEGs.
+
+<li><b><a href="http://www.smalltalk.org/">Smalltalk</a></b>:
+	<a href="http://cs.ucla.edu/~awarth/ometa/">OMeta</a>
+	provides PEG-based pattern matching
+	for the <a href="http://www.squeak.org/">Squeak</a>
+	programming environment.
+
+<li><b><a href="http://www-swiss.ai.mit.edu/projects/scheme/">Scheme</a></b>:
+	<ul>
+	<li>
+	Tony Garnock-Jones has written
+	<a href="http://www.lshift.net/blog/2005/08/11/extensible-parsing-systems">a portable packrat parser library for Scheme</a>,
+	with
+	<a href="http://www.lshift.net/~tonyg/packrat.pdf">documentation here</a>.
+
+	<li><a href="https://github.com/kazzmir/Pegs">peg.rkt</a>,
+	a parser generator for Scheme/Racket.
+
+	<li><a href="http://wiki.call-cc.org/eggref/4/genturfahi"
+		>genturfa'i</a>,
+	a packrat parser for Scheme.
+	</ul>
+
+<li><b><a href="http://en.wikipedia.org/wiki/Common_Lisp">Common Lisp</a></b>:
+	<ul>
+	<li>
+	<a href="http://common-lisp.net/project/cl-peg/">CL-peg</a>
+	by John Leuner supports PEGs and packrat parsing in Common Lisp.
+	<li><a href="http://www.cliki.net/cl-peg">cl-peg</a>,
+	for Common Lisp.
+	</ul>
+
+<li><b><a href="http://www.lua.org/">Lua</a></b>:
+	Roberto Ierusalimschy has provided
+	<a href="http://www.inf.puc-rio.br/~roberto/lpeg.html">
+	the LPeg pattern-matching library</a>.
+
+<li><b><a href="http://www.ruby-lang.org/">Ruby</a></b>
+	now has the <a href="http://treetop.rubyforge.org/">Treetop</a>
+	grammar description and packrat parsing language.
+
+<li><b>Dylan</b>:
+	<a href="https://github.com/dylan-lang/peg-parser">peg-parser</a>
+	library by Dustin Voss.
+</ul>
+
+<h3>Sample PEGs</h3>
+
+This section contains pointers to some "nontrivial" grammars
+expressed as PEGs or PEG-like languages:
+
+<ul>
+<li>	<a href="http://www.cs.nyu.edu/rgrimm/xtc">xtc</a>
+	contains modular <i>Rats!</i> grammars for C and Java.
+
+<li>	<a href="http://www.romanredz.se/freesoft.htm">Mouse</a>
+	includes grammars for Java and C.
+
+<li>	<a href="http://www.parboiled.org/">parboiled</a>
+	includes a grammar for Java.
+
+<li>	<a href="http://pegjs.majda.cz/">PEG.js</a>
+	includes a grammar for JavaScript/ECMAScript.
+</ul>
+
+<hr>Maintainer: <a href="http://bford.info/">Bryan Ford</a>.
+Additions or corrections to this page are welcome &mdash;
+with apologies if I sometimes take a long time to respond!
+
+<!--#include virtual="../footer.html" -->
+
+</body>
+</html>

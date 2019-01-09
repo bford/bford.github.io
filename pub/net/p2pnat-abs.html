@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Peer-to-Peer Communication Across Network Address Translators</TITLE>
+<META NAME="description" CONTENT="Peer-to-Peer Communication Across Network Address Translators">
+<META NAME="keywords" CONTENT="nat">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+</HEAD>
+
+<BODY >
+
+<!--#include virtual="/pub/header.html" -->
+<hr>
+
+<H1 ALIGN="CENTER">Peer-to-Peer Communication Across Network Address Translators</H1><DIV>
+
+<P ALIGN="CENTER"><STRONG>Bryan Ford</STRONG><BR>
+<I>Massachusetts Institute of Technology</I><BR>
+<TT>baford</TT> (at) <TT>mit.edu</TT></P>
+
+
+<P ALIGN="CENTER"><STRONG>Pyda Srisuresh</STRONG><BR>
+<I>Caymas Systems, Inc.</I><BR>
+<TT>srisuresh</TT> (at) <TT>yahoo.com</TT></P>
+
+
+<P ALIGN="CENTER"><STRONG>Dan Kegel</STRONG><BR>
+<TT>dank</TT> (at) <TT>kegel.com</TT></P>
+</DIV>
+
+<P>
+
+<p align="center">
+<i>Presented at the <a href="http://www.usenix.org/events/usenix05/">
+	USENIX Annual Technical Conference, April 2005</a>.</i>
+</p>
+
+<H3>Abstract:</H3>
+<DIV>
+Network Address Translation (NAT)
+causes well-known difficulties
+for peer-to-peer (P2P) communication,
+since the peers involved may not be reachable
+at any globally valid IP address.
+Several NAT traversal techniques are known,
+but their documentation is slim,
+and data about their robustness or relative merits is slimmer.
+This paper documents and analyzes
+one of the simplest but most robust and practical
+NAT traversal techniques,
+commonly known as &ldquo;hole punching.&rdquo;
+Hole punching is moderately well-understood for UDP communication,
+but we show how it can be reliably used 
+to set up peer-to-peer TCP streams as well.
+After gathering data on the reliability of this technique
+on a wide variety of deployed NATs,
+we find that about 82% of the NATs tested support hole punching for UDP,
+and about 64% support hole punching for TCP streams.
+As NAT vendors become increasingly conscious of
+the needs of important P2P applications
+such as Voice over IP and online gaming protocols,
+support for hole punching is likely to increase in the future.
+</DIV>
+<P>
+
+<H3>Full Paper:
+<a href="p2pnat.pdf">PDF</a>
+<a href="p2pnat.ps.gz">PS</a>
+<a href="p2pnat/">HTML</a>
+</H3>
+
+<!--#include virtual="/footer.html" -->
+
+</BODY>
+</HTML>

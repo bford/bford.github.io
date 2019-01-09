@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slide 38</title>
+</head>
+<body text="#000000" bgcolor="#E6E6FF" link="#0000CC" vlink="#000080" alink="#0000CC">
+<center>
+<a href="text0.html">First page</a> <a href="text36.html">Back</a> <a href="text38.html">Continue</a> <a href="text40.html">Last page</a> <a href="index.html">Overview</a> <a href="img37.html">Graphics</a></center><br>
+<h1>“Can't HTTP/1.1 over TCP do this?”</h1>
+<ul><li><h2><b>Answer: <i>“Sort of, if you work really hard.”</b></i></h2></li>
+<li><ul><li>Enable <b>HTTP/1.1 pipelining</b></li>
+<li><ul><li>Most browsers still don't because servers get it wrong!</li>
+</ul></li><li>Fragment large downloads via <b>Range</b> requests</li>
+<li><ul><li>Pummel server with many small HTTP requests</li>
+<li>Risk atomicity issues with dynamic content</li>
+</ul></li><li>Track <b>round-trip time</b>, <b>bandwidth</b> in application</li>
+<li><ul><li>Try to keep pipeline full without adding extra delay</li>
+</ul></li></ul></li><li><h2><b>But:</b></h2></li>
+<li><ul><li><i>Still</i> get <b>head-of-line blocking</b> on TCP segment loss!</li>
+</ul></li></ul></body>
+</html>

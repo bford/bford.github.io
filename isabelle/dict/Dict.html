@@ -1,0 +1,601 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (X11; U; Linux 2.4.2-2 i686) [Netscape]">
+</head>
+<body>
+
+<h1>
+Dictionary Abstractions and Implementations in Isabelle/HOL</h1>
+
+<h2>
+Bryan Ford</h2>
+&nbsp;
+<h3>
+Introduction</h3>
+This case study examines a very basic object-oriented abstraction: the
+dictionary.&nbsp; Fundamentally, a dictionary is a collection of (name,
+value) associations, generally allowing only one value for a given name.&nbsp;
+The standard minimum set of operations that any dictionary can be expected
+to support is as follows:
+<br>&nbsp;
+<ul>
+<li>
+<b>Insert(n, v)</b>: enter a new (name, value) pair, or if the name&nbsp;
+already has an association, replace its existing association with a new
+value.</li>
+
+<li>
+<b>Remove(n)</b>: remove any association that may exist for a given name.</li>
+
+<li>
+<b>Lookup(n)</b>: find the value currently associated with the given name,
+if one exists.</li>
+</ul>
+Of course, in practice dictionaries often provide additional capabilities,
+such as to iterate over all the (name, value) pairs in the dictionary,
+to remove and return an arbitrary entry, or even to compose multiple dictionaries
+together or split them apart.&nbsp; However, in this case study, I only
+deal with the minimal set of methods above.
+<p>There are a tremendous number of ways in which dictionaries can be implemented,
+with a wide variety of performance characteristics; a huge body of fundamental
+computer science theory is devoted solely to implementing this one abstraction
+efficiently.&nbsp; In this case study I used the Isabelle/HOL theorem prover
+to formalize and prove the operational correctness of three different well-known
+methods of implementing dictionaries: lists, hash tables, and binary search
+trees.&nbsp; First I will describe how the dictionary abstraction itself
+is formalized, then how each of the implementations in turn is formalized
+and proven correct.
+<p>In this formalization, I currently <i>only</i> deal with correctness,
+and not with complexity (runtime and storage characteristics).&nbsp; I
+would like to do so at some point, and with its growing support library
+for real numbers I expect this to become practical in Isabelle before too
+long; however, at the moment Isabelle's library does not yet have the exponential/logarithmic
+machinery needed to formalize worst-case complexity properties of algorithms
+such as these, let alone the probabiility theory that would be needed to
+formalize average-case behavior.
+<br>&nbsp;
+<h3>
+The Dictionary Abstraction</h3>
+The first task of course was to formalize the notion of "dictionary" as
+an abstraction.&nbsp; In Isabelle/HOL, the obvious choice seemed to be
+to model a dictionary as a function from names to values.&nbsp; More specifically,
+a dictionary is an object with the following type in Isabelle/HOL (declared
+in <b>Dict.thy</b>):
+<p><tt>types ('a,'b) dict = "'a => 'b option"</tt>
+<p>In other words, <b>dict</b> is a function type parameterized by two
+type variables - <b>'a</b>, representing whatever type is used for names,
+and <b>'b</b>, representing the type used for values.&nbsp; The function
+representing a dictionary takes a name and returns the type <b>'b option</b>,
+which is a basic parameterized type supported by Isabelle's standard library
+which formalizes the notion of an "optional value": i.e., a value which
+can be either present (expressed '<b>Some v</b>') or absent (expressed
+as '<b>None</b>').&nbsp; The function representing a dictionary returns
+the value associated with the requested name, if any, or returns <b>None</b>
+if there is no association for that name.
+<p>Given this type definition, the three fundamental methods for dictionary
+objects are naturally formalized in Isabelle/HOL as higher-order function
+definitions:
+<p><tt>constdefs</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dict_cons :: "('a,'b)
+dict"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dict_cons == (%n. None)"</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dict_insert :: "['a,
+'b, ('a,'b) dict] => ('a,'b) dict"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dict_insert n v D ==
+(%n'. if n' = n then Some v else D n')"</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dict_remove :: "['a,
+('a,'b) dict] => ('a,'b) dict"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dict_remove n D ==
+(%n'. if n' = n then None else D n')"</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dict_lookup :: "['a,
+('a,'b) dict] => 'b option"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dict_lookup n D ==
+D n"</tt>
+<p>Note that the percent sign is the lambda operator in Isabelle/HOL. <b>dict_cons</b>
+is simply the empty dictionary - i.e., the dictionary that returns <b>None</b>
+regardless of the name queried for; <b>dict_insert</b> constructs a new
+dictionary in which queries for the new name <b>n</b> will return the given
+value <b>v</b> and all other queries will be passed along to the previous
+dictionary; <b>dict_remove</b> similarly constructs a new dictionary in
+which queries for the removed name will cause <b>None</b> to be returned.&nbsp;
+The <b>dict_lookup</b> method, of course, is trivial: it simply invokes
+the dictionary as a function with the appropriate name.
+<p>Strictly speaking, the <b>dict</b> type defined in the <b>types</b>
+statement above is actually a supertype of the type of dictionaries we
+are actually interested in reasoning about: specifically, the <b>dict</b>
+type includes <i>all</i> possible functions from names to values, whereas
+we are actually only interested in reasoning about dictionaries that can
+be constructed from an empty dictionary from some sequence of insert and
+remove method calls - i.e., finite dictionaries.&nbsp; To express this
+constraint, I use Isabelle's inductive set definition mechanism to construct
+an explicit set representing all possible finite dictionaries:
+<p><tt>consts</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dictset :: "('a,'b)
+dict set"</tt>
+<br><tt>inductive "dictset"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; intros</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; empty:&nbsp; "dict_cons
+: dictset"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; insert: "[| D : dictset;
+dict_lookup n D = None |]</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+==> dict_insert n v D : dictset"</tt>
+<p>Note that this set is built conservatively in the sense that it only
+builds dictionaries through sequences of <b>dict_insert</b> operations
+which insert values for names that weren't already in the dictionary.&nbsp;
+I later prove the stronger result that any dictionary resulting from any
+sequence of <i>arbitrary</i> insertions <i>and</i> removals is still in
+this set - i.e., that <b>dictset</b> indeed represents the closure of all
+possible finite dictionaries.&nbsp; Of course, the set could have been
+defined under the latter, stronger conditions in the first place.&nbsp;
+However, I found that defining the <b>dictset</b> more conservatively in
+this way makes it much easier subsequently to prove interesting properties
+about the elements of this set, because inductive proofs over the set only
+have to deal with insertions, and only non-colliding insertions at that.
+<p>One final step I could have taken, but didn't out of pure laziness (and
+lack of necessity for the purposes of this project), would be to use this
+<b>dictset</b>
+to declare a new Isabelle data type representing finite dictionaries.&nbsp;
+This way, the <b>dict</b> type could actually represent the <i>exact</i>
+abstraction we're trying to deal with, rather than an inclusive supertype.
+<p>Note that <i>all</i> of the above definitions, including the hypothetical
+"strict" finite dictionary data type if I had defined one,&nbsp; are purely
+conservative extensions: i.e., they are guaranteed by Isabelle to be logically
+sound and consistent as long as the basic HOL system is.
+<p>Based on these definitions, I proved a variety of basic properties of
+the dictionary abstraction, many of which are also useful as lemmas in
+future proofs about dictionaries and dictionary implementations.&nbsp;
+The vast majority of the proofs are handled almost entirely automatically
+by Isabelle, simply by unfolding a few definitions and invoking the automatic
+reasoner (which uses a combination of simplification and natural deduction).&nbsp;
+A few examples of the types of properties of interest are:
+<ul>
+<li>
+Result of lookups after various modification operations - e.g., looking
+up a name immediately after inserting a value for that name, or looking
+up a name after inserting a value for a <i>different</i> name.</li>
+
+<li>
+Equivalence of dictionaries constructed by consecutive modifications referring
+to the same name - e.g., the notion that inserting values for the same
+name twice causes the first value to be "forgotten."</li>
+
+<li>
+Order-independence of modification operations for different names.</li>
+</ul>
+Most of these lemmas naturally form simplification rules, which I feed
+to Isabelle's voracious simplifier by tagging them with '<b>[simp]</b>'
+in the source code; this causes them to be used automatically during future
+proofs.
+<p>The only proofs in the abstract dictionary theory that weren't completely
+trivial were the proofs mentioned earlier of the closedness of the <b>dictset</b>:
+i.e., that <i>all</i> possible sequences of arbitrary insertions and removals
+produce finite dictionaries that are still in <b>dictset</b>.&nbsp; These
+proofs still couldn't be called hard by any means, however; they mainly
+just involved invoking the appropriate induction rule initially (which
+Isabelle conveniently generated automatically when the <b>dictset</b> was
+defined in the first place) and leading the theorem prover through the
+appropriate sequence of case analyses.
+<br>&nbsp;
+<h3>
+The List Implementation</h3>
+The first and simplest concrete, more-or-less realistic dictionary implementation
+is formalized in <b>ListDict.thy</b>.&nbsp; It defines another type alias,
+<b>listdict</b>,
+and a corresponding set of functions representing the method implementations,
+prefixed by <b>ld_</b> instead of <b>dict_</b> to distinguish them from
+the abstract dictionary's methods.
+<p><tt>types ('a,'b) listdict = "('a * 'b) list"</tt>
+<p><tt>constdefs</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ld_cons :: "('a,'b)
+listdict"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "ld_cons == []"</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ld_remove :: "['a, ('a,'b)
+listdict] => ('a,'b) listdict"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "ld_remove n D == filter
+(%(n',v). (n' ~= n)) D"</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ld_insert :: "['a, 'b,
+('a,'b) listdict] => ('a,'b) listdict"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "ld_insert n v D ==
+(n,v) # ld_remove n D"</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ld_lookup :: "['a, ('a,'b)
+listdict] => 'b option"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "ld_lookup n D ==</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(if (EX v. ((n,v) : set D))</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+then Some (SOME v. ((n,v) : set D))</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else None)"</tt>
+<p>The formalization of this implementation takes advantage of Isabelle's
+powerful <b>list</b> data type, which is parameterized to support finite
+lists of any desired type.&nbsp; In this case, a <b>listdict</b> is actually
+a list of (name, value) pairs.&nbsp; The <b>ld_remove</b> method uses
+<b>filter</b>,
+a library function that filters a list using an arbitrary boolean function,
+to remove any elements referring to the name in question.&nbsp; The <b>ld_insert</b>
+method first removes any existing element(s) with the same name from the
+list, and then prepends a new element to the list with the new name and
+value.&nbsp; The <b>ld_lookup</b> implementation presented here is, strictly
+speaking, not very practical from an implementation perspective: it uses
+Isabelle's <b>set</b> function, which takes a list and returns the set
+of all elements it contains (ignoring any duplicates), and chooses an arbitrary
+element with a matching name from that set, on the hope that there's at
+most one.&nbsp; I don't have any great excuse for defining this method
+this way: it would have been more realistic, and probably not much harder,
+if any, to definite it in a more standard functional programming style
+using a primitive-recursive function definition.&nbsp; But this way seemed
+a bit easier when I was first starting to work on this theory, and I never
+got around to going back and fixing it.
+<p>Given these definitions, it is just as trivial to prove most of the
+basic properties we would expect as it was for the abstract dictionary.&nbsp;
+The main exception is that the order-independence results that apply to
+the abstract dictionary type do not carry over to list-based dictionaries:
+i.e., inserting values for two different names in two different orders
+<i>do
+not</i> produce identical <b>listdict</b>s, since the resulting lists will
+have their elements in a different order.&nbsp; However, this is OK because
+what we're really interested in verifying is that the implementation <i>behaves</i>
+correctly for all possible sequences of method calls, and order-independence
+is not necessary in order to do that.
+<p>So finally we reach the Big Kahuna: proving that the list-based dictionary
+is behaviorally equivalent to the dictionary abstraction.&nbsp; The goal,
+as I formulated it, is to prove that after all possible sequences of modification
+operations, the result of any query will be the same for
+<b>dict</b> and
+<b>listdict</b>.&nbsp; Isabelle's support for inductive sets serves this
+purpose very well; I simply used it to define a simulation relation associating
+each possible <b>listdict</b> resulting from a given sequence of operations
+to a corresponding abstract <b>dict</b>:
+<p><tt>consts</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dict_ld_rel :: "(('a,'b)
+dict * ('a,'b) listdict) set"</tt>
+<br><tt>inductive "dict_ld_rel"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; intros</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; init:&nbsp;&nbsp; "(dict_cons,
+ld_cons) : dict_ld_rel"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; insert: "(D,L) : dict_ld_rel</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+==> (dict_insert n v D, ld_insert n v L) : dict_ld_rel"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; remove: "(D,L) : dict_ld_rel</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+==> (dict_remove n D, ld_remove n L) : dict_ld_rel"</tt>
+<p>Note that the single colon (<b>:</b>) operator is Isabelle's set membership
+operator.&nbsp; Once this relation is defined, proving behavioral equivalence
+is simply a matter of showing that <b>lookup</b> operations on corresponding
+elements in this relation always yield the same result:
+<p><tt>theorem "(D,L) : dict_ld_rel ==> dict_lookup n D = ld_lookup n L"</tt>
+<br><tt>&nbsp;apply (erule dict_ld_rel.induct)</tt>
+<br><tt>&nbsp;&nbsp; apply (simp)</tt>
+<br><tt>&nbsp; apply (case_tac "n = na")</tt>
+<br><tt>&nbsp; apply (simp_all)</tt>
+<br><tt>&nbsp;apply (case_tac "n = na")</tt>
+<br><tt>&nbsp;apply (simp_all)</tt>
+<p>It is convenient that the dictionary abstraction, as formulated here,
+is completely deterministic: i.e., after any given set of modifications
+("input actions"), there is one and only one valid result for each query
+method (the "output actions").&nbsp; If, on the other hand, the dictionary
+abstraction was enhanced to support iteration over the contents of the
+dictionary, then the abstraction would presumably allow the contents to
+be returned in any order, and then the implementation-abstraction correspondence
+would not be one-to-one, but the possible outputs of the implementation
+would have to be shown to be a subset of the possible outputs of the abstraction:
+i.e., a full-fledged I/O Automata-style simulation relation.&nbsp; Implementing
+iteration support should not be too hard given Isabelle's facilities; doing
+so is left as an exercise for the reader. :-)
+<br>&nbsp;
+<h3>
+The Hash Table Implementation</h3>
+The second dictionary implementation I formalized in Isabelle is the classic
+hash table (<b>Hash.thy</b>).&nbsp; This implementation assumes that the
+hash table size is fixed for the lifetime of the dictionary (i.e., it does
+not support dynamically growing and shrinking hash tables).&nbsp; However,
+it is parameterized by both the hash table size and the hash function,
+so it is guaranteed to be operationally correct for all possible hash table
+sizes and hash functions.&nbsp; The basic types and methods are defined
+as follows:
+<p><tt>types 'a hashfunc = "'a => nat";</tt>
+<p><tt>types ('a,'b) hashtab = "('a,'b) dict list";</tt>
+<p><tt>constdefs</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ht_cons :: "nat => ('a,'b)
+hashtab"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "ht_cons l == SOME H.
+(length H = l &amp;</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(ALL i. (i &lt; l --> H!i = dict_cons)))"</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ht_remove :: "['a, ('a,'b)
+hashtab, 'a hashfunc] => ('a,'b) hashtab"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "ht_remove n H F ==
+list_update H (F n) (dict_remove n (H!(F n)))"</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ht_insert :: "['a, 'b,
+('a,'b) hashtab, 'a hashfunc] => ('a,'b) hashtab"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "ht_insert n v H F ==
+list_update H (F n) (dict_insert n v (H!(F n)))"</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ht_lookup :: "['a, ('a,'b)
+hashtab, 'a hashfunc] => 'b option"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "ht_lookup n H F ==
+dict_lookup n (H!(F n))"</tt>
+<p>There are a couple oddities to this formalization worth noting.&nbsp;
+First, each method takes the hash function as a separate argument, whereas
+strictly speaking it would probably be conceptually cleaner to encapsulate
+it in the hash table data type.&nbsp; The only reason I didn't do it that
+way was because this way seemed slightly easier to work with since it doesn't
+require building and taking apart pairs during every operation; in other
+words, sheer laziness.
+<p>The other interesting thing to notice is that the hash table "implementation"
+actually uses the abstract dictionary: specifically, each entry in the
+hash table is actually an abstract dictionary, into which the hash table
+implementation simply "blindly tosses" all elements that happen to map
+to the same table entry.&nbsp; This formalization essentially skirts around
+the issue of handling hash collisions by punting the problem <i>back</i>
+up to the original high-level abstraction.&nbsp; It can certainly be argued
+that in doing this I haven't <i>completely</i> implemented a hash table,
+since in practice some concrete method will have to be used to deal with
+hash table collisions.&nbsp; However, I believe that this is in fact an
+excellent way to formalize the hash table "implementation" because <i>fully</i>
+implementing a hash table merely involves instantiating the hash table
+code as defined above, then recursively implementing the abstract dictionaries
+used in the hash table implementation by instantiating some other dictionary
+imlpementation such as the simple <b>listdict</b>.&nbsp; However, since
+the exact implementation for these sub-dictionaries isn't specified here,
+<i>any</i>
+such implementation can be instantiated as long as it satisfies the basic
+properties that dictionaries must have: for example, hash collisions could
+instead be handled by building colliding elements into a binary tree.&nbsp;
+Thus, this formulation provides a good separation of concerns and in that
+way leverages the abstraction/implementation distinction to yield greater
+flexibility.
+<p>The definition of <b>ht_cons</b> above, which simply constructs a hash
+table (list) of the appropriate length in which every entry is the empty
+dictionary, was probably not the easiest way to do this; it probably would
+have both been simpler and had a closer correspondence to a practical implementation
+if I had defined it as a primitive recursive function using Isabelle's
+<b>primrec</b>
+facility.&nbsp; As it was, it turned out that the most complicated proof
+required in the whole theory was the rather mundane proof that such a list
+as <b>ht_cons</b> tries to create actually exists.&nbsp; Ah, the virtues
+of hindsight.
+<p>Not too surprisingly, many of the proofs for the standard dictionary
+properties depend on a couple key invariants, which are encoded in those
+theorems as assumptions:
+<ul>
+<li>
+The same hash function is used for all consecutive operations on the hash
+table.</li>
+
+<li>
+The hash function only returns values in the correct range given the size
+of the hash table.</li>
+</ul>
+After the standard properties are proved, I again prove behavioral equivalence
+by defining an inductive set that functions more or less as a simulation
+relation.&nbsp; The definition of the simulation relation is restricted
+according to the invariants above, so that proofs using the relation automatically
+have those invariants available as premises.&nbsp; In addition, since as
+I mentioned earlier the hash function is passed to all of the manipulation
+methods as a separate parameter, the simulation "relation" actually consists
+of triples rather than pairs, so that the correct hash function is always
+"carried along" with a given hash table.&nbsp; Given this definition, the
+actual proof of behavioral equivalence was entirely identical to the proof
+used for list-based dictionaries.
+<br>&nbsp;
+<h3>
+The Binary Search Tree Implementation</h3>
+The final dictionary implementation I formalized is the classic binary
+search tree.&nbsp; In the implementation I&nbsp;formalized, no balancing
+of any kind is done; extending this formalization to some of the popular
+balancing variants such as treaps, red-black trees, or splay trees should
+make for fun and interesting "future work."&nbsp; The formalization of
+the basic tree structure uses of Isabelle's ML-style discriminated union
+data type facility:
+<p><tt>datatype ('a,'b) bt = Node "('a,'b) bt" "'a" "'b" "('a,'b) bt" |
+NoNode</tt>
+<p>In other words, a binary tree is either an empty leaf node (<b>NoNode</b>),
+or consists of a left subtree, a name, a value, and a right subtree, respectively.
+<p>Most of the method implementations use Isabelle's built-in support for
+well-founded primitive recursive function definition in order to operate
+recursively over this data type, which requires types to be declared separately
+from the definitions themselves:
+<p><tt>consts</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bt_cons&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:: "('a::linorder,'b) bt"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bt_lookup&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:: "['a::linorder, ('a,'b) bt] => 'b option"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bt_insert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:: "['a::linorder, 'b, ('a,'b) bt] => ('a,'b) bt"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bt_remove&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:: "['a::linorder, ('a,'b) bt] => ('a,'b) bt"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bt_scan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:: "('a::linorder,'b) bt => ('a * 'b) set"</tt>
+<br><tt>&nbsp;</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* Internal helpers
+*)</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bt_merge&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:: "[('a::linorder,'b) bt, ('a,'b) bt] => ('a,'b) bt"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bt_ltall&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:: "['a::linorder, ('a,'b) bt] => bool"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bt_gtall&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:: "['a::linorder, ('a,'b) bt] => bool"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bt_sorted&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:: "('a::linorder,'b) bt => bool"</tt>
+<p><tt>defs</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bt_cons_def:</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"bt_cons == NoNode"</tt>
+<br><tt>&nbsp;</tt>
+<br><tt>primrec</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_lookup n' (Node
+l n v r) =</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(if n' = n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; then Some v</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else if n' &lt; n then bt_lookup n' l</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else bt_lookup n' r)"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_lookup n' (NoNode)
+= None"</tt>
+<br><tt>&nbsp;</tt>
+<br><tt>primrec</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_insert n' v' (Node
+l n v r) =</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(if n' = n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; then Node l n v' r</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else if n' &lt; n then Node (bt_insert n' v' l) n v r</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else Node l n v (bt_insert n' v' r))"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_insert n' v' (NoNode)
+= Node NoNode n' v' NoNode"</tt>
+<br><tt>&nbsp;</tt>
+<br><tt>primrec</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bt_remove_Node:</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_remove n' (Node
+l n v r) =</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(if n' = n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; then bt_merge l r</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else if n' &lt; n then Node (bt_remove n' l) n v r</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else Node l n v (bt_remove n' r))"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_remove n' (NoNode)
+= NoNode"</tt>
+<p>In addition, <b>bt_remove</b> requires a helper function, <b>bt_merge</b>,
+which merges the two disjoint subtrees "orphaned"&nbsp;when a node is removed
+into a single tree, in this case iby inserting the right subtree into the
+left:
+<p><tt>primrec</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_merge (Node l n
+v r) y = Node l n v (bt_merge r y)"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_merge NoNode y =
+y"</tt>
+<p>Finally, although these are all the methods that would theoretically
+be needed in a practical implementation of a basic binary search tree,
+a few additional helper functions are very useful for proving stuff:
+<p><tt>primrec</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_ltall n' (Node l
+n v r) =</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(n' &lt; n &amp; bt_ltall n' l &amp; bt_ltall n' r)"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_ltall n' (NoNode)
+= True"</tt>
+<br><tt>primrec</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_gtall n' (Node l
+n v r) =</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(n &lt; n' &amp; bt_gtall n' l &amp; bt_gtall n' r)"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_gtall n' (NoNode)
+= True"</tt>
+<br><tt>primrec</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_sorted (Node l n
+v r) =</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(bt_gtall n l &amp; bt_sorted l &amp;</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+bt_ltall n r &amp; bt_sorted r)"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "bt_sorted (NoNode)
+= True"</tt>
+<p>Essentially these functions define predicates which are used in the
+following correctness proofs to express the critical invariants that allow
+the binary search tree algorithm to function properly.&nbsp; The most important
+is obviously the last one, which builds on the first two: it expresses
+the property of a binary tree being properly sorted for searching.
+<p>Note that in the type definitions in the <b>consts</b> section above,
+the <b>'a</b> type for each method, which represents the type used for
+names, is constrained to the <b>linorder</b> axiomatic type class (second-order
+type).&nbsp; This Isabelle feature is analogous to Haskell's type classes,&nbsp;
+except that in this case type classes can be specified to have arbitrary
+mathematical properties:&nbsp;in this case, <b>linorder</b> is the class
+of all types for which an ordering relationship is defined on all members
+via the '<b>&lt;</b>' operator, and the ordering relationship satisfies
+the standard properties expected for total orders (reflexivity, transitivity,
+etc.).&nbsp; The same effect could have been accomplished without the use
+of type classes by parameterizing the binary tree implementation with an
+explicit ordering function assumed to have the desired properties (analogous
+to the hash function used in the hash table implementation); however, given
+Isabelle's direct support for axiomatic type classes, doing it this way
+was naturally the simplest approach, not to mention the most cool. :-)
+<p>Unsurprisingly, proving that all of the desired dictionary-like properties
+hold for this binary tree implementation was not nearly as trivial as it
+was for the list and hash table implementations, but it was not that difficult
+either; mostly it involved figuring out the right intermediate lemmas to
+prove in the right order.&nbsp; Naturally, a good chunk of lemmas had to
+be proved right up front about the basic sortedness predicates above before
+anything interesting could be proven about the actual dictionary operations.&nbsp;
+However, once that was done, most of the proofs came fairly readily.
+<p>As usual, I finally defined a simulation relation between binary trees
+and abstract dictionaries using an inductive set and proved that for all
+corresponding modification sequences the result of a lookup in the two
+models is identical.&nbsp; This proof itself turned out to be no more difficult
+than it was for the previous implementations; all the real work happened
+in proving the basic properties of binary trees.
+<p>Isabelle does have one niggly problem that got in the way a few times:&nbsp;its
+automatic reasoning sometimes does not deal too well with fairly trivial
+inequalities.&nbsp; For example, it never could seem to figure out automatically
+that a proof goal with "a &lt;&nbsp;b; b &lt; a" as its premises is trivially
+valid.&nbsp; This is perhaps a likely area for future improvement in the
+tool. :-)
+<br>&nbsp;
+<h3>
+Undoable Dictionaries</h3>
+Finally, in order to extend the basic dictionary abstraction a bit in a
+way that seemed interesting at the time (though admittedly may not be particularly
+realistic in this precise formulation), I&nbsp;created an extended "undoable
+document" abstraction (<b>Undo.thy</b>) and a corresponding implementation
+(<b>LogDoc.thy</b>).&nbsp; Essentially, a "document" in this model is simply
+a dictionary with one additional method:&nbsp;<b>undo</b>.&nbsp; Each call
+to a modification method (<b>insert</b> or <b>remove</b>) not only performs
+the appropriate modification operation but also saves a record of the modification
+so that any previous version of the "document"&nbsp;can be recovered at
+any time by invoking the <b>undo</b> method one or more times.
+<p>The difference between the abstraction and the implementation is simply
+in how this logging is done.&nbsp; In the abstract implementation, a "document"
+is simply a list of complete versions of the dictionary, so that after
+a valid sequence of modifications the head of the list is always the latest
+version and the tail is always the empty dictionary (the "original version").&nbsp;
+The <b>undo</b> method in this case simply pops the first item off the
+list.
+<p>In the more interesting implementation of this abstraction, a document
+consists of only the current (head)&nbsp;version of the dictionary, in
+conjunction with an RCS-style "reverse change log"&nbsp;containing all
+of the information needed to get back to any previous version of the document.&nbsp;
+Each change log entry is represented by this discriminated union data type:
+<p><tt>datatype ('a,'b) logentry =</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LogInsert
+'a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* Insert, not
+present *)</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | LogUpdate 'a 'b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(* Insert, already present *)</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | LogRemove 'a 'b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(* Remove, present *)</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | LogNull&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(* Remove, not present *)</tt>
+<p>The first two entry types are created by <b>insert</b> operations and
+the other two are created by <b>remove</b> operations.&nbsp; The appropriate
+type of entry is selected in each case according to whether an association
+already existed for the given name before the modification operation: if
+so, then the previous value is saved along with the affected name.&nbsp;
+The <b>LogNull</b> entry type, created when a name is removed that was
+not already in the dictionary anyway, reflects the design philosophy that
+each "requested change"&nbsp;should create a new version, regardless of
+whether the operation really caused any <i>effective</i> change.&nbsp;
+Of course, this is one of those endlessly debatable fine points.
+<p>As with the basic dictionary abstraction and implementations, I proved
+behavioral equivalence between these models by first proving a number of
+basic critical properties for each model individually, and then defining
+a simulation relation between them and inductively proving that the result
+of a query is the same after any possible sequence of modifications.&nbsp;
+Since it's all just more of the same, I&nbsp;won't bore you with details.
+<br>&nbsp;
+<h3>
+Conclusion</h3>
+Formalized a couple marginally interesting object-oriented data abstractions
+and implementation algorithms.&nbsp; Had fun.&nbsp; Isabelle is cool.
+<p>As far as making this case study available to others, I&nbsp;plan to
+submit it (with all the code)&nbsp;to the Isabelle folks in case they want
+to include it in the Isabelle distribution as another example theory.
+<p>Cheers,
+<br>Bryan
+</body>
+</html>

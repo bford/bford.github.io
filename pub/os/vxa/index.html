@@ -1,0 +1,2236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>VXA: A Virtual Architecture for Durable Compressed Archives</TITLE>
+<META NAME="description" CONTENT="VXA: A Virtual Architecture for Durable Compressed Archives">
+<META NAME="keywords" CONTENT="vxa">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="vxa.css">
+
+</HEAD>
+
+<!--#include virtual="/pub/header.html" -->
+<hr>
+
+<BODY >
+<H1 ALIGN="CENTER">VXA: A Virtual Architecture for Durable Compressed Archives</H1><DIV>
+
+<P ALIGN="CENTER"><STRONG>Bryan Ford</STRONG></P>
+<P ALIGN="CENTER"><I>	Computer Science and Artificial Intelligence Laboratory</I><BR>
+<I>	Massachusetts Institute of Technology</I></P>
+</DIV>
+
+<P>
+
+<H3>Abstract:</H3>
+<DIV>
+Data compression algorithms change frequently,
+and obsolete decoders
+do not always run on new hardware and operating systems,
+threatening the long-term usability
+of content archived using those algorithms.
+Re-encoding content into new formats is cumbersome,
+and highly undesirable when lossy compression is involved.
+Processor architectures,
+in contrast,
+have remained comparatively stable
+over recent decades.
+VXA, an archival storage system designed around this observation,
+archives executable decoders along with the encoded content it stores.
+VXA decoders run in a specialized virtual machine
+that implements an OS-independent execution environment
+based on the standard x86 architecture.
+The VXA virtual machine strictly limits access
+to host system services,
+making decoders safe to run
+even if an archive contains malicious code.
+VXA's adoption of a ``native'' processor architecture
+instead of type-safe language technology
+allows reuse of existing ``hand-optimized'' decoders
+in C and assembly language,
+and permits decoders access to
+performance-enhancing architecture features
+such as vector processing instructions.
+The performance cost of VXA's virtualization is typically less than 15%
+compared with the same decoders running natively.
+The storage cost of archived decoders,
+typically 30-130KB each,
+can be amortized across many archived files
+sharing the same compression method.
+</DIV>
+<P>
+
+<H1><A NAME="SECTION00010000000000000000"></A>
+<A NAME="sec-intro"></A><BR>
+1 Introduction
+</H1>
+
+<P>
+Data compression techniques
+have evolved rapidly
+throughout the history of personal computing.
+Figure&nbsp;<A HREF="#fig-timeline">1</A> shows a timeline for the introduction of
+some of the most historically popular compression formats,
+both for general-purpose data and for specific media types.
+(Many of these formats actually support
+multiple distinct compression schemes.)
+As the timeline illustrates,
+common compression schemes change every few years,
+and the explosion of lossy multimedia encoders
+in the past decade
+has further accelerated this evolution.
+This constant churn in popular encoding formats,
+along with the prevalence of other less common,
+proprietary or specialized schemes,
+creates substantial challenges to preserving the usability
+of digital information over the long term&nbsp;[<A
+ HREF="#garrett96preserving">16</A>].
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig-timeline"></A><A NAME="41"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1:</STRONG>
+Timeline of Data Compression Formats</CAPTION>
+<TR><TD><IMG
+ BORDER="0"
+ SRC="img1.png"
+ ALT="\begin{figure}\centerline{\epsfig{file=timeline.eps, scale=0.22}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Open compression standards,
+even when available and widely adopted,
+do not fully solve these challenges.
+Specification ambiguities
+and implementation bugs
+can make content encoded by one application
+decode incorrectly or not at all in another.
+Intellectual property issues such as patents
+may interfere with the widespread availability of decoders
+even for ``open'' standards,
+as occurred in the last decade&nbsp;[<A
+ HREF="#battilana04gif">4</A>]
+with several file formats based on the LZW algorithm&nbsp;[<A
+ HREF="#nelson89lzw">33</A>].
+Standards also evolve over time,
+which can make it increasingly difficult to find
+decoders for obsolete formats
+that still run on the latest operating systems.
+
+<P>
+Processor architectures, in contrast,
+have shown remarkable resistance to change
+ever since the IBM PC first jump-started personal computing.
+As the architecture timeline in Figure&nbsp;<A HREF="#fig-archline">2</A> illustrates,
+the persistently dominant x86 architecture
+has experienced only a few major architectural changes
+during its lifetime--32-bit registers and addressing in 1985,
+vector processing upgrades starting in 1996,
+and 64-bit registers and addressing in 2003.
+More importantly,
+each of these upgrades has religiously preserved backward code compatibility.
+Of the other architectures introduced during this period,
+none have come close to displacing the x86 architecture in the mainstream.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig-archline"></A><A NAME="46"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2:</STRONG>
+Timeline of Processor Architectures</CAPTION>
+<TR><TD><IMG
+ BORDER="0"
+ SRC="img2.png"
+ ALT="\begin{figure}\centerline{\epsfig{file=archline.eps, scale=0.22}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+From these facts we observe that
+<EM>instruction encodings are historically
+more durable than data encodings</EM>.
+We will still be able to run x86 code efficiently
+decades from now,
+but it is less likely
+that future operating systems and applications
+will still include robust, actively-maintained decoders
+for today's compressed data streams.
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+1.1 Virtualizing Decoders</A>
+</H2>
+
+<P>
+<EM>Virtual eXecutable Archives</EM>, or VXA,
+is a novel archival storage architecture
+that preserves data usability
+by packaging executable x86-based decoders
+along with compressed content.
+These decoders run in a specialized virtual machine (VM)
+that minimizes dependence
+on evolving host operating systems and processors.
+VXA decoders run on
+a well-defined subset
+of the unprivileged 32-bit x86 instruction set,
+and have no direct access to host OS services.
+A decoder only extracts archived data
+into simpler,
+and thus hopefully more ``future-proof,'' uncompressed formats:
+decoders cannot have user interfaces,
+open arbitrary files,
+or communicate with other processes.
+
+<P>
+
+<P>
+By building on the ubiquitous native x86 architecture
+instead of using a specialized abstract machine
+such as Lorie's archival
+``Universal Virtual Computer''&nbsp;[<A
+ HREF="#lorie00archiving">27</A>],
+VXA enables easy re-use of existing decoders
+written in arbitrary languages such as C and assembly language,
+which can be built with familiar development tools such as GCC.
+Use of the x86 architecture
+also makes execution of virtualized decoders
+extremely efficient on x86-based host machines,
+which is important to the many popular ``short-term'' uses of archives
+such as backups, software distribution, and structured document compression.
+VXA permits decoders
+access to the x86 vector processing instructions,
+further enhancing the performance
+of multimedia codecs.
+
+<P>
+Besides preserving long-term data usability,
+the VXA virtual machine also isolates the host system
+from buggy or malicious decoders.
+Decoder security vulnerabilities,
+such as the recent critical JPEG bug&nbsp;[<A
+ HREF="#msjpegbug">31</A>],
+cannot compromise the host under VXA.
+This security benefit is important
+because data decoders tend to be inherently complex
+and difficult to validate,
+they are frequently exposed to data
+arriving from untrusted sources such as the Web,
+and they are usually perceived as too low-level and performance-critical
+to be written in type-safe languages.
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+1.2 Prototype Implementation</A>
+</H2>
+
+<P>
+A prototype implementation of the VXA architecture,
+vxZIP/vxUnZIP,
+extends the well-known ZIP/UnZIP archive tools
+with support for virtualized decoders.
+The vxZIP archiver can attach VXA decoders
+both to files it compresses
+and to input files already compressed
+with recognized lossy or lossless algorithms.
+The vxUnZIP archive reader
+runs these VXA decoders to extract compressed files.
+Besides enhancing the durability of ZIP files themselves,
+vxZIP thus also enhances the durability
+of pre-compressed data stored in ZIP files,
+and can evolve to employ the latest specialized compression schemes
+without restricting the usability of the resulting archives.
+
+<P>
+VXA decoders stored in vxZIP archives are themselves compressed
+using a fixed algorithm
+(the ``deflate'' method standard for existing ZIP files)
+to reduce their storage overhead.
+The vxZIP prototype currently includes six decoders
+for both general-purpose data and specialized multimedia streams,
+ranging from 26 to 130KB in compressed size.
+Though this storage overhead may be significant for small archives,
+it is usually negligible for larger archives
+in which many files share the same decoder.
+
+<P>
+The prototype vxZIP/vxUnZIP tools
+run on both the 32-bit and 64-bit variants of the x86 architecture,
+and rely only on unprivileged facilities
+available on any mature x86 operating system.
+The performance cost of virtualization,
+compared with native x86-32 execution,
+is between 0 and 11%
+measured across six widely-available general-purpose and multimedia codecs.
+The cost is somewhat higher, 8-31%,
+compared with native x86-64 execution,
+but this difference is due not to virtualization overhead
+but to the fact that VXA decoders are always 32-bit,
+and thus cannot take advantage of the new 64-bit instruction set.
+The virtual machine that vxUnZIP uses to run the archived decoders
+is also available as a standalone library,
+which can be re-used
+to implement virtualization and isolation of extension modules
+for other applications.
+
+<P>
+
+<P>
+Section&nbsp;<A HREF="#sec-arch">2</A> of this paper
+first presents the VXA architecture in detail.
+Section&nbsp;<A HREF="#sec-impl">3</A> then describes
+the prototype vxZIP/vxUnZIP tools,
+and Section&nbsp;<A HREF="#sec-vm">4</A> details
+the virtual machine monitor
+in which vxUnZIP runs archived decoders.
+Section&nbsp;<A HREF="#sec-eval">5</A> evaluates
+the performance and storage costs of the virtualized decoders.
+Finally,
+Section&nbsp;<A HREF="#sec-related">6</A> summarizes related work,
+and Section&nbsp;<A HREF="#sec-conc">7</A> concludes.
+
+<H1><A NAME="SECTION00020000000000000000"></A>
+<A NAME="sec-arch"></A><BR>
+2 System Architecture
+</H1>
+
+<P>
+This section introduces
+the <EM>Virtual eXecutable Archive</EM> (VXA) architecture
+at a high level.
+The principles described in this section
+are generic and should be applicable
+to data compression, backup, and archival storage systems of all kinds.
+All implementation details specific
+to the prototype VXA archiver and virtual machine
+are left for the next section.
+
+<P>
+
+<H2><A NAME="SECTION00021000000000000000">
+2.1 Trends and Design Principles</A>
+</H2>
+
+<P>
+Archived data is almost always compressed in some fashion to save space.
+The one-time cost of compressing the data in the first place is usually
+well justified by the savings in storage costs
+(and perhaps network bandwidth)
+offered by compression over the long term.
+
+<P>
+A basic property of data compression,
+however,
+is that the more you know about the data being compressed,
+the more effectively you can compress it.
+General string-oriented compressors such as <TT>gzip</TT>
+do not perform well on digitized photographs, audio, or video,
+because the information redundancy present in digital media
+does not predominantly take the form of repeated byte strings,
+but is specific to the type of media.
+For this reason a wide variety of media-specific compressors
+have appeared recently.
+<EM>Lossless</EM> compressors
+achieve moderate compression ratios
+while preserving all original information content,
+while <EM>lossy</EM> compressors
+achieve higher compression ratios
+by discarding information whose loss is deemed ``unlikely to be missed''
+based on semantic knowledge of the data.
+Specialization of compression algorithms
+is not limited to digital media:
+compressors for semistructured data
+such as XML are also available for example&nbsp;[<A
+ HREF="#liefke99xmill">26</A>].
+This trend toward specialized encodings
+leads to a first important design principle
+for efficient archival storage:
+
+<P>
+<BLOCKQUOTE>
+<EM>An archival storage system must permit use of
+multiple, specialized compression algorithms.</EM>
+
+</BLOCKQUOTE>
+
+<P>
+Strong economic demand
+for ever more sophisticated and effective data compression
+has led to a rapid evolution in encoding schemes,
+even within particular domains such as audio or video,
+often yielding an abundance of mutually-incompatible competing schemes.
+Even when open standards achieve widespread use,
+the dominant standards evolve over time:
+e.g., from Unix <TT>compress</TT> to <TT>gzip</TT> to <TT>bzip2</TT>.
+This trend leads to
+VXA's second basic design principle:
+
+<P>
+<BLOCKQUOTE>
+<EM>An archival storage system
+must permit its set of compression algorithms
+to evolve regularly.</EM>
+
+</BLOCKQUOTE>
+
+<P>
+The above two trends unfortunately work against
+the basic purpose of archival storage:
+to store data so that it remains available and usable later,
+perhaps decades later.
+Even if data is always archived using the latest encoding software,
+that software--and the operating systems it runs on--may be long obsolete a few years later when the archived data is needed.
+The widespread use of lossy encoding schemes compounds this problem,
+because periodically decoding and re-encoding archived data
+using the latest schemes would cause progressive information loss
+and thus is not generally a viable option.
+This constraint leads to VXA's third basic design principle:
+
+<P>
+<BLOCKQUOTE>
+<EM>Archive extraction must be possible
+without specific knowledge of the data's encoding.</EM>
+
+</BLOCKQUOTE>
+
+<P>
+VXA satisfies these constraints
+by storing executable decoders with all archived data,
+and by ensuring that these decoders run in a simple, well-defined, portable,
+and thus hopefully relatively ``future-proof'' virtual environment.
+
+<P>
+
+<H2><A NAME="SECTION00022000000000000000">
+2.2 Creating Archives</A>
+</H2>
+
+<P>
+Figure&nbsp;<A HREF="#fig-writer">3</A> illustrates the basic structure
+of an archive writer in the VXA architecture.
+The archiver contains a number of encoder/decoder or <EM>codec</EM> pairs:
+several specialized codecs designed to handle specific content types
+such as audio, video, or XML,
+and at least one general-purpose lossless codec.
+The archiver's codec set is extensible via plug-ins,
+allowing the use of specialized codecs
+for domain-specific content when desired.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig-writer"></A><A NAME="150"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3:</STRONG>
+Archive Writer Operation</CAPTION>
+<TR><TD><IMG
+ BORDER="0"
+ SRC="img3.png"
+ ALT="\begin{figure}\centerline{\epsfig{file=writer.eps, scale=0.30}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The archiver accepts both uncompressed and already-compressed files as inputs,
+and automatically tries to compress previously uncompressed input files
+using a scheme appropriate for the file's type if available.
+The archiver attempts to compress files of unrecognized type
+using a general-purpose lossless codec such as <TT>gzip</TT>.
+By default the archiver uses only lossless encoding schemes
+for its automatic compression,
+but it may apply lossy encoding
+at the specific request of the operator.
+
+<P>
+The archiver writes into the archive
+a copy of the decoder portion of each codec it uses to compress data.
+The archiver of course needs to include
+only one copy of a given decoder in the archive,
+amortizing the storage cost of the decoder
+over all archived files of that type.
+
+<P>
+The archiver's codecs can also recognize
+when an input file is <EM>already</EM> compressed in a supported format.
+In this case,
+the archiver just copies the pre-compressed data into the archive,
+since re-compressing already-compressed data is generally ineffective
+and particularly undesirable when lossy compression is involved.
+The archiver still includes a copy of the appropriate decoder in the archive,
+ensuring the data's continuing usability
+even after the original codec has become obsolete or unavailable.
+
+<P>
+Some of the archiver's codecs
+may be incapable of compression,
+but may instead merely recognize files already encoded
+using other, standalone compressors,
+and attach a suitable decoder to the archived file.
+We refer to such pseudo-codecs as <EM>recognizer-decoders</EM>,
+or <EM>redecs</EM>.
+
+<P>
+
+<H2><A NAME="SECTION00023000000000000000">
+2.3 Reading Archives</A>
+</H2>
+
+<P>
+Figure&nbsp;<A HREF="#fig-reader">4</A> illustrates the basic structure
+of the VXA archive reader.
+Unlike the writer,
+the reader does not require a collection of content-specific codecs,
+since all the decoders it needs are embedded in the archive itself.
+Instead, the archive reader implements a virtual machine
+in which to run those archived decoders.
+To decode a compressed file in the archive,
+the archive reader first locates the associated decoder in the archive
+and loads it into its virtual machine.
+The archive reader then executes the decoder in the virtual machine,
+supplying the encoded data to the decoder
+while accepting decoded data from the decoder,
+to produce the decompressed output file.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig-reader"></A><A NAME="161"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4:</STRONG>
+Archive Reader Operation</CAPTION>
+<TR><TD><IMG
+ BORDER="0"
+ SRC="img4.png"
+ ALT="\begin{figure}\centerline{\epsfig{file=reader.eps, scale=0.30}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The archive reader by default only decompresses files
+that weren't already compressed when the archive was written.
+This way, archived files that were already compressed
+in popular standard formats such as JPEG or MP3,
+which tend to be widely and conveniently usable in their compressed form,
+remain compressed by default after extraction.
+The reader can, however, be forced
+to decode <EM>all</EM> archived files having an associated decoder,
+as shown in Figure&nbsp;<A HREF="#fig-reader">4</A>,
+ensuring that encoded data remains decipherable
+even if ``native'' decoders for the format disappear.
+
+<P>
+This capability also helps protect against data corruption
+caused by codec bugs or evolution of standards.
+If an archived audio file was generated by a buggy MP3 encoder,
+for example,
+it may not play properly later under a different MP3 decoder
+after extraction from the archive in compressed form.
+As long as the audio file was originally archived
+with the specific (buggy) MP3 decoder that can decode the file correctly,
+however,
+the archive reader can still be instructed to use that archived decoder
+to recover a usable decompressed audio stream.
+
+<P>
+The VXA archive reader
+does not <EM>always</EM> have to use the archived x86-based decoders
+whenever it extracts files from an archive.
+To maximize performance,
+the reader might by default
+recognize popular compressed file types
+and decode them using non-virtualized decoders
+compiled for the native host architecture.
+Such a reader
+would fall back on running a virtualized decoder from the archive
+when no suitable native decoder is available,
+when the native decoder does not work properly
+on a particular archived stream,
+or when explicitly checking the archive's integrity.
+Even if the archive reader commonly
+uses native rather than virtualized decoders,
+the presence of the VXA decoders in the archive
+provides a crucial long-term fallback path for decoding,
+ensuring that the archived information remains decipherable
+after the codec it was compressed with
+has become obsolete and difficult to find.
+
+<P>
+Routinely using native decoders to read archives
+instead of the archived VXA decoders,
+of course,
+creates the important risk that a bug in a VXA decoder
+might go unnoticed for a long time,
+making an archive seem work fine in the short term
+but be impossible to decode later
+after the native decoder disappears.
+For this reason,
+it is crucial that explicit archive integrity tests
+always run the archived VXA decoder,
+and in general it is safest if the archive reader
+always uses the VXA decoder even when native decoders are available.
+Since users are unlikely to adopt this safer operational model consistently
+unless VXA decoder efficiency is on par with native execution,
+the efficiency of decoder virtualization
+is more important in practice than it may appear in theory.
+
+<P>
+
+<H2><A NAME="SECTION00024000000000000000">
+2.4 The VXA Virtual Machine</A>
+</H2>
+
+<P>
+The archive reader's virtual machine isolates the decoders it runs
+from both the host operating system and the processor architecture
+on which the archive reader itself runs.
+Decoders running in the VXA virtual machine 
+have access to the computational primitives of the underlying processor
+but are extremely limited in terms of input/output.
+The only I/O decoders are allowed
+is to read an encoded data stream supplied by the archive reader
+and produce a corresponding decoded output stream.
+Decoders cannot access any host operating system services,
+such as to open files, communicate over the network,
+or interact with the user.
+
+<P>
+Through this strong isolation,
+the virtual machine not only ensures that decoders remain generic
+and portable across many generations of operating systems,
+but it also protects the host system
+from buggy or malicious decoders that may be embedded in an archive.
+Assuming the virtual machine is implemented correctly,
+the worst harm a decoder can cause
+is to garble the data it was supposed to produce
+from a particular encoded file.
+Since a decoder cannot communicate,
+obtain information about the host system,
+or even check the current system time,
+decoders do not have access to information
+with which they might deliberately ``sabotage'' their data
+based on the conditions under which they are run.
+
+<P>
+When an archive contains many files associated with the same decoder,
+the archive reader has the option of
+re-initializing the virtual machine
+with a pristine copy of the decoder's executable image
+before processing each new file,
+or reusing the virtual machine's state
+to decode multiple files in succession.
+Reusing virtual machine state may improve performance,
+especially on archives containing many small files,
+at the cost of introducing the risk
+that a buggy or malicious decoder might ``leak'' information
+from one file to another during archive extraction,
+such as from a sensitive password or private key file
+to a multimedia stream that is likely to appear on a web page.
+The archive reader can minimize this security risk in practice
+by always re-initializing the virtual machine
+whenever the security attributes of the files it is processing change,
+such as Unix owner/group identifiers and permissions.
+
+<P>
+The VXA virtual machine is based on the standard 32-bit x86 architecture:
+all archived decoder executables are represented as x86-32 code,
+regardless of the actual processor architecture of the host system.
+The choice of the ubiquitous x86-32 architecture
+ensures that almost any existing decoder written in any language
+can be easily ported to run on the VXA virtual machine.
+
+<P>
+Although continuous improvements in processor hardware
+are likely to make the performance of an archived VXA decoder
+largely irrelevant over the long term,
+compressed archives are frequently used for more short-term purposes as well,
+such as making and restoring backups,
+distributing and installing software,
+and packaging XML-based structured documents&nbsp;[<A
+ HREF="#openoffice-xml">43</A>].
+Archive extraction performance is crucial to these short-term uses,
+and an archival storage system that performs poorly now
+is unlikely to receive widespread adoption
+regardless of its long-term benefits.
+Besides supporting the re-use of existing decoder implementations,
+VXA's adoption of the x86 architecture
+also enables those decoders to run quite efficiently
+on x86-based host processors,
+as demonstrated later in Section&nbsp;<A HREF="#sec-eval">5</A>.
+Implementing the VM efficiently on other architectures
+requires binary translation,
+which is more difficult and may be less efficient,
+but is nevertheless by now a practical and proven
+technology&nbsp;[<A
+ HREF="#sites93binary">40</A>,<A
+ HREF="#chernoff98fx32">9</A>,<A
+ HREF="#dehnert03transmeta">14</A>,<A
+ HREF="#baraz03ia">3</A>].
+
+<P>
+
+<H2><A NAME="SECTION00025000000000000000">
+2.5 Applicability</A>
+</H2>
+
+<P>
+The VXA architecture
+does not address the complete problem
+of preserving the long-term usability of archived digital information.
+The focus of VXA is on preserving <EM>compressed</EM> data streams,
+for which simpler uncompressed formats are readily available
+that can represent the same information.
+VXA will not necessarily help with old proprietary word processor documents,
+for example,
+for which there is often no obvious ``simpler form''
+that preserves all of the original semantic information.
+
+<P>
+Many document processing applications, however,
+are moving toward use of
+``self-describing'' XML-based structured
+data formats&nbsp;[<A
+ HREF="#openoffice-xml">43</A>],
+combined with
+a general-purpose ``compression wrapper'' such as ZIP&nbsp;[<A
+ HREF="#info-zip">21</A>]
+for storage efficiency.
+The VXA architecture may benefit the compression wrapper in such formats,
+allowing applications to encode documents
+using proprietary or specialized algorithms for efficiency
+while preserving the interoperability benefits of XML.
+VXA's support for specialized compression schemes
+may be particularly important for XML,
+in fact,
+since ``raw'' XML is extremely space-inefficient
+but can be compressed most effectively
+given some specialized knowledge of the data&nbsp;[<A
+ HREF="#liefke99xmill">26</A>].
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000"></A>
+<A NAME="sec-impl"></A><BR>
+3 Archiver Implementation
+</H1>
+
+<P>
+Although the basic VXA architecture as described above
+could be applied to many archival storage or backup systems,
+the prototype implementation explored in this paper
+takes the form of an enhancement to
+the venerable ZIP/UnZIP archival tools&nbsp;[<A
+ HREF="#info-zip">21</A>].
+The ZIP format was chosen
+over the <TT>tar</TT>/<TT>gzip</TT> format popular on Unix systems
+because ZIP compresses files individually
+rather than as one continuous stream,
+making it amenable to treating files of different types
+using different encoders.
+
+<P>
+For clarity,
+we will refer to the new VXA-enhanced ZIP and UnZIP utilities here
+as vxZIP and vxUnZIP,
+and to the modified archive format as ``vxZIP format.''
+In practice, however,
+the new tools and archive format can be treated as
+merely a natural upgrade to the existing ones.
+
+<P>
+
+<H2><A NAME="SECTION00031000000000000000">
+3.1 ZIP Archive Format Modifications</A>
+</H2>
+
+<P>
+The enhanced vxZIP archive format retains
+the same basic structure and features as the existing ZIP format,
+and the new utilities remain backward compatible
+with archives created with existing ZIP tools.
+Older ZIP tools can list the contents
+of archives created with vxZIP,
+but cannot extract files
+requiring a VXA decoder.
+
+<P>
+The ZIP file format historically uses
+a relatively fixed, though gradually growing, collection
+of general-purpose lossless codecs,
+each identified by a ``compression method'' tag
+in a ZIP file.
+A particular ZIP utility generally compresses all files
+using only one algorithm by default--the most powerful algorithm it supports--and UnZIP utilities include built-in decoders
+for most of the compression schemes used by past ZIP utilities.
+(Decoders for the old LZW-based ``shrinking'' scheme
+were commonly omitted for many years
+due to the LZW patent&nbsp;[<A
+ HREF="#battilana04gif">4</A>],
+illustrating one of the practical challenges
+to preserving archived data usability.)
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig-format"></A><A NAME="310"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5:</STRONG>
+vxZIP Archive Structure</CAPTION>
+<TR><TD><IMG
+ BORDER="0"
+ SRC="img5.png"
+ ALT="\begin{figure}\centerline{\epsfig{file=format.eps, scale=0.30}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+In the enhanced vxZIP format,
+an archive may contain files compressed
+using a mixture of traditional ZIP compression methods
+and new VXA-specific methods.
+Files archived using traditional methods
+are assigned the standard method tag,
+permitting even VXA-unaware UnZIP tools
+to identify and extract them successfully.
+The vxZIP format reserves one new ``special'' ZIP method tag
+for files compressed using VXA codecs
+that do not have their own ZIP method tags,
+and which thus can only be extracted
+with the help of an attached VXA decoder.
+
+<P>
+Regardless of whether an archived file
+uses a traditional or VXA compression scheme,
+vxZIP attaches a new VXA extension header to each file,
+pointing to the file's associated VXA decoder,
+as illustrated in Figure&nbsp;<A HREF="#fig-format">5</A>.
+Using this extension header,
+a VXA-aware archive reader can decode any archived file
+even if it has an unknown method tag.
+At the same time,
+vxUnZIP can still use a file's ZIP method tag
+to recognize files compressed using well-known algorithms
+for which it may have a faster native decoder.
+
+<P>
+When vxZIP recognizes an input file
+that is already compressed using a scheme
+for which it has a suitable VXA decoder,
+it stores the pre-compressed file directly without further compression
+and tags the file with compression method 0 (no compression).
+This method tag indicates to vxUnZIP
+that the file should normally be left compressed on extraction,
+and enables older UnZIP utilities
+to extract the file in its original compressed form.
+The vxZIP archiver nevertheless attaches a VXA decoder to the file
+in the same way as for automatically-compressed files,
+so that vxUnZIP can later be instructed
+to decode the file all the way to its uncompressed form
+if desired.
+
+<P>
+
+<H2><A NAME="SECTION00032000000000000000">
+3.2 Archiving VXA Decoders</A>
+</H2>
+
+<P>
+Since the 64KB size limitation of ZIP extension headers
+precludes storing VXA decoders themselves in the file headers,
+vxZIP instead stores each decoder
+elsewhere in the archive as a separate ``pseudo-file''
+having its own local file header
+and an empty filename.
+The VXA extension headers attached to ``actual'' archived files
+contain only the ZIP archive offset of the decoder pseudo-file.
+Many archive files can thus refer to one VXA decoder
+merely by referring to the same ZIP archive offset.
+
+<P>
+ZIP archivers write a <EM>central directory</EM>
+to the end of each archive,
+which summarizes the filenames and other meta-data
+of all files stored in the archive.
+The vxZIP archiver includes entries in the central directory
+only for ``actual'' archived files,
+and not for the pseudo-files containing archived VXA decoders.
+Since UnZIP tools normally use the central directory
+when listing the archive's contents,
+VXA decoder pseudo-files do not show up in such listings
+even using older VXA-unaware UnZIP tools,
+and old tools can still use the central directory
+to find and extract any files
+not requiring VXA-specific decoders.
+
+<P>
+A VXA decoder itself
+is simply an ELF executable
+for the 32-bit x86 architecture&nbsp;[<A
+ HREF="#tis95elf">45</A>],
+as detailed below in Section&nbsp;<A HREF="#sec-vm">4</A>.
+VXA decoders are themselves compressed in the archive
+using a fixed, well-known algorithm:
+namely the ubiquitous ``deflate'' method
+used by existing ZIP tools
+and by the <TT>gzip</TT> utility popular on Unix systems.
+
+<P>
+
+<H2><A NAME="SECTION00033000000000000000">
+3.3 Codecs for the Archiver</A>
+</H2>
+
+<P>
+Since a basic goal of the VXA architecture
+is to be able to support a wide variety of often specialized codecs,
+it is unacceptable for vxZIP
+to have a fixed set of built-in compressors,
+as was generally the case for previous ZIP tools.
+Instead,
+vxZIP introduces a plug-in architecture
+for codecs to be used with the archiver.
+Each codec consists of two main components:
+
+<P>
+
+<UL>
+<LI>The encoder is a standard dynamic-link library (DLL),
+	which the archiver loads into its own address space at run-time,
+	and invokes directly to recognize and compress files.
+	The encoder thus runs ``natively'' on the host processor architecture
+	and in the same operating system environment as the archiver itself.
+</LI>
+<LI>The decoder is an executable image for the VXA virtual machine,
+	which the archiver writes into the archive
+	if it produces or recognizes any encoded files using this codec.
+	The decoder is always an ELF executable for the 32-bit x86 architecture
+	implemented by the VXA virtual machine,
+	regardless of the host processor architecture and operating system
+	on which the archiver actually runs.
+</LI>
+</UL>
+
+<P>
+A natural future extension to this system
+would be to run VXA encoders as well as decoders
+in a virtual machine,
+making complete codec pairs maximally portable.
+While such an extension should not be difficult,
+several tradeoffs are involved.
+A virtual machine for VXA encoders
+may require user interface support
+to allow users to configure encoding parameters,
+introducing additional system complexity.
+While the performance impact of the VXA virtual machine is not severe
+at least on x86 hosts,
+as demonstrated in Section&nbsp;<A HREF="#sec-eval">5</A>,
+implementing encoders as native DLLs
+enables the archiving process to run with maximum performance
+on any host.
+Finally,
+vendors of proprietary codecs
+may not wish to release their encoders
+for use in a virtualized environment,
+because it might make license checking more difficult.
+For these reasons,
+virtualized VXA encoders are left for future work.
+
+<H1><A NAME="SECTION00040000000000000000"></A>
+<A NAME="sec-vm"></A><BR>
+4 The Virtual Machine
+</H1>
+
+<P>
+The most vital component of the vxUnZIP archive reader
+is the virtual machine in which it runs archived decoders.
+This virtual machine is implemented
+by 32, a novel <EM>virtual machine monitor</EM> (VMM)
+that runs in user mode
+as part of the archive reader's process,
+without requiring any special privileges
+or extensions to the host operating system.
+Decoders under 32 effectively run within vxUnZIP's address space,
+but in a software-enforced fault isolation
+domain&nbsp;[<A
+ HREF="#wahbe93efficient">46</A>],
+protecting the application process
+from possible actions of buggy or malicious decoders.
+The VMM is implemented
+as a shared library linked into vxUnZIP;
+it can also be used to implement specialized virtual machines
+for other applications.
+
+<P>
+The 32 VMM
+currently runs only on x86-based host processors,
+in both 32-bit and the new 64-bit modes.
+The VMM relies on quick x86-to-x86 
+code scanning and translation techniques
+to sandbox a decoder's code as it executes.
+These techniques are comparable to those
+used by Embra&nbsp;[<A
+ HREF="#witchel96embra">48</A>],
+VMware&nbsp;[<A
+ HREF="#sugarman01virtualizing">42</A>],
+and Valgrind&nbsp;[<A
+ HREF="#nethercote03valgrind">34</A>],
+though 32 is simpler as it need only provide isolation,
+and not simulate a whole physical PC
+or instrument object code for debugging.
+Full binary translation
+to make 32 run on other host architectures is under development.
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000">
+4.1 Data Sandboxing</A>
+</H2>
+
+<P>
+The VXA virtual machine provides decoders
+with a ``flat'' unsegmented address space up to 1GB in size,
+which always starts at virtual address 0
+from the perspective of the decoder.
+The VM does not allow decoders access to the underlying x86 architecture's
+legacy segmentation facilities.
+The 32 VMM does, however,
+<EM>use</EM> the legacy segmentation features of the x86 host processor
+in order to implement the virtual machine efficiently.
+
+<P>
+As illustrated in Figure&nbsp;<A HREF="#fig-vm">6</A>,
+32 maps a decoder's virtual address space
+at some arbitrary location within its own process,
+and sets up a special process-local (LDT) data segment
+with a base and limit that provides access only to that region.
+While running decoder code,
+the VMM keeps this data segment
+loaded into the host processor's segment registers
+that are used for normal data reads and writes (DS, ES, and SS).
+The decoder's computation and memory access instructions
+are thus automatically restricted to the sandbox region,
+without requiring the special code transformations
+needed on other architectures&nbsp;[<A
+ HREF="#wahbe93efficient">46</A>].
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig-vm"></A><A NAME="403"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6:</STRONG>
+Archive Reader and VMM Address Spaces</CAPTION>
+<TR><TD><IMG
+ BORDER="0" SRC="img6.png"
+ ALT="\begin{figure}\centerline{\epsfig{file=vm.eps, scale=0.30}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Although the legacy segmentation features that the VMM depends on
+are not functional
+in the 64-bit addressing mode (``long mode'') of the new x86-64 processors,
+these processors
+provide 64-bit applications the ability
+to switch back to a 32-bit ``compatibility mode''
+in which segmentation features are still available.
+On a 64-bit system,
+vxUnZIP and the VMM run in 64-bit long mode,
+but decoders run in 32-bit compatibility mode.
+Thus, 32 runs equally well
+on both x86-32 and x86-64 hosts
+with only minor implementation differences in the VMM
+(amounting to about 100 lines of code).
+
+<P>
+
+<H2><A NAME="SECTION00042000000000000000"></A>
+<A NAME="sec-code-sandbox"></A><BR>
+4.2 Code Sandboxing
+</H2>
+
+<P>
+Although the VMM could similarly set up an x86 code segment
+that maps only the decoder's address space,
+doing so would not by itself prevent decoders
+from executing arbitrary x86 instructions
+that are ``unsafe'' from the perspective of the VMM,
+such as those that would modify the segment registers
+or invoke host operating system calls directly.
+On RISC-based machines with fixed instruction sizes,
+a software fault isolation VMM
+can solve this problem by scanning the untrusted code
+for ``unsafe'' code sequences
+when the code is first loaded&nbsp;[<A
+ HREF="#wahbe93efficient">46</A>].
+This solution is not an option
+on the x86's variable-length instruction architecture,
+unfortunately,
+because within a byte sequence comprising one or more legitimate instructions
+there may be sub-sequences forming unsafe instructions,
+to which the decoder code might jump directly.
+The RISC-based techniques
+also reserve up to five general-purpose registers
+as <EM>dedicated registers</EM> to be used for fault isolation,
+which is not practical on x86-32
+since the architecture provides only eight general-purpose registers total.
+
+<P>
+The 32 VMM therefore never executes decoder code directly,
+but instead dynamically scans decoder code sequences to be executed
+and transforms them into ``safe'' code fragments
+stored elsewhere in the VMM's process.
+As with Valgrind&nbsp;[<A
+ HREF="#nethercote03valgrind">34</A>]
+and just-in-time compilation
+techniques&nbsp;[<A
+ HREF="#deutsch84efficient">15</A>,<A
+ HREF="#krall98efficient">24</A>],
+the VMM keeps transformed code fragments in a cache
+to be reused whenever the decoder
+subsequently jumps to the same virtual entrypoint again.
+
+<P>
+The VMM must of course transform all flow control instructions
+in the decoder's original code
+so as to keep execution confined to the safe, transformed code.
+The VMM rewrites branches with fixed targets
+to point to the correct transformed code fragment if one already exists.
+Branches to fixed but as-yet-unknown targets
+become branches to a ``trampoline'' that, when executed,
+transforms the target code
+and then back-patches the original (transformed) branch instruction
+to point directly to the new target fragment.
+Finally, the VMM rewrites indirect branches
+whose target addresses are known only at runtime
+(including function return instructions),
+so as to look up the target address dynamically
+in a hash table of transformed code entrypoints.
+
+<P>
+
+<H2><A NAME="SECTION00043000000000000000">
+4.3 Virtual System Calls</A>
+</H2>
+
+<P>
+The 32 VMM rewrites x86 instructions
+that would normally invoke system calls to the host operating system,
+so as to return control to the user-mode VMM instead.
+In this way,
+32 ensures that decoders have no direct access to host OS services,
+but can only make controlled ``virtual system calls''
+to the VMM or the archive reader.
+
+<P>
+Only five virtual system calls are available
+to decoders running under vxUnZIP:
+<TT>read</TT>, <TT>write</TT>, <TT>exit</TT>, <TT>setperm</TT>, and <TT>done</TT>.
+The first three have their standard Unix meanings,
+while <TT>setperm</TT> supports heap memory allocation,
+and <TT>done</TT> enables decoders to signal to vxUnZIP
+that they have finished decoding one stream
+and are able to process another without being re-loaded.
+Decoders have access to
+three standard ``virtual file handles''--<TT>stdin</TT>, <TT>stdout</TT>, and <TT>stderr</TT>--but have no way to open any other files.
+A decoder's virtual <TT>stdin</TT> file handle
+represents the data stream to be decoded,
+its <TT>stdout</TT>
+is the data stream it produces by decoding the input,
+and <TT>stderr</TT>
+serves the traditional purpose of allowing the decoder
+to write error or debugging messages.
+(vxUnZIP only displays such messages from decoders
+when in verbose mode.)
+A VXA decoder is therefore a traditional Unix filter
+in a very pure form.
+
+<P>
+Since a decoder's address space
+comprises a portion of vxUnZIP's own address space,
+the archive reader can easily access the decoder's data directly
+for the purpose of servicing virtual system calls,
+in the same way that the host OS kernel services system calls
+made by application processes.
+To handle the decoder's <TT>read</TT> and <TT>write</TT> calls,
+vxUnZIP merely passes the system call on to the native host OS
+after checking and adjusting the file handle and buffer pointer arguments.
+A decoder's I/O calls thus require no extra data copying,
+and the indirection through the VMM and vxUnZIP code is cheap
+as it does not cross any hardware protection domains.
+
+<P>
+
+
+<H1><A NAME="SECTION00050000000000000000"></A>
+<A NAME="sec-eval"></A><BR>
+5 Evaluation and Results
+</H1>
+
+<P>
+This section experimentally evaluates
+the prototype vxZIP/vxUnZIP tools
+in order to analyze the practicality of the VXA architecture.
+The two most obvious questions
+about the practicality of VXA
+are whether running decoders in a virtual machine
+seriously compromises their performance
+for short-term uses of archives
+such as backups and software/data packaging,
+and whether embedding decoders in archives
+entails a significant storage cost.
+We also consider the portability issues
+of implementing virtual machines that run x86-32 code on other hosts.
+
+<P>
+
+<H2><A NAME="SECTION00051000000000000000">
+5.1 Test Decoders</A>
+</H2>
+
+<P>
+The prototype vxZIP archiver
+includes codecs for several well-known compressed file formats,
+summarized in Table&nbsp;<A HREF="#tab-decoders">1</A>.
+The two general-purpose codecs, <TT>zlib</TT> and <TT>bzip2</TT>,
+are for arbitrary data streams:
+vxZIP can use either of them as its ``default compressor''
+to compress files of unrecognized type while archiving.
+The remaining codecs are media-specific.
+All of the codecs are based directly
+on publicly-available libraries written in C,
+and were compiled using a basic GCC
+cross-compiler setup.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="642"></A>
+<TABLE>
+<CAPTION><STRONG>Table 1:</STRONG>
+Decoders Implemented in vxZIP/vxUnZIP Prototype</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT"><FONT SIZE="+0">
+Decoder		</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> Description	</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> Availability		</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> Output Format </FONT></TD>
+</TR>
+<TR><TD ALIGN="CENTER" COLSPAN=4><FONT SIZE="+0"><B>General-Purpose Codecs</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="+0"> 
+</FONT><FONT SIZE="+0"><TT>zlib</TT>	</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> ``Deflate'' algorithm from ZIP/gzip
+				</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> </FONT><FONT SIZE="+0"><TT>www.zlib.net</TT>	</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> (raw data)	</FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="+0"> 
+</FONT><FONT SIZE="+0"><TT>bzip2</TT>	</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> Popular BWT-based algorithm
+				</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> </FONT><FONT SIZE="+0"><TT>www.bzip.org</TT>	</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> (raw data)	</FONT></TD>
+</TR>
+<TR><TD ALIGN="CENTER" COLSPAN=4><FONT SIZE="+0"> 
+
+</FONT><FONT SIZE="+0"><B>Still Image Codecs</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="+0"> 
+</FONT><FONT SIZE="+0"><TT>jpeg</TT>	</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> Independent JPEG Group (IJG) reference decoder
+				</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> </FONT><FONT SIZE="+0"><TT>www.ijg.org</TT>	</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> BMP image </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="+0"> 
+</FONT><FONT SIZE="+0"><TT>jp2</TT>	</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> JPEG-2000 reference decoder from JasPer library
+				</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> </FONT><FONT SIZE="+0"><TT>www.jpeg.org/jpeg2000</TT>
+							</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> BMP image </FONT></TD>
+</TR>
+<TR><TD ALIGN="CENTER" COLSPAN=4><FONT SIZE="+0"> 
+
+</FONT><FONT SIZE="+0"><B>Audio Codecs</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="+0"> 
+</FONT><FONT SIZE="+0"><TT>flac</TT>	</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> Free Lossless Audio Codec (FLAC) decoder
+				</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> </FONT><FONT SIZE="+0"><TT>flac.sourceforge.net</TT>
+							</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> WAV audio </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="+0"> 
+</FONT><FONT SIZE="+0"><TT>vorbis</TT>	</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> Ogg Vorbis audio decoder
+				</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> </FONT><FONT SIZE="+0"><TT>www.vorbis.com</TT>	</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="+0"> WAV audio </FONT></TD>
+</TR>
+</TABLE></DIV>
+
+<A NAME="tab-decoders"></A></TD></TR>
+</TABLE>
+</DIV><P></P><BR>
+
+<P>
+The <TT>jpeg</TT> and <TT>jp2</TT> codecs 
+are recognizer-decoders (``redecs''),
+which recognize still images compressed
+in the lossy JPEG&nbsp;[<A
+ HREF="#wallace91jpeg">47</A>]
+and JPEG-2000&nbsp;[<A
+ HREF="#iso00jpeg">23</A>] formats, respectively,
+and attach suitable VXA decoders to archived images.
+These decoders,
+when run under vxUnZIP,
+output uncompressed images
+in the simple and universally-understood Windows BMP file format.
+The <TT>vorbis</TT> redec
+similarly recognizes compressed audio streams
+in the lossy Ogg/Vorbis format&nbsp;[<A
+ HREF="#xiph04vorbis">49</A>],
+and attaches a Vorbis decoder
+that yields an uncompressed audio file
+in the ubiquitous Windows WAV audio file format.
+
+<P>
+Finally, <TT>flac</TT> is a full encoder/decoder pair
+for the Free Lossless Audio Codec (FLAC) format&nbsp;[<A
+ HREF="#coalson05flac">11</A>].
+Using this codec,
+vxZIP can not only recognize audio streams
+already compressed in FLAC format and attach a VXA decoder,
+but it can also recognize <EM>uncompressed</EM> audio streams in WAV format
+and automatically compress them using the FLAC encoder.
+This codec thus demonstrates how a VXA archiver
+can make use of compression schemes specialized to particular types of data,
+without requiring the archive reader to contain built-in decoders
+for each such specialized compression scheme.
+
+<P>
+The above codecs with widely-available open source implementations
+were chosen for purposes of <EM>evaluating</EM>
+the prototype vxZIP/vxUnZIP implementation,
+and are not intended to serve as ideal examples
+to <EM>motivate</EM> the VXA architecture.
+While the open formats above may gradually evolve over time,
+their open-source decoder implementations are unlikely to disappear soon.
+Commercial archival and multimedia compression products
+usually incorporate proprietary codecs,
+however,
+which might serve as better ``motivating examples'' for VXA:
+proprietary codecs tend to evolve more quickly
+due to intense market pressures,
+and and their closed-source implementations
+cannot be maintained by the customer
+or ported to new operating systems
+once the original product is obsolete and unsupported by the vendor.
+
+<P>
+
+<H2><A NAME="SECTION00052000000000000000">
+5.2 Performance of Virtualized Decoders</A>
+</H2>
+
+<P>
+
+<P>
+To evaluate the performance cost of virtualization,
+the graph in Figure&nbsp;<A HREF="#fig-perf">7</A>
+shows the user-mode CPU time consumed
+running the above decoders over several test data sets,
+both natively and under the 32 VMM.
+All execution times are normalized
+to the native execution time on an x86-32 host system.
+The data set used to test the general-purpose lossless codes
+is a Linux 2.6.11 kernel source tree;
+the data sets used for the media-specific codecs
+consist of typical pictures and music files
+in the appropriate format.
+All tests were run on an AMD Athlon 64 3000+
+with 512MB of RAM,
+on both the x86-32 and x86-64 versions of SuSE Linux 9.3.
+The same compiler version (GCC 4.0.0) and optimization settings (<TT>-O3</TT>)
+were used for the native and virtualized versions of each decoder,
+and the timings represent user-mode process time
+as reported by the <TT>time</TT> command
+so as to factor out disk and system overhead.
+Total wall-clock measurements are not shown
+because for all but the slowest decoder, jp2,
+disk overhead dominates total wall-clock time
+and introduces enough additional variance between successive runs
+to swamp the differences in CPU-bound decoding time.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig-perf"></A><A NAME="581"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7:</STRONG>
+Performance of Virtualized Decoders</CAPTION>
+<TR><TD><IMG
+ BORDER="0"
+ SRC="img7.png"
+ ALT="\begin{figure*}\centerline{\epsfig{file=perf.eps, scale=0.8}}\end{figure*}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+As Figure&nbsp;<A HREF="#fig-perf">7</A> shows,
+the decoders running under the 32 VMM
+experience a slowdown of up to 11%
+relative to native x86-32 execution.
+The <TT>vorbis</TT> decoder initially experienced a 29% slowdown
+when compiled for VXA unmodified,
+due to subroutine calls
+in the decoder's inner loop
+that accentuate the VMM's flow-control overhead
+by requiring hash table lookups (see Section&nbsp;<A HREF="#sec-code-sandbox">4.2</A>).
+Inlining these two functions
+both improved the performance of the native decoder slightly (about 1%)
+and reduced the relative cost of virtualization to 11%.
+The other decoders were unmodified from their original distribution form.
+The JPEG decoder became slightly faster under 32,
+possibly due to effects of the VMM's code rewriting
+on instruction cache locality;
+such effects are possible
+and have been exploited elsewhere&nbsp;[<A
+ HREF="#bala00dynamo">2</A>].
+
+<P>
+The virtualized decoders fall farther behind
+in comparison with native execution on an x86-64 host,
+but this difference is mostly due
+to the greater efficiency of the 64-bit native code
+rather than to virtualization overhead.
+Virtualized decoders always run in 32-bit mode
+regardless of the host system,
+so their absolute performance is almost identical
+on 32-bit versus 64-bit hosts,
+as the graph shows.
+
+<P>
+
+<H2><A NAME="SECTION00053000000000000000">
+5.3 Decoder Storage Overhead</A>
+</H2>
+
+<P>
+To evaluate the storage overhead of embedding decoders in archives,
+Table&nbsp;<A HREF="#tab-size">2</A> summarizes 
+the size of each decoder's executable image
+when compiled and linked for the VXA virtual machine.
+The code size for each decoder is further split
+into the portion comprising the decoder itself
+versus the portion derived from the statically-linked C library
+against which each decoder is linked.
+No special effort was made to trim unnecessary code,
+and the decoders were compiled to optimize performance
+over code size.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="631"></A>
+<TABLE>
+<CAPTION><STRONG>Table 2:</STRONG>
+Code Size of Virtualized Decoders</CAPTION>
+<TR><TD><DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT">Decoder</TD>
+<TD ALIGN="CENTER" COLSPAN=5>Code Size</TD>
+<TD ALIGN="CENTER" COLSPAN=1>Compressed</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="RIGHT">Total</TD>
+<TD ALIGN="CENTER" COLSPAN=2>Decoder</TD>
+<TD ALIGN="CENTER" COLSPAN=2>C Library</TD>
+<TD ALIGN="CENTER" COLSPAN=1>(<TT>zlib</TT>)</TD>
+</TR>
+<TR><TD ALIGN="CENTER" COLSPAN=6><B>General-Purpose Codecs</B></TD>
+<TD ALIGN="RIGHT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>zlib</TT></TD>
+<TD ALIGN="RIGHT">46.0KB</TD>
+<TD ALIGN="RIGHT">32.4KB</TD>
+<TD ALIGN="RIGHT">(70%)</TD>
+<TD ALIGN="RIGHT">13.6KB</TD>
+<TD ALIGN="RIGHT">(30%)</TD>
+<TD ALIGN="RIGHT">26.2KB</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>bzip2</TT></TD>
+<TD ALIGN="RIGHT">71.1KB</TD>
+<TD ALIGN="RIGHT">60.9KB</TD>
+<TD ALIGN="RIGHT">(86%)</TD>
+<TD ALIGN="RIGHT">10.2KB</TD>
+<TD ALIGN="RIGHT">(14%)</TD>
+<TD ALIGN="RIGHT">29.9KB</TD>
+</TR>
+<TR><TD ALIGN="CENTER" COLSPAN=6><B>Still Image Codecs</B></TD>
+<TD ALIGN="RIGHT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>jpeg</TT></TD>
+<TD ALIGN="RIGHT">103.3KB</TD>
+<TD ALIGN="RIGHT">90.0KB</TD>
+<TD ALIGN="RIGHT">(87%)</TD>
+<TD ALIGN="RIGHT">13.3KB</TD>
+<TD ALIGN="RIGHT">(13%)</TD>
+<TD ALIGN="RIGHT">48.6KB</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>jp2</TT></TD>
+<TD ALIGN="RIGHT">220.2KB</TD>
+<TD ALIGN="RIGHT">198.5KB</TD>
+<TD ALIGN="RIGHT">(90%)</TD>
+<TD ALIGN="RIGHT">21.7KB</TD>
+<TD ALIGN="RIGHT">(10%)</TD>
+<TD ALIGN="RIGHT">105.9KB</TD>
+</TR>
+<TR><TD ALIGN="CENTER" COLSPAN=6><B>Audio Codecs</B></TD>
+<TD ALIGN="RIGHT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>flac</TT></TD>
+<TD ALIGN="RIGHT">102.5KB</TD>
+<TD ALIGN="RIGHT">84.2KB</TD>
+<TD ALIGN="RIGHT">(82%)</TD>
+<TD ALIGN="RIGHT">18.3KB</TD>
+<TD ALIGN="RIGHT">(18%)</TD>
+<TD ALIGN="RIGHT">47.6KB</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>vorbis</TT></TD>
+<TD ALIGN="RIGHT">233.4KB</TD>
+<TD ALIGN="RIGHT">200.3KB</TD>
+<TD ALIGN="RIGHT">(86%)</TD>
+<TD ALIGN="RIGHT">33.1KB</TD>
+<TD ALIGN="RIGHT">(14%)</TD>
+<TD ALIGN="RIGHT">129.7KB</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<A NAME="tab-size"></A></TD></TR>
+</TABLE>
+</DIV><P></P><BR>
+
+<P>
+The significance of these absolute storage overheads
+of course
+depends on the size of the archive in which they are embedded,
+since only one copy of a decoder
+needs to be stored in the archive
+regardless of the number of encoded files that use it.
+As a comparison point, however,
+a single 2.5-minute CD-quality song
+in the dataset used for the earlier performance tests,
+compressed at 120Kbps using the lossy Ogg codec,
+occupies 2.2MB.
+The 130KB Ogg decoder for VXA therefore
+represents a 6% space overhead
+in an archive containing only this one song,
+or a 0.6% overhead in an archive containing a 10-song album.
+The same 2.5-minute song compressed using the lossless FLAC codec
+occupies 24MB,
+next to which the 48KB 32 decoder
+represents a negligible 0.2% overhead.
+
+<P>
+
+<P>
+
+<H2><A NAME="SECTION00054000000000000000">
+5.4 Portability Considerations</A>
+</H2>
+
+<P>
+A clear disadvantage of using the native x86 processor architecture
+as the basis for VXA decoders
+is that porting the archive reader to non-x86 host architectures
+requires instruction set emulation or binary translation.
+While instruction set emulators can be quite portable,
+they also tend to be many times slower than native execution,
+making them unappealing for computation-intensive tasks
+such as data compression.
+Binary translation provides better performance
+and has entered widespread commercial use,
+but is not simple to implement,
+and even the best binary translators are unlikely
+to match the performance of natively-compiled code.
+
+<P>
+The QEMU x86 emulator&nbsp;[<A
+ HREF="#bellard05qemu">6</A>]
+introduces a binary translation technique
+that offers a promising compromise between portability and performance.
+QEMU uses a native C compiler for the host processor architecture
+to generate short code fragments that emulate individual x86 instructions.
+QEMU's dynamic translator then scans the x86 code at run-time
+and pastes together the appropriate native code fragments
+to form translated code.
+While this method is unlikely to perform as well
+as a binary translator designed and optimized
+for a specific host architecture,
+it provides a portable method
+of implementing emulators that offer usable performance levels.
+
+<P>
+Even without efficient binary translation for x86 code,
+however,
+the cost of emulation
+does not necessarily make the VXA architecture impractical
+for non-x86 host architectures.
+An archive reader
+can still provide fast native decoders for currently popular file formats,
+running archived decoders under emulation
+only when no native decoder is available.
+The resulting archival system
+is no slower in practice than existing tools
+based on a fixed set of compressors,
+but provides the added assurance that archived data
+will still be decipherable far into the future.
+It is much better to be able to decode archived data slowly using emulation
+than not to be able to decode it at all.
+
+<P>
+
+<H2><A NAME="SECTION00055000000000000000">
+5.5 Availability</A>
+</H2>
+
+<P>
+The vxZIP/vxUnZIP tools,
+the 32 virtual machine,
+and the data sets used in the above tests
+can be obtained from
+<a href="http://pdos.csail.mit.edu/~baford/vxa/">
+	http://pdos.csail.mit.edu/~baford/vxa/</a>.
+
+<H1><A NAME="SECTION00060000000000000000"></A>
+<A NAME="sec-related"></A><BR>
+6 Related Work
+</H1>
+
+<P>
+The importance and difficulty of preserving digital information
+over the long term
+is gaining increasing recognition&nbsp;[<A
+ HREF="#garrett96preserving">16</A>].
+This problem can be broken into two components:
+preserving <EM>data</EM> and
+preserving the data's <EM>meaning</EM>&nbsp;[<A
+ HREF="#crespo98archival">13</A>].
+Important work is ongoing to address the first
+aspect&nbsp;[<A
+ HREF="#goldberg98towards">17</A>,<A
+ HREF="#cooper02peertopeer">12</A>,<A
+ HREF="#maniatis05lockss">30</A>],
+and the second, the focus of this paper,
+is beginning to receive serious attention.
+
+<P>
+
+<H2><A NAME="SECTION00061000000000000000">
+6.1 Archival Storage Strategies</A>
+</H2>
+
+<P>
+Storing executable decoders with archived data
+is not new:
+popular archivers including ZIP
+often ship with tools to create <EM>self-extracting archives</EM>,
+or executables that decompress themselves when run&nbsp;[<A
+ HREF="#pkzip">35</A>,<A
+ HREF="#info-zip">21</A>].
+Such self-extracting archives are designed for convenience,
+however,
+and are traditionally specific to a particular host operating system,
+making them as bad as or worse than traditional non-executable archives
+for data portability and longevity.
+Self-extracting archives also provide no security
+against bugs or malicious decoders;
+E-mail viruses routinely disguise themselves
+as self-extracting archives supposedly containing useful applications.
+
+<P>
+Rothenberg suggested a decade ago the idea of
+archiving the original application and system software used to create data
+along with the data itself,
+and using emulators to run archived software
+after its original hardware platform
+becomes obsolete&nbsp;[<A
+ HREF="#rothenberg95ensuring">38</A>].
+Archiving entire systems
+and emulating their hardware accurately is difficult, however,
+because real hardware platforms (including necessary I/O devices)
+are extremely complex
+and tend to be only partly standardized and documented&nbsp;[<A
+ HREF="#bearman99reality">5</A>].
+Preserving the <EM>functionality</EM> of the original system
+is also not necessarily equivalent
+to preserving the <EM>usefulness</EM> of the original data.
+The ability to view old data in an emulator window
+via the original application's archaic user interface,
+for example,
+is not the same as being able to load or ``cut-and-paste'' the data
+into new applications or process it
+using new indexing or analysis tools.
+
+<P>
+Lorie later proposed to archive data along with specialized decoder programs,
+which run on a specialized ``Universal Virtual Computer'' (UVC),
+and extract archived data into a self-describing
+XML-like format&nbsp;[<A
+ HREF="#lorie00archiving">27</A>].
+The UVC's simplicity makes emulation easier,
+but since it represents a new architecture
+substantially different from those of real processors,
+UVC decoders must effectively be written from scratch in assembly language
+until high-level languages and tools are developed&nbsp;[<A
+ HREF="#lorie02uvc">28</A>].
+More importantly, the UVC's specialization
+to the ``niche'' of long-term archival storage systems
+virtually guarantees that
+high-level languages, development tools, and libraries for it
+will never be widely available or well-supported
+as they are for general-purpose architectures.
+
+<P>
+
+<P>
+The LOCKSS archival system
+supports data format converter plug-ins
+that transparently migrate data in obsolete formats to new formats
+when a user accesses the data&nbsp;[<A
+ HREF="#rosenthal05transparent">37</A>].
+Over time,
+however,
+actively maintaining converter plug-ins
+for an ever-growing array of obsolete compressed formats may become difficult.
+Archiving VXA decoders with compressed data <EM>now</EM>
+ensures that future LOCKSS-style ``migrate-on-access'' converters
+will only need to read common historical <EM>uncompressed</EM> formats,
+such as BMP images or WAV audio files,
+and not the far more numerous and rapidly-evolving compressed formats.
+VXA therefore complements a ``migrate-on-access'' facility
+by reducing the number and variety of source formats 
+the access-time converters must support.
+
+<P>
+
+<P>
+
+<H2><A NAME="SECTION00062000000000000000">
+6.2 Specialized Virtual Environments</A>
+</H2>
+
+<P>
+Virtual machines and languages
+have been designed for many specialized purposes,
+such as
+printing&nbsp;[<A
+ HREF="#adobe99postscript">1</A>],
+boot loading&nbsp;[<A
+ HREF="#ieee94boot">20</A>],
+Web programming&nbsp;[<A
+ HREF="#gosling96java">19</A>,<A
+ HREF="#lucco95omniware">29</A>],
+packet filters&nbsp;[<A
+ HREF="#mogul87packet">32</A>]
+and other OS extensions&nbsp;[<A
+ HREF="#small96comparison">41</A>],
+active networks&nbsp;[<A
+ HREF="#tennenhouse97survey">44</A>],
+active disks&nbsp;[<A
+ HREF="#riedel98active">36</A>],
+and grid computing&nbsp;[<A
+ HREF="#chang02trustless">8</A>].
+In this tradition,
+VXA could be appropriately described as
+an architecture for ``active archives.''
+
+<P>
+Similarly, dynamic code scanning and translation
+is widely used for purposes
+such as migrating legacy applications across processor
+architectures&nbsp;[<A
+ HREF="#sites93binary">40</A>,<A
+ HREF="#chernoff98fx32">9</A>,<A
+ HREF="#baraz03ia">3</A>],
+simulating complete hardware platforms&nbsp;[<A
+ HREF="#witchel96embra">48</A>],
+run-time code optimization&nbsp;[<A
+ HREF="#bala00dynamo">2</A>],
+implementing new processors&nbsp;[<A
+ HREF="#dehnert03transmeta">14</A>],
+and debugging compiled code&nbsp;[<A
+ HREF="#nethercote03valgrind">34</A>,<A
+ HREF="#seward05valgrind">39</A>].
+In contrast with the common ``retroactive'' uses
+of virtual machines and dynamic translation
+to ``rescue old code'' that no longer runs on the latest systems,
+however,
+VXA applies these technologies <EM>proactively</EM>
+to preserve the long-term usability and portability of archived data,
+<EM>before</EM> the code that knows how to decompress it becomes obsolete.
+
+<P>
+Most virtual machines designed to support safe application extensions
+rely on type-safe languages such as Java&nbsp;[<A
+ HREF="#case96implementing">7</A>].
+In this case,
+the constraints imposed by the language
+make the virtual machine
+more easily portable across processor architectures,
+at the cost of requiring all untrusted code to be written in such a language.
+While just-in-time compilation&nbsp;[<A
+ HREF="#deutsch84efficient">15</A>,<A
+ HREF="#krall98efficient">24</A>]
+has matured to a point where
+type-safe languages perform adequately for most purposes,
+some software domains
+in which performance is traditionally perceived as paramount--such as data compression--remain resolutely attached to unsafe languages such as C and assembly language.
+Advanced digital media codecs
+also frequently take advantage of the SIMD extensions
+of modern processors&nbsp;[<A
+ HREF="#intel05ia32">22</A>],
+which tend to be unavailable in type-safe languages.
+The desire to support
+the many widespread open and proprietary data encoding algorithms
+whose implementations are only available in unsafe languages,
+therefore,
+makes type-safe language technology infeasible for the VXA architecture.
+
+<P>
+
+<H2><A NAME="SECTION00063000000000000000">
+6.3 Isolation Technologies</A>
+</H2>
+
+<P>
+The prototype 32 VMM demonstrates
+a simple and practical software fault isolation (SFI) strategy on the x86,
+which achieves performance comparable to previous techniques
+designed for on RISC architectures&nbsp;[<A
+ HREF="#wahbe93efficient">46</A>],
+despite the fact that the RISC-based techniques
+are not easily applicable to the x86
+as discussed in Section&nbsp;<A HREF="#sec-code-sandbox">4.2</A>.
+RISC-based SFI,
+observed to incur a 15-20% overhead for full virtualization,
+can be trimmed to 4% overhead by sandboxing memory writes but not reads,
+thereby protecting the host application
+from active interference by untrusted code
+but not from snooping.
+Unfortunately, this weaker security model
+is probably not adequate for VXA:
+a functional but malicious decoder
+for multimedia files likely to be posted on the Web,
+for example,
+could scan the archive reader's address space
+for data left over from restoring sensitive files
+such as passwords and private keys from a backup archive,
+and surreptitiously leak that information
+into the (public) multimedia output stream it produces.
+
+<P>
+The Janus security system&nbsp;[<A
+ HREF="#goldberg96secure">18</A>]
+runs untrusted ``helper'' applications in separate processes,
+using hardware-based protection in conjunction with
+Solaris's sophisticated process tracing facilities
+to control the supervised applications' access to host OS system calls.
+This approach is more portable across processor architectures than 32's,
+but less portable across operating systems
+since it relies on features currently unique to Solaris.
+The Janus approach also does not enhance
+the portability of the helper applications,
+since it does not insulate them
+from those host OS services they <EM>are</EM> allowed to access.
+
+<P>
+The L4 microkernel used an x86-specific segmentation trick
+analogous to 32's data sandboxing technique
+to implement fast IPC between small address spaces&nbsp;[<A
+ HREF="#liedtke95improved">25</A>].
+A Linux kernel extension
+similarly used segmentation and paging in combination
+to give user-level applications a sandbox
+for untrusted extensions&nbsp;[<A
+ HREF="#tzicker99integrating">10</A>].
+This latter technique can provide each application
+with only one virtual sandbox at a time,
+however,
+and it imposes constraints on the kernel's own use of x86 segments
+that would make it impossible to grant use of this facility
+to 64-bit applications on new x86-64 hosts.
+
+<H1><A NAME="SECTION00070000000000000000"></A>
+<A NAME="sec-conc"></A><BR>
+7 Conclusion
+</H1>
+
+<P>
+The VXA architecture for archival data storage
+offers a new and practical solution to the problem
+of preserving the usability of digital content.
+By including executable decoders in archives
+that run on a simple and OS-independent virtual machine
+based on the historically enduring x86 architecture,
+the VXA architecture ensures that archived data
+can always be decoded
+into simpler and less rapidly-evolving uncompressed formats,
+long after the original codec has become obsolete
+and difficult to find.
+The prototype vxZIP/vxUnZIP archiver for x86-based hosts
+is portable across operating systems,
+and decoders retain good performance when virtualized.
+
+<P>
+
+<H2><A NAME="SECTION00071000000000000000">
+Acknowledgments</A>
+</H2>
+
+<P>
+The author wishes to thank Frans Kaashoek, Russ Cox, Maxwell Krohn,
+and the anonymous reviewers for many helpful comments and suggestions.
+
+<P>
+
+<H2><A NAME="SECTION00080000000000000000">
+Bibliography</A>
+</H2><DL COMPACT><DD><P></P><DT><A NAME="adobe99postscript">1</A>
+<DD>
+Adobe Systems Inc.
+<BR><EM>PostScript Language Reference</EM>.
+<BR>Addison Wesley, 3rd edition, March 1999.
+
+<P></P><DT><A NAME="bala00dynamo">2</A>
+<DD>
+Vasanth Bala, Evelyn Duesterwald, and Sanjeev Banerjia.
+<BR>Dynamo: a transparent dynamic optimization system.
+<BR><EM>ACM SIGPLAN Notices</EM>, 35(5):1-12, 2000.
+
+<P></P><DT><A NAME="baraz03ia">3</A>
+<DD>
+Leonid Baraz, Tevi Devor, Orna Etzion, Shalom Goldenberg, Alex Skaletsky, Yun
+  Wang, and Yigal Zemach.
+<BR>IA-32 Execution Layer: a two-phase dynamic translator designed to
+  support IA-32 applications on Itanium-based systems.
+<BR>In <EM>36th International Conference on Microarchitecture
+  (MICRO36)</EM>, San Diego, CA, December 2003.
+
+<P></P><DT><A NAME="battilana04gif">4</A>
+<DD>
+Michael&nbsp;C. Battilana.
+<BR>The GIF controversy: A software developer's perspective, June 2004.
+<BR><a href="http://lzw.info/">http://lzw.info/</a>.
+
+<P></P><DT><A NAME="bearman99reality">5</A>
+<DD>
+David Bearman.
+<BR>Reality and chimeras in the preservation of electronic records.
+<BR><EM>D-Lib Magazine</EM>, 5(4), April 1999.
+
+<P></P><DT><A NAME="bellard05qemu">6</A>
+<DD>
+Fabrice Bellard.
+<BR>QEMU, a fast and portable dynamic translator, April 2005.
+
+<P></P><DT><A NAME="case96implementing">7</A>
+<DD>
+Brian Case.
+<BR>Implementing the Java virtual machine.
+<BR><EM>Microprocessor Report</EM>, 10(4):12-17, March 1996.
+
+<P></P><DT><A NAME="chang02trustless">8</A>
+<DD>
+B.&nbsp;Chang, K.&nbsp;Crary, M.&nbsp;DeLap, R.&nbsp;Harper, J.&nbsp;Liszka, T.&nbsp;Murphy VII, and
+  F.&nbsp;Pfenning.
+<BR>Trustless grid computing in ConCert.
+<BR>In <EM>Workshop on Grid Computing</EM>, pages 112-125, Baltimore, MD,
+  November 2002.
+
+<P></P><DT><A NAME="chernoff98fx32">9</A>
+<DD>
+A.&nbsp;Chernoff, M.&nbsp;Herdeg, R.&nbsp;Hookway, C.&nbsp;Reeve, N.&nbsp;Rubin, T.&nbsp;Tye, S.&nbsp;Bharadwaj
+  Yadavalli, and J.&nbsp;Yates.
+<BR>FX!32: a profile-directed binary translator.
+<BR><EM>IEEE Micro</EM>, 18(2):56-64, March 1998.
+
+<P></P><DT><A NAME="tzicker99integrating">10</A>
+<DD>
+Tzi-cker Chiueh, Ganesh Venkitachalam, and Prashant Pradhan.
+<BR>Integrating segmentation and paging protection for safe, efficient
+  and transparent software extensions.
+<BR>In <EM>Symposium on Operating System Principles</EM>, pages 140-153,
+  December 1999.
+
+<P></P><DT><A NAME="coalson05flac">11</A>
+<DD>
+Josh Coalson.
+<BR>Free lossless audio codec format.
+<BR><FONT SIZE="+0"><a href="http://flac.sourceforge.net/format.html">http://flac.sourceforge.net/format.html</a></FONT>.
+
+<P></P><DT><A NAME="cooper02peertopeer">12</A>
+<DD>
+Brian Cooper and Hector Garcia-Molina.
+<BR>Peer-to-peer data trading to preserve information.
+<BR><EM>Information Systems</EM>, 20(2):133-170, 2002.
+
+<P></P><DT><A NAME="crespo98archival">13</A>
+<DD>
+Arturo Crespo and Hector Garcia-Molina.
+<BR>Archival storage for digital libraries.
+<BR>In <EM>International Conference on Digital Libraries</EM>, 1998.
+
+<P></P><DT><A NAME="dehnert03transmeta">14</A>
+<DD>
+J.&nbsp;Dehnert, B.&nbsp;Grant, J.&nbsp;Banning, R.&nbsp;Johnson, T.&nbsp;Kistler, A.&nbsp;Klaiber, and
+  J.&nbsp;Mattson.
+<BR>The Transmeta code morphing software: Using speculation, recovery,
+  and adaptive retranslation to address real-life challenges.
+<BR>In <EM>International Symposium on Code Generation and Optimization</EM>,
+  pages 15-24. IEEE Computer Society, 2003.
+
+<P></P><DT><A NAME="deutsch84efficient">15</A>
+<DD>
+L.&nbsp;Peter Deutsch and Allan&nbsp;M. Schiffman.
+<BR>Efficient implementation of the Smalltalk-80 system.
+<BR>In <EM>Principles of Programming Languages</EM>, pages 297-302, Salt
+  Lake City, UT, January 1984.
+
+<P></P><DT><A NAME="garrett96preserving">16</A>
+<DD>
+John Garrett and Donald Waters.
+<BR>Preserving digital information: Report of the task force on archiving
+  of digital information, May 1996.
+
+<P></P><DT><A NAME="goldberg98towards">17</A>
+<DD>
+Andrew&nbsp;V. Goldberg and Peter&nbsp;N. Yianilos.
+<BR>Towards an archival intermemory.
+<BR>In <EM>IEEE Advances in Digital Libraries</EM>, pages 147-156, Santa
+  Barbara, CA, 1998. IEEE Computer Society.
+
+<P></P><DT><A NAME="goldberg96secure">18</A>
+<DD>
+Ian Goldberg, David Wagner, Randi Thomas, and Eric&nbsp;A. Brewer.
+<BR>A secure environment for untrusted helper applications.
+<BR>In <EM>6th USENIX Security Symposium</EM>, San Jose, CA, 1996.
+
+<P></P><DT><A NAME="gosling96java">19</A>
+<DD>
+James Gosling and Henry McGilton.
+<BR>The Java language environment, May 1996.
+<BR><FONT SIZE="+0"><a href="http://java.sun.com/docs/white/langenv/">http://java.sun.com/docs/white/langenv/</a></FONT>.
+
+<P></P><DT><A NAME="ieee94boot">20</A>
+<DD>
+IEEE.
+<BR>Std 1275-1994: Boot firmware, 1994.
+
+<P></P><DT><A NAME="info-zip">21</A>
+<DD>
+Info-ZIP.
+<BR><a href="http://www.info-zip.org/">http://www.info-zip.org/</a>.
+
+<P></P><DT><A NAME="intel05ia32">22</A>
+<DD>
+Intel Corporation.
+<BR>IA-32 Intel architecture software developer's manual, June 2005.
+
+<P></P><DT><A NAME="iso00jpeg">23</A>
+<DD>
+International Standards Organization.
+<BR>JPEG 2000 image coding system, 2000.
+<BR>ISO/IEC 15444-1.
+
+<P></P><DT><A NAME="krall98efficient">24</A>
+<DD>
+Andreas Krall.
+<BR>Efficient JavaVM just-in-time compilation.
+<BR>In <EM>Parallel Architectures and Compilation Techniques</EM>, pages
+  54-61, Paris, France, October 1998.
+
+<P></P><DT><A NAME="liedtke95improved">25</A>
+<DD>
+Jochen Liedtke.
+<BR>Improved address-space switching on Pentium processors by
+  transparently multiplexing user address spaces.
+<BR>Technical Report No. 933, GMD -- German National Research Center for
+  Information Technology, November 1995.
+
+<P></P><DT><A NAME="liefke99xmill">26</A>
+<DD>
+Hartmut Liefke and Dan Suciu.
+<BR>XMill: an efficient compressor for XML data.
+<BR>Technical Report MS-CIS-99-26, University of Pennsylvania, 1999.
+
+<P></P><DT><A NAME="lorie00archiving">27</A>
+<DD>
+Raymond&nbsp;A. Lorie.
+<BR>Long-term archiving of digital information.
+<BR>Technical Report RJ 10185, IBM Almaden Research Center, May 2000.
+
+<P></P><DT><A NAME="lorie02uvc">28</A>
+<DD>
+Raymond&nbsp;A. Lorie.
+<BR>The UVC: a method for preserving digital documents, proof of
+  concept, 2002.
+<BR>IBM/KB Long-Term Preservation Study Report Series Number 4.
+
+<P></P><DT><A NAME="lucco95omniware">29</A>
+<DD>
+S.&nbsp;Lucco, O.&nbsp;Sharp, and R.&nbsp;Wahbe.
+<BR>Omniware: A Universal Substrate for Web Programming.
+<BR><EM>World Wide Web Journal</EM>, 1(1):359-368, 1995.
+
+<P></P><DT><A NAME="maniatis05lockss">30</A>
+<DD>
+Petros Maniatis, Mema Roussopoulos, T.&nbsp;J. Giuli, David S.&nbsp;H. Rosenthal, and
+  Mary Baker.
+<BR>The LOCKSS peer-to-peer digital preservation system.
+<BR><EM>Transactions on Computing Systems</EM>, 23(1):2-50, 2005.
+
+<P></P><DT><A NAME="msjpegbug">31</A>
+<DD>
+Microsoft Corporation.
+<BR>Buffer overrun in JPEG processing (GDI+) could allow code
+  execution (833987), September 2004.
+<BR>Microsoft Security Bulletin MS04-028.
+
+<P></P><DT><A NAME="mogul87packet">32</A>
+<DD>
+Jeffrey&nbsp;C. Mogul, Richard&nbsp;F. Rashid, and Michael&nbsp;J. Accetta.
+<BR>The packet filter: An efficient mechanism for user-level network
+  code.
+<BR>In <EM>Symposium on Operating System Principles</EM>, pages 39-51,
+  Austin, TX, November 1987.
+
+<P></P><DT><A NAME="nelson89lzw">33</A>
+<DD>
+Mark Nelson.
+<BR>LZW data compression.
+<BR><EM>Dr. Dobb's Journal</EM>, October 1989.
+
+<P></P><DT><A NAME="nethercote03valgrind">34</A>
+<DD>
+Nicholas Nethercote and Julian Seward.
+<BR>Valgrind: A program supervision framework.
+<BR>In <EM>Third Workshop on Runtime Verification (RV'03)</EM>, Boulder, CO,
+  July 2003.
+
+<P></P><DT><A NAME="pkzip">35</A>
+<DD>
+PKWARE Inc.
+<BR>PKZIP.
+<BR><a href="http://www.pkware.com/">http://www.pkware.com/</a>.
+
+<P></P><DT><A NAME="riedel98active">36</A>
+<DD>
+Erik Riedel, Garth Gibson, and Christos Faloutsos.
+<BR>Active storage for large-scale data mining and multimedia.
+<BR>In <EM>Very Large Databases (VLDB)</EM>, New York, NY, August 1998.
+
+<P></P><DT><A NAME="rosenthal05transparent">37</A>
+<DD>
+David S.&nbsp;H. Rosenthal, Thomas Lipkis, Thomas&nbsp;S. Robertson, and Seth Morabito.
+<BR>Transparent format migration of preserved web content.
+<BR><EM>D-Lib Magazine</EM>, 11(1), January 2005.
+
+<P></P><DT><A NAME="rothenberg95ensuring">38</A>
+<DD>
+Jeff Rothenberg.
+<BR>Ensuring the longevity of digital documents.
+<BR><EM>Scientific American</EM>, 272(1):24-29, January 1995.
+
+<P></P><DT><A NAME="seward05valgrind">39</A>
+<DD>
+Julian Seward and Nicholas Nethercote.
+<BR>Using Valgrind to detect undefined value errors with bit-precision.
+<BR>In <EM>USENIX Annual Technical Conference</EM>, Anaheim, CA, April 2005.
+
+<P></P><DT><A NAME="sites93binary">40</A>
+<DD>
+Richard&nbsp;L. Sites, Anton Chernoff, Matthew&nbsp;B. Kirk, Maurice&nbsp;P. Marks, and
+  Scott&nbsp;G. Robinson.
+<BR>Binary translation.
+<BR><EM>Communications of the ACM</EM>, 36(2):69-81, 1993.
+
+<P></P><DT><A NAME="small96comparison">41</A>
+<DD>
+Christopher Small and Margo Seltzer.
+<BR>A comparison of OS extension technologies.
+<BR>In <EM>USENIX Annual Technical Conference</EM>, San Diego, CA, January
+  1996.
+
+<P></P><DT><A NAME="sugarman01virtualizing">42</A>
+<DD>
+Jeremy Sugerman, Ganesh Venkitachalam, and Beng-Hong Lim.
+<BR>Virtualizing I/O devices on VMware Workstation's hosted virtual
+  machine monitor.
+<BR>In <EM>USENIX Annual Technical Conference</EM>, Boston, MA, June 2001.
+
+<P></P><DT><A NAME="openoffice-xml">43</A>
+<DD>
+Sun Microsystems.
+<BR>OpenOffice.org XML file format 1.0, December 2002.
+<BR><FONT SIZE="+0"><a href="http://xml.openoffice.org">http://xml.openoffice.org</a></FONT>.
+
+<P></P><DT><A NAME="tennenhouse97survey">44</A>
+<DD>
+David&nbsp;L. Tennenhouse, Jonathan&nbsp;M. Smith, W.&nbsp;David Sincoskie, David&nbsp;J.
+  Wetherall, and Gary&nbsp;J. Minden.
+<BR>A survey of active network research.
+<BR><EM>IEEE Communications Magazine</EM>, 35(1):80-86, 1997.
+
+<P></P><DT><A NAME="tis95elf">45</A>
+<DD>
+Tool Interface Standard (TIS) Committee.
+<BR>Executable and linking format (ELF) specification, May 1995.
+
+<P></P><DT><A NAME="wahbe93efficient">46</A>
+<DD>
+Robert Wahbe, Steven Lucco, Thomas&nbsp;E. Anderson, and Susan&nbsp;L. Graham.
+<BR>Efficient software-based fault isolation.
+<BR><EM>ACM SIGOPS Operating Systems Review</EM>, 27(5):203-216, December
+  1993.
+
+<P></P><DT><A NAME="wallace91jpeg">47</A>
+<DD>
+G.K. Wallace.
+<BR>The JPEG still picture compression standard.
+<BR><EM>Communications of the ACM</EM>, 34(4):30-44, April 1991.
+
+<P></P><DT><A NAME="witchel96embra">48</A>
+<DD>
+Emmett Witchel and Mendel Rosenblum.
+<BR>Embra: Fast and flexible machine simulation.
+<BR>In <EM>Measurement and Modeling of Computer Systems</EM>, pages 68-79,
+  1996.
+
+<P></P><DT><A NAME="xiph04vorbis">49</A>
+<DD>
+Xiph.org Foundation.
+<BR>Vorbis I specification.
+<BR><FONT SIZE="+0"><a href="http://www.xiph.org/vorbis/">http://www.xiph.org/vorbis/</a></FONT>.
+</DL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Bryan Ford
+2005-10-12
+</ADDRESS>
+</BODY>
+</HTML>

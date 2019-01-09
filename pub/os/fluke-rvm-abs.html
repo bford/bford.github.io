@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Microkernels Meet Recursive Virtual Machines</TITLE>
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+</HEAD>
+
+<BODY >
+
+<!--#include virtual="/header.html" -->
+
+<H1 ALIGN="CENTER"><BR>
+Microkernels Meet Recursive Virtual Machines
+<BR></H1>
+
+<P ALIGN="CENTER"><STRONG>Bryan Ford, Mike Hibler, Jay Lepreau,
+	Patrick Tullmann, Godmar Back, and Stephen Clawson</STRONG><br>
+	<I>University of Utah</I></P>
+
+<p align="center">
+<i>Published at the <a href="http://www.usenix.org/publications/library/proceedings/osdi96/index.html">
+USENIX 2nd Symposium on OS Design and Implementation (OSDI '96)</a><br>
+	October 28-31, 1996, Seattle, Washington, USA.</i>
+</p>
+
+<H3>Abstract:</H3>
+
+<P>
+This paper describes a novel approach to providing modular and extensible
+operating system functionality and encapsulated environments based on a
+synthesis of microkernel and virtual machine concepts. We have developed a
+software-based virtualizable architecture called Fluke that allows recursive
+virtual machines (virtual machines running on other virtual machines) to be
+implemented efficiently by a microkernel running on generic hardware. A
+complete virtual machine interface is provided at each level; efficiency
+derives from needing to implement only new functionality at each level. This
+infrastructure allows common OS functionality, such as process management,
+demand paging, fault tolerance, and debugging support, to be provided by
+cleanly modularized, independent, stackable virtual machine monitors,
+implemented as user processes. It can also provide uncommon or unique OS
+features, including the above features specialized for particular applications'
+needs, virtual machines transparently distributed cross-node, or security
+monitors that allow arbitrary untrusted binaries to be executed safely. Our
+prototype implementation of this model indicates that it is practical to
+modularize operating systems this way. Some types of virtual machine layers
+impose almost no overhead at all, while others impose some overhead (typically
+0-35%), but only on certain classes of applications. 
+
+<H3>Full Paper:
+<a href="fluke-rvm.pdf">PDF</a>
+<a href="fluke-rvm.ps.gz">PS</a>
+</H3>
+
+<H3>Project Home Page:
+<a href="http://www.cs.utah.edu/flux/fluke/html/">
+<tt>http://www.cs.utah.edu/flux/fluke/html/</tt></a>
+</H3>
+
+<!--#include virtual="/footer.html" -->
+
+</BODY>
+</HTML>

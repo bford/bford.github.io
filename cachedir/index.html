@@ -1,0 +1,133 @@
+<html>
+<head>
+	<title> Cache Directory Tagging </title>
+	<meta name="Author" content="Bryan Ford">
+</head>
+<body>
+
+<center>
+<h1> Cache Directory Tagging </h1>
+</center>
+
+<h2>Abstract</h2>
+Many applications create and manage directories
+containing cached information about content stored elsewhere,
+such as cached Web content
+or thumbnail-size versions of images or movies.
+For speed and storage efficiency
+we would often like to avoid backing up, archiving,
+or otherwise unnecessarily copying such directories around,
+but it is a pain to identify and individually exclude each such directory
+during data transfer operations.
+I propose an extremely simple convention
+by which applications can reliably "tag" any cache directories they create,
+for easy identification by backup systems and other data management utilities.
+Data management utilities can then heed or ignore these tags
+as the user sees fit.
+
+<h2><a href="spec.html">The Specification</a></h2>
+
+(Version 0.5 - not very long, moderately stable.)
+
+<h2>Application Support Status</h2>
+
+<table border=1>
+<tr>
+<th width="40%">Caching Applications
+<th width="40%">Archive/Backup Tools
+
+<tr>
+<td>
+The following applications
+are known to create and maintain caches of some kind
+in the user's home directory.
+
+<p>
+Applications that currently support this specification:
+<ul>
+<li>	<a href="http://www.bzflag.org/">BZFlag multi-player 3D game</a>
+	as of 2004-07-24.
+	<a href="https://sourceforge.net/tracker/?func=detail&atid=353248&aid=997021&group_id=3248">(Feature Request)</a>)
+<li>	<a href="http://developers.videolan.org/libdvdcss/">libdvdcss</a>
+	as of 2004-08-12.
+	<a href="http://bugzilla.videolan.org/cgi-bin/bugzilla/show_bug.cgi?id=1863">
+	(Feature Request)</a>
+<li>	<a href="http://www.videolan.org/vlc/">VLC</a>
+	as of 2004-10-27.
+<li>	<a href="http://www.gedanken.demon.co.uk/wwwoffle/">WWWOFFLE</a>
+	as of 2006-02-05.
+</ul>
+
+<p>
+Positive responses received from developers of:
+<ul>
+<li>	<a href="http://www.mozilla.org">
+	Mozilla web browser</a>
+	<a href="http://bugzilla.mozilla.org/show_bug.cgi?id=252179">
+	(Feature Request)</a>
+<li>	<a href="http://galeon.sourceforge.net/">
+	Galeon web browser</a>
+<li>	<a href="http://www.openoffice.org/">OpenOffice.org</a>
+	<a href="http://www.openoffice.org/issues/show_bug.cgi?id=32052">
+	(Feature Request)</a>
+<li>	<a href="http://ccache.samba.org/">ccache</a>
+</ul>
+
+<p>
+Discussion initiated with developers of:
+<ul>
+<li>	<a href="http://www.gimp.org/">The GIMP</a>
+<li>	<a href="http://www.arts-project.org/">aRts/MCOP</a>
+</ul>
+</ul>
+
+<td>
+The following archival tools support this tagging convention:
+<ul>
+<li>	<a href="http://www.gnu.org/software/tar/tar.html">
+	tar archiving/backup tool</a>:<br>
+	use the new <samp>--exclude-caches</samp> option.<br>
+	<a href="tar-1.14.diff">(patch to tar-1.14)</a>
+	<a href="tar-cvs.diff">(patch to tar-CVS)</a>
+</ul>
+
+<p>
+Other archival tools that are not (yet)
+directly sensitive to cache tags,
+but can be made so through the use of
+appropriate options or shell magic:
+
+<ul>
+<li>	<a href="http://www.gnu.org/software/cpio/cpio.html">
+	cpio archiving/backup tool</a>
+<li>	<a href="http://samba.anu.edu.au/rsync/">rsync
+	incremental transfer/synchronization tool</a>
+<li>	<a href="https://sourceforge.net/projects/dar/">DAR disk archiver</a>
+	<a href="https://sourceforge.net/tracker/?func=detail&atid=511615&aid=994532&group_id=65612">
+	(Feature Request)</a>
+</ul>
+</ul>
+
+</table>
+
+<p>
+Please let me know of other applications you know of
+that should be on this list!
+
+<h2>Related Links</h2>
+
+<ul>
+<li>	<a href="http://www.pathname.com/fhs/">
+	Filesystem Hierarchy Standard</a>
+<li>	<a href="http://freedesktop.org/Standards/basedir-spec">
+	XDG Base Directory Specification</a>
+<li>	<a href="http://triq.net/~jens/thumbnail-spec/">
+	Thumbnail Managing Standard</a>
+</ul>
+
+<hr>
+Author: <a href="http://www.brynosaurus.com/">Bryan Ford</a>,
+baford -=at=- mit -=dot=- edu
+
+</body>
+</html>

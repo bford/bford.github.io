@@ -1,0 +1,70 @@
+==================================================================
+https://keybase.io/bford
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://bford.info
+  * I am bford (https://keybase.io/bford) on keybase.
+  * I have a public key with fingerprint 9D02 8373 2707 79C1 7822  6C40 6B75 AE5A CFEF E77F
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "9d028373270779c178226c406b75ae5acfefe77f",
+            "host": "keybase.io",
+            "key_id": "6b75ae5acfefe77f",
+            "uid": "e966c9cfce92b041cedd47f9766fe300",
+            "username": "bford"
+        },
+        "service": {
+            "hostname": "bford.info",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1408751709,
+    "expire_in": 157680000,
+    "prev": "84a7734d92dc83a2cba905fa556ac6ba138b0b80c0c57d68ab95a4cd8209cd9b",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGbwMvMwMSYXbou6vz75/WMpw+8TWII/n4jqVopKT+lUsmqWik7FUylZealpxYV
+FGXmlShZKVmmGBhZGJsbG5kbmJtbJhuaWxgZmSWbGJglmZsmppomJqelpqWam6cp
+6Shl5BeDdACNSUosTtXLzAeKATnxmSlAUSzqS8ESqZZmZsmWyWnJqZZGSQYmhsmp
+KSkm5mmW5mZmaanGBgYghcWpRXmJualA1Ulp+UUpSrU6SkChsszkVJCDQfYiS+tl
+5qWB7C4oyi/JT87PAYpnlJQUWIG0lVQWgNSVpybFQ02IT8rMSwF6GaihLLWoODM/
+T8nKEKgyuSQTZKShiYGFuamhuYGljlJqRUFmUWp8JkiFqbmZhQEQgKxJLQMaaWGS
+aG5ubJJiaZSSbGGcaJSclGhpYJqWaGpqlphslpRoaGyRZJBkYZBskGxqnmJmkZhk
+aZpokpxiYWRgmZximaQE8lNhXr6SlQnQmYnpQCOLM9PzEktKi1KVark6mWRYGBiZ
+GNhYmUCxxsDFKQCLyxBrAYY596WbWPPVp8z6mXtjUU7KH51Iwa1CwhtMHiYdVUw5
+u3TTx4X9F8xY2m7LZr+dt2vW39LA72n72fbLqDuYNl1mUJ9WY7G26NHJ+DKGeOfy
+UzfK/KbZpR3vZzKe0iPoPjdsK39o5+SVRnenVseWT/hqGCETvaFtca/KqeDvLl+s
+Pkg//Hje3Ob4jJvnH/xfbcdcXau90eSQbr9oUveJCd1rQm6fc5Irzo122PZFYW3j
+fJuDT4sbr/hkrbilfj6lgZXtTex6adldF1invRUySROd7sS/ZxP7hDOKt06pik9c
+I3GtQI/FReDrt47AzEk/1qpscHgT+aJE2ZPRrHJ2Vfm15wb1V1LLVL6fZlTfznSm
+zLps/wcdK+eLR1taFnh8ZL9rLT1/m86ZfFOHp8liTJUmOydffCASXvX3WNd0tTmn
+y66um+XyMloiuEO9fFZBJ7PKEd+VMZsOH/+Rpd9SFv4mOEhnz8HNUQkzUjJulATW
+1Tl2qs0RuHGxp+rtojuHtV5f4l7/Tl2xXpnF1sMs54JG9tzZSnGlstLdYvLLmtOq
+W5fOe7rML881cNEDO4kOfZbp1Z+t9zTZSGYd5z1qwB11I2b27yk/7rNuM6kSrnj7
+nnPDsdhHZ/2WvZl6Yu7Cqcb9+gvv5kUkLOo/sNP+u/zj9MdxKkGLdRo/HFA1eVwg
++PfP5SLO/5Vsi0U25Jtob4lS5Tkf07W89F7DJAA=
+=bLzg
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bford
+
+==================================================================
+

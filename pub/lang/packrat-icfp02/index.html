@@ -1,0 +1,115 @@
+<html>
+<head>
+	<title>Packrat Parsing: Simple, Powerful, Lazy, Linear Time</title>
+</head>
+<body bgcolor=white text=black link=blue alink=purple vlink=purple>
+
+<!--#include virtual="/header.html" -->
+
+<center>
+<h1>Packrat Parsing: Simple, Powerful, Lazy, Linear Time</h1>
+<h3>Bryan Ford<br>
+Massachusetts Institute of Technology
+
+<p>
+	<a href="http://icfp2002.cs.brown.edu/">
+	International Conference on Functional Programming,
+	October 4-6, 2002, Pittsburgh</a>
+</h3>
+</center>
+
+<h3>Abstract</h3>
+
+Packrat parsing is a novel technique for implementing parsers
+in a lazy functional programming language.
+A packrat parser provides the power and flexibility
+of top-down parsing with backtracking and unlimited lookahead,
+but nevertheless guarantees linear parse time.
+Any language defined by an LL(<i>k</i>) or LR(<i>k</i>) grammar
+can be recognized by a packrat parser,
+in addition to many languages
+that conventional linear-time algorithms do not support.
+This additional power
+simplifies the handling of common syntactic idioms
+such as the widespread but troublesome longest-match rule,
+enables the use of sophisticated disambiguation strategies
+such as syntactic and semantic predicates,
+provides better grammar composition properties,
+and allows lexical analysis to be integrated seamlessly into parsing.
+Yet despite its power,
+packrat parsing shares the same simplicity and elegance
+as recursive descent parsing;
+in fact
+converting a backtracking recursive descent parser
+into a linear-time packrat parser
+often involves only a fairly straightforward structural change.
+This paper describes packrat parsing informally
+with emphasis on its use in practical applications,
+and explores its advantages and disadvantages
+with respect to the more conventional alternatives.
+
+<h3>Full Paper:
+<a href="../packrat-icfp02.pdf">PDF</a>
+<a href="../packrat-icfp02.ps">PostScript</a>
+</h3>
+
+<h3>Slides:
+<a href="../packrat-icfp02-slides.pdf">PDF</a>
+<a href="../packrat-icfp02-slides">HTML</a>
+</h3>
+
+<h3>Example Parsers</h3>
+
+Complete and working versions of the example parsers described in the paper
+are available on this page.
+
+<p>
+<b><a href="ArithRecurse.hs">ArithRecurse.hs</a></b>:
+Recursive descent parser described in Section 2.1,
+for the trivial arithmetic expression language of Figure 1.
+
+<p>
+<b><a href="ArithPackrat.hs">ArithPackrat.hs</a></b>:
+Equivalent packrat parser for the same trivial language,
+Section 2.4.
+
+<p>
+<b><a href="ArithLeft.hs">ArithLeft.hs</a></b>:
+Left recursion example for Section 3.1,
+which extends the above packrat parser with
+properly left-associative subraction, division, and modulo operators.
+
+<p>
+<b><a href="ArithLex.hs">ArithLex.hs</a></b>:
+Integrated lexical analysis example for Section 3.2,
+which extends the previous packrat parser
+with support for multiple-digit decimal literals
+and optional whitespace padding
+between literals, operators, and punctuation.
+
+<p>
+<b><a href="ArithMonad.hs">ArithMonad.hs</a></b>:
+Example packrat parser, equivalent to ArithPackrat.hs,
+but using monadic combinators to express the parsing functions more succinctly
+and provide support for user-friendly error detection and reporting.
+Discussed in Section 3.3 of the paper.
+The following two library modules are required:
+
+<ul>
+<li>	<a href="Pos.hs">Pos.hs</a>:
+	Keeps track of line and column position while scanning input text.
+<li>	<a href="Parse.hs">Parse.hs</a>:
+	Monadic combinator library for packrat parsers,
+	inspired by Daan Leijen's
+	<a href="http://www.cs.uu.nl/~daan/parsec.html">Parsec</a> library.
+	(Parsec was designed for traditional predictive parsers
+	and mostly-predictive parsers with special-case backtracking.)
+</ul>
+
+<p>
+Enjoy!
+
+<!--#include virtual="/footer.html" -->
+
+</body>
+</html>

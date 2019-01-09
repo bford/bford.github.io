@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>User Information Architecture</title>
+</head>
+<body>
+
+<h1>
+Title: UIA - A User Information Architecture for Ubiquitous Computing <br>
+Name: Bryan Ford <br>
+E-mail: baford@mit.edu <br>
+Student: yes <br>
+</h1>
+
+<h2>Introduction</h2>
+
+<p>
+We are heading for a device information disaster. There are two clear
+symptoms. First, many people have dozens of devices which store
+information, but they are unable to organize and find that
+information. A given picture might be on a digital camera, a home PC,
+a laptop, an iPod Photo, or a cell phone. In many cases, knowing a
+file's location is not enough, because the device in question is on
+the far side of a firewall or not currently plugged into a PC's USB
+port.
+
+<p>
+The second symptom is that each person's collection of information
+devices is an isolated island.  People cannot easily share pictures,
+documents, music, or videos with friends, family, or colleagues.
+Today one must upload the information from a device to a personal
+computer and then use e-mail, or transfer a file through a physical
+medium such as a USB key.
+
+<p>
+These problems are due to the rapid progress in information
+devices without a corresponding plan for global communication and
+sharing.  The state of the art is local connectivity centered around a
+single PC that functions as a server (USB, Apple's rendezvous,
+uPNP). Only the PC can participate in global communication and sharing
+across the Internet.  The information devices are not first-class
+global citizens, even though they have PC-like communication and
+storage capabilities.
+
+<h2>The User Information Architecture</h2>
+
+<p>
+The User Information Architecture
+is an extension to the Internet architecture
+designed to allow global interaction
+and sharing among ubiquitous information devices.
+The UIA is based on two
+principles:
+(1) decoupling of device identification and communication security
+from physical connectivity; and
+(2) establishing device-to-device trust
+based on user-to-user social relationships.
+The decoupling
+principle makes it safe to expose devices to the Internet,
+because physical Internet attachment
+no longer directly exposes the device's high-level application services
+to arbitrary, unknown Internet hosts.
+The social-networking principle provides a decentralized trust model
+that is easily comprehensible to nontechnical users
+and makes end-to-end cryptographic security
+possible without needing a universal, centralized
+public key infrastructure (PKI).
+
+<p>
+These principles lead to the following design of UIA:
+
+<ul>
+<li>
+Each device has one or more global end-point IDs.
+The IDs are derived from public keys,
+and are therefore cryptographically verifiable.
+They are the basic building
+block for reliable identification of devices and principals.
+
+<li>
+If a physical device can be shared by multiple users,
+then each user of the device has separate endpoint IDs,
+so that an ID always verifiably identifies a unique logical principal
+for purposes of communication security and social trust.
+
+<li>
+Each device runs the User Interconnect Protocol (UIP),
+which allows a device to locate and connect to another device
+given an endpoint ID.
+UIP finds devices even if they are behind NATs or firewalls, or have moved,
+requiring no manual re-configuration or management.
+
+<li>
+Each user of a device has an address book,
+which records UIP IDs of other
+devices and users with which it can communicate and share information.
+Initially, the address book is populated by user-initiated physical
+exchange of IDs between devices,
+but address book entries remain usable and secure
+even as devices migrate to different network attachment points.
+Each entry in the address book
+describes what privileges (if any) to grant the associated user.
+
+<li>
+A user's address book can delegate trust decisions to other
+address books.  This mechanism allows a camera to serve pictures to
+any device that the user's PC serves pictures to.  It also allows one
+user's devices to connect and share with devices of trusted friends,
+family, and colleagues, as well as their trusted friends, etc.
+Delegation allows one to extend trust to groups of devices without
+needing per-device configuration.
+
+<li>
+Each device participates in UIA's global, location-transparent data
+storage system.  This system allows users to find their information,
+independent of which devices store it.  The UIA data store replicates
+and migrates data as needed. For example, it automatically backs up
+camera pictures to the user's PC, to a friends's PC, or to a trusted
+Internet provider's storage server.  The address books are stored in
+the UIA storage system to allow users to use their devices without
+relying on a home PC.
+</ul>
+
+<p>
+We have developed a first-generation prototype of UIA,
+which runs in user space on several popular operating systems,
+and can provide secure communication for existing, unmodified applications
+as well as applications designed specifically for UIA.
+
+
+</body>
+</html>
