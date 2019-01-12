@@ -113,7 +113,57 @@
   </url>
   
   <url>
+    <loc>https://bford.info/</loc>
+    <lastmod>2018-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/draft/async/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2005/0717-Aachen/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/AntelopeIsland.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2005/0305-Avignon/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2002/0527-BarHarbor/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2003/0527-Barcelona/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2005/0820-Berlin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2005/0709-Bonn/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/Family.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/Home.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/</loc>
   </url>
   
   <url>
@@ -122,20 +172,69 @@
   </url>
   
   <url>
-    <loc>https://bford.info/draft/</loc>
-    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://bford.info/album/2005/0723-Cologne/</loc>
   </url>
   
   <url>
-    <loc>https://bford.info/</loc>
-    <lastmod>2018-09-11T00:00:00+00:00</lastmod>
+    <loc>https://bford.info/album/2007/0622-Dresden/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2006/0430-Flowers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/funny/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2004/0617-Geneva/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/Lagoon.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2001/1021-LakeLouise/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2005/0304-Marseille/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2002/0713-MidsummersEve/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/Cats.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/Opus99.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/</loc>
   </url>
   
   <url>
     <loc>https://bford.info/page/</loc>
     <lastmod>2015-04-03T02:13:50+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2005/0801-Paris/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2003/0624-Peterhof/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/Piano.html</loc>
   </url>
   
   <url>
@@ -149,8 +248,64 @@
   </url>
   
   <url>
+    <loc>https://bford.info/album/2006/1225-Rome/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/Rwanda.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2003/0621-StPetersbourg/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2002/1122-Korea/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2002/0601-Spring/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2004/0601-StataCenter/</loc>
+  </url>
+  
+  <url>
     <loc>https://bford.info/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/Tornado.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/Travels.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/Hawaii.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/Utah.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2004/0116-Venice/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2001/0506-Vermont/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2004/0626-Vienna/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/album/2006/0119-Villars/</loc>
   </url>
   
 </urlset>

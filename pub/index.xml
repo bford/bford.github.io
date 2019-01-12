@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PUBS!!! on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/pub/</link>
+    <description>Recent content in PUBS!!! on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://bford.info/pub/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

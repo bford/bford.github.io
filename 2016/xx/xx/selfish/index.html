@@ -1,84 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Selfish Mining in Bitcoin and ByzCoin &middot; Bryan Ford</title>
-        <meta name="description" content="XXX intro
-summary of selfish mining
-selfish mining as a transparency problem: you get to build on a blockchain head you haven&rsquo;t published.
-same as transparency problem in Apple FBI case for example; that&rsquo;s what CoSi is for.
-solution: any keyblock you build on is collectively signed, and the next block&rsquo;s hash covers the last block&rsquo;s signature.
-if you withhold a block, you can&rsquo;t get a collective signature on it; without that collective signature, you can&rsquo;t secretly mine a next block on top of it.">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.53" />
-        <meta name="robots" content="index,follow">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" href="https://bford.info/css/normalize.css">
-        <link rel="stylesheet" href="https://bford.info/css/highlight.css">
-        <link rel="stylesheet" href="https://bford.info/css/style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    </head>
-    <body>
-        
-
-        <div id="wrapper">
-            <header class="site-header">
-                <div class="container">
-                    <div class="site-title-wrapper">
-                        
-                            <h1 class="site-title">
-                                <a title="Bryan Ford&#39;s Blog" href="https://bford.info/">Bryan Ford&#39;s Blog</a>
-                            </h1>
-                        
-                        <a class="button-square" href="https://bford.info/index.xml"><i class="fa fa-rss"></i></a>
-                        
-                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/brynosaurus">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        
-                        
-                        
-                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/bford/">
-                                <i class="fa fa-github-alt"></i>
-                            </a>
-                        
-                        
-                        
-                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/baford">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        
-                        
-                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://plus.google.com/u/0/&#43;BryanFord">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        
-                    </div>
-
-                    <ul class="site-nav">
-                        
-                    </ul>
-                </div>
-            </header>
-
-            <div id="container">
-
-
-<div class="container">
-    <article class="post-container">
-        <header class="post-header">
-    <h1 class="post-title">Selfish Mining in Bitcoin and ByzCoin</h1>
+  <head>
+    <meta charset="utf-8">
     
-</header>
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Selfish Mining in Bitcoin and ByzCoin &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
 
-        <div class="post-content clearfix">
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
     
 
     
+  <h1>Selfish Mining in Bitcoin and ByzCoin</h1>
+  
 
 <p>XXX intro</p>
 
@@ -188,62 +147,21 @@ independent of monetary policy.</p>
 for helpful feedback on early drafts of this post.*
 -->
 
-</div>
 
-        <footer class="post-footer clearfix">
+
     
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+<td align="left">
+<a href="http://bford.info/">Bryan Ford</a>
+</td>
+<td align="right">
+<font size="-2">
+ 
+</font>
+</td></tr></table>
 
-    <div class="share">
-        <a class="icon-twitter" href="http://twitter.com/share?text=Selfish%20Mining%20in%20Bitcoin%20and%20ByzCoin&url=https%3a%2f%2fbford.info%2f2016%2fxx%2fxx%2fselfish%2f"
-            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-            <i class="fa fa-twitter"></i>
-            <span class="hidden">Twitter</span>
-        </a>
-
-        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbford.info%2f2016%2fxx%2fxx%2fselfish%2f"
-            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-            <i class="fa fa-facebook"></i>
-            <span class="hidden">Facebook</span>
-        </a>
-
-        <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fbford.info%2f2016%2fxx%2fxx%2fselfish%2f"
-           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-           <i class="fa fa-google-plus"></i>
-            <span class="hidden">Google+</span>
-        </a>
-    </div>
-</footer>
-    </article>
-</div>
-
-            </div>
-        </div>
-
-        <footer class="footer">
-            <div class="container">
-                <div class="site-title-wrapper">
-                    <h1 class="site-title">
-                        <a title="Bryan Ford&#39;s Blog" href="https://bford.info/">Bryan Ford&#39;s Blog</a>
-                    </h1>
-                    <a class="button-square button-jump-top js-jump-top" href="#">
-                        <i class="fa fa-angle-up"></i>
-                    </a>
-                </div>
-
-                <p class="footer-copyright">
-                    <span>&copy; 2018 / Powered by <a href="http://gohugo.io/">Hugo</a></span>
-                </p>
-                <p class="footer-copyright">
-                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
-                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
-                </p>
-            </div>
-        </footer>
-
-        <script src="https://bford.info/js/jquery-1.11.3.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-        <script src="https://bford.info/js/jquery.fitvids.js"></script>
-        <script src="https://bford.info/js/scripts.js"></script>
-    </body>
+    
+  </body>
 </html>
-
