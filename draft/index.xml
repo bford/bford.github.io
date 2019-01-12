@@ -1,680 +1,85 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Draft-rsses on Bryan Ford&#39;s Blog</title>
-    <link>https://bford.github.io/draft/index.xml</link>
-    <description>Recent content in Draft-rsses on Bryan Ford&#39;s Blog</description>
+    <title>Drafts on Bryan Ford&#39;s Blog</title>
+    <link>https://bford.info/draft/</link>
+    <description>Recent content in Drafts on Bryan Ford&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 31 Oct 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://bford.github.io/draft/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://bford.info/draft/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Secure, Scalable Proof-of-Stake Blockchains</title>
-      <link>https://bford.github.io/draft/stake/</link>
+      <link>https://bford.info/draft/stake/</link>
       <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.github.io/draft/stake/</guid>
-      <description>
-
-&lt;h1 id=&#34;proof-of-what&#34;&gt;Proof-of-What?&lt;/h1&gt;
-
-&lt;p&gt;Currently-deployed permissionless blockchains
-such as Bitcoin and Ethereum rely on
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Proof-of-work_system&#34;&gt;proof-of-work (PoW)&lt;/a&gt;
-to distribute both the computational networking costs,
-and the financial rewards,
-of maintaining and extending the blockchain.
-In proof-of-work systems, participating &lt;em&gt;miners&lt;/em&gt;
-race (&amp;ldquo;work&amp;rdquo;) to compute solutions to cryptographic puzzles.
-These puzzles effectively act like self-printed lottery tickets,
-in that a miniscule fraction of these proof-of-work solutions
-may be easily verified by anyone as &amp;ldquo;winning&amp;rdquo; the lucky miner
-the right to add one block to the blockchain and collect associated rewards.
-Proof-of-work has proven practical and relatively secure,
-at least for cryptocurrencies with sufficient critical mass to deter
-&lt;a href=&#34;https://cryptohustle.com/51-attack-crew-extorts-and-hijacks-blockchains-for-ransom&#34;&gt;ransom or hijacking by powerful attackers&lt;/a&gt;.
-However, it has been
-&lt;a href=&#34;https://pando.com/2013/12/16/bitcoin-has-a-dark-side-its-carbon-footprint/&#34;&gt;recognized for years&lt;/a&gt;
-that proof-of-work blockchains are
-&lt;a href=&#34;https://motherboard.vice.com/en_us/article/d3zn9a/ethereum-mining-transaction-electricity-consumption-bitcoin&#34;&gt;a tremendous waste of energy&lt;/a&gt;.
-Recent estimates show that
-&lt;a href=&#34;http://digiconomist.net/bitcoin-energy-consumption&#34;&gt;Bitcoin now consumes more energy than 60% of the world&amp;rsquo;s countries&lt;/a&gt;,
-and that
-&lt;a href=&#34;http://digiconomist.net/ethereum-energy-consumption&#34;&gt;Ethereum already consumes more energy
-than Cyprus or Cambodia&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Motivated in part by this energy waste and its carbon footprint,
-the cryptocurrency community has developed increasing interest
-in alternative security foundations such as
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Proof-of-stake&#34;&gt;proof-of-stake (PoS)&lt;/a&gt;.
-The essence of this idea is to apportion consensus power
-not according to energy wasted performing useless work,
-but rather according to the amount of &amp;ldquo;stake&amp;rdquo;
-that participants already hold in the system:
-e.g., according to the number of coins they own.
-The underlying principle is not unlike that of a traditional
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Joint-stock_company&#34;&gt;joint-stock company&lt;/a&gt;,
-in which voting power to affect a company&amp;rsquo;s decisions
-(e.g., by electing board members who in turn choose executives)
-is apportioned in proportion to shares of stock (&amp;ldquo;stake&amp;rdquo;)
-held in the company.
-The venerable underlying security principle is that stakeholders
-have an interest in preserving and ideally increasing
-the value of their stake &amp;ndash;
-with bigger stakeholders having more to gain (or lose)
-from good (or bad) decisions &amp;ndash;
-thereby aligning their individual interests with those of the overall system.
-While proof-of-stake conceptually represents
-a sensible and promising alternative to proof-of-work,
-&lt;em&gt;implementing&lt;/em&gt; proof-of-stake systems securely
-&lt;a href=&#34;https://blog.sldx.com/whats-wrong-with-proof-of-stake-77d4f370be15&#34;&gt;is challenging&lt;/a&gt;,
-due to many difficulties well-documented in
-&lt;a href=&#34;http://bitfury.com/content/5-white-papers-research/pos-vs-pow-1.0.2.pdf&#34;&gt;a BitFury white paper&lt;/a&gt;
-and elsewhere.&lt;/p&gt;
-
-&lt;h1 id=&#34;is-proof-of-investment-really-the-answer&#34;&gt;Is Proof-of-Investment Really the Answer?&lt;/h1&gt;
-
-&lt;p&gt;Proof-of-work and proof-of-stake are both
-&lt;em&gt;investment-proportional&lt;/em&gt; security foundations,
-in that they apportion consensus power and mining rewards
-proportionally to prior investment
-(in computational effort or coin purchases, respectively).
-Many other alternatives such as
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Proof-of-space&#34;&gt;proof of space&lt;/a&gt;,
-&lt;a href=&#34;http://dedis.cs.yale.edu/dissent/papers/hotpets14-torpath-abs&#34;&gt;proof of bandwidth&lt;/a&gt;,
-and
-&lt;a href=&#34;https://eprint.iacr.org/2016/145.pdf&#34;&gt;proof of human work&lt;/a&gt;
-similarly fit into the same broad category,
-which might be accurately classified as &lt;em&gt;proof of investment&lt;/em&gt;.
-In the long term,
-I am skeptical that cryptocurrencies based on proof of investment
-will fundamentally transform our society or economy for the better
-(or at all really).
-At the end of the day,
-cryptocurrencies or
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Decentralized_autonomous_organization&#34;&gt;decentralized autonomous organizations&lt;/a&gt;
-based on proof of investment are merely a more-automated
-functional equivalent to the stakeholder-driven joint-stock companies
-that already dominate today&amp;rsquo;s global economy,
-and hence are fundamentally nothing new.&lt;/p&gt;
-
-&lt;p&gt;In other words, proof-of-investment cryptocurrencies
-may put more white-collar office workers out of work and hasten the
-&lt;a href=&#34;https://www.wired.com/brandlab/2015/04/rise-machines-future-lots-robots-jobs-humans/&#34;&gt;rise of the machines&lt;/a&gt;,
-but will ultimately do little to address society&amp;rsquo;s fundamental challenges
-such as
-&lt;a href=&#34;https://www.theguardian.com/business/2017/jan/11/inequality-world-economy-wef-brexit-donald-trump-world-economic-forum-risk-report&#34;&gt;rising economic inequality&lt;/a&gt;.
-For that purpose, I see more promise in truly democratic alternatives
-such as
-&lt;a href=&#34;https://zerobyte.io/publications/2017-BKJGGF-pop.pdf&#34;&gt;proof-of-personhood&lt;/a&gt;
-or
-&lt;a href=&#34;http://proofofindividuality.online/&#34;&gt;proof-of-individuality&lt;/a&gt;,
-which could create a sort of
-&amp;ldquo;permissionless &lt;a href=&#34;https://en.wikipedia.org/wiki/Basic_income&#34;&gt;basic income&lt;/a&gt;&amp;ldquo;
-by apportioning voting and consensus power and currency-mining rewards
-to all &lt;em&gt;human&lt;/em&gt; participants, in a one-person-one-vote distribution.
-But truly democratizing and decentralizing cryptocurrencies
-will require solving many further challenges.
-In the meantime, even if proof-of-stake achieves nothing but
-ending the energy waste and environmental impact of proof-of-work,
-that goal is easily worth pursuing.
-And it&amp;rsquo;s an interesting technical challenge,
-so the rest of this blog post will focus on that.&lt;/p&gt;
-
-&lt;h1 id=&#34;will-the-one-true-blockchain-please-raise-your-hand&#34;&gt;Will the One True Blockchain Please Raise Your Hand?&lt;/h1&gt;
-
-&lt;h1 id=&#34;long-term-attacks&#34;&gt;Long-term Attacks&lt;/h1&gt;
-</description>
+      <guid>https://bford.info/draft/stake/</guid>
+      <description>Proof-of-What? Currently-deployed permissionless blockchains such as Bitcoin and Ethereum rely on proof-of-work (PoW) to distribute both the computational networking costs, and the financial rewards, of maintaining and extending the blockchain. In proof-of-work systems, participating miners race (&amp;ldquo;work&amp;rdquo;) to compute solutions to cryptographic puzzles. These puzzles effectively act like self-printed lottery tickets, in that a miniscule fraction of these proof-of-work solutions may be easily verified by anyone as &amp;ldquo;winning&amp;rdquo; the lucky miner the right to add one block to the blockchain and collect associated rewards.</description>
     </item>
     
     <item>
       <title>Selfish Mining in Bitcoin and ByzCoin</title>
-      <link>https://bford.github.io/2016/xx/xx/selfish/</link>
+      <link>https://bford.info/2016/xx/xx/selfish/</link>
       <pubDate>Mon, 31 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.github.io/2016/xx/xx/selfish/</guid>
-      <description>
-
-&lt;p&gt;XXX intro&lt;/p&gt;
-
-&lt;p&gt;summary of selfish mining&lt;/p&gt;
-
-&lt;p&gt;selfish mining as a transparency problem:
-you get to build on a blockchain head you haven&amp;rsquo;t published.&lt;/p&gt;
-
-&lt;p&gt;same as transparency problem in Apple FBI case for example;
-that&amp;rsquo;s what CoSi is for.&lt;/p&gt;
-
-&lt;p&gt;solution: any keyblock you build on is collectively signed,
-and the next block&amp;rsquo;s hash covers the last block&amp;rsquo;s signature.&lt;/p&gt;
-
-&lt;p&gt;if you withhold a block, you can&amp;rsquo;t get a collective signature on it;
-without that collective signature,
-you can&amp;rsquo;t secretly mine a next block on top of it.&lt;/p&gt;
-
-&lt;h2 id=&#34;selfish-mining&#34;&gt;Selfish Mining&lt;/h2&gt;
-
-&lt;p&gt;Finally, we consider the now much more well-understood problem of
-&lt;a href=&#34;http://hackingdistributed.com/2013/11/04/bitcoin-is-broken/&#34;&gt;selfish mining&lt;/a&gt;.
-A selfish miner strategically withholds some of its successfully mined blocks
-in attempt to gain a higher share of mining rewards,
-by causing other miners to waste effort mining redundant blocks.
-For example, if Greedy Greg successfully mines a new block,
-he might deliberately delay announcing it.
-If Innocent Ivan announces a competing block,
-Greg quickly races to announce and widely distribute his,
-which may reliably overtake Ivan&amp;rsquo;s if Greg is fast and well-connected.
-Alternatively, if Greg manages to mine a &lt;em&gt;second&lt;/em&gt; block in private
-before a competing first block appears,
-then Greg is in the enviable position of being able to &amp;ldquo;trump&amp;rdquo;
-and eliminate that competing block once it does appear,
-simply by revealing his longer private blockchain.&lt;/p&gt;
-
-&lt;p&gt;While ByzCoin&amp;rsquo;s keyblock mining mechanism alone is still
-vulnerable to selfish mining,
-its microblock commitment process using Byzantine consensus
-provides a clean, simple defense against selfish mining.
-Any transaction microblock the consensus group commits
-contains a cryptographic hash of the latest known keyblock at the time,
-and any newly-mined keyblock must similarly contain
-a cryptographic hash of a recently-committed microblock
-(e.g., within a few microblocks from the head).
-Whenever the consensus group commits a new microblock,
-all honest members verify that the keyblock pointer in the new microblock
-is consistent with those in all prior microblocks,
-ensuring that any new keyblock is &amp;ldquo;locked in&amp;rdquo;
-irreversably once the new keyblock is known.
-This leaves only seconds, rather than minutes,
-in which a selfish miner could
-try to announce and distribute a competing keyblock.
-Further, because each keyblock must reference a recent microblock,
-any newly-mined keyblock becomes invalid and useless
-if its owner fails to announce it
-within a few microblock commitment cycles &amp;mdash;
-again, on the order of seconds rather than minutes.&lt;/p&gt;
-
-&lt;p&gt;In essence, ByzCoin&amp;rsquo;s microblock commit mechanism
-enforces transparency on the keyblock mining process,
-ensuring that a selfish ByzCoin miner would likely be faced with
-a vanishingly small probability of profiting from
-any keyblock-withholding strategy.&lt;/p&gt;
-
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;This post of course represents only an informal,
-and no doubt incomplete, analysis
-of the differences in incentives between Bitcoin and ByzCoin,
-focusing primarily on mining incentives.
-It is quite possible that a full, rigorous incentive analysis of ByzCoin
-may reveal new incentive-compatibility issues that its architecture introduces.
-Further, ByzCoin is still an experimental protocol
-under rapid development and evoluation.&lt;/p&gt;
-
-&lt;p&gt;Given these caveats, however,
-ByzCoin&amp;rsquo;s architecture at least appears to be much more resilient
-to the known strategic mining attacks against Bitcoin,
-whether through block withholding or deliberate forking.
-In particular,
-by replacing Bitcoin&amp;rsquo;s instant-gratification, winner-take-all reward model
-with a delayed-gratification, investment-dividend model,
-ByzCoin ensures that the distribution of mining profits are fixed
-long before any strategic miner might know about or be able to respond to
-the appearance of a goose egg or other transaction fee variance.
-By ensuring that keyblocks and microblocks track each other cryptographically,
-ByzCoin forces miners either to announce new keyblocks quickly
-or else lose them,
-making selfish mining unprofitable.&lt;/p&gt;
-
-&lt;p&gt;In short, it does not appear necessary for new cryptocurrencies to
-&amp;ldquo;&lt;a href=&#34;http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/&#34;&gt;make the block reward permanent and accept monetary inflation
-as inevitable&lt;/a&gt;&amp;rdquo;
-as Narayanan suggests.
-Whether inflationary or deflationary monetary policies are preferable
-is an important and highly debatable question,
-but it need not be constrained by technical weaknesses of Bitcoin.
-With more sophisticated blockchain architectures such as ByzCoin,
-there is plenty of hope that mining incentives can work
-independent of monetary policy.&lt;/p&gt;
-
-&lt;!--
----
-
-*I wish to thank ...
-for helpful feedback on early drafts of this post.*
---&gt;
-</description>
+      <guid>https://bford.info/2016/xx/xx/selfish/</guid>
+      <description>XXX intro
+summary of selfish mining
+selfish mining as a transparency problem: you get to build on a blockchain head you haven&amp;rsquo;t published.
+same as transparency problem in Apple FBI case for example; that&amp;rsquo;s what CoSi is for.
+solution: any keyblock you build on is collectively signed, and the next block&amp;rsquo;s hash covers the last block&amp;rsquo;s signature.
+if you withhold a block, you can&amp;rsquo;t get a collective signature on it; without that collective signature, you can&amp;rsquo;t secretly mine a next block on top of it.</description>
     </item>
     
     <item>
       <title>An advanced crypto library for Go</title>
-      <link>https://bford.github.io/2016/03/08/crypto/</link>
+      <link>https://bford.info/2016/03/08/crypto/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.github.io/2016/03/08/crypto/</guid>
-      <description>
-
-&lt;h1 id=&#34;page-title&#34;&gt;{{ page.title }}&lt;/h1&gt;
-
-&lt;p&gt;Interesting features:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;An abstract group arithmetic framework for public-key cryptography
-based on the discrete logarithm problem.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Several alternative concrete instantiations of this abstract
-group arithmetic framework,
-based on the NIST elliptic curve implementations in the Go standard library
-and in the OpenSSL crypto library,
-and implementations of both generic Edwards curves
-and an adaptation of Adam Langley&amp;rsquo;s Ed25519-curve-specific
-optimized group arithmetic code to the abstract group API.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Implementations of a number of advanced crypto algorithms
-built on this abstract group arithmetic framework,
-and hence automatically compatible woth both integer group
-and any suitable elliptic curves:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Shamir Verifiable Secret Sharing (VSS),
-the standard foundation for t-of-n threshold cryptographic techniques.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;An implementation of the general Camenisch/Stadler framework
-for proofs of knowledge based on the discrete-logarithm problem.
-For example&amp;hellip;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Anonymous and pseudonymous public-key encryption and signatures,
-where the sender or receiver are identified only as an anonymous member
-of some explicit &lt;em&gt;set&lt;/em&gt; of public keys, without revealing anything
-about which member of the set signed the message or is to receive it.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;C. Andrew Neff&amp;rsquo;s cryptographic protocol for proving
-the correctness of a shuffle.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
+      <guid>https://bford.info/2016/03/08/crypto/</guid>
+      <description>{{ page.title }} Interesting features:
+ An abstract group arithmetic framework for public-key cryptography based on the discrete logarithm problem.
+ Several alternative concrete instantiations of this abstract group arithmetic framework, based on the NIST elliptic curve implementations in the Go standard library and in the OpenSSL crypto library, and implementations of both generic Edwards curves and an adaptation of Adam Langley&amp;rsquo;s Ed25519-curve-specific optimized group arithmetic code to the abstract group API.</description>
     </item>
     
     <item>
       <title>Backdoors, Trusted Servers, and Deanonymization</title>
-      <link>https://bford.github.io/2016/03/08/backdoors/</link>
+      <link>https://bford.info/2016/03/08/backdoors/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.github.io/2016/03/08/backdoors/</guid>
-      <description>
-
-&lt;h1 id=&#34;page-title&#34;&gt;{{ page.title }}&lt;/h1&gt;
-
-&lt;p&gt;To my knowledge there are currently only two fundamentally distinct approaches
-to achieving strong anonymity online,
-and the same legendary computing figure, David Chaum,
-pioneered both.
-His first approach,
-&lt;a href=&#34;http://www.freehaven.net/anonbib/cache/chaum-mix.pdf&#34;&gt;mixes&lt;/a&gt;,
-relay messages over multi-hop paths around the network
-to obscure their source and destinations.
-State-of-the-art deployed anonymity systems such as
-&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt;
-are highly evolved and performance-optimized variants
-of this basic relaying idea.&lt;/p&gt;
-
-&lt;p&gt;Chaum&amp;rsquo;s second approach,
-&lt;a href=&#34;http://www.freehaven.net/anonbib/cache/chaum-dc.pdf&#34;&gt;dining cryptographers&lt;/a&gt;,
-instead uses information-coding principles to hide the sender of a message
-among a group of nodes all of whom seem to be spewing gibberish at once.
-It&amp;rsquo;s as if you are listening to a crowd
-&lt;a href=&#34;http://www.christianpublishers.org/Speaking%20in%20Tongues-1.jpg&#34;&gt;speaking in tongues&lt;/a&gt;
-but what you hear is a single unified voice,
-emanating from no one in particular,
-elucidating the Ten Commandments with perfect clarity.
-Chaum then moved away from anonymity systems
-to other projects such as the first major attempt at practical electronic cash
-(yes, he was also the &amp;ldquo;first&amp;rdquo; Satoshi Nakamoto),
-and secure electronic voting systems.
-While several research projects,
-including Cornell&amp;rsquo;s
-&lt;a href=&#34;https://www.cs.cornell.edu/people/egs/herbivore/&#34;&gt;Herbivore&lt;/a&gt;
-and my own
-&lt;a href=&#34;http://dedis.cs.yale.edu/dissent/&#34;&gt;Dissent&lt;/a&gt;
-have made progress toward making the dining cryptographers practical,
-it has not (yet) made it into widely-deployed systems.&lt;/p&gt;
-
-&lt;p&gt;Given Chaum&amp;rsquo;s status as &amp;ldquo;the father of online anonymity&amp;rdquo;,
-it stands to reason
-that his first venture &lt;em&gt;back&lt;/em&gt; into anonymity in many years
-would get some attention.
-Today at &lt;a href=&#34;http://www.realworldcrypto.com/rwc2016&#34;&gt;Real World Crypto&lt;/a&gt;,
-he presented
-&lt;a href=&#34;http://eprint.iacr.org/2016/008.pdf&#34;&gt;cMix&lt;/a&gt;,
-an interesting new take on the mix approach
-that aims to achieve better scalability, lower latencies,
-and sufficiently low computation costs on client devices
-to be practical for use in energy-conscious mobile phone apps.
-I had the pleasure of learning about cMix directly from David
-and discussing it with him at some length last year,
-but my recent move to &lt;a href=&#34;http://www.epfl.ch/&#34;&gt;EPFL&lt;/a&gt; and other time demands
-prevented me from being able to take a more active role in the project.
-The design of cMix is definitely interesting and contains some promising ideas,
-but that is not what this blog post is about.&lt;/p&gt;
-
-&lt;h2 id=&#34;ending-the-crypto-war-or-stoking-the-flames&#34;&gt;Ending the Crypto War, or Stoking the Flames?&lt;/h2&gt;
-
-&lt;p&gt;Earlier today before Chaum&amp;rsquo;s talk, Wired also released
-&lt;a href=&#34;http://www.wired.com/2016/01/david-chaum-father-of-online-anonymity-plan-to-end-the-crypto-wars/&#34;&gt;an article on it&lt;/a&gt;
-containing a statement that will doubtless attract
-a lot more attention than anything in the technical paper on cMix:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Chaum is also building into PrivaTegrity another feature that’s sure to be far more controversial: a carefully controlled backdoor that allows anyone doing something “generally recognized as evil” to have their anonymity and privacy stripped altogether.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Well before Chaum&amp;rsquo;s talk even began,
-Twitter was ablaze with discussion about Chaum&amp;rsquo;s &amp;ldquo;backdoor&amp;rdquo; in PrivaTegrity.&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The main benefit of Chaum&amp;#39;s new system, as far as I can tell, is that it is a political gift to FBI Director Comey. &lt;a href=&#34;https://t.co/64Au0lXxuL&#34;&gt;https://t.co/64Au0lXxuL&lt;/a&gt;&lt;/p&gt;&amp;mdash; Christopher Soghoian (@csoghoian) &lt;a href=&#34;https://twitter.com/csoghoian/status/684730483503149056&#34;&gt;January 6, 2016&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m heartbroken to see that Chaum is proposing key escrow for everyone on the planet: &lt;a href=&#34;https://t.co/zWZ3bUQsJf&#34;&gt;https://t.co/zWZ3bUQsJf&lt;/a&gt; What happened to David Chaum?&lt;/p&gt;&amp;mdash; Jacob Appelbaum (@ioerror) &lt;a href=&#34;https://twitter.com/ioerror/status/684763375260270592&#34;&gt;January 6, 2016&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;but-where-s-the-backdoor&#34;&gt;But Where&amp;rsquo;s the Backdoor?&lt;/h2&gt;
-
-&lt;p&gt;One important observation, however, is that the word &amp;ldquo;backdoor&amp;rdquo;
-appears nowhere in the actual
-&lt;a href=&#34;http://eprint.iacr.org/2016/008.pdf&#34;&gt;technical paper on cMix&lt;/a&gt; written by
-Chaum and his collaborators.
-While cMix is the anonymous communication protocol Chaum is proposing,
-PrivaTegrity is a larger system built on cMix
-to provide anonymous chat and other anonymous interaction applications
-directly usable to ordinary users.
-In essence, cMix is just an &amp;ldquo;engine&amp;rdquo; whereas PrivaTegrity is the car.
-So where is this supposed &amp;ldquo;backdoor&amp;rdquo; &amp;emdash; in the engine or the car?&lt;/p&gt;
-
-&lt;p&gt;The only part of the technical cMix paper that even suggests
-the &amp;ldquo;backdoor&amp;rdquo; idea (without using that term)
-is section IX.B., two brief paragraphs on the paper&amp;rsquo;s second-to-last page.
-The first is the most crucial:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Independent from cMix, PrivaTegrity addresses potential
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;abuse of anonymity services by establishing a trust model
-that offers a balance of anonymity and accountability. On the
-one hand, PrivaTegrity aims to provide privacy at a technical
-level that is not penetrable by nation states. On the other
-hand, PrivaTegrity aims to provide integrity, both prior restraint
-and accountability after the fact, that is inescapably tied to
-individuals. Only if all of the mixing nodes cooperate, can the
-senders and receivers of messages be linked or identified.&lt;/p&gt;
-
-&lt;p&gt;In essence, cMix routes users&amp;rsquo; messages through a series of mixing nodes
-(the Wired article talks about nine servers in different countries),
-such that none of the servers can individually unmask an anonymous user,
-but all of the servers (or their operators) together can unmask a user
-that they collectively agree to be deserving of such treatment.&lt;/p&gt;
-
-&lt;p&gt;This property is by no means new, unusual, or unique to cMix, however:
-in fact a huge number of cryptographic and distributed systems
-have this essential security property.
-No one really knows how to build secure systems
-in which you need to trust &lt;em&gt;no one at all&lt;/em&gt;.
-Instead the best we can really do is to &lt;em&gt;split&lt;/em&gt; trust across multiple entities
-that we hope are at least somewhat independent,
-so that no one entity needs to be fully trusted.&lt;/p&gt;
-
-&lt;p&gt;This is exactly the same security principle that motivates
-&lt;a href=&#34;http://www.deansafe.com/uncodrsawisa.html&#34;&gt;safes with two keys&lt;/a&gt;.
-If both keys are required to open the safe and are held by different employees,
-then a single dishonest employee working alone will be unable to raid it
-without somehow aquiring the other key.
-But if the two key-holders conspire,
-the two-key mechanism will do nothing to stop them.&lt;/p&gt;
-
-&lt;h2 id=&#34;trust-splitting-in-anonymity-systems&#34;&gt;Trust Splitting in Anonymity Systems&lt;/h2&gt;
-
-&lt;p&gt;Essentially all of the practical anonymity systems,
-both deployed and proposed in research,
-embody this limited trust-splitting property in some fashion.
-Several years ago my group
-&lt;a href=&#34;http://dedis.cs.yale.edu/dissent/papers/eurosec12-abs&#34;&gt;coined the term &amp;ldquo;anytrust&amp;rdquo;&lt;/a&gt;
-for this security model in the context of anonymity systems,
-because users need only assume that &amp;ldquo;any one&amp;rdquo; of the servers is honest
-and not colluding with all the others against them.
-Users don&amp;rsquo;t even need to know or guess which server is honest;
-one merely &lt;em&gt;needs to exist&lt;/em&gt;.
-Once again, we did not by any means invent this security model;
-it has been in use in many ways and under many names for decades
-in cryptography and distributed systems practice.&lt;/p&gt;
-
-&lt;p&gt;Users of the well-known &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; anonymity system,
-for example,
-depend for their security on a small group of
-&lt;em&gt;directory authorities&lt;/em&gt; &amp;emdash;
-of which &lt;a href=&#34;https://twitter.com/kristovatlas/status/684845884576796673&#34;&gt;there are currently 10&lt;/a&gt; &amp;emdash;
-to keep track of and let Tor clients know the set of relays
-available to help anonymize their messages.
-If &amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;PrivaTegrity&lt;/p&gt;
-
-&lt;p&gt;is Chaum&amp;rsquo;s &amp;ldquo;backdoor&amp;rdquo; a technical feature?
-no, just a common architectural weakness.&lt;/p&gt;
-
-&lt;p&gt;Tor has it&amp;hellip; (examples)&lt;/p&gt;
-
-&lt;p&gt;Can we eliminate such trusted server groups?  Yes, but it&amp;rsquo;s hard.&lt;/p&gt;
-
-&lt;p&gt;Does CT fix it?  Not quite.&lt;/p&gt;
-
-&lt;p&gt;The policy question: are backdoors needed/good in an anonymity systems?&lt;/p&gt;
-
-&lt;p&gt;What would the processes be for controlled deanonymization of a user,
-supposing one created a system and set it up like Chaum&amp;rsquo;s
-on the (policy) basis that server operators would cooperate
-to deanonymize users under &amp;ldquo;the right conditions&amp;rdquo;?&lt;/p&gt;
-
-&lt;p&gt;who picks those 9 server operators?  Who funds them?
-(The power of the purse is strong&amp;hellip;)
-If a nation-state comes to them and says,
-&amp;ldquo;we&amp;rsquo;ll block your service and thus destroy a big part of your legal business
-unless you help us deanonymize these people who we call &amp;lsquo;terrorists&amp;rsquo;
-but the rest of the world calls &amp;lsquo;political dissidents&amp;rsquo;&amp;ldquo;,
-what do they do?&lt;/p&gt;
-
-&lt;p&gt;sybil problem, multiple possible levels of response&amp;hellip;&lt;/p&gt;
-</description>
+      <guid>https://bford.info/2016/03/08/backdoors/</guid>
+      <description>{{ page.title }} To my knowledge there are currently only two fundamentally distinct approaches to achieving strong anonymity online, and the same legendary computing figure, David Chaum, pioneered both. His first approach, mixes, relay messages over multi-hop paths around the network to obscure their source and destinations. State-of-the-art deployed anonymity systems such as Tor are highly evolved and performance-optimized variants of this basic relaying idea.
+Chaum&amp;rsquo;s second approach, dining cryptographers, instead uses information-coding principles to hide the sender of a message among a group of nodes all of whom seem to be spewing gibberish at once.</description>
     </item>
     
     <item>
       <title>How to prove DNSSEC isn&#39;t a key escrow scheme</title>
-      <link>https://bford.github.io/2016/03/08/dnssec/</link>
+      <link>https://bford.info/2016/03/08/dnssec/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.github.io/2016/03/08/dnssec/</guid>
-      <description>
-
-&lt;h1 id=&#34;page-title&#34;&gt;{{ page.title }}&lt;/h1&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
+      <guid>https://bford.info/2016/03/08/dnssec/</guid>
+      <description>{{ page.title }} &amp;hellip;</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://bford.github.io/draft/async/</link>
+      <link>https://bford.info/draft/async/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.github.io/draft/async/</guid>
-      <description>&lt;p&gt;For another thing, I’m personally not a big believer in the practical value of the asynchronous model anyway.  I know I’m at odds here with most people with a theory/algorithms background; reasonable people may differ. :)  Almost every practical distributed system that ever actually gets deployed has timeouts and such buried in it here, there, everywhere.  User-experience expectations are synchronous, not asynchronous: even if the underlying protocol is in principle perfectly capable of tolerating arbitrarily-long adversary-controlled propagation delays among honest nodes, the real users relying on the system are going to start complaining rather soon after the expected/normal amount of transaction time elapses.  And in environments where we’re truly exposed to hugely-varying latencies and actually need to adapt to them - such as delay-tolerant or interplanetary networking scenarios - then asynchronous consensus protocols and the like are never useful in practice there either because they slow &lt;em&gt;everyone&lt;/em&gt; down to the least-common denominator: e.g., if &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; of the participants in an async BFT protocol are on Mars, then everyone’s transactions everywhere must necessarily slow down to account for the Mars-Earth latency, which no one doing transactions only on Earth (or only on Mars) will accept.  The only real, practical solution to those kinds of problems are locality-preserving approaches such as Cristina’s Crux project (&lt;a href=&#34;https://arxiv.org/abs/1405.0637&#34;&gt;https://arxiv.org/abs/1405.0637&lt;/a&gt;), which of course is a whole different ball game.&lt;/p&gt;
-</description>
+      <guid>https://bford.info/draft/async/</guid>
+      <description>For another thing, I’m personally not a big believer in the practical value of the asynchronous model anyway. I know I’m at odds here with most people with a theory/algorithms background; reasonable people may differ. :) Almost every practical distributed system that ever actually gets deployed has timeouts and such buried in it here, there, everywhere. User-experience expectations are synchronous, not asynchronous: even if the underlying protocol is in principle perfectly capable of tolerating arbitrarily-long adversary-controlled propagation delays among honest nodes, the real users relying on the system are going to start complaining rather soon after the expected/normal amount of transaction time elapses.</description>
     </item>
     
     <item>
       <title>Rethinking Social Media to Escape the Echo Chamber</title>
-      <link>https://bford.github.io/2016/11/13/info/</link>
+      <link>https://bford.info/2016/11/13/info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.github.io/2016/11/13/info/</guid>
-      <description>
-
-&lt;p&gt;Hillary Clinton&amp;rsquo;s [electoral college defeat]()
-has provoked many questions about how so many Americans
-could have choosen a
-[misogynistic](),
-[xenophobic](),
-[pathologically lying](),
-[authoritarian]()
-[ideologue]()
-as their next President &amp;ndash;
-and one of many targets of their blame is
-[social media]().
-Compounding its
-[polarizing &amp;ldquo;echo chamber&amp;rdquo; effect](),
-online discussions were tarnished with
-[deliberate misinformation](),
-including
-[incorrect instructions on how to vote]().
-But is the solution for social media companies like Facebook
-to ``do a better job&amp;rdquo; at curating the world&amp;rsquo;s content
-to suppress out false or hateful speech?&lt;/p&gt;
-
-&lt;p&gt;Asking technology companies
-to serve as the world&amp;rsquo;s arbiters of truth and civility
-is not only counterproductive but
-just as profoundly dangerous as the social maladies
-that social media creates or exacerbates.
-We need to rethink social media from the ground up
-to make it &lt;em&gt;more&lt;/em&gt; open and transparent, not less &amp;ndash;
-and most importantly, to infuse online debate with
-some semblance of democratic legitimacy.
-The purpose of this blog post is not to dwell on
-[the many flaws of social media]()
-but to explore how we could get it better.&lt;/p&gt;
-
-&lt;p&gt;What would an ethical, secure, and democratic alternative
-to either conventional ``elitist&amp;rdquo; media
-or the polarizing echo chamber of social media look like?
-It would need to be built on a foundation of equality among
-all &lt;em&gt;real&lt;/em&gt; people;
-it would ensure &lt;em&gt;proportional&lt;/em&gt; speech and accurately expose biases;
-it would counteract polarization by ensuring that
-all participants are exposed to all viewpoints;
-and it would provide strong but proportionate and abuse-resistant
-protections for anonymity and free speech &lt;em&gt;before&lt;/em&gt; the ballot box,
-in order to head off unpleasant surprises being revealed
-only &lt;em&gt;at&lt;/em&gt; the ballot box.&lt;/p&gt;
-
-&lt;h2 id=&#34;foundation-the-equality-of-real-people&#34;&gt;Foundation: The Equality of &lt;em&gt;Real&lt;/em&gt; People&lt;/h2&gt;
-
-&lt;p&gt;When a story or claim appears with 1,000 ``likes&amp;rdquo;,
-how do we know whether 1,000 &lt;em&gt;real&lt;/em&gt; people liked the story,
-or only one real troll and his 999 [sock puppet accounts]()?&lt;/p&gt;
-
-&lt;p&gt;Doesn&amp;rsquo;t mean all people are equally smart, equally capable, equally right,
-or should end up having equal power or influence &lt;em&gt;in the end&lt;/em&gt;.
-It means all people should be given an equal &lt;em&gt;starting point&lt;/em&gt;
-in apportioning power,
-and be free to ``become unequal&amp;rdquo; as their words and actions
-are subject to the review of their peers.&lt;/p&gt;
-
-&lt;p&gt;Need to be able to quantify the number of people&lt;/p&gt;
-
-&lt;p&gt;Need a mechanism to ensure that these are &lt;em&gt;real&lt;/em&gt; people we are counting,
-not fake accounts created
-by whoever has the most time, money, or determination.&lt;/p&gt;
-
-&lt;p&gt;Content-based analysis versus account validation.
-Content-based analysis [has often proven successful](),
-but relies on complex algorithms that &lt;em&gt;someone&lt;/em&gt; must keep updating
-(and making still more complex)
-to keep up with the ``arms race&amp;rdquo;,
-as attackers develop more sophisticated algorithms
-to farm fake accounts that remain under the detection radar.
-Relying on complex algorithms that need to adapt constantly
-creates inherent risks that they will become opaque and vulnerable
-to accidental bias or deliberate attacks,
-such as the secret inclusion of &amp;ldquo;back doors&amp;rdquo; that produces false positives
-designed to close the accounts of and hence disenfranchise populations
-disfavored by the attacker.
-While I believe content-based analysis plays an important scientific role,
-it is unsuitable as a &lt;em&gt;foundation&lt;/em&gt; for ensuring the equality of real people
-in online public discourse.&lt;/p&gt;
-
-&lt;h2 id=&#34;proportional-speech-and-bias-transparency&#34;&gt;Proportional Speech and Bias Transparency&lt;/h2&gt;
-
-&lt;p&gt;Need an objective way to avoid bias,
-or clearly and quantitatively expose it when it exists.&lt;/p&gt;
-
-&lt;p&gt;&amp;hellip;like wearing blinders&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Pressuring Mark Zuckerberg to deploy Facebook&amp;rsquo;s minions
-to do a better job of censoring fake or misleading social media posts
-does not solve the problem,
-but instead shifts the power to decide between ultimate truth and falsehood
-to precisely the place it does not belong:
-to the anonymous employees and proprietary algorithms
-of corporations that are accountable to no one but their shareholders.&lt;/p&gt;
-
-&lt;p&gt;All relevant algorithms need to be public and accountable.
-Algorithms need to be as simple as possible
-[but no simpler]():
-in particular, not so simplistic as to ignore the many lessons
-from past failures.&lt;/p&gt;
-
-&lt;p&gt;A fake or misleading claim on social media,
-as soon as it starts collecting nontrivial interest,
-needs to become inextricably attached to the counter-claims that debunk it.
-These counter-claims must prominently include
-accurate, quantitative evidence that the debunking experts are trustworthy
-and not &lt;a href=&#34;Ebell guy&#34;&gt;paid lobbyists masquerading as scientists&lt;/a&gt; &amp;ndash;
-together with accurate quantitative measures of the number of people
-(&lt;em&gt;real&lt;/em&gt; people) who support the false statement despite its being debunked.&lt;/p&gt;
-
-&lt;h2 id=&#34;depolarizing-echo-chambers-with-soft-focus-feeds&#34;&gt;Depolarizing Echo Chambers with Soft-Focus Feeds&lt;/h2&gt;
-
-&lt;p&gt;Even when people are willing to hear viewpoints they don&amp;rsquo;t like,
-there is a matter of scalability:
-everyone simply does not have time to listen to everything everyone else says.
-Speech needs to be filtered or summarized.&lt;/p&gt;
-
-&lt;h2 id=&#34;anonymity-and-free-speech-before-the-ballot-box&#34;&gt;Anonymity and Free Speech &lt;em&gt;Before&lt;/em&gt; the Ballot Box&lt;/h2&gt;
-
-&lt;p&gt;one of many explanations, possibly contributing but probably not only factor&amp;hellip;
-other explanations include
-[normal polling errors](),
-[hacking of the election system](),
-[the FBI](), &amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Some Trump supporters are certainly racist and xenophobic;
-most of them are probably not,
-but voted Trump for other reasons.
-In order to protect our civilization,
-we the people need to be fully aware of size and malignancy of
-any malignancy affecting it:
-you do not beat a cancerous tumor by ignoring it
-or sanitizing the doctor&amp;rsquo;s diagnosis.
-We need &lt;em&gt;know&lt;/em&gt; the true, complex set of reasons that
-people are inclined to support someone like Trump&lt;/p&gt;
-
-&lt;p&gt;Need regular opportunities for speech
-ensuring that &lt;em&gt;all&lt;/em&gt; voices are represented,
-and [building anger over policies]()
-actually have [a chance to influence policy]()
-before that anger
-explodes in a self-defeating electoral choice
-of an [authoritarian]() [con-artist]()
-and [places freedom and democracy in existential risk]().&lt;/p&gt;
-
-&lt;h2 id=&#34;incentives-who-will-finance-a-decentralized-social-forum&#34;&gt;Incentives: Who Will Finance a Decentralized Social Forum?&lt;/h2&gt;
-
-&lt;!--
----
-
-*I wish to thank ...
-for helpful feedback on early drafts of this post.*
---&gt;
-</description>
+      <guid>https://bford.info/2016/11/13/info/</guid>
+      <description>Hillary Clinton&amp;rsquo;s [electoral college defeat]() has provoked many questions about how so many Americans could have choosen a [misogynistic](), [xenophobic](), [pathologically lying](), [authoritarian]() [ideologue]() as their next President &amp;ndash; and one of many targets of their blame is [social media](). Compounding its [polarizing &amp;ldquo;echo chamber&amp;rdquo; effect](), online discussions were tarnished with [deliberate misinformation](), including [incorrect instructions on how to vote](). But is the solution for social media companies like Facebook to ``do a better job&amp;rdquo; at curating the world&amp;rsquo;s content to suppress out false or hateful speech?</description>
     </item>
     
   </channel>
