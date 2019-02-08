@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Rethinking Priorities: Should Identity Systems Divide or Unite People? &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+
+  <div style="display: flex">
+    <div style="flex: 2 5 20px">
+    </div>
+
+    <div style="flex: 1 1 500px">
+      <h1>Rethinking Priorities: Should Identity Systems Divide or Unite People?</h1>
+      <p><em>Note: this is a brief, rough, first-draft sketch of a longer paper
+paper I intend to flesh out further in the near future.</em></p>
+
+<p>The problem of identity has become a hot topic,
+with the idea of
+<a href="http://www.lifewithalacrity.com/2016/04/the-path-to-self-soverereign-identity.html">self-sovereign identity</a>
+in particular attracting significant excitement.
+The essence of the idea, in short,
+is to <em>put users in charge</em> of how their identities and personal data are used.
+Self-sovereign identity posits that users should decide
+how much and what aspects of their identities to disclose in any situation,
+and should know and have control over what that information is used for.</p>
+
+<p>I have no argument with these basic goals.
+The approaches to <em>achieving</em> them I&rsquo;ve seen, however,
+start to run astray in the very next step.
+Self-sovereign identity systems typically focus in practice
+on representing an identity as a set of <em>attributes</em>
+or <em>verifiable claims</em>
+that users may &ldquo;prove&rdquo; about themselves to a relying party.
+For example, the
+<a href="https://www.weboftrust.info/specs.html">standardization effort around decentralized identity</a>
+currently defines
+<a href="https://w3c-ccg.github.io/did-spec/">decentralized identifiers</a>
+as the &ldquo;base layer&rdquo;, and immediately atop that the
+<a href="https://w3c.github.io/vc-use-cases/">verifiable claims</a> layer
+defining a rich taxonomy of personal information someone might want to know
+about someone else.</p>
+
+<p>A central presumption in this model appears to be that
+the main purpose of a decentralized identity, and its main value,
+should be to enable such distinctions through verifiable claims.
+This implies by extension that a decentralized identity
+without any attributes that a user can (or wishes to) claim
+is effectively a useless, valueless, &ldquo;null&rdquo; identity.
+But by single-mindedly focusing on <em>attributes</em>
+as the primary use of an identity,
+self-sovereign identity projects are pushing the cart before the horse.
+They forgot even to ask, let alone adequately answer,
+the question of who or what <em>the user</em> is
+who is supposed to be put &ldquo;in control&rdquo; of their identity,
+before seeking to facilitate discrimination <em>between</em> such users.</p>
+
+<p>By rushing headlong toward
+the goal of <em>differentiating</em> people from each other
+via attributes and verifiable claims,
+self-sovereign identity projects neglect
+the even-more-fundamental requirement
+to differentiating <em>people</em> from <em>non-people</em>.
+Before we even begin to separate people from each other via attributes,
+we need a way to separate the human users,
+who are supposed to be in control of their identities,
+from the many non-human entities such as devices, websites, businesses,
+and governments, bots, AIs, and Sybils,
+which often deliberately work against a user&rsquo;s control.
+Dividing people from each other via attributes,
+before uniting people in distinction
+from the increasingly-powerful non-people in the ecosystem,
+will work against and probably defeat
+the basic eponymous objective of imbuing identity with &ldquo;self-sovereignty.&rdquo;</p>
+
+<p>With a focus on attributes,
+in order for a user to accomplish anything or use any service online,
+the service will have to demand the user disclose at least enough attributes
+for the service to be able to exclude trolls and abusers confidently.
+But that will also typically be enough data to identify the user uniquely,
+correlate that data with the user&rsquo;s other actions and data found online,
+defeat the user&rsquo;s privacy through correlation attacks,
+and effectively wrest control away from the user once again.
+Provable attributes and verifiable claims
+will remain tools of surveillance capitalism,
+even if the user supposedly &ldquo;consents&rdquo; to revealing them,
+typically by being coerced to do so
+as a condition of using the service that claims to need the information.</p>
+
+<p>A focus on attributes and verifiable claims
+neglects to recognize the numerous uses that digital identity
+could and should provide people <em>before disclosing a single attribute</em>.
+Providing a mechanism for <a href="http://bford.info/pub/dec/pop-abs"><em>proof of personhood</em></a> &ndash;
+enabling users to prove merely that
+an identity uniquely represents a <em>real person</em>, and nothing more &ndash;
+could by itself address a vast array of today&rsquo;s online abuse threats.
+The online abuse threats that attribute-free proof-of-persionhood could address
+include Sybil attackers, sock puppets, online ballot stuffing,
+social reputation hacking through fake accounts,
+the inconvenience of subjecting users to constant CAPTCHAs,
+and the energy, re-centralization, and uneven stake distribution problems
+of proof-of-work, proof-of-stake, and other investment-proportional
+foundations for decentralized systems, blockchains, or cryptocurrencies.
+Perhaps most importantly,
+secure proof-of-personhood would drastically reduce
+the <em>need</em> for uses to disclose attributes online,
+and the range of reasons (or excuses) that businesses or online services
+could reasonably invoke to demand attribute disclosure.</p>
+
+<p>In short,
+attempting to solve online abuse and related problems
+by making users disclose identity attributes or personal data
+is privacy-invasive, often unreliable and easily hacked,
+and exclusionary because many real people lack documentation
+or established trust relationships with institutions or other people.
+If we can succeed in building a proper <em>personhood foundation</em> for identity,
+then atop that there will be legitimate uses for verifiable claims.
+But in order to enable users to be truly &ldquo;self-sovereign&rdquo;,
+we need to maximize the value they obtain from the online ecosystem
+merely by <em>being people</em> while disclosing no other distinguishing attributes.</p>
+
+<p>We need to ensure that <em>all real people</em> have a strong baseline
+of rights and functionality readily available to them,
+both to ensure that users often have a realistic and effective choice
+to disclose nothing other than their personhood,
+and to ensure that real people
+with no documentation or trust relationships to prove in verifiable claims &ndash;
+e.g., refugees, homeless, stateless, etc. &ndash; can be (and remain)
+first-class citizens online.
+The first and most important identity system design question
+should not be what people can do <em>with</em> attributes,
+but what they can do <em>without</em> attributes.</p>
+
+<!--
+
+= Attribute-centric or Person-centric Identity
+
+
+Many of the most critical uses for "identity"
+don't fundamentally care about attributes at all,
+only personhood or accountability.
+Attributes are only a poor-man's means to determine personhood
+and achieve accountability.
+Examples:
+- decentralized collaboration platforms, social networks,
+- voting and reputation systems
+- coupon/opportunity systems
+- permissionless blockchains and cryptocurrencies
+
+
+Focusing on attributes first defeats the goals of privacy
+and linkability control.
+It takes smaller and smaller amounts of personal information, in practice,
+to correlate information about anyone
+with other aspects of their presence online.
+
+
+Focusing on attributes first defeats the goal of self-sovereignty.
+
+Coerced disclosure: self-sovereign won't be
+if all businesses demand personal details as a condition for
+using their "free" site or service.
+
+= Personhood
+
+-->
+
+<p><em>(to be continued&hellip;)</em></p>
+
+    </div>
+
+    <div style="flex: 2 5 20px">
+    </div>
+  </div>
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+<td align="left">
+<a href="http://bford.info/">Bryan Ford</a>
+</td>
+<td align="right">
+<font size="-2">
+ 
+</font>
+</td></tr></table>
+
+    
+  </body>
+</html>
