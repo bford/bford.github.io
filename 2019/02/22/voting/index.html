@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  The Remote Voting Technology Minefield: from North Carolina to Switzerland &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+
+  <div style="display: flex">
+    <div style="flex: 2 5 20px">
+    </div>
+
+    <div style="flex: 1 1 500px">
+      <h1>The Remote Voting Technology Minefield: from North Carolina to Switzerland</h1>
+      <p><center><i>(This blog post is a reformatted and lightly-edited version of <a href="https://twitter.com/brynosaurus/status/1098824788250951680">this tweet thread</a>.)</i></center></p>
+
+<p>The <a href="https://www.nytimes.com/2019/02/21/us/mark-harris-nc-voter-fraud.html">absentee ballot fraud in North Carolina</a>
+shows how current vote-by-mail methods are fundamentally flawed and vulnerable
+to vote-buying and coercion. But banning remote voting of any kind would
+disenfranchise everyone not living in their country of citizenship; that is not
+a real option.</p>
+
+<p>It is important to understand in this light the context of the Swiss e-voting
+project, one of whose two implementations was <a href="https://onlinevote-pit.ch/details/">recently open
+sourced</a> by the Swiss Post for inspection
+and analysis by international experts.
+Almost everyone in Switzerland votes by mail.  Despite its well-known
+vulnerability to fraud, coercion, or vote-buying of exactly the kind we see in
+North Carolina, Switzerland <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/j.1662-6370.2007.tb00075.x">adopted postal
+voting</a>
+from 1978 to 2006 for voter convenience and engagement.</p>
+
+<p>Due to its <a href="https://houseofswitzerland.org/swissstories/history/way-modern-direct-democracy-switzerland">tradition of direct
+democracy</a>,
+Switzerland asks citizens to vote four times per year, not just once in 2-4
+years as in the US.  If you’re asking people to read up on and vote on dozens
+of issues several times a year, it had better be convenient.</p>
+
+<p>Then there&rsquo;s the expat issue. Swiss citizens living abroad, even in neighboring
+European countries, don’t get voting rights there like moving to another state
+in the US. <a href="https://www.eda.admin.ch/eda/en/home/living-abroad/publications-statistics/statistics.html">About 11% for Swiss citizens live
+abroad</a>,
+in contrast to more like 3% of US citizens.
+<a href="https://www.bfs.admin.ch/bfs/en/home/statistics/population.html">Switzerland&rsquo;s
+population</a> is
+similar to New York City&rsquo;s. If Switzerland disallowed remote voting, it would
+be like NYC disenfranchising any New Yorker who moves elsewhere until they
+spend 10 years establishing new citizenship in Jersey or Upstate New York.</p>
+
+<p>Taking a position of &ldquo;no remote voting&rdquo; in a small country like Switzerland
+would be not just unrealistic but flat-out undemocratic.  Given this reality,
+the Swiss voting authorities have the challenging and unenviable task of
+navigating a minefield of imperfect alternatives.</p>
+
+<p>At <a href="https://www.admin.ch/opc/en/classified-compilation/20132343/index.html">regulation and design
+level</a>,
+the Swiss E-voting project is the most technically solid I&rsquo;ve seen anywhere,
+mandating end-to-end encryption and universal verifiability all the way from
+vote entry through shuffling and counting in the split-trust back-end.
+Another important distinction of Switzerland&rsquo;s approach is its requirement that
+<a href="https://www.admin.ch/opc/en/classified-compilation/20132343/index.html#a7a">&ldquo;the source code for the system software must be made
+public&rdquo;</a>
+- a huge advance over the standard practice of governments almost anywhere else
+in the world.</p>
+
+<p>No system meeting these requirements can realistically be expected to be
+simple. Now that the source code for one of the two independent implementations
+has been published, it&rsquo;s no surprise that experts are <a href="https://motherboard.vice.com/en_us/article/vbwz94/experts-find-serious-problems-with-switzerlands-online-voting-system-before-public-penetration-test-even-begins">finding issues and
+worrying about its
+complexity</a>.
+But that is the whole point of the carefully-regulated, open source approach
+Switzerland is taking: to find flaws, fix them, iteratively improve design and
+implementation practices, and deploy E-voting cautiously and gradually among
+limited populations in participating cantons.</p>
+
+<p>Those who oppose any E-voting due to its complexity fail to consider how
+alternative methods of remote voting may be even worse.  Postal voting puts the
+entire complex and opaque postal mail system, with all its workers and
+automated mail-handling systems, on the trusted path.
+Properly-designed E-voting can enable voters to verify independently that their
+vote was correctly conveyed to the voting authority and not lost (or &ldquo;lost&rdquo; by
+a miscreant) and that it was shuffled and tallied correctly, without trusting
+any single human or electronic device.
+The &ldquo;average voter&rdquo; certainly won&rsquo;t understand all the code and cryptography in
+an E-voting system. But if it&rsquo;s open source, any voter can find or hire an
+expert of their choice to analyze it. Will your postal service let you send
+your choice of expert to inspect their operation?</p>
+
+<p>International scrutiny of E-voting systems like Switzerland&rsquo;s is extremely
+important and welcome. But simplistically opposing all E-voting, on grounds of
+complexity or failure to solve problems like vote-buying that alternatives like
+postal voting have too, is counterproductive.
+The only way to solve critical open security challenges like vote-buying is to
+press forward and work to advance the state-of-the-art further, not retreat to
+a techno-luddist position that any voting method using paper is automatically
+more secure than any method using electrons.</p>
+
+<p>Estonia&rsquo;s approach of <a href="https://pdfs.semanticscholar.org/ff4d/0a77e7561e62fd0258280c0baa02d8256a03.pdf">allowing
+&ldquo;re-voting&rdquo;</a>,
+where a voter who cast a vote under coercion can later replace it with
+different vote when no longer under coercion, has its flaws but is pointing in
+the right direction.  The idea of &ldquo;decoy ballots&rdquo; in Chaum&rsquo;s recent proposal of
+<a href="https://rsvoting.org">Random Sample Voting</a> and its derivative
+<a href="https://www.ethz.ch/content/dam/ethz/special-interest/infk/inst-infsec/information-security-group-dam/research/publications/pub2018/Alethea_CSF18_BasinRadomirovicSchmid.pdf">Alethea</a>
+is also an important and interesting idea that&rsquo;s definitely pointing in the
+right direction, if not yet a perfect solution either.</p>
+
+<p>Highly-mobile citizens of modern democracies need the ability to vote
+conveniently, from outside their home town or country when necessary. Just
+saying that no remote voting technology is safe may be simplistically true but
+is unhelpful. No voting technology is perfectly safe.  We can prevent future
+disasters like North Carolina only facing forward, not back. A
+technically-informed, systematically-designed, cautiously-deployed, open-source
+approach like Switzerland&rsquo;s E-voting project is what tech security people need
+to embrace and improve, not dogpile.</p>
+
+    </div>
+
+    <div style="flex: 2 5 20px">
+    </div>
+  </div>
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+<td align="left">
+<a href="http://bford.info/">Bryan Ford</a>
+</td>
+<td align="right">
+<font size="-2">
+ 
+</font>
+</td></tr></table>
+
+    
+  </body>
+</html>

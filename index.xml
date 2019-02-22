@@ -6,10 +6,21 @@
     <description>Recent content on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Remote Voting Technology Minefield: from North Carolina to Switzerland</title>
+      <link>https://bford.info/2019/02/22/voting/</link>
+      <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2019/02/22/voting/</guid>
+      <description>(This blog post is a reformatted and lightly-edited version of this tweet thread.)
+The absentee ballot fraud in North Carolina shows how current vote-by-mail methods are fundamentally flawed and vulnerable to vote-buying and coercion. But banning remote voting of any kind would disenfranchise everyone not living in their country of citizenship; that is not a real option.
+It is important to understand in this light the context of the Swiss e-voting project, one of whose two implementations was recently open sourced by the Swiss Post for inspection and analysis by international experts.</description>
+    </item>
     
     <item>
       <title>Rethinking Priorities: Should Identity Systems Divide or Unite People?</title>
