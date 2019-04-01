@@ -3,6 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://bford.info/selforg/intro/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/selforg/arch/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/selforg/people/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/selforg/money/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/selforg/comm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/selforg/info/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/selforg/choice/</loc>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2019/02/22/voting/</loc>
     <lastmod>2019-02-22T00:00:00+00:00</lastmod>
   </url>
@@ -272,6 +300,11 @@
   
   <url>
     <loc>https://bford.info/album/2003/0621-StPetersbourg/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/selforg/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
