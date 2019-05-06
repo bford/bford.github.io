@@ -568,6 +568,16 @@ Le Panier  &amp;nbsp; &amp;nbsp;   &amp;nbsp; &amp;nbsp;    </description>
     </item>
     
     <item>
+      <title>MorphIT: Morphing Packet Reports for Internet Transparency</title>
+      <link>https://bford.info/pub/net/morphit-abs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/morphit-abs/</guid>
+      <description>Georgia Fragkouli, Katerina Argyraki, and Bryan Ford EPFL   Proceedings on Privacy Enhancing Technologies
+May 4, 2019.  Abstract: Can we improve Internet transparency without worsening user anonymity? For a long time, researchers have been proposing transparency systems, where traffic reports produced at strategic network points help assess network behavior and verify service-level agreements or neutrality compliance. However, such reports necessarily reveal when certain traffic appeared at a certain network point, and this information could, in principle, be used to compromise low-latency anonymity networks like Tor.</description>
+    </item>
+    
+    <item>
       <title>My Cats</title>
       <link>https://bford.info/album/Cats.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
