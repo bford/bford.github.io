@@ -640,6 +640,16 @@ Chessboard Hill Cascade   &amp;nbsp;    &amp;nbsp;  &amp;nbsp;  The Grand Cascad
     </item>
     
     <item>
+      <title>Rethinking General-Purpose Decentralized Computing</title>
+      <link>https://bford.info/pub/os/protean-abs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/protean-abs/</guid>
+      <description>Enis Ceyhun Alp, Eleftherios Kokoris-Kogias, Georgia Fragkouli, and Bryan Ford EPFL - IC - DEDIS   17th Workshop on Hot Topics in Operating Systems (HotOS XVII)
+May 12-15, 2019.  Abstract: While showing great promise, smart contracts are difficult to program correctly, as they need a deep understanding of cryptography and distributed algorithms, and offer limited functionality, as they have to be deterministic and cannot operate on secret data.</description>
+    </item>
+    
+    <item>
       <title>Rethinking Social Media to Escape the Echo Chamber</title>
       <link>https://bford.info/2016/11/13/info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
