@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Are Only Type Parameters Generic Enough for Go 2 Generics?</title>
+      <link>https://bford.info/2019/07/29/go-generics/</link>
+      <pubDate>Mon, 29 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2019/07/29/go-generics/</guid>
+      <description>The Go language appears to be getting slightly closer to supporting generics, with the recent release of a new proposal for generics based on type parameters and contracts.
+I generally like the direction this proposal is going, with one significant reservation. I feel that the current proposal both unnecessarily limits how &amp;ldquo;generic&amp;rdquo; Go&amp;rsquo;s generics will be, and risks painting the language into a corner in the long term. This is because the proposal single-mindedly assumes that the only compile-time generic parameters we will ever want are type parameters, which seems like an unnecessary and undesirable restriction.</description>
+    </item>
     
     <item>
       <title>The Remote Voting Minefield: from North Carolina to Switzerland</title>

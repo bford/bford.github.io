@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Are Only Type Parameters Generic Enough for Go 2 Generics? &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+
+  <div style="display: flex">
+    <div style="flex: 2 5 20px">
+    </div>
+
+    <div style="flex: 1 1 500px">
+
+      <h2 align="right"><i>July 29, 2019</i></h2>
+
+      <h1>Are Only Type Parameters Generic Enough for Go 2 Generics?</h1>
+
+      
+
+<p>The Go language appears to be getting slightly closer to supporting generics,
+with the recent release of a new
+<a href="https://go.googlesource.com/proposal/+/master/design/go2draft-contracts.md">proposal</a>
+for generics based on type parameters and contracts.</p>
+
+<p>I generally like the direction this proposal is going,
+with one significant reservation.
+I feel that the current proposal both unnecessarily limits
+how &ldquo;generic&rdquo; Go&rsquo;s generics will be,
+and risks painting the language into a corner in the long term.
+This is because
+the proposal single-mindedly assumes that the only compile-time generic
+parameters we will ever want are <em>type</em> parameters,
+which seems like an unnecessary and undesirable restriction.
+This blog post offers feedback to the current generics draft proposal,
+exploring this concern and potential solutions.</p>
+
+<h2 id="what-distinguishes-parameters-to-generics">What Distinguishes Parameters to Generics?</h2>
+
+<p>In the current generics proposal,
+function definitions may be parameterized
+with a set of optional type parameters,
+separate from and preceding the function&rsquo;s regular parameters,
+as illustrated in the proposal&rsquo;s simple generic <code>Print</code> example:</p>
+
+<pre><code>func Print(type T)(s []T) {
+    for _, v := range s {
+        fmt.Println(v)
+    }
+}
+</code></pre>
+
+<p>What is actually going on here is that
+the generic function <code>Print</code> takes one <em>compile-time</em> parameter <code>T</code> (a type)
+and one <em>run-time</em> parameter <code>s</code> (a slice of type <code>T</code>).
+A user of this generic binds <code>T</code> to a specific actual type at compile time,
+which may happen either explicitly or implicity using type inference,
+to produce a &ldquo;version&rdquo; of <code>Print</code> specialized to type <code>T</code>.
+This specialization of <code>Print</code> to type <code>T</code> is in turn
+a function taking a <em>run-time</em> parameter <code>s</code>,
+which the function&rsquo;s caller will bind to a run-time actual parameter:
+i.e., a specific slice with elements of type <code>T</code> to be printed.</p>
+
+<p>Of course, as the proposal discusses,
+such a generic can be compiled multiple ways with different tradeoffs.
+The compiler could produce a single block of <code>Print</code> code
+that internally uses polymorphism or reflection mechanisms
+to operate dynamically on any type that might be passed to it.
+Alternatively,
+the compiler might actually instantiate a separate copy of the <code>Print</code> code
+specialized to each specific type that callers happen to bind <code>T</code> to.
+The compiler has both options: that&rsquo;s part of the point.</p>
+
+<p>The restrictions the generics proposal imposes on type parameter lists
+ensure that the compiler <em>can</em> enumerate all possible bindings of <code>T</code>
+if it needs to,
+and thus has the option of choosing either implementation approach.
+Run-time function parameters clearly do not in general,
+and should not be expected to,
+enable the compiler to determine at compile-time (for example)
+all possible slices that might be passed in as the run-time <code>s</code> parameter.
+With run-time parameters,
+compile-time enumeration of all parameter bindings
+and compile-time specialization based on them is not, in general, an option.</p>
+
+<p>The central crux of this post is simple:
+what most fundamentally distinguishes the optional &ldquo;generic&rdquo; parameter list
+of a generic function such as that above from its regular parameters
+is not the fact that <code>T</code> is a type parameter
+while <code>s</code> is a slice parameter,
+but the fact that <code>T</code> is a <em>compile-time</em> parameter
+while <code>s</code> is a <em>run-time</em> parameter.</p>
+
+<p>I that think the current Go 2 Generics proposal unnecessarily &ldquo;bakes in&rdquo;
+an assumption that all compile-time parameters must be type parameters
+while all run-time parameters must be non-type parameters
+(e.g., values of specific types such as slices, integers, etc.).
+This baked-in assumption may appear expedient
+in keeping the current proposal &ldquo;as simple as possible&rdquo; &mdash;
+though any realistic generics proposal including this one
+is inevitably far from simple &mdash;
+but in doing so this decision may paint the language into a corner
+and preclude useful and powerful generalizations either now or in the future.</p>
+
+<h2 id="must-all-compile-time-generic-parameters-be-types">Must All Compile-Time Generic Parameters Be Types?</h2>
+
+<p>Suppose for a moment that Go 2 were to follow the C++/Java tradition
+of using angle brackets instead of parentheses
+to distinguish the compile-time parameters of generics.
+I am not actually proposing this syntax,
+as I agree with the proposal&rsquo;s preference to avoid the ambiguities arising
+from overloading either angle brackets or square brackets for this purpose.
+But merely taking C++-style syntax as a comparison point for now,
+the above <code>Print</code> generic function might become:</p>
+
+<pre><code>func Print&lt;T&gt;(s []T) {
+    for _, v := range s {
+        fmt.Println(v)
+    }
+}
+</code></pre>
+
+<p>But <em>must</em> all generic parameters be types and only types?
+It is often useful in practice to be able to write code
+that can be specialized at compile-time according to non-type parameters
+such as integers.</p>
+
+<p>The Go language, in fact,
+already has a built-in generic type that takes a non-type parameter.
+An array type, specified as <code>[n]t</code>, takes a constant-integer parameter <code>n</code>
+along with its element-type parameter <code>t</code>.
+So Go already has a limited precedent for non-type parameters to generic types.
+Go 2 should should be consistent and compatible with this precedent,
+and ideally expand on and generalize it.
+It would be nice if Go 2 generics allowed us, for example,
+to write generic functions that could be specialized at compile-time
+to fixed-length arrays of different lengths.</p>
+
+<p>Suppose, for example, that we attached types to compile-time parameters,
+just like we do with run-time parameters.
+Again adopting C++-like syntax for now,
+we could write a generic dot-product function over <code>float32</code> arrays
+of any length fixed at compile-time as follows:</p>
+
+<pre><code>func DotProduct&lt;N int&gt;(a, b [N]int) float32 {
+    var sum float32
+    for i := range a {
+        sum += a[i] * b[i]
+    }
+    return sum
+}
+</code></pre>
+
+<p>Of course it would be nice to make such a function generic
+over the element type as well instead of fixing it on <code>float32</code>,
+and that should be possible using the contracts in the current proposal:
+either by listing all the built-in types supporting the <code>*</code> operator,
+or by defining a contract with an element-type parameter
+supporting a method like <code>Mul</code>.
+But for the moment let&rsquo;s ignore the contract issues
+and pretend that <em>all</em> types magically supported the <code>*</code> operator.
+The above <code>DotProduct</code> example might then become:</p>
+
+<pre><code>func DotProduct&lt;N int, T type&gt;(a, b [N]T) T {
+    var sum T
+    for i := range a {
+        sum += a[i] * b[i]
+    }
+    return sum
+}
+</code></pre>
+
+<p>Notice that we now have both type and non-type compile-time parameters,
+each declared in traditional Go &ldquo;identifier type&rsquo; declaration order,
+with the keyword <code>type</code> doubling as a &ldquo;meta-type&rdquo; denoting
+the type of a type parameter.
+As a purely stylistic matter,
+this approach feels more consistent with Go&rsquo;s existing syntax
+than the current generics proposal,
+where a single run-time parameter is declared like <code>(i int)</code>
+while a single type parameter is declared like <code>(type t)</code>.</p>
+
+<p>We could similarly consider whether the <code>type</code> keyword in its &ldquo;meta-type&rdquo; role
+should perhaps become usable in declarations
+of ordinary run-time parameters and variables as well.
+Go already has considerable precedent for treating types as runtime objects
+via its reflection API.
+In a runtime parameter list,
+the built-in <code>type</code> type might be either an alias of
+or otherwise closely related to the existing <code>reflect.Type</code> interface,
+for example,
+which already essentially serves this role in run-time usage of types.
+But this would be a separate and orthogonal discussion to be had,
+and I have not thought through the potentially nontrivial syntax implications
+of the <code>type</code> keyword becoming usable
+anywhere a type name or literal may be used now.</p>
+
+<p>But regardless of how permissive or restrictive Go&rsquo;s generics prove to be
+in terms of permitting non-type compile-time parameters,
+in the interest of keeping future options open if nothing else,
+it would seem desirable to avoid baking into Go 2&rsquo;s generics
+an unchangeable assumption that all compile-time parameters are type parameters
+and all run-time parameters are non-type parameters.
+Because both type and non-type parameters certainly <em>make sense</em>
+as both compile-time and run-time parameters,
+in all four combinations.</p>
+
+<h2 id="what-about-poor-neglected-const">What About Poor Neglected <code>const</code>?</h2>
+
+<p>Notice that Go&rsquo;s built-in array generic
+restricts its length parameter to be an integer <em>constant</em>,
+and for good reason:
+an array&rsquo;s length must be evaluable at <em>compile time</em>
+in order for arrays to be embeddable in fixed-length structures
+without indirection or allocation,
+and generally in order to serve the role they were designed to fill.
+The restriction of the array&rsquo;s length to a compile-time constant
+is part of the array&rsquo;s fundamental efficiency contract.</p>
+
+<p>If Go 2 were to allow non-type compile-time parameters to generics,
+then it would make sense to restrict the values bound to such parameters
+to be constants, for exactly the same reason.
+You could instantiate the above <code>DotProduct</code> example
+with any constant integer <code>N</code> known at compile time,
+but not with an integer variable or parameter known only at runtime.</p>
+
+<p>Notice that Go already has a keyword whose purpose
+is to bind a declared identifier to a constant evaluable at compile-time:
+namely <code>const</code>.
+You can already use <code>const</code> to assign the result of a complex expression,
+as in:</p>
+
+<pre><code>const MeaningOfLife int = 2*3*7
+</code></pre>
+
+<p>But the compiler checks that it can actually evaluate the expression
+at compile time and complains otherwise.
+Constants being constants,
+one would presumably be allowed to use the above <code>MeaningOfLive</code> identifier
+in instantiating a generic like <code>DotProduct</code> above
+taking a non-type <code>int</code> parameter,
+just like one can already use <code>MeaningOfLive</code>
+in declaring a Go array,
+while one could not use an ordinary (run-time) integer variable or parameter
+for either purpose.</p>
+
+<p>The <code>const</code> keyword currently serves only this one rather restricted purpose,
+but that doesn&rsquo;t mean that this is the only purpose it <em>can</em> serve.
+What if we were to use it also in declaring <em>other</em> things
+whose values must be evaluable and bound to constants at compile time &mdash;
+things like compile-time parameters to generics, for example?</p>
+
+<p>If Go wishes to avoid the ambiguities of C++/Java-style generic syntax
+for the reasons I understand and respect,
+then I propose that a more flexible, &ldquo;generic&rdquo;, rational,
+and linguistically-consistent
+syntax would be to use <code>const</code> instead of <code>type</code> to introduce
+compile-time parameter lists for generics.
+For example, the basic <code>Print</code> generic would become:</p>
+
+<pre><code>func Print(const T type)(s []T) {
+    for _, v := range s {
+        fmt.Println(v)
+    }
+}
+</code></pre>
+
+<p>A generic function with two compile-time type parameters
+and two run-time parameters would look like this:</p>
+
+<pre><code>func Print2(const T1, T2 type)(s1 []T1, s2 []T2) { ... }
+</code></pre>
+
+<p>The example <code>DotProduct</code> generic above with two compile-time parameters,
+one a non-type parameter and the other a type parameter,
+would now look like this:</p>
+
+<pre><code>func DotProduct(const N int, T type)(a, b [N]T) T { ... }
+</code></pre>
+
+<p>In general, the <code>(const ...)</code> syntax would declare a parameter list
+that must be bound to concrete actual parameters at compile-time
+rather than at run-time,
+but otherwise looks and works like standard Go parameter list syntax.</p>
+
+<p>I believe this approach is compatible with the semantics and syntax
+of contracts in the current Go 2 generics proposal.
+The new <code>contract</code> construct effectively declares additional meta-types
+more restrictive than <code>type</code>.
+For example, after declaring the proposal&rsquo;s <code>equal</code> contract
+defining types with an <code>Equal</code> method,
+the example generic <code>Index</code> function becomes:</p>
+
+<pre><code>// Index returns the index of e in s, or -1.
+func Index(const T equal)(s []T, e T) int { ... }
+</code></pre>
+
+<p>Notice that <code>equal</code> is used here instead of <code>type</code>
+as a more-restrictive meta-type denoting any particular type
+evaluable at compile-time that has an <code>Equal</code> method according to the contract.
+The current proposal&rsquo;s syntax, <code>(type T equal)</code>,
+is conceptually redundant in that both the <code>type</code> keyword before <code>T</code>
+<em>and</em> the <code>equal</code> identifier after <code>T</code>
+both effectively declare <code>T</code> as a type parameter,
+the latter by virtue of <code>equal</code> having been declared via a contract.
+The <code>(const T equal)</code> syntax, in contrast, is non-redundant
+in that the <code>const</code> keyword declares this to be a
+<em>compile-time constant</em> parameter list,
+while the <code>equal</code> alone declares <code>T</code> to be a <em>type</em> parameter
+(and not an <code>int</code> or <code>string</code> or&hellip;)
+restricted to some particular type satisfying the <code>equal</code> contract.</p>
+
+<p>Assuming we declared a <code>multype</code> contract,
+either of built-in types supporting the <code>*</code> operator
+or of arbitrary types supporting a <code>Mul</code> method,
+we could then properly &ldquo;fix&rdquo; the above <code>DotProduct</code> example as follows:</p>
+
+<pre><code>func DotProduct&lt;N int, T multype&gt;(a, b [N]T) T { ... }
+</code></pre>
+
+<h2 id="are-these-like-c-const-parameters">Are These Like C++ <code>const</code> Parameters?</h2>
+
+<p>No. C++ allows programmers to attach the <code>const</code> keyword
+to individual parameters
+(and even to individual pointer-indirection levels within a parameter)
+in order to declare the contents of a <em>run-time</em> parameter to be read-only.
+Experience has shown that that use of <code>const</code> leads to insane complexity,
+and still never quite gets you what you actually want,
+due to the complex interactions with pointer indirections and mutable types.</p>
+
+<p>The use of the <code>const</code> keyword proposed here applies to entire parameter lists,
+not to individual parameters or components of parameters or types,
+and it declares <em>all</em> the parameters to be <em>completely</em> evaluated
+and bound to constants at compile time as part of generic instantiation.
+We&rsquo;re not using <code>const</code> here to try and tweak run-time parameters
+to be (unreliably) read-only, as in C++.
+Instead we&rsquo;re using <code>const</code>
+to declare that the entire parameter list is to be evaluated
+and bound to constant actuals at compile-time and,
+at least conceptually if perhaps not always in implementation,
+to <em>disappear entirely</em> at runtime through generic instantiation.</p>
+
+<h2 id="are-we-metaprogramming-yet">Are We Metaprogramming Yet?</h2>
+
+<p>I respect and agree with the current Go 2 Generics proposal&rsquo;s desire to avoid
+the complexity of the kinds of metaprogramming that C++ templates support,
+not to mention the risk of a source program accidentally or deliberately
+making the compiler run forever or diverge.
+It might be claimed that allowing non-type parameters to generics
+constitutes support for metaprogramming, compromising that philosophy.</p>
+
+<p>To such a claim, however, I would argue that Go already includes some
+(albeit extremely restricted) support for metaprogramming,
+such as the <code>const</code> declaration&rsquo;s ability to evaluate an expression
+(i.e., <em>run a program!</em>) at compile time.
+And the current generics proposal already inherently adds the still-limited
+&ldquo;metaprogramming&rdquo; functionality
+of &ldquo;calling&rdquo; parameterized &ldquo;functions&rdquo; (generics) at compile time
+to produce multiple specializations or instantiations of the same code.
+The important question is not so much whether we&rsquo;re doing metaprogramming:
+we are anyway, inevitably.
+The question is what the right model and set of constraints is.</p>
+
+<p>Given the fact that the Go language already has considerable machinery
+for dealing with compile-time constants of a variety of types,
+I don&rsquo;t see any reason to believe that supporting
+non-type compile-type parameters to generics will somehow
+launch Go on an inevitable slide toward the template insanity of C++.
+The rules for declaring and invoking generics in Go can and should
+ensure that the compiler can decide not just in finite time, but <em>quickly</em>,
+whether a proposed generic instantiation is legally evaluable at compile time.
+A lot of the machinery to do so (e.g., constants) is already there.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Allowing the compile-time parameter lists of generics to include
+non-type constant parameters as well as type parameters
+could substantially increase the power of the generics mechanism.
+Non-type compile-time parameters to generics
+could enable users to obtain a lot of the desirable combination
+of code efficiency and conciseness that programmers often want from
+macro (or hygenic macro) facilities, for example.
+A clean syntactic distinction between compile-time <code>(const ...)</code>
+and run-time  <code>(...)</code> parameter lists
+will enable programmers to maintain a clear understanding
+of what will be evaluated at compile-time versus run-time
+and avoid performance surprises,
+regardless of whether those parameters happen to be types or non-types.</p>
+
+<p>Even if it is decided that Go 2 should initially support
+only type parameters to generics, however,
+considerations of &ldquo;future-proofing&rdquo; and maintaining maximum flexibility alone
+still seem to favor the adoption of a syntax and semantics
+that does not &ldquo;bake in&rdquo; forever an unchangeable assumption
+that compile-time parameters are always types
+while run-time parameters are always non-types.
+Adopting a syntax like <code>(const T1, T2 type)</code> for compile-time parameters
+instead of <code>(type T1, T2)</code>
+keeps the syntax focused on what&rsquo;s fundamentally important,
+namely that the parameters to generics are <em>bound to constants at compile time</em>.
+This approach also
+maintains greater linguistic consistency with existing declaration styles,
+and avoids painting the language into an evolutionary corner it may not escape,
+even if generics initially support only type parameters.</p>
+
+    </div>
+
+    <div style="flex: 2 5 20px">
+    </div>
+  </div>
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+<td align="left">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+<td align="right">
+<font size="-2">
+ 
+</font>
+</td></tr></table>
+
+    
+  </body>
+</html>
