@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Reducing Metadata Leakage from Encrypted Files and Communication with PURBs &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Reducing Metadata Leakage from Encrypted Files and Communication with PURBs</h1>
+  
+<center>
+<strong>
+Kirill Nikitin, Ludovic Barman, Wouter Lueks, Matthew Underwood, Jean-Pierre Hubaux and Bryan Ford
+<br>
+<a href="https://www.epfl.ch/">EPFL</a> -
+<a href="https://ic.epfl.ch/">IC</a> -
+<a href="https://dedis.epfl.ch">DEDIS</a>
+</strong>
+
+<p>
+<a href="https://petsymposium.org/2019/">Proceedings on Privacy Enhancing Technologies</a><br>
+July 2019.
+</p>
+</center>
+
+<h3>Abstract:</h3>
+Most encrypted data formats leak metadata via their plaintext headers, such as
+format version, encryption schemes used, number of recipients who can decrypt
+the data, and even the recipients’ identities. This leakage can pose
+security and privacy risks to users, e.g., by revealing the full membership of
+a group of collaborators from a single encrypted e-mail, or by enabling an
+eavesdropper to fingerprint the precise encryption software version and
+configuration the sender used.
+
+We propose that future encrypted data formats improve security and privacy
+hygiene by producing Padded Uniform Random Blobs or PURBs: ciphertexts
+indistinguishable from random bit strings to anyone without a decryption key.
+A PURB’s content leaks nothing at all, even the application that created it,
+and is padded such that even its length leaks as little as possible.
+
+Encoding and decoding ciphertexts with no cleartext markers presents efficiency
+challenges, however. We present cryptographically agile encodings enabling
+legitimate recipients to decrypt a PURB efficiently, even when encrypted for any
+number of recipients’ public keys and/or passwords, and when these public keys
+are from different cryptographic suites. PURBs employ PADMÉ, a novel padding
+scheme that limits information leakage via ciphertexts of maximum length M to
+a practical optimum of O(log log M) bits, comparable to padding to a power of
+two, but with lower overhead of at most 12% and decreasing with larger
+payloads.
+
+
+
+<h3>Paper:
+<a href="../purb.pdf">PDF</a>
+</h3>
+
+<h3>Slides:
+<a href="../purb-slides.pdf">PDF</a>
+</h3>
+
+
+
+<h3>Press coverage:
+<a href="https://www.zdnet.com/article/plugging-leaks-in-pgp-encryption/"
+	>ZDNet</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+<td align="left">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+<td align="right">
+<font size="-2">
+ 
+</font>
+</td></tr></table>
+
+    
+  </body>
+</html>
