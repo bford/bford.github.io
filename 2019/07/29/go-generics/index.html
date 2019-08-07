@@ -349,8 +349,380 @@ either of built-in types supporting the <code>*</code> operator
 or of arbitrary types supporting a <code>Mul</code> method,
 we could then properly &ldquo;fix&rdquo; the above <code>DotProduct</code> example as follows:</p>
 
-<pre><code>func DotProduct&lt;N int, T multype&gt;(a, b [N]T) T { ... }
+<pre><code>func DotProduct(const N int, T multype)(a, b [N]T) T { ... }
 </code></pre>
+
+<h2 id="example-ways-generics-over-non-types-are-useful">Example Ways Generics Over Non-Types are Useful</h2>
+
+<p>There are many ways in which generics over non-type
+compile-time constant values are likely to be useful.
+I will briefly cover two classes of such uses here:
+first, generics over arrays,
+and second, allowing compile-time configuration and specialization
+of packages and algorithms for which efficiency matters.</p>
+
+<h3 id="making-generics-over-arrays-useful">Making [Generics Over] Arrays Useful</h3>
+
+<p>Without support for non-type parameters to generics,
+it will presumably be possible to define functions or types
+that are generic over (say) all arrays of <em>a particular size</em>
+over a parameterized type T,
+but not over <em>all arrays</em>,
+leaving a major gap in the language,
+both conceptually and pragmatically in terms of code efficiency.</p>
+
+<p>There are many common uses of arrays
+for which their compile-time fixed length is important for efficiency,
+particularly for arrays of <em>small</em> fixed lengths.
+In image processing, for example,
+manipulation of RGB 3-tuples or RGBA 4-tuples (with an alpha channel)
+is extremely common, pervasive, and performance-critical.
+In 2D and 3D modeling, rendering, gaming, etc.,
+manipulation of 2-, 3-, or 4-element vectors
+and corresponding 2&times;2, 3&times;3, and 4&times;4 transformation matrices
+are fundamental and performance-critical.
+Using arrays instead of slices in short-vector code like this
+allows the compiler to unroll loops and eliminate range checks effectively.</p>
+
+<p>Currently, developers who care about getting these efficiency benefits
+must write manually-specialized versions of all the
+tuple, vector, or matrix manipulation functions they need,
+once for each relevant combination of tuple/vector/matrix dimensions
+and element types.
+The current Go generics proposal will presumably allow semi-generic functions
+to range over different element types but not different dimensions.
+It would be nice if vector/matrix operations
+could be generic over both element types and dimensions.</p>
+
+<h4 id="example-image-processing-and-rgb-versus-rgba-tuples">Example: image processing and RGB versus RGBA tuples</h4>
+
+<p>For example, an image processing library that wishes to process
+both RGB and RGBA tuples leveraging the maximum efficiency of arrays
+will have to provide two sets of generic pixel-manipulation functions,
+one for RGB 3-tuples and the other for RGBA 4-tuples,
+even though each of these can be semi-generic over different numeric types.
+With support for generics over non-type parameters,
+the image processing library could provide just one set of generic
+pixel-manipulation functions,
+which clients can use &mdash;
+and which the Go compiler can specialize efficiently for &mdash;
+both RGB 3-tuple arrays and RGBA 4-tuple arrays at compile time,
+depending on the needs of a particular client of the library.</p>
+
+<h4 id="example-vector-and-matrix-operations-in-2d-3d-applications">Example: vector and matrix operations in 2D/3D applications</h4>
+
+<p>Similarly, a 2D or 3D library (or even the Go standard library)
+must currently take and process variable-length slices as arguments
+in order to handle vectors and matrices of different sizes,
+or else provide a separate set of code specialized
+to each of the performance-critical common cases:
+e.g., 2D vectors and 2&times;2 matrices,
+3D vectors and 3&times;3 matrices, and
+4D vectors and 4&times;4 perspective and orthographic projection matrices.
+The current Go generics proposal will allow semi-generic functions
+parameterized with a numeric type (e.g., <code>float32</code> versus <code>float64</code>)
+but will still require manually-coded versions for each common-case dimension.
+Suppporting non-type parameters to generics
+(or even just constant <code>int</code> parameters alone)
+would fill this gap and allow libraries to include
+generic functions specializable at compile time
+to the particular vector/matrix dimension(s) needed by the application,
+without either giving up the efficiency benefits of arrays
+or duplicating large amounts of manually-specialized code.</p>
+
+<h4 id="example-vector-and-matrix-generics-over-both-slice-and-array-representations">Example: vector and matrix generics over both slice and array representations</h4>
+
+<p>Through appropriate use of the &ldquo;either-or&rdquo; type disjunction mechanism
+already in the Go generics proposal,
+it should even be possible to build generic libraries
+compatible with <em>either</em> slices <em>or</em> [pointers to] arrays,
+not just one or the other.
+For example, the Go standard library or other libraries
+could include generic vector operations taking either
+runtime-dimensioned slices or compile-time-dimensioned vectors:</p>
+
+<pre><code>contract Numeric(T) {
+    T float32, float64, int, int32, ...
+}
+
+contract Vector(const N int, E Numeric, V type) {
+    V []E, *[N]E    // a slice of E or a pointer to an array of E
+}
+
+func (r V) Add(const N, E, V Vector)(a, b V) V {
+    for i := range r {
+        r[i] = a[i] + b[i]
+    }
+    return r
+}
+
+func DotProduct(const N, E, V Vector)(a, b V) E {
+    var sum E
+    for i := range r {
+        sum += a[i] * b[i]
+    }
+    return sum
+}
+</code></pre>
+
+<p>This capability would get even more useful and powerful
+considering generics for matrix operations
+using either slices or multidimensional arrays to represent matrices.
+In the latter case,
+the compilar can not only specialize these generics
+to both the types and dimensions needed by applications,
+but also enforce appropriate dimension invariants on arrays at compile-time.</p>
+
+<p>A generic function for matrix transposition could,
+when applied to matrices represented as 2-dimensional arrays,
+ensure at compile-time that the matrix is square:</p>
+
+<pre><code>contract Transposable(const n int, E Numeric, M type)  {
+    M [][]E, *[n][n]E
+}
+
+func (r Mr) Transpose(const n, E, M Transposable)(a M) M {
+    for i := range r {
+        for j := range r {
+            r[i][j] = a[j][i]
+        }
+    }
+    return r
+}
+</code></pre>
+
+<p>Similarly, a generic function for matrix multiplication
+could work with not only different element types
+but also with either slices or [pointers to] arrays,
+and in the latter case the compiler can check at compile time
+the correct dimension correspondences via type unification,
+and specialize the code
+to the specific types and dimensions an application actually uses:</p>
+
+<pre><code>contract Multable(const n, m, p int, E Numeric, Ma, Mb, Mr type) {
+    Ma [][]E, *[n][m]E
+    Mb [][]E, *[m][p]E
+    Mr [][]E, *[n][p]E
+}
+
+func (r Mr) MatMult(const n,m,p,E,Ma,Mb,Mr Multable)(a Ma, b Mb) Mr {
+    for i := range r {
+        for j := range r[i] {
+            var sum E
+            for k := range a[i] {
+                sum += a[i][k] * b[k][j]
+            }
+            r[i][j] = sum
+        }
+    }
+    return r
+}
+</code></pre>
+
+<p>If we add run-time checks to the above code for proper dimension correspondence,
+then a specializing compiler will automatically
+compile those checks out to nothing
+whenever MatMult is used with the array representation,
+simply as a result of ordinary constant propagation.</p>
+
+<p>These slice-and-array generics examples all have the subtlety
+of depending on the Go compiler to do something sensible
+with the const int parameters that aren&rsquo;t needed
+when the above generic functions are used with slices.
+Type unification will not find anything to bind <code>n</code> to
+when <code>Transpose</code> is called with a slice, for example.
+This should be OK, however, if the compiler
+an avoid complaining about unconstrained generic parameters
+until/unless something in the generated code actually tries to use
+an unconstrained generic parameter.</p>
+
+<h3 id="compile-time-configuration-and-specialization-of-library-code">Compile-time Configuration and Specialization of Library Code</h3>
+
+<p>Beyond arrays and code that depends on them,
+supporting non-type compile-time parameters to generics
+would enable library modules to be made configurable at compile time
+in many ways to support both general and specialized use-cases efficiently.</p>
+
+<h4 id="compile-time-configurable-big-integers">Compile-time configurable big integers</h4>
+
+<p>Consider the Go standard library&rsquo;s `big.Int&rsquo; facility
+for arbitrary-precision integer arithmetic, for example.
+While general and highly useful,
+a fairly common case it does not address is the need for integers
+slightly larger than the natively-supported 64-bit size
+but still small and fixed-length for efficiency.
+For example, there have been
+<a href="https://github.com/golang/go/issues/9455">calls for 128-bit integers in Go</a>,
+and the Ethereum virtual machine
+<a href="https://solidity.readthedocs.io/en/v0.4.24/types.html">uses 256-bit integers pervasively</a>.</p>
+
+<p>A developer who needs 128- or 256-bit signed or unsigned integers in particular,
+and cares about performance,
+must currently choose between using <code>bit.Int</code>
+and giving up the performance advantages of code specialized to
+2-word or 4-word integers and signed or unsigned arithmetic specifically,
+or writing a manually-specialized arithmetic package
+that may not benefit from the architecture-specific underlying optimizations
+that <code>big.Int</code> does without a lot of additional effort and code maintenance.</p>
+
+<p>With non-type compile-time parameters to generics,
+the <code>math/big</code> package could support a variation of <code>big.Int</code>
+compile-time configurable at compile time and specializable to
+a particular bit width and/or signedness configuration.
+For example:</p>
+
+<pre><code>type GenericInt(const bits int, signed Signedness) struct { ... }
+
+type Signedness int
+const (
+    SignBit Signedness = iota, // default: separate sign bit
+    Unsigned,                  // no sign bit, unsigned values only
+    TwosComplement,            // topmost integer bit is sign bit
+)
+</code></pre>
+
+<p>Configuring <code>GenericInt</code> with <code>bits == 0</code>
+would allow its length to vary at runtime as in <code>big.Int</code>,
+and setting <code>signed == SignBit</code> would similarly configure it to keep a sign bit
+stored separately from the significant integer bits as in <code>big.Int</code>.
+Thus, the configuration <code>GenericInt(0, SignBit)</code>
+would be equivalent to the current <code>big.Int</code>.
+The internal implementation of <code>GenericInt</code>
+would of course have a variety of internal tests and dependencies
+on the <code>bits</code> and <code>signed</code>,
+but a specializing compiler would generally resolve and optimize away
+these tests at compile time.</p>
+
+<p>If Go 2 could allow generic and non-generic forms of the same identifier
+without getting confused,
+then <code>GenericInt</code> could effectively replace <code>big.Int</code>,
+with the non-parameterized <code>Int</code> just representing
+the default configuration of the generic <code>Int</code>:</p>
+
+<pre><code>type Int(const Bits int, signed Signedness) struct { ... }
+
+type Int Int(0, SignBit)
+</code></pre>
+
+<p>Specialization might have storage and garbage collection efficiency benefits,
+which may be significant.
+With implementation care, for example,
+configurations of <code>GenericInt</code> for a fixed number of bits
+and <code>Unsigned</code> or <code>TwosComplement</code> mode
+could internally use a fixed-length array with no space overhead.
+For example, an <code>Int(128, Unsigned)</code> or an <code>Int(128, TwosComplement)</code>
+would always take exactly 128 bits of storage and never cause allocations.</p>
+
+<p>Compile-time configurable big integers
+might also be an element of a clean solution to the problem of providing
+<a href="https://github.com/golang/go/issues/20654">constant-time big integers for cryptography</a>.
+Go 2 might, for example,
+reasonably guarantee guarantee that operations on a <code>big.Int</code>
+configured with all parameters fixed at compile-time
+contain no control-flow that depends on data at runtime.
+Alternatively, since expensive operations such as modular exponentiation
+can often be done more efficiently when constant-time operation is not required
+(e.g., for verifying rather than creating digital signatures),
+constant-time operation might be a separate compile-time parameter to <code>big.Int</code>.</p>
+
+<p>To be clear, this is not a specific proposal at the moment
+that <code>big.Int</code> should be generalized in this particular (or any) way.
+This is merely an example of how types like <code>big.Int</code> <em>could</em> potentially
+be made configurable and specializable at compile time
+if Go 2 generics support non-type generic parameters.
+The following examples should be taken in similar spirit.</p>
+
+<h4 id="compile-time-configurable-big-floats">Compile-time configurable big floats</h4>
+
+<p>The same principles apply naturally to <code>big.Float</code>,
+where other natural configuration options
+such as mantissa precision and rounding mode
+may naturally apply in addition to signedness.</p>
+
+<p>While Go natively supports only 32-bit and 64-bit IEEE floating point,
+compile-time configuration parameters to a generic <code>big.Float</code>
+could provide reasonably-efficient, compile-time specialized implementations of
+the other binary floating-point formats
+<a href="https://en.wikipedia.org/wiki/IEEE_754">standardized by IEEE 754-2008</a>,
+such as 16-bit, 128-bit, and 256-bit floating-point numbers.</p>
+
+<p>Many applications typically use only one floating-point rounding mode,
+and a great deal of internal control-flow complexity in <code>big.Float</code>
+is dedicated to testing the rounding mode and handling all of the cases.
+Another large part of the internal complexity
+is dedicated to handling sign bits and zeros in all combinations.
+An application that, for example,
+needs arbitrary- or fixed-precision floating-point numbers
+that are always positive and processed with only one rounding mode, for example,
+could configure a generic <code>big.Float</code> for positive-only operation
+with only that rounding mode,
+obtaining a much more efficient compile-time-specialized version
+with a tiny fraction of the runtime conditionals and branches
+that the general <code>big.Float</code> contains.</p>
+
+<p>While the hardware branch prediction units of modern processors
+of course already  mitigate some of the costs
+of these numerous internal branches
+by &ldquo;learning&rdquo; which direction a branch typically follows,
+appropriately-specialized versions of code such as <code>big.Float</code>
+would place much less pressure on hardware branch prediction &mdash;
+leaving that branch prediction cache space for effective use
+by the code <em>calling</em> <code>big.Float</code> &mdash;
+at a cost, of course, of code size
+in applications that use multiple configurations of <code>big.Float</code>.</p>
+
+<h4 id="compile-time-configuration-structures">Compile-time configuration structures</h4>
+
+<p>From a software engineering perspective,
+introducing compile-time configuration options to generics
+in an incremental, backward-compatible way would be facilitated
+if Go 2 were also enhanced to support <code>const struct</code>s.
+Go already supports <code>struct</code> value literals,
+which are effectively constant <code>struct</code>s anyway;
+the addition would merely to be to allow <code>struct</code> literals
+to to be used in <code>const</code> declarations and generic parameter lists.</p>
+
+<p>In this way, compile-time-configurable generics
+could simply take an extensible <code>Config</code> structure
+as their one compile-time parameter.
+Such a compile-time <code>Config</code> struct for <code>big.Float</code>
+might look something like this:</p>
+
+<pre><code>type FloatConfig struct {
+    MaxPrec int,      // Mantissa precision in bits, 0 for variable
+    Nonzero bool,     // Zero values disallowed
+    Unsigned bool,    // Negative values disallowed
+    Mode RoundngMode, // Fixed rounding mode, Any for variable
+    _ struct{},       // Ensure extensibility with future parameters
+}
+
+type Float(const config FloatConfig) struct { ... }
+type Float Float(FloatConfig{}) // default configuration
+</code></pre>
+
+<p>There are a wide variety of circumstances
+in which such compile-time configurability and specialization may be useful.
+More algorithmic choices and optimizations
+are often available when the data being processed
+is known to have certain properties;
+compile-time configuration parameters to generics
+may be used to signal to libraries in an extensible way
+that the data has such properties
+and that relevant optimizations may be activated.</p>
+
+<p>For example, many graph algorithms and optimizations
+work only when the graph is known to be undirected (two-way edges),
+or when all edge weights are known to be positive,
+or when the graph is known to be directed acyclic, or a tree, or fast mixing.
+Generic graph algorithm libraries
+could use declarative compile-time parameters via <code>Config</code> structures
+to specialize their general algorithms to special cases such as these.
+Matrix and linear algebra operations can often be optimized considerably
+if the matrix is known to be upper- or lower-triangular
+or to have other properties the client might declare to enable specialization.
+As mentioned above, cryptographic algorithms and arithmetic
+can often be optimized in situations where the data being operated on
+is known to be non-sensitive so that arithmetic need not be constant-time.</p>
 
 <h2 id="are-these-like-c-const-parameters">Are These Like C++ <code>const</code> Parameters?</h2>
 
@@ -436,6 +808,8 @@ This approach also
 maintains greater linguistic consistency with existing declaration styles,
 and avoids painting the language into an evolutionary corner it may not escape,
 even if generics initially support only type parameters.</p>
+
+<p><em>Updated 6-August-2019 with the section on example uses.</em></p>
 
     </div>
 
