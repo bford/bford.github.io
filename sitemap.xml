@@ -43,7 +43,6 @@
   <url>
     <loc>https://bford.info/post/</loc>
     <lastmod>2019-07-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -140,7 +139,6 @@
   <url>
     <loc>https://bford.info/page/</loc>
     <lastmod>2015-04-03T02:13:50+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -238,7 +236,6 @@
   
   <url>
     <loc>https://bford.info/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -327,7 +324,6 @@
   
   <url>
     <loc>https://bford.info/selforg/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -344,7 +340,6 @@
   
   <url>
     <loc>https://bford.info/tags/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
