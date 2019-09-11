@@ -6,7 +6,7 @@
     <description>Recent content on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
     
@@ -72,6 +72,16 @@
       
       <guid>https://bford.info/selforg/choice/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Rationality is Self-Defeating in Permissionless Systems</title>
+      <link>https://bford.info/draft/rational/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/rational/</guid>
+      <description>Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational (greedy) rather than a Byzantine (arbitrary) failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.
+What most of these heavily-overlapping sets of fans do not seem to realize, however, is that rationality assumptions are self-defeating in open permissionless systems with weak identities.</description>
     </item>
     
     <item>
