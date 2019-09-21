@@ -81,7 +81,7 @@
       
       <guid>https://bford.info/draft/rational/</guid>
       <description>by Bryan Ford and Rainer Böhme 
-Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational (greedy) rather than a Byzantine (arbitrary) failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.
+Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational (&amp;ldquo;greedy behavior&amp;rdquo;) rather than a Byzantine (&amp;ldquo;arbitrary behavior&amp;rdquo;) failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.
 What most of these heavily-overlapping sets of fans do not seem to realize, however, is that rationality assumptions are self-defeating in open permissionless systems with weak identities.</description>
     </item>
     

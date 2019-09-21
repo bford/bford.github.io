@@ -49,8 +49,8 @@ by <a href="https://bford.info">Bryan Ford</a> and
 </i></p>
 
 <p>Many blockchain and cryptocurrency fans seem to prefer
-building and analyzing decentralized systems in a rational (greedy)
-rather than a Byzantine (arbitrary) failure model.
+building and analyzing decentralized systems in a rational (&ldquo;greedy behavior&rdquo;)
+rather than a Byzantine (&ldquo;arbitrary behavior&rdquo;) failure model.
 Many of the same blockchain and cryptocurrency fans
 also like open, permissionless systems like Bitcoin and Ethereum,
 which anyone can join and participate
@@ -61,7 +61,9 @@ do not seem to realize, however,
 is that rationality assumptions are self-defeating
 in open permissionless systems with weak identities.
 A fairly simple metacircular argument &ndash;
-kind of a &ldquo;Gödel&rsquo;s incompleteness theorem for rationality&rdquo; &ndash;
+kind of a
+&ldquo;<a href="https://en.wikipedia.org/wiki/Gödel%27s_incompleteness_theorems"
+    >Gödel&rsquo;s incompleteness theorem</a> for rationality&rdquo; &ndash;
 shows that for any system <em>S</em> that makes
 <em>any</em> behavioral assumption,
 including but not limited to a rationality assumption,
@@ -87,7 +89,8 @@ may be perfectly rational in the context of the larger ecosystem.</p>
 an open permissionless system
 designed to be secure only against rational adversaries
 is actually just <em>insecure</em>,
-unless it is also secure against arbitrary Byzantine adversaries.
+unless it remains secure even when the &ldquo;rational&rdquo; participants
+become fully Byzantine.
 Given this, one might as well have designed the permissionless system
 in a Byzantine model in the first place.
 The rationality assumption offers no actual benefit,
@@ -106,18 +109,19 @@ for the public record.</p>
 we must define the system&rsquo;s <em>threat model</em>,
 and in particular our assumptions about the behaviors
 of the participants in the system.
-An <em>honest</em> or <em>correct</em> participant is one
+An <em>honest</em>, <em>correct</em>, or <em>altruistic</em> participant is one
 that we assume to follow the system&rsquo;s protocol rules as specified,
 hence representing a &ldquo;well-behaved&rdquo; participant
-exhibiting no adversarial behavior.
-A <em>Byzantine</em> participant is one
-we assume can behave in <em>arbitrary</em> fashion, without restriction,
-and hence represents the strongest possible adversary.</p>
+exhibiting no adversarial behavior.</p>
+
+<p>A <em>Byzantine</em> participant, in contrast, is one we make <em>no</em> assumptions about.
+A Byzantine participant can behave in <em>arbitrary</em> fashion, without restriction,
+and hence by definition represents the strongest possible adversary.</p>
 
 <p>We would like to build systems that could withstand
 <em>all</em> participants being Byzantine,
 but this appears fundamentally impossible.
-We therefore have to make threshold security assumptions,
+We therefore in practice have to make threshold security assumptions,
 such as that over two-thirds of the participants are honest
 in classic Byzantine consensus protocols,
 or in Bitcoin,
@@ -130,7 +134,7 @@ than systems tolerating weaker adversaries.
 We may therefore be tempted to improve a design&rsquo;s simplicity or efficiency
 by making stronger assumptions about
 the behavior of adversarial participants,
-effectively weakening the adversary.</p>
+effectively weakening the assumed adversary.</p>
 
 <p><center>
 <img src="adversaries.svg" alt="Types of adversaries" style="float:right">
@@ -141,7 +145,8 @@ is <em>rationality</em>.
 In essence, we assume that rational participants
 may deviate from the rules in arbitrary ways
 but <em>only when doing so is in their economic self-interest</em>,
-i.e., improves their financial reward
+improving their expected rewards &ndash;
+usually but not always financial &ndash;
 in comparison with following the rules honestly.</p>
 
 <p>By assuming that adversarial participants are rational rather than Byzantine,
@@ -155,17 +160,21 @@ will not give participants a greater financial reward.</p>
 
 <p>Besides simplicity and efficiency,
 another appeal of rationality assumptions
-is the promise of <em>strengthening</em> the system&rsquo;s (perceived) security
-by lowering the threshold of participants we assume are honest.
+is the promise of <em>strengthening</em> the system&rsquo;s security
+by lowering the threshold of participants we assume to be fully honest.
 To circumvent the classical Byzantine consensus requirement
 that fewer than one third of participants may be faulty,
 for example,
 we might hope to tolerate closer to 50%, or even 100%,
 of participants being &ldquo;adversarial&rdquo;
 if we assume they are rational and not Byzantine.
-But a trivial implication of our metacircular argument is that,
-in general,
-such a system cannot be secure if it satisfies the assumptions below.</p>
+The <a href="http://www.cs.utexas.edu/~lorenzo/papers/sosp05.pdf"
+    >BAR model (Byzantine-Altruistic-Rational)</a>
+exemplifies this goal,
+which appears achievable in closed systems with strong identities.
+But a direct implication of our metacircular argument is that
+an <em>open</em> system cannot generally be secure if all participants
+are either Byzantine or rational.</p>
 
 <h2 id="assumptions-underlying-the-argument">Assumptions Underlying the Argument</h2>
 
@@ -185,7 +194,7 @@ we cannot reasonably expect police or governments to protect <em>S</em> from att
 even if they wanted to and considered it their job,
 they would not be able to find or discipline a smart rational attacker
 who might be attacking from anywhere around the globe,
-especially a country with weak international extradition rules.
+especially a country with weak international agreements and extradition rules.
 Thus, <em>S</em> must &ldquo;stand on its own&rdquo;,
 by successfully either withstanding or disincentivizing attacks
 coming from anywhere.
@@ -261,8 +270,9 @@ acquire a <em>large</em> fraction of <em>S</em>&rsquo;s total value?</p>
 <em>P</em> can also make use of facilities external to <em>S</em>.
 By assumption 2,
 <em>P</em> may in particular have access to, or be able to borrow temporarily,
-financial resources comparable to or larger than the total value of <em>S</em>.
-Suppose the facilities external to <em>S</em> include
+financial resources comparable to or larger than the total value of <em>S</em>.</p>
+
+<p>Suppose the facilities external to <em>S</em> include
 another Ethereum-like cryptocurrency <em>S&rsquo;</em>,
 which includes a smart contract facility with which
 decentralized exchanges, futures markets, and the like may be implemented.
@@ -281,7 +291,7 @@ some behavioral strategy that system <em>S</em> depends on participants <em>not<
 and that will observably break <em>S</em> &ndash;
 or even that just <em>might</em> break <em>S</em> with significant non-negligible probability.
 Assumption 3 above guarantees the existence of such a behavioral strategy,
-unless <em>S</em>&rsquo;s rationality assumptions were in fact redundant and worthless;
+unless <em>S</em>&rsquo;s rationality assumptions were in fact redundant and worthless.
 <em>P</em> must merely be clever enough to find and implement such a strategy.
 It is possible this strategy might first require <em>P</em>
 to pretend to be a well-behaved participant of <em>S</em> for a while,
@@ -363,9 +373,22 @@ would behave rationally.</p>
 
 <h2 id="implications-for-practical-systems">Implications for Practical Systems</h2>
 
-<p>Some real-world attacks we are seeing,
+<p>This type of financial attack is by no means entirely theoretical
+or limited to fully-digital systems such as cryptocurrencies.
+In our scenario,
+<em>P</em> is essentially playing a game closely-analogous to the investors in
+<a href="https://en.wikipedia.org/wiki/Credit_default_swap"
+    >credit default swaps</a>
+who both contributed to, and profited handsomely from,
+the <a href="https://en.wikipedia.org/wiki/Financial_crisis_of_2007–2008"
+    >2007-2008 financial crisis</a>,
+as covered more recently in the film
+<a href="https://en.wikipedia.org/wiki/The_Big_Short_(film)">The Big Short</a>.</p>
+
+<p>In the cryptocurrency space,
+some real-world attacks we are seeing &ndash;
 such as increasingly-common
-<a href="https://cryptoslate.com/prolific-51-attacks-crypto-verge-ethereum-classic-bitcoin-gold-feathercoin-vertcoin/">51% attacks</a>,
+<a href="https://cryptoslate.com/prolific-51-attacks-crypto-verge-ethereum-classic-bitcoin-gold-feathercoin-vertcoin/">51% attacks</a> &ndash;
 might be viewed as special cases of this metacircular attack on rationality.
 It is often claimed that large proof-of-work miners
 (or proof-of-stake holders)
@@ -374,11 +397,11 @@ the value of the cryptocurrency in which they by definition hold a large stake,
 and hence would be &ldquo;irrational&rdquo;.
 But this argument falls apart if the attack allows the large stakeholder
 to reap rewards outside the attacked system,
-e.g., by defrauding exchanges or selling short in other systems.</p>
+e.g., by defrauding exchanges or selling <em>S</em> short in other systems.</p>
 
 <p>For most practical systems,
 we do not even know if they are incentive compatible
-even in the absence of external system <em>S&rsquo;</em> &ndash;
+even in the absence of an external system <em>S&rsquo;</em> &ndash;
 i.e., where assumption 2 is violated &ndash;
 and probably they are not.
 Almost all game-theoretic treatments of (parts of) the Bitcoin protocol
@@ -393,7 +416,7 @@ such as
 and other
 <a href="https://eprint.iacr.org/2019/775.pdf">pay-to-win attacks</a>.
 It is likely thanks only to frictions
-such as risk aversion and other attack costs
+such as risk aversion and other costs
 that we rarely observe such attacks in large deployed systems.
 Many specific attacks do not even depend on assumption 1,
 underlining the fact that rationality is not a silver bullet
@@ -411,7 +434,8 @@ So in some sense, systems built on the rationality assumption
 are temporarily more secure only until they are eaten by their own success.
 We can see this effect, for example, in the growing and
 increasingly liquid market for hash power,
-which effectively thwarts Satoshi’s
+which effectively thwarts
+<a href="https://bitcoin.org/bitcoin.pdf">Satoshi’s</a>
 (<a href="https://link.springer.com/chapter/10.1007/3-540-48071-4_10">or Dwork’s</a>)
 rule of thumb that the ratio of processors to individuals
 varies in a small band.
@@ -433,8 +457,8 @@ and subject to legal and contractual agreements with each other,
 one can hope that the threat of lawsuits for arbitrarily-large damages
 will keep rational participants incentivized to behave correctly.
 Similarly, in a national cryptocurrency,
-which might be relatively open but only to citizens of a given country
-and using verified identities with which the police
+which might be relatively open but only to citizens of a given country,
+and which require verified identities with which the police
 can expect to track down and jail misbehaving participants,
 this metacircular argument does not necessarily apply.</p>
 
@@ -472,10 +496,12 @@ to profit outside your system from breaking your rationality assumptions.
 The only practical way to eliminate this threat appears to be
 either to close the system and require strong identities and police protection,
 or else secure the system against arbitrary Byzantine behavior,
-thereby rendering rationality assumptions redundant and useless.</p>
+thereby rendering rationality assumptions redundant and useless for security.</p>
 
 <p><center><i>
-We wish to thank Jeff Allen for helpful comments on early drafts of this post.
+We wish to thank Jeff Allen, Andrew Miller, Damir Filipovic,
+Alexander Lipton, and Haoqian Zhang,
+for their helpful comments on early drafts of this post.
 </i></center></p>
 
 
