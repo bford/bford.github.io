@@ -168,10 +168,13 @@ for example,
 we might hope to tolerate closer to 50%, or even 100%,
 of participants being &ldquo;adversarial&rdquo;
 if we assume they are rational and not Byzantine.
-The <a href="http://www.cs.utexas.edu/~lorenzo/papers/sosp05.pdf"
-    >BAR model (Byzantine-Altruistic-Rational)</a>
+Work on <a href="http://www.cs.utexas.edu/~lorenzo/papers/sosp05.pdf"
+    >the BAR model (Byzantine-Altruistic-Rational)</a>
+and
+<a href="http://www.cs.utexas.edu/~lorenzo/papers/Abraham11Distributed.pdf"
+    ><em>(k,t)</em>-robustness</a>
 exemplifies this goal,
-which appears achievable in closed systems with strong identities.
+which sometimes appears achievable in closed systems with strong identities.
 But a direct implication of our metacircular argument is that
 an <em>open</em> system cannot generally be secure if all participants
 are either Byzantine or rational.</p>
@@ -397,7 +400,11 @@ the value of the cryptocurrency in which they by definition hold a large stake,
 and hence would be &ldquo;irrational&rdquo;.
 But this argument falls apart if the attack allows the large stakeholder
 to reap rewards outside the attacked system,
-e.g., by defrauding exchanges or selling <em>S</em> short in other systems.</p>
+e.g., by defrauding exchanges or selling <em>S</em> short in other systems.
+Such attacks on cryptocurrencies have been predicted before as
+<a href="https://www.econinfosec.org/archive/weis2013/papers/KrollDaveyFeltenWEIS2013.pdf">Goldfinger attacks</a>
+and
+<a href="https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final17.pdf">hostile blockchain takeovers</a>.</p>
 
 <p>For most practical systems,
 we do not even know if they are incentive compatible
