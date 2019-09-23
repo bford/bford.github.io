@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rationality is Self-Defeating in Permissionless Systems</title>
+      <link>https://bford.info/2019/09/23/rational/</link>
+      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2019/09/23/rational/</guid>
+      <description>by Bryan Ford and Rainer Böhme   Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
+    </item>
     
     <item>
       <title>Are Only Type Parameters Generic Enough for Go 2 Generics?</title>
