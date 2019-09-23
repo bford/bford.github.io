@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.2" width="77.47mm" height="28.05mm" viewBox="4175 11033 7747 2805" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
+<svg version="1.2" width="95.25mm" height="34.49mm" viewBox="4175 11033 9525 3449" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
  <defs class="ClipPathGroup">
   <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
-   <rect x="4175" y="11033" width="7747" height="2805"/>
+   <rect x="4175" y="11033" width="9525" height="3449"/>
   </clipPath>
   <clipPath id="presentation_clip_path_shrink" clipPathUnits="userSpaceOnUse">
-   <rect x="4182" y="11035" width="7732" height="2800"/>
+   <rect x="4184" y="11036" width="9506" height="3443"/>
   </clipPath>
  </defs>
  <defs>
@@ -97,16 +97,16 @@
      <g class="Page">
       <g class="Graphic">
        <g id="id3">
-        <rect class="BoundingBox" stroke="none" fill="none" x="4175" y="11033" width="7748" height="2806"/>
-        <path fill="rgb(255,215,215)" stroke="none" d="M 8049,11100 C 10207,11100 11856,11678 11856,12436 11856,13193 10207,13772 8049,13772 5890,13772 4242,13193 4242,12436 4242,11678 5890,11100 8049,11100 Z"/>
-        <path fill="none" stroke="rgb(52,101,164)" d="M 8049,11100 C 10207,11100 11856,11678 11856,12436 11856,13193 10207,13772 8049,13772 5890,13772 4242,13193 4242,12436 4242,11678 5890,11100 8049,11100 Z"/>
-        <path fill="rgb(255,245,206)" stroke="none" d="M 6746,11434 C 8090,11434 9117,11868 9117,12436 9117,13004 8090,13438 6746,13438 5401,13438 4375,13004 4375,12436 4375,11868 5401,11434 6746,11434 Z"/>
-        <path fill="none" stroke="rgb(52,101,164)" d="M 6746,11434 C 8090,11434 9117,11868 9117,12436 9117,13004 8090,13438 6746,13438 5401,13438 4375,13004 4375,12436 4375,11868 5401,11434 6746,11434 Z"/>
-        <path fill="rgb(232,242,161)" stroke="none" d="M 5610,11768 C 6235,11768 6712,12057 6712,12436 6712,12814 6235,13104 5610,13104 4985,13104 4508,12814 4508,12436 4508,12057 4985,11768 5610,11768 Z"/>
-        <path fill="none" stroke="rgb(52,101,164)" d="M 5610,11768 C 6235,11768 6712,12057 6712,12436 6712,12814 6235,13104 5610,13104 4985,13104 4508,12814 4508,12436 4508,12057 4985,11768 5610,11768 Z"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="334px" font-weight="400"><tspan class="TextPosition" x="5083" y="12365"><tspan fill="rgb(0,0,0)" stroke="none">Honest</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="334px" font-weight="400"><tspan class="TextPosition" x="4740" y="12739"><tspan fill="rgb(0,0,0)" stroke="none">Participants</tspan></tspan></tspan></text>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="334px" font-weight="400"><tspan class="TextPosition" x="7138" y="12203"><tspan fill="rgb(0,0,0)" stroke="none">Rational</tspan></tspan><tspan class="TextPosition" x="6878" y="12577"><tspan fill="rgb(0,0,0)" stroke="none">Participants</tspan></tspan><tspan class="TextPosition" x="7099" y="12915"><tspan font-size="297px" font-style="italic" fill="rgb(0,0,0)" stroke="none">(“greedy”)</tspan></tspan></tspan></text>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="334px" font-weight="400"><tspan class="TextPosition" x="9555" y="11978"><tspan fill="rgb(0,0,0)" stroke="none">Byzantine</tspan></tspan><tspan class="TextPosition" x="9416" y="12352"><tspan fill="rgb(0,0,0)" stroke="none">Participants</tspan></tspan><tspan class="TextPosition" x="9694" y="12690"><tspan font-size="297px" font-style="italic" fill="rgb(0,0,0)" stroke="none">(arbitrary</tspan></tspan><tspan class="TextPosition" x="9668" y="13020"><tspan font-size="297px" font-style="italic" fill="rgb(0,0,0)" stroke="none">behavior)</tspan></tspan></tspan></text>
+        <rect class="BoundingBox" stroke="none" fill="none" x="4175" y="11033" width="9526" height="3450"/>
+        <path fill="rgb(255,215,215)" stroke="none" d="M 8938,11115 C 11591,11115 13618,11826 13618,12758 13618,13689 11591,14400 8938,14400 6284,14400 4257,13689 4257,12758 4257,11826 6284,11115 8938,11115 Z"/>
+        <path fill="none" stroke="rgb(52,101,164)" d="M 8938,11115 C 11591,11115 13618,11826 13618,12758 13618,13689 11591,14400 8938,14400 6284,14400 4257,13689 4257,12758 4257,11826 6284,11115 8938,11115 Z"/>
+        <path fill="rgb(255,245,206)" stroke="none" d="M 7335,11526 C 8988,11526 10251,12059 10251,12758 10251,13456 8988,13990 7335,13990 5683,13990 4421,13456 4421,12758 4421,12059 5683,11526 7335,11526 Z"/>
+        <path fill="none" stroke="rgb(52,101,164)" d="M 7335,11526 C 8988,11526 10251,12059 10251,12758 10251,13456 8988,13990 7335,13990 5683,13990 4421,13456 4421,12758 4421,12059 5683,11526 7335,11526 Z"/>
+        <path fill="rgb(232,242,161)" stroke="none" d="M 5940,11936 C 6708,11936 7295,12292 7295,12758 7295,13223 6708,13579 5940,13579 5171,13579 4585,13223 4585,12758 4585,12292 5171,11936 5940,11936 Z"/>
+        <path fill="none" stroke="rgb(52,101,164)" d="M 5940,11936 C 6708,11936 7295,12292 7295,12758 7295,13223 6708,13579 5940,13579 5171,13579 4585,13223 4585,12758 4585,12292 5171,11936 5940,11936 Z"/>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="411px" font-weight="400"><tspan class="TextPosition" x="5291" y="12670"><tspan fill="rgb(0,0,0)" stroke="none">Honest</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="411px" font-weight="400"><tspan class="TextPosition" x="4869" y="13130"><tspan fill="rgb(0,0,0)" stroke="none">Participants</tspan></tspan></tspan></text>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="411px" font-weight="400"><tspan class="TextPosition" x="7818" y="12472"><tspan fill="rgb(0,0,0)" stroke="none">Rational</tspan></tspan><tspan class="TextPosition" x="7498" y="12932"><tspan fill="rgb(0,0,0)" stroke="none">Participants</tspan></tspan><tspan class="TextPosition" x="7771" y="13347"><tspan font-size="365px" font-style="italic" fill="rgb(0,0,0)" stroke="none">(“greedy”)</tspan></tspan></tspan></text>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="411px" font-weight="400"><tspan class="TextPosition" x="10789" y="12195"><tspan fill="rgb(0,0,0)" stroke="none">Byzantine</tspan></tspan><tspan class="TextPosition" x="10619" y="12655"><tspan fill="rgb(0,0,0)" stroke="none">Participants</tspan></tspan><tspan class="TextPosition" x="10961" y="13071"><tspan font-size="365px" font-style="italic" fill="rgb(0,0,0)" stroke="none">(arbitrary</tspan></tspan><tspan class="TextPosition" x="10929" y="13476"><tspan font-size="365px" font-style="italic" fill="rgb(0,0,0)" stroke="none">behavior)</tspan></tspan></tspan></text>
        </g>
       </g>
      </g>
