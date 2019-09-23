@@ -360,7 +360,8 @@ than the other participants in <em>S</em> believe it to be &ndash;
 because only <em>P</em> knows that (and precisely when)
 it will violate <em>S</em>&rsquo;s design assumptions
 to create that higher failure probability.
-Furthermore, even if <em>P</em>&rsquo;s attack fails, and is quickly detected and patched,
+Furthermore, even if <em>P</em>&rsquo;s attack fails,
+and the vulnerability it exploits is quickly detected and patched,
 <em>P</em> may still profit marginally from the market&rsquo;s adjustment
 to a realization that <em>S</em>&rsquo;s failure probability was (even temporarily)
 higher than most of <em>S</em>&rsquo;s participants thought it was.</p>
@@ -405,9 +406,9 @@ But this argument falls apart if the attack allows the large stakeholder
 to reap rewards outside the attacked system,
 e.g., by defrauding exchanges or selling <em>S</em> short in other systems.
 Such attacks on cryptocurrencies have been predicted before as
-<a href="https://www.econinfosec.org/archive/weis2013/papers/KrollDaveyFeltenWEIS2013.pdf">Goldfinger attacks</a>
-and
-<a href="https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final17.pdf">hostile blockchain takeovers</a>.</p>
+<a href="https://www.econinfosec.org/archive/weis2013/papers/KrollDaveyFeltenWEIS2013.pdf">Goldfinger attacks</a>,
+<a href="https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final17.pdf">hostile blockchain takeovers</a>, and
+<a href="https://eprint.iacr.org/2019/775.pdf">pay-to-win attacks</a>.</p>
 
 <p>For most practical systems,
 we do not even know if they are incentive compatible
@@ -419,9 +420,12 @@ deliver negative results.
 Many attacks against specific cryptocurrency system designs
 are known to be profitable in expectation,
 such as
+<a href="https://www.avivz.net/pubs/12/Bitcoin_EC0212.pdf">transaction withholding</a>,
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2407834">empty block mining</a>,
 <a href="https://www.cs.cornell.edu/~ie53/publications/btcProcFC.pdf">selfish mining</a>,
+<a href="http://webee.technion.ac.il/people/ittay/publications/btcPoolsSP15.pdf">block withholding</a>,
 <a href="https://www.cs.umd.edu/~kartik/papers/5_stubborn_eclipse.pdf">stubborn mining</a>,
-<a href="https://arxiv.org/pdf/1402.1718/">block withholding</a>,
+<a href="https://syssec.kaist.ac.kr/pub/2017/kwon_ccs_2017.pdf">fork after withholding</a>,
 <a href="http://www.cs.umd.edu/~jkatz/papers/whale-txs.pdf">whale attacks</a>,
 and other
 <a href="https://eprint.iacr.org/2019/775.pdf">pay-to-win attacks</a>.
@@ -508,12 +512,12 @@ either to close the system and require strong identities and police protection,
 or else secure the system against arbitrary Byzantine behavior,
 thereby rendering rationality assumptions redundant and useless for security.</p>
 
-<p><center><i>
+<blockquote><center><i>
 We wish to thank Jeff Allen, Ittay Eyal,
 Damir Filipovic, Alexander Lipton, Andrew Miller,
 and Haoqian Zhang
 for helpful comments on early drafts of this post.
-</i></center></p>
+</i></center></blockquote>
 
 
 
