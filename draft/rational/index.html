@@ -42,15 +42,18 @@
   <h1>Rationality is Self-Defeating in Permissionless Systems</h1>
   
 
-<p><i>
+<blockquote>
+<i>
 by <a href="https://bford.info">Bryan Ford</a> and
 <a href="https://informationsecurity.uibk.ac.at/people/rainer-boehme/"
     >Rainer Böhme</a>
-</i></p>
+</i>
+</blockquote>
 
 <p>Many blockchain and cryptocurrency fans seem to prefer
-building and analyzing decentralized systems in a rational (&ldquo;greedy behavior&rdquo;)
-rather than a Byzantine (&ldquo;arbitrary behavior&rdquo;) failure model.
+building and analyzing decentralized systems
+in a rational or &ldquo;greedy behavior&rdquo; failure model,
+rather than a Byzantine or &ldquo;arbitrary behavior&rdquo; failure model.
 Many of the same blockchain and cryptocurrency fans
 also like open, permissionless systems like Bitcoin and Ethereum,
 which anyone can join and participate
@@ -61,7 +64,7 @@ do not seem to realize, however,
 is that rationality assumptions are self-defeating
 in open permissionless systems with weak identities.
 A fairly simple metacircular argument &ndash;
-kind of a
+a kind of
 &ldquo;<a href="https://en.wikipedia.org/wiki/Gödel%27s_incompleteness_theorems"
     >Gödel&rsquo;s incompleteness theorem</a> for rationality&rdquo; &ndash;
 shows that for any system <em>S</em> that makes
@@ -125,10 +128,11 @@ and hence by definition represents the strongest possible adversary.</p>
 <em>all</em> participants being Byzantine,
 but this appears fundamentally impossible.
 We therefore in practice have to make threshold security assumptions,
-such as that over two-thirds of the participants are honest
-in classic Byzantine consensus protocols,
-or in Bitcoin,
-that the participants controlling over half the hashpower are well-behaved.</p>
+such as
+that over two-thirds of the participants
+in classic Byzantine consensus protocols are honest,
+or that the participants controlling over half the hashpower
+in Bitcoin are well-behaved.</p>
 
 <p>Even with threshold assumptions, however,
 building systems that resist Byzantine behavior is extremely difficult,
@@ -200,7 +204,8 @@ we cannot reasonably expect police or governments to protect <em>S</em> from att
 even if they wanted to and considered it their job,
 they would not be able to find or discipline a smart rational attacker
 who might be attacking from anywhere around the globe,
-especially a country with weak international agreements and extradition rules.
+especially from a country
+with weak international agreements and extradition rules.
 Thus, <em>S</em> must &ldquo;stand on its own&rdquo;,
 by successfully either withstanding or disincentivizing attacks
 coming from anywhere.
@@ -300,7 +305,7 @@ Assumption 3 above guarantees the existence of such a behavioral strategy,
 unless <em>S</em>&rsquo;s rationality assumptions were in fact redundant and worthless.
 <em>P</em> must merely be clever enough to find and implement such a strategy.
 It is possible this strategy might first require <em>P</em>
-to pretend to be a well-behaved participant of <em>S</em> for a while,
+to pretend to be one or more well-behaved participants of <em>S</em> for a while,
 to build up the necessary reputation or otherwise get correctly positioned
 in <em>S</em>&rsquo;s state space;
 a bit of patience and persistence on <em>P</em>&rsquo;s part will satisfy this requirement.
@@ -419,13 +424,11 @@ in the form of
     >hostile blockchain takeovers</a>,
 and out-of-band variants of
 <a href="https://eprint.iacr.org/2019/775.pdf">pay-to-win attacks</a>.
-All these attacks have been presented as challenges
-that call for better engineering
-with the prospect of mitigating them in future systems.
+All these attacks are specific instances of our argument.
+They have been presented in the literature as open yet solvable challenges.
 We are not aware, however,
 of any prior attempt to summarize the lessons learned
-from these instances of our argument
-and formulate a more general impossibility statement.</p>
+and formulate a general impossibility statement.</p>
 
 <p>For most practical systems,
 we do not even know if they are incentive compatible
@@ -461,11 +464,12 @@ financial markets on derivatives of a system <em>S</em> mature in the external w
 (e.g., <em>S&rsquo;</em>)
 as <em>S</em> grows and becomes more relevant.
 So in some sense, systems built on the rationality assumption
-are temporarily more secure only until they are eaten by their own success.
+are temporarily more secure only until they become fat enough targets
+to be eaten by their own success.
 We can see this effect, for example, in the growing and
 increasingly liquid market for hash power,
 which effectively thwarts
-<a href="https://bitcoin.org/bitcoin.pdf">Satoshi’s</a>
+<a href="https://bitcoin.org/bitcoin.pdf">Nakamoto’s</a>
 (<a href="https://link.springer.com/chapter/10.1007/3-540-48071-4_10">or Dwork’s</a>)
 rule of thumb that the ratio of processors to individuals
 varies in a small band.
@@ -530,9 +534,9 @@ thereby rendering rationality assumptions redundant and useless for security.</p
 
 <blockquote><center><i>
 We wish to thank Jeff Allen, Ittay Eyal,
-Damir Filipovic, Alexander Lipton, Andrew Miller,
+Damir Filipovic, Patrik Keller, Alexander Lipton, Andrew Miller,
 and Haoqian Zhang
-for helpful comments on early drafts of this post.
+for helpful feedback on early drafts of this post.
 </i></center></blockquote>
 
 
