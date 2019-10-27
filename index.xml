@@ -80,7 +80,7 @@
       <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2019/09/23/rational/</guid>
-      <description>by Bryan Ford and Rainer Böhme   Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
+      <description>by Bryan Ford and Rainer Böhme &amp;mdash; PDF preprint version available   Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
     </item>
     
     <item>
@@ -490,12 +490,41 @@ In the Rheingarten.    &amp;nbsp;</description>
     </item>
     
     <item>
+      <title>Delimited Text and Binary Syntax</title>
+      <link>https://bford.info/draft/delimited-syntax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/delimited-syntax/</guid>
+      <description>or Composable Text/Binary Syntax (CTS/CBS)?
+Goals:
+ Text format self-describing and human-readable Binary format for compactness and efficiency  Either self-describing or schema-dependent  Easy cross-conversion between text and binary formats  Easy for schemas to define both text and binary equivalents at once  Streamable: encoder can start sending long composites before knowing length Embeddable:  for embeddability, see for example JSON Schema&amp;rsquo;s desire to be able to embed arbitrary non-JSON data with a MIME Media Type: https://json-schema.</description>
+    </item>
+    
+    <item>
       <title>Dresden</title>
       <link>https://bford.info/album/2007/0622-Dresden/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/album/2007/0622-Dresden/</guid>
       <description>Dresden June 21-28, 2007  The City   &amp;nbsp; Dresden&#39;s &#34;Little Louvre&#34; Museum   &amp;nbsp;  &amp;nbsp;  The old city (Altstadt)   &amp;nbsp; Odd little artworks lurk in unexpected places   &amp;nbsp;   &amp;nbsp;  After a bit of rain   &amp;nbsp;  Sunset over the Elbe  Hiking near Schmilka (On the Elbe, within sight of the Czech border.)      A climber&#39;s paradise, looks like.</description>
+    </item>
+    
+    <item>
+      <title>Efficient Stream Embedding with Composable Binary Encoding (CBE)</title>
+      <link>https://bford.info/draft/cbe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/cbe/</guid>
+      <description>An old problem in data format design is embedding an arbitrary variable-length byte sequence in a longer one, so that a decoder can tell unambiguously where the embedded string ends. This problem is ubiquitous in the design of machine-readable data formats, which often hierarchically compose large and complex data streams from sequences of nested substrings and strings using simpler encodings. Embedding challenges include encoding and decoding simplicity, keeping space overheads low and predictable for both small and large embedded strings, and allowing for stream processing in which an encoder must start writing an embedded sequence before knowing how long it will be.</description>
+    </item>
+    
+    <item>
+      <title>Escaping Escaping Hell with Delimited Resource Identifiers</title>
+      <link>https://bford.info/draft/dri/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/dri/</guid>
+      <description>Uniform resource identifiers or URIs were a genuinely great idea and have rightfully become the ubiquitous way to &amp;ldquo;name things&amp;rdquo; on the Internet. As the basis of web addresses or URLs, they are human readable (to varying degrees), manually transcribable, cut-and-pasteable, and have proven incrementally extensible to a vast multitude of schemes. Their later extension to internationalized resource identifiers or IRIs allow people whose native language is not English to type, and view, non-ASCII Unicode characters in web addresses.</description>
     </item>
     
     <item>

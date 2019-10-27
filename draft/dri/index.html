@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Escaping Escaping Hell with Delimited Resource Identifiers &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Escaping Escaping Hell with Delimited Resource Identifiers</h1>
+  
+
+<p><a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">Uniform resource identifiers</a>
+or URIs
+were a genuinely great idea and have rightfully become the ubiquitous way
+to &ldquo;name things&rdquo; on the Internet.
+As the basis of web addresses or
+<a href="https://en.wikipedia.org/wiki/URL">URLs</a>,
+they are human readable (to varying degrees),
+manually transcribable,
+cut-and-pasteable,
+and have proven incrementally extensible to a
+<a href="https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">vast multitude of schemes</a>.
+Their later extension to
+<a href="https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier">internationalized resource identifiers</a>
+or IRIs
+allow people whose native language is not English
+to type, and view, non-ASCII Unicode characters in web addresses.
+URIs and IRIs have two major usability flaws, however.</p>
+
+<p>First, you
+<a href="https://blog.codinghorror.com/the-problem-with-urls/">can&rsquo;t reliably tell where they end</a>
+in surrounding text.
+Suppose I type or paste into an E-mail:</p>
+
+<pre><code>    My site is https://bford.info/index.html.
+</code></pre>
+
+<p>Rich text editors often notice the URI
+and helpfully turn it into a hyperlink &ndash;
+but is the final period part of the link or the surrounding sentence?
+It could be either, since periods are valid and
+<a href="https://tools.ietf.org/html/rfc3986#section-2.3">unreserved</a> URI characters,
+and a wrong heuristic guess yields a broken link.
+Suppose I try to &ldquo;armor&rdquo; the URI using parentheses, like this:</p>
+
+<pre><code>    See my website (https://bford.info/).
+</code></pre>
+
+<p>This doesn&rsquo;t really help because parentheses are valid in URIs too,
+and heavily used by Wikipedia for example &ndash; as in
+this cruel joke of a URI:</p>
+
+<pre><code>    https://en.wikipedia.org/wiki/URL_(disambiguation)
+</code></pre>
+
+<p><a href="https://tools.ietf.org/html/rfc3986#appendix-C">In an appendix</a>,
+the URI specification recommends delimiting URIs with angle brackets,
+as in &lsquo;<code>&lt;https://bford.info/&gt;</code>&rsquo;.
+But how many users are even aware of this suggestion,
+let alone consistently follow it?</p>
+
+<p>A second usability major flaw is that URIs are not cleanly <em>nestable</em>
+without sucking users and developers alike into what I call Escaping Hell.
+When we need to compose a URI that contains other URIs &ndash;
+or bits of text with any other nontrivial syntactic structure &ndash;
+we must <em>escape</em> reserved or forbidden characters,
+by <a href="https://en.wikipedia.org/wiki/Percent-encoding"><em>percent-encoding</em></a>
+the embedded string into an ugly, obfuscated, unfriendly mess
+like &lsquo;<code>https%3A%2F%2Fbford.info%2F</code>&rsquo;.</p>
+
+<p>This post suggests a possible fix to both flaws
+and a path out of Escaping Hell,
+via an incrementally-deployable alternative syntax
+I call <em>delimited resource identifiers</em> or DRIs.
+In essence, we simply rewrite any URI of the form
+&lsquo;<tt><i>scheme</i><code>:</code><i>body</i></tt>&rsquo; into an alternative DRI syntax of the form
+&lsquo;<tt><i>scheme</i><code>[</code><i>body</i><code>]</code></tt>&rsquo;.
+Any URI like &lsquo;<code>https://bford.info/</code>&rsquo; has
+an equivalent DRI syntax like &lsquo;<code>https[//bford.info/]</code>&rsquo;,
+and vice versa.
+(&ldquo;DRI&rdquo; may be pronounced &ldquo;dee-are-aye&rdquo; if you&rsquo;re uptight,
+or just &ldquo;durry&rdquo; &ndash; like in &ldquo;durable furry&rdquo; &ndash; if you&rsquo;re less so.)</p>
+
+<p>The key benefit of this alternative syntax is that
+any valid DRI can be embedded into any other DRI <em>verbatim</em>,
+via copy-and-paste or manual transcription for example,
+with no mangling.
+For example, a query to translate my home page
+might look like
+&lsquo;<code>https[//translator.org/web?lang=fr;page=https[//bford.info/]]</code>&rsquo;.
+Just copy the target DRI into the query field and we&rsquo;re done.
+There are some details and caveats, of course, but we&rsquo;ll get to them.</p>
+
+<p>Just as
+<a href="https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier">IRIs</a>
+already liberalized resource identifiers to admit non-ASCII characters,
+DRIs similarly liberalize resource identifiers to allow
+<em>all</em> valid Unicode characters apart from spaces and control codes &ndash;
+provided only that unescaped square brackets match up in pairs.
+Any DRI may be straightforwardly converted to an equivalent URI or IRI
+and vice versa.
+New applications, protocols, formats, and versions
+can start accepting DRIs from users
+alongside URIs and IRIs while preserving backward compatibility
+through automatic conversions.
+Let&rsquo;s de-obfuscate the web.</p>
+
+<h2 id="welcome-to-escaping-hell">Welcome to Escaping Hell</h2>
+
+<p>Since the end-finding flaw mentioned above is simple and well-known,
+let&rsquo;s focus a bit more on the Escaping Hell problem.</p>
+
+<p>We often wish to embed URIs within URIs for many reasons.
+Many web-based services operate on other web pages,
+for example,
+such as
+<a href="https://archive.org/web/">archival</a>,
+<a href="http://itools.com/tool/google-translate-web-page-translator">translation</a>,
+<a href="https://www.webpagetest.org">performance testing</a>,
+<a href="https://validator.w3.org">syntax checking</a>, and
+<a href="https://www.brokenlinkcheck.com">link checking</a>.
+Such services need to accept URIs containing arbitrary other URIs,
+either in their pathname components
+(e.g., &lsquo;<tt><code>https://archiver.org/</code><i>date</i><code>/</code><i>target-URI</i></tt>&rsquo;),
+or in query strings
+(e.g., &lsquo;<tt><code>https://checker.org/check?page=</code><i>target-URI</i></tt>&rsquo;).
+But because the outer URI treats many characters as special,
+those characters must be
+<a href="https://en.wikipedia.org/wiki/Escape_character"><em>escaped</em></a> or
+<a href="https://en.wikipedia.org/wiki/Percent-encoding"><em>percent-encoded</em></a>
+in the nested URI.
+Entering a simple target URI like &lsquo;<code>https://bford.info/</code>&lsquo;
+into the <a href="https://www.w3.org">W3C</a>&rsquo;s official
+<a href="https://validator.w3.org">markup validation service</a>,
+for example,
+mangles the target URI into this
+obfuscated percent-encoded query string:</p>
+
+<pre><code>    https://validator.w3.org/nu/?doc=https%3A%2F%2Fbford.info%2F
+</code></pre>
+
+<p>So much for URIs being &ldquo;human-readable&rdquo;,
+at least in these contexts.
+Of course interactive web users don&rsquo;t need to do this mangling themselves
+because the service&rsquo;s front-page web form tooling does it for them,
+and developers who generate queries to the service programmatically
+are expected to percent-encode the target URI as part of the process.
+This is why we have managed to slog through Escaping Hell so far.</p>
+
+<p>But from a usability perspective,
+it&rsquo;s sad that target URIs
+must become nearly unrecognizable when embedded into other URIs.
+It&rsquo;s also sad
+that less-sophisticated users can&rsquo;t reasonably be expected to
+write or edit such a query string manually,
+or to copy-and-paste a target URI into a query field of another URI template,
+without thoroughly understanding URI syntax and poring over an
+<a href="https://en.wikipedia.org/wiki/ASCII">ASCII table</a>.</p>
+
+<p>Besides embedded URIs,
+many other bits of text we often want to embed
+in URI pathname components or queries
+must commonly be mangled via percent-encoding,
+because they contain characters that are either <em>reserved</em>
+or forbidden entirely within URIs.
+For example, a query to a &ldquo;calculator&rdquo; service to evaluate
+a simple expression like &lsquo;<code>6/2+1</code>&lsquo;
+gets mangled into a query like &lsquo;<code>https://calc.org/eval?expr=6%2F2%2B1</code>&rsquo;.
+A query for a C++ or Java-style parameterized type like &lsquo;<code>Box&lt;Integer&gt;</code>&lsquo;
+gets mangled like &lsquo;<code>https://dev-docs.org/search?type=Box%3CInteger%3E</code>&rsquo;.
+A query involving a Unix-style pathname like &lsquo;<code>/a/b/c</code>&lsquo;
+gets mangled like &lsquo;<code>https://unarchiver.org/extract?path=%2Fa%2Fb%2Fc</code>&rsquo;.</p>
+
+<p>Experience suggests that one of the most critical components of URIs &ndash;
+the <em>authority</em> field containing the host name &ndash;
+really &ldquo;wants&rdquo; the flexibility and modularity of an embedded URI.
+The authority component
+internally needs multiple &ldquo;schemes&rdquo; to name hosts in different ways,
+such as DNS names like &lsquo;<code>bford.info</code>&lsquo;
+versus IP addresses like &lsquo;<code>1.2.3.4</code>&rsquo;.
+It has non-trivial internal syntactic structure,
+such as optional &lsquo;<tt><i>user</i>@</tt>&rsquo; prefix
+and &lsquo;<tt>:<i>port</i></tt>&rsquo; suffix.
+It has repeatedly proven to need extensibility,
+to handle <a href="https://en.wikipedia.org/wiki/IPv6">IPv6</a> addresses
+like &lsquo;<code>[aaaa:bbbb:cccc:dddd::]</code>&rsquo; for example.
+In short, the authority component of the base URI syntax has grown
+<a href="https://noncombatant.org/2017/11/07/problems-of-urls/">complex and syntaxy</a>
+with many details and variations,
+exacerbating
+<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=661005">security issues</a>.
+Supporting different schemes, internal structure, and extensibility
+are precisely what the whole URI naming paradigm is supposed to handle &ndash;
+but it <em>can&rsquo;t</em> do so for authority naming because of broken syntax.</p>
+
+<p>Extending IPv6 addresses to support
+<a href="https://tools.ietf.org/html/rfc4007">zone indexes</a>
+like &lsquo;<code>fe80::1234%1</code>&rsquo; or &lsquo;<code>fe80::1234%eth0</code>&lsquo;
+created a further syntactic conflict between this use of
+the percent (&lsquo;<code>%</code>&rsquo;) character
+and its use in URIs for percent-encoded escapes.
+This conflict then required
+<a href="https://tools.ietf.org/html/rfc6874">a whole additional RFC</a>
+just to say that the percent sign in a zoned IPv6 address
+needs to be escaped as &lsquo;<code>%25</code>&rsquo; in a URI host field,
+producing outstandingly-clear URIs like
+&lsquo;<code>http://[fe80::1234%251]/</code>&rsquo;. (Is the zone index 1 or 251?)</p>
+
+<p>The <a href="https://multiformats.io/multiaddr/">multiaddr</a> project,
+while well-intentioned,
+threatens to dig us even deeper into Escaping Hell
+as we try to figure out how to shoehorn a pathname-like address
+like &lsquo;<code>/ip4/127.0.0.1/udp/9090/quic</code>&rsquo;
+into the hostname field of a URI.
+How would a parser figure out what&rsquo;s what in a string like
+&lsquo;<code>http://ip4/127.0.0.1/udp/9090/quic/index.html</code>&rsquo;?
+Alternatively, how is a <em>user</em> to understand an escaped embedding like
+&lsquo;<code>http://%2Fip4%2f127.0.0.1%2fudp%2f9090%2fquic/index.html</code>&rsquo;?
+Current multiaddr examples suggest restructuring URIs
+to move the scheme or protocol name
+into the multiaddr itself, as in
+&lsquo;<code>/ip4/127.0.0.1/tcp/80/http/baz.jpg</code>&rsquo; &ndash;
+but is such a fundamental reworking of how URIs are structured and parsed
+really going to fly on the established web?</p>
+
+<h2 id="delimited-resource-identifiers">Delimited Resource Identifiers</h2>
+
+<p>As a composition-friendly and backward-compatible approach
+to making URIs more usable,
+I propose <em>delimited resource identifiers</em> or DRIs.
+To a first approximation,
+a DRI merely replaces the colon (&lsquo;<code>:</code>&rsquo;) following the scheme name
+in a URI or IRI with an open bracket (&lsquo;<code>[</code>&rsquo;),
+and adds a close bracket (&lsquo;<code>]</code>&rsquo;) to the end.
+The URI &lsquo;<code>https://bford.info/</code>&rsquo; is equivalent
+to the DRI &lsquo;<code>https[//bford.info/]</code>&rsquo;, for example.</p>
+
+<p>Everything within a DRI&rsquo;s outermost pair of square brackets
+we will call its <em>body</em>,
+i.e., &lsquo;<code>//bford.info/</code>&rsquo; in this example.
+A DRI may be viewed abstractly as a
+<a href="https://en.wikipedia.org/wiki/Attribute–value_pair">key/value pair</a>
+whose scheme name is the key
+and whose body is the value.</p>
+
+<p>This use of matched brackets
+gives DRIs two fundamental advantages over URIs.</p>
+
+<p>First, DRIs are cleanly <em>self-delimiting</em>,
+meaning it is always clear and unambiguous where any valid DRI ends
+when embedded in surrounding text such as a document.
+As mentioned above, if
+&lsquo;<code>My site is https://bford.info/index.html.</code>&rsquo;
+appears in running text,
+it is ambiguous and only heuristically guessable
+whether the final period is part of the URI
+or the surrounding English sentence.
+If I enter or paste an equivalent DRI like
+&lsquo;<code>My site is https[//bford.info/index.html].</code>&rsquo;, however,
+there is no ambiguity.</p>
+
+<p>The real power of DRIs, however, comes from their <em>nestability</em>.
+Provided that square brackets balance,
+it is syntactically unproblematic for a valid DRI to appear
+anywhere in the body of another DRI,
+without requiring escaping or percent-encoding.
+To form a DRI to a web service that operates on other web pages,
+such as
+<a href="http://itools.com/tool/google-translate-web-page-translator">translation</a> and
+<a href="https://validator.w3.org">checking</a> services for example,
+a user merely needs to copy-and-paste the target NRL
+into a suitable template to form
+a clean and readable query NRL such as:</p>
+
+<pre><code>    https[//validator.w3.org/nu/?doc=https[//bford.info/]]
+</code></pre>
+
+<p>This property extends to multiple nesting levels,
+with no percent-encoding or progressive text expansion for successive levels.
+If the web page checker I wish to use is available only in English
+and I would like to translate its results to French, for example,
+then I currently end up with a delightfully-obfuscated URI
+with two levels of percent-encoding, like this:</p>
+
+<pre><code>    https://translate.google.com/translate?hl=en&amp;sl=auto&amp;tl=fr&amp;u=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fbford.info%252F
+</code></pre>
+
+<p>With DRIs, in contrast,
+such a multi-level query becomes both shorter and more comprehensible:</p>
+
+<pre><code>    https[//translate.google.com/translate?hl=en&amp;sl=auto&amp;tl=fr&amp;u=https[//validator.w3.org/nu/?doc=https[//bford.info/]]]
+</code></pre>
+
+<p>Nestability is not limited to query strings, of course,
+but may also be used in other DRI components.
+A web-based service for browsing
+<a href="https://en.wikipedia.org/wiki/Zip_(file_format)">Zip files</a>
+and other archives hosted on other websites, for example,
+might wish to treat the target DRI as a pathname component
+in the service&rsquo;s DRI.
+To use the service <code>unarchiver.org</code> to open a Zip file hosted at
+<code>https[//bford.info/stuff.zip]</code>
+and browse into the subdirectory <code>/dest/path</code> within the archive, for example,
+we might use a DRI like this:</p>
+
+<pre><code>    https[//unarchiver.org/unzip/https[//bford.info/stuff.zip]/dest/path/]
+</code></pre>
+
+<p>Finally, the ugly and problematic need for the &ldquo;base&rdquo; URI format
+to know about IP addresses and port number syntax in their many variants
+can be deprecated and replaced with use of suitable embedded DRIs
+in authority and host fields.
+For example,
+&lsquo;<code>http://1.2.3.4/</code>&rsquo; might be deprecated in favor of &lsquo;<code>http[//ip4[1.2.3.4]/]</code>&rsquo;,
+and &lsquo;<code>http[//[aaaa:bbbb:cccc:dddd::]/]</code>&lsquo;
+might become &lsquo;<code>http://ip6[aaaa:bbbb:cccc:dddd::]/</code>&rsquo;,
+each case generically using a nested DRI instead of special-case base syntax.</p>
+
+<p>This could in principle be extended even to DNS host names
+via the already-existing <a href="https://tools.ietf.org/html/rfc4501">dns URI scheme</a>,
+so that &lsquo;<code>https://bford.info/</code>&rsquo; becomes
+&lsquo;<code>https[//dns[bford.info]/]</code>&rsquo;.
+The fact that DNS names are by far the common case on the web, however,
+probably justifies retaining their special-case base syntax.</p>
+
+<h2 id="percent-encoding-in-dris">Percent Encoding in DRIs</h2>
+
+<p>DRI syntax reduces but does not eliminate the need for percent-encoding,
+which presents some manageable subtleties.
+Embedding spaces or raw binary data containing NUL (zero) bytes
+and other control characters into components, for example,
+still requires percent-encoding in DRIs exactly as in URIs.
+In addition, any <em>unmatched</em> square brackets in a DRI&rsquo;s body
+must be percent-encoded.
+A query to search for a literal open bracket
+(&lsquo;<code>[</code>&rsquo;, ASCII code 0x5B) on a target web page, for example,
+must still be percent-encoded like this:</p>
+
+<pre><code>    https[//search.org/page?string=%5B;page=https[//bford.info/]]
+</code></pre>
+
+<p>Within any <em>inner</em> pair of square brackets nested within a DRI&rsquo;s body,
+all reserved URI characters including the percent character (&lsquo;<code>%</code>&rsquo;)
+lose their special meanings, becoming ordinary literal characters
+from the perspective of the outer DRI,
+provided only that brackets match up.
+For example, while the DRI
+&lsquo;<code>https[//bford.info/~user/]</code>&rsquo; is equivalent to
+&lsquo;<code>https[//bford.info/%7Euser/]</code>&rsquo;,
+the following two DRIs are <em>not</em> equivalent
+because they represent queries for different <em>literal</em> query strings
+(which happen to be DRIs in this case but need not necessarily be):</p>
+
+<pre><code>    https[//checker.org/web?page=https[//bford.info/~user/]]
+    https[//checker.org/web?page=https[//bford.info/%7Euser/]]
+</code></pre>
+
+<p>The inner bracket pair essentially quotes special characters
+such as percent signs,
+protecting them as literals and ensuring that they are &ldquo;owned&rdquo;
+exclusively by the inner DRI.</p>
+
+<p>For the same reason, the percent character denoting an IPv6 zone index
+need not and <em>must</em> not be percent-encoded in a DRI&rsquo;s host field,
+in contrast with
+<a href="https://tools.ietf.org/html/rfc6874">standard practice for URIs</a>.
+For example, the IPv6 address
+&lsquo;<code>fe80::1234%eth0</code>&rsquo; appears in a URI percent-encoded as
+&lsquo;<code>http://[fe80::1234%25eth0]</code>&rsquo;,
+but in a DRI becomes
+&lsquo;<code>http[//ip6[fe80::1234%eth0]]</code>&rsquo;.
+The inner percent sign is none of the (outer) DRI&rsquo;s business
+because it is protected by the nested square brackets.</p>
+
+<p>Because nested brackets make percent signs literal characters
+from the outer DRI&rsquo;s perspective,
+if a query string or other DRI component needs to use percent-encoding
+to represent control characters that occur <em>between</em>
+an inner literal bracket pair,
+then those bracket characters must be percent-encoded too.
+For example, to encode a search query for the three-character string
+(&lsquo;<code>[</code>&rsquo;,NUL,&lsquo;<code>]</code>&rsquo;),
+all three characters must be percent-encoded as
+&lsquo;<code>%5B%00%5D</code>&rsquo;.
+Percent-encoding only the inner NUL byte as
+&lsquo;<code>[%00]</code>&rsquo;
+would yield a search for the 5-character literal string
+&lsquo;<code>[%00]</code>&rsquo;,
+because the brackets protect the percent sign as a literal.</p>
+
+<p>In URIs, only the
+<a href="https://tools.ietf.org/html/rfc3986#section-2.3">unreserved characters</a>
+are considered equivalent in their percent-encoded and unencoded forms
+and thus may be
+<a href="https://tools.ietf.org/html/rfc3986#section-2.4">coded or encoded at any time</a>.
+In DRIs, bracketed substrings nested within the DRI&rsquo;s body
+may also be percent-encoded and decoded at any time,
+provided that the substring contains no forbidden characters,
+and provided that <em>all reserved characters</em> in the substring including brackets
+are encoded or decoded together.
+For example, the substring &lsquo;<code>[a[b]c]</code>&rsquo; in a DRI&rsquo;s body
+is equivalent to &lsquo;<code>%5Ba%5Bb%5Dc%5D</code>&rsquo;,
+but is <em>not</em> equivalent to &lsquo;<code>[a%5Bb%5Dc]</code>&rsquo; or &lsquo;<code>%5Ba[b]c%5D</code>&rsquo;.
+Further, this equivalence applies only to complete substrings nested
+<em>immediately</em> within the DRI&rsquo;s body, not to substrings more deeply nested.</p>
+
+<p>To illustrate, because both unreserved characters
+and complete bracketed substrings may be percent-encoded and decoded in DRIs
+without changing the meaning of a DRI,
+the following URI and three DRIs are all equivalent:</p>
+
+<pre><code>    https://checker.org/web?page=https%5B%2F%2Fbford%2Einfo%2F%5D
+    https[//checker.org/web?page=https%5B%2F%2Fbford%2Einfo%2F%5D]
+    https[//checker.org/web?page=https%5B%2F%2Fbford.info%2F%5D]
+    https[//checker.org/web?page=https[//bford.info/]]
+</code></pre>
+
+<p>The following DRIs, however, are <em>not</em> equivalent to those above
+but represent different literal query strings:</p>
+
+<pre><code>    https[//checker.org/web?page=https[//bford%2Einfo/]]
+    https[//checker.org/web?page=https[%2F%2Fbford%2Einfo%2F]]
+</code></pre>
+
+<p>URIs and IRIs already constrain
+<a href="https://tools.ietf.org/html/rfc3986#section-3.1">scheme names</a>
+to an extremely restricted character set
+that does not include percent-encoded characters,
+and DRIs retain this rule.
+This means that percent-encoding is &ldquo;a thing&rdquo;
+only within the bracketed body of a DRI:
+percent-encodings can never appear at all
+in the schame name before the opening square bracket.</p>
+
+<h2 id="the-dri-character-set">The DRI Character Set</h2>
+
+<p>The original <a href="https://tools.ietf.org/html/rfc3986">URI format</a>
+allows only a subset of the ASCII character set to appear directly in URIs
+without percent-encoding,
+forbidding spaces and punctuation characters such as
+&lsquo;&lt;&rsquo;, &lsquo;&gt;&rsquo;, ‘&quot;’,
+&lsquo;{&rsquo;, &lsquo;}&rsquo;, &lsquo;|&rsquo;, &lsquo;&bsol;&rsquo;,
+&lsquo;^&rsquo;, and &lsquo;`&rsquo;.
+The introduction of
+<a href="https://tools.ietf.org/html/rfc3987#page-10">internationalized resource identifiers or IRIs</a>,
+which most browsers now support,
+extended the limited URI character set to allow most Unicode characters
+representable in <a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8 encoding</a> &ndash;
+but IRIs still conservatively require the above forbidden ASCII characters
+to be percent-encoded.</p>
+
+<p>The successful introduction of IRIs demonstrated empirically that
+the character set available to resource identifiers <em>can</em> be expanded
+smoothly in a backward-compatible fashion.
+In the interest of
+further extricating ourselves from Escaping Hell,
+DRIs build on the IRI experience by further liberalizing
+the allowed character set to include
+<em>all</em> valid UTF-8 characters apart from spaces and
+<a href="https://en.wikipedia.org/wiki/C0_and_C1_control_codes">control codes</a>.
+This means that DRI queries and other components
+could contain such strings as
+arithmetic expressions like &lsquo;<code>2^8</code>&rsquo;,
+logical expressions like &lsquo;<code>(x&lt;y)&amp;(y&lt;z)</code>&rsquo;,
+C++ or Java-style parameterized type like &lsquo;<code>Box&lt;Integer&gt;</code>&rsquo;,
+or even code blocks in C-like languages
+such as &lsquo;<code>{printf(&quot;hello\n&quot;);}</code>&rsquo;,
+without percent-encoding.</p>
+
+<p>The URI specification recommends
+<a href="https://tools.ietf.org/html/rfc3986#appendix-C">delimiting URIs with angle brackets in surrounding text</a>,
+which is why angle brackets were
+<a href="https://tools.ietf.org/html/rfc1738#section-2.2">defined as &ldquo;unsafe&rdquo; in the original specification</a>.
+Because this usage of angle brackets was never
+a formally required part of URL syntax,
+however,
+this recommendation was never reliably followed,
+and relatively few ordinary users even seem to be aware of it.
+DRIs never need to be delimited with surrounding angle brackets
+because DRI syntax solves the delimiting problem more reliably
+<em>within the DRI syntax itself</em>,
+via a mandatory syntactic rule (brackets must match)
+rather than an optional and easily-neglected recommendation in an appendix.
+It&rsquo;s always syntactically clear where a DRI embedded in running text ends,
+otherwise it&rsquo;s not a (valid) DRI.
+And because DRIs never need be surrounded by angle brackets in text,
+it is no longer problematic for them to <em>contain</em> unescaped angle brackets.</p>
+
+<h3 id="embedding-dris-in-popular-protocols-and-data-formats">Embedding DRIs in popular protocols and data formats</h3>
+
+<p>Further character set liberalization presents tradeoffs of course.
+Specific applications, protocols, and formats wishing to support DRIs
+will either have to support the expanded DRI character set,
+or provide their own escaping mechanisms to handle problematic characters.
+A fallback solution always available
+is simply to down-convert DRIs to traditional URIs
+for embedding in legacy formats as described later.</p>
+
+<p>Consider the common case of embedding DRIs into
+<a href="https://en.wikipedia.org/wiki/XML">XML</a> or
+<a href="https://en.wikipedia.org/wiki/HTML">HTML</a> documents, for example.
+<a href="https://stackoverflow.com/questions/7381974/which-characters-need-to-be-escaped-in-html">XML and HTML escaping rules</a>
+require literal uses of the
+angle brackets &lsquo;<code>&lt;</code>&rsquo; and &lsquo;<code>&gt;</code>&rsquo;,
+the ampersand &lsquo;<code>&amp;</code>&rsquo;,
+and sometimes single and double quotes,
+to be escaped using XML entity codes
+(&lsquo;<code>&amp;lt;</code>&rsquo;, &lsquo;<code>&amp;gt</code>&rsquo;, &lsquo;<code>&amp;amp</code>&rsquo;, etc.)
+whenever they appear in text or attributes.</p>
+
+<p>Since URIs forbid angle brackets while DRIs do not,
+embedding DRIs containing angle brackets within an XML or HTML file
+requires either percent-encoding the angle brackets in the DRI
+or escaping them at XML level using entity codes.
+This is not a fundamentally new burden, however,
+because URIs already allowed ampersand (&lsquo;<code>&amp;amp;</code>&rsquo;) characters,
+which already must be entity-coded
+in order to insert a URI into XML or HTML safely.</p>
+
+<h3 id="why-not-spaces-and-control-codes">Why not spaces and control codes?</h3>
+
+<p>We could in principle liberalize the DRI character set &ldquo;the rest of the way&rdquo;
+by allowing <em>all</em> Unicode characters including spaces and control codes.
+Just as in URIs, however,
+allowing spaces, line breaks, or tabs to be significant characters in DRIs
+would compromise the basic philosophy that resource identifiers
+should be readily transcribable.
+Resource identifiers are often long and need to be wrapped when printed;
+if spaces were significant then it would be impossible to tell
+on reading or transcription whether there were zero, one, or more spaces
+originally at the position where the DRI was wrapped.
+Allowing other control codes
+would break languages like C that have trouble with NUL bytes in strings,
+would make DRIs impossible to embed reliably in text formats like XML
+that offer no escape codes for control characters,
+and would generally seem to undermine the basic philosophy
+of resource identifiers as moderately-compact, single-line,
+and nominally human-readable strings.</p>
+
+<h3 id="why-square-brackets">Why square brackets?</h3>
+
+<p>Why do DRIs use square brackets to delimit the body,
+instead of some other matching pair of punctation characters?
+Square brackets are the only matching punctuation already in the
+<a href="https://tools.ietf.org/html/rfc3986#section-2.2">gen-delims</a> category
+used as <em>generic delimiters</em> in the base URI syntax (for IPv6 addresses),
+which means that most URI parsing software is already prepared
+to see brackets in URIs, if only rarely.
+Further, because brackets are reserved for delimiting URI base syntax components
+and are formally not allowed to appear <em>within</em> components,
+we limit the risk that particular URI schemes
+might assign conflicting uses to these characters.</p>
+
+<p>Parentheses (&lsquo;<code>(</code>&rsquo; and &lsquo;<code>)</code>&rsquo;)
+seem likely to be confused, by users and URL recognizers alike,
+with parenthetical expressions in surrounding natural-language text.
+Further, since parentheses are in the
+<a href="https://tools.ietf.org/html/rfc3986#section-2.2"><em>sub-delims</em></a> category,
+pre-existing uses in particular URI schemes may conflict
+with any new base syntax use.
+Angle brackets (&lsquo;<code>&lt;</code>&rsquo; and &lsquo;<code>&gt;</code>&rsquo;)
+and curly braces (&lsquo;<code>{</code>&rsquo; and &lsquo;<code>}</code>&rsquo;)
+were forbidden in URIs and IRIs,
+so transitioning them directly from <em>forbidden</em> to <em>required</em>
+seems like a bit of a leap.
+Finally, using non-ASCII matching delimeters
+just seems like even more of a leap.</p>
+
+<h2 id="converting-dris-to-uris-or-iris">Converting DRIs to URIs or IRIs</h2>
+
+<p>To enable incremental deployment while preserving backward compatibility
+with the existing URI and IRI ecosystem,
+applications that support DRIs
+must be able to &ldquo;down-convert&rdquo; them to URIs or IRIs
+in contexts not known to support DRI syntax.
+Since IRIs already liberalized URIs to support Unicode characters,
+it is easiest simply to define a conversion from DRIs to IRIs,
+then use the existing
+<a href="https://tools.ietf.org/html/rfc3987#section-3.1">mapping of IRIs to URIs</a>
+as needed.</p>
+
+<p>A DRI may be mapped to an IRI as follows.</p>
+
+<ol>
+<li>As with IRIs, if the DRI is not already represented
+as a Unicode-based character sequence,
+first convert it to one using
+<a href="http://www.unicode.org/reports/tr15/tr15-23.html">normalization form C</a>.</li>
+<li>If the DRI&rsquo;s host component is an IP address using a nested
+&lsquo;<code>ip4[...]</code>&rsquo; or &lsquo;<code>ip6[...]</code>&rsquo; DRI,
+convert it to legacy URI syntax for IP addresses.</li>
+<li>Percent-encode all square-bracketed substrings in the DRI&rsquo;s body
+apart from any IPv6 host address,
+by UTF-8 encoding then percent-encoding all characters in the substring
+that are reserved or forbidden in an IRI.</li>
+<li>For each remaining character in the DRI that is forbidden in an IRI,
+convert it to a UTF-8 byte sequence, then percent-encode each byte.</li>
+<li>Replace the DRI body&rsquo;s opening square bracket with a colon
+(&lsquo;<code>:</code>&rsquo;),
+and drop its closing square bracket.</li>
+</ol>
+
+<p>Here are a few examples before and after conversion from DRI to IRI/URI:</p>
+
+<pre><code>    https[//bford.info/]
+    https://bford.info/
+
+    https[//ip4[1.2.3.4]/find?set={a,b,c};page=https[//bford.info/]]
+    https://1.2.3.4/find?set=%7Ba%2Cb%2Cc%7D;page=https%5B%2F%2Fbford.info%2F%5D
+
+    https[//ip6[fe80::1234%eth0]/unzip/https[//bford.info/stuff.zip]/dest/path/]
+    https://[fe80::1234%25eth0]/unzip/https%5B%2F%2Fbford.info%2Fstuff.zip%5D/dest/path/
+</code></pre>
+
+<h2 id="converting-uris-and-iris-to-dris">Converting URIs and IRIs to DRIs</h2>
+
+<p>The reverse conversion is possible too, of course.
+If DRIs retain support for legacy IP address syntax,
+then a minimal IRI to DRI conversion is simply to
+replace the colon after the scheme name with an open bracket
+and add a closing bracket at the end.
+Since brackets are forbidden from IRIs apart from IPv6 addresses,
+and DRIs handle the already-allowed characters and percent-encodings
+in the same way as IRIs,
+a percent-encoded IRI body also serves as a valid DRI body.</p>
+
+<p>To improve usability and readability, however,
+we would like an IRI-to-DRI encoding
+that simplifies the resulting DRIs and extricates us from Escaping Hell
+as well as feasible.
+To this end, we can convert IRIs as follows:</p>
+
+<ol>
+<li>Decode any unreserved characters that are percent-encoded in the URI.</li>
+<li>If the IRI&rsquo;s host component is a legacy IP address,
+rewrite it to a nested &lsquo;<code>ip4[...]</code>&rsquo; or &lsquo;<code>ip6[...]</code>&rsquo; DRI.</li>
+<li>For each maximum-size substring that starts and ends with
+a matching pair of percent-encoded square brackets,
+and contains no percent-encoded characters forbidden in DRIs,
+decode all percent-encoded characters in the substring.</li>
+<li>Replace the colon following the scheme name
+with an opening bracket,
+and append a closing bracket.</li>
+</ol>
+
+<p>These rules will always successfully percent-decode
+all nested DRIs contained in the outer DRI&rsquo;s body,
+because valid nested DRIs percent-encoded in the original URI
+will have matching brackets and will not contain forbidden characters.
+If the original URI contains unmatched brackets,
+or matched brackets containing forbidden characters, however,
+these sequences are left percent-encoded in the resulting DRI.</p>
+
+<p>Here is an illustrative example of a conversion from IRI/URI to DRI:</p>
+
+<pre><code>    https://search.org/find?chr=%5B;str=%5Ba%5Bb%5D%20%5D;page=https%5B%2F%2Fbford.info%2F%5D
+    https[//search.org/find?chr=%5B;str=%5Ba[b]%20%5D;page=https[//bford.info/]]
+</code></pre>
+
+<p>Notice that while the nested DRI in the <code>page</code> parameter is fully decoded,
+the unbalanced open bracket passed to the <code>chr</code> parameter is not decoded,
+and only the <em>inner</em> pair of matched brackets in the <code>str</code> parameter is decoded
+because the outer bracket pair contains a space character (<code>%20</code>)
+forbidden in DRIs.</p>
+
+<h2 id="mutual-embedding-of-uris-iris-and-dris">Mutual Embedding of URIs, IRIs, and DRIs</h2>
+
+<p>It should be clear already
+that DRIs may be embedded in URIs and IRIs, and vice versa.
+This will be essential to enabling incremental deployment of DRIs,
+and presents many potential short-term opportunities.</p>
+
+<p>Operators of web services that take URIs in query strings,
+for example,
+can unilaterally upgrade their sites to accept DRIs in query strings,
+and can upgrade their web forms and client-side JavaScript
+to produce such DRI-encoded queries,
+without asking anyone&rsquo;s permission
+or waiting for web browsers or protocols like HTTP to catch up.
+These DRIs will for now be embedded within legacy URIs
+on their way from browser to web server, of course,
+and hence will still be embedded in one level of percent-encoding,
+just as embedded URIs would be.
+With a small amount of tooling, however,
+server-side web logging and statistics scripts
+can be upgraded to convert the logged outer URIs into DRIs as described above,
+which will render <em>both</em> nesting levels de-obfuscated in script outputs.</p>
+
+<p>Web browsers can start supporting DRI syntax at any time
+as an alternative syntax in their address bars,
+even initially only as an experimental option.
+This way, early-adopters and developers of web sites like those discussed above
+can obtain the convenience of being able to cut-and-paste one DRI
+directly into another without having to mess with percent-encoding.
+Ideally the user would be able to select whether to paste a DRI
+or down-convert it to a URI or IRI first.
+Firefox already approximates such a choice
+by down-converting to a URI when copying the whole web address,
+but preserving international characters from IRIs when copying only part.
+The browser will for now always convert the DRI to a URI
+for transmission over HTTP, but that&rsquo;s fine.</p>
+
+<p>In short, since DRIs are both readily convertible
+to and from URIs and IRIs,
+and easily mutually embeddable with them,
+it should not be difficult to get them to &ldquo;play along&rdquo;
+in many useful ways even in the short term.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This post is intended merely to outline and explore
+a possible solution to some of the usability problems of URIs and IRIs.
+We have not, of course, defined a fully-precise syntax for DRIs
+or answered all the detailed questions needed to deploy them.
+However, I hope this preliminary exploration is adequate
+to offer an impression of the potential benefits
+of delimited resource identifiers,
+as well as the realistic challenges of implementing them
+and making them interoperable and backward-compatible with URIs and IRIs.
+For now, this sketch hopefully provides a basis
+from which we may experiment with DRIs
+and see if they can fulfill their potential in practice.</p>
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+<td align="left">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+<td align="right">
+<font size="-2">
+ 
+</font>
+</td></tr></table>
+
+    
+  </body>
+</html>
