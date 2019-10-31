@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blockchain on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Blockchain/</link>
+    <description>Recent content in Blockchain on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Blockchain/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rationality is Self-Defeating in Permissionless Systems</title>
+      <link>https://bford.info/2019/09/23/rational/</link>
+      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2019/09/23/rational/</guid>
+      <description>by Bryan Ford and Rainer Böhme &amp;mdash; PDF preprint version available   Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
+    </item>
+    
+    <item>
+      <title>Rethinking General-Purpose Decentralized Computing</title>
+      <link>https://bford.info/pub/os/protean-abs/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/protean-abs/</guid>
+      <description>Enis Ceyhun Alp, Eleftherios Kokoris-Kogias, Georgia Fragkouli, and Bryan Ford EPFL - IC - DEDIS   17th Workshop on Hot Topics in Operating Systems (HotOS XVII)
+May 12-15, 2019.  Abstract: While showing great promise, smart contracts are difficult to program correctly, as they need a deep understanding of cryptography and distributed algorithms, and offer limited functionality, as they have to be deterministic and cannot operate on secret data.</description>
+    </item>
+    
+    <item>
+      <title>So They&#39;re Selling You a Blockchain</title>
+      <link>https://bford.info/2018/09/11/blockchain/</link>
+      <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2018/09/11/blockchain/</guid>
+      <description>Blockchain is certainly one of the hot technology topics today. Yes, it&amp;rsquo;s probably in part a hype bubble &amp;ndash; but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFL has been investing years of effort in building next generation blockchain architectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled financial market for cryptocurrencies.</description>
+    </item>
+    
+    <item>
+      <title>OmniLedger: A Secure, Scale-Out, Decentralized Ledger via Sharding</title>
+      <link>https://bford.info/pub/dec/omniledger-abs/</link>
+      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/omniledger-abs/</guid>
+      <description>Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, Ewa Syta, and Bryan Ford
+  IEEE Security &amp; Privacy (IEEE S&amp;P)
+May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blockchain) that performs on par with centralized payment processors, such as Visa, is a challenging task. Most existing distributed ledgers are unable to scale-out, i.e., to grow their total processing capacity with the number of validators; and those that do, compromise security or decentralization.</description>
+    </item>
+    
+    <item>
+      <title>CHAINIAC: Proactive Software-Update Transparency via Collectively Signed Skipchains and Verified Builds</title>
+      <link>https://bford.info/pub/dec/chainiac-abs/</link>
+      <pubDate>Fri, 18 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/chainiac-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>How Do You Know It&#39;s On the Blockchain? With a SkipChain.</title>
+      <link>https://bford.info/2017/08/01/skipchain/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2017/08/01/skipchain/</guid>
+      <description>A blockchain, or distributed ledger, is a log maintained collectively by a distributed group of participants who agree on and record transactions without relying for security on any single trusted party. While initially popularized by Bitcoin and its derivatives, the blockchain abstraction is not specific to currencies, and there is exploding industry interest in many non-currency uses.
+ 
+Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
+    </item>
+    
+    <item>
+      <title>Proof-of-Personhood: Redemocratizing Permissionless Cryptocurrencies</title>
+      <link>https://bford.info/pub/dec/pop-abs/</link>
+      <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/pop-abs/</guid>
+      <description>Maria Borge, Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, and Bryan Ford
+EPFL   IEEE Security &amp; Privacy on the Blockchain (IEEE S&amp;B)
+April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies commonly use proof-of-work (PoW) or proof-of-stake (PoS) to ensure their security, e.g. to prevent double spending attacks. However, both approaches have disadvantages: PoW leads to massive amounts of wasted electricity and re-centralization, whereas major stakeholders in PoS might be able to create a monopoly.</description>
+    </item>
+    
+    <item>
+      <title>Untangling Mining Incentives in Bitcoin and ByzCoin</title>
+      <link>https://bford.info/2016/10/25/mining/</link>
+      <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2016/10/25/mining/</guid>
+      <description>--  
+As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&amp;rsquo;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
+In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
+    </item>
+    
+    <item>
+      <title>Enhancing Bitcoin Security and Performance with Strong Consistency via Collective Signing</title>
+      <link>https://bford.info/pub/dec/byzcoin-abs/</link>
+      <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/byzcoin-abs/</guid>
+      <description>  </description>
+    </item>
+    
+  </channel>
+</rss>

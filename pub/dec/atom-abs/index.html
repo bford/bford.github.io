@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Atom: Horizontally Scaling Strong Anonymity &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Atom: Horizontally Scaling Strong Anonymity</h1>
+  
+<center>
+<STRONG>
+<table cellpadding=10px><tr align="center">
+<td>
+Albert Kwon<br>
+<i>MIT</i>
+<td>
+Henry Corrigan-Gibbs<br>
+<i>Stanford</i>
+<td>
+Srinivas Devadas<br>
+<i>MIT</i>
+<td>
+Bryan Ford<br>
+<i>EPFL</i>
+</table>
+</STRONG>
+</center>
+
+<p align="center">
+<a href="https://www.sigops.org/sosp/sosp17/"
+>26th ACM Symposium on Operating Systems Principles (SOSP)</a><br>
+	October 30, 2017
+</p>
+
+<H3>Abstract:</H3>
+Atom is an anonymous messaging system that protects against
+traffic-analysis attacks. Unlike many prior systems, each
+Atom server touches only a small fraction of the total messages
+routed through the network. As a result, the system’s
+capacity scales near-linearly with the number of servers. At
+the same time, each Atom user benefits from &ldquo;best possible&rdquo;
+anonymity: a user is anonymous among all honest users of
+the system, even against an active adversary who monitors
+the entire network, a portion of the system’s servers, and any
+number of malicious users. The architectural ideas behind
+Atom have been known in theory, but putting them into practice
+requires new techniques for (1) avoiding heavy general-purpose
+multi-party computation protocols, (2) defeating
+active attacks by malicious servers at minimal performance
+cost, and (3) handling server failure and churn.
+
+<p>
+Atom is most suitable for sending a large number of short
+messages, as in a microblogging application or a high-security
+communication bootstrapping (&ldquo;dialing&rdquo;) for private messaging
+systems. We show that, on a heterogeneous network
+of 1,024 servers, Atom can transit a million Tweet-length
+messages in 28 minutes. This is over 23&times; faster than prior
+systems with similar privacy guarantees.
+
+<H3>Paper:
+<a href="../atom.pdf">PDF</a>
+</H3>
+
+<H3>Talk slides:
+<a href="../atom-slides.pdf">PDF</a>
+</H3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Privacy/">Privacy</a>
+	
+		<a href="/topics/Anonymity/">Anonymity</a>
+	
+		<a href="/topics/Networks/">Networks</a>
+	
+		<a href="/topics/Scalability/">Scalability</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

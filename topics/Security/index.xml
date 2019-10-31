@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Security/</link>
+    <description>Recent content in Security on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reducing Metadata Leakage from Encrypted Files and Communication with PURBs</title>
+      <link>https://bford.info/pub/sec/purb-abs/</link>
+      <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/purb-abs/</guid>
+      <description>Kirill Nikitin, Ludovic Barman, Wouter Lueks, Matthew Underwood, Jean-Pierre Hubaux and Bryan Ford EPFL - IC - DEDIS   Proceedings on Privacy Enhancing Technologies
+July 2019.  Abstract: Most encrypted data formats leak metadata via their plaintext headers, such as format version, encryption schemes used, number of recipients who can decrypt the data, and even the recipients’ identities. This leakage can pose security and privacy risks to users, e.</description>
+    </item>
+    
+    <item>
+      <title>The Remote Voting Minefield: from North Carolina to Switzerland</title>
+      <link>https://bford.info/2019/02/22/voting/</link>
+      <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2019/02/22/voting/</guid>
+      <description>The absentee ballot fraud in North Carolina shows how current vote-by-mail methods are fundamentally flawed and vulnerable to vote-buying and coercion. But banning remote voting of any kind would disenfranchise everyone not living in their country of citizenship; that is not a real option.
+It is important to understand in this light the context of the Swiss e-voting project, one of whose two implementations was recently opened to public inspection by the Swiss Post for inspection and analysis by international experts.</description>
+    </item>
+    
+    <item>
+      <title>So They&#39;re Selling You a Blockchain</title>
+      <link>https://bford.info/2018/09/11/blockchain/</link>
+      <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2018/09/11/blockchain/</guid>
+      <description>Blockchain is certainly one of the hot technology topics today. Yes, it&amp;rsquo;s probably in part a hype bubble &amp;ndash; but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFL has been investing years of effort in building next generation blockchain architectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled financial market for cryptocurrencies.</description>
+    </item>
+    
+    <item>
+      <title>MedCo: Enabling Secure and Privacy-Conscious Exploration of Distributed Clinical and Genomic Data</title>
+      <link>https://bford.info/pub/dec/medco-abs/</link>
+      <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/medco-abs/</guid>
+      <description>Jean Louis Raisaro, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Micka&amp;euml;l Misbach, Jo&amp;atilde;o S&amp;aacute; Sousa, Sylvain Pradervand, Edoardo Missiaglia, Olivier Michielin, Bryan Ford, and Jean-Pierre Hubaux   IEEE/ACM Transactions on Computational Biology and Bioinformatics,
+July 13, 2018. Abstract: The increasing number of health-data breaches is creating a complicated environment for medical-data sharing and, consequently, for medical progress. Therefore, the development of new solutions that can reassure clinical sites by enabling privacy-preserving sharing of sensitive medical data in compliance with stringent regulations (e.</description>
+    </item>
+    
+    <item>
+      <title>OmniLedger: A Secure, Scale-Out, Decentralized Ledger via Sharding</title>
+      <link>https://bford.info/pub/dec/omniledger-abs/</link>
+      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/omniledger-abs/</guid>
+      <description>Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, Ewa Syta, and Bryan Ford
+  IEEE Security &amp; Privacy (IEEE S&amp;P)
+May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blockchain) that performs on par with centralized payment processors, such as Visa, is a challenging task. Most existing distributed ledgers are unable to scale-out, i.e., to grow their total processing capacity with the number of validators; and those that do, compromise security or decentralization.</description>
+    </item>
+    
+    <item>
+      <title>On Enforcing the Digital Immunity of a Large Humanitarian Organization</title>
+      <link>https://bford.info/pub/dec/immunity-abs/</link>
+      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/immunity-abs/</guid>
+      <description>Stevens Le Blond, Alejandro Cuevas, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Philipp Jovanovic, Bryan Ford, and Jean-Pierre Hubaux
+EPFL  Distinguished Paper Award   IEEE Security &amp; Privacy (IEEE S&amp;P)
+May 22, 2018 Abstract: Humanitarian action, the process of aiding individuals in situations of crises, poses unique information-security challenges due to natural or manmade disasters, the adverse environments in which it takes place, and the scale and multidisciplinary nature of the problems.</description>
+    </item>
+    
+    <item>
+      <title>CHAINIAC: Proactive Software-Update Transparency via Collectively Signed Skipchains and Verified Builds</title>
+      <link>https://bford.info/pub/dec/chainiac-abs/</link>
+      <pubDate>Fri, 18 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/chainiac-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>UnLynx: A Decentralized System for Privacy-Conscious Data Sharing</title>
+      <link>https://bford.info/pub/dec/unlynx-abs/</link>
+      <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/unlynx-abs/</guid>
+      <description>David Froelicher, Patricia Egger, Jo&amp;atilde;o S&amp;aacute; Sousa, Jean Louis Raisaro, Zhicong Huang, Christian Mouchet, Bryan Ford, and Jean-Pierre Hubaux   Privacy Enhancing Technologies Symposium (PETS)
+July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing among multiple parties either depend on a centralized authority that must be trusted and provides only weakest-link security (e.g., the entity that manages private/secret cryptographic keys), or leverage on decentralized but impractical approaches (e.</description>
+    </item>
+    
+    <item>
+      <title>Scalable Bias-Resistant Distributed Randomness</title>
+      <link>https://bford.info/pub/dec/random-abs/</link>
+      <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/random-abs/</guid>
+      <description>Ewa Syta, Philipp Jovanovic, Eleftherios Kokoris Kogias, Nicolas Gailly, Linus Gasser, Ismail Khoffi, Michael J. Fischer, and Bryan Ford
+  IEEE Security &amp; Privacy (IEEE S&amp;P)
+May 23, 2017 Abstract: Bias-resistant public randomness is a critical component in many (distributed) protocols. Generating public randomness is hard, however, because active adversaries may behave dishonestly to bias public random choices toward their advantage. Existing solutions do not scale to hundreds or thousands of participants, as is needed in many decentralized systems.</description>
+    </item>
+    
+    <item>
+      <title>Untangling Mining Incentives in Bitcoin and ByzCoin</title>
+      <link>https://bford.info/2016/10/25/mining/</link>
+      <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2016/10/25/mining/</guid>
+      <description>--  
+As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&amp;rsquo;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
+In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
+    </item>
+    
+    <item>
+      <title>Enhancing Bitcoin Security and Performance with Strong Consistency via Collective Signing</title>
+      <link>https://bford.info/pub/dec/byzcoin-abs/</link>
+      <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/byzcoin-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Deterministically Deterring Timing Attacks in Deterland</title>
+      <link>https://bford.info/pub/os/determ-timing/</link>
+      <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/determ-timing/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Heading Off Correlated Failures through Independence-as-a-Service</title>
+      <link>https://bford.info/pub/os/cloud-indaas/</link>
+      <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/cloud-indaas/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Structural Cloud Audits that Protect Private Information</title>
+      <link>https://bford.info/pub/os/cloud-psra/</link>
+      <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/cloud-psra/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>An Untold Story of Redundant Clouds: Making Your Service Deployment Truly Reliable</title>
+      <link>https://bford.info/pub/os/irec/</link>
+      <pubDate>Sun, 03 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/irec/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Plugging Side-Channel Leaks with Timing Information Flow Control</title>
+      <link>https://bford.info/pub/os/tifc-hotcloud12/</link>
+      <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/tifc-hotcloud12/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Icebergs in the Clouds: the Other Risks of Cloud Computing</title>
+      <link>https://bford.info/pub/os/icebergs/</link>
+      <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/icebergs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>CertiKOS: A Certified Kernel for Secure Cloud Computing</title>
+      <link>https://bford.info/pub/os/certikos-apsys11/</link>
+      <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/certikos-apsys11/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Determinating Timing Channels in Compute Clouds</title>
+      <link>https://bford.info/pub/os/timing-abs/</link>
+      <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/timing-abs/</guid>
+      <description>Amittai Aviram, Sen Hu, Bryan Ford
+	Ramakrishna Gummadi
+	Yale University 	University of Massachusetts Amherst  The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
+    </item>
+    
+    <item>
+      <title>Efficient System-Enforced Deterministic Parallelism</title>
+      <link>https://bford.info/pub/os/determ-osdi10/</link>
+      <pubDate>Tue, 05 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/determ-osdi10/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Advanced Development of Certified OS Kernels</title>
+      <link>https://bford.info/pub/os/certified-kernels-abs/</link>
+      <pubDate>Thu, 15 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/certified-kernels-abs/</guid>
+      <description>Zhong Shao and Bryan Ford Department of Computer Science, Yale University   Yale University Technical Report TR1436
+July 15, 2010  Abstract: Operating System (OS) kernels form the bedrock of all system software&amp;mdash;they can have the greatest impact on the resilience, extensibility, and security of today’s computing hosts. A single kernel bug can easily wreck the entire system’s integrity and protection. We propose to apply new advances in certified software to the development of a novel OS kernel.</description>
+    </item>
+    
+    <item>
+      <title>Unintended Consequences of NAT Deployments with Overlapping Address Space</title>
+      <link>https://bford.info/pub/net/rfc5684-abs/</link>
+      <pubDate>Mon, 01 Feb 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/rfc5684-abs/</guid>
+      <description>Pyda Srisuresh and Bryan Ford   IETF RFC 5684
+February 2010  Abstract: This document identifies two deployment scenarios that have arisen from the unconventional network topologies formed using Network Address Translator (NAT) devices. First, the simplicity of administering networks through the combination of NAT and DHCP has increasingly lead to the deployment of multi-level inter-connected private networks involving overlapping private IP address spaces. Second, the proliferation of private networks in enterprises, hotels and conferences, and the wide-spread use of Virtual Private Networks (VPNs) to access an enterprise intranet from remote locations has increasingly lead to overlapping private IP address space between remote and corporate networks.</description>
+    </item>
+    
+    <item>
+      <title>UIA: A Global Connectivity Architecture for Mobile Personal Devices</title>
+      <link>https://bford.info/pub/net/phd-abs/</link>
+      <pubDate>Mon, 01 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/phd-abs/</guid>
+      <description>Bryan Ford
+Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications.  Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
+    </item>
+    
+    <item>
+      <title>Vx32: Lightweight User-level Sandboxing on the x86</title>
+      <link>https://bford.info/pub/os/vx32-abs/</link>
+      <pubDate>Fri, 27 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/vx32-abs/</guid>
+      <description>Bryan Ford and Russ Cox
+Massachusetts Institute of Technology USENIX Annual Technical Conference
+Awarded Best Student Paper
+June 22-27, 2008, Boston, Massachusetts. Abstract:  Code sandboxing is useful for many purposes, but most sandboxing techniques require kernel modifications, do not completely isolate guest code, or incur substantial performance costs. Vx32 is a multipurpose user-level sandbox that enables any application to load and safely execute one or more guest plug-ins, confining each guest to a system call API controlled by the host application and to a restricted memory region within the host&amp;rsquo;s address space.</description>
+    </item>
+    
+    <item>
+      <title>Structured Streams: a New Transport Abstraction</title>
+      <link>https://bford.info/pub/net/sst-abs/</link>
+      <pubDate>Mon, 27 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/sst-abs/</guid>
+      <description>Bryan Ford
+Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract:  Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
+    </item>
+    
+    <item>
+      <title>Persistent Personal Names for Globally Connected Mobile Devices</title>
+      <link>https://bford.info/pub/net/uia-osdi-abs/</link>
+      <pubDate>Mon, 06 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
+      <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
+ Massachusetts Institute of Technology Published in 7th USENIX Symposium on Operating Systems Design and Implementation, November 6-8, 2006. Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+    </item>
+    
+    <item>
+      <title>User-Relative Names for Globally Connected Personal Devices</title>
+      <link>https://bford.info/pub/net/uia-iptps-abs/</link>
+      <pubDate>Mon, 27 Feb 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/uia-iptps-abs/</guid>
+      <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, and Robert Morris Massachusetts Institute of Technology   5th International Workshop on Peer-to-Peer Systems
+February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a peer-to-peer connectivity architecture that provides users a simple, intuitive, and secure way to share information and services between personal devices by assigning ad hoc names that act like &amp;ldquo;virtual cables.</description>
+    </item>
+    
+    <item>
+      <title>VXA: A Virtual Architecture for Durable Compressed Archives</title>
+      <link>https://bford.info/pub/os/vxa-abs/</link>
+      <pubDate>Fri, 16 Dec 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/vxa-abs/</guid>
+      <description>Bryan Ford
+Massachusetts Institute of Technology 4th USENIX Conference on File and Storage Technologies (FAST &#39;05)
+December 16, 2005, San Francisco, California, USA. Abstract:  Data compression algorithms change frequently, and obsolete decoders do not always run on new hardware and operating systems, threatening the long-term usability of content archived using those algorithms. Re-encoding content into new formats is cumbersome, and highly undesirable when lossy compression is involved. Processor architectures, in contrast, have remained comparatively stable over recent decades.</description>
+    </item>
+    
+    <item>
+      <title>The Flux OSKit: A Substrate for Kernel and Language Research</title>
+      <link>https://bford.info/pub/os/oskit-sosp16-abs/</link>
+      <pubDate>Mon, 06 Oct 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/oskit-sosp16-abs/</guid>
+      <description>Bryan Ford, Godmar Back, Greg Benson, Jay Lepreau, Albert Lin, and Olin Shivers 
+ Proceedings of the 16th ACM Symposium on Operating System Principles
+October 5-8, 1997 Abstract:  Implementing new operating systems is tedious, costly, and often impractical except for large projects. The Flux OSKit addresses this problem in a novel way by providing clean, well-documented OS components designed to be reused in a wide variety of other environments, rather than defining a new OS structure.</description>
+    </item>
+    
+    <item>
+      <title>The Flux OS Toolkit: Reusable Components for OS Implementation</title>
+      <link>https://bford.info/pub/os/oskit-hotos6-abs/</link>
+      <pubDate>Mon, 05 May 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/oskit-hotos6-abs/</guid>
+      <description>Bryan Ford, Kevin Van Maren, Jay Lepreau, Stephen Clawson, Bart Robinson, and Jeff Turner
+University of Utah 6th Workshop on Hot Topics in Operating Systems (HotOS-VI)
+May 5-6, 1997 Abstract:  To an unappreciated degree, research both in operating systems and their programming languages has been severely hampered by the lack of cleanly reusable code providing mundane low-level OS infrastructure such as bootstrap code and device drivers. The Flux OS Toolkit solves this problem by providing a set of clean, well-documented components.</description>
+    </item>
+    
+    <item>
+      <title>Microkernels Meet Recursive Virtual Machines</title>
+      <link>https://bford.info/pub/os/fluke-rvm-abs/</link>
+      <pubDate>Wed, 30 Oct 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/fluke-rvm-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, Jay Lepreau, Patrick Tullmann, Godmar Back, and Stephen Clawson
+University of Utah USENIX 2nd Symposium on OS Design and Implementation (OSDI &#39;96)
+October 28-31, 1996, Seattle, Washington, USA. Abstract:  This paper describes a novel approach to providing modular and extensible operating system functionality and encapsulated environments based on a synthesis of microkernel and virtual machine concepts. We have developed a software-based virtualizable architecture called Fluke that allows recursive virtual machines (virtual machines running on other virtual machines) to be implemented efficiently by a microkernel running on generic hardware.</description>
+    </item>
+    
+    <item>
+      <title>The Persistent Relevance of the Local Operating System to Global Applications</title>
+      <link>https://bford.info/pub/os/dist-vs-local-abs/</link>
+      <pubDate>Mon, 09 Sep 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/dist-vs-local-abs/</guid>
+      <description>Jay Lepreau, Bryan Ford, and Mike Hibler  Department of Computer Science, University of Utah  Proceedings of the Seventh ACM SIGOPS European Workshop
+September 9-11, 1996  Abstract: The growth and popularity of loosely-coupled distributed systems such as the World Wide Web and the touting of Java-based systems as the solution to the issues of software maintenance, flexibility, and security are changing the research emphasis away from traditional single node operating system issues.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Evolving Mach 3.0 to A Migrating Thread Model &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Evolving Mach 3.0 to A Migrating Thread Model</h1>
+  
+<center>
+<STRONG>
+Bryan Ford and Jay Lepreau
+<br>
+</STRONG>
+Department of Computer Science, University of Utah
+
+<p>
+<a href="http://www.usenix.org/publications/library/proceedings/sf94/index.html"
+	>Proceedings of the Winter 1994 USENIX Technical Conference</a><br>
+January 17-21, 1994
+</p>
+</center>
+
+<H3>Abstract:</H3>
+We have modified Mach 3.0 to treat cross-domain remote procedure call (RPC) as
+a single entity, instead of a sequence of message passing operations. With RPC
+thus elevated, we improved the transfer of control during RPC by changing the
+thread model. Like most operating systems, Mach views threads as statically
+associated with a single task, with two threads involved in an RPC. An
+alternate model is that of migrating threads, in which, during RPC, a single
+thread abstraction moves between tasks with the logical flow of control, and
+&ldquo;server&rdquo; code is passively executed. We have compatibly replaced
+Mach's static threads with migrating threads, in an attempt to isolate this
+aspect of operating system design and implementation. The key element of our
+design is a decoupling of the thread abstraction into the execution context and
+the schedulable thread of control, consisting of a chain of contexts. A key
+element of our implementation is that threads are now &ldquo;based&rdquo; in
+the kernel, and temporarily make excursions into tasks via upcalls. The new
+system provides more precisely defined semantics for thread manipulation and
+additional control operations, allows scheduling and accounting attributes to
+follow threads, simplifies kernel code, and improves RPC performance. We have
+retained the old thread and IPC interfaces for backwards compatibility, with no
+changes required to existing client programs and only a minimal change to
+servers, as demonstrated by a functional Unix single server and clients. The
+logical complexity along the critical RPC path has been reduced by a factor of
+nine.  Local RPC, doing normal marshaling, has sped up by factors of 1.7 to
+3.4. We conclude that a migrating-thread model is superior to a static model,
+that kernel-visible RPC is a prerequisite for this improvement, and that it is
+feasible to improve existing operating systems in this manner.
+
+<H3>Paper:
+<a href="../thread-migrate.pdf">PDF</a>
+<a href="../thread-migrate.ps.gz">PS</a>
+</H3>
+
+<H3>Slides:
+<a href="../thread-migrate-slides.pdf">PDF</a>
+<a href="../thread-migrate-slides.ps.gz">PS</a>
+</H3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Microkernels/">Microkernels</a>
+	
+		<a href="/topics/Scheduling/">Scheduling</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

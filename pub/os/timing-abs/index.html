@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Determinating Timing Channels in Compute Clouds &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Determinating Timing Channels in Compute Clouds</h1>
+  
+<table width="75%" align="center">
+<tr align="center">
+<td>	<STRONG>Amittai Aviram, Sen Hu, Bryan Ford</STRONG><br>
+<td>	<STRONG>Ramakrishna Gummadi</STRONG><br>
+<tr align="center">
+<td>	<I>Yale University</I></P>
+<td>	<I>University of Massachusetts Amherst</I></P>
+</table>
+
+<p align="center">
+<i><a href="https://ccsw.io/2010/">
+	The ACM Cloud Computing Security Workshop (CCSW 2010)</a> <br>
+	October 8, 2010, Chicago, IL, USA</i>
+</p>
+
+<H3>Abstract:</H3>
+Timing side-channels
+represent an insidious security challenge for cloud computing,
+because:
+(a) massive parallelism in the cloud
+makes timing channels pervasive and hard to control;
+(b) timing channels enable one customer to steal information from another
+without leaving a trail or raising alarms;
+(c) only the cloud provider can feasibly detect and report such attacks,
+but the provider's incentives are <i>not</i> to; and
+(d) resource partitioning schemes for timing channel control
+undermine statistical sharing efficiency,
+and, with it, the cloud computing business model.
+We propose a new approach to timing channel control,
+using <i>provider-enforced deterministic execution</i>
+instead of resource partitioning
+to eliminate timing channels within a shared cloud domain.
+Provider-enforced determinism prevents execution timing
+from affecting the results of a compute task, however large or parallel,
+ensuring that a task's outputs leak no timing information
+apart from explicit timing inputs and total compute duration.
+Experiments with a prototype OS for deterministic cloud computing
+suggest that such an approach may be practical and efficient.
+The OS supports deterministic versions of familiar APIs
+such as processes, threads, shared memory, and file systems,
+and runs coarse-grained parallel tasks
+as efficiently and scalably as
+current timing channel-ridden systems.
+<p>
+
+<H3>Paper:
+<a href="../timing.pdf">PDF</a>
+</H3>
+
+<h3>Slides:
+<a href="../timing-slides.pdf">PDF</a>
+<a href="../timing-slides.odp">OpenOffice</a>
+</h3>
+
+<h3>Acknowledgments</h3>
+
+This research is sponsored by the National Science Foundation
+under grant
+<a href="http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=1017206">
+CNS-1017206</a>.
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Determinism/">Determinism</a>
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Security/">Security</a>
+	
+		<a href="/topics/Side-Channels/">Side-Channels</a>
+	
+		<a href="/topics/Parallelism/">Parallelism</a>
+	
+		<a href="/topics/Cloud-Computing/">Cloud Computing</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

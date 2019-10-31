@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Formal Verification on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Formal-Verification/</link>
+    <description>Recent content in Formal Verification on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Jul 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Formal-Verification/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CertiKOS: A Certified Kernel for Secure Cloud Computing</title>
+      <link>https://bford.info/pub/os/certikos-apsys11/</link>
+      <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/certikos-apsys11/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Advanced Development of Certified OS Kernels</title>
+      <link>https://bford.info/pub/os/certified-kernels-abs/</link>
+      <pubDate>Thu, 15 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/certified-kernels-abs/</guid>
+      <description>Zhong Shao and Bryan Ford Department of Computer Science, Yale University   Yale University Technical Report TR1436
+July 15, 2010  Abstract: Operating System (OS) kernels form the bedrock of all system software&amp;mdash;they can have the greatest impact on the resilience, extensibility, and security of today’s computing hosts. A single kernel bug can easily wreck the entire system’s integrity and protection. We propose to apply new advances in certified software to the development of a novel OS kernel.</description>
+    </item>
+    
+  </channel>
+</rss>

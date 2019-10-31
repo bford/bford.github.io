@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Notes on Thread Models in Mach 3.0 &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Notes on Thread Models in Mach 3.0</h1>
+  
+<center>
+<STRONG>
+Bryan Ford, Mike Hibler, and Jay Lepreau
+<br>
+Department of Computer Science, University of Utah
+</STRONG>
+
+<p>
+<a href="https://www.cs.utah.edu/flux/papers/UUCS-93-012.abst.html"
+	>Technical Report UUCS-93-012</a><br>
+April 1993
+</p>
+</center>
+
+<H3>Abstract:</H3>
+During the Mach In-Kernel Servers work, we explored two alternate thread models
+that could be used to support traps to in-kernel servers.  In the
+&ldquo;migrating threads&rdquo; model we used, the client's thread temporarily
+moves into the server's task for the duration of the call.  In the
+&ldquo;thread switching&rdquo; model, an actual server thread is dispatched to
+handle client traps.  Based on our experience, we find that the migrating
+threads model is quite complex and difficult to implement in the context of the
+current design of Mach and the Unix single server.  The thread switching model
+would fit more naturally and would probably be much simpler and more robust
+than migrating threads, making it a valuable approach to explore in the near
+future.  However, we believe migrating threads inherently to be faster than
+thread switching, and ultimately to be the best long term direction.
+
+<H3>Paper:
+<a href="../threadmodel-93.pdf">PDF</a>
+<a href="../threadmodel-93.ps.gz">PS</a>
+</H3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Scheduling/">Scheduling</a>
+	
+		<a href="/topics/Microkernels/">Microkernels</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

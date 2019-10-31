@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Using Annotated Interface Definitions to Optimize RPC &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Using Annotated Interface Definitions to Optimize RPC</h1>
+  
+<center>
+<strong>
+Bryan Ford, Mike Hibler, and Jay Lepreau
+
+<br>
+University of Utah, Department of Computer Science
+</strong>
+
+<p>
+<a href="https://www.cs.utah.edu/flux/papers/presint3.html">Technical Report UUCS-95-014</a><br>
+March 1995.
+</p>
+</center>
+
+<h3>Abstract:</h3>
+In RPC-based communication, it is useful to distinguish the RPC interface,
+which is the “network contract” be- tween the client and the server, from the
+presentation, which is the “programmer’s contract” between the RPC stubs and
+the code that calls or is called by them. Presentation is usually a fixed
+function of the RPC interface, but some RPC systems, such as DCE and Concert,
+support the notion of a flexible presentation or endpoint modifier, allowing
+controlled modification of the behavior of the stubs on each side without
+affecting the contract between the client and the server.
+
+<p>
+Up until now, the primary motivation for flexible presentation has been for
+programmer convenience and improved interoperability. However, we have found
+flexible presentation also to be useful for optimization of RPC, and in many
+cases necessary to achieving maximal performance without throwing out the RPC
+system and resorting to hand-coded stubs. In this paper we provide examples
+demonstrating this point for a number of different operating systems and IPC
+transport mechanisms, with RPC performance improvements ranging from 5% to an
+order of magnitude. In general, we observe that the more efficient the
+underlying IPC transport mechanism is, the more important it is for the RPC
+system to support flexible presentation, in order to avoid unnecessary
+user-space overhead.
+
+<h3>Paper:
+<a href="../presint3.pdf">PDF</a>
+<a href="../presint3.ps.gz">PostScript</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Programming-Languages/">Programming Languages</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

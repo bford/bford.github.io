@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scheduling on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Scheduling/</link>
+    <description>Recent content in Scheduling on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Feb 1999 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Scheduling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Interface and Execution Models in the Fluke Kernel</title>
+      <link>https://bford.info/pub/os/atomic-osdi99-abs/</link>
+      <pubDate>Wed, 24 Feb 1999 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/atomic-osdi99-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, Jay Lepreau, Roland McGrath, and Patrick Tullmann 
+Department of Computer Science, University of Utah  3rd Symposium on Operating Systems Design and Implementation
+February 22-25, 1999 Abstract:  We have defined and implemented a kernel API that makes every exported operation fully interruptible and restartable, thereby appearing atomic to the user. To achieve interruptibility, all possible kernel states in which a thread may become blocked for a &amp;ldquo;long&amp;rdquo; time are represented as kernel system calls, without requiring the kernel to retain any unexposable internal state.</description>
+    </item>
+    
+    <item>
+      <title>CPU Inheritance Scheduling</title>
+      <link>https://bford.info/pub/os/inherit-sched-abs/</link>
+      <pubDate>Wed, 30 Oct 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/inherit-sched-abs/</guid>
+      <description>Bryan Ford and Sai R. Susarla  Department of Computer Science, University of Utah  Proceedings of the Second Symposium on Operating Systems Design and Implementation
+October 28-31, 1996  Abstract: Traditional processor scheduling mechanisms in operating systems are fairly rigid, often supporting only one fixed scheduling policy, or, at most, a few &amp;ldquo;scheduling classes&amp;rdquo; whose implementations are closely tied together in the OS kernel. This paper presents CPU inheritance scheduling, a novel processor scheduling framework in which arbitrary threads can act as schedulers for other threads.</description>
+    </item>
+    
+    <item>
+      <title>Evolving Mach 3.0 to A Migrating Thread Model</title>
+      <link>https://bford.info/pub/os/thread-migrate-abs/</link>
+      <pubDate>Mon, 17 Jan 1994 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/thread-migrate-abs/</guid>
+      <description>Bryan Ford and Jay Lepreau  Department of Computer Science, University of Utah  Proceedings of the Winter 1994 USENIX Technical Conference
+January 17-21, 1994  Abstract: We have modified Mach 3.0 to treat cross-domain remote procedure call (RPC) as a single entity, instead of a sequence of message passing operations. With RPC thus elevated, we improved the transfer of control during RPC by changing the thread model.</description>
+    </item>
+    
+    <item>
+      <title>Notes on Thread Models in Mach 3.0</title>
+      <link>https://bford.info/pub/os/threadmodel-93-abs/</link>
+      <pubDate>Thu, 01 Apr 1993 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/threadmodel-93-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau Department of Computer Science, University of Utah   Technical Report UUCS-93-012
+April 1993  Abstract: During the Mach In-Kernel Servers work, we explored two alternate thread models that could be used to support traps to in-kernel servers. In the &amp;ldquo;migrating threads&amp;rdquo; model we used, the client&#39;s thread temporarily moves into the server&#39;s task for the duration of the call. In the &amp;ldquo;thread switching&amp;rdquo; model, an actual server thread is dispatched to handle client traps.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -36,6 +36,16 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Blockchain/</loc>
+    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Economics/</loc>
+    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/post/</loc>
     <lastmod>2019-09-23T00:00:00+00:00</lastmod>
   </url>
@@ -46,13 +56,108 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/</loc>
+    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2019/07/29/go-generics/</loc>
     <lastmod>2019-07-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Programming-Languages/</loc>
+    <lastmod>2019-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/</loc>
+    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Cryptography/</loc>
+    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Metadata/</loc>
+    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Privacy/</loc>
+    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/purb-abs/</loc>
+    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Security/</loc>
+    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Modularity/</loc>
+    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Operating-Systems/</loc>
+    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/protean-abs/</loc>
+    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Scalability/</loc>
+    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Anonymity/</loc>
+    <lastmod>2019-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/morphit-abs/</loc>
+    <lastmod>2019-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Networks/</loc>
+    <lastmod>2019-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Transparency/</loc>
+    <lastmod>2019-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Democracy/</loc>
+    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2019/02/22/voting/</loc>
     <lastmod>2019-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Voting/</loc>
+    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Identity/</loc>
+    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -77,7 +182,17 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/dec/medco-abs/</loc>
+    <lastmod>2018-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2018/06/27/muslim-ban/</loc>
+    <lastmod>2018-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Research/</loc>
     <lastmod>2018-06-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -87,8 +202,43 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Tourism/</loc>
+    <lastmod>2018-06-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Law/</loc>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/dec/omniledger-abs/</loc>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/dec/immunity-abs/</loc>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Surveillance/</loc>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/draft/stake/</loc>
     <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/dec/atom-abs/</loc>
+    <lastmod>2017-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/dec/chainiac-abs/</loc>
+    <lastmod>2017-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -97,8 +247,23 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/dec/unlynx-abs/</loc>
+    <lastmod>2017-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2017/06/23/turing50/</loc>
     <lastmod>2017-06-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/dec/random-abs/</loc>
+    <lastmod>2017-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/dec/pop-abs/</loc>
+    <lastmod>2017-04-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -107,8 +272,18 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Consensus/</loc>
+    <lastmod>2016-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2016/10/25/mining/</loc>
     <lastmod>2016-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/dec/byzcoin-abs/</loc>
+    <lastmod>2016-08-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -132,8 +307,38 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/net/tlsmeta-abs/</loc>
+    <lastmod>2016-02-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Transport-Layer/</loc>
+    <lastmod>2016-02-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2015/10/07/names.html</loc>
     <lastmod>2015-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Determinism/</loc>
+    <lastmod>2015-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/determ-timing/</loc>
+    <lastmod>2015-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Parallelism/</loc>
+    <lastmod>2015-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Side-Channels/</loc>
+    <lastmod>2015-10-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -147,6 +352,21 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/GPGPU-Computing/</loc>
+    <lastmod>2014-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/gpufs-cacm/</loc>
+    <lastmod>2014-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Storage/</loc>
+    <lastmod>2014-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2014/11/16/deleg.html</loc>
     <lastmod>2014-11-16T00:00:00+00:00</lastmod>
   </url>
@@ -154,6 +374,261 @@
   <url>
     <loc>https://bford.info/2014/10/22/cs-growth.html</loc>
     <lastmod>2014-10-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Cloud-Computing/</loc>
+    <lastmod>2014-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Fault-Tree-Analysis/</loc>
+    <lastmod>2014-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/cloud-indaas/</loc>
+    <lastmod>2014-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/taq-abs/</loc>
+    <lastmod>2014-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/cloud-psra/</loc>
+    <lastmod>2013-11-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/irec/</loc>
+    <lastmod>2013-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/maple-abs/</loc>
+    <lastmod>2013-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Software-Defined-Networks/</loc>
+    <lastmod>2013-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/lazy-tree-mapping/</loc>
+    <lastmod>2013-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/gpufs/</loc>
+    <lastmod>2013-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/scaling-sdn-abs/</loc>
+    <lastmod>2012-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/non-linear/</loc>
+    <lastmod>2012-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Out-of-Order-Delivery/</loc>
+    <lastmod>2012-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/tifc-hotcloud12/</loc>
+    <lastmod>2012-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/icebergs/</loc>
+    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/nsdi12-minion-abs/</loc>
+    <lastmod>2012-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Layering/</loc>
+    <lastmod>2012-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/determ-vm/</loc>
+    <lastmod>2011-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/certikos-apsys11/</loc>
+    <lastmod>2011-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Formal-Verification/</loc>
+    <lastmod>2011-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/eyo-usenix-abs/</loc>
+    <lastmod>2011-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/determ-openmp/</loc>
+    <lastmod>2011-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/workspace-consistency/</loc>
+    <lastmod>2011-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/druid-abs/</loc>
+    <lastmod>2010-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/pfldnet10-minion-abs/</loc>
+    <lastmod>2010-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/timing-abs/</loc>
+    <lastmod>2010-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/determ-osdi10/</loc>
+    <lastmod>2010-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/dissent-abs/</loc>
+    <lastmod>2010-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/certified-kernels-abs/</loc>
+    <lastmod>2010-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Network-Address-Translation/</loc>
+    <lastmod>2010-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Peer-to-peer/</loc>
+    <lastmod>2010-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Routing/</loc>
+    <lastmod>2010-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/rfc5684-abs/</loc>
+    <lastmod>2010-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/nego-abs/</loc>
+    <lastmod>2009-10-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/devtransp-abs/</loc>
+    <lastmod>2009-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/rfc5508-abs/</loc>
+    <lastmod>2009-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/logjam-abs/</loc>
+    <lastmod>2008-10-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/rfc5382-abs/</loc>
+    <lastmod>2008-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/phd-abs/</loc>
+    <lastmod>2008-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Virtual-Machines/</loc>
+    <lastmod>2008-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/vx32-abs/</loc>
+    <lastmod>2008-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/rfc5128-abs/</loc>
+    <lastmod>2008-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/transport-ietf-abs/</loc>
+    <lastmod>2007-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/alpaca-abs/</loc>
+    <lastmod>2007-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/sst-abs/</loc>
+    <lastmod>2007-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/uia-osdi/</loc>
+    <lastmod>2006-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/uia-osdi-abs/</loc>
+    <lastmod>2006-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/uia-iptps-abs/</loc>
+    <lastmod>2006-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/vxa-abs/</loc>
+    <lastmod>2005-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/p2pnat-abs/</loc>
+    <lastmod>2005-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/p2pnat/</loc>
+    <lastmod>2005-02-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -172,6 +647,26 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Parsing/</loc>
+    <lastmod>2004-01-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/lang/peg/</loc>
+    <lastmod>2004-01-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/uip-case-abs/</loc>
+    <lastmod>2003-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/uip-abs/</loc>
+    <lastmod>2003-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2003/07/24/service-duality/</loc>
     <lastmod>2003-07-24T00:00:00+00:00</lastmod>
   </url>
@@ -182,13 +677,116 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/lang/packrat-icfp02/</loc>
+    <lastmod>2002-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/lang/thesis/</loc>
+    <lastmod>2002-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2002/05/15/deleg/</loc>
     <lastmod>2002-05-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://bford.info/pub/os/atomic-osdi99-abs/</loc>
+    <lastmod>1999-02-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Microkernels/</loc>
+    <lastmod>1999-02-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Scheduling/</loc>
+    <lastmod>1999-02-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/oskit-sosp16-abs/</loc>
+    <lastmod>1997-10-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/lang/flick-pldi97-abs/</loc>
+    <lastmod>1997-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/oskit-hotos6-abs/</loc>
+    <lastmod>1997-05-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/inherit-sched-abs/</loc>
+    <lastmod>1996-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/fluke-rvm-abs/</loc>
+    <lastmod>1996-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/iwooos96-flobs-abs/</loc>
+    <lastmod>1996-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/dist-vs-local-abs/</loc>
+    <lastmod>1996-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/lang/presint3-abs/</loc>
+    <lastmod>1995-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/lang/presint2-abs/</loc>
+    <lastmod>1994-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/thread-migrate-abs/</loc>
+    <lastmod>1994-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/passive-abs/</loc>
+    <lastmod>1993-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/lang/flex-wwos4-abs/</loc>
+    <lastmod>1993-10-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/inks-abs/</loc>
+    <lastmod>1993-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/threadmodel-93-abs/</loc>
+    <lastmod>1993-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/draft/async/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/vx32/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/vxa/</loc>
   </url>
   
   <url>
@@ -224,10 +822,6 @@
   </url>
   
   <url>
-    <loc>https://bford.info/pub/</loc>
-  </url>
-  
-  <url>
     <loc>https://bford.info/album/Family.html</loc>
   </url>
   
@@ -240,11 +834,19 @@
   </url>
   
   <url>
-    <loc>https://bford.info/categories/</loc>
+    <loc>https://bford.info/album/2005/0723-Cologne/</loc>
   </url>
   
   <url>
-    <loc>https://bford.info/album/2005/0723-Cologne/</loc>
+    <loc>https://bford.info/draft/cmark/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/cmath/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/ctml/</loc>
   </url>
   
   <url>
@@ -292,10 +894,6 @@
   </url>
   
   <url>
-    <loc>https://bford.info/pub/net/morphit-abs/</loc>
-  </url>
-  
-  <url>
     <loc>https://bford.info/album/Cats.html</loc>
   </url>
   
@@ -313,14 +911,6 @@
   
   <url>
     <loc>https://bford.info/album/Piano.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/pub/sec/purb-abs/</loc>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/pub/os/protean-abs/</loc>
   </url>
   
   <url>
@@ -353,10 +943,6 @@
   
   <url>
     <loc>https://bford.info/album/2004/0601-StataCenter/</loc>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/tags/</loc>
   </url>
   
   <url>

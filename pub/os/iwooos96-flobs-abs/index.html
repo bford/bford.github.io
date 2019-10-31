@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  User-level Checkpointing Through Exportable Kernel State &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>User-level Checkpointing Through Exportable Kernel State</h1>
+  
+<center>
+<STRONG>
+Patrick Tullmann, Jay Lepreau, Bryan Ford, and Mike Hibler
+<br>
+</STRONG>
+Department of Computer Science, University of Utah
+
+<p>
+<a href="https://ieeexplore.ieee.org/xpl/conhome/4122/proceeding"
+                >Proceedings of the Fifth IEEE International Workshop on
+                Object Orientation in Operating Systems (IWOOOS)</a><br>
+October 27-28, 1996
+</p>
+</center>
+
+<H3>Abstract:</H3>
+Checkpointing, process migration, and similar services need to have access not
+only to the memory of the constituent processes, but also to the complete state
+of all kernel provided objects (e.g., threads and ports) involved.
+Traditionally, a major stumbling block in these operations is acquiring and
+re-creating the state in the operating system. We have implemented a
+transparent user-mode checkpointer as an application on our Fluke microkernel.
+This microkernel consistently and cleanly supports the importing and exporting
+of fundamental kernel state safely to and from user applications. Implementing
+a transparent checkpointing facility with this sort of kernel support
+simplifies the implementation, and expands its flexibility and power.
+
+<H3>Paper:
+<a href="../iwooos96-flobs.pdf">PDF</a>
+<a href="../iwooos96-flobs.ps.gz">PS</a>
+</H3>
+
+<H3>Slides:
+<a href="../iwooos96-flobs-slides.pdf">PDF</a>
+<a href="../iwooos96-flobs-slides.ps.gz">PS</a>
+</H3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Microkernels/">Microkernels</a>
+	
+		<a href="/topics/Virtual-Machines/">Virtual Machines</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

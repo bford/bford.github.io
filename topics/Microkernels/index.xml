@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microkernels on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Microkernels/</link>
+    <description>Recent content in Microkernels on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Feb 1999 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Microkernels/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Interface and Execution Models in the Fluke Kernel</title>
+      <link>https://bford.info/pub/os/atomic-osdi99-abs/</link>
+      <pubDate>Wed, 24 Feb 1999 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/atomic-osdi99-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, Jay Lepreau, Roland McGrath, and Patrick Tullmann 
+Department of Computer Science, University of Utah  3rd Symposium on Operating Systems Design and Implementation
+February 22-25, 1999 Abstract:  We have defined and implemented a kernel API that makes every exported operation fully interruptible and restartable, thereby appearing atomic to the user. To achieve interruptibility, all possible kernel states in which a thread may become blocked for a &amp;ldquo;long&amp;rdquo; time are represented as kernel system calls, without requiring the kernel to retain any unexposable internal state.</description>
+    </item>
+    
+    <item>
+      <title>The Flux OSKit: A Substrate for Kernel and Language Research</title>
+      <link>https://bford.info/pub/os/oskit-sosp16-abs/</link>
+      <pubDate>Mon, 06 Oct 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/oskit-sosp16-abs/</guid>
+      <description>Bryan Ford, Godmar Back, Greg Benson, Jay Lepreau, Albert Lin, and Olin Shivers 
+ Proceedings of the 16th ACM Symposium on Operating System Principles
+October 5-8, 1997 Abstract:  Implementing new operating systems is tedious, costly, and often impractical except for large projects. The Flux OSKit addresses this problem in a novel way by providing clean, well-documented OS components designed to be reused in a wide variety of other environments, rather than defining a new OS structure.</description>
+    </item>
+    
+    <item>
+      <title>The Flux OS Toolkit: Reusable Components for OS Implementation</title>
+      <link>https://bford.info/pub/os/oskit-hotos6-abs/</link>
+      <pubDate>Mon, 05 May 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/oskit-hotos6-abs/</guid>
+      <description>Bryan Ford, Kevin Van Maren, Jay Lepreau, Stephen Clawson, Bart Robinson, and Jeff Turner
+University of Utah 6th Workshop on Hot Topics in Operating Systems (HotOS-VI)
+May 5-6, 1997 Abstract:  To an unappreciated degree, research both in operating systems and their programming languages has been severely hampered by the lack of cleanly reusable code providing mundane low-level OS infrastructure such as bootstrap code and device drivers. The Flux OS Toolkit solves this problem by providing a set of clean, well-documented components.</description>
+    </item>
+    
+    <item>
+      <title>CPU Inheritance Scheduling</title>
+      <link>https://bford.info/pub/os/inherit-sched-abs/</link>
+      <pubDate>Wed, 30 Oct 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/inherit-sched-abs/</guid>
+      <description>Bryan Ford and Sai R. Susarla  Department of Computer Science, University of Utah  Proceedings of the Second Symposium on Operating Systems Design and Implementation
+October 28-31, 1996  Abstract: Traditional processor scheduling mechanisms in operating systems are fairly rigid, often supporting only one fixed scheduling policy, or, at most, a few &amp;ldquo;scheduling classes&amp;rdquo; whose implementations are closely tied together in the OS kernel. This paper presents CPU inheritance scheduling, a novel processor scheduling framework in which arbitrary threads can act as schedulers for other threads.</description>
+    </item>
+    
+    <item>
+      <title>Microkernels Meet Recursive Virtual Machines</title>
+      <link>https://bford.info/pub/os/fluke-rvm-abs/</link>
+      <pubDate>Wed, 30 Oct 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/fluke-rvm-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, Jay Lepreau, Patrick Tullmann, Godmar Back, and Stephen Clawson
+University of Utah USENIX 2nd Symposium on OS Design and Implementation (OSDI &#39;96)
+October 28-31, 1996, Seattle, Washington, USA. Abstract:  This paper describes a novel approach to providing modular and extensible operating system functionality and encapsulated environments based on a synthesis of microkernel and virtual machine concepts. We have developed a software-based virtualizable architecture called Fluke that allows recursive virtual machines (virtual machines running on other virtual machines) to be implemented efficiently by a microkernel running on generic hardware.</description>
+    </item>
+    
+    <item>
+      <title>User-level Checkpointing Through Exportable Kernel State</title>
+      <link>https://bford.info/pub/os/iwooos96-flobs-abs/</link>
+      <pubDate>Sun, 27 Oct 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/iwooos96-flobs-abs/</guid>
+      <description>Patrick Tullmann, Jay Lepreau, Bryan Ford, and Mike Hibler  Department of Computer Science, University of Utah  Proceedings of the Fifth IEEE International Workshop on Object Orientation in Operating Systems (IWOOOS)
+October 27-28, 1996  Abstract: Checkpointing, process migration, and similar services need to have access not only to the memory of the constituent processes, but also to the complete state of all kernel provided objects (e.</description>
+    </item>
+    
+    <item>
+      <title>The Persistent Relevance of the Local Operating System to Global Applications</title>
+      <link>https://bford.info/pub/os/dist-vs-local-abs/</link>
+      <pubDate>Mon, 09 Sep 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/dist-vs-local-abs/</guid>
+      <description>Jay Lepreau, Bryan Ford, and Mike Hibler  Department of Computer Science, University of Utah  Proceedings of the Seventh ACM SIGOPS European Workshop
+September 9-11, 1996  Abstract: The growth and popularity of loosely-coupled distributed systems such as the World Wide Web and the touting of Java-based systems as the solution to the issues of software maintenance, flexibility, and security are changing the research emphasis away from traditional single node operating system issues.</description>
+    </item>
+    
+    <item>
+      <title>Evolving Mach 3.0 to A Migrating Thread Model</title>
+      <link>https://bford.info/pub/os/thread-migrate-abs/</link>
+      <pubDate>Mon, 17 Jan 1994 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/thread-migrate-abs/</guid>
+      <description>Bryan Ford and Jay Lepreau  Department of Computer Science, University of Utah  Proceedings of the Winter 1994 USENIX Technical Conference
+January 17-21, 1994  Abstract: We have modified Mach 3.0 to treat cross-domain remote procedure call (RPC) as a single entity, instead of a sequence of message passing operations. With RPC thus elevated, we improved the transfer of control during RPC by changing the thread model.</description>
+    </item>
+    
+    <item>
+      <title>Microkernels Should Support Passive Objects</title>
+      <link>https://bford.info/pub/os/passive-abs/</link>
+      <pubDate>Thu, 09 Dec 1993 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/passive-abs/</guid>
+      <description>Bryan Ford and Jay Lepreau  Department of Computer Science, University of Utah  International Workshop on Object Orientation in Operating Systems (IWOOOS)
+December 9-10, 1993  Abstract: We believe that a passive object model, in which the active entities or threads migrate between passive objects, is more appropriate than an active object model, as the basic structure of a microkernel-based operating system. A passive object model provides enhanced performance and simplicity because it is more closely matched to the basic nature of microprocessors and the requirements of applications.</description>
+    </item>
+    
+    <item>
+      <title>In-Kernel Servers on Mach 3.0: Implementation and Performance</title>
+      <link>https://bford.info/pub/os/inks-abs/</link>
+      <pubDate>Mon, 19 Apr 1993 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/inks-abs/</guid>
+      <description>Jay Lepreau, Mike Hibler, Bryan Ford, and Jeffrey Law  Department of Computer Science, University of Utah  Proceedings of the Third USENIX Mach Symposium
+April 1993  Abstract: The advantages in modularity and power of microkernel-based operating systems such as Mach 3.0 are well known. The existing performance problems of these systems, however, are significant. Much of the performance degradation is due to the cost of maintaining separate protection domains, traversing software layers, and using a semantically rich inter-process communication mechanism.</description>
+    </item>
+    
+    <item>
+      <title>Notes on Thread Models in Mach 3.0</title>
+      <link>https://bford.info/pub/os/threadmodel-93-abs/</link>
+      <pubDate>Thu, 01 Apr 1993 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/threadmodel-93-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau Department of Computer Science, University of Utah   Technical Report UUCS-93-012
+April 1993  Abstract: During the Mach In-Kernel Servers work, we explored two alternate thread models that could be used to support traps to in-kernel servers. In the &amp;ldquo;migrating threads&amp;rdquo; model we used, the client&#39;s thread temporarily moves into the server&#39;s task for the duration of the call. In the &amp;ldquo;thread switching&amp;rdquo; model, an actual server thread is dispatched to handle client traps.</description>
+    </item>
+    
+  </channel>
+</rss>

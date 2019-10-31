@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Out-of-Order Delivery on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Out-of-Order-Delivery/</link>
+    <description>Recent content in Out-of-Order Delivery on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Jun 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Out-of-Order-Delivery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Non-Linear Compression: Gzip Me Not!</title>
+      <link>https://bford.info/pub/os/non-linear/</link>
+      <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/non-linear/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Fitting Square Pegs Through Round Pipes: Unordered Delivery Wire-Compatible with TCP and TLS</title>
+      <link>https://bford.info/pub/net/nsdi12-minion-abs/</link>
+      <pubDate>Fri, 27 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/nsdi12-minion-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Structured Streams: a New Transport Abstraction</title>
+      <link>https://bford.info/pub/net/sst-abs/</link>
+      <pubDate>Mon, 27 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/sst-abs/</guid>
+      <description>Bryan Ford
+Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract:  Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
+    </item>
+    
+  </channel>
+</rss>

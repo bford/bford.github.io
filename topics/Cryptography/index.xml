@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryptography on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Cryptography/</link>
+    <description>Recent content in Cryptography on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Cryptography/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reducing Metadata Leakage from Encrypted Files and Communication with PURBs</title>
+      <link>https://bford.info/pub/sec/purb-abs/</link>
+      <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/purb-abs/</guid>
+      <description>Kirill Nikitin, Ludovic Barman, Wouter Lueks, Matthew Underwood, Jean-Pierre Hubaux and Bryan Ford EPFL - IC - DEDIS   Proceedings on Privacy Enhancing Technologies
+July 2019.  Abstract: Most encrypted data formats leak metadata via their plaintext headers, such as format version, encryption schemes used, number of recipients who can decrypt the data, and even the recipients’ identities. This leakage can pose security and privacy risks to users, e.</description>
+    </item>
+    
+    <item>
+      <title>MedCo: Enabling Secure and Privacy-Conscious Exploration of Distributed Clinical and Genomic Data</title>
+      <link>https://bford.info/pub/dec/medco-abs/</link>
+      <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/medco-abs/</guid>
+      <description>Jean Louis Raisaro, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Micka&amp;euml;l Misbach, Jo&amp;atilde;o S&amp;aacute; Sousa, Sylvain Pradervand, Edoardo Missiaglia, Olivier Michielin, Bryan Ford, and Jean-Pierre Hubaux   IEEE/ACM Transactions on Computational Biology and Bioinformatics,
+July 13, 2018. Abstract: The increasing number of health-data breaches is creating a complicated environment for medical-data sharing and, consequently, for medical progress. Therefore, the development of new solutions that can reassure clinical sites by enabling privacy-preserving sharing of sensitive medical data in compliance with stringent regulations (e.</description>
+    </item>
+    
+    <item>
+      <title>CHAINIAC: Proactive Software-Update Transparency via Collectively Signed Skipchains and Verified Builds</title>
+      <link>https://bford.info/pub/dec/chainiac-abs/</link>
+      <pubDate>Fri, 18 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/chainiac-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>How Do You Know It&#39;s On the Blockchain? With a SkipChain.</title>
+      <link>https://bford.info/2017/08/01/skipchain/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2017/08/01/skipchain/</guid>
+      <description>A blockchain, or distributed ledger, is a log maintained collectively by a distributed group of participants who agree on and record transactions without relying for security on any single trusted party. While initially popularized by Bitcoin and its derivatives, the blockchain abstraction is not specific to currencies, and there is exploding industry interest in many non-currency uses.
+ 
+Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
+    </item>
+    
+    <item>
+      <title>UnLynx: A Decentralized System for Privacy-Conscious Data Sharing</title>
+      <link>https://bford.info/pub/dec/unlynx-abs/</link>
+      <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/unlynx-abs/</guid>
+      <description>David Froelicher, Patricia Egger, Jo&amp;atilde;o S&amp;aacute; Sousa, Jean Louis Raisaro, Zhicong Huang, Christian Mouchet, Bryan Ford, and Jean-Pierre Hubaux   Privacy Enhancing Technologies Symposium (PETS)
+July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing among multiple parties either depend on a centralized authority that must be trusted and provides only weakest-link security (e.g., the entity that manages private/secret cryptographic keys), or leverage on decentralized but impractical approaches (e.</description>
+    </item>
+    
+    <item>
+      <title>Scalable Bias-Resistant Distributed Randomness</title>
+      <link>https://bford.info/pub/dec/random-abs/</link>
+      <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/random-abs/</guid>
+      <description>Ewa Syta, Philipp Jovanovic, Eleftherios Kokoris Kogias, Nicolas Gailly, Linus Gasser, Ismail Khoffi, Michael J. Fischer, and Bryan Ford
+  IEEE Security &amp; Privacy (IEEE S&amp;P)
+May 23, 2017 Abstract: Bias-resistant public randomness is a critical component in many (distributed) protocols. Generating public randomness is hard, however, because active adversaries may behave dishonestly to bias public random choices toward their advantage. Existing solutions do not scale to hundreds or thousands of participants, as is needed in many decentralized systems.</description>
+    </item>
+    
+    <item>
+      <title>Enhancing Bitcoin Security and Performance with Strong Consistency via Collective Signing</title>
+      <link>https://bford.info/pub/dec/byzcoin-abs/</link>
+      <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/byzcoin-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Apple, FBI, and Software Transparency</title>
+      <link>https://bford.info/2016/03/10/apple/</link>
+      <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2016/03/10/apple/</guid>
+      <description>This post originally appeared on the Freedom to Tinker blog by the Center for Information Technology Policy at Princeton University. 
+The Apple versus FBI showdown has quickly become a crucial flashpoint of the &amp;ldquo;new Crypto War.&amp;rdquo; On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters.</description>
+    </item>
+    
+    <item>
+      <title>Eyo: Device-Transparent Personal Storage</title>
+      <link>https://bford.info/pub/net/eyo-usenix-abs/</link>
+      <pubDate>Wed, 15 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/eyo-usenix-abs/</guid>
+      <description>Jacob Strauss, Justin Mazzola Paluska, Chris Lesniewski-Laas, Bryan Ford, Robert Morris, and Frans Kaashoek
+ 2011 USENIX Annual Technical Conference June 15-17, 2011, Portland, OR, USA Abstract: Users increasingly store data collections such as digital photographs on multiple personal devices, each of which typically offers a storage management interface oblivious to the contents of the user’s other devices. As a result, collections become disorganized and drift out of sync.</description>
+    </item>
+    
+    <item>
+      <title>Dissent: Accountable Anonymous Group Messaging</title>
+      <link>https://bford.info/pub/net/dissent-abs/</link>
+      <pubDate>Mon, 04 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/dissent-abs/</guid>
+      <description>Henry Corrigan-Gibbs and Bryan Ford
+	Yale University  To appear in 17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract:  Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
+    </item>
+    
+    <item>
+      <title>Efficient Cross-Layer Negotiation</title>
+      <link>https://bford.info/pub/net/nego-abs/</link>
+      <pubDate>Thu, 22 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/nego-abs/</guid>
+      <description>Bryan Ford
+	Janardhan Iyengar
+	Yale University 	Franklin &amp;amp; Marshall College  Published in Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII) October 22-23, 2009, New York City, NY, USA Abstract: Internet evolution often depends on either inserting new protocol layers or upgrading existing layers to new protocols, but both of these evolutionary paths are obstructed by the difficulty and inefficiency of determining which protocols a pair of hosts mutually support and prefer.</description>
+    </item>
+    
+    <item>
+      <title>UIA: A Global Connectivity Architecture for Mobile Personal Devices</title>
+      <link>https://bford.info/pub/net/phd-abs/</link>
+      <pubDate>Mon, 01 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/phd-abs/</guid>
+      <description>Bryan Ford
+Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications.  Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
+    </item>
+    
+    <item>
+      <title>Alpaca: Extensible Authorization for Distributed Services</title>
+      <link>https://bford.info/pub/net/alpaca-abs/</link>
+      <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/alpaca-abs/</guid>
+      <description>Chris Lesniewski-Laas, Bryan Ford, Jacob Strauss, Robert Morris, and M. Frans Kaashoek
+Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract:  Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
+    </item>
+    
+    <item>
+      <title>Structured Streams: a New Transport Abstraction</title>
+      <link>https://bford.info/pub/net/sst-abs/</link>
+      <pubDate>Mon, 27 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/sst-abs/</guid>
+      <description>Bryan Ford
+Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract:  Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
+    </item>
+    
+    <item>
+      <title>Unmanaged Internet Protocol: Taming the Edge Network Management Crisis</title>
+      <link>https://bford.info/pub/os/uip-case-abs/</link>
+      <pubDate>Thu, 20 Nov 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/uip-case-abs/</guid>
+      <description>Bryan Ford Massachusetts Institute of Technology   Second Workshop on Hot Topics in Networks
+November 20-21, 2003  Abstract: Though appropriate for core Internet infrastructure, the Internet Protocol is unsuited to routing within and between emerging ad-hoc edge networks due to its dependence on hierarchical, administratively assigned addresses. Existing ad-hoc routing protocols address the management problem but do not scale to Internet-wide networks. The promise of ubiquitous network computing cannot be fulfilled until we develop an Unmanaged Internet Protocol (UIP), a scalable routing protocol that manages itself automatically.</description>
+    </item>
+    
+  </channel>
+</rss>

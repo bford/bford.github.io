@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Parsing on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Parsing/</link>
+    <description>Recent content in Parsing on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Jan 2004 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Parsing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Parsing Expression Grammars: A Recognition-Based Syntactic Foundation</title>
+      <link>https://bford.info/pub/lang/peg/</link>
+      <pubDate>Wed, 14 Jan 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/peg/</guid>
+      <description>Bryan Ford
+Massachusetts Institute of Technology  Symposium on Principles of Programming Languages, January 14-16, 2004, Venice, Italy   Abstract For decades we have been using Chomsky&#39;s generative system of grammars, particularly context-free grammars (CFGs) and regular expressions (REs), to express the syntax of programming languages and protocols. The power of generative grammars to express ambiguity is crucial to their original purpose of modelling natural languages, but this very power makes it unnecessarily difficult both to express and to parse machine-oriented languages using CFGs.</description>
+    </item>
+    
+    <item>
+      <title>Packrat Parsing: Simple, Powerful, Lazy, Linear Time</title>
+      <link>https://bford.info/pub/lang/packrat-icfp02/</link>
+      <pubDate>Fri, 04 Oct 2002 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/packrat-icfp02/</guid>
+      <description>Bryan Ford
+Massachusetts Institute of Technology  International Conference on Functional Programming, October 4-6, 2002, Pittsburgh   Abstract Packrat parsing is a novel technique for implementing parsers in a lazy functional programming language. A packrat parser provides the power and flexibility of top-down parsing with backtracking and unlimited lookahead, but nevertheless guarantees linear parse time. Any language defined by an LL(k) or LR(k) grammar can be recognized by a packrat parser, in addition to many languages that conventional linear-time algorithms do not support.</description>
+    </item>
+    
+    <item>
+      <title>Packrat Parsing: a Practical Linear-Time Algorithm with Backtracking</title>
+      <link>https://bford.info/pub/lang/thesis/</link>
+      <pubDate>Tue, 03 Sep 2002 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/thesis/</guid>
+      <description>Bryan Ford
+Master&#39;s Thesis
+Massachusetts Institute of Technology   Abstract  Packrat parsing is a novel and practical method for implementing linear-time parsers for grammars defined in Top-Down Parsing Language (TDPL). While TDPL was originally created as a formal model for top-down parsers with backtracking capability, this thesis extends TDPL into a powerful general-purpose notation for describing language syntax, providing a compelling alternative to traditional context-free grammars (CFGs).</description>
+    </item>
+    
+  </channel>
+</rss>

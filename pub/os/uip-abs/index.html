@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Scalable Internet Routing on Topology-Independent Node Identities &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Scalable Internet Routing on Topology-Independent Node Identities</h1>
+  
+<center>
+<strong>
+Bryan Ford
+
+<br>
+Massachusetts Institute of Technology
+</strong>
+
+<p>
+Technical Report MIT-LCS-TR-926<br>
+October 31, 2003
+</p>
+</center>
+
+<h3>Abstract:</h3>
+<i>Unmanaged Internet Protocol (UIP)</i> is a fully self-organizing
+network-layer protocol that implements scalable <i>identity-based routing</i>.
+In contrast with address-based routing protocols, which depend for scalability
+on centralized hierarchical address management, UIP nodes use a flat namespace
+of cryptographic node identifiers. Node identities can be created locally on
+demand and remain stable across network changes. Unlike location-independent
+name services, the UIP routing protocol can stitch together many conventional
+address-based networks with disjoint or discontinuous address domains,
+providing connectivity between any pair of participating nodes even when no
+underlying network provides direct connectivity. The UIP routing protocol works
+on networks with arbitrary topologies and global traffic patterns, and requires
+only O(log <i>N</i>) storage per node for routing state, enabling even small,
+ubiquitous edge devices to act as ad-hoc self-configuring routers. The protocol
+rapidly recovers from network partitions, bringing every node up-to-date in a
+multicast-based chain reaction of O(log <i>N</i>) depth. Simulation results
+indicate that UIP finds routes that are on average within 2× the length of the
+best possible route.
+
+<h3>Paper:
+<a href="../uip.pdf">PDF</a>
+<a href="../uip.ps.gz">PostScript</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Networks/">Networks</a>
+	
+		<a href="/topics/Identity/">Identity</a>
+	
+		<a href="/topics/Scalability/">Scalability</a>
+	
+		<a href="/topics/Routing/">Routing</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

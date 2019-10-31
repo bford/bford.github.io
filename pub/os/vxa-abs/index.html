@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  VXA: A Virtual Architecture for Durable Compressed Archives &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>VXA: A Virtual Architecture for Durable Compressed Archives</h1>
+  
+<P ALIGN="CENTER"><STRONG>Bryan Ford</STRONG><br>
+	<I>Massachusetts Institute of Technology</I></P>
+
+<p align="center">
+<i><a href="http://www.usenix.org/events/fast05/">
+4th USENIX Conference on File and Storage Technologies (FAST '05)</a><br>
+	December 16, 2005, San Francisco, California, USA.</i>
+</p>
+
+<H3>Abstract:</H3>
+
+<P>
+Data compression algorithms change frequently,
+and obsolete decoders
+do not always run on new hardware and operating systems,
+threatening the long-term usability
+of content archived using those algorithms.
+Re-encoding content into new formats is cumbersome,
+and highly undesirable when lossy compression is involved.
+Processor architectures,
+in contrast,
+have remained comparatively stable
+over recent decades.
+VXA, an archival storage system designed around this observation,
+archives executable decoders along with the encoded content it stores.
+VXA decoders run in a specialized virtual machine
+that implements an OS-independent execution environment
+based on the standard x86 architecture.
+The VXA virtual machine strictly limits access
+to host system services,
+making decoders safe to run
+even if an archive contains malicious code.
+VXA's adoption of a &ldquo;native&rdquo; processor architecture
+instead of type-safe language technology
+allows reuse of existing &ldquo;hand-optimized&rdquo; decoders
+in C and assembly language,
+and permits decoders access to
+performance-enhancing architecture features
+such as vector processing instructions.
+The performance cost of VXA's virtualization is typically less than 15%
+compared with the same decoders running natively.
+The storage cost of archived decoders,
+typically 30-130KB each,
+can be amortized across many archived files
+sharing the same compression method.
+
+
+<H3>Full Paper:
+<a href="../vxa.pdf">PDF</a>
+<a href="../vxa.ps.gz">PS</a>
+<a href="../vxa/">HTML</a>
+</H3>
+
+<H3>
+Presentation Slides:
+<a href="../vxa-slides">HTML</a>
+<a href="../vxa-slides.pdf">PDF</a>
+<a href="../vxa-slides.odp">OpenOffice</a>
+</H3>
+
+<H3>Project Home Page:
+<a href="http://pdos.csail.mit.edu/~baford/vxa/">
+<tt>http://pdos.csail.mit.edu/~baford/vxa/</tt></a>
+</H3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Virtual-Machines/">Virtual Machines</a>
+	
+		<a href="/topics/Security/">Security</a>
+	
+		<a href="/topics/Storage/">Storage</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

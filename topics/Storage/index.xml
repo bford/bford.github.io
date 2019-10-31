@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Storage on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Storage/</link>
+    <description>Recent content in Storage on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Dec 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Storage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GPUfs: The Case for Operating System Services on GPUs</title>
+      <link>https://bford.info/pub/os/gpufs-cacm/</link>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/gpufs-cacm/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>GPUfs: Integrating a File System with GPUs</title>
+      <link>https://bford.info/pub/os/gpufs/</link>
+      <pubDate>Wed, 20 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/gpufs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Device Transparency: a New Model for Mobile Storage</title>
+      <link>https://bford.info/pub/net/devtransp-abs/</link>
+      <pubDate>Sun, 11 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/devtransp-abs/</guid>
+      <description>Jacob Strauss
+	Chris Lesniewski-Laas
+	Justin Mazzola Paluska
+	Bryan Ford
+	Robert Morris
+	Frans Kaashoek
+ Published in SOSP Workshop on Hot Topics in Storage and File Systems (HotStorage &#39;09) October 11, 2009, Big Sky, MT, USA Abstract: This paper proposes a new storage model, device transparency, in which users view and manage their entire data collection from any of their devices, even from disconnected storage-limited devices holding only a subset of the entire collection.</description>
+    </item>
+    
+    <item>
+      <title>VXA: A Virtual Architecture for Durable Compressed Archives</title>
+      <link>https://bford.info/pub/os/vxa-abs/</link>
+      <pubDate>Fri, 16 Dec 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/vxa-abs/</guid>
+      <description>Bryan Ford
+Massachusetts Institute of Technology 4th USENIX Conference on File and Storage Technologies (FAST &#39;05)
+December 16, 2005, San Francisco, California, USA. Abstract:  Data compression algorithms change frequently, and obsolete decoders do not always run on new hardware and operating systems, threatening the long-term usability of content archived using those algorithms. Re-encoding content into new formats is cumbersome, and highly undesirable when lossy compression is involved. Processor architectures, in contrast, have remained comparatively stable over recent decades.</description>
+    </item>
+    
+    <item>
+      <title>Cache Directory Tagging</title>
+      <link>https://bford.info/2004/10/27/cachedir/</link>
+      <pubDate>Wed, 27 Oct 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2004/10/27/cachedir/</guid>
+      <description>  </description>
+    </item>
+    
+  </channel>
+</rss>

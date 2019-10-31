@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Efficient Cross-Layer Negotiation &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Efficient Cross-Layer Negotiation</h1>
+  
+<table width="75%" align="center">
+<tr align="center">
+<td>	<STRONG>Bryan Ford</STRONG><br>
+<td>	<STRONG>Janardhan Iyengar</STRONG><br>
+<tr align="center">
+<td>	<I>Yale University</I></P>
+<td>	<I>Franklin &amp; Marshall College</I></P>
+</table>
+
+<p align="center">
+<i>Published in <a href="http://conferences.sigcomm.org/hotnets/2009/">
+	Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII)</a> <br>
+	October 22-23, 2009, New York City, NY, USA</i>
+</p>
+
+<H3>Abstract:</H3>
+
+Internet evolution often depends on
+either inserting new protocol layers
+or upgrading existing layers to new protocols,
+but both of these evolutionary paths are obstructed
+by the difficulty and inefficiency of determining
+<i>which</i> protocols a pair of hosts mutually support and prefer.
+We propose a novel cross-layer Negotiation Protocol
+that sets up a complete stack of connection-oriented protocols at once,
+concurrently performing handshaking for multiple layers
+and choosing among alternative protocols for each layer
+in as few round trips as possible, often just one.
+The initiator proposes a protocol graph
+explicitly encoding possible configurations
+along with protocol-specific handshake data;
+the peers then prune, refine, and atomically commit to a final configuration,
+exchanging messages over a specialized transport
+that can operate in-line with the negotiated protocol stack.
+Although a practical Negotiation Protocol presents many challenges,
+our initial exploration suggests that these challenges are solvable,
+and we believe addressing them is a necessary step
+toward a more evolvable Internet.
+
+<P>
+
+<H3>Full Paper:
+<a href="../nego.pdf">PDF</a>
+</H3>
+
+<H3>HotNets Presentation Slides:
+<a href="../nego-slides.pdf">PDF</a>
+<a href="../nego-slides.odp">OpenOffice</a>
+</H3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Networks/">Networks</a>
+	
+		<a href="/topics/Cryptography/">Cryptography</a>
+	
+		<a href="/topics/Identity/">Identity</a>
+	
+		<a href="/topics/Transport-Layer/">Transport Layer</a>
+	
+		<a href="/topics/Modularity/">Modularity</a>
+	
+		<a href="/topics/Layering/">Layering</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

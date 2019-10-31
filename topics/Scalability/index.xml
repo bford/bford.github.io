@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scalability on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Scalability/</link>
+    <description>Recent content in Scalability on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Scalability/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rethinking General-Purpose Decentralized Computing</title>
+      <link>https://bford.info/pub/os/protean-abs/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/protean-abs/</guid>
+      <description>Enis Ceyhun Alp, Eleftherios Kokoris-Kogias, Georgia Fragkouli, and Bryan Ford EPFL - IC - DEDIS   17th Workshop on Hot Topics in Operating Systems (HotOS XVII)
+May 12-15, 2019.  Abstract: While showing great promise, smart contracts are difficult to program correctly, as they need a deep understanding of cryptography and distributed algorithms, and offer limited functionality, as they have to be deterministic and cannot operate on secret data.</description>
+    </item>
+    
+    <item>
+      <title>OmniLedger: A Secure, Scale-Out, Decentralized Ledger via Sharding</title>
+      <link>https://bford.info/pub/dec/omniledger-abs/</link>
+      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/omniledger-abs/</guid>
+      <description>Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, Ewa Syta, and Bryan Ford
+  IEEE Security &amp; Privacy (IEEE S&amp;P)
+May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blockchain) that performs on par with centralized payment processors, such as Visa, is a challenging task. Most existing distributed ledgers are unable to scale-out, i.e., to grow their total processing capacity with the number of validators; and those that do, compromise security or decentralization.</description>
+    </item>
+    
+    <item>
+      <title>Atom: Horizontally Scaling Strong Anonymity</title>
+      <link>https://bford.info/pub/dec/atom-abs/</link>
+      <pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/atom-abs/</guid>
+      <description>Albert Kwon
+MIT  Henry Corrigan-Gibbs
+Stanford  Srinivas Devadas
+MIT  Bryan Ford
+EPFL    26th ACM Symposium on Operating Systems Principles (SOSP)
+October 30, 2017 Abstract: Atom is an anonymous messaging system that protects against traffic-analysis attacks. Unlike many prior systems, each Atom server touches only a small fraction of the total messages routed through the network. As a result, the system’s capacity scales near-linearly with the number of servers.</description>
+    </item>
+    
+    <item>
+      <title>Scalable Bias-Resistant Distributed Randomness</title>
+      <link>https://bford.info/pub/dec/random-abs/</link>
+      <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/random-abs/</guid>
+      <description>Ewa Syta, Philipp Jovanovic, Eleftherios Kokoris Kogias, Nicolas Gailly, Linus Gasser, Ismail Khoffi, Michael J. Fischer, and Bryan Ford
+  IEEE Security &amp; Privacy (IEEE S&amp;P)
+May 23, 2017 Abstract: Bias-resistant public randomness is a critical component in many (distributed) protocols. Generating public randomness is hard, however, because active adversaries may behave dishonestly to bias public random choices toward their advantage. Existing solutions do not scale to hundreds or thousands of participants, as is needed in many decentralized systems.</description>
+    </item>
+    
+    <item>
+      <title>Enhancing Bitcoin Security and Performance with Strong Consistency via Collective Signing</title>
+      <link>https://bford.info/pub/dec/byzcoin-abs/</link>
+      <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/byzcoin-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Maple: Simplifying SDN Programming Using Algorithmic Policies</title>
+      <link>https://bford.info/pub/net/maple-abs/</link>
+      <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/maple-abs/</guid>
+      <description>Andreas Voellmy, Junchang Wang, Y. Richard Yang, Bryan Ford, and Paul Hudak   ACM SIGCOMM 2013
+August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a simple, centralized programming model for managing complex networks. However, challenges in managing low-level details, such as setting up and maintaining correct and efficient forwarding tables on distributed switches, often compromise this conceptual simplicity. In this paper, we present Maple, a system that simplifies SDN programming by (1) allowing a programmer to use a standard programming language to design an arbitrary, centralized algorithm, which we call an algorithmic policy, to decide the behaviors of an entire network, and (2) providing an abstraction that the programmer-defined, centralized policy runs, conceptually, &amp;ldquo;afresh&amp;rdquo; on every packet entering a network, and hence is oblivious to the challenge of translating a high-level policy into sets of rules on distributed individual switches.</description>
+    </item>
+    
+    <item>
+      <title>Lazy Tree Mapping: Generalizing and Scaling Deterministic Parallelism</title>
+      <link>https://bford.info/pub/os/lazy-tree-mapping/</link>
+      <pubDate>Mon, 29 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/lazy-tree-mapping/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Scaling Software-Defined Network Controllers on Multicore Servers</title>
+      <link>https://bford.info/pub/os/scaling-sdn-abs/</link>
+      <pubDate>Sun, 01 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/scaling-sdn-abs/</guid>
+      <description>Andreas Voellmy, Bryan Ford, Paul Hudak, and Y. Richard Yang Yale University Department of Computer Science
+  Technical Report YALEU/DCS/TR-1468
+July 2012  Abstract: Software defined networks (SDN) introduce centralized controllers to drastically increase network programmability. The simplicity of a logical centralized controller, however, can come at the cost of controller programming complexity and scalability. In this paper, we present McNettle, an extensible SDN controller system whose control event processing throughput scales with the number of system CPU cores and which supports control algorithms requiring globally visible state changes occurring at flow arrival rates.</description>
+    </item>
+    
+    <item>
+      <title>A Virtual Memory Foundation for Scalable Deterministic Parallelism</title>
+      <link>https://bford.info/pub/os/determ-vm/</link>
+      <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/determ-vm/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Scalable Internet Routing on Topology-Independent Node Identities</title>
+      <link>https://bford.info/pub/os/uip-abs/</link>
+      <pubDate>Fri, 31 Oct 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/uip-abs/</guid>
+      <description>Bryan Ford Massachusetts Institute of Technology   Technical Report MIT-LCS-TR-926
+October 31, 2003  Abstract: Unmanaged Internet Protocol (UIP) is a fully self-organizing network-layer protocol that implements scalable identity-based routing. In contrast with address-based routing protocols, which depend for scalability on centralized hierarchical address management, UIP nodes use a flat namespace of cryptographic node identifiers. Node identities can be created locally on demand and remain stable across network changes.</description>
+    </item>
+    
+  </channel>
+</rss>

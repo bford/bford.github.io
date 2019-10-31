@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  UIA: A Global Connectivity Architecture for Mobile Personal Devices &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>UIA: A Global Connectivity Architecture for Mobile Personal Devices</h1>
+  
+<p align="center">
+<STRONG>Bryan Ford</STRONG><br>
+<i>Ph.D. thesis, <a href="http://www.mit.edu/">Massachusetts Institute of Technology</a>, September 2008.</i>
+</p>
+
+<H3>Abstract:</H3>
+
+<p>
+The Internet's architecture,
+designed in the days of large, stationary computers
+tended by technically savvy and accountable administrators,
+fails to meet the demands of
+the emerging ubiquitous computing era.
+Nontechnical users now routinely own multiple personal devices,
+many of them mobile,
+and need to share information securely among them
+using interactive, delay-sensitive applications.
+        
+<p>
+<i>Unmanaged Internet Architecture</i> (UIA)
+is a novel, incrementally deployable network architecture
+for modern personal devices,
+which reconsiders three architectural cornerstones:
+naming, routing, and transport.
+UIA augments the Internet's global name system
+with a <i>personal name system</i>,
+enabling users to build personal administrative groups
+easily and intuitively,
+to establish secure bindings between his devices
+and with other users' devices,
+and to name his devices and his friends
+much like using a cell phone's address book.
+To connect personal devices reliably,
+even while mobile, behind NATs or firewalls,
+or connected via isolated ad hoc networks,
+UIA gives each device a persistent, location-independent <i>identity</i>,
+and builds an <i>overlay routing service</i> atop IP
+to resolve and route among these identities.
+Finally, to support today's interactive applications
+built using concurrent transactions and delay-sensitive media streams,
+UIA introduces a new <i>structured stream</i> transport abstraction,
+which solves the efficiency and responsiveness problems of TCP streams
+and the functionality limitations of UDP datagrams. 
+
+<p>
+Preliminary protocol designs and implementations 
+demonstrate UIA's features and benefits. 
+A personal naming prototype
+supports easy and portable group management,
+allowing use of personal names alongside global names
+in unmodified Internet applications.
+A prototype overlay router leverages the naming layer's social network
+to provide efficient ad hoc connectivity
+in restricted but important common-case scenarios.
+Simulations of more general routing protocols&mdash;one
+inspired by distributed hash tables,
+one based on recent compact routing theory&mdash;explore
+promising generalizations to UIA's overlay routing.
+A library-based prototype of UIA's structured stream transport
+enables incremental deployment
+in either OS infrastructure or applications,
+and demonstrates the responsiveness benefits of the new transport abstraction
+via dynamic prioritization of interactive web downloads.
+Finally, an exposition and experimental evaluation of NAT traversal techniques
+provides insight into routing optimizations useful in UIA and elsewhere.
+
+
+<P>
+
+<H3>Full Thesis:
+<a href="../phd.pdf">PDF</a>
+</H3>
+
+<H3>Slides:
+<a href="../phd-slides.pdf">PDF</a>
+<a href="../phd-slides.odp">OpenOffice</a>
+</H3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Peer-to-peer/">Peer-to-peer</a>
+	
+		<a href="/topics/Networks/">Networks</a>
+	
+		<a href="/topics/Cryptography/">Cryptography</a>
+	
+		<a href="/topics/Security/">Security</a>
+	
+		<a href="/topics/Identity/">Identity</a>
+	
+		<a href="/topics/Layering/">Layering</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

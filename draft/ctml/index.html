@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Composable Text Markup Language (CTML) &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Composable Text Markup Language (CTML)</h1>
+  
+
+<p>CTML is simply an alternate character-level syntax for HTML.
+It otherwise closes closely to HTML (currently HTML5 in particular),
+and is designed to be easily convertible both to and from HTML.</p>
+
+<p>The main goal of CTML is to satisfy the CTS metasyntactic discipline,
+so that CTML can be readily composed with other CTL-compliant languages
+without escaping.
+Secondary goals are to be more concise, readable, and easily typeable
+than HTML,
+while keeping the syntax simple and readily cross-convertible with HTML.
+CTML does not try to be as &ldquo;intuitively&rdquo; readable as Markdown, for example,
+but is much simpler syntactically (e.g., no complex layout-dependent rules),
+and much easier to generate automatically (e.g., via conversion from HTML).</p>
+
+<p>CTML is also syntactically much simpler than HTML.
+Like XML/XHTML, CTML is more rigorous in enforcing the rules it does specify
+(e.g., that matchers must match).
+But it avoids many of the syntactic quirks and complexities of HTML syntax
+derived from SGML tradition and decades of gradual evolution.</p>
+
+<h2 id="syntax">Syntax</h2>
+
+<p>CTML uses only three primitive syntactic structures:
+<em>text</em>, <em>markups</em>, and <em>character references</em>.</p>
+
+<p>Text is arbitrary free-form text,
+whose content is mostly unrestricted,
+provided that it obeys CTS&rsquo;s global &ldquo;matchers must match&rdquo; rule
+and cannot be confused with the other syntactic structures.</p>
+
+<p>Markups are hierarchically composable structures consisting of
+a fixed <em>tag</em>, optional <em>attributes</em>, and a required <em>content</em> string,
+as follows:</p>
+
+<pre><code>tag[content]
+tag(attributes)[content]
+</code></pre>
+
+<p>&hellip;</p>
+
+<h2 id="ctml-document-structure">CTML document structure</h2>
+
+<p>ctml[
+    head[
+        &hellip;
+    ]
+    body[
+        &hellip;
+    ]
+]</p>
+
+<h3 id="ctml-document-identifiation">CTML document identifiation</h3>
+
+<p>CTML does not specify or allow any analog of the HTML DOCTYPE preamble.</p>
+
+<p>This does not mean CTML documents are not self-identifying, however,
+The entire semantic content of a CTML document must be contained
+in a top-level <code>ctml</code> entity,
+directly mirroring HTML&rsquo;s top-level <code>html' entity.
+Unlike HTML, which allows the</code><html><code>start tag to be omitted
+in some situations,
+the</code>ctml&rsquo; marker is mandatory,
+and thus may be used to identify a CTML document.</p>
+
+<h2 id="entities">Entities</h2>
+
+<p>An entity with no attributes is simply:</p>
+
+<pre><code>tag[content]
+</code></pre>
+
+<p>where <code>tag</code> is the entity tag name and <code>content</code>
+is the text it contains, if any.
+CTML does not use start and end tags like HTML:
+all delimiting is done with the start tag and the bracket pair.</p>
+
+<p>An entity&rsquo;s content can be empty.
+This is typical for entities like <code>p</code> (paragraph) and <code>br</code> (break),
+which in CTML become:</p>
+
+<pre><code>p[]
+br[]
+</code></pre>
+
+<p>The brackets are never optional in CTML:
+a <code>p</code> alone does not denote a paragraph marker for example.
+In addition, the open bracket must <em>immediately</em> follow
+the last character of the tag name,
+with no intervening whitespace.</p>
+
+<p>CTML tag names use the same character set as HTML (XXX check).</p>
+
+<h3 id="entity-attributes">Entity Attributes</h3>
+
+<p>Entities can have attributes, by placing the full attribute string
+in parentheses between the tag name and the bracketed content, like this:</p>
+
+<pre><code>(img src=&quot;pic.jpg&quot;)[]
+(a href=&quot;target.html&quot;)[link text]
+</code></pre>
+
+<p>Entity attribute syntax itself is exactly as in HTML.
+There may be any number of attributes,
+each with an option value.
+Attribute values can be either unquoted (<code>attr=value</code>),
+single-quoted (<code>attr='value'</code>),
+or double-quoted (<code>attr=&quot;value&quot;</code>),
+exactly as in HTML.</p>
+
+<p>Entities without attributes can also used the parenthesized form,
+as in:</p>
+
+<pre><code>(em)[emphasized text]
+</code></pre>
+
+<p>This form can be useful if the markup needs to follow
+other literal text immediately with no intervening whitespace.
+To emphasize just part of a word, for example:</p>
+
+<pre><code>abso(em)[friggin]lutely.
+</code></pre>
+
+<h2 id="comments">Comments</h2>
+
+<p>A comment markup in CTML is much simpler than in HTML,
+consisting only of a hyphen (<code>-</code>) immediately followed by bracketed text,
+the contents of which is ignored:</p>
+
+<pre><code>-[comment text]
+</code></pre>
+
+<p>Comments may be arbitrarily long and contain any characters,
+subject only to the all-pervasive &ldquo;matchers must match&rdquo; rule.</p>
+
+<h2 id="literal-text">Literal text</h2>
+
+<p>While most normal running text does not need to be in any markup,
+the special <code>.</code> markup encloses uninterpreted literal text
+and prevents any of its content from being confused as markup:</p>
+
+<pre><code>.[literal text]
+</code></pre>
+
+<p>Within the literal text, <em>all</em> characters are allowed
+and none are considered to have special meaning,
+apart from the &ldquo;matchers must match&rdquo; rule.
+As an example:</p>
+
+<pre><code>Here is some em[emphasized] text.
+You emphasize text using .[em[emphasized]] markup.
+</code></pre>
+
+<p>Another situation needing the <code>.</code> markup form
+is when literal text ending in alphanumeric characters
+needs to be immediately followed by a markup tag
+with no intervening whitespace.
+To emphasize only part of a word, for example,
+we can either protect the preceding literal text with a <code>.</code> markup
+or simply divide the two with an empty <code>.[]</code> markup:</p>
+
+<pre><code>.[Abso]em[friggin]lutely.
+Abso.[]em[friggin]lutely.
+</code></pre>
+
+<h3 id="literal-matchers">Literal matchers</h3>
+
+<p>Sometimes we need running literal text
+to contain unmatched matcher characters:
+for example, when we are writing about those literal characters.
+We cannot include unmatched matchers directly, however,
+without violating the global &ldquo;matchers must match&rdquo; rule.
+For this reason, CTML provides the following markup forms to represent
+unmatched open or close punctuation characters:</p>
+
+<pre><code>o() open parenthesis `(`
+c() close parenthesis `)`
+o[] open bracket `[`
+c[] close bracket `]`
+o{} open brace `{`
+c{} close brace `}`
+</code></pre>
+
+<p>While literal matchers could alternatively be escaped
+using character references as described below,
+the above markup forms are more concise and have the clarity benefit
+of using exactly the desired matcher characters via matching pairs,
+but merely using the <code>o</code> or <code>c</code> tag to indicate whether
+it is the open or close member of the punctuation pair
+that is desired as literal text.</p>
+
+<h2 id="character-references">Character references</h2>
+
+<p>Like HTML, CTML allows both regular text and attributes
+to contain <em>character references</em>,
+or ASCII sequences denoting rich Unicode characters
+that often cannot be typed directly on most keyboards.
+Character references may use either standard entity names
+or numeric code points,
+but CTML surrounds the character reference in brackets
+instead of with an ampersand (<code>&amp;</code>) and semicolon (<code>;</code>) pair.
+Numeric code points can be in decimal or hexadecimal, as in HTML.
+Some examples, with both named and numeric equivalents:</p>
+
+<pre><code>é   [eacute]    [#233]      [#xE9]
+©   [copy]      [#169]      [#xA9]
+→   [rightarrow]    [#8594]     [#x2192]
+</code></pre>
+
+<p>Since UTF-8 has become the standard text file encoding
+and directly supports all of these code points,
+smart text editors or other tools might recognize and convert
+non-ASCII character references to their equivalent Unicode characters
+under some mode under the user&rsquo;s control.
+In this way, bracketed character references may be used
+for ephemeral text-entry rather than markup.
+Such conversion of character references to characters
+should <em>not</em> generally be done on references to ASCII characters, however,
+which may cause insensitive characters such as matchers
+to be treated as sensitive.</p>
+
+<h3 id="escaping-sensitive-characters">Escaping sensitive characters</h3>
+
+<p>Also like HTML, character references in CTML may be used to
+escape literal ASCII characters that would otherwise be sensitive.
+The set of characters that (sometimes) needs escaping is different, however.
+CTML never needs less-than, greater-than, or ampersand characters
+(<code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>) to be escaped as in HTML.
+CTML does require matchers to be escaped
+(<code>(</code>, <code>)</code>, <code>[</code>, <code>]</code>, <code>{</code>, <code>}</code>),
+but only when they would violate the global &ldquo;matchers must match&rdquo; rule.
+A normal English parenthetical expression, curly-brace-delimited C code block,
+and the like, are all fine and need no escaping provided the matchers match.</p>
+
+<p>If running text or an attribute&rsquo;s value needs to contain an unmatched matcher,
+then a character reference may be used to refer to the literal character,
+as an alternative to the <code>o</code> and <code>c</code> markup forms discussed above.
+Thus, the forms in each row below are equivalent:</p>
+
+<pre><code>o()     [lpar]      [#40]       [#x28]
+c()     [rpar]      [#41]       [#x29]
+o[]     [lbrack]    [#91]       [#x58]
+c[]     [rbrack]    [#93]       [#x5D]
+o{}     [lbrace]    [#123]      [#x7B]
+c{}     [rbrace]    [#125]      [#x7D]
+</code></pre>
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

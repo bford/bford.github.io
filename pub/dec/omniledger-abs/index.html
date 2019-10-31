@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  OmniLedger: A Secure, Scale-Out, Decentralized Ledger via Sharding &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>OmniLedger: A Secure, Scale-Out, Decentralized Ledger via Sharding</h1>
+  
+<center>
+<STRONG>
+Eleftherios Kokoris-Kogias,
+Philipp Jovanovic,
+Linus Gasser,
+Nicolas Gailly,
+Ewa Syta, and
+Bryan Ford<br>
+</STRONG>
+</center>
+
+<p align="center">
+<a href="https://www.ieee-security.org/TC/SP2018/">
+IEEE Security & Privacy (IEEE S&P)</a><br>
+	May 22, 2018
+</p>
+
+<H3>Abstract:</H3>
+Designing a secure permissionless distributed ledger
+(blockchain) that performs on par with centralized payment
+processors, such as Visa, is a challenging task. Most existing
+distributed ledgers are unable to scale-out, i.e., to grow their total
+processing capacity with the number of validators; and those that
+do, compromise security or decentralization. We present OmniLedger,
+a novel scale-out distributed ledger that preserves longterm
+security under permissionless operation. It ensures security
+and correctness by using a bias-resistant public-randomness
+protocol for choosing large, statistically representative shards
+that process transactions, and by introducing an efficient crossshard
+commit protocol that atomically handles transactions affecting
+multiple shards. OmniLedger also optimizes performance
+via parallel intra-shard transaction processing, ledger pruning
+via collectively-signed state blocks, and low-latency &ldquo;trust-butverify&rdquo;
+validation for low-value transactions. An evaluation of
+our experimental prototype shows that OmniLedger&rsquo;s throughput
+scales linearly in the number of active validators, supporting
+Visa-level workloads and beyond, while confirming typical transactions
+in under two seconds.
+
+<H3>Paper:
+<a href="../omniledger.pdf">PDF</a>
+</H3>
+
+<H3>Slides:
+<a href="../omniledger-slides.pdf">PDF</a>
+<a href="../omniledger-slides.key">KeyNote</a>
+</H3>
+
+<H3>Video:
+<a href="https://www.youtube.com/watch?v=f1pyaAZ7bj0">YouTube</a>
+</H3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Blockchain/">Blockchain</a>
+	
+		<a href="/topics/Scalability/">Scalability</a>
+	
+		<a href="/topics/Security/">Security</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

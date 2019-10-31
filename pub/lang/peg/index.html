@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Parsing Expression Grammars: A Recognition-Based Syntactic Foundation &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Parsing Expression Grammars: A Recognition-Based Syntactic Foundation</h1>
+  
+<center>
+<h3>Bryan Ford<br>
+Massachusetts Institute of Technology
+
+<p>
+	<a href="http://www.cs.princeton.edu/~dpw/popl/04/">
+	Symposium on Principles of Programming Languages,
+	January 14-16, 2004, Venice, Italy</a>
+</h3>
+</center>
+
+<h3>Abstract</h3>
+
+For decades we have been using Chomsky's generative system of grammars,
+particularly context-free grammars (CFGs) and regular expressions (REs),
+to express the syntax of
+programming languages and protocols.
+The power of generative grammars to express ambiguity
+is crucial to their original purpose of modelling natural languages,
+but this very power makes it unnecessarily difficult
+both to express and to parse machine-oriented languages using CFGs.
+Parsing Expression Grammars (PEGs) provide
+an alternative, recognition-based formal foundation
+for describing machine-oriented syntax,
+which solves the ambiguity problem
+by not introducing ambiguity in the first place.
+Where CFGs express nondeterministic choice between alternatives,
+PEGs instead use <i>prioritized choice</i>.
+PEGs address frequently felt expressiveness limitations
+of CFGs and REs,
+simplifying syntax definitions and making it unnecessary
+to separate their lexical and hierarchical components.
+A linear-time parser can be built for any PEG,
+avoiding both the complexity and fickleness of LR parsers
+and the inefficiency of generalized CFG parsing.
+While PEGs provide a rich set of operators
+for constructing grammars,
+they are reducible
+to two minimal recognition schemas developed around 1970,
+TS/TDPL and gTS/GTDPL,
+which are here proven equivalent in effective recognition power.
+
+<h3>Full Paper:
+<a href="../peg.pdf">PDF</a>
+<a href="../peg.ps.gz">PostScript</a>
+</h3>
+
+<h3>Slides:
+<a href="../peg-slides.pdf">PDF</a>
+<a href="../peg-slides">HTML</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Programming-Languages/">Programming Languages</a>
+	
+		<a href="/topics/Parsing/">Parsing</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

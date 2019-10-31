@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Advanced Development of Certified OS Kernels &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Advanced Development of Certified OS Kernels</h1>
+  
+<center>
+<STRONG>
+Zhong Shao and Bryan Ford
+<br>
+
+Department of Computer Science,
+Yale University
+</STRONG>
+
+<p>
+<a href="https://cpsc.yale.edu/sites/default/files/files/tr1436.pdf"
+	>Yale University Technical Report TR1436</a><br>
+July 15, 2010
+</p>
+</center>
+
+<H3>Abstract:</H3>
+
+Operating System (OS) kernels form the bedrock of all system software&mdash;they can
+have the greatest impact on the resilience, extensibility, and security of
+today’s computing hosts. A single kernel bug can easily wreck the entire
+system’s integrity and protection. We propose to apply new advances in
+certified software to the development of a novel OS kernel. Our certified
+kernel will offer safe and application-specific extensibility, provable
+security properties with information flow control, and accountability and
+recovery from hardware or application failures.
+
+<p> Our certified kernel builds on proof-carrying code concepts, where a
+binary executable includes a rigorous machine-checkable proof that the software
+is free of bugs with respect to specific requirements. Unlike traditional
+verification systems, our certified software approach uses an expressive
+general-purpose meta-logic and machine-checkable proofs to support modular
+reasoning about sophisticated invariants. The rich meta-logic enables us to
+verify all kinds of low-level assembly and C code 
+and to establish dependability claims ranging from simple safety properties to
+advanced security, correctness, and liveness properties.
+
+<p> We advocate a modular certification framework for kernel components, which
+mirrors and enhances the modularity of the kernel itself. Using this framework,
+we aim to create not just a &ldquo;one-off&rdquo; lump of verified kernel code, but a
+statically and dynamically extensible kernel that can be incrementally built
+and extended with individual certified modules, each of which will provably
+preserve the kernel’s overall safety and security properties. In place of the
+rigid safety conditions used in traditional extension mechanisms (e.g., that
+kernel extensions must be type-safe), our approach will assure both the safety
+and semantic correctness of extensions with respect to appropriate
+specifications (e.g., that a file system extension behaves like a file system).
+Our certified kernel will use this flexibility, for example, to provide
+accountability and recovery mechanisms, formally guaranteeing that whenever an
+application fails, the system can always be rolled back to an earlier,
+consistent state. Our certified kernel will also provide information flow
+control not only enforcing policies on user applications, but also
+guaranteeing that the security monitor itself and other kernel modules
+manipulate all security labels correctly.
+
+<H3>Paper:
+<a href="../certified-kernels.pdf">PDF</a>
+</H3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Security/">Security</a>
+	
+		<a href="/topics/Modularity/">Modularity</a>
+	
+		<a href="/topics/Formal-Verification/">Formal Verification</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Structured Streams: a New Transport Abstraction &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Structured Streams: a New Transport Abstraction</h1>
+  
+<P ALIGN="CENTER"><STRONG>Bryan Ford</STRONG><br>
+	<I>Massachusetts Institute of Technology</I></P>
+
+<p align="center">
+<i>Published in <a href="http://www.sigcomm.org/sigcomm2007/">
+	ACM SIGCOMM 2007</a>,
+	August 27-31, 2007, Kyoto, Japan.</i>
+</p>
+
+<H3>Abstract:</H3>
+
+<P>
+Internet applications currently have a choice 
+between stream and datagram transport abstractions.
+Datagrams efficiently support small transactions
+and streams are suited for long-running conversations,
+but neither abstraction adequately supports applications like HTTP
+that exhibit a <i>mixture</i> of transaction sizes,
+or applications like FTP and SIP
+that use multiple transport instances.
+<a href="http://pdos.csail.mit.edu/uia/sst/">
+<i>Structured Stream Transport</i> (SST)</a>
+enhances the traditional stream abstraction
+with a hierarchical <i>hereditary structure</i>,
+allowing applications to create lightweight <i>child streams</i>
+from any existing stream.
+Unlike TCP streams,
+these lightweight streams incur
+neither 3-way handshaking delays on startup
+nor TIME-WAIT periods on close.
+Each stream offers independent data transfer and flow control,
+allowing different transactions to proceed in parallel
+without head-of-line blocking,
+but all streams share one congestion control context.
+SST supports both reliable and best-effort delivery in a way
+that semantically unifies datagrams with streams
+and solves the classic &ldquo;large datagram&rdquo; problem,
+where a datagram's loss probability
+increases exponentially with fragment count.
+Finally, an application can prioritize its streams relative to each other
+and adjust priorities dynamically through out-of-band signaling.
+A user-space prototype shows that
+SST is TCP-friendly to within 2%,
+and performs comparably to a user-space TCP
+and to within 10% of kernel TCP on a WiFi network.
+
+<H3>Full Paper:
+<a href="../sst.pdf">PDF</a>
+<a href="../sst.ps.gz">PS</a>
+<a href="../sst/">HTML</a>
+</H3>
+
+<H3>Presentation Slides:
+<a href="../sst-slides.odp">OpenOffice</a>
+<a href="../sst-slides.pdf">PDF</a>
+<a href="../sst-slides/">HTML</a>
+</H3>
+
+<H3>Project Home Page:
+<a href="http://pdos.csail.mit.edu/uia/sst/">
+<tt>http://pdos.csail.mit.edu/uia/sst/</tt></a>
+</H3>
+
+<hr>
+<small>
+&copy; ACM, 2007. This is the author's version of the work. It is posted here by permission of ACM for your personal use. Not for redistribution. The definitive version was published in ACM SIGCOMM '07, August 27-31, 2007, Kyoto, Japan. <!-- http://doi.acm.org/10.1145/nnnnnn.nnnnnn -->
+</small>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Networks/">Networks</a>
+	
+		<a href="/topics/Transport-Layer/">Transport Layer</a>
+	
+		<a href="/topics/Security/">Security</a>
+	
+		<a href="/topics/Cryptography/">Cryptography</a>
+	
+		<a href="/topics/Out-of-Order-Delivery/">Out-of-Order Delivery</a>
+	
+		<a href="/topics/Layering/">Layering</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

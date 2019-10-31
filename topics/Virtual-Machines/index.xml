@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Virtual Machines on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Virtual-Machines/</link>
+    <description>Recent content in Virtual Machines on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Jun 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Virtual-Machines/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vx32: Lightweight User-level Sandboxing on the x86</title>
+      <link>https://bford.info/pub/os/vx32-abs/</link>
+      <pubDate>Fri, 27 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/vx32-abs/</guid>
+      <description>Bryan Ford and Russ Cox
+Massachusetts Institute of Technology USENIX Annual Technical Conference
+Awarded Best Student Paper
+June 22-27, 2008, Boston, Massachusetts. Abstract:  Code sandboxing is useful for many purposes, but most sandboxing techniques require kernel modifications, do not completely isolate guest code, or incur substantial performance costs. Vx32 is a multipurpose user-level sandbox that enables any application to load and safely execute one or more guest plug-ins, confining each guest to a system call API controlled by the host application and to a restricted memory region within the host&amp;rsquo;s address space.</description>
+    </item>
+    
+    <item>
+      <title>VXA: A Virtual Architecture for Durable Compressed Archives</title>
+      <link>https://bford.info/pub/os/vxa-abs/</link>
+      <pubDate>Fri, 16 Dec 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/vxa-abs/</guid>
+      <description>Bryan Ford
+Massachusetts Institute of Technology 4th USENIX Conference on File and Storage Technologies (FAST &#39;05)
+December 16, 2005, San Francisco, California, USA. Abstract:  Data compression algorithms change frequently, and obsolete decoders do not always run on new hardware and operating systems, threatening the long-term usability of content archived using those algorithms. Re-encoding content into new formats is cumbersome, and highly undesirable when lossy compression is involved. Processor architectures, in contrast, have remained comparatively stable over recent decades.</description>
+    </item>
+    
+    <item>
+      <title>Microkernels Meet Recursive Virtual Machines</title>
+      <link>https://bford.info/pub/os/fluke-rvm-abs/</link>
+      <pubDate>Wed, 30 Oct 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/fluke-rvm-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, Jay Lepreau, Patrick Tullmann, Godmar Back, and Stephen Clawson
+University of Utah USENIX 2nd Symposium on OS Design and Implementation (OSDI &#39;96)
+October 28-31, 1996, Seattle, Washington, USA. Abstract:  This paper describes a novel approach to providing modular and extensible operating system functionality and encapsulated environments based on a synthesis of microkernel and virtual machine concepts. We have developed a software-based virtualizable architecture called Fluke that allows recursive virtual machines (virtual machines running on other virtual machines) to be implemented efficiently by a microkernel running on generic hardware.</description>
+    </item>
+    
+    <item>
+      <title>User-level Checkpointing Through Exportable Kernel State</title>
+      <link>https://bford.info/pub/os/iwooos96-flobs-abs/</link>
+      <pubDate>Sun, 27 Oct 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/iwooos96-flobs-abs/</guid>
+      <description>Patrick Tullmann, Jay Lepreau, Bryan Ford, and Mike Hibler  Department of Computer Science, University of Utah  Proceedings of the Fifth IEEE International Workshop on Object Orientation in Operating Systems (IWOOOS)
+October 27-28, 1996  Abstract: Checkpointing, process migration, and similar services need to have access not only to the memory of the constituent processes, but also to the complete state of all kernel provided objects (e.</description>
+    </item>
+    
+    <item>
+      <title>The Persistent Relevance of the Local Operating System to Global Applications</title>
+      <link>https://bford.info/pub/os/dist-vs-local-abs/</link>
+      <pubDate>Mon, 09 Sep 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/dist-vs-local-abs/</guid>
+      <description>Jay Lepreau, Bryan Ford, and Mike Hibler  Department of Computer Science, University of Utah  Proceedings of the Seventh ACM SIGOPS European Workshop
+September 9-11, 1996  Abstract: The growth and popularity of loosely-coupled distributed systems such as the World Wide Web and the touting of Java-based systems as the solution to the issues of software maintenance, flexibility, and security are changing the research emphasis away from traditional single node operating system issues.</description>
+    </item>
+    
+  </channel>
+</rss>

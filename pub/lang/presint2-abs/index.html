@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Separating Presentation from Interface in RPC and IDLs &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Separating Presentation from Interface in RPC and IDLs</h1>
+  
+<center>
+<strong>
+Bryan Ford, Mike Hibler, and Jay Lepreau
+
+<br>
+University of Utah, Department of Computer Science
+</strong>
+
+<p>
+<a href="https://www.cs.utah.edu/flux/papers/presint2.html">Technical Report UUCS-95-018</a><br>
+December 1994.
+</p>
+</center>
+
+<h3>Abstract:</h3>
+
+In RPC-based communication, we term the <b>interface</b> the set of remote
+procedures and the types of their arguments; the <b>presentation</b> is the way
+these procedures and types are mapped to the target language environment in a
+particular client or server, including semantic requirements. For example,
+presentation includes the local names assigned to RPC stubs, the physical
+representation of a logical block of data (e.g., in-line, out-of-line, linked
+blocks), and trust requirements (e.g., integrity, security). In existing
+systems, the presentation of a given RPC construct is largely fixed.
+
+<p>
+Separating presentation from interface, both in the interface definition
+language (IDL) itself and in the RPC implementation, is the key to
+<b>interoperability</b>, with many benefits in the area of elegance, as well.
+This separation and resulting cleanliness makes it manageable to generate
+specialized kernel code paths for each type of client-server pair. This is a
+key element of <b>end-to-end optimization</b>. The separation should also allow
+the integration of disparate RPC optimization techniques, such as those applied
+in LRPC and fbufs, into a single system, in a uniform and fully interoperable
+way. In initial work we demonstrate a variant of threaded code generation and
+two presentation-based optimizations, transparently activated by the RPC
+system. Each of these optimizations speeds up local RPC by approximately 25%.
+
+<h3>Paper:
+<a href="../presint2.pdf">PDF</a>
+<a href="../presint2.ps.gz">PostScript</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Programming-Languages/">Programming Languages</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

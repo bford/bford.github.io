@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  In-Kernel Servers on Mach 3.0: Implementation and Performance &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>In-Kernel Servers on Mach 3.0: Implementation and Performance</h1>
+  
+<center>
+<STRONG>
+Jay Lepreau, Mike Hibler, Bryan Ford, and Jeffrey Law
+<br>
+</STRONG>
+Department of Computer Science, University of Utah
+
+<p>
+<a href="https://www.usenix.org/legacy/publications/library/proceedings/mach3/">Proceedings of the Third USENIX Mach Symposium</a><br>
+April 1993
+</p>
+</center>
+
+<H3>Abstract:</H3>
+The advantages in modularity and power of microkernel-based operating systems
+such as Mach 3.0 are well known.  The existing performance problems of these
+systems, however, are significant.  Much of the performance degradation is due
+to the cost of maintaining separate protection domains, traversing software
+layers, and using a semantically rich inter-process communication mechanism.
+An approach that optimizes the common case is to permit merging of protection
+domains in performance critical applications, while maintaining protection
+boundaries for debugging or in situations that demand robustness.  In our
+system, client calls to the server are effectively bound either to a simple
+system call interface, or to a full RPC mechanism, depending on the server's
+location.  The optimization reduces argument copies, as well as work done in
+the control path to handle complex and infrequently encountered message types.
+In this paper we present a general method of doing this for Mach 3.0 and the
+results of applying it to the Mach microkernel and the OSF/1 single server.  We
+describe the necessary modifications to the kernel, the single server, and the
+RPC stub generator.  Semantic equivalence, backwards compatibility, and common
+source and binary code are preserved.  Performance on micro and macro
+benchmarks is reported, with RPC performance improving by a factor of three,
+Unix system calls to the server improving between 20% and a factor of two, and
+4-13% performance gain on large benchmarks.  A breakdown of the times on the
+RPC path is also presented.
+
+<H3>Paper:
+<a href="../inks.pdf">PDF</a>
+<a href="../inks.ps.gz">PS</a>
+</H3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Modularity/">Modularity</a>
+	
+		<a href="/topics/Microkernels/">Microkernels</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

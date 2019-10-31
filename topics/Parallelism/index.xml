@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Parallelism on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Parallelism/</link>
+    <description>Recent content in Parallelism on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Oct 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Parallelism/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deterministically Deterring Timing Attacks in Deterland</title>
+      <link>https://bford.info/pub/os/determ-timing/</link>
+      <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/determ-timing/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Lazy Tree Mapping: Generalizing and Scaling Deterministic Parallelism</title>
+      <link>https://bford.info/pub/os/lazy-tree-mapping/</link>
+      <pubDate>Mon, 29 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/lazy-tree-mapping/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>A Virtual Memory Foundation for Scalable Deterministic Parallelism</title>
+      <link>https://bford.info/pub/os/determ-vm/</link>
+      <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/determ-vm/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Deterministic OpenMP for Race-Free Parallelism</title>
+      <link>https://bford.info/pub/os/determ-openmp/</link>
+      <pubDate>Thu, 26 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/determ-openmp/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Workspace Consistency: A Programming Model for Shared Memory Parallelism</title>
+      <link>https://bford.info/pub/os/workspace-consistency/</link>
+      <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/workspace-consistency/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Determinating Timing Channels in Compute Clouds</title>
+      <link>https://bford.info/pub/os/timing-abs/</link>
+      <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/timing-abs/</guid>
+      <description>Amittai Aviram, Sen Hu, Bryan Ford
+	Ramakrishna Gummadi
+	Yale University 	University of Massachusetts Amherst  The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
+    </item>
+    
+    <item>
+      <title>Efficient System-Enforced Deterministic Parallelism</title>
+      <link>https://bford.info/pub/os/determ-osdi10/</link>
+      <pubDate>Tue, 05 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/determ-osdi10/</guid>
+      <description>  </description>
+    </item>
+    
+  </channel>
+</rss>

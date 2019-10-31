@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Scalable Bias-Resistant Distributed Randomness &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Scalable Bias-Resistant Distributed Randomness</h1>
+  
+<center>
+<STRONG>
+Ewa Syta,
+Philipp Jovanovic,
+Eleftherios Kokoris Kogias,
+Nicolas Gailly,
+Linus Gasser,
+Ismail Khoffi,
+Michael J. Fischer, and
+Bryan Ford<br>
+</STRONG>
+</center>
+
+<p align="center">
+<a href="https://www.ieee-security.org/TC/SP2017/">
+IEEE Security & Privacy (IEEE S&P)</a><br>
+	May 23, 2017
+</p>
+
+<H3>Abstract:</H3>
+Bias-resistant public randomness is a critical component
+in many (distributed) protocols. Generating public randomness
+is hard, however, because active adversaries may behave
+dishonestly to bias public random choices toward their advantage.
+Existing solutions do not scale to hundreds or thousands
+of participants, as is needed in many decentralized systems.
+We propose two large-scale distributed protocols, RandHound
+and RandHerd, which provide publicly-verifiable, unpredictable,
+and unbiasable randomness against Byzantine adversaries. RandHound
+relies on an untrusted client to divide a set of randomness
+servers into groups for scalability, and it depends on the pigeonhole
+principle to ensure output integrity, even for non-random,
+adversarial group choices. RandHerd implements an efficient,
+decentralized randomness beacon. RandHerd is structurally
+similar to a BFT protocol, but uses RandHound in a one-time
+setup to arrange participants into verifiably unbiased random
+secret-sharing groups, which then repeatedly produce random
+output at predefined intervals. Our prototype demonstrates that
+RandHound and RandHerd achieve good performance across
+hundreds of participants while retaining a low failure probability
+by properly selecting protocol parameters, such as a group size
+and secret-sharing threshold. For example, when sharding 512
+nodes into groups of 32, our experiments show that RandHound
+can produce fresh random output after 240 seconds. RandHerd,
+after a setup phase of 260 seconds, is able to generate fresh
+random output in intervals of approximately 6 seconds. For this
+configuration, both protocols operate at a failure probability of
+at most 0.08% against a Byzantine adversary.
+
+<H3>Paper:
+<a href="../random.pdf">PDF</a>
+</H3>
+
+<H3>Talk:
+<a href="https://www.youtube.com/watch?v=7jz8aDwnkoc">YouTube</a>
+</H3>
+
+<H3>Slides:
+<a href="../random-slides.pdf">PDF</a>
+<a href="../random-slides.key">Keynote</a>
+</H3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Security/">Security</a>
+	
+		<a href="/topics/Cryptography/">Cryptography</a>
+	
+		<a href="/topics/Scalability/">Scalability</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

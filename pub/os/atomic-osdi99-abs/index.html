@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Interface and Execution Models in the Fluke Kernel &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photo Album</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Interface and Execution Models in the Fluke Kernel</h1>
+  
+<P ALIGN="CENTER"><STRONG>
+Bryan Ford, Mike Hibler, Jay Lepreau, Roland McGrath, and Patrick Tullmann
+</STRONG><br>
+<i>Department of Computer Science, University of Utah</i>
+</P>
+
+<p align="center">
+<i><a href="https://www.usenix.org/legacy/publications/library/proceedings/osdi99/">3rd Symposium on Operating Systems Design and Implementation</a><br>
+February 22-25, 1999</i>
+</p>
+
+<H3>Abstract:</H3>
+
+<P>
+We have defined and implemented a kernel API that makes every exported
+operation fully interruptible and restartable, thereby appearing atomic to the
+user. To achieve interruptibility, all possible kernel states in which a thread
+may become blocked for a &ldquo;long&rdquo; time are represented as kernel
+system calls, without requiring the kernel to retain any unexposable internal
+state.
+
+<p> Since all kernel operations appear atomic, services such as transparent
+checkpointing and process migration that need access to the complete and
+consistent state of a process can be implemented by ordinary user-mode
+processes. Atomic operations also enable applications to provide reliability in
+a more straightforward manner.
+
+<p> This API also allows us to explore novel kernel implementation techniques
+and to evaluate existing techniques. The Fluke kernel’s single source
+implements either the &ldquo;process&rdquo; or the &ldquo;interrupt&rdquo;
+execution model on both uniprocessors and multiprocessors, depending on a
+configuration option affecting a small amount of code.
+
+<p> We report preliminary measurements comparing fully, partially and
+non-preemptible configurations of both process and interrupt model
+implementations. We find that the interrupt model has a modest performance
+advantage in some benchmarks, maximum preemption latency varies nearly three
+orders of magnitude, average preemption latency varies by a factor of six, and
+memory use favors the interrupt model as expected, but not by a large amount.
+We find that the overhead for restarting the most costly kernel operation
+ranges from 2–8% of the cost of the operation.
+
+
+<H3>Paper:
+<a href="../atomic-osdi99.pdf">PDF</a>
+<a href="../atomic-osdi99.ps.gz">PS</a>
+</H3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Microkernels/">Microkernels</a>
+	
+		<a href="/topics/Modularity/">Modularity</a>
+	
+		<a href="/topics/Scheduling/">Scheduling</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

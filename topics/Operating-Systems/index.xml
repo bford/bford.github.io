@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Operating Systems on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Operating-Systems/</link>
+    <description>Recent content in Operating Systems on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Operating-Systems/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rethinking General-Purpose Decentralized Computing</title>
+      <link>https://bford.info/pub/os/protean-abs/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/protean-abs/</guid>
+      <description>Enis Ceyhun Alp, Eleftherios Kokoris-Kogias, Georgia Fragkouli, and Bryan Ford EPFL - IC - DEDIS   17th Workshop on Hot Topics in Operating Systems (HotOS XVII)
+May 12-15, 2019.  Abstract: While showing great promise, smart contracts are difficult to program correctly, as they need a deep understanding of cryptography and distributed algorithms, and offer limited functionality, as they have to be deterministic and cannot operate on secret data.</description>
+    </item>
+    
+    <item>
+      <title>Deterministically Deterring Timing Attacks in Deterland</title>
+      <link>https://bford.info/pub/os/determ-timing/</link>
+      <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/determ-timing/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>GPUfs: The Case for Operating System Services on GPUs</title>
+      <link>https://bford.info/pub/os/gpufs-cacm/</link>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/gpufs-cacm/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Heading Off Correlated Failures through Independence-as-a-Service</title>
+      <link>https://bford.info/pub/os/cloud-indaas/</link>
+      <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/cloud-indaas/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Structural Cloud Audits that Protect Private Information</title>
+      <link>https://bford.info/pub/os/cloud-psra/</link>
+      <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/cloud-psra/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>An Untold Story of Redundant Clouds: Making Your Service Deployment Truly Reliable</title>
+      <link>https://bford.info/pub/os/irec/</link>
+      <pubDate>Sun, 03 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/irec/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Lazy Tree Mapping: Generalizing and Scaling Deterministic Parallelism</title>
+      <link>https://bford.info/pub/os/lazy-tree-mapping/</link>
+      <pubDate>Mon, 29 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/lazy-tree-mapping/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>GPUfs: Integrating a File System with GPUs</title>
+      <link>https://bford.info/pub/os/gpufs/</link>
+      <pubDate>Wed, 20 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/gpufs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Scaling Software-Defined Network Controllers on Multicore Servers</title>
+      <link>https://bford.info/pub/os/scaling-sdn-abs/</link>
+      <pubDate>Sun, 01 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/scaling-sdn-abs/</guid>
+      <description>Andreas Voellmy, Bryan Ford, Paul Hudak, and Y. Richard Yang Yale University Department of Computer Science
+  Technical Report YALEU/DCS/TR-1468
+July 2012  Abstract: Software defined networks (SDN) introduce centralized controllers to drastically increase network programmability. The simplicity of a logical centralized controller, however, can come at the cost of controller programming complexity and scalability. In this paper, we present McNettle, an extensible SDN controller system whose control event processing throughput scales with the number of system CPU cores and which supports control algorithms requiring globally visible state changes occurring at flow arrival rates.</description>
+    </item>
+    
+    <item>
+      <title>Non-Linear Compression: Gzip Me Not!</title>
+      <link>https://bford.info/pub/os/non-linear/</link>
+      <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/non-linear/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Plugging Side-Channel Leaks with Timing Information Flow Control</title>
+      <link>https://bford.info/pub/os/tifc-hotcloud12/</link>
+      <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/tifc-hotcloud12/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Icebergs in the Clouds: the Other Risks of Cloud Computing</title>
+      <link>https://bford.info/pub/os/icebergs/</link>
+      <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/icebergs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>A Virtual Memory Foundation for Scalable Deterministic Parallelism</title>
+      <link>https://bford.info/pub/os/determ-vm/</link>
+      <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/determ-vm/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>CertiKOS: A Certified Kernel for Secure Cloud Computing</title>
+      <link>https://bford.info/pub/os/certikos-apsys11/</link>
+      <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/certikos-apsys11/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Eyo: Device-Transparent Personal Storage</title>
+      <link>https://bford.info/pub/net/eyo-usenix-abs/</link>
+      <pubDate>Wed, 15 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/eyo-usenix-abs/</guid>
+      <description>Jacob Strauss, Justin Mazzola Paluska, Chris Lesniewski-Laas, Bryan Ford, Robert Morris, and Frans Kaashoek
+ 2011 USENIX Annual Technical Conference June 15-17, 2011, Portland, OR, USA Abstract: Users increasingly store data collections such as digital photographs on multiple personal devices, each of which typically offers a storage management interface oblivious to the contents of the user’s other devices. As a result, collections become disorganized and drift out of sync.</description>
+    </item>
+    
+    <item>
+      <title>Deterministic OpenMP for Race-Free Parallelism</title>
+      <link>https://bford.info/pub/os/determ-openmp/</link>
+      <pubDate>Thu, 26 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/determ-openmp/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Workspace Consistency: A Programming Model for Shared Memory Parallelism</title>
+      <link>https://bford.info/pub/os/workspace-consistency/</link>
+      <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/workspace-consistency/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Determinating Timing Channels in Compute Clouds</title>
+      <link>https://bford.info/pub/os/timing-abs/</link>
+      <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/timing-abs/</guid>
+      <description>Amittai Aviram, Sen Hu, Bryan Ford
+	Ramakrishna Gummadi
+	Yale University 	University of Massachusetts Amherst  The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
+    </item>
+    
+    <item>
+      <title>Efficient System-Enforced Deterministic Parallelism</title>
+      <link>https://bford.info/pub/os/determ-osdi10/</link>
+      <pubDate>Tue, 05 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/determ-osdi10/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Advanced Development of Certified OS Kernels</title>
+      <link>https://bford.info/pub/os/certified-kernels-abs/</link>
+      <pubDate>Thu, 15 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/certified-kernels-abs/</guid>
+      <description>Zhong Shao and Bryan Ford Department of Computer Science, Yale University   Yale University Technical Report TR1436
+July 15, 2010  Abstract: Operating System (OS) kernels form the bedrock of all system software&amp;mdash;they can have the greatest impact on the resilience, extensibility, and security of today’s computing hosts. A single kernel bug can easily wreck the entire system’s integrity and protection. We propose to apply new advances in certified software to the development of a novel OS kernel.</description>
+    </item>
+    
+    <item>
+      <title>Device Transparency: a New Model for Mobile Storage</title>
+      <link>https://bford.info/pub/net/devtransp-abs/</link>
+      <pubDate>Sun, 11 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/devtransp-abs/</guid>
+      <description>Jacob Strauss
+	Chris Lesniewski-Laas
+	Justin Mazzola Paluska
+	Bryan Ford
+	Robert Morris
+	Frans Kaashoek
+ Published in SOSP Workshop on Hot Topics in Storage and File Systems (HotStorage &#39;09) October 11, 2009, Big Sky, MT, USA Abstract: This paper proposes a new storage model, device transparency, in which users view and manage their entire data collection from any of their devices, even from disconnected storage-limited devices holding only a subset of the entire collection.</description>
+    </item>
+    
+    <item>
+      <title>Vx32: Lightweight User-level Sandboxing on the x86</title>
+      <link>https://bford.info/pub/os/vx32-abs/</link>
+      <pubDate>Fri, 27 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/vx32-abs/</guid>
+      <description>Bryan Ford and Russ Cox
+Massachusetts Institute of Technology USENIX Annual Technical Conference
+Awarded Best Student Paper
+June 22-27, 2008, Boston, Massachusetts. Abstract:  Code sandboxing is useful for many purposes, but most sandboxing techniques require kernel modifications, do not completely isolate guest code, or incur substantial performance costs. Vx32 is a multipurpose user-level sandbox that enables any application to load and safely execute one or more guest plug-ins, confining each guest to a system call API controlled by the host application and to a restricted memory region within the host&amp;rsquo;s address space.</description>
+    </item>
+    
+    <item>
+      <title>Alpaca: Extensible Authorization for Distributed Services</title>
+      <link>https://bford.info/pub/net/alpaca-abs/</link>
+      <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/alpaca-abs/</guid>
+      <description>Chris Lesniewski-Laas, Bryan Ford, Jacob Strauss, Robert Morris, and M. Frans Kaashoek
+Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract:  Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
+    </item>
+    
+    <item>
+      <title>Persistent Personal Names for Globally Connected Mobile Devices</title>
+      <link>https://bford.info/pub/net/uia-osdi-abs/</link>
+      <pubDate>Mon, 06 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
+      <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
+ Massachusetts Institute of Technology Published in 7th USENIX Symposium on Operating Systems Design and Implementation, November 6-8, 2006. Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+    </item>
+    
+    <item>
+      <title>VXA: A Virtual Architecture for Durable Compressed Archives</title>
+      <link>https://bford.info/pub/os/vxa-abs/</link>
+      <pubDate>Fri, 16 Dec 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/vxa-abs/</guid>
+      <description>Bryan Ford
+Massachusetts Institute of Technology 4th USENIX Conference on File and Storage Technologies (FAST &#39;05)
+December 16, 2005, San Francisco, California, USA. Abstract:  Data compression algorithms change frequently, and obsolete decoders do not always run on new hardware and operating systems, threatening the long-term usability of content archived using those algorithms. Re-encoding content into new formats is cumbersome, and highly undesirable when lossy compression is involved. Processor architectures, in contrast, have remained comparatively stable over recent decades.</description>
+    </item>
+    
+    <item>
+      <title>Interface and Execution Models in the Fluke Kernel</title>
+      <link>https://bford.info/pub/os/atomic-osdi99-abs/</link>
+      <pubDate>Wed, 24 Feb 1999 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/atomic-osdi99-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, Jay Lepreau, Roland McGrath, and Patrick Tullmann 
+Department of Computer Science, University of Utah  3rd Symposium on Operating Systems Design and Implementation
+February 22-25, 1999 Abstract:  We have defined and implemented a kernel API that makes every exported operation fully interruptible and restartable, thereby appearing atomic to the user. To achieve interruptibility, all possible kernel states in which a thread may become blocked for a &amp;ldquo;long&amp;rdquo; time are represented as kernel system calls, without requiring the kernel to retain any unexposable internal state.</description>
+    </item>
+    
+    <item>
+      <title>The Flux OSKit: A Substrate for Kernel and Language Research</title>
+      <link>https://bford.info/pub/os/oskit-sosp16-abs/</link>
+      <pubDate>Mon, 06 Oct 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/oskit-sosp16-abs/</guid>
+      <description>Bryan Ford, Godmar Back, Greg Benson, Jay Lepreau, Albert Lin, and Olin Shivers 
+ Proceedings of the 16th ACM Symposium on Operating System Principles
+October 5-8, 1997 Abstract:  Implementing new operating systems is tedious, costly, and often impractical except for large projects. The Flux OSKit addresses this problem in a novel way by providing clean, well-documented OS components designed to be reused in a wide variety of other environments, rather than defining a new OS structure.</description>
+    </item>
+    
+    <item>
+      <title>Flick: A Flexible, Optimizing IDL Compiler</title>
+      <link>https://bford.info/pub/lang/flick-pldi97-abs/</link>
+      <pubDate>Sun, 15 Jun 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/flick-pldi97-abs/</guid>
+      <description>Eric Eide, Kevin Frei, Bryan Ford, Jay Lepreau, and Gary Lindstrom University of Utah, Department of Computer Science   ACM SIGPLAN Conference on Programming Language Design and Implementation
+June 15-18, 1997.  Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance. Systems like Mach provide a set of general abstractions and attempt to handle every situation, which can lead to poor performance for common cases.</description>
+    </item>
+    
+    <item>
+      <title>The Flux OS Toolkit: Reusable Components for OS Implementation</title>
+      <link>https://bford.info/pub/os/oskit-hotos6-abs/</link>
+      <pubDate>Mon, 05 May 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/oskit-hotos6-abs/</guid>
+      <description>Bryan Ford, Kevin Van Maren, Jay Lepreau, Stephen Clawson, Bart Robinson, and Jeff Turner
+University of Utah 6th Workshop on Hot Topics in Operating Systems (HotOS-VI)
+May 5-6, 1997 Abstract:  To an unappreciated degree, research both in operating systems and their programming languages has been severely hampered by the lack of cleanly reusable code providing mundane low-level OS infrastructure such as bootstrap code and device drivers. The Flux OS Toolkit solves this problem by providing a set of clean, well-documented components.</description>
+    </item>
+    
+    <item>
+      <title>CPU Inheritance Scheduling</title>
+      <link>https://bford.info/pub/os/inherit-sched-abs/</link>
+      <pubDate>Wed, 30 Oct 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/inherit-sched-abs/</guid>
+      <description>Bryan Ford and Sai R. Susarla  Department of Computer Science, University of Utah  Proceedings of the Second Symposium on Operating Systems Design and Implementation
+October 28-31, 1996  Abstract: Traditional processor scheduling mechanisms in operating systems are fairly rigid, often supporting only one fixed scheduling policy, or, at most, a few &amp;ldquo;scheduling classes&amp;rdquo; whose implementations are closely tied together in the OS kernel. This paper presents CPU inheritance scheduling, a novel processor scheduling framework in which arbitrary threads can act as schedulers for other threads.</description>
+    </item>
+    
+    <item>
+      <title>Microkernels Meet Recursive Virtual Machines</title>
+      <link>https://bford.info/pub/os/fluke-rvm-abs/</link>
+      <pubDate>Wed, 30 Oct 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/fluke-rvm-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, Jay Lepreau, Patrick Tullmann, Godmar Back, and Stephen Clawson
+University of Utah USENIX 2nd Symposium on OS Design and Implementation (OSDI &#39;96)
+October 28-31, 1996, Seattle, Washington, USA. Abstract:  This paper describes a novel approach to providing modular and extensible operating system functionality and encapsulated environments based on a synthesis of microkernel and virtual machine concepts. We have developed a software-based virtualizable architecture called Fluke that allows recursive virtual machines (virtual machines running on other virtual machines) to be implemented efficiently by a microkernel running on generic hardware.</description>
+    </item>
+    
+    <item>
+      <title>User-level Checkpointing Through Exportable Kernel State</title>
+      <link>https://bford.info/pub/os/iwooos96-flobs-abs/</link>
+      <pubDate>Sun, 27 Oct 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/iwooos96-flobs-abs/</guid>
+      <description>Patrick Tullmann, Jay Lepreau, Bryan Ford, and Mike Hibler  Department of Computer Science, University of Utah  Proceedings of the Fifth IEEE International Workshop on Object Orientation in Operating Systems (IWOOOS)
+October 27-28, 1996  Abstract: Checkpointing, process migration, and similar services need to have access not only to the memory of the constituent processes, but also to the complete state of all kernel provided objects (e.</description>
+    </item>
+    
+    <item>
+      <title>The Persistent Relevance of the Local Operating System to Global Applications</title>
+      <link>https://bford.info/pub/os/dist-vs-local-abs/</link>
+      <pubDate>Mon, 09 Sep 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/dist-vs-local-abs/</guid>
+      <description>Jay Lepreau, Bryan Ford, and Mike Hibler  Department of Computer Science, University of Utah  Proceedings of the Seventh ACM SIGOPS European Workshop
+September 9-11, 1996  Abstract: The growth and popularity of loosely-coupled distributed systems such as the World Wide Web and the touting of Java-based systems as the solution to the issues of software maintenance, flexibility, and security are changing the research emphasis away from traditional single node operating system issues.</description>
+    </item>
+    
+    <item>
+      <title>Using Annotated Interface Definitions to Optimize RPC</title>
+      <link>https://bford.info/pub/lang/presint3-abs/</link>
+      <pubDate>Wed, 01 Mar 1995 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/presint3-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science   Technical Report UUCS-95-014
+March 1995.  Abstract: In RPC-based communication, it is useful to distinguish the RPC interface, which is the “network contract” be- tween the client and the server, from the presentation, which is the “programmer’s contract” between the RPC stubs and the code that calls or is called by them.</description>
+    </item>
+    
+    <item>
+      <title>Separating Presentation from Interface in RPC and IDLs</title>
+      <link>https://bford.info/pub/lang/presint2-abs/</link>
+      <pubDate>Thu, 01 Dec 1994 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/presint2-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science   Technical Report UUCS-95-018
+December 1994.  Abstract: In RPC-based communication, we term the interface the set of remote procedures and the types of their arguments; the presentation is the way these procedures and types are mapped to the target language environment in a particular client or server, including semantic requirements. For example, presentation includes the local names assigned to RPC stubs, the physical representation of a logical block of data (e.</description>
+    </item>
+    
+    <item>
+      <title>Evolving Mach 3.0 to A Migrating Thread Model</title>
+      <link>https://bford.info/pub/os/thread-migrate-abs/</link>
+      <pubDate>Mon, 17 Jan 1994 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/thread-migrate-abs/</guid>
+      <description>Bryan Ford and Jay Lepreau  Department of Computer Science, University of Utah  Proceedings of the Winter 1994 USENIX Technical Conference
+January 17-21, 1994  Abstract: We have modified Mach 3.0 to treat cross-domain remote procedure call (RPC) as a single entity, instead of a sequence of message passing operations. With RPC thus elevated, we improved the transfer of control during RPC by changing the thread model.</description>
+    </item>
+    
+    <item>
+      <title>Microkernels Should Support Passive Objects</title>
+      <link>https://bford.info/pub/os/passive-abs/</link>
+      <pubDate>Thu, 09 Dec 1993 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/passive-abs/</guid>
+      <description>Bryan Ford and Jay Lepreau  Department of Computer Science, University of Utah  International Workshop on Object Orientation in Operating Systems (IWOOOS)
+December 9-10, 1993  Abstract: We believe that a passive object model, in which the active entities or threads migrate between passive objects, is more appropriate than an active object model, as the basic structure of a microkernel-based operating system. A passive object model provides enhanced performance and simplicity because it is more closely matched to the basic nature of microprocessors and the requirements of applications.</description>
+    </item>
+    
+    <item>
+      <title>FLEX: A Tool for Building Efficient and Flexible Systems</title>
+      <link>https://bford.info/pub/lang/flex-wwos4-abs/</link>
+      <pubDate>Thu, 14 Oct 1993 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/flex-wwos4-abs/</guid>
+      <description>John B. Carter, Bryan Ford, Mike Hibler, Ravindra Kuramkote, Jeffrey Law, Jay Lepreau, Douglas B. Orr, Leigh Stoller, and Mark Swanson University of Utah, Department of Computer Science   4th IEEE Workshop on Workstation Operating Systems (WWOS)
+October 14-15, 1993.  Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance.</description>
+    </item>
+    
+    <item>
+      <title>In-Kernel Servers on Mach 3.0: Implementation and Performance</title>
+      <link>https://bford.info/pub/os/inks-abs/</link>
+      <pubDate>Mon, 19 Apr 1993 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/inks-abs/</guid>
+      <description>Jay Lepreau, Mike Hibler, Bryan Ford, and Jeffrey Law  Department of Computer Science, University of Utah  Proceedings of the Third USENIX Mach Symposium
+April 1993  Abstract: The advantages in modularity and power of microkernel-based operating systems such as Mach 3.0 are well known. The existing performance problems of these systems, however, are significant. Much of the performance degradation is due to the cost of maintaining separate protection domains, traversing software layers, and using a semantically rich inter-process communication mechanism.</description>
+    </item>
+    
+    <item>
+      <title>Notes on Thread Models in Mach 3.0</title>
+      <link>https://bford.info/pub/os/threadmodel-93-abs/</link>
+      <pubDate>Thu, 01 Apr 1993 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/threadmodel-93-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau Department of Computer Science, University of Utah   Technical Report UUCS-93-012
+April 1993  Abstract: During the Mach In-Kernel Servers work, we explored two alternate thread models that could be used to support traps to in-kernel servers. In the &amp;ldquo;migrating threads&amp;rdquo; model we used, the client&#39;s thread temporarily moves into the server&#39;s task for the duration of the call. In the &amp;ldquo;thread switching&amp;rdquo; model, an actual server thread is dispatched to handle client traps.</description>
+    </item>
+    
+  </channel>
+</rss>

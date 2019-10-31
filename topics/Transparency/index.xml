@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transparency on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Transparency/</link>
+    <description>Recent content in Transparency on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Transparency/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MorphIT: Morphing Packet Reports for Internet Transparency</title>
+      <link>https://bford.info/pub/net/morphit-abs/</link>
+      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/morphit-abs/</guid>
+      <description>Georgia Fragkouli, Katerina Argyraki, and Bryan Ford EPFL   Proceedings on Privacy Enhancing Technologies
+May 4, 2019.  Abstract: Can we improve Internet transparency without worsening user anonymity? For a long time, researchers have been proposing transparency systems, where traffic reports produced at strategic network points help assess network behavior and verify service-level agreements or neutrality compliance. However, such reports necessarily reveal when certain traffic appeared at a certain network point, and this information could, in principle, be used to compromise low-latency anonymity networks like Tor.</description>
+    </item>
+    
+    <item>
+      <title>CHAINIAC: Proactive Software-Update Transparency via Collectively Signed Skipchains and Verified Builds</title>
+      <link>https://bford.info/pub/dec/chainiac-abs/</link>
+      <pubDate>Fri, 18 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/chainiac-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>How Do You Know It&#39;s On the Blockchain? With a SkipChain.</title>
+      <link>https://bford.info/2017/08/01/skipchain/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2017/08/01/skipchain/</guid>
+      <description>A blockchain, or distributed ledger, is a log maintained collectively by a distributed group of participants who agree on and record transactions without relying for security on any single trusted party. While initially popularized by Bitcoin and its derivatives, the blockchain abstraction is not specific to currencies, and there is exploding industry interest in many non-currency uses.
+ 
+Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
+    </item>
+    
+    <item>
+      <title>UnLynx: A Decentralized System for Privacy-Conscious Data Sharing</title>
+      <link>https://bford.info/pub/dec/unlynx-abs/</link>
+      <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/unlynx-abs/</guid>
+      <description>David Froelicher, Patricia Egger, Jo&amp;atilde;o S&amp;aacute; Sousa, Jean Louis Raisaro, Zhicong Huang, Christian Mouchet, Bryan Ford, and Jean-Pierre Hubaux   Privacy Enhancing Technologies Symposium (PETS)
+July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing among multiple parties either depend on a centralized authority that must be trusted and provides only weakest-link security (e.g., the entity that manages private/secret cryptographic keys), or leverage on decentralized but impractical approaches (e.</description>
+    </item>
+    
+    <item>
+      <title>Apple, FBI, and Software Transparency</title>
+      <link>https://bford.info/2016/03/10/apple/</link>
+      <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2016/03/10/apple/</guid>
+      <description>This post originally appeared on the Freedom to Tinker blog by the Center for Information Technology Policy at Princeton University. 
+The Apple versus FBI showdown has quickly become a crucial flashpoint of the &amp;ldquo;new Crypto War.&amp;rdquo; On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters.</description>
+    </item>
+    
+    <item>
+      <title>Device Transparency: a New Model for Mobile Storage</title>
+      <link>https://bford.info/pub/net/devtransp-abs/</link>
+      <pubDate>Sun, 11 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/devtransp-abs/</guid>
+      <description>Jacob Strauss
+	Chris Lesniewski-Laas
+	Justin Mazzola Paluska
+	Bryan Ford
+	Robert Morris
+	Frans Kaashoek
+ Published in SOSP Workshop on Hot Topics in Storage and File Systems (HotStorage &#39;09) October 11, 2009, Big Sky, MT, USA Abstract: This paper proposes a new storage model, device transparency, in which users view and manage their entire data collection from any of their devices, even from disconnected storage-limited devices holding only a subset of the entire collection.</description>
+    </item>
+    
+  </channel>
+</rss>

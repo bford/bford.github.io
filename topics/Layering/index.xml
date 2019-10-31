@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Layering on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Layering/</link>
+    <description>Recent content in Layering on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Apr 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Layering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fitting Square Pegs Through Round Pipes: Unordered Delivery Wire-Compatible with TCP and TLS</title>
+      <link>https://bford.info/pub/net/nsdi12-minion-abs/</link>
+      <pubDate>Fri, 27 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/nsdi12-minion-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>CertiKOS: A Certified Kernel for Secure Cloud Computing</title>
+      <link>https://bford.info/pub/os/certikos-apsys11/</link>
+      <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/certikos-apsys11/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>A Dynamic Recursive Unified Internet Design (DRUID)</title>
+      <link>https://bford.info/pub/net/druid-abs/</link>
+      <pubDate>Fri, 24 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/druid-abs/</guid>
+      <description>Joe Touch, Ilia Baldine, Rudra Dutta, Gregory G. Finn, Bryan Ford, Scott Jordan, Dan Massey, Abraham Matta, Christos Papadopoulos, Peter Reiher, George Rouskas   Computer Networks December 24, 2010 Abstract: The Dynamic Recursive Unified Internet Design (DRUID) is a future Internet design that unifies overlay networks with conventional layered network architectures. DRUID is based on the fundamental concept of recursion, enabling a simple and direct network architecture that unifies the data, control, management, and security aspects of the current Internet, leading to a more trustworthy network.</description>
+    </item>
+    
+    <item>
+      <title>Minion: an all-terrain packet packhorse to jump-start stalled internet transports</title>
+      <link>https://bford.info/pub/net/pfldnet10-minion-abs/</link>
+      <pubDate>Sun, 28 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/pfldnet10-minion-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Efficient Cross-Layer Negotiation</title>
+      <link>https://bford.info/pub/net/nego-abs/</link>
+      <pubDate>Thu, 22 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/nego-abs/</guid>
+      <description>Bryan Ford
+	Janardhan Iyengar
+	Yale University 	Franklin &amp;amp; Marshall College  Published in Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII) October 22-23, 2009, New York City, NY, USA Abstract: Internet evolution often depends on either inserting new protocol layers or upgrading existing layers to new protocols, but both of these evolutionary paths are obstructed by the difficulty and inefficiency of determining which protocols a pair of hosts mutually support and prefer.</description>
+    </item>
+    
+    <item>
+      <title>Breaking Up the Transport Logjam</title>
+      <link>https://bford.info/pub/net/logjam-abs/</link>
+      <pubDate>Mon, 06 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/logjam-abs/</guid>
+      <description>Bryan Ford
+	Janardhan Iyengar
+	Massachusetts Institute of Technology 	Franklin &amp;amp; Marshall College  Published in Seventh ACM Workshop on Hot Topics in Networks (HotNets-VII) October 6-7, 2008, Calgary, Alberta, Canada Abstract: Current Internet transports conflate transport semantics with endpoint addressing and flow regulation, creating roadblocks to Internet evolution that we propose to address with a new layering model. Factoring endpoint addressing (port numbers) into a separate Endpoint Layer permits incremental rollout of new or improved transports at OS or application level, enables transport-oblivious firewall/NAT traversal, improves transport negotiation efficiency, and simplifies endpoint address space administration.</description>
+    </item>
+    
+    <item>
+      <title>UIA: A Global Connectivity Architecture for Mobile Personal Devices</title>
+      <link>https://bford.info/pub/net/phd-abs/</link>
+      <pubDate>Mon, 01 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/phd-abs/</guid>
+      <description>Bryan Ford
+Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications.  Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
+    </item>
+    
+    <item>
+      <title>Structured Streams: a New Transport Abstraction</title>
+      <link>https://bford.info/pub/net/sst-abs/</link>
+      <pubDate>Mon, 27 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/sst-abs/</guid>
+      <description>Bryan Ford
+Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract:  Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
+    </item>
+    
+    <item>
+      <title>Unmanaged Internet Protocol: Taming the Edge Network Management Crisis</title>
+      <link>https://bford.info/pub/os/uip-case-abs/</link>
+      <pubDate>Thu, 20 Nov 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/uip-case-abs/</guid>
+      <description>Bryan Ford Massachusetts Institute of Technology   Second Workshop on Hot Topics in Networks
+November 20-21, 2003  Abstract: Though appropriate for core Internet infrastructure, the Internet Protocol is unsuited to routing within and between emerging ad-hoc edge networks due to its dependence on hierarchical, administratively assigned addresses. Existing ad-hoc routing protocols address the management problem but do not scale to Internet-wide networks. The promise of ubiquitous network computing cannot be fulfilled until we develop an Unmanaged Internet Protocol (UIP), a scalable routing protocol that manages itself automatically.</description>
+    </item>
+    
+    <item>
+      <title>Microkernels Meet Recursive Virtual Machines</title>
+      <link>https://bford.info/pub/os/fluke-rvm-abs/</link>
+      <pubDate>Wed, 30 Oct 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/fluke-rvm-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, Jay Lepreau, Patrick Tullmann, Godmar Back, and Stephen Clawson
+University of Utah USENIX 2nd Symposium on OS Design and Implementation (OSDI &#39;96)
+October 28-31, 1996, Seattle, Washington, USA. Abstract:  This paper describes a novel approach to providing modular and extensible operating system functionality and encapsulated environments based on a synthesis of microkernel and virtual machine concepts. We have developed a software-based virtualizable architecture called Fluke that allows recursive virtual machines (virtual machines running on other virtual machines) to be implemented efficiently by a microkernel running on generic hardware.</description>
+    </item>
+    
+  </channel>
+</rss>
