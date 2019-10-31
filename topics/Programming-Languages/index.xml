@@ -22,6 +22,15 @@ I generally like the direction this proposal is going, with one significant rese
     </item>
     
     <item>
+      <title>GPUfs: The Case for Operating System Services on GPUs</title>
+      <link>https://bford.info/pub/os/gpufs-cacm/</link>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/gpufs-cacm/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>Maple: Simplifying SDN Programming Using Algorithmic Policies</title>
       <link>https://bford.info/pub/net/maple-abs/</link>
       <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
@@ -37,6 +46,15 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Mon, 29 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/lazy-tree-mapping/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>GPUfs: Integrating a File System with GPUs</title>
+      <link>https://bford.info/pub/os/gpufs/</link>
+      <pubDate>Wed, 20 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/gpufs/</guid>
       <description>  </description>
     </item>
     

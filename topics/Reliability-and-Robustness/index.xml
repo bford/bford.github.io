@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reliability and Robustness on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Reliability-and-Robustness/</link>
+    <description>Recent content in Reliability and Robustness on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Oct 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Reliability-and-Robustness/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Heading Off Correlated Failures through Independence-as-a-Service</title>
+      <link>https://bford.info/pub/os/cloud-indaas/</link>
+      <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/cloud-indaas/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Structural Cloud Audits that Protect Private Information</title>
+      <link>https://bford.info/pub/os/cloud-psra/</link>
+      <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/cloud-psra/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>An Untold Story of Redundant Clouds: Making Your Service Deployment Truly Reliable</title>
+      <link>https://bford.info/pub/os/irec/</link>
+      <pubDate>Sun, 03 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/irec/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Icebergs in the Clouds: the Other Risks of Cloud Computing</title>
+      <link>https://bford.info/pub/os/icebergs/</link>
+      <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/icebergs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>CertiKOS: A Certified Kernel for Secure Cloud Computing</title>
+      <link>https://bford.info/pub/os/certikos-apsys11/</link>
+      <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/certikos-apsys11/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Advanced Development of Certified OS Kernels</title>
+      <link>https://bford.info/pub/os/certified-kernels-abs/</link>
+      <pubDate>Thu, 15 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/certified-kernels-abs/</guid>
+      <description>Zhong Shao and Bryan Ford Department of Computer Science, Yale University   Yale University Technical Report TR1436
+July 15, 2010  Abstract: Operating System (OS) kernels form the bedrock of all system software&amp;mdash;they can have the greatest impact on the resilience, extensibility, and security of today’s computing hosts. A single kernel bug can easily wreck the entire system’s integrity and protection. We propose to apply new advances in certified software to the development of a novel OS kernel.</description>
+    </item>
+    
+  </channel>
+</rss>

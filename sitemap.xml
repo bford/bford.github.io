@@ -352,11 +352,6 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/GPGPU-Computing/</loc>
-    <lastmod>2014-12-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/pub/os/gpufs-cacm/</loc>
     <lastmod>2014-12-01T00:00:00+00:00</lastmod>
   </url>
@@ -382,12 +377,12 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Fault-Tree-Analysis/</loc>
+    <loc>https://bford.info/pub/os/cloud-indaas/</loc>
     <lastmod>2014-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bford.info/pub/os/cloud-indaas/</loc>
+    <loc>https://bford.info/topics/Reliability-and-Robustness/</loc>
     <lastmod>2014-10-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -482,6 +477,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Peer-to-Peer/</loc>
+    <lastmod>2011-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/pub/os/determ-openmp/</loc>
     <lastmod>2011-05-26T00:00:00+00:00</lastmod>
   </url>
@@ -523,11 +523,6 @@
   
   <url>
     <loc>https://bford.info/topics/Network-Address-Translation/</loc>
-    <lastmod>2010-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Peer-to-peer/</loc>
     <lastmod>2010-02-01T00:00:00+00:00</lastmod>
   </url>
   

@@ -237,15 +237,6 @@
     </item>
     
     <item>
-      <title>GPGPU Computing</title>
-      <link>https://bford.info/topics/GPGPU-Computing/</link>
-      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/GPGPU-Computing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Storage</title>
       <link>https://bford.info/topics/Storage/</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
@@ -264,11 +255,11 @@
     </item>
     
     <item>
-      <title>Fault Tree Analysis</title>
-      <link>https://bford.info/topics/Fault-Tree-Analysis/</link>
+      <title>Reliability and Robustness</title>
+      <link>https://bford.info/topics/Reliability-and-Robustness/</link>
       <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.info/topics/Fault-Tree-Analysis/</guid>
+      <guid>https://bford.info/topics/Reliability-and-Robustness/</guid>
       <description></description>
     </item>
     
@@ -310,10 +301,10 @@
     
     <item>
       <title>Peer-to-Peer</title>
-      <link></link>
+      <link>https://bford.info/topics/Peer-to-Peer/</link>
       <pubDate>Wed, 15 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid></guid>
+      <guid>https://bford.info/topics/Peer-to-Peer/</guid>
       <description></description>
     </item>
     
@@ -323,15 +314,6 @@
       <pubDate>Mon, 01 Feb 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Network-Address-Translation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Peer-to-peer</title>
-      <link>https://bford.info/topics/Peer-to-peer/</link>
-      <pubDate>Mon, 01 Feb 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Peer-to-peer/</guid>
       <description></description>
     </item>
     
