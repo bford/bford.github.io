@@ -6,10 +6,19 @@
     <description>Recent content in Virtual Machines on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Jun 2008 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Aug 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/topics/Virtual-Machines/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Managing NymBoxes for Identity and Tracking Protection</title>
+      <link>https://bford.info/pub/sec/nymboxes/</link>
+      <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/nymboxes/</guid>
+      <description>  </description>
+    </item>
     
     <item>
       <title>Vx32: Lightweight User-level Sandboxing on the x86</title>

@@ -21,6 +21,16 @@
     </item>
     
     <item>
+      <title>On the Security of Two-Round Multi-Signatures</title>
+      <link>https://bford.info/pub/sec/two-round-multisig-abs/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/two-round-multisig-abs/</guid>
+      <description>Manu Drijvers, Kasra Edalatnejad, Bryan Ford, Eike Kiltz, Julian Loss, Gregory Neven, and Igors Stepanovs   40th IEEE Symposium on Security and Privacy
+May 2019  Abstract: A multi-signature scheme allows a group of signers to collaboratively sign a message, creating a single signature that convinces a verifier that every individual signer approved the message. The increased interest in technologies to decentralize trust has triggered the proposal of highly efficient two-round Schnorr-based multi-signature schemes designed to scale up to thousands of signers, namely BCJ by Bagherzandi et al.</description>
+    </item>
+    
+    <item>
       <title>Rethinking General-Purpose Decentralized Computing</title>
       <link>https://bford.info/pub/os/protean-abs/</link>
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
@@ -98,6 +108,33 @@ In short, miners motivated by transaction fees have even greater incentive to de
       <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/byzcoin-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Keeping Authorities “Honest or Bust” with Decentralized Witness Cosigning</title>
+      <link>https://bford.info/pub/dec/cosi/</link>
+      <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/cosi/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>AnonRep: Towards Tracking-Resistant Anonymous Reputation</title>
+      <link>https://bford.info/pub/dec/anonrep-abs/</link>
+      <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/anonrep-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>A TorPath to TorCoin: Proof-of-Bandwidth Altcoins for Compensating Relays</title>
+      <link>https://bford.info/pub/sec/torcoin/</link>
+      <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/torcoin/</guid>
       <description>  </description>
     </item>
     

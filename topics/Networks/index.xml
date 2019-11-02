@@ -36,6 +36,15 @@ October 30, 2017 Abstract: Atom is an anonymous messaging system that protects a
     </item>
     
     <item>
+      <title>PriFi: A Low-Latency and Tracking-Resistant Protocol for Local-Area Anonymous Communication</title>
+      <link>https://bford.info/pub/sec/prifi/</link>
+      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/prifi/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>Metadata Protection Considerations for TLS Present and Future</title>
       <link>https://bford.info/pub/net/tlsmeta-abs/</link>
       <pubDate>Sun, 21 Feb 2016 00:00:00 +0000</pubDate>
@@ -63,6 +72,15 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       <guid>https://bford.info/pub/net/maple-abs/</guid>
       <description>Andreas Voellmy, Junchang Wang, Y. Richard Yang, Bryan Ford, and Paul Hudak   ACM SIGCOMM 2013
 August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a simple, centralized programming model for managing complex networks. However, challenges in managing low-level details, such as setting up and maintaining correct and efficient forwarding tables on distributed switches, often compromise this conceptual simplicity. In this paper, we present Maple, a system that simplifies SDN programming by (1) allowing a programmer to use a standard programming language to design an arbitrary, centralized algorithm, which we call an algorithmic policy, to decide the behaviors of an entire network, and (2) providing an abstraction that the programmer-defined, centralized policy runs, conceptually, &amp;ldquo;afresh&amp;rdquo; on every packet entering a network, and hence is oblivious to the challenge of translating a high-level policy into sets of rules on distributed individual switches.</description>
+    </item>
+    
+    <item>
+      <title>Reducing Latency in Tor Circuits with Unordered Delivery</title>
+      <link>https://bford.info/pub/sec/tor-unordered/</link>
+      <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/tor-unordered/</guid>
+      <description>  </description>
     </item>
     
     <item>
@@ -229,7 +247,8 @@ Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-3
       
       <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
       <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
- Massachusetts Institute of Technology Published in 7th USENIX Symposium on Operating Systems Design and Implementation, November 6-8, 2006. Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+ Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
+November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
     </item>
     
     <item>

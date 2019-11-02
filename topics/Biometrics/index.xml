@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Biometrics on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Biometrics/</link>
+    <description>Recent content in Biometrics on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Jul 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Biometrics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Private Eyes: Secure Remote Biometric Authentication</title>
+      <link>https://bford.info/pub/sec/private-eyes-abs/</link>
+      <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/private-eyes-abs/</guid>
+      <description>Ewa Syta, Michael J. Fischer, David Wolinsky, Abraham Silberschatz, Gina Gallegos-García, and Bryan Ford   12th International Conference on Security and Cryptography (SECRYPT)
+July 2015.  Abstract: We propose an efficient remote biometric authentication protocol that gives strong protection to the user’s biometric data in case of two common kinds of security breaches: (1) loss or theft of the user’s token (smart card, handheld device, etc.), giving the attacker full access to any secrets embedded within it; (2) total penetration of the server.</description>
+    </item>
+    
+    <item>
+      <title>Strong Theft-Proof Privacy-Preserving Biometric Authentication</title>
+      <link>https://bford.info/pub/sec/biometric-auth/</link>
+      <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/biometric-auth/</guid>
+      <description>  </description>
+    </item>
+    
+  </channel>
+</rss>

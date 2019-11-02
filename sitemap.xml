@@ -101,6 +101,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/sec/two-round-multisig-abs/</loc>
+    <lastmod>2019-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/topics/Modularity/</loc>
     <lastmod>2019-05-12T00:00:00+00:00</lastmod>
   </url>
@@ -146,6 +151,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Rights/</loc>
+    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2019/02/22/voting/</loc>
     <lastmod>2019-02-22T00:00:00+00:00</lastmod>
   </url>
@@ -157,6 +167,11 @@
   
   <url>
     <loc>https://bford.info/topics/Identity/</loc>
+    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Personhood/</loc>
     <lastmod>2019-02-08T00:00:00+00:00</lastmod>
   </url>
   
@@ -187,6 +202,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Verifiable-Shuffles/</loc>
+    <lastmod>2018-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2018/06/27/muslim-ban/</loc>
     <lastmod>2018-06-27T00:00:00+00:00</lastmod>
   </url>
@@ -207,6 +227,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Humanitarian/</loc>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/topics/Law/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url>
@@ -218,6 +243,11 @@
   
   <url>
     <loc>https://bford.info/pub/dec/immunity-abs/</loc>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Randomness/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -267,6 +297,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/sec/lawful-surveillance/</loc>
+    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2016/xx/xx/selfish/</loc>
     <lastmod>2016-10-31T00:00:00+00:00</lastmod>
   </url>
@@ -282,8 +317,48 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Dining-Cryptographers/</loc>
+    <lastmod>2016-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/prifi/</loc>
+    <lastmod>2016-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/contact-chaining/</loc>
+    <lastmod>2016-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/pub/dec/byzcoin-abs/</loc>
     <lastmod>2016-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/dec/riffle/</loc>
+    <lastmod>2016-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/dec/cosi/</loc>
+    <lastmod>2016-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/dec/anonrep-abs/</loc>
+    <lastmod>2016-03-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/crypto-book-codaspy/</loc>
+    <lastmod>2016-03-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Social-Networks/</loc>
+    <lastmod>2016-03-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -342,6 +417,26 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/net/panopticon-cacm/</loc>
+    <lastmod>2015-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Biometrics/</loc>
+    <lastmod>2015-07-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/private-eyes-abs/</loc>
+    <lastmod>2015-07-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/certco/</loc>
+    <lastmod>2015-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/page/about/</loc>
     <lastmod>2015-04-03T02:13:50+00:00</lastmod>
   </url>
@@ -387,8 +482,48 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/sec/bandits/</loc>
+    <lastmod>2014-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Layering/</loc>
+    <lastmod>2014-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/nymboxes/</loc>
+    <lastmod>2014-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/dissent-analysis/</loc>
+    <lastmod>2014-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Virtual-Machines/</loc>
+    <lastmod>2014-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/torcoin/</loc>
+    <lastmod>2014-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/onions-to-shallots/</loc>
+    <lastmod>2014-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/pub/net/taq-abs/</loc>
     <lastmod>2014-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/crypto-book/</loc>
+    <lastmod>2013-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -397,12 +532,42 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/sec/conscript/</loc>
+    <lastmod>2013-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/randomness-keygen/</loc>
+    <lastmod>2013-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/buddies/</loc>
+    <lastmod>2013-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/pub/os/irec/</loc>
     <lastmod>2013-11-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://bford.info/pub/sec/verdict/</loc>
+    <lastmod>2013-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/pub/net/maple-abs/</loc>
+    <lastmod>2013-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Out-of-Order-Delivery/</loc>
+    <lastmod>2013-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/tor-unordered/</loc>
     <lastmod>2013-08-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -417,8 +582,28 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/sec/human-rights-abs/</loc>
+    <lastmod>2013-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/pub/os/gpufs/</loc>
     <lastmod>2013-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/middleware12-abs/</loc>
+    <lastmod>2012-12-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/dissent-in-numbers/</loc>
+    <lastmod>2012-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/blogdrop/</loc>
+    <lastmod>2012-07-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -428,11 +613,6 @@
   
   <url>
     <loc>https://bford.info/pub/os/non-linear/</loc>
-    <lastmod>2012-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Out-of-Order-Delivery/</loc>
     <lastmod>2012-06-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -447,13 +627,23 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/sec/biometric-auth/</loc>
+    <lastmod>2012-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/pub/net/nsdi12-minion-abs/</loc>
     <lastmod>2012-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Layering/</loc>
-    <lastmod>2012-04-27T00:00:00+00:00</lastmod>
+    <loc>https://bford.info/pub/sec/faceless-abs/</loc>
+    <lastmod>2012-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/anytrust/</loc>
+    <lastmod>2012-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -567,13 +757,13 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Virtual-Machines/</loc>
+    <loc>https://bford.info/pub/os/vx32-abs/</loc>
     <lastmod>2008-06-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bford.info/pub/os/vx32-abs/</loc>
-    <lastmod>2008-06-27T00:00:00+00:00</lastmod>
+    <loc>https://bford.info/pub/net/sybil-abs/</loc>
+    <lastmod>2008-04-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  On the Security of Two-Round Multi-Signatures &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/draft"><font color=blue>Scribblings</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>On the Security of Two-Round Multi-Signatures</h1>
+  
+<center>
+<strong>
+Manu Drijvers, Kasra Edalatnejad, Bryan Ford, Eike Kiltz, Julian Loss, Gregory Neven, and Igors Stepanovs
+<br>
+</strong>
+
+<p>
+<a href="https://www.ieee-security.org/TC/SP2019/program.html">40th IEEE Symposium on
+Security and Privacy</a><br>
+May 2019
+</p>
+</center>
+
+<h3>Abstract:</h3>
+A multi-signature scheme allows a group of signers to collaboratively sign a
+message, creating a single signature that convinces a verifier that every
+individual signer approved the message. The increased interest in technologies
+to decentralize trust has triggered the proposal of highly efficient two-round
+Schnorr-based multi-signature schemes designed to scale up to thousands of
+signers, namely BCJ by Bagherzandi et al. (CCS 2008), MWLD by Ma et al. (DCC
+2010), CoSi by Syta et al. (S&P 2016), and MuSig by Maxwell et al. (ePrint
+2018). In this work, we point out serious security issues in all currently
+known two-round multi-signature schemes (without pairings). First, we prove
+that none of the schemes can be proved secure without radically departing from
+currently known techniques. Namely, we show that if the one-more
+discrete-logarithm problem is hard, then no algebraic reduction exists that
+proves any of these schemes secure under the discrete-logarithm or one-more
+discrete-logarithm problem. We point out subtle flaws in the published security
+proofs of the above schemes (except CoSi, which was not proved secure) to
+clarify the contradiction between our result and the existing proofs. Next, we
+describe practical sub-exponential attacks on all schemes, providing further
+evidence to their insecurity. Being left without two-round multi-signature
+schemes, we present mBCJ, a variant of the BCJ scheme that we prove secure
+under the discrete-logarithm assumption in the random-oracle model. Our
+experiments show that mBCJ barely affects scalability compared to CoSi,
+allowing 16384 signers to collaboratively sign a message in about 2 seconds,
+making it a highly practical and provably secure alternative for large-scale
+deployments.
+
+<h3>Paper:
+<a href="../two-round-multisig.pdf">PDF</a>
+</h3>
+
+<h3>Slides:
+<a href="../two-round-multisig-slides.pdf">PDF</a>
+</h3>
+
+<h3>Video:
+<a href="https://www.youtube.com/watch?v=_SZsJvDffBE">YouTube</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Security/">Security</a>
+	
+		<a href="/topics/Cryptography/">Cryptography</a>
+	
+		<a href="/topics/Blockchain/">Blockchain</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

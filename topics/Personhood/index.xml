@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personhood on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Personhood/</link>
+    <description>Recent content in Personhood on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Personhood/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rethinking Priorities: Should Identity Systems Divide or Unite People?</title>
+      <link>https://bford.info/2019/02/08/identity/</link>
+      <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2019/02/08/identity/</guid>
+      <description>Note: this is a brief, rough, first-draft sketch of a longer paper paper I intend to flesh out further in the near future.
+The problem of identity has become a hot topic, with the idea of self-sovereign identity in particular attracting significant excitement. The essence of the idea, in short, is to put users in charge of how their identities and personal data are used. Self-sovereign identity posits that users should decide how much and what aspects of their identities to disclose in any situation, and should know and have control over what that information is used for.</description>
+    </item>
+    
+    <item>
+      <title>Proof-of-Personhood: Redemocratizing Permissionless Cryptocurrencies</title>
+      <link>https://bford.info/pub/dec/pop-abs/</link>
+      <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/pop-abs/</guid>
+      <description>Maria Borge, Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, and Bryan Ford
+EPFL   IEEE Security &amp; Privacy on the Blockchain (IEEE S&amp;B)
+April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies commonly use proof-of-work (PoW) or proof-of-stake (PoS) to ensure their security, e.g. to prevent double spending attacks. However, both approaches have disadvantages: PoW leads to massive amounts of wasted electricity and re-centralization, whereas major stakeholders in PoS might be able to create a monopoly.</description>
+    </item>
+    
+    <item>
+      <title>An Offline Foundation for Online Accountable Pseudonyms</title>
+      <link>https://bford.info/pub/net/sybil-abs/</link>
+      <pubDate>Tue, 01 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/sybil-abs/</guid>
+      <description>Bryan Ford and Jacob Strauss 
+Massachusetts Institute of Technology First Workshop on Social Network Systems
+April 1, 2008 Abstract:  Online anonymity often appears to undermine accountability, offering little incentive for civil behavior, but accountability failures usually result not from anonymity itself but from the disposability of virtual identities. A user banned for misbehavior&amp;mdash;e.g., spamming from a free E-mail account or stuffing an online ballot box&amp;mdash;can simply open other accounts or connect from other IP addresses.</description>
+    </item>
+    
+  </channel>
+</rss>

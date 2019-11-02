@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Social Networks on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Social-Networks/</link>
+    <description>Recent content in Social Networks on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Mar 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Social-Networks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AnonRep: Towards Tracking-Resistant Anonymous Reputation</title>
+      <link>https://bford.info/pub/dec/anonrep-abs/</link>
+      <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/anonrep-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Building Privacy-Preserving Cryptographic Credentials from Federated Online Identities</title>
+      <link>https://bford.info/pub/sec/crypto-book-codaspy/</link>
+      <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/crypto-book-codaspy/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Crypto-Book: An Architecture for Privacy Preserving Online Identities</title>
+      <link>https://bford.info/pub/sec/crypto-book/</link>
+      <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/crypto-book/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Faceless: Decentralized Anonymous Group Messaging for Online Social Networks</title>
+      <link>https://bford.info/pub/sec/faceless-abs/</link>
+      <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/faceless-abs/</guid>
+      <description>Xiaoxiao Song, David Isaac Wolinsky, and Bryan Ford Yale University   5th Workshop on Social Network Systems
+April 10, 2012  Abstract: Social networks (SNs) enable physically distributed groups to communicate seamlessly. Unfortunately such communi- cation can be easily mined by adversaries in attempts to breach users’ privacy or suppress open discussion on sensi- tive topics. While anonymous posting can help protect users by hiding the link between individuals and the messages they post, existing anonymization schemes are centralized or vul- nerable to well-known attacks.</description>
+    </item>
+    
+    <item>
+      <title>UIA: A Global Connectivity Architecture for Mobile Personal Devices</title>
+      <link>https://bford.info/pub/net/phd-abs/</link>
+      <pubDate>Mon, 01 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/phd-abs/</guid>
+      <description>Bryan Ford
+Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications.  Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
+    </item>
+    
+    <item>
+      <title>Persistent Personal Names for Globally Connected Mobile Devices</title>
+      <link>https://bford.info/pub/net/uia-osdi-abs/</link>
+      <pubDate>Mon, 06 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
+      <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
+ Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
+November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+    </item>
+    
+  </channel>
+</rss>

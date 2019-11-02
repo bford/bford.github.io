@@ -6,10 +6,29 @@
     <description>Recent content in Layering on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Apr 2012 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Aug 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/topics/Layering/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Managing NymBoxes for Identity and Tracking Protection</title>
+      <link>https://bford.info/pub/sec/nymboxes/</link>
+      <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/nymboxes/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Enhancing the OS against Security Threats in System Administration</title>
+      <link>https://bford.info/pub/os/middleware12-abs/</link>
+      <pubDate>Mon, 03 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/middleware12-abs/</guid>
+      <description>Nuno Santos, Rodrigo Rodrigues, and Bryan Ford   ACM/IFIP/USENIX 13th International Conference on Middleware
+December 2012  Abstract: The consequences of security breaches due to system administrator errors can be catastrophic. Software systems in general, and OSes in particular, ultimately depend on a fully trusted administrator whom is granted superuser privileges that allow him to fully control the system. Consequently, an administrator acting negligently or unethically can easily compromise user data in irreversible ways by leaking, modifying, or deleting data.</description>
+    </item>
     
     <item>
       <title>Fitting Square Pegs Through Round Pipes: Unordered Delivery Wire-Compatible with TCP and TLS</title>

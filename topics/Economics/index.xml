@@ -31,5 +31,23 @@ As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successfu
 In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
     </item>
     
+    <item>
+      <title>A TorPath to TorCoin: Proof-of-Bandwidth Altcoins for Compensating Relays</title>
+      <link>https://bford.info/pub/sec/torcoin/</link>
+      <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/torcoin/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>From Onions to Shallots: Rewarding Tor Relays with TEARS</title>
+      <link>https://bford.info/pub/sec/onions-to-shallots/</link>
+      <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/onions-to-shallots/</guid>
+      <description>  </description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Randomness on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Randomness/</link>
+    <description>Recent content in Randomness on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Randomness/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OmniLedger: A Secure, Scale-Out, Decentralized Ledger via Sharding</title>
+      <link>https://bford.info/pub/dec/omniledger-abs/</link>
+      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/omniledger-abs/</guid>
+      <description>Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, Ewa Syta, and Bryan Ford
+  IEEE Security &amp; Privacy (IEEE S&amp;P)
+May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blockchain) that performs on par with centralized payment processors, such as Visa, is a challenging task. Most existing distributed ledgers are unable to scale-out, i.e., to grow their total processing capacity with the number of validators; and those that do, compromise security or decentralization.</description>
+    </item>
+    
+    <item>
+      <title>Scalable Bias-Resistant Distributed Randomness</title>
+      <link>https://bford.info/pub/dec/random-abs/</link>
+      <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/random-abs/</guid>
+      <description>Ewa Syta, Philipp Jovanovic, Eleftherios Kokoris Kogias, Nicolas Gailly, Linus Gasser, Ismail Khoffi, Michael J. Fischer, and Bryan Ford
+  IEEE Security &amp; Privacy (IEEE S&amp;P)
+May 23, 2017 Abstract: Bias-resistant public randomness is a critical component in many (distributed) protocols. Generating public randomness is hard, however, because active adversaries may behave dishonestly to bias public random choices toward their advantage. Existing solutions do not scale to hundreds or thousands of participants, as is needed in many decentralized systems.</description>
+    </item>
+    
+    <item>
+      <title>Ensuring High-Quality Randomness in Cryptographic Key Generation</title>
+      <link>https://bford.info/pub/sec/randomness-keygen/</link>
+      <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/randomness-keygen/</guid>
+      <description>  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dining Cryptographers on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Dining-Cryptographers/</link>
+    <description>Recent content in Dining Cryptographers on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Oct 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Dining-Cryptographers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PriFi: A Low-Latency and Tracking-Resistant Protocol for Local-Area Anonymous Communication</title>
+      <link>https://bford.info/pub/sec/prifi/</link>
+      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/prifi/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Seeking Anonymity in an Internet Panopticon</title>
+      <link>https://bford.info/pub/net/panopticon-cacm/</link>
+      <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/panopticon-cacm/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Security Analysis of Accountable Anonymity in Dissent</title>
+      <link>https://bford.info/pub/sec/dissent-analysis/</link>
+      <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/dissent-analysis/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Hang With Your Buddies to Resist Intersection Attacks</title>
+      <link>https://bford.info/pub/sec/buddies/</link>
+      <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/buddies/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Proactively Accountable Anonymous Messaging in Verdict</title>
+      <link>https://bford.info/pub/sec/verdict/</link>
+      <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/verdict/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Dissent in Numbers: Making Strong Anonymity Scale</title>
+      <link>https://bford.info/pub/sec/dissent-in-numbers/</link>
+      <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/dissent-in-numbers/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Scalable Anonymous Group Communication in the Anytrust Model</title>
+      <link>https://bford.info/pub/sec/anytrust/</link>
+      <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/anytrust/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Dissent: Accountable Anonymous Group Messaging</title>
+      <link>https://bford.info/pub/net/dissent-abs/</link>
+      <pubDate>Mon, 04 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/dissent-abs/</guid>
+      <description>Henry Corrigan-Gibbs and Bryan Ford
+	Yale University  To appear in 17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract:  Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
+    </item>
+    
+  </channel>
+</rss>

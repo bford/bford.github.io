@@ -33,6 +33,24 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
     </item>
     
     <item>
+      <title>Keeping Authorities “Honest or Bust” with Decentralized Witness Cosigning</title>
+      <link>https://bford.info/pub/dec/cosi/</link>
+      <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/cosi/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>AnonRep: Towards Tracking-Resistant Anonymous Reputation</title>
+      <link>https://bford.info/pub/dec/anonrep-abs/</link>
+      <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/anonrep-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>Let&#39;s verify real people, not real names.</title>
       <link>https://bford.info/2015/10/07/names.html</link>
       <pubDate>Wed, 07 Oct 2015 00:00:00 +0000</pubDate>
@@ -40,6 +58,43 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <guid>https://bford.info/2015/10/07/names.html</guid>
       <description>On Monday the EFF, together with a &amp;ldquo;Nameless Coalition&amp;rdquo; of like-minded groups, escalated the backlash against Facebook&amp;rsquo;s &amp;ldquo;real names&amp;rdquo; or &amp;ldquo;authentic identities&amp;rdquo; policy with an open letter urging Facebook to end this policy like Google Plus did last year. Facebook&amp;rsquo;s response cites concerns about pseudonyms helping to hide &amp;ldquo;terrorist organizations&amp;rdquo;, &amp;ldquo;school bullies&amp;rdquo;, and &amp;ldquo;criminal behavior.&amp;rdquo;
 While I support anonymity and have spent years working to strengthen it, terrorist fearmongering aside, Facebook is right that anonymity is often abused.</description>
+    </item>
+    
+    <item>
+      <title>Private Eyes: Secure Remote Biometric Authentication</title>
+      <link>https://bford.info/pub/sec/private-eyes-abs/</link>
+      <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/private-eyes-abs/</guid>
+      <description>Ewa Syta, Michael J. Fischer, David Wolinsky, Abraham Silberschatz, Gina Gallegos-García, and Bryan Ford   12th International Conference on Security and Cryptography (SECRYPT)
+July 2015.  Abstract: We propose an efficient remote biometric authentication protocol that gives strong protection to the user’s biometric data in case of two common kinds of security breaches: (1) loss or theft of the user’s token (smart card, handheld device, etc.), giving the attacker full access to any secrets embedded within it; (2) total penetration of the server.</description>
+    </item>
+    
+    <item>
+      <title>Certificate Cothority: Towards Trustworthy Collective CAs</title>
+      <link>https://bford.info/pub/sec/certco/</link>
+      <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/certco/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Managing NymBoxes for Identity and Tracking Protection</title>
+      <link>https://bford.info/pub/sec/nymboxes/</link>
+      <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/nymboxes/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Strong Theft-Proof Privacy-Preserving Biometric Authentication</title>
+      <link>https://bford.info/pub/sec/biometric-auth/</link>
+      <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/biometric-auth/</guid>
+      <description>  </description>
     </item>
     
     <item>
@@ -73,6 +128,17 @@ Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  
     </item>
     
     <item>
+      <title>An Offline Foundation for Online Accountable Pseudonyms</title>
+      <link>https://bford.info/pub/net/sybil-abs/</link>
+      <pubDate>Tue, 01 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/sybil-abs/</guid>
+      <description>Bryan Ford and Jacob Strauss 
+Massachusetts Institute of Technology First Workshop on Social Network Systems
+April 1, 2008 Abstract:  Online anonymity often appears to undermine accountability, offering little incentive for civil behavior, but accountability failures usually result not from anonymity itself but from the disposability of virtual identities. A user banned for misbehavior&amp;mdash;e.g., spamming from a free E-mail account or stuffing an online ballot box&amp;mdash;can simply open other accounts or connect from other IP addresses.</description>
+    </item>
+    
+    <item>
       <title>Alpaca: Extensible Authorization for Distributed Services</title>
       <link>https://bford.info/pub/net/alpaca-abs/</link>
       <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
@@ -89,7 +155,8 @@ Massachusetts Institute of Technology Published in 14th ACM Conference on Comput
       
       <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
       <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
- Massachusetts Institute of Technology Published in 7th USENIX Symposium on Operating Systems Design and Implementation, November 6-8, 2006. Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+ Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
+November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
     </item>
     
     <item>

@@ -49,6 +49,15 @@ May 12-15, 2019.  Abstract: While showing great promise, smart contracts are dif
     </item>
     
     <item>
+      <title>Managing NymBoxes for Identity and Tracking Protection</title>
+      <link>https://bford.info/pub/sec/nymboxes/</link>
+      <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/nymboxes/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>Structural Cloud Audits that Protect Private Information</title>
       <link>https://bford.info/pub/os/cloud-psra/</link>
       <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
@@ -82,6 +91,16 @@ May 12-15, 2019.  Abstract: While showing great promise, smart contracts are dif
       
       <guid>https://bford.info/pub/os/gpufs/</guid>
       <description>  </description>
+    </item>
+    
+    <item>
+      <title>Enhancing the OS against Security Threats in System Administration</title>
+      <link>https://bford.info/pub/os/middleware12-abs/</link>
+      <pubDate>Mon, 03 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/middleware12-abs/</guid>
+      <description>Nuno Santos, Rodrigo Rodrigues, and Bryan Ford   ACM/IFIP/USENIX 13th International Conference on Middleware
+December 2012  Abstract: The consequences of security breaches due to system administrator errors can be catastrophic. Software systems in general, and OSes in particular, ultimately depend on a fully trusted administrator whom is granted superuser privileges that allow him to fully control the system. Consequently, an administrator acting negligently or unethically can easily compromise user data in irreversible ways by leaking, modifying, or deleting data.</description>
     </item>
     
     <item>
@@ -242,7 +261,8 @@ Massachusetts Institute of Technology Published in 14th ACM Conference on Comput
       
       <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
       <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
- Massachusetts Institute of Technology Published in 7th USENIX Symposium on Operating Systems Design and Implementation, November 6-8, 2006. Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+ Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
+November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
     </item>
     
     <item>

@@ -22,6 +22,16 @@ July 2019.  Abstract: Most encrypted data formats leak metadata via their plaint
     </item>
     
     <item>
+      <title>On the Security of Two-Round Multi-Signatures</title>
+      <link>https://bford.info/pub/sec/two-round-multisig-abs/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/two-round-multisig-abs/</guid>
+      <description>Manu Drijvers, Kasra Edalatnejad, Bryan Ford, Eike Kiltz, Julian Loss, Gregory Neven, and Igors Stepanovs   40th IEEE Symposium on Security and Privacy
+May 2019  Abstract: A multi-signature scheme allows a group of signers to collaboratively sign a message, creating a single signature that convinces a verifier that every individual signer approved the message. The increased interest in technologies to decentralize trust has triggered the proposal of highly efficient two-round Schnorr-based multi-signature schemes designed to scale up to thousands of signers, namely BCJ by Bagherzandi et al.</description>
+    </item>
+    
+    <item>
       <title>Rethinking General-Purpose Decentralized Computing</title>
       <link>https://bford.info/pub/os/protean-abs/</link>
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
@@ -129,11 +139,74 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
     </item>
     
     <item>
+      <title>Multiple Objectives of Lawful-Surveillance Protocols</title>
+      <link>https://bford.info/pub/sec/lawful-surveillance/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/lawful-surveillance/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>PriFi: A Low-Latency and Tracking-Resistant Protocol for Local-Area Anonymous Communication</title>
+      <link>https://bford.info/pub/sec/prifi/</link>
+      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/prifi/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Privacy-Preserving Lawful Contact Chaining</title>
+      <link>https://bford.info/pub/sec/contact-chaining/</link>
+      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/contact-chaining/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>Enhancing Bitcoin Security and Performance with Strong Consistency via Collective Signing</title>
       <link>https://bford.info/pub/dec/byzcoin-abs/</link>
       <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/byzcoin-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>An Efficient Communication System With Strong Anonymity</title>
+      <link>https://bford.info/pub/dec/riffle/</link>
+      <pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/riffle/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Keeping Authorities “Honest or Bust” with Decentralized Witness Cosigning</title>
+      <link>https://bford.info/pub/dec/cosi/</link>
+      <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/cosi/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>AnonRep: Towards Tracking-Resistant Anonymous Reputation</title>
+      <link>https://bford.info/pub/dec/anonrep-abs/</link>
+      <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/anonrep-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Building Privacy-Preserving Cryptographic Credentials from Federated Online Identities</title>
+      <link>https://bford.info/pub/sec/crypto-book-codaspy/</link>
+      <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/crypto-book-codaspy/</guid>
       <description>  </description>
     </item>
     
@@ -158,6 +231,34 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
     </item>
     
     <item>
+      <title>Seeking Anonymity in an Internet Panopticon</title>
+      <link>https://bford.info/pub/net/panopticon-cacm/</link>
+      <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/panopticon-cacm/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Private Eyes: Secure Remote Biometric Authentication</title>
+      <link>https://bford.info/pub/sec/private-eyes-abs/</link>
+      <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/private-eyes-abs/</guid>
+      <description>Ewa Syta, Michael J. Fischer, David Wolinsky, Abraham Silberschatz, Gina Gallegos-García, and Bryan Ford   12th International Conference on Security and Cryptography (SECRYPT)
+July 2015.  Abstract: We propose an efficient remote biometric authentication protocol that gives strong protection to the user’s biometric data in case of two common kinds of security breaches: (1) loss or theft of the user’s token (smart card, handheld device, etc.), giving the attacker full access to any secrets embedded within it; (2) total penetration of the server.</description>
+    </item>
+    
+    <item>
+      <title>Certificate Cothority: Towards Trustworthy Collective CAs</title>
+      <link>https://bford.info/pub/sec/certco/</link>
+      <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/certco/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>GPUfs: The Case for Operating System Services on GPUs</title>
       <link>https://bford.info/pub/os/gpufs-cacm/</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
@@ -176,11 +277,65 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
     </item>
     
     <item>
+      <title>Catching Bandits and Only Bandits: Privacy-Preserving Intersection Warrants for Lawful Surveillance</title>
+      <link>https://bford.info/pub/sec/bandits/</link>
+      <pubDate>Mon, 18 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/bandits/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Managing NymBoxes for Identity and Tracking Protection</title>
+      <link>https://bford.info/pub/sec/nymboxes/</link>
+      <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/nymboxes/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Security Analysis of Accountable Anonymity in Dissent</title>
+      <link>https://bford.info/pub/sec/dissent-analysis/</link>
+      <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/dissent-analysis/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>A TorPath to TorCoin: Proof-of-Bandwidth Altcoins for Compensating Relays</title>
+      <link>https://bford.info/pub/sec/torcoin/</link>
+      <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/torcoin/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>From Onions to Shallots: Rewarding Tor Relays with TEARS</title>
+      <link>https://bford.info/pub/sec/onions-to-shallots/</link>
+      <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/onions-to-shallots/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>TAQ: Enhancing Fairness and Performance Predictability in Small Packet Regimes</title>
       <link>https://bford.info/pub/net/taq-abs/</link>
       <pubDate>Mon, 14 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/taq-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Crypto-Book: An Architecture for Privacy Preserving Online Identities</title>
+      <link>https://bford.info/pub/sec/crypto-book/</link>
+      <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/crypto-book/</guid>
       <description>  </description>
     </item>
     
@@ -194,11 +349,47 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
     </item>
     
     <item>
+      <title>Conscript Your Friends into Larger Anonymity Sets with JavaScript</title>
+      <link>https://bford.info/pub/sec/conscript/</link>
+      <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/conscript/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Ensuring High-Quality Randomness in Cryptographic Key Generation</title>
+      <link>https://bford.info/pub/sec/randomness-keygen/</link>
+      <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/randomness-keygen/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Hang With Your Buddies to Resist Intersection Attacks</title>
+      <link>https://bford.info/pub/sec/buddies/</link>
+      <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/buddies/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>An Untold Story of Redundant Clouds: Making Your Service Deployment Truly Reliable</title>
       <link>https://bford.info/pub/os/irec/</link>
       <pubDate>Sun, 03 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/irec/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Proactively Accountable Anonymous Messaging in Verdict</title>
+      <link>https://bford.info/pub/sec/verdict/</link>
+      <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/verdict/</guid>
       <description>  </description>
     </item>
     
@@ -213,6 +404,15 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
     </item>
     
     <item>
+      <title>Reducing Latency in Tor Circuits with Unordered Delivery</title>
+      <link>https://bford.info/pub/sec/tor-unordered/</link>
+      <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/tor-unordered/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>Lazy Tree Mapping: Generalizing and Scaling Deterministic Parallelism</title>
       <link>https://bford.info/pub/os/lazy-tree-mapping/</link>
       <pubDate>Mon, 29 Jul 2013 00:00:00 +0000</pubDate>
@@ -222,11 +422,49 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
     </item>
     
     <item>
+      <title>Welcome to the World of Human Rights: Please Make Yourself Uncomfortable</title>
+      <link>https://bford.info/pub/sec/human-rights-abs/</link>
+      <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/human-rights-abs/</guid>
+      <description>   Henry Corrigan-Gibbs and Bryan Ford Yale University   Cyber-security Research Ethics Dialog &amp; Strategy Workshop (CREDS 2013)
+May 23, 2013  Abstract: We draw an ethical analogy between Internet freedom efforts and humanitarian aid work. This parallel motivates a number of ethical questions relating to anonymity and censorship-circumvention research. Paper: PDF  </description>
+    </item>
+    
+    <item>
       <title>GPUfs: Integrating a File System with GPUs</title>
       <link>https://bford.info/pub/os/gpufs/</link>
       <pubDate>Wed, 20 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/gpufs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Enhancing the OS against Security Threats in System Administration</title>
+      <link>https://bford.info/pub/os/middleware12-abs/</link>
+      <pubDate>Mon, 03 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/middleware12-abs/</guid>
+      <description>Nuno Santos, Rodrigo Rodrigues, and Bryan Ford   ACM/IFIP/USENIX 13th International Conference on Middleware
+December 2012  Abstract: The consequences of security breaches due to system administrator errors can be catastrophic. Software systems in general, and OSes in particular, ultimately depend on a fully trusted administrator whom is granted superuser privileges that allow him to fully control the system. Consequently, an administrator acting negligently or unethically can easily compromise user data in irreversible ways by leaking, modifying, or deleting data.</description>
+    </item>
+    
+    <item>
+      <title>Dissent in Numbers: Making Strong Anonymity Scale</title>
+      <link>https://bford.info/pub/sec/dissent-in-numbers/</link>
+      <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/dissent-in-numbers/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Scavenging for Anonymity with BlogDrop</title>
+      <link>https://bford.info/pub/sec/blogdrop/</link>
+      <pubDate>Mon, 09 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/blogdrop/</guid>
       <description>  </description>
     </item>
     
@@ -269,11 +507,39 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
     </item>
     
     <item>
+      <title>Strong Theft-Proof Privacy-Preserving Biometric Authentication</title>
+      <link>https://bford.info/pub/sec/biometric-auth/</link>
+      <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/biometric-auth/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>Fitting Square Pegs Through Round Pipes: Unordered Delivery Wire-Compatible with TCP and TLS</title>
       <link>https://bford.info/pub/net/nsdi12-minion-abs/</link>
       <pubDate>Fri, 27 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/nsdi12-minion-abs/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Faceless: Decentralized Anonymous Group Messaging for Online Social Networks</title>
+      <link>https://bford.info/pub/sec/faceless-abs/</link>
+      <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/faceless-abs/</guid>
+      <description>Xiaoxiao Song, David Isaac Wolinsky, and Bryan Ford Yale University   5th Workshop on Social Network Systems
+April 10, 2012  Abstract: Social networks (SNs) enable physically distributed groups to communicate seamlessly. Unfortunately such communi- cation can be easily mined by adversaries in attempts to breach users’ privacy or suppress open discussion on sensi- tive topics. While anonymous posting can help protect users by hiding the link between individuals and the messages they post, existing anonymization schemes are centralized or vul- nerable to well-known attacks.</description>
+    </item>
+    
+    <item>
+      <title>Scalable Anonymous Group Communication in the Anytrust Model</title>
+      <link>https://bford.info/pub/sec/anytrust/</link>
+      <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/anytrust/</guid>
       <description>  </description>
     </item>
     
@@ -471,6 +737,17 @@ June 22-27, 2008, Boston, Massachusetts. Abstract:  Code sandboxing is useful fo
     </item>
     
     <item>
+      <title>An Offline Foundation for Online Accountable Pseudonyms</title>
+      <link>https://bford.info/pub/net/sybil-abs/</link>
+      <pubDate>Tue, 01 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/sybil-abs/</guid>
+      <description>Bryan Ford and Jacob Strauss 
+Massachusetts Institute of Technology First Workshop on Social Network Systems
+April 1, 2008 Abstract:  Online anonymity often appears to undermine accountability, offering little incentive for civil behavior, but accountability failures usually result not from anonymity itself but from the disposability of virtual identities. A user banned for misbehavior&amp;mdash;e.g., spamming from a free E-mail account or stuffing an online ballot box&amp;mdash;can simply open other accounts or connect from other IP addresses.</description>
+    </item>
+    
+    <item>
       <title>State of Peer-to-Peer (P2P) Communication across Network Address Translators (NATs)</title>
       <link>https://bford.info/pub/net/rfc5128-abs/</link>
       <pubDate>Sat, 01 Mar 2008 00:00:00 +0000</pubDate>
@@ -526,7 +803,8 @@ Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-3
       
       <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
       <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
- Massachusetts Institute of Technology Published in 7th USENIX Symposium on Operating Systems Design and Implementation, November 6-8, 2006. Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+ Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
+November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
     </item>
     
     <item>

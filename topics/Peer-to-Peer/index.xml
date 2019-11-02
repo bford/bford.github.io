@@ -93,7 +93,8 @@ March 2008  Abstract: This memo documents the various methods known to be in use
       
       <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
       <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
- Massachusetts Institute of Technology Published in 7th USENIX Symposium on Operating Systems Design and Implementation, November 6-8, 2006. Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+ Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
+November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
     </item>
     
     <item>
