@@ -118,29 +118,19 @@ February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a p
     
     <item>
       <title>Application Design Guidelines for Traversal through Network Address Translators</title>
-      <link>https://bford.info/post/2005-02-01-behave-app/</link>
+      <link>https://bford.info/2005/02/01/behave-app/</link>
       <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.info/post/2005-02-01-behave-app/</guid>
+      <guid>https://bford.info/2005/02/01/behave-app/</guid>
       <description>Bryan Ford, Pyda Srisuresh, and Dan Kegel   draft-ford-behave-app  Abstract: This document defines guidelines by which application designers can create applications that communicate reliably and efficiently in the presence of Network Address Translators (NATs), particularly when the application has a need for &#34;peer-to-peer&#34; (P2P) type of communication. The guidelines allow a P2P application to work reliably across a majority of existing NATs, as well as all future NATs that conform to the behave requirements specified in companion documents.</description>
     </item>
     
     <item>
-      <title>Complications from Network Address Translator Deployment Topologies</title>
-      <link>https://bford.info/post/2005-02-01-behave-top/</link>
-      <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/post/2005-02-01-behave-top/</guid>
-      <description>Bryan Ford and Pyda Srisuresh   draft-ford-behave-gen
- Abstract: This document discusses the operating principles of Network Address Translator (NAT) devices and the behavioral properties required to make NAT more predictable and compatible with diverse application protocols. First, this document presents an architectural model for NAT devices and defines important terms used in conjunction with NAT operation. The architectural model sets the stage for a set of concrete recommendations for NAT implementers.</description>
-    </item>
-    
-    <item>
       <title>Operating Principles and General Behavioral Requirements for Network Address Translators (BEH-GEN)</title>
-      <link>https://bford.info/post/2005-02-01-behave-gen/</link>
+      <link>https://bford.info/2005/02/01/behave-gen/</link>
       <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.info/post/2005-02-01-behave-gen/</guid>
+      <guid>https://bford.info/2005/02/01/behave-gen/</guid>
       <description>Bryan Ford and Pyda Srisuresh   draft-ford-behave-gen
  Abstract: This document discusses the operating principles of Network Address Translator (NAT) devices and the behavioral properties required to make NAT more predictable and compatible with diverse application protocols. First, this document presents an architectural model for NAT devices and defines important terms used in conjunction with NAT operation. The architectural model sets the stage for a set of concrete recommendations for NAT implementers.</description>
     </item>

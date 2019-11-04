@@ -72,10 +72,10 @@ The Apple versus FBI showdown has quickly become a crucial flashpoint of the &am
     
     <item>
       <title>Collectively Witnessing Log Servers in CT</title>
-      <link>https://bford.info/post/2015-10-20-cosi-ct/</link>
+      <link>https://bford.info/2015-10-20-cosi-ct/</link>
       <pubDate>Tue, 20 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.info/post/2015-10-20-cosi-ct/</guid>
+      <guid>https://bford.info/2015-10-20-cosi-ct/</guid>
       <description>Bryan Ford   draft-ford-trans-witness-00  Abstract: This document proposes a backward-compatible extension to CT enabling log servers to obtain compact collective signatures from any number of well-known &#34;witness&#34; servers, which clients can check without gossip to verify that log server records have been widely witnessed. Collective signatures proactively protect clients from man-in-the- middle attackers who may have stolen the private keys of one or more log servers, even if the attacker controls the client&#39;s network access, the client is unwilling to gossip for privacy reasons, or the client does not wish to incur the network bandwidth and/or latency costs of gossip.</description>
     </item>
     
