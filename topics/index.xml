@@ -21,11 +21,29 @@
     </item>
     
     <item>
+      <title>Consensus</title>
+      <link>https://bford.info/topics/Consensus/</link>
+      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Consensus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Economics</title>
       <link>https://bford.info/topics/Economics/</link>
       <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Economics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://bford.info/topics/Security/</link>
+      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Security/</guid>
       <description></description>
     </item>
     
@@ -62,15 +80,6 @@
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Privacy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://bford.info/topics/Security/</link>
-      <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Security/</guid>
       <description></description>
     </item>
     
@@ -233,15 +242,6 @@
       <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Surveillance/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Consensus</title>
-      <link>https://bford.info/topics/Consensus/</link>
-      <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Consensus/</guid>
       <description></description>
     </item>
     

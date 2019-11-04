@@ -711,7 +711,7 @@ April 2009  Abstract: This document specifies the behavioral properties required
       
       <guid>https://bford.info/pub/net/rfc5382-abs/</guid>
       <description>   Saikat Guha, Kaushik Biswas, Bryan Ford, Senthil Sivakumar, and Pyda Srisuresh   IETF RFC 5382
-October 2008  Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Paper: Plain text  </description>
+October 2008  Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Final RFC: Plain text  Early drafts:   IETF working group draft versions: 06 05 04 03 02 01 00  Individual draft versions: 02 01 00  </description>
     </item>
     
     <item>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Bryan Ford&#39;s Home Page</title>
+    <title>Blog Posts and Other Drafts on Bryan Ford&#39;s Home Page</title>
     <link>https://bford.info/post/</link>
-    <description>Recent content in Posts on Bryan Ford&#39;s Home Page</description>
+    <description>Recent content in Blog Posts and Other Drafts on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Sep 2019 00:00:00 +0000</lastBuildDate>
@@ -121,6 +121,15 @@ The Apple versus FBI showdown has quickly become a crucial flashpoint of the &am
     </item>
     
     <item>
+      <title>Collectively Witnessing Log Servers in CT</title>
+      <link>https://bford.info/post/2015-10-20-cosi-ct/</link>
+      <pubDate>Tue, 20 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2015-10-20-cosi-ct/</guid>
+      <description>Bryan Ford   draft-ford-trans-witness-00  Abstract: This document proposes a backward-compatible extension to CT enabling log servers to obtain compact collective signatures from any number of well-known &#34;witness&#34; servers, which clients can check without gossip to verify that log server records have been widely witnessed. Collective signatures proactively protect clients from man-in-the- middle attackers who may have stolen the private keys of one or more log servers, even if the attacker controls the client&#39;s network access, the client is unwilling to gossip for privacy reasons, or the client does not wish to incur the network bandwidth and/or latency costs of gossip.</description>
+    </item>
+    
+    <item>
       <title>Let&#39;s verify real people, not real names.</title>
       <link>https://bford.info/2015/10/07/names.html</link>
       <pubDate>Wed, 07 Oct 2015 00:00:00 +0000</pubDate>
@@ -150,21 +159,41 @@ Setting aside Yale in particular, however, it is interesting to notice some broa
     </item>
     
     <item>
+      <title>Application Design Guidelines for Traversal through Network Address Translators</title>
+      <link>https://bford.info/post/2005-02-01-behave-app/</link>
+      <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2005-02-01-behave-app/</guid>
+      <description>Bryan Ford, Pyda Srisuresh, and Dan Kegel   draft-ford-behave-app  Abstract: This document defines guidelines by which application designers can create applications that communicate reliably and efficiently in the presence of Network Address Translators (NATs), particularly when the application has a need for &#34;peer-to-peer&#34; (P2P) type of communication. The guidelines allow a P2P application to work reliably across a majority of existing NATs, as well as all future NATs that conform to the behave requirements specified in companion documents.</description>
+    </item>
+    
+    <item>
+      <title>Complications from Network Address Translator Deployment Topologies</title>
+      <link>https://bford.info/post/2005-02-01-behave-top/</link>
+      <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2005-02-01-behave-top/</guid>
+      <description>Bryan Ford and Pyda Srisuresh   draft-ford-behave-gen
+ Abstract: This document discusses the operating principles of Network Address Translator (NAT) devices and the behavioral properties required to make NAT more predictable and compatible with diverse application protocols. First, this document presents an architectural model for NAT devices and defines important terms used in conjunction with NAT operation. The architectural model sets the stage for a set of concrete recommendations for NAT implementers.</description>
+    </item>
+    
+    <item>
+      <title>Operating Principles and General Behavioral Requirements for Network Address Translators (BEH-GEN)</title>
+      <link>https://bford.info/post/2005-02-01-behave-gen/</link>
+      <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2005-02-01-behave-gen/</guid>
+      <description>Bryan Ford and Pyda Srisuresh   draft-ford-behave-gen
+ Abstract: This document discusses the operating principles of Network Address Translator (NAT) devices and the behavioral properties required to make NAT more predictable and compatible with diverse application protocols. First, this document presents an architectural model for NAT devices and defines important terms used in conjunction with NAT operation. The architectural model sets the stage for a set of concrete recommendations for NAT implementers.</description>
+    </item>
+    
+    <item>
       <title>Individual Representation</title>
       <link>https://bford.info/2004/11/23/indrep/</link>
       <pubDate>Tue, 23 Nov 2004 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2004/11/23/indrep/</guid>
-      <description>  </description>
-    </item>
-    
-    <item>
-      <title>Cache Directory Tagging</title>
-      <link>https://bford.info/2004/10/27/cachedir/</link>
-      <pubDate>Wed, 27 Oct 2004 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/2004/10/27/cachedir/</guid>
-      <description>  </description>
+      <description>Real Choice for Voters, Democratic Currency for Activists Introduction The traditional purpose of popular elections is primarily to elect candidates to government offices or legislative seats, but this is not the only way we could use elections to facilitate democracy. Individual Representation, or indrep, provides a new and different reason to hold popular elections: as a tool for directly promoting the growth of grassroots social and political relationships throughout the basic fabric of society.</description>
     </item>
     
     <item>
@@ -173,6 +202,24 @@ Setting aside Yale in particular, however, it is interesting to notice some broa
       <pubDate>Mon, 16 Aug 2004 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2004/08/16/wiki-democracy/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Cache Directory Tagging Specification</title>
+      <link>https://bford.info/cachedir/</link>
+      <pubDate>Mon, 19 Jul 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/cachedir/</guid>
+      <description>Version 0.6 (Changes)  Proposed by Bryan Ford  Abstract Many applications create and manage directories containing cached information about content stored elsewhere, such as cached Web content or thumbnail-size versions of images or movies. For speed and storage efficiency we would often like to avoid backing up, archiving, or otherwise unnecessarily copying such directories around, but it is a pain to identify and individually exclude each such directory during data transfer operations.</description>
+    </item>
+    
+    <item>
+      <title>Fx86: Functional Management of Imperative Virtual Machines</title>
+      <link>https://bford.info/post/2003-08-28-Fx86/</link>
+      <pubDate>Thu, 28 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2003-08-28-Fx86/</guid>
       <description>  </description>
     </item>
     

@@ -41,17 +41,27 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Economics/</loc>
-    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/post/</loc>
     <lastmod>2019-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Consensus/</loc>
+    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Economics/</loc>
+    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2019/09/23/rational/</loc>
+    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Security/</loc>
     <lastmod>2019-09-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -92,11 +102,6 @@
   
   <url>
     <loc>https://bford.info/pub/sec/purb-abs/</loc>
-    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Security/</loc>
     <lastmod>2019-07-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -181,13 +186,12 @@
   </url>
   
   <url>
-    <loc>https://bford.info/draft/</loc>
+    <loc>https://bford.info/draft/biometric-id/</loc>
     <lastmod>2019-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://bford.info/draft/biometric-id/</loc>
+    <loc>https://bford.info/draft/</loc>
     <lastmod>2019-02-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -307,11 +311,6 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Consensus/</loc>
-    <lastmod>2016-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/2016/10/25/mining/</loc>
     <lastmod>2016-10-25T00:00:00+00:00</lastmod>
   </url>
@@ -389,6 +388,11 @@
   <url>
     <loc>https://bford.info/topics/Transport-Layer/</loc>
     <lastmod>2016-02-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/post/2015-10-20-cosi-ct/</loc>
+    <lastmod>2015-10-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -817,18 +821,33 @@
   </url>
   
   <url>
+    <loc>https://bford.info/post/2005-02-01-behave-app/</loc>
+    <lastmod>2005-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/post/2005-02-01-behave-top/</loc>
+    <lastmod>2005-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/post/2005-02-01-behave-gen/</loc>
+    <lastmod>2005-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2004/11/23/indrep/</loc>
     <lastmod>2004-11-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bford.info/2004/10/27/cachedir/</loc>
-    <lastmod>2004-10-27T00:00:00+00:00</lastmod>
+    <loc>https://bford.info/2004/08/16/wiki-democracy/</loc>
+    <lastmod>2004-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bford.info/2004/08/16/wiki-democracy/</loc>
-    <lastmod>2004-08-16T00:00:00+00:00</lastmod>
+    <loc>https://bford.info/cachedir/</loc>
+    <lastmod>2004-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -849,6 +868,11 @@
   <url>
     <loc>https://bford.info/pub/os/uip-abs/</loc>
     <lastmod>2003-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/post/2003-08-28-Fx86/</loc>
+    <lastmod>2003-08-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>

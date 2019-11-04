@@ -1,141 +1,157 @@
-<div bgcolor=white text=black link=blue alink=purple vlink=purple>
-
-<center>
-<h1>Personal Scribblings</h1>
-</center>
-
-<p>
-You could maybe think of this as my blog.  Or not.  Whatever.
-
-<h3>Operating Systems</h3>
-<ul>
-<li>	<b>Cache Directory Tagging Proposal</b>,
-	Bryan Ford, July 2004.
-	<a href="/cachedir/">HTML</a>
-
-<li>	<b>Fx86: Functional Management of Imperative Virtual Machines
-	(Extended Abstract)</b>,
-	Bryan Ford, August 28, 2003.
-	<a href="/pub/os/fx86-abs.pdf">PDF</a>
-
-<li>	<b>Service Duality: Vitalizing the Commons</b>,
-	Bryan Ford, July 24, 2003.
-	<a href="/pub/os/duality.pdf">PDF</a>
-</ul>
-
-<h3>Social Issues</h3>
-<ul>
-<li>	<b>Online Accountability:</b>
-	<ul>
-	<li>	<b><a href="/log/2007/0327-PseudonymParties.pdf">
-		Pseudonym Parties:
-		An Offline Foundation for Online Accountability (PDF)</a></b>,
-		March 27, 2007.
-		<br>
-		<b><a href="../log/2006/0924-SybilParties.html">
-		(Shorter HTML draft from September 2006)</a>
-	</ul>
-
-<li>	<b>Voting and Democracy:</h3>
-	<ul>
-	<li>	<b><a href="/log/2004/1123-IndividualRepresentation/">
-		Individual Representation</a></b>,
-		November 23, 2004.
-
-	<li>	<b><a href="http://meta.wikimedia.org/wiki/User:Brynosaurus">
-		Wiki Democracy?</a></b>,
-		August 2004.
-
-	<li>	<b><a href="/log/2002/1021-DelegativeVoting/">
-		Delegative Voting</a></b>,
-		October 21, 2002.
-
-	<li>	<b><a href="/log/2002/0515-DelegativeDemocracy.pdf">
-		Delegative Democracy</a></b> (PDF),
-		May 15, 2002.
-	</ul>
-</ul>
-
-<h3>Internet-Drafts</h3>
-<ul>
-<li>	<b>Collectively Witnessing Log Servers in CT</b>,
-	B. Ford, October 2015.
-	Versions:
-	<a href="/pub/net/internet-drafts/draft-ford-trans-witness-00.txt">00</a>
-
-<li>	<b>Modernizing the OpenPGP Message Format</b>,
-	B. Ford, October 2015.
-	Versions:
-	<a href="/pub/net/internet-drafts/draft-ford-openpgp-format-00.txt">00</a>
-
-<li>	<b>NAT Behavioral Requirements for TCP</b>,
-	S. Guha, Ed., K. Biswas, B. Ford, S. Sivakumar, and P. Srisuresh,
-	March 2007.
-	IETF working group draft versions:
-	<a href="/pub/net/internet-drafts/draft-ietf-behave-tcp-06.txt">06</a>
-	<a href="/pub/net/internet-drafts/draft-ietf-behave-tcp-05.txt">05</a>
-	<a href="/pub/net/internet-drafts/draft-ietf-behave-tcp-04.txt">04</a>
-	<a href="/pub/net/internet-drafts/draft-ietf-behave-tcp-03.txt">03</a>
-	<a href="/pub/net/internet-drafts/draft-ietf-behave-tcp-02.txt">02</a>
-	<a href="/pub/net/internet-drafts/draft-ietf-behave-tcp-01.txt">01</a>
-	<a href="/pub/net/internet-drafts/draft-ietf-behave-tcp-00.txt">00</a>
-	Individual draft versions:
-	<a href="/pub/net/internet-drafts/draft-sivakumar-behave-nat-tcp-req-02.txt">02</a>
-	<a href="/pub/net/internet-drafts/draft-sivakumar-behave-nat-tcp-req-01.txt">01</a>
-	<a href="/pub/net/internet-drafts/draft-sivakumar-behave-nat-tcp-req-00.txt">00</a>
-
-<li>	<b>Application Design Guidelines for Traversal
-                     through Network Address Translators</b>,
-	B. Ford, P. Srisuresh, and D. Kegel, March 2007.
-	Versions:
-	<a href="/pub/net/internet-drafts/draft-ford-behave-app-05.txt">05</a>
-	<a href="/pub/net/internet-drafts/draft-ford-behave-app-04.txt">04</a>
-	<a href="/pub/net/internet-drafts/draft-ford-behave-app-03.txt">03</a>
-	<a href="/pub/net/internet-drafts/draft-ford-behave-app-02.txt">02</a>
-	<a href="/pub/net/internet-drafts/draft-ford-behave-app-01.txt">01</a>
-	<a href="/pub/net/internet-drafts/draft-ford-behave-app-00.txt">00</a>
-
-<li>	<b>State of Peer-to-Peer (P2P) Communication
-	Across Network Address Translators (NATs)</b>,
-	P. Srisuresh, B. Ford, and D. Kegel,
-	February 2007.
-	IETF working group draft versions:
-	<a href="/pub/net/internet-drafts/draft-ietf-behave-p2p-state-02.txt">02</a>
-	<a href="/pub/net/internet-drafts/draft-ietf-behave-p2p-state-01.txt">01</a>
-	<a href="/pub/net/internet-drafts/draft-ietf-behave-p2p-state-00.txt">00</a>
-	Individual draft versions:
-	<a href="/pub/net/internet-drafts/draft-srisuresh-behave-p2p-state-04.txt">04</a>
-	<a href="/pub/net/internet-drafts/draft-srisuresh-behave-p2p-state-03.txt">03</a>
-	<a href="/pub/net/internet-drafts/draft-srisuresh-behave-p2p-state-02.txt">02</a>
-	<a href="/pub/net/internet-drafts/draft-srisuresh-behave-p2p-state-01.txt">01</a>
-	<a href="/pub/net/internet-drafts/draft-srisuresh-behave-p2p-state-00.txt">00</a>
-
-<li>	<b>Complications from Network Address Translator Deployment Topologies</b>,
-	P. Srisuresh and B. Ford, October 2006.
-	Versions:
-	<a href="/pub/net/internet-drafts/draft-ford-behave-top-03.txt">03</a>
-	<a href="/pub/net/internet-drafts/draft-ford-behave-top-02.txt">02</a>
-	<a href="/pub/net/internet-drafts/draft-ford-behave-top-01.txt">01</a>
-	<a href="/pub/net/internet-drafts/draft-ford-behave-top-00.txt">00</a>
-
-<li>	<b>Design Principles and General Behavioral Requirements
-               for Network Address Translators (BEH-GEN)</b>,
-	B. Ford, P. Srisuresh, and S. Sivakumar, May 2005.
-	Versions:
-	<a href="/pub/net/internet-drafts/draft-ford-behave-gen-01.txt">01</a>
-	<a href="/pub/net/internet-drafts/draft-ford-behave-gen-00.txt">00</a>
-
-<li>	<b>Peer-to-Peer (P2P) Communication Across
-		Network Address Translators (NATs)</b>
-	B. Ford, P. Srisuresh, and D. Kegel,
-	June 2004.
-	Versions:
-	<a href="/pub/net/internet-drafts/draft-ford-midcom-p2p-03.txt">03</a>
-	<a href="/pub/net/internet-drafts/draft-ford-midcom-p2p-02.txt">02</a>
-	<a href="/pub/net/internet-drafts/draft-ford-midcom-p2p-01.txt">01</a>
-	<a href="/pub/net/internet-drafts/draft-ford-midcom-p2p-00.txt">00</a>
-	pre-MIDCOM:
-	<a href="/pub/net/internet-drafts/draft-ford-natp2p-00.txt">00</a>
-</ul>
-
-</div>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drafts on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/draft/</link>
+    <description>Recent content in Drafts on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/draft/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Are Biometrics a Good Test for Real Unique Personhood?</title>
+      <link>https://bford.info/draft/biometric-id/</link>
+      <pubDate>Wed, 06 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/biometric-id/</guid>
+      <description>Are biometrics good for determining whether a digital identity uniquely represents a real person?
+Break this down: - Does it represent [the characteristics of] a person? - Does it uniquely represent a person: i.e., the only identity of that person? - Does it uniquely represent a real living person?
+Authentication, Identification, and Real Personhood Biometric authentication is practical, and not necessarily a privacy disaster. Biometric template only needs to be stored on the device, &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Secure, Scalable Proof-of-Stake Blockchains</title>
+      <link>https://bford.info/draft/stake/</link>
+      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/stake/</guid>
+      <description>Proof-of-What? Currently-deployed permissionless blockchains such as Bitcoin and Ethereum rely on proof-of-work (PoW) to distribute both the computational networking costs, and the financial rewards, of maintaining and extending the blockchain. In proof-of-work systems, participating miners race (&amp;ldquo;work&amp;rdquo;) to compute solutions to cryptographic puzzles. These puzzles effectively act like self-printed lottery tickets, in that a miniscule fraction of these proof-of-work solutions may be easily verified by anyone as &amp;ldquo;winning&amp;rdquo; the lucky miner the right to add one block to the blockchain and collect associated rewards.</description>
+    </item>
+    
+    <item>
+      <title>Selfish Mining in Bitcoin and ByzCoin</title>
+      <link>https://bford.info/2016/xx/xx/selfish/</link>
+      <pubDate>Mon, 31 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2016/xx/xx/selfish/</guid>
+      <description>XXX intro
+summary of selfish mining
+selfish mining as a transparency problem: you get to build on a blockchain head you haven&amp;rsquo;t published.
+same as transparency problem in Apple FBI case for example; that&amp;rsquo;s what CoSi is for.
+solution: any keyblock you build on is collectively signed, and the next block&amp;rsquo;s hash covers the last block&amp;rsquo;s signature.
+if you withhold a block, you can&amp;rsquo;t get a collective signature on it; without that collective signature, you can&amp;rsquo;t secretly mine a next block on top of it.</description>
+    </item>
+    
+    <item>
+      <title>An advanced crypto library for Go</title>
+      <link>https://bford.info/2016/03/08/crypto/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2016/03/08/crypto/</guid>
+      <description>{{ page.title }} Interesting features:
+ An abstract group arithmetic framework for public-key cryptography based on the discrete logarithm problem.
+ Several alternative concrete instantiations of this abstract group arithmetic framework, based on the NIST elliptic curve implementations in the Go standard library and in the OpenSSL crypto library, and implementations of both generic Edwards curves and an adaptation of Adam Langley&amp;rsquo;s Ed25519-curve-specific optimized group arithmetic code to the abstract group API.</description>
+    </item>
+    
+    <item>
+      <title>Backdoors, Trusted Servers, and Deanonymization</title>
+      <link>https://bford.info/2016/03/08/backdoors/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2016/03/08/backdoors/</guid>
+      <description>{{ page.title }} To my knowledge there are currently only two fundamentally distinct approaches to achieving strong anonymity online, and the same legendary computing figure, David Chaum, pioneered both. His first approach, mixes, relay messages over multi-hop paths around the network to obscure their source and destinations. State-of-the-art deployed anonymity systems such as Tor are highly evolved and performance-optimized variants of this basic relaying idea.
+Chaum&amp;rsquo;s second approach, dining cryptographers, instead uses information-coding principles to hide the sender of a message among a group of nodes all of whom seem to be spewing gibberish at once.</description>
+    </item>
+    
+    <item>
+      <title>How to prove DNSSEC isn&#39;t a key escrow scheme</title>
+      <link>https://bford.info/2016/03/08/dnssec/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2016/03/08/dnssec/</guid>
+      <description>{{ page.title }} &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://bford.info/draft/async/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/async/</guid>
+      <description>For another thing, I’m personally not a big believer in the practical value of the asynchronous model anyway. I know I’m at odds here with most people with a theory/algorithms background; reasonable people may differ. :) Almost every practical distributed system that ever actually gets deployed has timeouts and such buried in it here, there, everywhere. User-experience expectations are synchronous, not asynchronous: even if the underlying protocol is in principle perfectly capable of tolerating arbitrarily-long adversary-controlled propagation delays among honest nodes, the real users relying on the system are going to start complaining rather soon after the expected/normal amount of transaction time elapses.</description>
+    </item>
+    
+    <item>
+      <title>Composable Markup (CMark)</title>
+      <link>https://bford.info/draft/cmark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/cmark/</guid>
+      <description>Hyphen X [-] Optional line-breaking hyphen??? &amp;ndash; – [&amp;ndash;] En-dash or numeric range &amp;mdash; — [&amp;mdash;] Em-dash &amp;hellip; … [&amp;hellip;] Ellipsis  &amp;rdquo;&amp;hellip;&amp;rdquo; Quoted string: quotes become left/right
+⏎ [br] Line break ␍ [r] Carriage return character mark ␤ [n] Newline character mark ¶ [p] Paragraph mark X [o&#39;] Open single quote X [c&#39;] Close single quote X [o&amp;quot;] Open double quote X [c&amp;quot;] Close double quote X [o&amp;lt;&amp;gt;] Open angle bracket X [c&amp;lt;&amp;gt;] Close angle bracket X [o&amp;lt;&amp;lt;&amp;gt;&amp;gt;] Open double angle bracket X [c&amp;lt;&amp;lt;&amp;gt;&amp;gt;] Close double angle bracket  Spacing: &amp;ldquo; &amp;rdquo; [mq] Em quad space &amp;ldquo; &amp;rdquo; [nq] En quad space &amp;ldquo; &amp;rdquo; [m] Em space &amp;ldquo; &amp;rdquo; [n] En space &amp;ldquo; &amp;rdquo; [3m] Three-per-Em space &amp;ldquo; &amp;rdquo; [4m] Four-per-Em space &amp;ldquo; &amp;rdquo; [6m] Six-per-Em space &amp;ldquo; &amp;rdquo; [d] Figure (digit) space &amp;ldquo; &amp;rdquo; [.</description>
+    </item>
+    
+    <item>
+      <title>Composable Math Markup (CMath)</title>
+      <link>https://bford.info/draft/cmath/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/cmath/</guid>
+      <description>Symbols Arithmetic Basic: + Plus sign - − [-] Minus sign * × [x] Multiplication ÷ [d] Division / ⁄ [/] Fraction slash
+Technical: ± [+-] Plus-minus sign ∕ [d/] Division slash ⋅ [.] Multiplication or dot product √ [root] Square root ∛ [3root] Cube root ∜ [4root] Fourth root ∞ [inf] Infinity ∶ [:] Ratio ∷ [::] Proportion sum ∑ [sum] Sum prod ∏ [prod] Product 𝔼 [expect] Expected value pi π [pi] Mathematical value pi (3.</description>
+    </item>
+    
+    <item>
+      <title>Composable Text Markup Language (CTML)</title>
+      <link>https://bford.info/draft/ctml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/ctml/</guid>
+      <description>CTML is simply an alternate character-level syntax for HTML. It otherwise closes closely to HTML (currently HTML5 in particular), and is designed to be easily convertible both to and from HTML.
+The main goal of CTML is to satisfy the CTS metasyntactic discipline, so that CTML can be readily composed with other CTL-compliant languages without escaping. Secondary goals are to be more concise, readable, and easily typeable than HTML, while keeping the syntax simple and readily cross-convertible with HTML.</description>
+    </item>
+    
+    <item>
+      <title>Delimited Text and Binary Syntax</title>
+      <link>https://bford.info/draft/delimited-syntax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/delimited-syntax/</guid>
+      <description>or Composable Text/Binary Syntax (CTS/CBS)?
+Goals:
+ Text format self-describing and human-readable Binary format for compactness and efficiency  Either self-describing or schema-dependent  Easy cross-conversion between text and binary formats  Easy for schemas to define both text and binary equivalents at once  Streamable: encoder can start sending long composites before knowing length Embeddable:  for embeddability, see for example JSON Schema&amp;rsquo;s desire to be able to embed arbitrary non-JSON data with a MIME Media Type: https://json-schema.</description>
+    </item>
+    
+    <item>
+      <title>Efficient Stream Embedding with Composable Binary Encoding (CBE)</title>
+      <link>https://bford.info/draft/cbe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/cbe/</guid>
+      <description>An old problem in data format design is embedding an arbitrary variable-length byte sequence in a longer one, so that a decoder can tell unambiguously where the embedded string ends. This problem is ubiquitous in the design of machine-readable data formats, which often hierarchically compose large and complex data streams from sequences of nested substrings and strings using simpler encodings. Embedding challenges include encoding and decoding simplicity, keeping space overheads low and predictable for both small and large embedded strings, and allowing for stream processing in which an encoder must start writing an embedded sequence before knowing how long it will be.</description>
+    </item>
+    
+    <item>
+      <title>Escaping Escaping Hell with Delimited Resource Identifiers</title>
+      <link>https://bford.info/draft/dri/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/dri/</guid>
+      <description>(XXX rename Composable Resource Identifiers?)
+Uniform resource identifiers or URIs were a genuinely great idea and have rightfully become the ubiquitous way to &amp;ldquo;name things&amp;rdquo; on the Internet. As the basis of web addresses or URLs, they are human readable (to varying degrees), manually transcribable, cut-and-pasteable, and have proven incrementally extensible to a vast multitude of schemes. Their later extension to internationalized resource identifiers or IRIs allow people whose native language is not English to type, and view, non-ASCII Unicode characters in web addresses.</description>
+    </item>
+    
+    <item>
+      <title>Rethinking Social Media to Escape the Echo Chamber</title>
+      <link>https://bford.info/2016/11/13/info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2016/11/13/info/</guid>
+      <description>Hillary Clinton&amp;rsquo;s [electoral college defeat]() has provoked many questions about how so many Americans could have choosen a [misogynistic](), [xenophobic](), [pathologically lying](), [authoritarian]() [ideologue]() as their next President &amp;ndash; and one of many targets of their blame is [social media](). Compounding its [polarizing &amp;ldquo;echo chamber&amp;rdquo; effect](), online discussions were tarnished with [deliberate misinformation](), including [incorrect instructions on how to vote](). But is the solution for social media companies like Facebook to ``do a better job&amp;rdquo; at curating the world&amp;rsquo;s content to suppress out false or hateful speech?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -63,7 +63,7 @@ April 2009  Abstract: This document specifies the behavioral properties required
       
       <guid>https://bford.info/pub/net/rfc5382-abs/</guid>
       <description>   Saikat Guha, Kaushik Biswas, Bryan Ford, Senthil Sivakumar, and Pyda Srisuresh   IETF RFC 5382
-October 2008  Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Paper: Plain text  </description>
+October 2008  Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Final RFC: Plain text  Early drafts:   IETF working group draft versions: 06 05 04 03 02 01 00  Individual draft versions: 02 01 00  </description>
     </item>
     
     <item>
@@ -114,6 +114,35 @@ February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a p
       
       <guid>https://bford.info/pub/net/p2pnat-abs/</guid>
       <description>Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com   Presented at the USENIX Annual Technical Conference, April 10-15, 2005. Abstract:  Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer.</description>
+    </item>
+    
+    <item>
+      <title>Application Design Guidelines for Traversal through Network Address Translators</title>
+      <link>https://bford.info/post/2005-02-01-behave-app/</link>
+      <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2005-02-01-behave-app/</guid>
+      <description>Bryan Ford, Pyda Srisuresh, and Dan Kegel   draft-ford-behave-app  Abstract: This document defines guidelines by which application designers can create applications that communicate reliably and efficiently in the presence of Network Address Translators (NATs), particularly when the application has a need for &#34;peer-to-peer&#34; (P2P) type of communication. The guidelines allow a P2P application to work reliably across a majority of existing NATs, as well as all future NATs that conform to the behave requirements specified in companion documents.</description>
+    </item>
+    
+    <item>
+      <title>Complications from Network Address Translator Deployment Topologies</title>
+      <link>https://bford.info/post/2005-02-01-behave-top/</link>
+      <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2005-02-01-behave-top/</guid>
+      <description>Bryan Ford and Pyda Srisuresh   draft-ford-behave-gen
+ Abstract: This document discusses the operating principles of Network Address Translator (NAT) devices and the behavioral properties required to make NAT more predictable and compatible with diverse application protocols. First, this document presents an architectural model for NAT devices and defines important terms used in conjunction with NAT operation. The architectural model sets the stage for a set of concrete recommendations for NAT implementers.</description>
+    </item>
+    
+    <item>
+      <title>Operating Principles and General Behavioral Requirements for Network Address Translators (BEH-GEN)</title>
+      <link>https://bford.info/post/2005-02-01-behave-gen/</link>
+      <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2005-02-01-behave-gen/</guid>
+      <description>Bryan Ford and Pyda Srisuresh   draft-ford-behave-gen
+ Abstract: This document discusses the operating principles of Network Address Translator (NAT) devices and the behavioral properties required to make NAT more predictable and compatible with diverse application protocols. First, this document presents an architectural model for NAT devices and defines important terms used in conjunction with NAT operation. The architectural model sets the stage for a set of concrete recommendations for NAT implementers.</description>
     </item>
     
     <item>

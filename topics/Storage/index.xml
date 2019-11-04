@@ -56,11 +56,20 @@ December 16, 2005, San Francisco, California, USA. Abstract:  Data compression a
     </item>
     
     <item>
-      <title>Cache Directory Tagging</title>
-      <link>https://bford.info/2004/10/27/cachedir/</link>
-      <pubDate>Wed, 27 Oct 2004 00:00:00 +0000</pubDate>
+      <title>Cache Directory Tagging Specification</title>
+      <link>https://bford.info/cachedir/</link>
+      <pubDate>Mon, 19 Jul 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.info/2004/10/27/cachedir/</guid>
+      <guid>https://bford.info/cachedir/</guid>
+      <description>Version 0.6 (Changes)  Proposed by Bryan Ford  Abstract Many applications create and manage directories containing cached information about content stored elsewhere, such as cached Web content or thumbnail-size versions of images or movies. For speed and storage efficiency we would often like to avoid backing up, archiving, or otherwise unnecessarily copying such directories around, but it is a pain to identify and individually exclude each such directory during data transfer operations.</description>
+    </item>
+    
+    <item>
+      <title>Service Duality - Vitalizing the Commons</title>
+      <link>https://bford.info/2003/07/24/service-duality/</link>
+      <pubDate>Thu, 24 Jul 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2003/07/24/service-duality/</guid>
       <description>  </description>
     </item>
     

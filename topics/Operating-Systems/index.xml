@@ -277,6 +277,24 @@ December 16, 2005, San Francisco, California, USA. Abstract:  Data compression a
     </item>
     
     <item>
+      <title>Cache Directory Tagging Specification</title>
+      <link>https://bford.info/cachedir/</link>
+      <pubDate>Mon, 19 Jul 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/cachedir/</guid>
+      <description>Version 0.6 (Changes)  Proposed by Bryan Ford  Abstract Many applications create and manage directories containing cached information about content stored elsewhere, such as cached Web content or thumbnail-size versions of images or movies. For speed and storage efficiency we would often like to avoid backing up, archiving, or otherwise unnecessarily copying such directories around, but it is a pain to identify and individually exclude each such directory during data transfer operations.</description>
+    </item>
+    
+    <item>
+      <title>Fx86: Functional Management of Imperative Virtual Machines</title>
+      <link>https://bford.info/post/2003-08-28-Fx86/</link>
+      <pubDate>Thu, 28 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2003-08-28-Fx86/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>Interface and Execution Models in the Fluke Kernel</title>
       <link>https://bford.info/pub/os/atomic-osdi99-abs/</link>
       <pubDate>Wed, 24 Feb 1999 00:00:00 +0000</pubDate>
