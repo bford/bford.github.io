@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interface Definition on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Interface-Definition/</link>
+    <description>Recent content in Interface Definition on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Jun 1997 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Interface-Definition/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Flick: A Flexible, Optimizing IDL Compiler</title>
+      <link>https://bford.info/pub/lang/flick-pldi97-abs/</link>
+      <pubDate>Sun, 15 Jun 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/flick-pldi97-abs/</guid>
+      <description>Eric Eide, Kevin Frei, Bryan Ford, Jay Lepreau, and Gary Lindstrom University of Utah, Department of Computer Science   ACM SIGPLAN Conference on Programming Language Design and Implementation
+June 15-18, 1997.  Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance. Systems like Mach provide a set of general abstractions and attempt to handle every situation, which can lead to poor performance for common cases.</description>
+    </item>
+    
+    <item>
+      <title>Using Annotated Interface Definitions to Optimize RPC</title>
+      <link>https://bford.info/pub/lang/presint3-abs/</link>
+      <pubDate>Wed, 01 Mar 1995 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/presint3-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science   Technical Report UUCS-95-014
+March 1995.  Abstract: In RPC-based communication, it is useful to distinguish the RPC interface, which is the “network contract” be- tween the client and the server, from the presentation, which is the “programmer’s contract” between the RPC stubs and the code that calls or is called by them.</description>
+    </item>
+    
+    <item>
+      <title>Separating Presentation from Interface in RPC and IDLs</title>
+      <link>https://bford.info/pub/lang/presint2-abs/</link>
+      <pubDate>Thu, 01 Dec 1994 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/presint2-abs/</guid>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science   Technical Report UUCS-95-018
+December 1994.  Abstract: In RPC-based communication, we term the interface the set of remote procedures and the types of their arguments; the presentation is the way these procedures and types are mapped to the target language environment in a particular client or server, including semantic requirements. For example, presentation includes the local names assigned to RPC stubs, the physical representation of a logical block of data (e.</description>
+    </item>
+    
+  </channel>
+</rss>

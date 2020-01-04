@@ -186,6 +186,16 @@
   </url>
   
   <url>
+    <loc>https://bford.info/draft/</loc>
+    <lastmod>2019-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/biometric-id/</loc>
+    <lastmod>2019-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2018/09/11/blockchain/</loc>
     <lastmod>2018-09-11T00:00:00+00:00</lastmod>
   </url>
@@ -251,6 +261,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/draft/stake/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/pub/dec/atom-abs/</loc>
     <lastmod>2017-10-30T00:00:00+00:00</lastmod>
   </url>
@@ -288,6 +303,11 @@
   <url>
     <loc>https://bford.info/pub/sec/lawful-surveillance/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/2016/xx/xx/selfish/</loc>
+    <lastmod>2016-10-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -343,6 +363,21 @@
   <url>
     <loc>https://bford.info/2016/03/10/apple/</loc>
     <lastmod>2016-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/2016/03/08/crypto/</loc>
+    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/2016/03/08/backdoors/</loc>
+    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/2016/03/08/dnssec/</loc>
+    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -886,6 +921,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Interface-Definition/</loc>
+    <lastmod>1997-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/pub/os/oskit-hotos6-abs/</loc>
     <lastmod>1997-05-05T00:00:00+00:00</lastmod>
   </url>
@@ -946,7 +986,8 @@
   </url>
   
   <url>
-    <loc>https://bford.info/draft/</loc>
+    <loc>https://bford.info/draft/async/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -1006,7 +1047,35 @@
   </url>
   
   <url>
+    <loc>https://bford.info/draft/cmark/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/cmath/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/ctml/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/follow/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/delimited-syntax/</loc>
+  </url>
+  
+  <url>
     <loc>https://bford.info/album/2007/0622-Dresden/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/cbe/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/dri/</loc>
   </url>
   
   <url>
@@ -1055,6 +1124,10 @@
   
   <url>
     <loc>https://bford.info/album/Piano.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/2016/11/13/info/</loc>
   </url>
   
   <url>
@@ -1115,6 +1188,10 @@
   
   <url>
     <loc>https://bford.info/album/2006/0119-Villars/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/vipcode/</loc>
   </url>
   
 </urlset>

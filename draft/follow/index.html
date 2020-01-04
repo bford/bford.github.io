@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Decentralized Update Governance (DUG) &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Decentralized Update Governance (DUG)</h1>
+  <p>Orthogonal concepts to be defined independently but worked together:</p>
+<ul>
+<li>identification (e.g., by content hash) of current version</li>
+<li>linkage of versions into a linear series, SkipChain, or TimeTree</li>
+<li>update authorization by one or quorum of identities</li>
+<li>authentication of identities (people or devices) eg by signing</li>
+<li>registration of updates on authoritative registry or registries
+<ul>
+<li>checking of witnesses by threshold</li>
+</ul>
+</li>
+<li>definition of unambiguous authoritative chain by timescale?</li>
+</ul>
+<p>&ndash;
+Version Identifier (VID) scheme:</p>
+<p>Intended to be a type of URI that you put into your
+source Web content (or other content)
+to represent a trackable object,
+whose VIDs can be upgraded automatically when the target changes.
+Or better to put the VID info in the target's metadata?</p>
+<p>&ndash;
+DUG scheme:</p>
+<p>In a web page, insert into a META tag in the header.
+In other types of files, can be in a comment etc toward the beginning.</p>
+<p>Can specify either directly in-line or out-of-line the update governance spec?</p>
+<p>Needs to tell readers:</p>
+<ul>
+<li>how to be certain that this is a valid/correct DUG spec</li>
+<li>at what location(s) the current/updated status, versions can be found</li>
+<li>how to validate their authorization, correctness, and consistency</li>
+</ul>
+<p>To head off DUG attacks on temporarily-hacked websites or subpages,
+need to have a root-level robots.txt-like indication for readers
+to consider DUG specs to be authoritative?</p>
+<p>Example full VID reference:</p>
+<p>vid[<!-- raw HTML omitted -->:<!-- raw HTML omitted -->/<!-- raw HTML omitted -->]
+vid[sha256:<!-- raw HTML omitted -->/foo/bar/#blah]</p>
+<p>Alternatively, for agility, make VIDs a list of alternate sub-CRIs
+with different schemes/ciphersuites?</p>
+<p>Example:</p>
+<p>vid[1[<!-- raw HTML omitted -->/<!-- raw HTML omitted -->],2[<!-- raw HTML omitted -->/<!-- raw HTML omitted -->]]</p>
+<p>Proto-VID marker:</p>
+<p>vid[]</p>
+<p>This just requests the content/version control system to replace this marker
+with a full VID on initial checkin.</p>
+<p>&ndash;
+Functionality I want from governed versioned series:</p>
+<ul>
+<li>Anyone can produce a series in most any way</li>
+<li>Format and cryptographic agility</li>
+<li>anyone can publish a series in multiple ways:
+direct HTTP server, P2P, WebRTC,
+or via third-party like GitHub, cloud, IPFS, etc.</li>
+<li>can require multiple signoffs to produce/publish new versions
+signoffs via multiple devices, users, etc.</li>
+<li>multiple signoff notification/request protocols
+(push notifications, etc)</li>
+<li>blockchain/registry agility: Bitcoin, Ethereum, private, etc.</li>
+</ul>
+<p>&ndash;</p>
+<p>Functionality I want from TimeTrees:</p>
+<ul>
+<li>Any device can create/maintain its own TimeTree</li>
+<li>authenticated by one or more device keypairs
+(maybe one cipherswuite defining both the keypair type
+and the cryptographic hash algorithm for the TimeTree)</li>
+<li>a new TimeTree for a new suite can be constructed to contain an old one</li>
+<li>a device can &ldquo;publish&rdquo; its TimeTree directly (peer-to-peer),
+and/or to third-parties (GitHub Pages, Amazon/Google, IPFS).</li>
+<li>other devices can follow and verify consistency of a TimeTree
+via various protocols: HTTP, git, peer-to-peer, IPFS, Tor, etc.</li>
+<li>it's up to application/device whether leaves remain published forever
+or get pruned with time or when no longer needed</li>
+</ul>
+<p>&ndash;
+TimeTree state ID (or TimeTree Stamp?):
+consists of optional human-readable date stamp in RFC 3339 format,
+followed by sequence of optional cryptographic hashes,
+one per bit in the binary representation
+of the number of seconds since Unix Epoch,
+with present hashes for one bits and omitted hashes for zero bits.
+Each hash is the root of a complete binary Merkle tree
+of height corresponding to that bit position.</p>
+<p>Optionally may have more bits representing stamps
+with greater precision represented as a binary fraction of a second.</p>
+<p>Syntax: &ldquo;hash_n;[hash_n-1];&hellip;;[hash_0][.[hash_-1];&hellip;;[hash_-m]]&rdquo;
+where n is the highest set bit in the timestamp,
+and m is the number of fractional bits in the timestamp.</p>
+<p>Since the number of seconds since the Unix Epoch is directly derivable,
+the TimeTree state ID also serves as a representation of the timestamp.</p>
+<p>Defined with respect to a particular cryptographic hash algorithm,
+such as sha256.</p>
+<p>Full URI:
+&ldquo;tts:sha256:hash_n;&hellip;;[hash_-m]&rdquo;</p>
+<p>Binary-to-ASCII encoding specified with tts scheme?  Base85?</p>
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

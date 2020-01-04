@@ -40,49 +40,48 @@
 
     
   <h1>Delimited Text and Binary Syntax</h1>
-  
-
-<p>or Composable Text/Binary Syntax (CTS/CBS)?</p>
-
+  <p>or Composable Text/Binary Syntax (CTS/CBS)?</p>
 <p>Goals:</p>
-
 <ul>
 <li>Text format self-describing and human-readable</li>
 <li>Binary format for compactness and efficiency
-
 <ul>
 <li>Either self-describing or schema-dependent</li>
-</ul></li>
+</ul>
+</li>
 <li>Easy cross-conversion between text and binary formats
-
 <ul>
 <li>Easy for schemas to define both text and binary equivalents at once</li>
-</ul></li>
+</ul>
+</li>
 <li>Streamable: encoder can start sending long composites before knowing length</li>
 <li>Embeddable:</li>
 </ul>
-
-<p>for embeddability, see for example JSON Schema&rsquo;s desire
+<p>for embeddability, see for example JSON Schema's desire
 to be able to embed arbitrary non-JSON data
 with a MIME Media Type:
 <a href="https://json-schema.org/understanding-json-schema/reference/non_json_data.html">https://json-schema.org/understanding-json-schema/reference/non_json_data.html</a>
 Any DTS-encoded content may be embedded in DTS-encoded JSON data
 with no additional quoting or escaping,
 provided the inner DTS context uses the same or a superset of
-the outer DTS context&rsquo;s set of sensitive bracket pairs.</p>
-
-<p>Comparison:
-* Self-describing formats like HTML, XML, JSON
-    * With optional schema like XML
-* Self-describing binary formats like BSON, BJSON, CBOR, UBJSON, etc.
-* Schema-based coded binary formats like Protobuf</p>
-
-<p>Three levels of interpretability:
-* Delimiting: just finding the end of a data blob
-* Hierarchy: being able to tell when a blob contains other blobs
-* Basic typing: recognizing encoded values of common types like JSON types
-* Extended typing: recognizing encoded values of more specialized types</p>
-
+the outer DTS context's set of sensitive bracket pairs.</p>
+<p>Comparison:</p>
+<ul>
+<li>Self-describing formats like HTML, XML, JSON
+<ul>
+<li>With optional schema like XML</li>
+</ul>
+</li>
+<li>Self-describing binary formats like BSON, BJSON, CBOR, UBJSON, etc.</li>
+<li>Schema-based coded binary formats like Protobuf</li>
+</ul>
+<p>Three levels of interpretability:</p>
+<ul>
+<li>Delimiting: just finding the end of a data blob</li>
+<li>Hierarchy: being able to tell when a blob contains other blobs</li>
+<li>Basic typing: recognizing encoded values of common types like JSON types</li>
+<li>Extended typing: recognizing encoded values of more specialized types</li>
+</ul>
 <p>Encoding types versus schema types:
 There are only a few encoding types,
 which are a subset of the types appearing in schema.
@@ -91,50 +90,38 @@ and interpreting the structural metadata of the format:
 basically, just integers and strings.
 Schema types are richer,
 including booleans, floating-point, dates, etc.</p>
-
 <p>An item is a structural component that a recipient can find the end of
 regardless of whether the recipient understands
 its semantic meaning or content.
 That is, an item is skippable if necessary.</p>
-
 <p>An item may be atomic or composite.
 An atomic item like an integer or string
 contains no sub-structure defined by this encoding
-or reliably interpretable via this encoding&rsquo;s rules.
+or reliably interpretable via this encoding's rules.
 An integer or string may in fact contain information encoded
 in some arbitrary syntax (even a recursive instantiation of this one),
 but any such recursive interpretability is neither guaranteed nor suggested.</p>
-
 <p>A composite item like a vector or map, in contrast,
 has hierarchical sub-structure defined by this encoding
 and traversable by an interpreter of this encoding.</p>
-
-<hr />
-
+<hr>
 <p>CTS</p>
-
 <p>goal: composability.
 A valid CTs text inserted into another should remain a valid CTS text.</p>
-
 <p>Matched open/close punctuation pairs, which we call matchers.</p>
-
 <p>Basic principle: matchers must match.
 This dominates all other more specialized syntaxes.</p>
-
 <p>We could define a variant of CTS for any particular set of matchers we want;
 all the principles would be the same.</p>
-
 <p>But to avoid further confusion,
 would be best to have one &ldquo;standardized&rdquo; set of matchers.  But which?
 Especially since Unicode provides seventy-some matched pairs,
 some of them typically used in different combinations.</p>
-
 <p>But since the ASCII subset of the Unicode character set
 is the one still typically used in mechanically-parsed languages,
 we choose as our matchers the ASCII characters formally defined
 as open/close punctuation characters:
-namely the square brackets &ldquo;[]&ldquo;, parentheses &ldquo;()&rdquo;, and curly braces &ldquo;{}&rdquo;.</p>
-
+namely the square brackets &ldquo;[]&quot;, parentheses &ldquo;()&quot;, and curly braces &ldquo;{}&quot;.</p>
 <p>Why not the so-called &ldquo;angle brackets&rdquo;?
 Because these ASCII characters are formally defined
 as less-than and greater-than signs,
@@ -146,38 +133,34 @@ leading to their sometimes being called
 <a href="https://en.wiktionary.org/wiki/broket">brokets</a>.
 Unicode defined a separate set of angle brackets ⟨⟩
 especially as open/close punctuation.</p>
-
 <p>Few existing text languages just happen to be &ldquo;CTS compliant&rdquo; already,
 but many of them are extremely <em>close</em> to CTS-compliant.
 Programming languages typically use the ASCII open/close punctuation
 in matching pairs anyway whenever they are syntactically relevant.</p>
-
 <p>The main problem is</p>
-
 <p>Mathematical intervals</p>
-
 <p>A secondary problem is the use of unmatched combinations
 of square brackets and parentheses in mathematical
 half-open interval notation&hellip;</p>
-
 <p>Potential alternatives:</p>
-
 <ul>
-<li><p>An ASCII-based notation that uses only one type of matcher
+<li>
+<p>An ASCII-based notation that uses only one type of matcher
 for both open and closed endpoints.
 For example:</p>
-
 <ul>
-<li><p>We could use simple brackets like [a..b]
+<li>
+<p>We could use simple brackets like [a..b]
 for closed intervals,
 and brackets with adjacent periods like [.a..b.]
 to represent open intervals,
-with [a..b.] representing an interval that&rsquo;s
+with [a..b.] representing an interval that's
 open at a and closed at b,
-and [.a..b] representing an interval that&rsquo;s
-closed at a and closed at b.</p></li>
-
-<li><p>We could incorporate the mathematical inequality signs
+and [.a..b] representing an interval that's
+closed at a and closed at b.</p>
+</li>
+<li>
+<p>We could incorporate the mathematical inequality signs
 into the notation,
 since they are heavily used in non-matching fashion anyway.
 For example, we could use
@@ -185,111 +168,96 @@ For example, we could use
 containing all real numbers <em>strictly greater than</em> a
 and <em>strictly less than</em> b,
 with [&gt;a..b] being the half-open interval at a
-and [a..b&lt;] being the half-open interval at b.</p></li>
-</ul></li>
-
-<li><p>We could move beyond ASCII and use the Unicode character set
+and [a..b&lt;] being the half-open interval at b.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>We could move beyond ASCII and use the Unicode character set
 to express intervals in more visually-suggestive fashion.
 For example:</p>
-
 <ul>
-<li><p>From a typography perspective,
+<li>
+<p>From a typography perspective,
 one attractive approach is to adopt/abuse
 the lenticular brackets that Asian languages
 traditionally use as quotation marks,
 and for which Unicode already provides
-both a filled <em>black</em> form, &ldquo;【】&rdquo;,
-and an unfilled <em>white</em> form, &ldquo;〖〗&rdquo;.</p>
-
+both a filled <em>black</em> form, &ldquo;【】&quot;,
+and an unfilled <em>white</em> form, &ldquo;〖〗&quot;.</p>
 <p>The lenticular bracket shape is suitable
 in that it combines the traditional square brackets []
 and parentheses () traditionally used to denote intervals.
 Further, we can take
 the filled form to denote <em>inclusion</em> of the endpoint
 and the unfilled form to denote <em>exclusion</em> of the endpoint.</p>
-
 <p>Thus, a half-open interval from including <em>a</em> but excluding <em>b</em>
 would be 【a..b〗.</p>
-
 <p>The main downside of this approach
 is that the lenticular bracket characters
 are defined as part of the Unicode CJK character blocks.
 As such, they are commonly rendered as full-width characters,
 inconsistently with the half-width rendering
-of Western scripts and traditional mathematical notation.</p></li>
-
-<li><p>An alternative that avoids the abuse of CJK characters
+of Western scripts and traditional mathematical notation.</p>
+</li>
+<li>
+<p>An alternative that avoids the abuse of CJK characters
 is to use the mathematical
 left and right tortoise shell brackets,
 which similarly come in a filled <em>black</em> form &ldquo;⦗⦘&rdquo;
-and an unfilled <em>white</em> form &ldquo;⟬⟭&rdquo;.
+and an unfilled <em>white</em> form &ldquo;⟬⟭&quot;.
 These symbols could similarly be viewed as
 a visual &ldquo;compromise&rdquo; between square brackets and parentheses,
 with the black version representing
 an inclusive interval endpoint
 and the white version representing an exclusive endpoint.</p>
-
 <p>Thus, a half-open interval from including <em>a</em> but excluding <em>b</em>
-would be ⦗a..b⟭.</p></li>
-</ul></li>
+would be ⦗a..b⟭.</p>
+</li>
 </ul>
-
+</li>
+</ul>
 <p>It would be nice to be able to have
 calculator expressions and programming language syntax
 in which one might write interval-membership tests
 that look something like,</p>
-
 <pre><code>if (r ∈ [a,b]) { ... }
 </code></pre>
-
 <p>where a and b are real or floating-point numbers
 and this statement is a shorthand for:</p>
-
 <pre><code>if (r &gt;= a &amp;&amp; r &lt;= b) { ... }
 </code></pre>
-
 <p>But since mathematical intervals can be open or closed,
 it would be nice, and seem natural, if we could also test in shorthand
 whether r is in the <em>open</em> interval between a and b.
 But the obvious approach&hellip;</p>
-
 <pre><code>if (r ∈ (a,b)) { ... }
 </code></pre>
-
 <p>immediately lands us in the syntactic disaster of being unable to distinguish
 mathematical open-interval notation from already-ubiquitous tuple notation.</p>
-
 <p>The syntactic disaster gets even worse if we even conceive of
 representing tests against half-open or half-closed intervals.
 Just imagine how to write a parser that can deal with tests like this,
 especially embedded deeper in inequality expressions
 involving other uses of parentheses for grouping
 and brackets for vectors, array indices, etc.:</p>
-
 <pre><code>if (r ∈ [a,b)) { ... }
 if (r ∈ (a,b]) { ... }
 </code></pre>
-
 <p>In general,
 traditional mathematical interval notation violates the convention
 that open and close punctuation are otherwise typically used in
 designated matching pairs.</p>
-
-<hr />
-
+<hr>
 <p>CBS</p>
-
 <h2 id="optionally-schematized-self-describing-object-notation">Optionally-Schematized Self-Describing Object Notation</h2>
-
 <p>Delimited Binary Structured Object Notation or DBSON?</p>
-
 <p>We wish to provide a hierarchical format similar to JSON
 that is extensible and self-describing by default,
 in that a reader can derive the full hierarchical structure
 without necessarily knowing anything about the actual data it contains,
 and so that a reader that can interpret some but not all embedded fields
 can safely ignore and skip the ones it does not understand.</p>
-
 <p>We like the fact that self-describing formats like XML and JSON
 typically give their fields human-readable keys like &ldquo;name&rdquo; and &ldquo;address&rdquo;.
 But on the other hand we also like the compactness
@@ -297,14 +265,12 @@ of &ldquo;schematized&rdquo; formats such as Protobuf
 where fields are typically identified by small integers
 that usually have one-byte encodings in the common case.
 Can we get the best of both worlds?</p>
-
 <p>Principle: a schema is basically a dictionary.
 It can also be used for validity-checking as XML does,
 but this is a separate role.
 The receiver might not know the full or latest dictionary that the sender used;
 this is fine in cases for applications like RPC
 where the receiver is simply going to ignore fields it does not understand.</p>
-
 <p>But it would also be nice if,
 for development and debugging purposes for example,
 a receiver could somehow &ldquo;go find&rdquo; the dictionary
@@ -314,125 +280,156 @@ and not just the ones the receiver already knows the mappings for.
 Including a schema URL in a header towards the beginning of the encoded file,
 as XML does,
 is a standard-practice solution that we adopt for this purpose.</p>
-
 <h2 id="hierarchy">Hierarchy</h2>
-
 <p>The goal of this level is to sepearate type information from value information,
-and enable a receiver to tell which values do and don&rsquo;t have sub-structure,
-completely independent of the receiver&rsquo;s ability to understand specific types.</p>
-
+and enable a receiver to tell which values do and don't have sub-structure,
+completely independent of the receiver's ability to understand specific types.</p>
 <p>Types are either integer schematic codes or human-readable text names.
 At this level, types are merely opaque integers or text strings.</p>
-
 <ul>
 <li>ttttttt0: data with 7-bit schematic type code ttttttt, content follows</li>
 <li>lllllll1: next lllllll bytes (&gt;=2) contains type name, content follows</li>
 <li>00000001: data is type code (integer) blob followed by content</li>
 <li>00000011: data is type name (string) blob followed by content</li>
 </ul>
-
 <p>The last two encodings are the most general,
 the first being just shorthand equivalents of them.</p>
-
 <h2 id="type-codes">Type codes</h2>
-
 <p>Type codes are variable-length integers,
 which are categorized according to their three least-significant bits:</p>
-
 <ul>
 <li>cse:</li>
 </ul>
-
 <p>c: 1 if data contains composite structure encoded in DRS/BRS, 0 if atomic
 s: 1 if data takes the form of a UTF-8 text string, 0 if binary
 e: 1 if type is an extension type defined by a scheme, 0 if a base type</p>
-
 <p>A more specific scheme defines which standard types are actually allowed.</p>
-
-<p>Atomic binary type codes currently assigned in base format:
-* 000000: raw atomic binary data with no further encoded type information
-* 001000: IEEE 16/32/64/128-bit binary floating-point number
-* 010000: unsigned binary integer with value encoded in little-endian
-* 011000: negative binary integer with -value-1 encoded in little-endian</p>
-
-<p>Atomic text type codes currently assigned:
-* 000010: generic text string with no further encoded type information
-* 001010: text-encoded number with optional fraction, decimal (other bases?)
-* 010010: text-encoded date/time in ISO 8601, RFC 3339, or similar formats</p>
-
-<p>Composite binary type codes currently assigned:
-* 000100: array/vector/sequence of consecutive BRS-encoded values
-* 001100: map/dictionary/object BRS-encoded as sequence of key-value pairs</p>
-
-<p>Composite text type codes currently assigned:
-* 000110: array/vector/sequence of consecutive DRS-encoded values
-* 001110: map/dictionary/object DRS-encoded as sequce of key-value pairs</p>
-
-<p>To consider adding:
-* Boolean (true, false), null, undefined
-* Raw text/binary content with MIME content-type tag
-* Dates in text/binary formats
-* Packed binary vectors of 8/16/32/64-byte signed or unsigned integers</p>
-
+<p>Atomic binary type codes currently assigned in base format:</p>
 <ul>
-<li>vvvvv000: little-endian unsigned integer, vvvvv is 5 least-significant bits</li>
-<li>vvvvv100: little-endian negative integer encoding -value-1, vvvvv is 5 lsbs</li>
-<li>ttttt000: typed atomic value: schematic type ttttt, further bytes are content</li>
-<li>00000010: text string, remaining bytes contain UTF-8 encoding</li>
-<li>00000011: binary data contained in remaining bytes</li>
-<li>00000110: boolean false value</li>
-<li>00000111: boolean true value</li>
-<li>00001110: JSON null value</li>
-<li>00001111: undefined value (e.g., JavaScript)</li>
-<li>000000bb: data is vector of 2^bb-byte unsigned integers (8,16,32,64-bit)</li>
-<li>000000bb: data is vector of 2^bb-byte signed integers (8,16,32,64-bit)</li>
-<li>00000000: composite vector of variable-length blob-encoded values</li>
-<li>00000000: composite map of blob-encoded key/value pairs</li>
-<li>00000bbb: IEEE binary floating-point value of size 8*2^bbb bits</li>
-<li>000000bb: typed atomic value: 2^bb-byte schematic type followed by content</li>
-<li>000000bb: typed composite value: 2^bb-byte schematic type followed by content</li>
+<li>000000: raw atomic binary data with no further encoded type information</li>
+<li>001000: IEEE 16/32/64/128-bit binary floating-point number</li>
+<li>010000: unsigned binary integer with value encoded in little-endian</li>
+<li>011000: negative binary integer with -value-1 encoded in little-endian</li>
 </ul>
-
+<p>Atomic text type codes currently assigned:</p>
+<ul>
+<li>000010: generic text string with no further encoded type information</li>
+<li>001010: text-encoded number with optional fraction, decimal (other bases?)</li>
+<li>010010: text-encoded date/time in ISO 8601, RFC 3339, or similar formats</li>
+</ul>
+<p>Composite binary type codes currently assigned:</p>
+<ul>
+<li>000100: array/vector/sequence of consecutive BRS-encoded values</li>
+<li>001100: map/dictionary/object BRS-encoded as sequence of key-value pairs</li>
+</ul>
+<p>Composite text type codes currently assigned:</p>
+<ul>
+<li>000110: array/vector/sequence of consecutive DRS-encoded values</li>
+<li>001110: map/dictionary/object DRS-encoded as sequce of key-value pairs</li>
+</ul>
+<p>To consider adding:</p>
+<ul>
+<li>
+<p>Boolean (true, false), null, undefined</p>
+</li>
+<li>
+<p>Raw text/binary content with MIME content-type tag</p>
+</li>
+<li>
+<p>Dates in text/binary formats</p>
+</li>
+<li>
+<p>Packed binary vectors of 8/16/32/64-byte signed or unsigned integers</p>
+</li>
+<li>
+<p>vvvvv000: little-endian unsigned integer, vvvvv is 5 least-significant bits</p>
+</li>
+<li>
+<p>vvvvv100: little-endian negative integer encoding -value-1, vvvvv is 5 lsbs</p>
+</li>
+<li>
+<p>ttttt000: typed atomic value: schematic type ttttt, further bytes are content</p>
+</li>
+<li>
+<p>00000010: text string, remaining bytes contain UTF-8 encoding</p>
+</li>
+<li>
+<p>00000011: binary data contained in remaining bytes</p>
+</li>
+<li>
+<p>00000110: boolean false value</p>
+</li>
+<li>
+<p>00000111: boolean true value</p>
+</li>
+<li>
+<p>00001110: JSON null value</p>
+</li>
+<li>
+<p>00001111: undefined value (e.g., JavaScript)</p>
+</li>
+<li>
+<p>000000bb: data is vector of 2^bb-byte unsigned integers (8,16,32,64-bit)</p>
+</li>
+<li>
+<p>000000bb: data is vector of 2^bb-byte signed integers (8,16,32,64-bit)</p>
+</li>
+<li>
+<p>00000000: composite vector of variable-length blob-encoded values</p>
+</li>
+<li>
+<p>00000000: composite map of blob-encoded key/value pairs</p>
+</li>
+<li>
+<p>00000bbb: IEEE binary floating-point value of size 8*2^bbb bits</p>
+</li>
+<li>
+<p>000000bb: typed atomic value: 2^bb-byte schematic type followed by content</p>
+</li>
+<li>
+<p>000000bb: typed composite value: 2^bb-byte schematic type followed by content</p>
+</li>
+</ul>
 <p>Maps can encode keys and values with arbitrary types,
 although a particular scheme may restrict the range
 of valid keys and/or values.</p>
-
 <p>A part is a varint code followed by additional data
 that depends on the low X bits of the code.</p>
-
 <ul>
-<li><p>x0: this part is a final literal</p></li>
-
-<li><p>Bit 0 - More: indicates this item contains more part(s)</p></li>
-
-<li><p>Bit 1 - Composite: indicates this part may contain sub-parts</p></li>
-
-<li><p>Bit 2 -</p></li>
+<li>
+<p>x0: this part is a final literal</p>
+</li>
+<li>
+<p>Bit 0 - More: indicates this item contains more part(s)</p>
+</li>
+<li>
+<p>Bit 1 - Composite: indicates this part may contain sub-parts</p>
+</li>
+<li>
+<p>Bit 2 -</p>
+</li>
 </ul>
-
-<p>For items representing keys:
-*   If the item is an integer, it represents a code
-    referring to a schema.
-    The receiver must know and understand the applicable schema
-    in order to interpret the code properly.
-*   If the item is a string, it represents a textual scheme name.
-*   Keys can potentially be composite too, depending on the scheme&hellip;</p>
-
+<p>For items representing keys:</p>
+<ul>
+<li>If the item is an integer, it represents a code
+referring to a schema.
+The receiver must know and understand the applicable schema
+in order to interpret the code properly.</li>
+<li>If the item is a string, it represents a textual scheme name.</li>
+<li>Keys can potentially be composite too, depending on the scheme&hellip;</li>
+</ul>
 <h2 id="ct85-encoding-for-binary-data">CT85 encoding for binary data</h2>
-
 <p>Inspired by <a href="https://en.wikipedia.org/wiki/Ascii85">Ascii85</a> encoding,
 which is more efficient than uuencode or base64 encoding.</p>
-
 <p>We use this 85-character set, in this order:</p>
-
 <p>! # $ % &amp; * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ? @
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ^ _ `
 a b c d e f g h i j k l m n o p q r s t u v w x y z | ~</p>
-
-<p>left unused:
-- ( ) [ ] { } because they&rsquo;re sensitive matchers
-- &ldquo; &lsquo; \ because they&rsquo;re widely used for quoting and excaping in C-like languages</p>
-
+<p>left unused:</p>
+<ul>
+<li>( ) <input disabled="" type="checkbox">{ } because they're sensitive matchers</li>
+<li>&quot; ' \ because they're widely used for quoting and excaping in C-like languages</li>
+</ul>
 <p>Unlike Ascii85, the CT85-encoded data encodes the exact byte length
 of the binary data and does not require it
 first to be padded to a multiple of four.
@@ -444,7 +441,6 @@ If the binary stream ends with a 2-byte frame,
 we encode it as an integer from 0 to 2^16-1 and add 2^32+2^24.
 If the last frame contains only a single byte,
 we treat it as an integer from 0 to 2^8-1 and add 2^32+2^24+2^16.</p>
-
 <p>Thus, for all but the last frame,
 the valid unsigned integer codes range from 0 to 2^23-1 -
 but for the last frame

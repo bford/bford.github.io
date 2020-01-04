@@ -57,7 +57,6 @@ July 13, 2018. Abstract: The increasing number of health-data breaches is creati
       
       <guid>https://bford.info/2017/08/01/skipchain/</guid>
       <description>A blockchain, or distributed ledger, is a log maintained collectively by a distributed group of participants who agree on and record transactions without relying for security on any single trusted party. While initially popularized by Bitcoin and its derivatives, the blockchain abstraction is not specific to currencies, and there is exploding industry interest in many non-currency uses.
- 
 Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
     </item>
     
@@ -160,8 +159,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/03/10/apple/</guid>
-      <description>This post originally appeared on the Freedom to Tinker blog by the Center for Information Technology Policy at Princeton University. 
-The Apple versus FBI showdown has quickly become a crucial flashpoint of the &amp;ldquo;new Crypto War.&amp;rdquo; On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters.</description>
+      <description>The Apple versus FBI showdown has quickly become a crucial flashpoint of the “new Crypto War.” On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters. The fact that the FBI allowed Apple to disclose the order publicly, on the same day, represents a rare exception to the government&#39;s normal penchant for secrecy.</description>
     </item>
     
     <item>

@@ -40,27 +40,20 @@
 
     
   <h1>Are Biometrics a Good Test for Real Unique Personhood?</h1>
-  
-
-<p>Are biometrics good for determining whether a digital identity
+  <p>Are biometrics good for determining whether a digital identity
 <em>uniquely</em> represents a <em>real</em> person?</p>
-
-<p>Break this down:
-- Does it represent [the characteristics of] a person?
-- Does it uniquely represent a person: i.e., the <em>only</em> identity of that person?
-- Does it uniquely represent a real living person?</p>
-
+<p>Break this down:</p>
+<ul>
+<li>Does it represent [the characteristics of] a person?</li>
+<li>Does it uniquely represent a person: i.e., the <em>only</em> identity of that person?</li>
+<li>Does it uniquely represent a real living person?</li>
+</ul>
 <h1 id="authentication-identification-and-real-personhood">Authentication, Identification, and Real Personhood</h1>
-
 <p>Biometric authentication is practical, and not necessarily a privacy disaster.
 Biometric template only needs to be stored on the device, &hellip;</p>
-
 <p>But biometric identity also needs a uniqueness test.</p>
-
-<p>Priorities: Don&rsquo;t Feed the Surveillance Capitalists</p>
-
+<p>Priorities: Don't Feed the Surveillance Capitalists</p>
 <p>&ldquo;Entities&rdquo;</p>
-
 <p>the cold inhumanness of typical Silicon Valley thinking.
 People are mere entities with no special place in the world,
 just like companies, gadgets, or bots.
@@ -68,142 +61,107 @@ People are just objects to be abstracted, derived,
 polymorphically referenced, and iterated over.
 From the Silicon Valley perspective,
 all the software you build is more powerful and general, and hence better,
-if it doesn&rsquo;t know or care whether the objects it manipulates
+if it doesn't know or care whether the objects it manipulates
 are people, bots, or anything else.
-But I&rsquo;ll let you in on a secret: <em>real people</em> do care.</p>
-
-<p>Call us speceist or something, but I&rsquo;m with Tim Cook&hellip;</p>
-
+But I'll let you in on a secret: <em>real people</em> do care.</p>
+<p>Call us speceist or something, but I'm with Tim Cook&hellip;</p>
 <pre><code>    XXX
 </code></pre>
-
 <p>And the first and most critical step in ensuring that
 technology serves humanity
 is to ensure that the technology we build
 can <em>distinguish</em> humanity from inhumanity.</p>
-
 <h2 id="key-goals-in-biometric-identity">Key Goals in Biometric Identity</h2>
-
-<p>Relevant security properties:
-* Accessibility: Each registered person can successfully access access his/her account (authentication)
-* Exclusiveness: No one but the registered person can authenticate as the registered person
-* Uniqueness: each real person can register <em>only one</em> account.</p>
-
+<p>Relevant security properties:</p>
+<ul>
+<li>Accessibility: Each registered person can successfully access access his/her account (authentication)</li>
+<li>Exclusiveness: No one but the registered person can authenticate as the registered person</li>
+<li>Uniqueness: each real person can register <em>only one</em> account.</li>
+</ul>
 <p>The first two should be obvious, but what about the third?</p>
-
 <p>A key goal in most identity schemes is to ensure that no person
 can register multiple &ldquo;Sybil&rdquo; identities,
 e.g., to vote multiple times in an election,
 or to collect state-supplied benefits multiple times.
 Collecting two or three or more times the amount of benefits
-you&rsquo;re entitled to is appealing to fraudsters
-pretty much regardless of what kind of benefits we&rsquo;re talking about.</p>
-
+you're entitled to is appealing to fraudsters
+pretty much regardless of what kind of benefits we're talking about.</p>
 <p>But can biometric identity systems enforce identity uniqueness?
 <em>Do</em> currently-deployed biometric identity schemes test for uniqueness?</p>
-
 <p>There are many proposed and a few implemented approaches to biometric identity
-and I won&rsquo;t pretend to be familiar with them all,
-but let&rsquo;s look at one example:
-India&rsquo;s Aadhaar system [xxx].
+and I won't pretend to be familiar with them all,
+but let's look at one example:
+India's Aadhaar system [xxx].
 I choose this example not because I have any reason to believe it to be
-better or worse than any other proposed approach I&rsquo;m aware of,
+better or worse than any other proposed approach I'm aware of,
 but merely because of its large-scale deployment,
 having already been used to register more than 1.1 billion people [xxx].</p>
-
 <h2 id="identity-privacy-challenges">Identity Privacy Challenges</h2>
-
-<p>Privacy challenges:
-* It should be hard to steal a biometric template usable for impersonation
-* It should be hard to use biometrics for illicit tracking/surveillance</p>
-
+<p>Privacy challenges:</p>
+<ul>
+<li>It should be hard to steal a biometric template usable for impersonation</li>
+<li>It should be hard to use biometrics for illicit tracking/surveillance</li>
+</ul>
 <h1 id="the-uniqueness-test-problem">The Uniqueness Test Problem</h1>
-
 <h2 id="the-error-rate-problem">The Error Rate Problem</h2>
-
 <p>Aadhaar device certification requirements for
 <a href="http://www.stqc.gov.in/sites/upload_files/stqc/files/UIDAI-Biometric-Device-Specifications-Authentication-14-05-2012_0.pdf">fingerprint</a>
 and
 <a href="http://www.stqc.gov.in/sites/upload_files/stqc/files/IRIS%20Auth%20Device_specification%20issue02%20_08032016_BDCS_A-I_-03-07_0.pdf">iris</a>
 authentication.</p>
-
 <p>requires
-<code>&lt;2% FRR ... at FAR of 0.01%'' for fingerprint and
-</code>FRR &lt; 1% at FAR of 1 in 1,00,000&rdquo; for iris scanning.
-(Note that the <code>1,00,000'' is *not* a typo for 1,000,000,
-but rather is</code>one <a href="https://en.wikipedia.org/wiki/Lakh"><em>lakh</em></a>&ldquo;
+<code>&lt;2% FRR ... at FAR of 0.01%'' for fingerprint and</code>FRR &lt; 1% at FAR of 1 in 1,00,000&rsquo;&rsquo; for iris scanning.
+(Note that the <code>1,00,000'' is *not* a typo for 1,000,000, but rather is </code>one <a href="https://en.wikipedia.org/wiki/Lakh"><em>lakh</em></a>&rsquo;&rsquo;
 or 100,000 expressed in the
 <a href="https://en.wikipedia.org/wiki/Indian_numbering_system">Indian numbering system</a>).</p>
-
 <p>could go <a href="https://www.imdb.com/title/tt0119177/">full Gattaca</a>
 with genetic sequencing &ndash;
 but even genetic testing is still imperfect
 (XXX false criminal conviction case).
-And even ``perfect&rdquo; genetic uniqueness testing
+And even ``perfect&rsquo;&rsquo; genetic uniqueness testing
 would still yield false positives in the not-so-uncommon case
 of identical twins.</p>
-
 <p>With enough different biometric factors in combination
 (fingerprint, iris, face, hand, genes, <a href="http://uncyclopedia.wikia.com/wiki/UnNews:Rectal_recognition_software_launched">rect</a><a href="https://www.reddit.com/r/AskReddit/comments/hfois/are_buttholes_like_fingerprints/">um</a>),
 &hellip;</p>
-
 <h3 id="what-about-smaller-jurisdictions">What About Smaller Jurisdictions?</h3>
-
 <h2 id="the-compromised-device-problem">The Compromised Device Problem</h2>
-
 <p>number of unique types of devices, companies
 <a href="https://uidai.gov.in/images/resource/List_of_UIDAI_Certified_Biometric_Devices_13072017.pdf">certified devices</a></p>
-
 <h2 id="the-physical-fakery-problem">The Physical Fakery Problem</h2>
-
 <p>(fake hands, faked liveness tests, &hellip;)</p>
-
 <p>Iris mage reconstruction from iriscodes:
 <a href="https://www.sciencedirect.com/science/article/pii/S1077314213001070">Iris Image Reconstruction from Binary Templates</a> (<a href="https://repositorio.uam.es/bitstream/handle/10486/662086/iris_galbally_CVIU_2013_ps.pdf">non-paywalled preprint</a>)</p>
-
 <p>XXX Recently, several researchers have addressed the problem of generating differ- ent synthetic biometric traits such as iris [11, 12, 13, 14, 15], fingerprints [16], signature [17, 18], face [19], handwriting [20], and voice [21].</p>
-
-<p>But a Sybil attacker&rsquo;s goal is not to mimic another person&rsquo;s biometric,
+<p>But a Sybil attacker's goal is not to mimic another person's biometric,
 but rather just to <em>be different</em> from those of other real people.
 &hellip;</p>
-
 <p>fingerprint reconstruction:
 <a href="http://fziprojects.com/ieee2015dotnet/Learning%20Fingerprint%20Reconstruction.pdf">Learning Fingerprint Reconstruction: From Minutiae to Image</a></p>
-
 <p>Can even synthesize fingerprints that falsely authenticate as
 <em>two</em> different people:
 <a href="https://ieeexplore.ieee.org/document/7782346">On the Feasibility of Creating Double-Identity Fingerprints</a></p>
-
 <p>Deepfakes trend&hellip;</p>
-
 <h2 id="the-privacy-problem">The Privacy Problem</h2>
-
 <p>Template theft, usage for impersonation.</p>
-
 <p>Cross-correlation for tracking, surveillance.</p>
-
 <p><a href="http://biometrics.cse.msu.edu/Publications/SecureBiometrics/NandakumarJain_BiometricTemplateProtection_SPM_2015.pdf">Biometric Template Protection: Bridging the Performance Gap Between Theory and Practice</a></p>
-
 <p>&ldquo;practical template protection schemes neither have proven
 non-invertibility/non-linkability guarantees nor do they achieve satisfactory
 recognition per- formance. This explains why despite 20 years of research,
 operational biometric systems do not go beyond encrypting the template using
 standard encryption techniques and/or storing them in secure hardware.&rdquo;</p>
-
 <p>&ldquo;The main limitation of state-of-the-art template protection techniques is the
 trade-off between recognition performance and the level of security offered by
 them.&rdquo;</p>
-
 <p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7420576">Protection of Privacy in Biometric Data</a></p>
-
 <p>Template protection approaches assume an attacker compromises
 only a database containing already-protected template information.
 But if the attacker compromises <em>any one device</em> that a victim ever uses,
 even just once, to authenticate,
-then the attacker can capture the ``raw&rdquo; template
+then the attacker can capture the ``raw&rsquo;&rsquo; template
 before any template protection is applied.
 The single compromised device problem again.</p>
-
 <h1 id="conclusion">Conclusion</h1>
 
 

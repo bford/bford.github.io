@@ -17,7 +17,8 @@
       <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2019/09/23/rational/</guid>
-      <description>by Bryan Ford and Rainer Böhme &amp;mdash; PDF preprint version available   Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
+      <description>Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.
+What most of these heavily-overlapping sets of fans do not seem to realize, however, is that rationality assumptions are self-defeating in open permissionless systems with weak identities.</description>
     </item>
     
     <item>
@@ -27,7 +28,7 @@
       
       <guid>https://bford.info/2019/07/29/go-generics/</guid>
       <description>The Go language appears to be getting slightly closer to supporting generics, with the recent release of a new proposal for generics based on type parameters and contracts.
-I generally like the direction this proposal is going, with one significant reservation. I feel that the current proposal both unnecessarily limits how &amp;ldquo;generic&amp;rdquo; Go&amp;rsquo;s generics will be, and risks painting the language into a corner in the long term. This is because the proposal single-mindedly assumes that the only compile-time generic parameters we will ever want are type parameters, which seems like an unnecessary and undesirable restriction.</description>
+I generally like the direction this proposal is going, with one significant reservation. I feel that the current proposal both unnecessarily limits how &amp;ldquo;generic&amp;rdquo; Go&#39;s generics will be, and risks painting the language into a corner in the long term. This is because the proposal single-mindedly assumes that the only compile-time generic parameters we will ever want are type parameters, which seems like an unnecessary and undesirable restriction.</description>
     </item>
     
     <item>
@@ -56,7 +57,7 @@ The problem of identity has become a hot topic, with the idea of self-sovereign 
       <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2018/09/11/blockchain/</guid>
-      <description>Blockchain is certainly one of the hot technology topics today. Yes, it&amp;rsquo;s probably in part a hype bubble &amp;ndash; but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFL has been investing years of effort in building next generation blockchain architectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled financial market for cryptocurrencies.</description>
+      <description>Blockchain is certainly one of the hot technology topics today. Yes, it&#39;s probably in part a hype bubble – but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFLhas been investing years of effort in buildingnextgenerationblockchainarchitectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled &amp;lt;a href=&amp;quot;https://blockonomi.</description>
     </item>
     
     <item>
@@ -65,7 +66,7 @@ The problem of identity has become a hot topic, with the idea of self-sovereign 
       <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2018/06/27/muslim-ban/</guid>
-      <description>So the U.S. Supreme Court has upheld Trump&amp;rsquo;s so-called &amp;ldquo;travel ban&amp;rdquo; &amp;ndash; more honestly labeled a Muslim ban. More precisely, it is a ban on people from Muslim-majority countries not hosting Trump business properties (see map and fact check).
+      <description>So the U.S. Supreme Court has upheld Trump&#39;s so-called “travel ban” – more honestly labeled a Muslim ban. More precisely, it is a ban on people from Muslim-majority countries not hosting Trump business properties (see map and fact check).
 Where to Hold Conferences? This development naturally and rightfully raises again to prominence the question of where responsible scientists should hold their international conferences. We may soon see renewed calls to boycott US-based conferences, in solidarity with the many scientists around the world who can no longer attend conferences held in the U.</description>
     </item>
     
@@ -75,7 +76,7 @@ Where to Hold Conferences? This development naturally and rightfully raises agai
       <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2018/06/16/lausanne/</guid>
-      <description>For the benefit those visiting but not yet familiar with EPFL, Lausanne, or other parts of the Lake Geneva Region, I thought I&amp;rsquo;d write a quick summary of some of my personal favorite places and sights in the area. This is completely my personal perspective; I make no pretense at being objective or unbiased here and am not trying to write a proper travel guide. But with that in mind, I hope you might find something interesting here.</description>
+      <description>For the benefit those visiting but not yet familiar with EPFL, Lausanne, or other parts of the Lake Geneva Region, I thought I&#39;d write a quick summary of some of my personal favorite places and sights in the area. This is completely my personal perspective; I make no pretense at being objective or unbiased here and am not trying to write a proper travel guide. But with that in mind, I hope you might find something interesting here.</description>
     </item>
     
     <item>
@@ -85,7 +86,6 @@ Where to Hold Conferences? This development naturally and rightfully raises agai
       
       <guid>https://bford.info/2017/08/01/skipchain/</guid>
       <description>A blockchain, or distributed ledger, is a log maintained collectively by a distributed group of participants who agree on and record transactions without relying for security on any single trusted party. While initially popularized by Bitcoin and its derivatives, the blockchain abstraction is not specific to currencies, and there is exploding industry interest in many non-currency uses.
- 
 Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
     </item>
     
@@ -95,8 +95,7 @@ Many of these diverse use-cases, however, require users to be able to verify whe
       <pubDate>Fri, 23 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2017/06/23/turing50/</guid>
-      <description>This blog post is a transcript of my opening remarks on the panel &amp;ldquo;Restoring Personal Privacy without Compromising National Security&amp;rdquo; at the 50 Years of the ACM Turing Award Celebration. 
-We now live in a world in which the rules coded into the technology we use plays as important a role in governing our lives as the formal laws written in the public law books. Code is law already, for better or worse.</description>
+      <description>We now live in a world in which the rules coded into the technology we use plays as important a role in governing our lives as the formal laws written in the public law books. Code is law already, for better or worse. Unfortunately both the technology and policy communities still tend to treat technology as a simple set of tools, like a mechanical watch, home appliance, or automobile, which always unquestioningly serves its operator.</description>
     </item>
     
     <item>
@@ -105,8 +104,7 @@ We now live in a world in which the rules coded into the technology we use plays
       <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/10/25/mining/</guid>
-      <description>--  
-As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&amp;rsquo;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
+      <description>As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&#39;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
 In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
     </item>
     
@@ -116,8 +114,7 @@ In short, miners motivated by transaction fees have even greater incentive to de
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/03/10/apple/</guid>
-      <description>This post originally appeared on the Freedom to Tinker blog by the Center for Information Technology Policy at Princeton University. 
-The Apple versus FBI showdown has quickly become a crucial flashpoint of the &amp;ldquo;new Crypto War.&amp;rdquo; On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters.</description>
+      <description>The Apple versus FBI showdown has quickly become a crucial flashpoint of the “new Crypto War.” On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters. The fact that the FBI allowed Apple to disclose the order publicly, on the same day, represents a rare exception to the government&#39;s normal penchant for secrecy.</description>
     </item>
     
     <item>
@@ -135,7 +132,7 @@ The Apple versus FBI showdown has quickly become a crucial flashpoint of the &am
       <pubDate>Wed, 07 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2015/10/07/names.html</guid>
-      <description>On Monday the EFF, together with a &amp;ldquo;Nameless Coalition&amp;rdquo; of like-minded groups, escalated the backlash against Facebook&amp;rsquo;s &amp;ldquo;real names&amp;rdquo; or &amp;ldquo;authentic identities&amp;rdquo; policy with an open letter urging Facebook to end this policy like Google Plus did last year. Facebook&amp;rsquo;s response cites concerns about pseudonyms helping to hide &amp;ldquo;terrorist organizations&amp;rdquo;, &amp;ldquo;school bullies&amp;rdquo;, and &amp;ldquo;criminal behavior.&amp;rdquo;
+      <description>On Monday the EFF, together with a &amp;ldquo;Nameless Coalition&amp;rdquo; of like-minded groups, escalated the backlash against Facebook&#39;s &amp;ldquo;real names&amp;rdquo; or &amp;ldquo;authentic identities&amp;rdquo; policy with an open letter urging Facebook to end this policy like Google Plus did last year. Facebook&#39;s response cites concerns about pseudonyms helping to hide &amp;ldquo;terrorist organizations&amp;rdquo;, &amp;ldquo;school bullies&amp;rdquo;, and &amp;ldquo;criminal behavior.&amp;rdquo;
 While I support anonymity and have spent years working to strengthen it, terrorist fearmongering aside, Facebook is right that anonymity is often abused.</description>
     </item>
     
@@ -154,7 +151,7 @@ While I support anonymity and have spent years working to strengthen it, terrori
       <pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2014/10/22/cs-growth.html</guid>
-      <description>Yesterday the Yale Daily News ran an article on our CS department&amp;rsquo;s faculty shortage, which generated some discussion among CS colleagues. Yale&amp;rsquo;s CS faculty shortage is not really news: for example, another YDN article over a year ago made basically the same point, and that probably wasn&amp;rsquo;t the first.
+      <description>Yesterday the Yale Daily News ran an article on our CS department&#39;s faculty shortage, which generated some discussion among CS colleagues. Yale&#39;s CS faculty shortage is not really news: for example, another YDN article over a year ago made basically the same point, and that probably wasn&#39;t the first.
 Setting aside Yale in particular, however, it is interesting to notice some broader trends in CS department growth. So here are a couple charts I recently put together.</description>
     </item>
     

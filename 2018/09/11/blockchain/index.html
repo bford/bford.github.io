@@ -50,52 +50,47 @@
 
       <h1>So They&#39;re Selling You a Blockchain</h1>
 
-      
-
-<p>Blockchain is certainly one of the hot technology topics today.
-Yes, it&rsquo;s probably in part a hype bubble &ndash;
+      <p>Blockchain is certainly one of the hot technology topics today.
+Yes, it's probably in part a hype bubble –
 but from my perspective as a long-time researcher in decentralized systems
 I believe there is also a lot of potential value in the concept,
-which is why my <a href="https://dedis.epfl.ch/">DEDIS lab at EPFL</a>
+which is why my <!-- raw HTML omitted -->DEDIS lab at EPFL<!-- raw HTML omitted -->
 has been investing years of effort in
-<a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/kogias">building</a>
-<a href="https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/nikitin">next</a>
-<a href="https://bford.info/pub/dec/random-abs">generation</a>
-<a href="https://bford.info/pub/dec/omniledger-abs">blockchain</a>
-<a href="https://eprint.iacr.org/2018/209">architectures</a>.
+<!-- raw HTML omitted -->building<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->next<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->generation<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->blockchain<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->architectures<!-- raw HTML omitted -->.
 I also believe the value of the blockchain concept is relatively independent
 of the unpredictable and scam-riddled
-<a href="https://blockonomi.com/bear-market-cryptocurrency/"
->financial market for cryptocurrencies</a>.</p>
-
+&lt;a href=&quot;https://blockonomi.com/bear-market-cryptocurrency/&rdquo;</p>
+<blockquote>
+<p>financial market for cryptocurrencies<!-- raw HTML omitted -->.</p>
+</blockquote>
 <p>However, the genuine promise of blockchain technology will be realized only
-<i>if blockchains are designed properly and deployed cautiously</i>.
+<!-- raw HTML omitted -->if blockchains are designed properly and deployed cautiously<!-- raw HTML omitted -->.
 Several companies evaluating blockchain technologies
 have asked me to help them figure out what to look for
 and what questions to ask in considering alternatives,
-which prompted me to create a list of questions that I thought I&rsquo;d share
+which prompted me to create a list of questions that I thought I'd share
 for whatever they may be worth to others.
 This is by no means a complete list,
-and is certainly not &ldquo;unbiased&rdquo;:
+and is certainly not “unbiased”:
 in particular it is strongly oriented towards security- and privacy-related
 questions and issues,
-which is natural since I&rsquo;m a security/privacy researcher.
-But I hope some people might find it useful, for whatever it&rsquo;s worth.
-I&rsquo;m happy to take suggestions to extend the list further,
-and will consider adding them if I agree on their importance &ndash;
+which is natural since I'm a security/privacy researcher.
+But I hope some people might find it useful, for whatever it's worth.
+I'm happy to take suggestions to extend the list further,
+and will consider adding them if I agree on their importance –
 although I given the mountain of (often blockchain-related) E-mail
-I&rsquo;m constantly buried under,
-I can&rsquo;t promise how promptly I&rsquo;ll be able to respond,
+I'm constantly buried under,
+I can't promise how promptly I'll be able to respond,
 let alone edit and update this post with suggestions.
-So this list is provided purely &ldquo;without warranty&rdquo;:
-take it for whatever it&rsquo;s worth, and of course your mileage may vary.</p>
-
-<hr />
-
+So this list is provided purely “without warranty”:
+take it for whatever it's worth, and of course your mileage may vary.</p>
+<hr>
 <h2 id="blockchain-architecture-questions">Blockchain Architecture Questions</h2>
-
 <h3 id="has-the-technical-architecture-and-design-been-validated-through-peer-review-in-independently-peer-reviewed-publication-venues">Has the technical architecture and design been validated through peer review in independently peer-reviewed publication venues?</h3>
-
 <p>Which venues, and how reputable and selective are they?
 (For reference,
 the top systems venues are
@@ -106,71 +101,48 @@ the top security/privacy venues are
 <a href="https://www.usenix.org/conference/usenixsecurity17">USENIX Security</a>, and
 the top cryptography venue is
 <a href="https://crypto.iacr.org/">CRYPTO</a>.)</p>
-
 <h3 id="who-runs-consensus-nodes-in-the-blockchain-architecture-and-how-is-membership-decided">Who runs consensus nodes in the blockchain architecture, and how is membership decided?</h3>
-
 <p>Is the blockchain open to anyone (permissionless)
 or run among a fixed set of participants (permissioned)?
 What is the process for adding or removing members,
 and how is that process secured?</p>
-
 <h3 id="how-is-the-consensus-group-membership-governed-organizationally-and-technically">How is the consensus group membership governed, organizationally and technically?</h3>
-
 <p>Who decides when and how to deploy blockchain upgrades
 that might not be backward-compatible, thus requiring a hard-fork?
 How are software update roll-outs managed and secured?</p>
-
 <h3 id="how-decentralized-will-the-intended-deployment-be-in-practice">How decentralized will the intended deployment be in practice?</h3>
-
 <p>How many independent organizations will be expected to run consensus nodes,
 initially and in the long term?
 Stated more bluntly,
-<a href="https://arewedecentralizedyet.com/"
->are we decentralized yet?</a></p>
-
+&lt;a href=&quot;https://arewedecentralizedyet.com/&rdquo;</p>
+<blockquote>
+<p>are we decentralized yet?<!-- raw HTML omitted --></p>
+</blockquote>
 <h3 id="does-the-architecture-rely-on-energy-intensive-proof-of-work-mining">Does the architecture rely on energy-intensive proof-of-work mining?</h3>
-
 <p>Who deploys and operates the mining nodes?
 What are the energy and environmental costs of this mining,
 and are the trends sustainable?
 How decentralized is the distribution of mining power:
 e.g., how many of the largest miners or pools would need to collude
 to execute a 51% attack, or a 33% attack, on the blockchain?</p>
-
-<hr />
-
+<hr>
 <h2 id="security-and-robustness-questions">Security and Robustness Questions</h2>
-
 <h3 id="does-the-system-have-an-open-independent-security-and-privacy-review-and-analysis">Does the system have an open, independent security and privacy review and analysis?</h3>
-
 <p>If so, where may that independent security/privacy analysis be found?</p>
-
 <h3 id="does-the-blockchain-system-implement-true-byzantine-consensus">Does the blockchain system implement true Byzantine consensus?</h3>
-
 <p>Is the consensus scheme fully robust not just to failed (crashed)
 but also fully-compromised (hacked, adversarial) consensus group participants?
 Or does the system rely on non-Byzantine consensus algorithms like Paxos
 that assume all parties are well-behaved and cannot ensure integrity
 if even just one participant is compromised?</p>
-
-<!--
-### What is the smallest number or fraction of independent organizations holding enough consensus power to compromise the blockchain?
-(see arewedecentralizedyet)
-could be through rewriting history, double-spending,
-quietly censoring transactions to deny service to a competitor,
-creating a prive fake blockchain to show to just one victim
-during a high-value transaction, etc.
--->
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="how-many-compromised-participants-can-the-consensus-protocol-tolerate">How many compromised participants can the consensus protocol tolerate?</h3>
-
 <p>What number or percentage of consensus group members participants
 can be fully compromised (e.g., hacked, colluding, or under adversarial control)
 without compromising the integrity of the blockchain
 or the confidentiality of the deta entrusted to it?</p>
-
 <h3 id="are-there-single-points-of-failure-or-compromise-outside-of-consensus">Are there single points of failure or compromise outside of consensus?</h3>
-
 <p>For example:
 Does the system depend on a centralized Certificate Authority (CA)
 for naming and membership, which if compromised could allow the attacker
@@ -189,159 +161,108 @@ Does the system rely on a centralized cloud-based
 login, control, and provisioning services that,
 if compromised, could enable an attacker to gain control of
 most or all of the blockchain nodes at once?</p>
-
 <h3 id="how-can-i-know-the-blockchain-will-be-available-and-have-adequate-transaction-processing-capacity-when-my-business-needs-it">How can I know the blockchain will be available and have adequate transaction processing capacity when my business needs it?</h3>
-
 <p>What are the risks that the potentially-independent actions
 of other parties using the blockchain innocently or deliberately
-consuming enough resources to deny service or limit availability to my business&rsquo;s needs,
+consuming enough resources to deny service or limit availability to my business's needs,
 as occurred in
 <a href="https://www.coindesk.com/ethereums-cryptokitties-blockchain-deluge-sparks-ico-delay/">the Crypto-Kitties incident</a>
 for example?</p>
-
 <h3 id="what-provisions-prevent-misbehaving-consensus-nodes-from-censoring-transactions">What provisions prevent misbehaving consensus nodes from censoring transactions?</h3>
-
 <p>Do relying parties (e.g., mobile apps accessing the blockchain)
 maintain connections to multiple consensus nodes or just one,
 which could be a single point of failure, compromise, or censorship?
 How can relying parties detect and recover if their access attempts
 are manipulated or censored?</p>
-
 <h3 id="can-offline-or-poorly-connected-devices-securely-verify-blockchain-transactions">Can offline or poorly-connected devices securely verify blockchain transactions?</h3>
-
 <p>Do edge devices designed to scan and verify blockchain-secured credentials
-<a href="https://btc-hijack.ethz.ch/">become inoperative or insecure</a>
+<!-- raw HTML omitted -->become inoperative or insecure<!-- raw HTML omitted -->
 if they cannot connect to the consensus nodes?
 Or can edge devices such as credential scanners
 <a href="https://bford.github.io/2017/08/01/skipchain/">cryptographically verify transactions offline</a>?</p>
-
-<hr />
-
+<hr>
 <h2 id="cost-related-questions">Cost-related Questions</h2>
-
 <h3 id="what-are-the-financial-costs-of-blockchain-transactions-currently-and-historically">What are the financial costs of blockchain transactions, currently and historically?</h3>
-
 <p>How can I mitigate the risk that unexpected future
 increases in transaction costs,
 whether temporary or permanent,
 could impose economically prohibitive costs to my blockchain-dependent business?</p>
-
 <h3 id="what-are-the-energy-and-network-bandwidth-costs-to-resource-constrained-edge-devices-needing-to-interact-with-the-blockchain">What are the energy and network bandwidth costs to resource-constrained edge devices needing to interact with the blockchain?</h3>
-
 <p>Do resource-constrained edge devices or mobile apps
 need to maintain connections and gossip with
 multiple consensus group members, or with just one?
 In the former case, what are the energy and bandwidth costs of this gossip?
 In the latter case, can that one reference node, if compromised,
-potentially censor the relying party&rsquo;s access to the blockchain
+potentially censor the relying party's access to the blockchain
 or trick it into using
 an &ldquo;alternate-reality&rdquo; blockchain inconsistent with the public one?</p>
-
-<hr />
-
+<hr>
 <h2 id="performance-and-scalability-questions">Performance and Scalability Questions</h2>
-
 <h3 id="how-scalable-is-the-architecture-to-many-consensus-participants">How scalable is the architecture to many consensus participants?</h3>
-
 <p>What is the maximum number of widely-distributed participants
 for which the blockchain system has been validated and performance-tested?
 Tens, hundreds, thousands, tens of thousands?</p>
-
 <h3 id="how-long-does-it-take-to-commit-a-transaction-securely">How long does it take to commit a transaction securely?</h3>
-
 <p>How are transaction latencies affected by consensus group size?
 When can I be overwhelmingly certain that a transaction
-can&rsquo;t be reverted or rewritten after commitment?
+can't be reverted or rewritten after commitment?
 Were these transaction latencies tested on a wide-area deployment
 with global speed-of-light delays between consensus nodes,
 or in a local-area environment where all participants are close together?</p>
-
-<h3 id="what-is-the-system-s-maximum-demonstrated-transaction-throughput">What is the system&rsquo;s maximum demonstrated transaction throughput?</h3>
-
+<h3 id="what-is-the-systems-maximum-demonstrated-transaction-throughput">What is the system's maximum demonstrated transaction throughput?</h3>
 <p>Was this throughput demonstrated in a wide-area or local-area deployment?
 What processing power and network bandwidth was required?</p>
-
-<h3 id="what-does-the-system-s-maximum-transaction-throughput-depend-on">What does the system&rsquo;s maximum transaction throughput depend on?</h3>
-
-<p>Can the system&rsquo;s transaction-processing capacity scale gracefully
+<h3 id="what-does-the-systems-maximum-transaction-throughput-depend-on">What does the system's maximum transaction throughput depend on?</h3>
+<p>Can the system's transaction-processing capacity scale gracefully
 as more participants and hardware resources are added to the system
 (e.g., via <a href="https://bford.info/pub/dec/omniledger-abs">sharding</a>),
 or is processing throughput limited to the slowest consensus group member?</p>
-
-<hr />
-
+<hr>
 <h2 id="privacy-and-confidentiality-questions">Privacy and Confidentiality Questions</h2>
-
 <h3 id="how-can-the-blockchain-handle-private-confidential-transaction-data">How can the blockchain handle private, confidential transaction data?</h3>
-
 <p>Do all the consensus group members see all transaction data,
 or just the participants that are directly involved in a given transaction?
 If confidential transaction data is encrypted,
 how are the secret encryption keys managed, and who holds those keys?
 Are the encryption keys held by a centralized party that, if compromised,
 could leak confidential data in bulk to an attacker?</p>
-
 <h3 id="can-the-blockchain-enforce-global-invariants-on-confidential-transaction-data">Can the blockchain enforce global invariants on confidential transaction data?</h3>
-
 <p>If the amounts of coin or token in a transaction are encrypted
 and only known to the direct parties to the transaction, for example,
 can those parties collude to create fake coins or tokens &ldquo;out of thin air&rdquo;
 without the knowledge of the other validators or consensus group members?
-Or can the system somehow ensure that &ldquo;the books balance&rdquo; globally
+Or can the system somehow ensure that “the books balance” globally
 without revealing transaction amounts?</p>
-
 <h3 id="can-the-blockchain-hide-data-that-smart-contracts-depend-on">Can the blockchain hide data that smart contracts depend on?</h3>
-
 <p>Does all the data that a smart contract uses in its calculations and decisions
 need to be exposed to all the blockchain miners or validators?
 Is there any approach available if a smart contract
 needs to make a decision based on sensitive confidential data?</p>
-
 <h3 id="does-the-blockchain-provide-any-form-of-metadata-privacy-for-transactions">Does the blockchain provide any form of metadata privacy for transactions?</h3>
-
 <p>Can the blockchain hide the identities of parties involved in transactions,
-or does it effectively reveal who&rsquo;s transacting with whom
+or does it effectively reveal who's transacting with whom
 even if the actual content of the transaction is encrypted?
 Can the blockchain hide or obscure the timing, pattern, or rate of transactions
 in any way,
 limiting information leakage to an observer who might, for example,
 infer that a burst of activity signifies
 an upcoming product release, merger, major trade, or other announcement??</p>
-
-<!--
-Even if a spy or competitor can't decrypt the blockchain transactions
-you're involved in,
-if they can observe the *rate*, *timing*, and *pattern*
-of transactions your business submits
--- and especially who else is involved in those transactions --
-then they can potentially learn or guess a lot about what you're doing:
-e.g., guess that a big event is upcoming if they see a burst of transactions
-with your name on it,
-or guess that you've signed a major deal with a particular company
-if they start seeing many transactions tagged with your and their identity.
--->
-
-<hr />
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<hr>
 <h2 id="smart-contract-questions">Smart Contract Questions</h2>
-
-<h3 id="which-language-s-are-smart-contracts-written-in">Which language(s) are smart contracts written in?</h3>
-
+<h3 id="which-languages-are-smart-contracts-written-in">Which language(s) are smart contracts written in?</h3>
 <p>Does the language have a clear and rigorous specification?
 What measures does the language take for mitigating risks
 of critical smart contract bugs?
 Has the specification been validated through independent security analysis
 and/or publication in peer-reviewed venues?</p>
-
 <h3 id="what-are-the-costs-of-running-simple-or-complex-smart-contracts">What are the costs of running simple, or complex, smart contracts?</h3>
-
 <p>What is the financial cost and latency to run a simple &ldquo;if-then&rdquo; type contract?
 What is the financial cost and latency to run complex smart contract code
 that, for example, needs to include cryptographic algorithms
 to verify non-native signatures or zero-knowledge proofs?</p>
-
 <h3 id="what-is-the-recourse-if-something-goes-wrong-due-to-a-smart-contract-bug">What is the recourse if something goes wrong due to a smart contract bug?</h3>
-
 <p>Does the blockchain architecture provide a systematic means
 to roll-back or correct for the effects of smart contract bugs?
 How costly are those measures, e.g., do they require a global hard-fork
@@ -351,21 +272,14 @@ for example?
 If there are less-costly measures,
 how are they activated,
 and how does the architecture protect against abuse
-(e.g., via costly over-use or &ldquo;crying wolf&rdquo; attacks)?</p>
-
+(e.g., via costly over-use or “crying wolf” attacks)?</p>
 <h3 id="does-the-smart-contract-virtual-machine-enforce-strict-determinism-in-the-smart-contract-code">Does the smart contract virtual machine enforce strict determinism in the smart contract code?</h3>
-
 <p>Or can buggy or maliciously-written smart contract code potentially
 inject random or other nondeterministic results into their output,
 and thereby preventing the validators from agreeing
 on the results of a transaction?</p>
-
-<!--
----
-
-*I wish to thank ...
-for helpful feedback on early drafts of this post.*
--->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
     </div>
 
