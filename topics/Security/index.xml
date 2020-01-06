@@ -17,8 +17,7 @@
       <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2019/09/23/rational/</guid>
-      <description>Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.
-What most of these heavily-overlapping sets of fans do not seem to realize, however, is that rationality assumptions are self-defeating in open permissionless systems with weak identities.</description>
+      <description>by Bryan Ford and Rainer Böhme &amp;mdash; PDF preprint version available   Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
     </item>
     
     <item>
@@ -57,7 +56,7 @@ It is important to understand in this light the context of the Swiss e-voting pr
       <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2018/09/11/blockchain/</guid>
-      <description>Blockchain is certainly one of the hot technology topics today. Yes, it&#39;s probably in part a hype bubble – but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFLhas been investing years of effort in buildingnextgenerationblockchainarchitectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled &amp;lt;a href=&amp;quot;https://blockonomi.</description>
+      <description>Blockchain is certainly one of the hot technology topics today. Yes, it&#39;s probably in part a hype bubble – but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFL has been investing years of effort in building next generation blockchain architectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled &amp;lt;a href=&amp;quot;https://blockonomi.</description>
     </item>
     
     <item>
@@ -137,7 +136,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/10/25/mining/</guid>
-      <description>As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&#39;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
+      <description>--   As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&#39;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
 In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
     </item>
     
@@ -210,7 +209,7 @@ In short, miners motivated by transaction fees have even greater incentive to de
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/03/10/apple/</guid>
-      <description>The Apple versus FBI showdown has quickly become a crucial flashpoint of the “new Crypto War.” On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters. The fact that the FBI allowed Apple to disclose the order publicly, on the same day, represents a rare exception to the government&#39;s normal penchant for secrecy.</description>
+      <description>*This post [originally appeared](https://freedom-to-tinker.com/blog/bford/apple-fbi-and-software-transparency/) on the [Freedom to Tinker](https://freedom-to-tinker.com/) blog by the [Center for Information Technology Policy](https://citp.princeton.edu) at [Princeton University](http://www.princeton.edu/).*  The Apple versus FBI showdown has quickly become a crucial flashpoint of the “new Crypto War.” On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters.</description>
     </item>
     
     <item>

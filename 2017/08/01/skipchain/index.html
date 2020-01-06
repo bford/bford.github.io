@@ -59,7 +59,9 @@ While initially popularized by <a href="https://en.wikipedia.org/wiki/Bitcoin">B
 and its derivatives,
 the blockchain abstraction is not specific to currencies,
 and there is exploding industry interest in many non-currency uses.</p>
-<!-- raw HTML omitted -->
+<center>
+<img src="blockchain.svg" alt="Blockchain">
+</center>
 <p>Many of these diverse use-cases, however,
 require users to be able to <em>verify</em> whether or not
 some transaction has been committed to a blockchain.
@@ -68,7 +70,7 @@ securely verifying transactions unfortunately requires the user's device
 to be online and connected to the Internet,
 and to pay the bandwidth and power costs of maintaining connectivity
 with multiple (perhaps many) nodes on the blockchain's overlay network.</p>
-<!-- raw HTML omitted -->
+<img src="verified.jpg" style="float:right;width:20%">
 <p>This blog post explores the challenges this verification problem
 presents for important blockchain applications such as
 document <a href="https://en.wikipedia.org/wiki/Notary">notarization</a>.
@@ -91,7 +93,7 @@ such as <a href="https://link.springer.com/chapter/10.1007/978-3-319-45153-4_48/
 or <a href="https://www.ubitquity.io/home/resources/worldbank_land_paper_ubitquity_march_2016.pdf">land records</a>.
 The essence of the idea is to use a blockchain's tamper-resistance property
 to make it harder to forge, back-date, or modify important records.</p>
-<!-- raw HTML omitted -->
+<img src="award-certificate.jpg" style="border:10px solid white;float:right;width:30%">
 <p>While a promising application,
 current blockchain approaches to document notarization suffer from
 several important caveats and limitations.
@@ -318,14 +320,20 @@ consensus algorithm to commit transactions securely with immediate finality.</p>
 <p>The <em>Prepare</em> and <em>Commit</em> phases of in the PBFT protocol
 traditionally uses unscalable &ldquo;all-to-all&rdquo; communication, however,
 as illustrated below.</p>
-<!-- raw HTML omitted -->
+<center>
+<img src="bft-tocs.svg" alt="Phases of Castro-Liskov PBFT protocol" style="width:80%">
+[Castro and Liskov, Fig. 1](http://www.pmg.csail.mit.edu/papers/bft-tocs.pdf)
+</center>
 <p>In place of all-to-all communication,
 ByzCoin instead employs CoSi during each of these phases.
 Each run of CoSi produces
 a single compact, efficiently-verifiable collective signature
 cryptographically attesting that a sufficient fraction of the consensus group
 has &ldquo;signed off&rdquo; on preparing, or committing, each new block.</p>
-<!-- raw HTML omitted -->
+<center>
+<img src="cosi-blocks.svg" alt="Collectively signed blockchain as in ByzCoin" style="width:50%">
+[Kokoris et al, Fig. 1](https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_kokoris-kogias.pdf)
+</center>
 <p>While ByzCoin's collective signatures were mainly intended
 for the consumption of other miners in the consensus group,
 in principle <em>anyone</em> can check these collective signatures
@@ -389,7 +397,9 @@ i.e., which miners&rsquo; public keys were added and/or removed.</li>
 </ol>
 <p>The following figure illustrates how backward and forward links
 work in Chainiac.</p>
-<!-- raw HTML omitted -->
+<center>
+<img src="signed-chain.svg" alt="Blockchain with collectively-signed forward links" style="width:70%">
+</center>
 <p>All committed blocks contain back links represented by hashes,
 as in a conventional blockchain.
 However, once the <em>successor</em> to a given block is committed,
@@ -440,7 +450,9 @@ in a logarithmic, rather than linear, number of steps.</p>
 <p>Chainiac adapts the skip list idea to blockchains
 by adding long-distance links both forward and backward in time,
 as illustrated below.</p>
-<!-- raw HTML omitted -->
+<center>
+<img src="skipchain.svg" alt="SkipChain with long-distance forward and backward links" style="width:70%">
+</center>
 <p>When Chainiac creates a new block,
 that block includes not just one hash link to the immediately prior block,
 but also additional hash links to that point farther backward in time.
@@ -573,8 +585,12 @@ will substantially extend the effective applicability
 of future blockchain technology,
 as well as increase their robustness and resilience
 to communication failures or routing-based attacks.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<!--
+---
+
+*I wish to thank ...
+for helpful feedback on early drafts of this post.*
+-->
 
     </div>
 

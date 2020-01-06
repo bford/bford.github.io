@@ -54,21 +54,21 @@
 Yes, it's probably in part a hype bubble –
 but from my perspective as a long-time researcher in decentralized systems
 I believe there is also a lot of potential value in the concept,
-which is why my <!-- raw HTML omitted -->DEDIS lab at EPFL<!-- raw HTML omitted -->
+which is why my <a href="https://dedis.epfl.ch/">DEDIS lab at EPFL</a>
 has been investing years of effort in
-<!-- raw HTML omitted -->building<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->next<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->generation<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->blockchain<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->architectures<!-- raw HTML omitted -->.
+<a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/kogias">building</a>
+<a href="https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/nikitin">next</a>
+<a href="https://bford.info/pub/dec/random-abs">generation</a>
+<a href="https://bford.info/pub/dec/omniledger-abs">blockchain</a>
+<a href="https://eprint.iacr.org/2018/209">architectures</a>.
 I also believe the value of the blockchain concept is relatively independent
 of the unpredictable and scam-riddled
 &lt;a href=&quot;https://blockonomi.com/bear-market-cryptocurrency/&rdquo;</p>
 <blockquote>
-<p>financial market for cryptocurrencies<!-- raw HTML omitted -->.</p>
+<p>financial market for cryptocurrencies</a>.</p>
 </blockquote>
 <p>However, the genuine promise of blockchain technology will be realized only
-<!-- raw HTML omitted -->if blockchains are designed properly and deployed cautiously<!-- raw HTML omitted -->.
+<i>if blockchains are designed properly and deployed cautiously</i>.
 Several companies evaluating blockchain technologies
 have asked me to help them figure out what to look for
 and what questions to ask in considering alternatives,
@@ -116,7 +116,7 @@ initially and in the long term?
 Stated more bluntly,
 &lt;a href=&quot;https://arewedecentralizedyet.com/&rdquo;</p>
 <blockquote>
-<p>are we decentralized yet?<!-- raw HTML omitted --></p>
+<p>are we decentralized yet?</a></p>
 </blockquote>
 <h3 id="does-the-architecture-rely-on-energy-intensive-proof-of-work-mining">Does the architecture rely on energy-intensive proof-of-work mining?</h3>
 <p>Who deploys and operates the mining nodes?
@@ -135,8 +135,14 @@ but also fully-compromised (hacked, adversarial) consensus group participants?
 Or does the system rely on non-Byzantine consensus algorithms like Paxos
 that assume all parties are well-behaved and cannot ensure integrity
 if even just one participant is compromised?</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<!--
+### What is the smallest number or fraction of independent organizations holding enough consensus power to compromise the blockchain?
+(see arewedecentralizedyet)
+could be through rewriting history, double-spending,
+quietly censoring transactions to deny service to a competitor,
+creating a prive fake blockchain to show to just one victim
+during a high-value transaction, etc.
+-->
 <h3 id="how-many-compromised-participants-can-the-consensus-protocol-tolerate">How many compromised participants can the consensus protocol tolerate?</h3>
 <p>What number or percentage of consensus group members participants
 can be fully compromised (e.g., hacked, colluding, or under adversarial control)
@@ -176,7 +182,7 @@ How can relying parties detect and recover if their access attempts
 are manipulated or censored?</p>
 <h3 id="can-offline-or-poorly-connected-devices-securely-verify-blockchain-transactions">Can offline or poorly-connected devices securely verify blockchain transactions?</h3>
 <p>Do edge devices designed to scan and verify blockchain-secured credentials
-<!-- raw HTML omitted -->become inoperative or insecure<!-- raw HTML omitted -->
+<a href="https://btc-hijack.ethz.ch/">become inoperative or insecure</a>
 if they cannot connect to the consensus nodes?
 Or can edge devices such as credential scanners
 <a href="https://bford.github.io/2017/08/01/skipchain/">cryptographically verify transactions offline</a>?</p>
@@ -247,8 +253,18 @@ in any way,
 limiting information leakage to an observer who might, for example,
 infer that a burst of activity signifies
 an upcoming product release, merger, major trade, or other announcement??</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<!--
+Even if a spy or competitor can't decrypt the blockchain transactions
+you're involved in,
+if they can observe the *rate*, *timing*, and *pattern*
+of transactions your business submits
+-- and especially who else is involved in those transactions --
+then they can potentially learn or guess a lot about what you're doing:
+e.g., guess that a big event is upcoming if they see a burst of transactions
+with your name on it,
+or guess that you've signed a major deal with a particular company
+if they start seeing many transactions tagged with your and their identity.
+-->
 <hr>
 <h2 id="smart-contract-questions">Smart Contract Questions</h2>
 <h3 id="which-languages-are-smart-contracts-written-in">Which language(s) are smart contracts written in?</h3>
@@ -278,8 +294,12 @@ and how does the architecture protect against abuse
 inject random or other nondeterministic results into their output,
 and thereby preventing the validators from agreeing
 on the results of a transaction?</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<!--
+---
+
+*I wish to thank ...
+for helpful feedback on early drafts of this post.*
+-->
 
     </div>
 

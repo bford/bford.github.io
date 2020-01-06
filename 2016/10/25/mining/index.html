@@ -50,9 +50,15 @@
 
       <h1>Untangling Mining Incentives in Bitcoin and ByzCoin</h1>
 
-      <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+      <!--
+<figure>
+    <img src="blockchain.jpg"/> 
+</figure>
+
+-->
+<center>
+<img src="blockchain.jpg" width="100%">
+</center>
 <p>As the first widely-deployed cryptocurrency,
 <a href="https://bitcoin.org/">Bitcoin</a>
 has proven hugely successful and inspired a
@@ -76,7 +82,11 @@ to deviate strategically from the standard Bitcoin protocol
 in selfish and potentially destructive ways.
 In his summary,
 <a href="http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/">Arvind Narayanan notes</a>:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<i>
+At a deeper level, our results suggest a fundamental rethinking of the role of block rewards in cryptocurrency design.
+</i>
+</blockquote>
 <p>At least one such “rethinking of the role of block rewards”
 already exists, however.
 You may judge for yourself
@@ -98,7 +108,9 @@ This blog post informally compares the way Bitcoin and ByzCoin
 handle transaction fee incentives,
 deferring the topic of selfish mining to a followup post.</p>
 <h2 id="instant-gratification-in-bitcoin">Instant Gratification in Bitcoin</h2>
-<!-- raw HTML omitted -->
+<a href="http://www.bigfatpurse.com/2015/01/12-timeless-and-invaluable-investment-lessons-from-dilbert/">
+<img src="dilbert.png" style="float:right">
+</a>
 <p>In Bitcoin, miners earn <em>immediate rewards</em>
 for successfully solving the cryptographic puzzles
 that allow them to extend the blockchain.
@@ -128,7 +140,13 @@ and can use that information to mine strategically,
 e.g., by selfishly withholding blocks
 or deliberately forking the blockchain.</p>
 <h2 id="delayed-gratification-in-byzcoin">Delayed Gratification in ByzCoin</h2>
-<!-- raw HTML omitted -->
+<div style="float:right">
+<center>
+<img src="byzcoin-arch.svg">
+<p>
+<b>ByzCoin architecture</b>
+</center>
+</div>
 <p>Mining in ByzCoin, in contrast,
 does not immediately confer <em>any</em> reward on the successful miner,
 but instead represents an <em>investment</em>
@@ -189,7 +207,7 @@ rather than instant gratification.
 And this characteristic could have important benefits
 in the stability and security of its mining incentives,
 as we discuss next.</p>
-<!-- raw HTML omitted -->
+<img src="golden-egg.jpg" style="float:right;width:256px;height:266px">
 <h2 id="the-goose-egg-problem">The Goose Egg Problem</h2>
 <p>The creator of any Bitcoin transaction defines a <em>transaction fee</em>,
 which goes to the miner
@@ -229,10 +247,24 @@ one block to compete with Ivan's, and a second block
 to convince other miners to ditch Ivan's chain for Griffith's.
 Even if this gamble presents fairly long odds for Griffith,
 the spectacular payoff presented by the goose egg makes it worth the risk.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div style="float:right">
+<style>
+.Pileup {
+ width:240px;
+ height:180px;
+ background:url('pileup-stat.gif');
+}
+.Pileup:hover {
+ cursor:pointer; 
+ background:url('pileup-anim.gif');
+}
+</style>
+<center>
+<div class="Pileup"></div>
+<p>
+<b>Bitcoin miners find a goose egg</b>
+</center>
+</div>
 <p>If <em>multiple</em> miners independently emulate Greedy Griffith,
 this could lead to chaos and large amounts of wasted hash power
 as miners clamor over the goose egg.

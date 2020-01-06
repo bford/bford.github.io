@@ -50,7 +50,16 @@
 
       <h1>Rationality is Self-Defeating in Permissionless Systems</h1>
 
-      <!-- raw HTML omitted -->
+      <blockquote>
+<i>
+by <a href="https://bford.info">Bryan Ford</a> and
+<a href="https://informationsecurity.uibk.ac.at/people/rainer-boehme/"
+	>Rainer Böhme</a>
+&mdash;
+<a href="https://arxiv.org/pdf/1910.08820.pdf"
+	>PDF preprint</a> version available
+</i>
+</blockquote>
 <p>Many blockchain and cryptocurrency fans seem to prefer
 building and analyzing decentralized systems
 in a rational or &ldquo;greedy behavior&rdquo; failure model,
@@ -65,7 +74,8 @@ is that rationality assumptions are self-defeating
 in open permissionless systems with weak identities.
 A fairly simple metacircular argument –
 a kind of
-&ldquo;<!-- raw HTML omitted -->Gödel's incompleteness theorem<!-- raw HTML omitted --> for rationality&rdquo; –
+&ldquo;<a href="https://en.wikipedia.org/wiki/Gödel%27s_incompleteness_theorems"
+>Gödel's incompleteness theorem</a> for rationality&rdquo; –
 shows that for any system <em>S</em> that makes
 <em>any</em> behavioral assumption,
 including but not limited to a rationality assumption,
@@ -112,7 +122,8 @@ hence representing a &ldquo;well-behaved&rdquo; participant
 exhibiting no adversarial behavior.</p>
 <p>A <em>Byzantine</em> participant,
 named after the
-<!-- raw HTML omitted -->Byzantine Generals Problem<!-- raw HTML omitted -->, is one we make <em>no</em> assumptions about.
+<a href="http://theory.stanford.edu/~trevisan/cs174/byzantine.pdf"
+>Byzantine Generals Problem</a>, is one we make <em>no</em> assumptions about.
 A Byzantine participant can behave in <em>arbitrary</em> fashion, without restriction,
 and hence by definition represents the strongest possible adversary.</p>
 <p>We would like to build systems that could withstand
@@ -132,7 +143,9 @@ We may therefore be tempted to improve a design's simplicity or efficiency
 by making stronger assumptions about
 the behavior of adversarial participants,
 effectively weakening the assumed adversary.</p>
-<!-- raw HTML omitted -->
+<center>
+<img src="adversaries.svg" alt="Types of adversaries" style="float:right">
+</center>
 <p>One such popular assumption, especially in economic circles,
 is <em>rationality</em>.
 In essence, we assume that rational participants
@@ -159,9 +172,11 @@ for example,
 we might hope to tolerate closer to 50%, or even 100%,
 of participants being &ldquo;adversarial&rdquo;
 if we assume they are rational and not Byzantine.
-Work on <!-- raw HTML omitted -->the BAR model (Byzantine-Altruistic-Rational)<!-- raw HTML omitted -->
+Work on <a href="http://www.cs.utexas.edu/~lorenzo/papers/sosp05.pdf"
+>the BAR model (Byzantine-Altruistic-Rational)</a>
 and
-<!-- raw HTML omitted -->*(k,t)*-robustness<!-- raw HTML omitted -->
+<a href="http://www.cs.utexas.edu/~lorenzo/papers/Abraham11Distributed.pdf"
+>*(k,t)*-robustness</a>
 exemplifies this goal,
 which sometimes appears achievable in closed systems with strong identities.
 But a direct implication of our metacircular argument is that
@@ -245,7 +260,9 @@ But what if there were another strategy <em>P</em> could take,
 for perfectly <em>rational</em> and economically-motivated reasons,
 by which <em>P</em> could in relatively short order
 acquire a <em>large</em> fraction of <em>S</em>&lsquo;s total value?</p>
-<!-- raw HTML omitted -->
+<center>
+<img src="open-world.svg" alt="Open world with S and S'" style="float:right">
+</center>
 <p>Because <em>S</em> is permissionless and operating in a larger open world,
 <em>P</em> is not confined to operating exclusively within the boundaries of <em>S</em>.
 <em>P</em> can also make use of facilities external to <em>S</em>.
@@ -351,11 +368,13 @@ would behave rationally.</p>
 or limited to fully-digital systems such as cryptocurrencies.
 In our scenario,
 <em>P</em> is essentially playing a game closely-analogous to the investors in
-<!-- raw HTML omitted -->credit default swaps<!-- raw HTML omitted -->
+<a href="https://en.wikipedia.org/wiki/Credit_default_swap"
+>credit default swaps</a>
 who both contributed to, and profited handsomely from,
-the <!-- raw HTML omitted -->2007-2008 financial crisis<!-- raw HTML omitted -->,
+the <a href="https://en.wikipedia.org/wiki/Financial_crisis_of_2007–2008"
+>2007-2008 financial crisis</a>,
 as covered more recently in the film
-<!-- raw HTML omitted -->The Big Short<!-- raw HTML omitted -->.</p>
+<a href="https://en.wikipedia.org/wiki/The_Big_Short_(film)">The Big Short</a>.</p>
 <p>In the cryptocurrency space,
 some real-world attacks we are seeing –
 such as increasingly-common
@@ -371,11 +390,15 @@ to reap rewards outside the attacked system,
 e.g., by defrauding exchanges or selling <em>S</em> short in other systems.</p>
 <p>Externally-motivated attacks on cryptocurrencies have been predicted before
 in the form of
-<!-- raw HTML omitted -->virtual protest or &ldquo;Occupy Bitcoin&rdquo; attacks<!-- raw HTML omitted -->,
-<!-- raw HTML omitted -->Goldfinger attacks<!-- raw HTML omitted -->,
-<!-- raw HTML omitted -->puzzle transaction attacks<!-- raw HTML omitted -->,
-<!-- raw HTML omitted -->merged mining attacks<!-- raw HTML omitted -->,
-<!-- raw HTML omitted -->hostile blockchain takeovers<!-- raw HTML omitted -->,
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2041492"
+>virtual protest or &ldquo;Occupy Bitcoin&rdquo; attacks</a>,
+<a href="https://www.econinfosec.org/archive/weis2013/papers/KrollDaveyFeltenWEIS2013.pdf">Goldfinger attacks</a>,
+<a href="https://www.comp.nus.edu.sg/~prateeks/papers/38Attack.pdf"
+>puzzle transaction attacks</a>,
+<a href="https://www.sba-research.org/wp-content/uploads/publications/201709%20-%20AJudmayer%20-%20CBT_Merged_Mining_camera_ready_final.pdf"
+>merged mining attacks</a>,
+<a href="https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final17.pdf"
+>hostile blockchain takeovers</a>,
 and out-of-band variants of
 <a href="https://eprint.iacr.org/2019/775.pdf">pay-to-win attacks</a>.
 All these attacks are specific instances of our argument.
@@ -421,8 +444,8 @@ to be eaten by their own success.
 We can see this effect, for example, in the growing and
 increasingly liquid market for hash power,
 which effectively thwarts
-<!-- raw HTML omitted -->Nakamoto’s<!-- raw HTML omitted -->
-(<!-- raw HTML omitted -->or Dwork’s<!-- raw HTML omitted -->)
+<a href="https://bitcoin.org/bitcoin.pdf">Nakamoto’s</a>
+(<a href="https://link.springer.com/chapter/10.1007/3-540-48071-4_10">or Dwork’s</a>)
 rule of thumb that the ratio of processors to individuals
 varies in a small band.
 Such dynamics happen in the real world, too.
@@ -455,7 +478,9 @@ In this case, rational incentives serve only as a tool for system growth,
 but become irrelevant and equivalent to a strong honesty assumption
 in terms of the internal security of the system itself.</p>
 <h2 id="conclusion-irrationality-can-be-rational">Conclusion: Irrationality Can Be Rational</h2>
-<!-- raw HTML omitted -->
+<center>
+<img src="adversaries-open.svg" alt="Types of adversaries" style="float:right">
+</center>
 <p>What many in the cryptocurrency community seem to want
 is a system that is both permissionless
 and tolerant of strongly-rational behavior –
@@ -477,8 +502,16 @@ The only practical way to eliminate this threat appears to be
 either to close the system and require strong identities and police protection,
 or else secure the system against arbitrary Byzantine behavior,
 thereby rendering rationality assumptions redundant and useless for security.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote><i>
+We wish to thank Jeff Allen, Ittay Eyal,
+Damir Filipovic, Patrik Keller, Alexander Lipton, Andrew Miller,
+and Haoqian Zhang
+for helpful feedback on early drafts of this post.
+<p>
+Updated 27-Oct-2019 with link to 
+<a href="https://arxiv.org/pdf/1910.08820.pdf"
+	>PDF preprint</a> version.
+</i></blockquote>
 
     </div>
 

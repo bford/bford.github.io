@@ -96,8 +96,8 @@ and a path out of Escaping Hell,
 via an incrementally-deployable alternative syntax
 I call <em>delimited resource identifiers</em> or DRIs.
 In essence, we simply rewrite any URI of the form
-&lsquo;<!-- raw HTML omitted --><!-- raw HTML omitted -->scheme<!-- raw HTML omitted --><code>:</code><!-- raw HTML omitted -->body<!-- raw HTML omitted --><!-- raw HTML omitted -->&rsquo; into an alternative DRI syntax of the form
-&lsquo;<!-- raw HTML omitted --><!-- raw HTML omitted -->scheme<!-- raw HTML omitted --><code>[</code><!-- raw HTML omitted -->body<!-- raw HTML omitted --><code>]</code><!-- raw HTML omitted -->&rsquo;.
+&lsquo;<tt><i>scheme</i><code>:</code><i>body</i></tt>&rsquo; into an alternative DRI syntax of the form
+&lsquo;<tt><i>scheme</i><code>[</code><i>body</i><code>]</code></tt>&rsquo;.
 Any URI like &lsquo;<code>https://bford.info/</code>&rsquo; has
 an equivalent DRI syntax like &lsquo;<code>https[//bford.info/]</code>&rsquo;,
 and vice versa.
@@ -139,9 +139,9 @@ such as
 <a href="https://www.brokenlinkcheck.com">link checking</a>.
 Such services need to accept URIs containing arbitrary other URIs,
 either in their pathname components
-(e.g., &lsquo;<!-- raw HTML omitted --><code>https://archiver.org/</code><!-- raw HTML omitted -->date<!-- raw HTML omitted --><code>/</code><!-- raw HTML omitted -->target-URI<!-- raw HTML omitted --><!-- raw HTML omitted -->&rsquo;),
+(e.g., &lsquo;<tt><code>https://archiver.org/</code><i>date</i><code>/</code><i>target-URI</i></tt>&rsquo;),
 or in query strings
-(e.g., &lsquo;<!-- raw HTML omitted --><code>https://checker.org/check?page=</code><!-- raw HTML omitted -->target-URI<!-- raw HTML omitted --><!-- raw HTML omitted -->&rsquo;).
+(e.g., &lsquo;<tt><code>https://checker.org/check?page=</code><i>target-URI</i></tt>&rsquo;).
 But because the outer URI treats many characters as special,
 those characters must be
 <a href="https://en.wikipedia.org/wiki/Escape_character"><em>escaped</em></a> or
@@ -192,8 +192,8 @@ internally needs multiple &ldquo;schemes&rdquo; to name hosts in different ways,
 such as DNS names like &lsquo;<code>bford.info</code>&rsquo;
 versus IP addresses like &lsquo;<code>1.2.3.4</code>&rsquo;.
 It has non-trivial internal syntactic structure,
-such as optional &lsquo;<!-- raw HTML omitted --><!-- raw HTML omitted -->user<!-- raw HTML omitted -->@<!-- raw HTML omitted -->&rsquo; prefix
-and &lsquo;<!-- raw HTML omitted -->:<!-- raw HTML omitted -->port<!-- raw HTML omitted --><!-- raw HTML omitted -->&rsquo; suffix.
+such as optional &lsquo;<tt><i>user</i>@</tt>&rsquo; prefix
+and &lsquo;<tt>:<i>port</i></tt>&rsquo; suffix.
 It has repeatedly proven to need extensibility,
 to handle <a href="https://en.wikipedia.org/wiki/IPv6">IPv6</a> addresses
 like &lsquo;<code>[aaaa:bbbb:cccc:dddd::]</code>&rsquo; for example.
