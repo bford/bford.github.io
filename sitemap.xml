@@ -32,12 +32,62 @@
   
   <url>
     <loc>https://bford.info/</loc>
-    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://bford.info/topics/Blockchain/</loc>
-    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Democracy/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Economics/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Identity/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Personhood/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Privacy/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Security/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/soc/dt2/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Voting/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -51,22 +101,7 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Economics/</loc>
-    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/2019/09/23/rational/</loc>
-    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Security/</loc>
-    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/</loc>
     <lastmod>2019-09-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -81,22 +116,12 @@
   </url>
   
   <url>
-    <loc>https://bford.info/pub/</loc>
-    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/topics/Cryptography/</loc>
     <lastmod>2019-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://bford.info/topics/Metadata/</loc>
-    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Privacy/</loc>
     <lastmod>2019-07-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -151,11 +176,6 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Democracy/</loc>
-    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/topics/Rights/</loc>
     <lastmod>2019-02-22T00:00:00+00:00</lastmod>
   </url>
@@ -163,21 +183,6 @@
   <url>
     <loc>https://bford.info/2019/02/22/voting/</loc>
     <lastmod>2019-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Voting/</loc>
-    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Identity/</loc>
-    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Personhood/</loc>
-    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
