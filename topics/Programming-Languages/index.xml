@@ -168,5 +168,16 @@ December 1994.  Abstract: In RPC-based communication, we term the interface the 
 December 9-10, 1993  Abstract: We believe that a passive object model, in which the active entities or threads migrate between passive objects, is more appropriate than an active object model, as the basic structure of a microkernel-based operating system. A passive object model provides enhanced performance and simplicity because it is more closely matched to the basic nature of microprocessors and the requirements of applications.</description>
     </item>
     
+    <item>
+      <title>Object-Oriented Display Refreshing</title>
+      <link>https://bford.info/pub/lang/call-lists/</link>
+      <pubDate>Wed, 01 Apr 1992 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/call-lists/</guid>
+      <description> &amp;ldquo;CallLists is a refreshing way to keep your interactive programs up to date.&amp;rdquo;  Bryan Ford
+ AmigaWorld Tech Journal
+Volume 2 Number 2, April 1992   Article: PDF  </description>
+    </item>
+    
   </channel>
 </rss>

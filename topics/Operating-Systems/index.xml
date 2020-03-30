@@ -448,5 +448,16 @@ April 1993  Abstract: The advantages in modularity and power of microkernel-base
 April 1993  Abstract: During the Mach In-Kernel Servers work, we explored two alternate thread models that could be used to support traps to in-kernel servers. In the &amp;ldquo;migrating threads&amp;rdquo; model we used, the client&#39;s thread temporarily moves into the server&#39;s task for the duration of the call. In the &amp;ldquo;thread switching&amp;rdquo; model, an actual server thread is dispatched to handle client traps.</description>
     </item>
     
+    <item>
+      <title>Object-Oriented Display Refreshing</title>
+      <link>https://bford.info/pub/lang/call-lists/</link>
+      <pubDate>Wed, 01 Apr 1992 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/call-lists/</guid>
+      <description> &amp;ldquo;CallLists is a refreshing way to keep your interactive programs up to date.&amp;rdquo;  Bryan Ford
+ AmigaWorld Tech Journal
+Volume 2 Number 2, April 1992   Article: PDF  </description>
+    </item>
+    
   </channel>
 </rss>
