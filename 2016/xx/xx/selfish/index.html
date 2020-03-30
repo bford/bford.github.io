@@ -43,14 +43,14 @@
   <p>XXX intro</p>
 <p>summary of selfish mining</p>
 <p>selfish mining as a transparency problem:
-you get to build on a blockchain head you haven't published.</p>
+you get to build on a blockchain head you haven&rsquo;t published.</p>
 <p>same as transparency problem in Apple FBI case for example;
-that's what CoSi is for.</p>
+that&rsquo;s what CoSi is for.</p>
 <p>solution: any keyblock you build on is collectively signed,
-and the next block's hash covers the last block's signature.</p>
-<p>if you withhold a block, you can't get a collective signature on it;
+and the next block&rsquo;s hash covers the last block&rsquo;s signature.</p>
+<p>if you withhold a block, you can&rsquo;t get a collective signature on it;
 without that collective signature,
-you can't secretly mine a next block on top of it.</p>
+you can&rsquo;t secretly mine a next block on top of it.</p>
 <h2 id="selfish-mining">Selfish Mining</h2>
 <p>Finally, we consider the now much more well-understood problem of
 <a href="http://hackingdistributed.com/2013/11/04/bitcoin-is-broken/">selfish mining</a>.
@@ -61,13 +61,13 @@ For example, if Greedy Greg successfully mines a new block,
 he might deliberately delay announcing it.
 If Innocent Ivan announces a competing block,
 Greg quickly races to announce and widely distribute his,
-which may reliably overtake Ivan's if Greg is fast and well-connected.
+which may reliably overtake Ivan&rsquo;s if Greg is fast and well-connected.
 Alternatively, if Greg manages to mine a <em>second</em> block in private
 before a competing first block appears,
 then Greg is in the enviable position of being able to “trump”
 and eliminate that competing block once it does appear,
 simply by revealing his longer private blockchain.</p>
-<p>While ByzCoin's keyblock mining mechanism alone is still
+<p>While ByzCoin&rsquo;s keyblock mining mechanism alone is still
 vulnerable to selfish mining,
 its microblock commitment process using Byzantine consensus
 provides a clean, simple defense against selfish mining.
@@ -89,7 +89,7 @@ any newly-mined keyblock becomes invalid and useless
 if its owner fails to announce it
 within a few microblock commitment cycles —
 again, on the order of seconds rather than minutes.</p>
-<p>In essence, ByzCoin's microblock commit mechanism
+<p>In essence, ByzCoin&rsquo;s microblock commit mechanism
 enforces transparency on the keyblock mining process,
 ensuring that a selfish ByzCoin miner would likely be faced with
 a vanishingly small probability of profiting from
@@ -104,11 +104,11 @@ may reveal new incentive-compatibility issues that its architecture introduces.
 Further, ByzCoin is still an experimental protocol
 under rapid development and evoluation.</p>
 <p>Given these caveats, however,
-ByzCoin's architecture at least appears to be much more resilient
+ByzCoin&rsquo;s architecture at least appears to be much more resilient
 to the known strategic mining attacks against Bitcoin,
 whether through block withholding or deliberate forking.
 In particular,
-by replacing Bitcoin's instant-gratification, winner-take-all reward model
+by replacing Bitcoin&rsquo;s instant-gratification, winner-take-all reward model
 with a delayed-gratification, investment-dividend model,
 ByzCoin ensures that the distribution of mining profits are fixed
 long before any strategic miner might know about or be able to respond to

@@ -64,7 +64,7 @@
 has proven hugely successful and inspired a
 <a href="https://www.cryptocoinsnews.com/study-shows-bitcoin-blockchain-investments-near-300-million-first-six-months/">blockchain fever</a>
 (or <a href="https://joi.ito.com/weblog/2016/06/14/-the-fintech-bu.html">is it a bubble?</a>).
-Bitcoin's security and economic assumptions
+Bitcoin&rsquo;s security and economic assumptions
 are showing significant fractures, however.
 Following previously-identified
 <a href="http://hackingdistributed.com/2013/11/04/bitcoin-is-broken/">selfish mining</a>
@@ -99,7 +99,7 @@ and presented at the
 <a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/kogias">USENIX Security</a>
 conference this past summer.
 While a rigorous incentive analysis has not yet been done on ByzCoin,
-informal analysis suggests that ByzCoin's architecture
+informal analysis suggests that ByzCoin&rsquo;s architecture
 may be far more resilient to these known incentive-compatibility weaknesses.
 In essence, both the new attacks —
 and the earlier selfish or stubborn mining attacks —
@@ -159,7 +159,7 @@ This consensus group is defined by a sliding window
 of recently-mined blocks:
 e.g., the last 1008 blocks, representing one share per keyblock mined
 within approximately the past week,
-at Bitcoin's self-adjusting mining rate of 10 minutes per block.
+at Bitcoin&rsquo;s self-adjusting mining rate of 10 minutes per block.
 Adopting a refinement
 <a href="http://eprint.iacr.org/2016/917.pdf">recently suggested by Pass and Shi</a>,
 ByzCoin also adds a short delay, e.g., six blocks (about one hour),
@@ -172,7 +172,7 @@ then uses a scalable
 protocol based on
 <a href="https://dedis.cs.yale.edu/dissent/papers/witness-abs">collective signing</a>
 to agree on and commit to <em>microblocks</em> containing actual transactions.
-Building on ideas in Eyal and Sirer's
+Building on ideas in Eyal and Sirer&rsquo;s
 <a href="http://hackingdistributed.com/2015/10/14/bitcoin-ng/">Bitcoin-NG</a>,
 this decoupling enables ByzCoin to commit transaction microblocks
 much more frequently than keyblocks are mined
@@ -236,15 +236,15 @@ and Innocent Ivan is the first miner lucky enough
 to create a valid Bitcoin block including this transaction.
 But suppose another miner, Greedy Griffith, is paying attention and controls
 significant mining power (but still under 1/3 of the total).</p>
-<p>Even if Greedy Griffith is well aware of Innocent Ivan's new block,
+<p>Even if Greedy Griffith is well aware of Innocent Ivan&rsquo;s new block,
 Griffith may be strongly inclined to ignore it and instead try to mine
 a <em>competing</em> block in hopes of “stealing” the goose egg from Ivan.
 To pull off this heist,
 Griffith may have to “get lucky” twice in a row
 and produce <em>two</em> new blocks
-before another miner extends Ivan's chain:
-one block to compete with Ivan's, and a second block
-to convince other miners to ditch Ivan's chain for Griffith's.
+before another miner extends Ivan&rsquo;s chain:
+one block to compete with Ivan&rsquo;s, and a second block
+to convince other miners to ditch Ivan&rsquo;s chain for Griffith&rsquo;s.
 Even if this gamble presents fairly long odds for Griffith,
 the spectacular payoff presented by the goose egg makes it worth the risk.</p>
 <div style="float:right">
@@ -293,16 +293,16 @@ only in <em>shares</em> of a goose egg;
 no single miner ever gets the whole egg.
 For example, suppose a goose egg appears at about the time Innocent Ivan
 mines a new keyblock.
-Greedy Griffith can try to mine against Ivan's keyblock,
+Greedy Griffith can try to mine against Ivan&rsquo;s keyblock,
 but this will not change the consensus group that distributes the goose egg,
 since new keyblocks must “mature” for a time (e.g., six blocks)
 before they become active shares in any consensus group.
-Griffith would have to displace not only Ivan's keyblock
+Griffith would have to displace not only Ivan&rsquo;s keyblock
 but <em>several blocks before it</em> to affect the profit distribution at all.
 Even if he succeeded, Griffith would get only an additional 1/1008th
 of the goose egg for each additional share acquired strategically.</p>
 <h2 id="transaction-fee-market-incentives">Transaction Fee Market Incentives</h2>
-<p>The <a href="http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/">new incentive analysis by Narayanan's group</a>
+<p>The <a href="http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/">new incentive analysis by Narayanan&rsquo;s group</a>
 in essence observes that,
 as block rewards decrease and transaction fees gradually supplant them
 as the primary motivation for miners to mine,
@@ -317,16 +317,16 @@ it is more profitable for miners to treat
 the bundle of ordinary transaction fees in the <em>previous</em> block
 as a small goose egg and try to capture it
 by mining <em>against</em> it rather than on top of it.</p>
-<p>Further, Narayanan's group identifies “second-order”
+<p>Further, Narayanan&rsquo;s group identifies “second-order”
 greedy deviations that work even better when other miners are greedy.
 For example, if Innocent Ivan has just mined a block that commits
 transactions worth 10 BTC in fees,
 Greedy Griffith no longer necessarily needs to mine <em>two</em> blocks
-in order to steal Ivan's fees;
+in order to steal Ivan&rsquo;s fees;
 instead Griffith might just mine <em>one</em> block that deliberately
 “consumes” only a subset of transactions worth 5 BTC of fees,
 deliberately leaving the other 5 BTC worth of fees
-as an incentive for other greedy miners to prefer Griffith's chain over Ivan's.</p>
+as an incentive for other greedy miners to prefer Griffith&rsquo;s chain over Ivan&rsquo;s.</p>
 <p>Now consider again how ByzCoin affects this situation.
 Since transaction fees are divided equally
 among the current consensus group,
@@ -355,10 +355,10 @@ may reveal new incentive-compatibility issues that its architecture introduces.
 Further, ByzCoin is still an experimental protocol
 under rapid development and evolution.</p>
 <p>Given these caveats, however,
-ByzCoin's architecture at least appears to be much more resilient
+ByzCoin&rsquo;s architecture at least appears to be much more resilient
 to several known strategic mining attacks against Bitcoin,
-including the new attacks identified by Narayanan's group.
-By replacing Bitcoin's instant-gratification, winner-take-all reward model
+including the new attacks identified by Narayanan&rsquo;s group.
+By replacing Bitcoin&rsquo;s instant-gratification, winner-take-all reward model
 with a delayed-gratification, investment-dividend model,
 ByzCoin ensures that the distribution of mining profits are fixed
 long before any strategic miner might know about or be able to respond to
@@ -369,7 +369,7 @@ as inevitable</a>”
 as Narayanan suggests.
 Whether inflationary or deflationary monetary policies are preferable
 is an important and highly debatable question,
-but its answer need not be constrained by Bitcoin's technical weaknesses.
+but its answer need not be constrained by Bitcoin&rsquo;s technical weaknesses.
 With more sophisticated blockchain architectures such as ByzCoin,
 there is plenty of hope that mining incentives can work
 independent of monetary policy.</p>

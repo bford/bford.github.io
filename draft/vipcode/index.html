@@ -68,7 +68,7 @@ and offers developers convenience and customizability in the way
 a wire-format interface is mapped to in-memory data structures.
 For example, while the <em>interface</em> might specify only
 that a data value is an integer or list,
-the interface's <em>presentation</em> might separately define
+the interface&rsquo;s <em>presentation</em> might separately define
 which specific language-specific integer or container type the value maps to.
 VIPcode makes presentations <em>verifiable</em> or checkable
 against a language-independent interface, however,
@@ -106,7 +106,7 @@ VIPcode requires no IDL compiler, however,
 but instead marshals and unmarshals data structures as specified directly
 using <em>verifiable interface presentations</em> (VIP) definitions
 embedded in the target language (Go).
-VIPcode's presentation/interface separation philosophy
+VIPcode&rsquo;s presentation/interface separation philosophy
 is not incompatible with stub compilation for performance, however,
 as <a href="#perf">discussed below</a>.</p>
 <p>As an example,
@@ -150,7 +150,7 @@ more like the existing
 <a href="https://github.com/dedis/protobuf">reflective protobuf codec for Go</a>,
 vipcode reflectively uses the <code>Example</code> <code>struct</code> definition in Go
 to infer the wire-format interface.
-This way, you don't need to guess or remember
+This way, you don&rsquo;t need to guess or remember
 which specific Go type or field naming style
 (e.g., <code>with_underscores</code> or <code>camelCase</code>)
 the IDL compiler will produce from a particular <code>.proto</code> file definition,
@@ -212,7 +212,7 @@ the test will fail if the field <code>i</code> is changed to an unsigned integer
 in one definition but not the other.</p>
 <h2 id="some-ways-separate-presentation-definition-is-useful">Some ways separate presentation definition is useful</h2>
 <p>For full details on the types and verification rules vipcode supports,
-please see the package's <a href="xxx">README</a>
+please see the package&rsquo;s <a href="xxx">README</a>
 and <a href="xxx">API documentation</a>.
 However, this section briefly covers a few ways in which
 specifying target-language presentation separately from
@@ -228,7 +228,7 @@ The Go language supports both fixed-width integer types like <code>int32</code>
 and the &ldquo;generic&rdquo; machine-word integer type <code>int</code>, however,
 and the latter is pervasively used throughout Go code
 and often most convenient when we just need
-&ldquo;an integer we're pretty sure is big enough for our purposes.&rdquo;
+&ldquo;an integer we&rsquo;re pretty sure is big enough for our purposes.&rdquo;
 In <code>Relaxed</code> interface verification mode, therefore,
 vipcode allows an <code>int32</code> or <code>int32</code> protobuf type to be
 &ldquo;presented&rdquo; as an <code>int</code> type in Go.</p>

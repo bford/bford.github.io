@@ -53,11 +53,11 @@ State-of-the-art deployed anonymity systems such as
 <a href="https://www.torproject.org/">Tor</a>
 are highly evolved and performance-optimized variants
 of this basic relaying idea.</p>
-<p>Chaum's second approach,
+<p>Chaum&rsquo;s second approach,
 <a href="http://www.freehaven.net/anonbib/cache/chaum-dc.pdf">dining cryptographers</a>,
 instead uses information-coding principles to hide the sender of a message
 among a group of nodes all of whom seem to be spewing gibberish at once.
-It's as if you are listening to a crowd
+It&rsquo;s as if you are listening to a crowd
 <a href="http://www.christianpublishers.org/Speaking%20in%20Tongues-1.jpg">speaking in tongues</a>
 but what you hear is a single unified voice,
 emanating from no one in particular,
@@ -67,13 +67,13 @@ to other projects such as the first major attempt at practical electronic cash
 (yes, he was also the &ldquo;first&rdquo; Satoshi Nakamoto),
 and secure electronic voting systems.
 While several research projects,
-including Cornell's
+including Cornell&rsquo;s
 <a href="https://www.cs.cornell.edu/people/egs/herbivore/">Herbivore</a>
 and my own
 <a href="https://dedis.cs.yale.edu/dissent/">Dissent</a>
 have made progress toward making the dining cryptographers practical,
 it has not (yet) made it into widely-deployed systems.</p>
-<p>Given Chaum's status as &ldquo;the father of online anonymity&rdquo;,
+<p>Given Chaum&rsquo;s status as &ldquo;the father of online anonymity&rdquo;,
 it stands to reason
 that his first venture <em>back</em> into anonymity in many years
 would get some attention.
@@ -91,19 +91,19 @@ prevented me from being able to take a more active role in the project.
 The design of cMix is definitely interesting and contains some promising ideas,
 but that is not what this blog post is about.</p>
 <h2 id="ending-the-crypto-war-or-stoking-the-flames">Ending the Crypto War, or Stoking the Flames?</h2>
-<p>Earlier today before Chaum's talk, Wired also released
+<p>Earlier today before Chaum&rsquo;s talk, Wired also released
 <a href="http://www.wired.com/2016/01/david-chaum-father-of-online-anonymity-plan-to-end-the-crypto-wars/">an article on it</a>
 containing a statement that will doubtless attract
 a lot more attention than anything in the technical paper on cMix:</p>
 <pre><code>Chaum is also building into PrivaTegrity another feature that’s sure to be far more controversial: a carefully controlled backdoor that allows anyone doing something “generally recognized as evil” to have their anonymity and privacy stripped altogether.
 </code></pre>
-<p>Well before Chaum's talk even began,
-Twitter was ablaze with discussion about Chaum's &ldquo;backdoor&rdquo; in PrivaTegrity.</p>
+<p>Well before Chaum&rsquo;s talk even began,
+Twitter was ablaze with discussion about Chaum&rsquo;s &ldquo;backdoor&rdquo; in PrivaTegrity.</p>
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">The main benefit of Chaum&#39;s new system, as far as I can tell, is that it is a political gift to FBI Director Comey. <a href="https://t.co/64Au0lXxuL">https://t.co/64Au0lXxuL</a></p>&mdash; Christopher Soghoian (@csoghoian) <a href="https://twitter.com/csoghoian/status/684730483503149056">January 6, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I&#39;m heartbroken to see that Chaum is proposing key escrow for everyone on the planet: <a href="https://t.co/zWZ3bUQsJf">https://t.co/zWZ3bUQsJf</a> What happened to David Chaum?</p>&mdash; Jacob Appelbaum (@ioerror) <a href="https://twitter.com/ioerror/status/684763375260270592">January 6, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<h2 id="but-wheres-the-backdoor">But Where's the Backdoor?</h2>
+<h2 id="but-wheres-the-backdoor">But Where&rsquo;s the Backdoor?</h2>
 <p>One important observation, however, is that the word &ldquo;backdoor&rdquo;
 appears nowhere in the actual
 <a href="http://eprint.iacr.org/2016/008.pdf">technical paper on cMix</a> written by
@@ -116,7 +116,7 @@ In essence, cMix is just an &ldquo;engine&rdquo; whereas PrivaTegrity is the car
 So where is this supposed &ldquo;backdoor&rdquo; &amp;emdash; in the engine or the car?</p>
 <p>The only part of the technical cMix paper that even suggests
 the &ldquo;backdoor&rdquo; idea (without using that term)
-is section IX.B., two brief paragraphs on the paper's second-to-last page.
+is section IX.B., two brief paragraphs on the paper&rsquo;s second-to-last page.
 The first is the most crucial:</p>
 <pre><code>Independent from cMix, PrivaTegrity addresses potential
 </code></pre>
@@ -157,7 +157,7 @@ Several years ago my group
 for this security model in the context of anonymity systems,
 because users need only assume that &ldquo;any one&rdquo; of the servers is honest
 and not colluding with all the others against them.
-Users don't even need to know or guess which server is honest;
+Users don&rsquo;t even need to know or guess which server is honest;
 one merely <em>needs to exist</em>.
 Once again, we did not by any means invent this security model;
 it has been in use in many ways and under many names for decades
@@ -171,20 +171,20 @@ to keep track of and let Tor clients know the set of relays
 available to help anonymize their messages.
 If &hellip;</p>
 <p>PrivaTegrity</p>
-<p>is Chaum's &ldquo;backdoor&rdquo; a technical feature?
+<p>is Chaum&rsquo;s &ldquo;backdoor&rdquo; a technical feature?
 no, just a common architectural weakness.</p>
 <p>Tor has it&hellip; (examples)</p>
-<p>Can we eliminate such trusted server groups?  Yes, but it's hard.</p>
+<p>Can we eliminate such trusted server groups?  Yes, but it&rsquo;s hard.</p>
 <p>Does CT fix it?  Not quite.</p>
 <p>The policy question: are backdoors needed/good in an anonymity systems?</p>
 <p>What would the processes be for controlled deanonymization of a user,
-supposing one created a system and set it up like Chaum's
+supposing one created a system and set it up like Chaum&rsquo;s
 on the (policy) basis that server operators would cooperate
 to deanonymize users under &ldquo;the right conditions&rdquo;?</p>
 <p>who picks those 9 server operators?  Who funds them?
 (The power of the purse is strong&hellip;)
 If a nation-state comes to them and says,
-&ldquo;we'll block your service and thus destroy a big part of your legal business
+&ldquo;we&rsquo;ll block your service and thus destroy a big part of your legal business
 unless you help us deanonymize these people who we call &lsquo;terrorists&rsquo;
 but the rest of the world calls &lsquo;political dissidents&rsquo;&quot;,
 what do they do?</p>

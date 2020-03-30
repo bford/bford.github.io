@@ -346,6 +346,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/sec/open-surveillance/</loc>
+    <lastmod>2016-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/pub/dec/cosi/</loc>
     <lastmod>2016-05-23T00:00:00+00:00</lastmod>
   </url>
@@ -473,6 +478,11 @@
   <url>
     <loc>https://bford.info/2014/10/22/cs-growth.html</loc>
     <lastmod>2014-10-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/post/2014-10-22-open-surveillance/</loc>
+    <lastmod>2014-10-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -992,7 +1002,6 @@
   
   <url>
     <loc>https://bford.info/draft/async/</loc>
-    <priority>0</priority>
   </url>
   
   <url>

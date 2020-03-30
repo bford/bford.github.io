@@ -51,7 +51,7 @@ keeping space overheads low and predictable
 for both small and large embedded strings,
 and allowing for stream processing in which an encoder
 must start writing an embedded sequence before knowing how long it will be.</p>
-<p>This post proposes a scheme I'll call <em>composable binary encoding</em> or <em>CBE</em>,
+<p>This post proposes a scheme I&rsquo;ll call <em>composable binary encoding</em> or <em>CBE</em>,
 which represents a point in this vast design space
 with a particularly attractive combination of properties.
 Given an arbitrary byte string of any length from zero to infinity (endless),
@@ -143,7 +143,7 @@ The last issue is a problem for
 <a href="https://en.wikipedia.org/wiki/Stream_(computing)">stream-based operation</a>
 in which encoders must produce the beginning of a long output stream
 concurrently with the reading of input stream(s) the output is derived from,
-each of which may be larger in total than the processor's working memory
+each of which may be larger in total than the processor&rsquo;s working memory
 or even infinite (endless) in principle.</p>
 <p>We can in turn make the length field variable-size, of course.
 Using a base-7
@@ -168,12 +168,12 @@ an embedding scheme designed to balance simplicity, power, and efficiency.</p>
 <p>CBE simply takes an arbitrary byte sequence or <em>blob</em> of any length –
 even an endless stream –
 and encodes it so that when embedded in another &ldquo;container&rdquo; byte stream,
-a decoder can unambiguously find the blob's end (if it has one).
+a decoder can unambiguously find the blob&rsquo;s end (if it has one).
 CBE has no notion of data types aside from byte sequences
 and does not know or care what you put in an embedded blob:
 it assumes the context in which the CBE-encoded blob appears
 will determine that.
-CBE's goal is to do only one thing well,
+CBE&rsquo;s goal is to do only one thing well,
 namely embed variable-length byte sequences efficiently.</p>
 <p>While generalizing to arbitrary-length embedded blobs,
 CBE optimizes for the important common case of <em>short</em> strings
@@ -263,7 +263,7 @@ and simply pass a pointer and length –
 or a slice in modern systems languages like
 <a href="https://golang.org">Go</a> and
 <a href="https://www.rust-lang.org">Rust</a> –
-to some function that consumes the chunk's payload.</p>
+to some function that consumes the chunk&rsquo;s payload.</p>
 <p>Small blobs are automatically
 <a href="https://en.wikipedia.org/wiki/Canonicalization"><em>canonical</em></a>
 or
@@ -333,7 +333,7 @@ etc.</p>
 is that decoders must be prepared to decode and combine chunks of varying size.
 A particular context or data format using CBE
 can impose restrictions on the range
-If CBE's range of chunk sizes is too broad
+If CBE&rsquo;s range of chunk sizes is too broad
 for a particular format or protocol using CBE,
 that protocol can further constrain the range of allowed chunk sizes
 in that particular context.
@@ -416,8 +416,8 @@ used in
 Protobuf and other formats is also well-matched to CBE.
 This encoding transforms a signed integer into an unsigned integer,
 which we then serialize and CBE-encode as discussed above.</p>
-<p>In contrast with standard two's-complement integers,
-ZigZag encoding makes uses the integer's <em>least</em>-significant bit
+<p>In contrast with standard two&rsquo;s-complement integers,
+ZigZag encoding makes uses the integer&rsquo;s <em>least</em>-significant bit
 as the sign bit.
 The bits above it encode either the integer <em>value</em> itself if non-negative,
 or (−<em>value</em>−1) otherwise.
@@ -441,7 +441,7 @@ such as 9–14 bits and 17–28 bits.</p>
 <p>Starting at 50 bits wide, however,
 CBE encoding is always at least as space-efficient as base-7 encoding,
 because base-7 incurs a constant ∼14% overhead on all integer widths,
-whereas CBE's relative overhead rapidly diminishes for larger integers.
+whereas CBE&rsquo;s relative overhead rapidly diminishes for larger integers.
 Encoding a 256-bit cryptographic integer, for example,
 requires 37 bytes as a varint but only 33 bytes in CBE (∼3% overhead),
 while a 4096-bit RSA integer
@@ -477,7 +477,7 @@ but also that single-character strings occupy only one byte.</p>
 whether because it contains multiple characters
 or because it encodes a single non-ASCII character –
 get blob-encoded with only one additional byte of embedding overhead
-provided the string's UTF-8 serialization is less than 64 bytes long,
+provided the string&rsquo;s UTF-8 serialization is less than 64 bytes long,
 or two bytes of overhead for strings up to 16447 bytes.</p>
 <h3 id="typed-data-encoded-with-type-value-pairs">Typed data encoded with type-value pairs</h3>
 <p>While CBE itself encodes no data type information,

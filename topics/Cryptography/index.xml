@@ -127,6 +127,15 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
     </item>
     
     <item>
+      <title>Open, privacy-preserving protocols for lawful surveillance</title>
+      <link>https://bford.info/pub/sec/open-surveillance/</link>
+      <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/open-surveillance/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>Keeping Authorities “Honest or Bust” with Decentralized Witness Cosigning</title>
       <link>https://bford.info/pub/dec/cosi/</link>
       <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
@@ -196,6 +205,15 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/certco/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Open Surveillance</title>
+      <link>https://bford.info/post/2014-10-22-open-surveillance/</link>
+      <pubDate>Tue, 21 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2014-10-22-open-surveillance/</guid>
       <description>  </description>
     </item>
     

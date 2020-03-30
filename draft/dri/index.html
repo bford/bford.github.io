@@ -59,7 +59,7 @@ allow people whose native language is not English
 to type, and view, non-ASCII Unicode characters in web addresses.
 URIs and IRIs have two major usability flaws, however.</p>
 <p>First, you
-<a href="https://blog.codinghorror.com/the-problem-with-urls/">can't reliably tell where they end</a>
+<a href="https://blog.codinghorror.com/the-problem-with-urls/">can&rsquo;t reliably tell where they end</a>
 in surrounding text.
 Suppose I type or paste into an E-mail:</p>
 <pre><code>    My site is https://bford.info/index.html.
@@ -73,7 +73,7 @@ and a wrong heuristic guess yields a broken link.
 Suppose I try to &ldquo;armor&rdquo; the URI using parentheses, like this:</p>
 <pre><code>    See my website (https://bford.info/).
 </code></pre>
-<p>This doesn't really help because parentheses are valid in URIs too,
+<p>This doesn&rsquo;t really help because parentheses are valid in URIs too,
 and heavily used by Wikipedia for example – as in
 this cruel joke of a URI:</p>
 <pre><code>    https://en.wikipedia.org/wiki/URL_(disambiguation)
@@ -101,8 +101,8 @@ In essence, we simply rewrite any URI of the form
 Any URI like &lsquo;<code>https://bford.info/</code>&rsquo; has
 an equivalent DRI syntax like &lsquo;<code>https[//bford.info/]</code>&rsquo;,
 and vice versa.
-(&ldquo;DRI&rdquo; may be pronounced &ldquo;dee-are-aye&rdquo; if you're uptight,
-or just &ldquo;durry&rdquo; – like in &ldquo;durable furry&rdquo; – if you're less so.)</p>
+(&ldquo;DRI&rdquo; may be pronounced &ldquo;dee-are-aye&rdquo; if you&rsquo;re uptight,
+or just &ldquo;durry&rdquo; – like in &ldquo;durable furry&rdquo; – if you&rsquo;re less so.)</p>
 <p>The key benefit of this alternative syntax is that
 any valid DRI can be embedded into any other DRI <em>verbatim</em>,
 via copy-and-paste or manual transcription for example,
@@ -110,8 +110,8 @@ with no mangling.
 For example, a query to translate my home page
 might look like
 &lsquo;<code>https[//translator.org/web?lang=fr;page=https[//bford.info/]]</code>&rsquo;.
-Just copy the target DRI into the query field and we're done.
-There are some details and caveats, of course, but we'll get to them.</p>
+Just copy the target DRI into the query field and we&rsquo;re done.
+There are some details and caveats, of course, but we&rsquo;ll get to them.</p>
 <p>Just as
 <a href="https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier">IRIs</a>
 already liberalized resource identifiers to admit non-ASCII characters,
@@ -124,10 +124,10 @@ New applications, protocols, formats, and versions
 can start accepting DRIs from users
 alongside URIs and IRIs while preserving backward compatibility
 through automatic conversions.
-Let's de-obfuscate the web.</p>
+Let&rsquo;s de-obfuscate the web.</p>
 <h2 id="welcome-to-escaping-hell">Welcome to Escaping Hell</h2>
 <p>Since the end-finding flaw mentioned above is simple and well-known,
-let's focus a bit more on the Escaping Hell problem.</p>
+let&rsquo;s focus a bit more on the Escaping Hell problem.</p>
 <p>We often wish to embed URIs within URIs for many reasons.
 Many web-based services operate on other web pages,
 for example,
@@ -157,16 +157,16 @@ obfuscated percent-encoded query string:</p>
 </code></pre>
 <p>So much for URIs being &ldquo;human-readable&rdquo;,
 at least in these contexts.
-Of course interactive web users don't need to do this mangling themselves
-because the service's front-page web form tooling does it for them,
+Of course interactive web users don&rsquo;t need to do this mangling themselves
+because the service&rsquo;s front-page web form tooling does it for them,
 and developers who generate queries to the service programmatically
 are expected to percent-encode the target URI as part of the process.
 This is why we have managed to slog through Escaping Hell so far.</p>
 <p>But from a usability perspective,
-it's sad that target URIs
+it&rsquo;s sad that target URIs
 must become nearly unrecognizable when embedded into other URIs.
-It's also sad
-that less-sophisticated users can't reasonably be expected to
+It&rsquo;s also sad
+that less-sophisticated users can&rsquo;t reasonably be expected to
 write or edit such a query string manually,
 or to copy-and-paste a target URI into a query field of another URI template,
 without thoroughly understanding URI syntax and poring over an
@@ -204,7 +204,7 @@ exacerbating
 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=661005">security issues</a>.
 Supporting different schemes, internal structure, and extensibility
 are precisely what the whole URI naming paradigm is supposed to handle –
-but it <em>can't</em> do so for authority naming because of broken syntax.</p>
+but it <em>can&rsquo;t</em> do so for authority naming because of broken syntax.</p>
 <p>Extending IPv6 addresses to support
 <a href="https://tools.ietf.org/html/rfc4007">zone indexes</a>
 like &lsquo;<code>fe80::1234%1</code>&rsquo; or &lsquo;<code>fe80::1234%eth0</code>&rsquo;
@@ -223,7 +223,7 @@ threatens to dig us even deeper into Escaping Hell
 as we try to figure out how to shoehorn a pathname-like address
 like ‘<code>/ip4/127.0.0.1/udp/9090/quic</code>’
 into the hostname field of a URI.
-How would a parser figure out what's what in a string like
+How would a parser figure out what&rsquo;s what in a string like
 &lsquo;<code>http://ip4/127.0.0.1/udp/9090/quic/index.html</code>&rsquo;?
 Alternatively, how is a <em>user</em> to understand an escaped embedding like
 &lsquo;<code>http://%2Fip4%2f127.0.0.1%2fudp%2f9090%2fquic/index.html</code>&rsquo;?
@@ -243,7 +243,7 @@ in a URI or IRI with an open bracket (‘<code>[</code>’),
 and adds a close bracket (‘<code>]</code>’) to the end.
 The URI &lsquo;<code>https://bford.info/</code>&rsquo; is equivalent
 to the DRI &lsquo;<code>https[//bford.info/]</code>&rsquo;, for example.</p>
-<p>Everything within a DRI's outermost pair of square brackets
+<p>Everything within a DRI&rsquo;s outermost pair of square brackets
 we will call its <em>body</em>,
 i.e., &lsquo;<code>//bford.info/</code>&rsquo; in this example.
 A DRI may be viewed abstractly as a
@@ -296,7 +296,7 @@ A web-based service for browsing
 <a href="https://en.wikipedia.org/wiki/Zip_(file_format)">Zip files</a>
 and other archives hosted on other websites, for example,
 might wish to treat the target DRI as a pathname component
-in the service's DRI.
+in the service&rsquo;s DRI.
 To use the service <code>unarchiver.org</code> to open a Zip file hosted at
 <code>https[//bford.info/stuff.zip]</code>
 and browse into the subdirectory <code>/dest/path</code> within the archive, for example,
@@ -324,14 +324,14 @@ which presents some manageable subtleties.
 Embedding spaces or raw binary data containing NUL (zero) bytes
 and other control characters into components, for example,
 still requires percent-encoding in DRIs exactly as in URIs.
-In addition, any <em>unmatched</em> square brackets in a DRI's body
+In addition, any <em>unmatched</em> square brackets in a DRI&rsquo;s body
 must be percent-encoded.
 A query to search for a literal open bracket
 (‘<code>[</code>’, ASCII code 0x5B) on a target web page, for example,
 must still be percent-encoded like this:</p>
 <pre><code>    https[//search.org/page?string=%5B;page=https[//bford.info/]]
 </code></pre>
-<p>Within any <em>inner</em> pair of square brackets nested within a DRI's body,
+<p>Within any <em>inner</em> pair of square brackets nested within a DRI&rsquo;s body,
 all reserved URI characters including the percent character (‘<code>%</code>’)
 lose their special meanings, becoming ordinary literal characters
 from the perspective of the outer DRI,
@@ -350,7 +350,7 @@ such as percent signs,
 protecting them as literals and ensuring that they are &ldquo;owned&rdquo;
 exclusively by the inner DRI.</p>
 <p>For the same reason, the percent character denoting an IPv6 zone index
-need not and <em>must</em> not be percent-encoded in a DRI's host field,
+need not and <em>must</em> not be percent-encoded in a DRI&rsquo;s host field,
 in contrast with
 <a href="https://tools.ietf.org/html/rfc6874">standard practice for URIs</a>.
 For example, the IPv6 address
@@ -358,10 +358,10 @@ For example, the IPv6 address
 &lsquo;<code>http://[fe80::1234%25eth0]</code>&rsquo;,
 but in a DRI becomes
 &lsquo;<code>http[//ip6[fe80::1234%eth0]]</code>&rsquo;.
-The inner percent sign is none of the (outer) DRI's business
+The inner percent sign is none of the (outer) DRI&rsquo;s business
 because it is protected by the nested square brackets.</p>
 <p>Because nested brackets make percent signs literal characters
-from the outer DRI's perspective,
+from the outer DRI&rsquo;s perspective,
 if a query string or other DRI component needs to use percent-encoding
 to represent control characters that occur <em>between</em>
 an inner literal bracket pair,
@@ -380,16 +380,16 @@ because the brackets protect the percent sign as a literal.</p>
 are considered equivalent in their percent-encoded and unencoded forms
 and thus may be
 <a href="https://tools.ietf.org/html/rfc3986#section-2.4">coded or encoded at any time</a>.
-In DRIs, bracketed substrings nested within the DRI's body
+In DRIs, bracketed substrings nested within the DRI&rsquo;s body
 may also be percent-encoded and decoded at any time,
 provided that the substring contains no forbidden characters,
 and provided that <em>all reserved characters</em> in the substring including brackets
 are encoded or decoded together.
-For example, the substring &lsquo;<code>[a[b]c]</code>&rsquo; in a DRI's body
+For example, the substring &lsquo;<code>[a[b]c]</code>&rsquo; in a DRI&rsquo;s body
 is equivalent to &lsquo;<code>%5Ba%5Bb%5Dc%5D</code>&rsquo;,
 but is <em>not</em> equivalent to &lsquo;<code>[a%5Bb%5Dc]</code>&rsquo; or &lsquo;<code>%5Ba[b]c%5D</code>&rsquo;.
 Further, this equivalence applies only to complete substrings nested
-<em>immediately</em> within the DRI's body, not to substrings more deeply nested.</p>
+<em>immediately</em> within the DRI&rsquo;s body, not to substrings more deeply nested.</p>
 <p>To illustrate, because both unreserved characters
 and complete bracketed substrings may be percent-encoded and decoded in DRIs
 without changing the meaning of a DRI,
@@ -459,8 +459,8 @@ because DRI syntax solves the delimiting problem more reliably
 <em>within the DRI syntax itself</em>,
 via a mandatory syntactic rule (brackets must match)
 rather than an optional and easily-neglected recommendation in an appendix.
-It's always syntactically clear where a DRI embedded in running text ends,
-otherwise it's not a (valid) DRI.
+It&rsquo;s always syntactically clear where a DRI embedded in running text ends,
+otherwise it&rsquo;s not a (valid) DRI.
 And because DRIs never need be surrounded by angle brackets in text,
 it is no longer problematic for them to <em>contain</em> unescaped angle brackets.</p>
 <h3 id="embedding-dris-in-popular-protocols-and-data-formats">Embedding DRIs in popular protocols and data formats</h3>
@@ -551,16 +551,16 @@ as needed.</p>
 as a Unicode-based character sequence,
 first convert it to one using
 <a href="http://www.unicode.org/reports/tr15/tr15-23.html">normalization form C</a>.</li>
-<li>If the DRI's host component is an IP address using a nested
+<li>If the DRI&rsquo;s host component is an IP address using a nested
 &lsquo;<code>ip4[...]</code>&rsquo; or &lsquo;<code>ip6[...]</code>&rsquo; DRI,
 convert it to legacy URI syntax for IP addresses.</li>
-<li>Percent-encode all square-bracketed substrings in the DRI's body
+<li>Percent-encode all square-bracketed substrings in the DRI&rsquo;s body
 apart from any IPv6 host address,
 by UTF-8 encoding then percent-encoding all characters in the substring
 that are reserved or forbidden in an IRI.</li>
 <li>For each remaining character in the DRI that is forbidden in an IRI,
 convert it to a UTF-8 byte sequence, then percent-encode each byte.</li>
-<li>Replace the DRI body's opening square bracket with a colon
+<li>Replace the DRI body&rsquo;s opening square bracket with a colon
 (‘<code>:</code>’),
 and drop its closing square bracket.</li>
 </ol>
@@ -591,7 +591,7 @@ as well as feasible.
 To this end, we can convert IRIs as follows:</p>
 <ol>
 <li>Decode any unreserved characters that are percent-encoded in the URI.</li>
-<li>If the IRI's host component is a legacy IP address,
+<li>If the IRI&rsquo;s host component is a legacy IP address,
 rewrite it to a nested &lsquo;<code>ip4[...]</code>&rsquo; or &lsquo;<code>ip6[...]</code>&rsquo; DRI.</li>
 <li>For each maximum-size substring that starts and ends with
 a matching pair of percent-encoded square brackets,
@@ -602,7 +602,7 @@ with an opening bracket,
 and append a closing bracket.</li>
 </ol>
 <p>These rules will always successfully percent-decode
-all nested DRIs contained in the outer DRI's body,
+all nested DRIs contained in the outer DRI&rsquo;s body,
 because valid nested DRIs percent-encoded in the original URI
 will have matching brackets and will not contain forbidden characters.
 If the original URI contains unmatched brackets,
@@ -627,7 +627,7 @@ for example,
 can unilaterally upgrade their sites to accept DRIs in query strings,
 and can upgrade their web forms and client-side JavaScript
 to produce such DRI-encoded queries,
-without asking anyone's permission
+without asking anyone&rsquo;s permission
 or waiting for web browsers or protocols like HTTP to catch up.
 These DRIs will for now be embedded within legacy URIs
 on their way from browser to web server, of course,
@@ -649,7 +649,7 @@ Firefox already approximates such a choice
 by down-converting to a URI when copying the whole web address,
 but preserving international characters from IRIs when copying only part.
 The browser will for now always convert the DRI to a URI
-for transmission over HTTP, but that's fine.</p>
+for transmission over HTTP, but that&rsquo;s fine.</p>
 <p>In short, since DRIs are both readily convertible
 to and from URIs and IRIs,
 and easily mutually embeddable with them,

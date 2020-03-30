@@ -57,14 +57,14 @@
 <li>Streamable: encoder can start sending long composites before knowing length</li>
 <li>Embeddable:</li>
 </ul>
-<p>for embeddability, see for example JSON Schema's desire
+<p>for embeddability, see for example JSON Schema&rsquo;s desire
 to be able to embed arbitrary non-JSON data
 with a MIME Media Type:
 <a href="https://json-schema.org/understanding-json-schema/reference/non_json_data.html">https://json-schema.org/understanding-json-schema/reference/non_json_data.html</a>
 Any DTS-encoded content may be embedded in DTS-encoded JSON data
 with no additional quoting or escaping,
 provided the inner DTS context uses the same or a superset of
-the outer DTS context's set of sensitive bracket pairs.</p>
+the outer DTS context&rsquo;s set of sensitive bracket pairs.</p>
 <p>Comparison:</p>
 <ul>
 <li>Self-describing formats like HTML, XML, JSON
@@ -97,7 +97,7 @@ That is, an item is skippable if necessary.</p>
 <p>An item may be atomic or composite.
 An atomic item like an integer or string
 contains no sub-structure defined by this encoding
-or reliably interpretable via this encoding's rules.
+or reliably interpretable via this encoding&rsquo;s rules.
 An integer or string may in fact contain information encoded
 in some arbitrary syntax (even a recursive instantiation of this one),
 but any such recursive interpretability is neither guaranteed nor suggested.</p>
@@ -154,9 +154,9 @@ For example:</p>
 for closed intervals,
 and brackets with adjacent periods like [.a..b.]
 to represent open intervals,
-with [a..b.] representing an interval that's
+with [a..b.] representing an interval that&rsquo;s
 open at a and closed at b,
-and [.a..b] representing an interval that's
+and [.a..b] representing an interval that&rsquo;s
 closed at a and closed at b.</p>
 </li>
 <li>
@@ -282,8 +282,8 @@ as XML does,
 is a standard-practice solution that we adopt for this purpose.</p>
 <h2 id="hierarchy">Hierarchy</h2>
 <p>The goal of this level is to sepearate type information from value information,
-and enable a receiver to tell which values do and don't have sub-structure,
-completely independent of the receiver's ability to understand specific types.</p>
+and enable a receiver to tell which values do and don&rsquo;t have sub-structure,
+completely independent of the receiver&rsquo;s ability to understand specific types.</p>
 <p>Types are either integer schematic codes or human-readable text names.
 At this level, types are merely opaque integers or text strings.</p>
 <ul>
@@ -427,8 +427,8 @@ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ^ _ `
 a b c d e f g h i j k l m n o p q r s t u v w x y z | ~</p>
 <p>left unused:</p>
 <ul>
-<li>( ) <input disabled="" type="checkbox">{ } because they're sensitive matchers</li>
-<li>&quot; ' \ because they're widely used for quoting and excaping in C-like languages</li>
+<li>( ) <input disabled="" type="checkbox">{ } because they&rsquo;re sensitive matchers</li>
+<li>&quot; ' \ because they&rsquo;re widely used for quoting and excaping in C-like languages</li>
 </ul>
 <p>Unlike Ascii85, the CT85-encoded data encodes the exact byte length
 of the binary data and does not require it

@@ -37,7 +37,7 @@ Final version to appear in forthcoming book Digital Technology and Democratic Th
       <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/10/25/mining/</guid>
-      <description>--   As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&#39;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
+      <description>--   As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&amp;rsquo;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
 In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
     </item>
     
