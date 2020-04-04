@@ -84,9 +84,10 @@ when streaming with the maximum chunk size.</li>
 </ul>
 </li>
 <li><strong>Directness:</strong>
-Every byte of the embedded string appears verbatim and in-order
-in the CBE-encoding, with no transformation or obfuscation
-to interfere with manual inspection or search tools.</li>
+Every byte of an embedded string appears verbatim and in-order
+in its CBE-encoding, with no transformation or obfuscation
+to interfere with manual inspection or search tools.
+Decoders can often extract embedded strings without copying.</li>
 <li><strong>Uniqueness:</strong>
 There is only one valid CBE encoding
 for embedded strings of 16KiB or less,
