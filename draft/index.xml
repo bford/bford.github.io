@@ -145,13 +145,12 @@ Goals:
     </item>
     
     <item>
-      <title>Escaping Escaping Hell with Delimited Resource Identifiers</title>
-      <link>https://bford.info/draft/dri/</link>
+      <title>Escaping Escaping Hell with Composable Resource Identifiers</title>
+      <link>https://bford.info/draft/cri/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.info/draft/dri/</guid>
-      <description>(XXX rename Composable Resource Identifiers?)
-Uniform resource identifiers or URIs were a genuinely great idea and have rightfully become the ubiquitous way to &amp;ldquo;name things&amp;rdquo; on the Internet. As the basis of web addresses or URLs, they are human readable (to varying degrees), manually transcribable, cut-and-pasteable, and have proven incrementally extensible to a vast multitude of schemes. Their later extension to internationalized resource identifiers or IRIs allow people whose native language is not English to type, and view, non-ASCII Unicode characters in web addresses.</description>
+      <guid>https://bford.info/draft/cri/</guid>
+      <description>Uniform resource identifiers or URIs were a genuinely great idea and have rightfully become the ubiquitous way to &amp;ldquo;name things&amp;rdquo; on the Internet. As the basis of web addresses or URLs, they are human readable (to varying degrees), manually transcribable, cut-and-pasteable, and have proven incrementally extensible to a vast multitude of schemes. Their later extension to internationalized resource identifiers or IRIs allow people whose native language is not English to type, and view, non-ASCII Unicode characters in web addresses.</description>
     </item>
     
     <item>
