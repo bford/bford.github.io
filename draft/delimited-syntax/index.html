@@ -104,40 +104,6 @@ but any such recursive interpretability is neither guaranteed nor suggested.</p>
 <p>A composite item like a vector or map, in contrast,
 has hierarchical sub-structure defined by this encoding
 and traversable by an interpreter of this encoding.</p>
-<hr>
-<p>CTS</p>
-<p>goal: composability.
-A valid CTs text inserted into another should remain a valid CTS text.</p>
-<p>Matched open/close punctuation pairs, which we call matchers.</p>
-<p>Basic principle: matchers must match.
-This dominates all other more specialized syntaxes.</p>
-<p>We could define a variant of CTS for any particular set of matchers we want;
-all the principles would be the same.</p>
-<p>But to avoid further confusion,
-would be best to have one &ldquo;standardized&rdquo; set of matchers.  But which?
-Especially since Unicode provides seventy-some matched pairs,
-some of them typically used in different combinations.</p>
-<p>But since the ASCII subset of the Unicode character set
-is the one still typically used in mechanically-parsed languages,
-we choose as our matchers the ASCII characters formally defined
-as open/close punctuation characters:
-namely the square brackets &ldquo;[]&quot;, parentheses &ldquo;()&quot;, and curly braces &ldquo;{}&quot;.</p>
-<p>Why not the so-called &ldquo;angle brackets&rdquo;?
-Because these ASCII characters are formally defined
-as less-than and greater-than signs,
-and ubiquitously used in non-matching form as such
-in arithmetic expressions and the like.
-Because of this ambiguous overloading of less-than and greater-than signs,
-their use as angle brackets is problematic in numerous ways,
-leading to their sometimes being called
-<a href="https://en.wiktionary.org/wiki/broket">brokets</a>.
-Unicode defined a separate set of angle brackets ⟨⟩
-especially as open/close punctuation.</p>
-<p>Few existing text languages just happen to be &ldquo;CTS compliant&rdquo; already,
-but many of them are extremely <em>close</em> to CTS-compliant.
-Programming languages typically use the ASCII open/close punctuation
-in matching pairs anyway whenever they are syntactically relevant.</p>
-<p>The main problem is</p>
 <p>Mathematical intervals</p>
 <p>A secondary problem is the use of unmatched combinations
 of square brackets and parentheses in mathematical

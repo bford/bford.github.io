@@ -115,6 +115,20 @@ The main goal of CTML is to satisfy the CTS metasyntactic discipline, so that CT
     </item>
     
     <item>
+      <title>Composable Text Syntax</title>
+      <link>https://bford.info/draft/cts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/cts/</guid>
+      <description>XXX to be written.
+goal: composability. A valid CTs text inserted into another should remain a valid CTS text.
+Matched open/close punctuation pairs, which we call matchers.
+Basic principle: matchers must match. This dominates all other more specialized syntaxes.
+We could define a variant of CTS for any particular set of matchers we want; all the principles would be the same.
+But to avoid further confusion, would be best to have one &amp;ldquo;standardized&amp;rdquo; set of matchers.</description>
+    </item>
+    
+    <item>
       <title>Decentralized Update Governance (DUG)</title>
       <link>https://bford.info/draft/follow/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
