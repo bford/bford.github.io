@@ -159,12 +159,13 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
     </item>
     
     <item>
-      <title>PriFi: A Low-Latency and Tracking-Resistant Protocol for Local-Area Anonymous Communication</title>
+      <title>PriFi: Low-Latency Anonymity for Organizational Networks</title>
       <link>https://bford.info/pub/sec/prifi/</link>
       <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/prifi/</guid>
-      <description>  </description>
+      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Proceedings on Privacy Enhancing Technologies
+(to appear)  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic -- even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
     </item>
     
     <item>

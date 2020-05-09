@@ -7,7 +7,7 @@
       <meta name="Author" content="Bryan Ford">
     
     <title>
-  PriFi: A Low-Latency and Tracking-Resistant Protocol for Local-Area Anonymous Communication &ndash; Bryan Ford&#39;s Home Page
+  PriFi: Low-Latency Anonymity for Organizational Networks &ndash; Bryan Ford&#39;s Home Page
 </title>
     <link rel="shortcut icon" href="/img/favicon.ico"
 	type="image/x-icon" />
@@ -39,9 +39,43 @@
     
 
     
-  <h1>PriFi: A Low-Latency and Tracking-Resistant Protocol for Local-Area Anonymous Communication</h1>
+  <h1>PriFi: Low-Latency Anonymity for Organizational Networks</h1>
   
-<html><meta http-equiv="refresh" content="0; url=https://dedis.cs.yale.edu/dissent/papers/wpes16-prifi-abs/"></html>
+<center>
+<strong>
+Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum
+</strong>
+
+<p>
+<a href="https://petsymposium.org/2020/">Proceedings on Privacy Enhancing Technologies</a><br>
+(to appear)
+</p>
+</center>
+
+<h3>Abstract:</h3>
+Organizational networks are vulnerable to traffic-analysis attacks that enable
+adversaries to infer sensitive information from the network traffic -- even if
+encryption is used. Typical anonymous communication networks are tailored to
+the Internet and are poorly suited for organizational networks. We present
+PriFi, an anonymous communication protocol for LANs: it protects users against
+eavesdroppers and provides traffic-analysis resistance. PriFi builds on Dining
+Cryptographers networks but reduces the high communication latency of prior
+work via a new client/relay/server architecture, in which a client’s packets
+remain on their usual network path without additional hops, and in which a set
+of remote servers assist the anonymization process without adding latency. PriFi
+also solves the challenge of equivocation attacks, which are not addressed by
+related works, by encrypting the traffic based on the communication history.
+Our evaluation shows that PriFi introduces a small latency overhead (≈ 100ms for
+100 clients) and is compatible with delay-sensitive applications such as VoIP.
+
+<h3>Full paper:
+<a href="https://arxiv.org/abs/1710.10237">preprint</a>
+</h3>
+
+<h3><a href="https://dedis.cs.yale.edu/dissent/papers/wpes16-prifi-abs/"
+	>Workshop paper</a>:
+<a href="https://dedis.cs.yale.edu/dissent/papers/wpes16-prifi.pdf">PDF</a>
+</h3>
 
 
 
