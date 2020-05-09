@@ -112,7 +112,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Fri, 23 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2017/06/23/turing50/</guid>
-      <description>*This blog post is a transcript of my opening remarks on the panel &#34;Restoring Personal Privacy without Compromising National Security&#34; at the [50 Years of the ACM Turing Award Celebration](https://www.acm.org/turing-award-50/conference).*   We now live in a world in which the rules coded into the technology we use plays as important a role in governing our lives as the formal laws written in the public law books. Code is law already, for better or worse.</description>
+      <description>This blog post is a transcript of my opening remarks on the panel &#34;Restoring Personal Privacy without Compromising National Security&#34; at the 50 Years of the ACM Turing Award Celebration.   We now live in a world in which the rules coded into the technology we use plays as important a role in governing our lives as the formal laws written in the public law books. Code is law already, for better or worse.</description>
     </item>
     
     <item>
@@ -142,7 +142,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       
       <guid>https://bford.info/pub/sec/prifi/</guid>
       <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Proceedings on Privacy Enhancing Technologies
-(to appear)  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic -- even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
+(to appear)  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
     </item>
     
     <item>
