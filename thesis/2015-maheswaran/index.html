@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Building Privacy-Preserving Cryptographic Credentials from Federated Online Identities &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Building Privacy-Preserving Cryptographic Credentials from Federated Online Identities</h1>
+  
+<center>
+<STRONG>
+John Maheswaran
+</STRONG>
+<br>
+Ph.D. thesis advised by Bryan Ford<br>
+
+June 24, 2015
+</p>
+</center>
+
+<H3>Abstract:</H3>
+
+<p> Third-party applications such as Quora or StackOverflow allow users to log
+in through a federated identity provider such as Facebook (Log in with
+Facebook), Google+ or Twitter. This process is called federated authentication.
+Examples of federated identity providers include social networks as well as
+other non-social network identity providers such as PayPal.
+
+<p> Federated identity providers have gained widespread popularity among users
+as a way to manage their online identity across the web. While protocols like
+OAuth and OpenID allow users to maintain a single set of credentials for
+federated authentication, such federated login can leak privacy-sensitive
+profile information, making the user’s online activity more easily tracked.
+
+<p> To protect themselves, users could forego using such identities altogether,
+or limit the content of their profiles. Ideally, users could leverage their
+federated identities but in a way as to prevent third party applications from
+accessing sensitive information. While anonymous authentication techniques have
+been proposed, their practicality depend on such technologies as PGP or complex
+encryption algorithms which most users lack the knowledge or motivation to use
+effectively.
+
+<p> While federated identity providers offer a convenient and increasingly
+popular mechanism for federated authentication, unfortunately, they also
+exacerbate many privacy and tracking risks. We present Crypto-Book, a privacy
+preserving layer enabling federated authentication while reducing these risks.
+
+<p> Crypto-Book relies on a set of independently managed servers that
+collectively assign each federated identity credentials (either a
+public/private keypair or blinded signed messages). We propose two components,
+”credential producers” that create and issue clients with privacy preserving
+credentials, and ”credendial consumers” that verify these privacy preserving
+credentials for authentication of clients to third party applications.
+
+<p> The credential producer servers have split trust and use a (t,n)-threshold
+cryptosystem to collaboratively generate client credentials. Using their
+credentials, clients can then leverage anonymous authentication techniques such
+as linkable ring signatures or blind signatures to log into third party
+applications via credential consumers, while preserving privacy.
+
+<p> We have implemented our system and demonstrate its use with four distinct
+applications: a Wiki system, an anonymous group communication system, a whistle
+blower submission system based on SecureDrop, and a privacy preserving chat
+room system. Our results show that for anonymity sets of size 100 and 2048-bit
+DSA keys, Crypto-Book ring signature authentication takes 1.641s for signature
+generation by the client, 1.632s for signature verification on the server, and
+requires 8.761KB of communication bandwidth. Similarly for partially blind
+signature authentication, each phase takes under 0.05s and requires 0.325KB of
+bandwidth.
+
+<p> Crypto-Book is practical and has low overhead: We deployed a privacy
+preserving chat room system built on top of the Crypto-Book architecture.
+Within the deployment within our research group, Crypto-Book group
+authentication took 1.607s end- to-end, an overhead of 1.2s compared to
+traditional non privacy preserving federated authentication.
+
+<h3>Ph.D. Thesis:
+<a href="maheswaran-thesis.pdf">PDF</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Security/">Security</a>
+	
+		<a href="/topics/Privacy/">Privacy</a>
+	
+		<a href="/topics/Cryptography/">Cryptography</a>
+	
+		<a href="/topics/Anonymity/">Anonymity</a>
+	
+		<a href="/topics/Social-Networks/">Social Networks</a>
+	
+		<a href="/topics/Identity/">Identity</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

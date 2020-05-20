@@ -31,6 +31,26 @@ May 12-15, 2019.  Abstract: While showing great promise, smart contracts are dif
     </item>
     
     <item>
+      <title>A Flexible Architecture for Structural Reliability Auditing to the Clouds</title>
+      <link>https://bford.info/thesis/2015-zhai/</link>
+      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-zhai/</guid>
+      <description>Ennan Zhai  Ph.D. thesis advised by Bryan Ford
+August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely on redundancy techniques to enhance reliability and availability. In complex multi-layered hardware/software stacks, however, seemingly independent components used redundantly might share deep, hidden dependencies. These common dependencies may potentially result in unexpected correlated failures, thus undermining redundancy efforts.  Heading off correlated failures is extremely challenging in cloud-scale systems for the following three reasons.</description>
+    </item>
+    
+    <item>
+      <title>Warding off Timing Channels in Deterland</title>
+      <link>https://bford.info/thesis/2015-wu/</link>
+      <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-wu/</guid>
+      <description>   Weiyi Wu  Ph.D. thesis advised by Bryan Ford
+August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
+    </item>
+    
+    <item>
       <title>GPUfs: The Case for Operating System Services on GPUs</title>
       <link>https://bford.info/pub/os/gpufs-cacm/</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
@@ -101,6 +121,16 @@ May 12-15, 2019.  Abstract: While showing great promise, smart contracts are dif
       <guid>https://bford.info/pub/os/middleware12-abs/</guid>
       <description>Nuno Santos, Rodrigo Rodrigues, and Bryan Ford   ACM/IFIP/USENIX 13th International Conference on Middleware
 December 2012  Abstract: The consequences of security breaches due to system administrator errors can be catastrophic. Software systems in general, and OSes in particular, ultimately depend on a fully trusted administrator whom is granted superuser privileges that allow him to fully control the system. Consequently, an administrator acting negligently or unethically can easily compromise user data in irreversible ways by leaking, modifying, or deleting data.</description>
+    </item>
+    
+    <item>
+      <title>Deterministic OpenMP</title>
+      <link>https://bford.info/thesis/2012-aviram/</link>
+      <pubDate>Thu, 20 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2012-aviram/</guid>
+      <description>Amittai F. Aviram  Ph.D. thesis advised by Bryan Ford
+September 20, 2012  Abstract: Researchers widely agree that determinism in parallel programs is desirable. Although experimental parallel programming languages have long featured deterministic semantics, in mainstream parallel environments, developers still build on non-deterministic constructs such as mutexes, leading to time- or schedule-dependent heisenbugs. To make deterministic programming more accessible, we introduce DOMP, a deterministic extension to OpenMP, preserving the familiarity of traditional languages such as C and Fortran, and maintaining source-compatibility with much of the existing OpenMP standard.</description>
     </item>
     
     <item>

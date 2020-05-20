@@ -78,11 +78,48 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
     </item>
     
     <item>
+      <title>A Flexible Architecture for Structural Reliability Auditing to the Clouds</title>
+      <link>https://bford.info/thesis/2015-zhai/</link>
+      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-zhai/</guid>
+      <description>Ennan Zhai  Ph.D. thesis advised by Bryan Ford
+August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely on redundancy techniques to enhance reliability and availability. In complex multi-layered hardware/software stacks, however, seemingly independent components used redundantly might share deep, hidden dependencies. These common dependencies may potentially result in unexpected correlated failures, thus undermining redundancy efforts.  Heading off correlated failures is extremely challenging in cloud-scale systems for the following three reasons.</description>
+    </item>
+    
+    <item>
       <title>Certificate Cothority: Towards Trustworthy Collective CAs</title>
       <link>https://bford.info/pub/sec/certco/</link>
       <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/certco/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Heading Off Correlated Failures through Independence-as-a-Service</title>
+      <link>https://bford.info/pub/os/cloud-indaas/</link>
+      <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/cloud-indaas/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Structural Cloud Audits that Protect Private Information</title>
+      <link>https://bford.info/pub/os/cloud-psra/</link>
+      <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/cloud-psra/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>An Untold Story of Redundant Clouds: Making Your Service Deployment Truly Reliable</title>
+      <link>https://bford.info/pub/os/irec/</link>
+      <pubDate>Sun, 03 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/irec/</guid>
       <description>  </description>
     </item>
     

@@ -59,6 +59,16 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
     </item>
     
     <item>
+      <title>Deterministic OpenMP</title>
+      <link>https://bford.info/thesis/2012-aviram/</link>
+      <pubDate>Thu, 20 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2012-aviram/</guid>
+      <description>Amittai F. Aviram  Ph.D. thesis advised by Bryan Ford
+September 20, 2012  Abstract: Researchers widely agree that determinism in parallel programs is desirable. Although experimental parallel programming languages have long featured deterministic semantics, in mainstream parallel environments, developers still build on non-deterministic constructs such as mutexes, leading to time- or schedule-dependent heisenbugs. To make deterministic programming more accessible, we introduce DOMP, a deterministic extension to OpenMP, preserving the familiarity of traditional languages such as C and Fortran, and maintaining source-compatibility with much of the existing OpenMP standard.</description>
+    </item>
+    
+    <item>
       <title>Scaling Software-Defined Network Controllers on Multicore Servers</title>
       <link>https://bford.info/pub/os/scaling-sdn-abs/</link>
       <pubDate>Sun, 01 Jul 2012 00:00:00 +0000</pubDate>

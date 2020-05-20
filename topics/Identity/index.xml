@@ -62,6 +62,15 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
     </item>
     
     <item>
+      <title>Building Privacy-Preserving Cryptographic Credentials from Federated Online Identities</title>
+      <link>https://bford.info/pub/sec/crypto-book-codaspy/</link>
+      <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/crypto-book-codaspy/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>Collectively Witnessing Log Servers in CT</title>
       <link>https://bford.info/2015-10-20-cosi-ct/</link>
       <pubDate>Tue, 20 Oct 2015 00:00:00 +0000</pubDate>
@@ -78,6 +87,16 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <guid>https://bford.info/2015/10/07/names.html</guid>
       <description>On Monday the EFF, together with a &amp;ldquo;Nameless Coalition&amp;rdquo; of like-minded groups, escalated the backlash against Facebook&amp;rsquo;s &amp;ldquo;real names&amp;rdquo; or &amp;ldquo;authentic identities&amp;rdquo; policy with an open letter urging Facebook to end this policy like Google Plus did last year. Facebook&amp;rsquo;s response cites concerns about pseudonyms helping to hide &amp;ldquo;terrorist organizations&amp;rdquo;, &amp;ldquo;school bullies&amp;rdquo;, and &amp;ldquo;criminal behavior.&amp;rdquo;
 While I support anonymity and have spent years working to strengthen it, terrorist fearmongering aside, Facebook is right that anonymity is often abused.</description>
+    </item>
+    
+    <item>
+      <title>Identity Management through Privacy-Preserving Authentication</title>
+      <link>https://bford.info/thesis/2015-syta/</link>
+      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-syta/</guid>
+      <description>Ewa Syta  Ph.D. thesis advised by Bryan Ford
+August 11, 2015  Abstract:  Maintaining privacy on the Internet is increasingly difficult in this ever-connected world. In most cases, our online interactions are a highly personalized experience and require some form of identity verification, most commonly, logging into an account. Unfortunately, people frequently give away a lot of information while obtaining accounts, reuse usernames and passwords across different services, or link their accounts to take advantage of single sign-on to avoid retyping passwords.</description>
     </item>
     
     <item>
@@ -100,11 +119,30 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
     </item>
     
     <item>
+      <title>Building Privacy-Preserving Cryptographic Credentials from Federated Online Identities</title>
+      <link>https://bford.info/thesis/2015-maheswaran/</link>
+      <pubDate>Wed, 24 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-maheswaran/</guid>
+      <description>John Maheswaran  Ph.D. thesis advised by Bryan Ford
+June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflow allow users to log in through a federated identity provider such as Facebook (Log in with Facebook), Google+ or Twitter. This process is called federated authentication. Examples of federated identity providers include social networks as well as other non-social network identity providers such as PayPal.  Federated identity providers have gained widespread popularity among users as a way to manage their online identity across the web.</description>
+    </item>
+    
+    <item>
       <title>Managing NymBoxes for Identity and Tracking Protection</title>
       <link>https://bford.info/pub/sec/nymboxes/</link>
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/nymboxes/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Crypto-Book: An Architecture for Privacy Preserving Online Identities</title>
+      <link>https://bford.info/pub/sec/crypto-book/</link>
+      <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/crypto-book/</guid>
       <description>  </description>
     </item>
     

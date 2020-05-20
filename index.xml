@@ -86,6 +86,16 @@ Final version to appear in forthcoming book Digital Technology and Democratic Th
     </item>
     
     <item>
+      <title>Secure, Confidential Blockchains Providing High Throughput and Low Latency</title>
+      <link>https://bford.info/thesis/2019-kokoris-kogias/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2019-kokoris-kogias/</guid>
+      <description>Eleftherios Kokoris Kogias  Ph.D. thesis advised by Bryan Ford
+September 27, 2019  Abstract:  One of the core promises of blockchain technology is that of enabling trustworthy data dissemination in a trustless environment. What current blockchain systems deliver, however, is slow dissemination of public data, rendering blockchain technology unusable in settings where latency, transaction capacity or data confidentiality is important. In this thesis, we focus on providing solutions on two of the most pressing problems blockchain technology currently faces: scalability and data confidentiality.</description>
+    </item>
+    
+    <item>
       <title>Rationality is Self-Defeating in Permissionless Systems</title>
       <link>https://bford.info/2019/09/23/rational/</link>
       <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
@@ -512,6 +522,36 @@ While I support anonymity and have spent years working to strengthen it, terrori
     </item>
     
     <item>
+      <title>A Flexible Architecture for Structural Reliability Auditing to the Clouds</title>
+      <link>https://bford.info/thesis/2015-zhai/</link>
+      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-zhai/</guid>
+      <description>Ennan Zhai  Ph.D. thesis advised by Bryan Ford
+August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely on redundancy techniques to enhance reliability and availability. In complex multi-layered hardware/software stacks, however, seemingly independent components used redundantly might share deep, hidden dependencies. These common dependencies may potentially result in unexpected correlated failures, thus undermining redundancy efforts.  Heading off correlated failures is extremely challenging in cloud-scale systems for the following three reasons.</description>
+    </item>
+    
+    <item>
+      <title>Identity Management through Privacy-Preserving Authentication</title>
+      <link>https://bford.info/thesis/2015-syta/</link>
+      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-syta/</guid>
+      <description>Ewa Syta  Ph.D. thesis advised by Bryan Ford
+August 11, 2015  Abstract:  Maintaining privacy on the Internet is increasingly difficult in this ever-connected world. In most cases, our online interactions are a highly personalized experience and require some form of identity verification, most commonly, logging into an account. Unfortunately, people frequently give away a lot of information while obtaining accounts, reuse usernames and passwords across different services, or link their accounts to take advantage of single sign-on to avoid retyping passwords.</description>
+    </item>
+    
+    <item>
+      <title>Warding off Timing Channels in Deterland</title>
+      <link>https://bford.info/thesis/2015-wu/</link>
+      <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-wu/</guid>
+      <description>   Weiyi Wu  Ph.D. thesis advised by Bryan Ford
+August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
+    </item>
+    
+    <item>
       <title>Private Eyes: Secure Remote Biometric Authentication</title>
       <link>https://bford.info/pub/sec/private-eyes-abs/</link>
       <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
@@ -528,6 +568,16 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       
       <guid>https://bford.info/pub/sec/certco/</guid>
       <description>  </description>
+    </item>
+    
+    <item>
+      <title>Building Privacy-Preserving Cryptographic Credentials from Federated Online Identities</title>
+      <link>https://bford.info/thesis/2015-maheswaran/</link>
+      <pubDate>Wed, 24 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-maheswaran/</guid>
+      <description>John Maheswaran  Ph.D. thesis advised by Bryan Ford
+June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflow allow users to log in through a federated identity provider such as Facebook (Log in with Facebook), Google+ or Twitter. This process is called federated authentication. Examples of federated identity providers include social networks as well as other non-social network identity providers such as PayPal.  Federated identity providers have gained widespread popularity among users as a way to manage their online identity across the web.</description>
     </item>
     
     <item>
@@ -637,6 +687,16 @@ Setting aside Yale in particular, however, it is interesting to notice some broa
       
       <guid>https://bford.info/pub/net/taq-abs/</guid>
       <description>  </description>
+    </item>
+    
+    <item>
+      <title>A Wire-Compatible TCP Implementation for Low-Latency Applications</title>
+      <link>https://bford.info/thesis/2014-nowlan/</link>
+      <pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2014-nowlan/</guid>
+      <description>Michael F. Nowlan  Ph.D. thesis advised by Bryan Ford
+March 7, 2014  Abstract:  Despite alternative transport protocols more suitable to latency-sensitive applications, TCP remains the de facto standard for Internet traffic, including many low-latency, interactive applications. As such, applications often tweak the TCP protocol to better suit their needs but run the risk that any change to TCP’s wire format can cause reachability issues or complete failure.</description>
     </item>
     
     <item>
@@ -766,6 +826,16 @@ December 2012  Abstract: The consequences of security breaches due to system adm
       
       <guid>https://bford.info/pub/sec/dissent-in-numbers/</guid>
       <description>  </description>
+    </item>
+    
+    <item>
+      <title>Deterministic OpenMP</title>
+      <link>https://bford.info/thesis/2012-aviram/</link>
+      <pubDate>Thu, 20 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2012-aviram/</guid>
+      <description>Amittai F. Aviram  Ph.D. thesis advised by Bryan Ford
+September 20, 2012  Abstract: Researchers widely agree that determinism in parallel programs is desirable. Although experimental parallel programming languages have long featured deterministic semantics, in mainstream parallel environments, developers still build on non-deterministic constructs such as mutexes, leading to time- or schedule-dependent heisenbugs. To make deterministic programming more accessible, we introduce DOMP, a deterministic extension to OpenMP, preserving the familiarity of traditional languages such as C and Fortran, and maintaining source-compatibility with much of the existing OpenMP standard.</description>
     </item>
     
     <item>
@@ -1034,6 +1104,15 @@ Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  
     </item>
     
     <item>
+      <title>UIA: A Global Connectivity Architecture for Mobile Personal Devices</title>
+      <link>https://bford.info/thesis/2008-phd/</link>
+      <pubDate>Mon, 01 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2008-phd/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>Vx32: Lightweight User-level Sandboxing on the x86</title>
       <link>https://bford.info/pub/os/vx32-abs/</link>
       <pubDate>Fri, 27 Jun 2008 00:00:00 +0000</pubDate>
@@ -1277,6 +1356,15 @@ Massachusetts Institute of Technology  International Conference on Functional Pr
       <description>Bryan Ford
 Master&#39;s Thesis
 Massachusetts Institute of Technology   Abstract  Packrat parsing is a novel and practical method for implementing linear-time parsers for grammars defined in Top-Down Parsing Language (TDPL). While TDPL was originally created as a formal model for top-down parsers with backtracking capability, this thesis extends TDPL into a powerful general-purpose notation for describing language syntax, providing a compelling alternative to traditional context-free grammars (CFGs).</description>
+    </item>
+    
+    <item>
+      <title>Packrat Parsing: a Practical Linear-Time Algorithm with Backtracking</title>
+      <link>https://bford.info/thesis/2002-masters/</link>
+      <pubDate>Tue, 03 Sep 2002 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2002-masters/</guid>
+      <description>  </description>
     </item>
     
     <item>

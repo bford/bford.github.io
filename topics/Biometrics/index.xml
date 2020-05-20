@@ -6,10 +6,20 @@
     <description>Recent content in Biometrics on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2015 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/topics/Biometrics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Identity Management through Privacy-Preserving Authentication</title>
+      <link>https://bford.info/thesis/2015-syta/</link>
+      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-syta/</guid>
+      <description>Ewa Syta  Ph.D. thesis advised by Bryan Ford
+August 11, 2015  Abstract:  Maintaining privacy on the Internet is increasingly difficult in this ever-connected world. In most cases, our online interactions are a highly personalized experience and require some form of identity verification, most commonly, logging into an account. Unfortunately, people frequently give away a lot of information while obtaining accounts, reuse usernames and passwords across different services, or link their accounts to take advantage of single sign-on to avoid retyping passwords.</description>
+    </item>
     
     <item>
       <title>Private Eyes: Secure Remote Biometric Authentication</title>

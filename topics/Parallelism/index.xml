@@ -21,12 +21,32 @@
     </item>
     
     <item>
+      <title>Warding off Timing Channels in Deterland</title>
+      <link>https://bford.info/thesis/2015-wu/</link>
+      <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-wu/</guid>
+      <description>   Weiyi Wu  Ph.D. thesis advised by Bryan Ford
+August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
+    </item>
+    
+    <item>
       <title>Lazy Tree Mapping: Generalizing and Scaling Deterministic Parallelism</title>
       <link>https://bford.info/pub/os/lazy-tree-mapping/</link>
       <pubDate>Mon, 29 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/lazy-tree-mapping/</guid>
       <description>  </description>
+    </item>
+    
+    <item>
+      <title>Deterministic OpenMP</title>
+      <link>https://bford.info/thesis/2012-aviram/</link>
+      <pubDate>Thu, 20 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2012-aviram/</guid>
+      <description>Amittai F. Aviram  Ph.D. thesis advised by Bryan Ford
+September 20, 2012  Abstract: Researchers widely agree that determinism in parallel programs is desirable. Although experimental parallel programming languages have long featured deterministic semantics, in mainstream parallel environments, developers still build on non-deterministic constructs such as mutexes, leading to time- or schedule-dependent heisenbugs. To make deterministic programming more accessible, we introduce DOMP, a deterministic extension to OpenMP, preserving the familiarity of traditional languages such as C and Fortran, and maintaining source-compatibility with much of the existing OpenMP standard.</description>
     </item>
     
     <item>

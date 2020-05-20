@@ -91,12 +91,37 @@
   </url>
   
   <url>
-    <loc>https://bford.info/post/</loc>
-    <lastmod>2019-09-23T00:00:00+00:00</lastmod>
+    <loc>https://bford.info/topics/Consensus/</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Consensus/</loc>
+    <loc>https://bford.info/topics/Cryptography/</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Randomness/</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Scalability/</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/thesis/2019-kokoris-kogias/</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/thesis/</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/post/</loc>
     <lastmod>2019-09-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -113,11 +138,6 @@
   <url>
     <loc>https://bford.info/topics/Programming-Languages/</loc>
     <lastmod>2019-07-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Cryptography/</loc>
-    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -147,11 +167,6 @@
   
   <url>
     <loc>https://bford.info/pub/os/protean-abs/</loc>
-    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Scalability/</loc>
     <lastmod>2019-05-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -252,11 +267,6 @@
   
   <url>
     <loc>https://bford.info/pub/dec/immunity-abs/</loc>
-    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Randomness/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -436,8 +446,33 @@
   </url>
   
   <url>
+    <loc>https://bford.info/thesis/2015-zhai/</loc>
+    <lastmod>2015-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/topics/Biometrics/</loc>
-    <lastmod>2015-07-20T00:00:00+00:00</lastmod>
+    <lastmod>2015-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Cloud-Computing/</loc>
+    <lastmod>2015-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/thesis/2015-syta/</loc>
+    <lastmod>2015-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Reliability-and-Robustness/</loc>
+    <lastmod>2015-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/thesis/2015-wu/</loc>
+    <lastmod>2015-08-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -448,6 +483,11 @@
   <url>
     <loc>https://bford.info/pub/sec/certco/</loc>
     <lastmod>2015-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/thesis/2015-maheswaran/</loc>
+    <lastmod>2015-06-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -486,17 +526,7 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Cloud-Computing/</loc>
-    <lastmod>2014-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/pub/os/cloud-indaas/</loc>
-    <lastmod>2014-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Reliability-and-Robustness/</loc>
     <lastmod>2014-10-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -538,6 +568,11 @@
   <url>
     <loc>https://bford.info/pub/net/taq-abs/</loc>
     <lastmod>2014-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/thesis/2014-nowlan/</loc>
+    <lastmod>2014-03-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -618,6 +653,11 @@
   <url>
     <loc>https://bford.info/pub/sec/dissent-in-numbers/</loc>
     <lastmod>2012-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/thesis/2012-aviram/</loc>
+    <lastmod>2012-09-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -776,6 +816,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/thesis/2008-phd/</loc>
+    <lastmod>2008-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/pub/os/vx32-abs/</loc>
     <lastmod>2008-06-27T00:00:00+00:00</lastmod>
   </url>
@@ -902,6 +947,11 @@
   
   <url>
     <loc>https://bford.info/pub/lang/thesis/</loc>
+    <lastmod>2002-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/thesis/2002-masters/</loc>
     <lastmod>2002-09-03T00:00:00+00:00</lastmod>
   </url>
   

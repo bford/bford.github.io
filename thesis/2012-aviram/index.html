@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Deterministic OpenMP &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Deterministic OpenMP</h1>
+  
+<center>
+<STRONG>
+Amittai F. Aviram
+</STRONG>
+<br>
+Ph.D. thesis advised by Bryan Ford<br>
+
+September 20, 2012
+</p>
+</center>
+
+<H3>Abstract:</H3>
+
+Researchers widely agree that determinism in parallel programs is desirable.
+Although experimental parallel programming languages have long featured
+deterministic semantics, in mainstream parallel environments, developers
+still build on non-deterministic constructs such as mutexes, leading to time-
+or schedule-dependent heisenbugs. To make deterministic programming more
+accessible, we introduce DOMP, a deterministic extension to OpenMP, preserving
+the familiarity of traditional languages such as C and Fortran, and
+maintaining source-compatibility with much of the existing OpenMP standard. Our
+analysis of parallel idioms used in 35 popular benchmarks suggests that the
+idioms used most often (89% of instances in the analyzed code) are either
+already expressible in OpenMP’s deterministic subset (74%), or merely lack more
+general reduction (12%) or pipeline (3%) constructs. DOMP broadens OpenMP’s
+deterministic subset with generalized reductions, and implements an efficient
+deterministic runtime that acts as a drop-in replacement for Gnu’s widely used
+conventional OpenMP support library GOMP, on mainstream Unix platforms. We
+evaluate DOMP with several existing OpenMP benchmarks, each requiring under 50
+source line changes and a majority requiring none, as well as several
+benchmarks we ported to OpenMP/DOMP. We find DOMP’s efficiency and scalability
+comparable to GOMP in 7 of 11 benchmarks, suggesting that a deterministic
+model for mainstream parallel programming may be well within reach.
+
+<h3>Ph.D. Thesis:
+<a href="aviram-thesis.pdf">PDF</a>
+</h3>
+
+<h3>Defense Slides:
+<a href="aviram-slides.pdf">PDF</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Determinism/">Determinism</a>
+	
+		<a href="/topics/Parallelism/">Parallelism</a>
+	
+		<a href="/topics/Programming-Languages/">Programming Languages</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

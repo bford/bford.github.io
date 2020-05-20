@@ -6,10 +6,20 @@
     <description>Recent content in Cryptography on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/topics/Cryptography/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Secure, Confidential Blockchains Providing High Throughput and Low Latency</title>
+      <link>https://bford.info/thesis/2019-kokoris-kogias/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2019-kokoris-kogias/</guid>
+      <description>Eleftherios Kokoris Kogias  Ph.D. thesis advised by Bryan Ford
+September 27, 2019  Abstract:  One of the core promises of blockchain technology is that of enabling trustworthy data dissemination in a trustless environment. What current blockchain systems deliver, however, is slow dissemination of public data, rendering blockchain technology unusable in settings where latency, transaction capacity or data confidentiality is important. In this thesis, we focus on providing solutions on two of the most pressing problems blockchain technology currently faces: scalability and data confidentiality.</description>
+    </item>
     
     <item>
       <title>Reducing Metadata Leakage from Encrypted Files and Communication with PURBs</title>
@@ -191,6 +201,16 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
     </item>
     
     <item>
+      <title>Identity Management through Privacy-Preserving Authentication</title>
+      <link>https://bford.info/thesis/2015-syta/</link>
+      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-syta/</guid>
+      <description>Ewa Syta  Ph.D. thesis advised by Bryan Ford
+August 11, 2015  Abstract:  Maintaining privacy on the Internet is increasingly difficult in this ever-connected world. In most cases, our online interactions are a highly personalized experience and require some form of identity verification, most commonly, logging into an account. Unfortunately, people frequently give away a lot of information while obtaining accounts, reuse usernames and passwords across different services, or link their accounts to take advantage of single sign-on to avoid retyping passwords.</description>
+    </item>
+    
+    <item>
       <title>Private Eyes: Secure Remote Biometric Authentication</title>
       <link>https://bford.info/pub/sec/private-eyes-abs/</link>
       <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
@@ -207,6 +227,16 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       
       <guid>https://bford.info/pub/sec/certco/</guid>
       <description>  </description>
+    </item>
+    
+    <item>
+      <title>Building Privacy-Preserving Cryptographic Credentials from Federated Online Identities</title>
+      <link>https://bford.info/thesis/2015-maheswaran/</link>
+      <pubDate>Wed, 24 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-maheswaran/</guid>
+      <description>John Maheswaran  Ph.D. thesis advised by Bryan Ford
+June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflow allow users to log in through a federated identity provider such as Facebook (Log in with Facebook), Google+ or Twitter. This process is called federated authentication. Examples of federated identity providers include social networks as well as other non-social network identity providers such as PayPal.  Federated identity providers have gained widespread popularity among users as a way to manage their online identity across the web.</description>
     </item>
     
     <item>

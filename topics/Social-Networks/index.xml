@@ -30,6 +30,16 @@
     </item>
     
     <item>
+      <title>Building Privacy-Preserving Cryptographic Credentials from Federated Online Identities</title>
+      <link>https://bford.info/thesis/2015-maheswaran/</link>
+      <pubDate>Wed, 24 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-maheswaran/</guid>
+      <description>John Maheswaran  Ph.D. thesis advised by Bryan Ford
+June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflow allow users to log in through a federated identity provider such as Facebook (Log in with Facebook), Google+ or Twitter. This process is called federated authentication. Examples of federated identity providers include social networks as well as other non-social network identity providers such as PayPal.  Federated identity providers have gained widespread popularity among users as a way to manage their online identity across the web.</description>
+    </item>
+    
+    <item>
       <title>Crypto-Book: An Architecture for Privacy Preserving Online Identities</title>
       <link>https://bford.info/pub/sec/crypto-book/</link>
       <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>

@@ -86,9 +86,36 @@
     <item>
       <title>Consensus</title>
       <link>https://bford.info/topics/Consensus/</link>
-      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Consensus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cryptography</title>
+      <link>https://bford.info/topics/Cryptography/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Cryptography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Randomness</title>
+      <link>https://bford.info/topics/Randomness/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Randomness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scalability</title>
+      <link>https://bford.info/topics/Scalability/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Scalability/</guid>
       <description></description>
     </item>
     
@@ -98,15 +125,6 @@
       <pubDate>Mon, 29 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Programming-Languages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cryptography</title>
-      <link>https://bford.info/topics/Cryptography/</link>
-      <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Cryptography/</guid>
       <description></description>
     </item>
     
@@ -134,15 +152,6 @@
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Operating-Systems/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scalability</title>
-      <link>https://bford.info/topics/Scalability/</link>
-      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Scalability/</guid>
       <description></description>
     </item>
     
@@ -228,15 +237,6 @@
     </item>
     
     <item>
-      <title>Randomness</title>
-      <link>https://bford.info/topics/Randomness/</link>
-      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Randomness/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Surveillance</title>
       <link>https://bford.info/topics/Surveillance/</link>
       <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
@@ -302,9 +302,27 @@
     <item>
       <title>Biometrics</title>
       <link>https://bford.info/topics/Biometrics/</link>
-      <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Biometrics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing</title>
+      <link>https://bford.info/topics/Cloud-Computing/</link>
+      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Cloud-Computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reliability and Robustness</title>
+      <link>https://bford.info/topics/Reliability-and-Robustness/</link>
+      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Reliability-and-Robustness/</guid>
       <description></description>
     </item>
     
@@ -314,24 +332,6 @@
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Storage/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cloud Computing</title>
-      <link>https://bford.info/topics/Cloud-Computing/</link>
-      <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Cloud-Computing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reliability and Robustness</title>
-      <link>https://bford.info/topics/Reliability-and-Robustness/</link>
-      <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Reliability-and-Robustness/</guid>
       <description></description>
     </item>
     

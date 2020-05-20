@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  A Flexible Architecture for Structural Reliability Auditing to the Clouds &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>A Flexible Architecture for Structural Reliability Auditing to the Clouds</h1>
+  
+<center>
+<STRONG>
+Ennan Zhai
+</STRONG>
+<br>
+Ph.D. thesis advised by Bryan Ford<br>
+
+August 11, 2015
+</p>
+</center>
+
+<H3>Abstract:</H3>
+
+<p> Today’s cloud computing systems pervasively rely on redundancy techniques
+to enhance reliability and availability. In complex multi-layered
+hardware/software stacks, however, seemingly independent components used
+redundantly might share deep, hidden dependencies. These common dependencies
+may potentially result in unexpected correlated failures, thus undermining
+redundancy efforts.
+
+<p> Heading off correlated failures is extremely challenging in cloud-scale
+systems for the following three reasons. First, infrastructure components and
+their dependencies underlying cloud-scale redundant systems are typically very
+complex. Second, it is non-trivial to efficiently and accurately determine the
+common dependencies potentially resulting in correlated failures within
+cloud-scale system environment. Third, application-level cloud services (e.g.,
+iCloud) renting multiple cloud providers for redundancy cannot identify
+dependencies shared by these rented cloud providers, since no cloud provider is
+willing to disclose such sensitive information.
+
+<p> This thesis proposes Independence-as-a-Service (or INDaaS), a practical and
+flexible architecture to audit the independence of redundant systems
+proactively, thus avoiding potential correlated failures fundamentally. INDaaS
+first utilizes pluggable dependency acquisition modules to automatically
+collect the structural dependency information (including network, hardware, and
+software level dependencies) from a variety of sources underlying the audited
+cloud services. With this information in hand, INDaaS then evaluates the
+independence of redundant systems of interest using pluggable auditing modules,
+offering various performance, precision, and data secrecy trade-offs. For
+redundant systems across multiple cloud providers unwilling to share their full
+structural information with others, INDaaS can leverage privacy-preserving set
+intersection cardinality protocols to quantify the independence of the
+redundant systems without leaking any sensitive information of the cloud
+providers. We evaluate the practicality of INDaaS with three case studies that
+audit realistic network, hardware, and software dependency structures, and
+evaluate the effectiveness and efficiency of INDaaS through large-scale
+datasets.
+
+<h3>Ph.D. Thesis:
+<a href="zhai-thesis.pdf">PDF</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Security/">Security</a>
+	
+		<a href="/topics/Privacy/">Privacy</a>
+	
+		<a href="/topics/Cloud-Computing/">Cloud Computing</a>
+	
+		<a href="/topics/Transparency/">Transparency</a>
+	
+		<a href="/topics/Reliability-and-Robustness/">Reliability and Robustness</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

@@ -6,10 +6,20 @@
     <description>Recent content in Consensus on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/topics/Consensus/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Secure, Confidential Blockchains Providing High Throughput and Low Latency</title>
+      <link>https://bford.info/thesis/2019-kokoris-kogias/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2019-kokoris-kogias/</guid>
+      <description>Eleftherios Kokoris Kogias  Ph.D. thesis advised by Bryan Ford
+September 27, 2019  Abstract:  One of the core promises of blockchain technology is that of enabling trustworthy data dissemination in a trustless environment. What current blockchain systems deliver, however, is slow dissemination of public data, rendering blockchain technology unusable in settings where latency, transaction capacity or data confidentiality is important. In this thesis, we focus on providing solutions on two of the most pressing problems blockchain technology currently faces: scalability and data confidentiality.</description>
+    </item>
     
     <item>
       <title>Rationality is Self-Defeating in Permissionless Systems</title>

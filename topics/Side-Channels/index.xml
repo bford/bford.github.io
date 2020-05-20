@@ -21,6 +21,16 @@
     </item>
     
     <item>
+      <title>Warding off Timing Channels in Deterland</title>
+      <link>https://bford.info/thesis/2015-wu/</link>
+      <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-wu/</guid>
+      <description>   Weiyi Wu  Ph.D. thesis advised by Bryan Ford
+August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
+    </item>
+    
+    <item>
       <title>Plugging Side-Channel Leaks with Timing Information Flow Control</title>
       <link>https://bford.info/pub/os/tifc-hotcloud12/</link>
       <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>

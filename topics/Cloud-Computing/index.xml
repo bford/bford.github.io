@@ -6,10 +6,20 @@
     <description>Recent content in Cloud Computing on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2015 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/topics/Cloud-Computing/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Flexible Architecture for Structural Reliability Auditing to the Clouds</title>
+      <link>https://bford.info/thesis/2015-zhai/</link>
+      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2015-zhai/</guid>
+      <description>Ennan Zhai  Ph.D. thesis advised by Bryan Ford
+August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely on redundancy techniques to enhance reliability and availability. In complex multi-layered hardware/software stacks, however, seemingly independent components used redundantly might share deep, hidden dependencies. These common dependencies may potentially result in unexpected correlated failures, thus undermining redundancy efforts.  Heading off correlated failures is extremely challenging in cloud-scale systems for the following three reasons.</description>
+    </item>
     
     <item>
       <title>Heading Off Correlated Failures through Independence-as-a-Service</title>
