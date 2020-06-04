@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Binary Encoded Schematic Objects (BESO) &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Publications</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Binary Encoded Schematic Objects (BESO)</h1>
+  <p>BESO provides a generic representation for any JSON,
+using JSON Schema information to provide a compact binary encoding.
+Unlike schema-free binary encodings like BSON and CBOR,
+BESO encoding leverages the schema to optimize the encoded representation,
+for example by replacing object tags specified in the schema
+with small integers,
+by representing numbers in binary integer or floating-point forms, etc.</p>
+<p>BESO Generic does not modify the JSON Schema language at all.
+It takes only the information already specified in a JSON schema
+and provides a more compact schema-optimized binary representation.</p>
+<p>The BESO Generic encoding ensures that <em>all</em> valid JSON structures
+can still be represented,
+including those that extend or fail to conform to the schema.
+For example, if a JSON object contains elements not defined in the schema,
+then those elements can still be converted to and from BESO encoding
+but will just not benefit from the schema&rsquo;s ability to compress known keys.
+If a JSON object has values entirely non-conformant with the schema,
+such as a value of the wrong type, out of the specified numeric range, etc.,
+then that value can still be represented if necessary
+and converted correctly between text-based JSON and binary BESO encodings,
+although the value will fail a schema compliance check of course.</p>
+<p>This concise list of goals distinguishes BESO</p>
+<ul>
+<li>Any valid JSON convertible to BESO and vice versa with no loss of information</li>
+<li>Compact binary representation balanced against encoding/decoding simplicity</li>
+<li>Encoding without a schema (or with a null schema <code>{}</code>) fully self-describing</li>
+<li>Encoding with a schema can achieves additional compactness,
+by representing schema-defined names into small integers</li>
+<li>Schematic BESO encoding should make JSON-based protocols
+like <a href="https://www.jsonrpc.org/specification">JSON-RPC</a>
+competitive with binary-centric protocol formats
+like <a href="https://developers.google.com/protocol-buffers">protobuf</a>
+and <a href="https://grpc.io">gRPC</a>.</li>
+<li>Preserve the extensibility of JSON:
+e.g., new properties can be added to object schema
+without breaking backwards compatibility.</li>
+<li>Compatible with both limited-precision uses
+(e.g., where all numbers are limited to 64-bit floating as in JavaScript)
+and high-precision uses
+(e.g., arbitrary-precision integers, floats, rationals).</li>
+</ul>
+<h2 id="untyped-schema">Untyped schema</h2>
+<p>When the schema specifies neither a <code>type</code> nor <code>enum</code> constraint,
+and hence allows any JSON value type,
+the binary encoding of each of the JSON value types is as described here.
+The first byte of the binary encoding determines
+the JSON value type it encodes,
+as summarized in the following list and detailed below:</p>
+<ul>
+<li>0x00-0x17: a zigzag-encoded signed integer</li>
+<li>0x18: a floating-point number with a base-2 exponent</li>
+<li>0x19: a floating-point number with a base-10 exponent</li>
+<li>0x1a: an array of values</li>
+<li>0x1b: a map of key/value pairs (an object)</li>
+<li>0x1c: a boolean false value</li>
+<li>0x1d: a boolean true value</li>
+<li>0x1e: a null value</li>
+<li>0x1f: a string containing base64-encoded binary data</li>
+<li>0x20-0xff: a string in UTF-8 encoding</li>
+</ul>
+<h3 id="integer-values">Integer values</h3>
+<p>A JSON number whose value is a signed integer
+is first zigzag-encoded into an unsigned integer
+with the least-significant bit serving as the sign flag.
+A non-negative value <em>v</em> becomes 2<em>v</em>,
+while a negative value <em>v</em> becomes -2<em>v</em>+1.
+The resulting unsigned integer is then serialized
+into a variable number of bytes in network (big-endian) byte order.
+Finally, if the first (most-significant) byte of the encoding
+is not in the range 0x00 through 0x0f,
+then a leading zero byte is prepended.</p>
+<p>Some example encodings of integers are as follows:</p>
+<pre><code>    +0   -&gt; [0x00]
+    -0   -&gt; [0x01]
+    +1   -&gt; [0x02]
+    -1   -&gt; [0x03]
+    +2   -&gt; [0x04]
+    -2   -&gt; [0x05]
+    +7   -&gt; [0x0e]
+    -7   -&gt; [0x0f]
+    +8   -&gt; [0x00,0x10]
+    -8   -&gt; [0x00,0x11]
+    +128 -&gt; [0x01,0x00]
+    -128 -&gt; [0x01,0x01]
+    +256 -&gt; [0x02,0x00]
+    -256 -&gt; [0x02,0x01]
+</code></pre>
+<p>In this way, integers close to zero remain small after zigzag-encoding,
+and thus require few bytes to serialize.
+Integers of up to four bits including sign require one byte,
+integers up to twelve bits including sign require two bytes, etc.</p>
+<p>Notice that unlike the zigzag encoding
+<a href="https://developers.google.com/protocol-buffers/docs/encoding#signed-integers">used in protobufs</a>,
+this encoding has representations for positive and negative zero.
+While negative zero is not representable in most native integer formats,
+the integer encoding is also usable to encode floating-point numbers
+that have no fractional component,
+and the <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE floating-point formats</a>
+do have both positive and negative zero.
+Thus, writers are typically expected to produce -0
+only when serializing a floating-point number as an integer,
+with readers treating +0 and -0 as identical when converting
+to standard internal integer formats.</p>
+<p>For compactness writers should generally avoid encoding
+unnecessary leading zero bytes in the serialized representation,
+but readers must be prepared to accept them.
+Writers may sometimes have reason to produce
+non-essential leading zero bytes:
+for example, to pad numbers representing cryptographic secrets
+to a constant time to minimize the risk of side-channel leaks.</p>
+<h3 id="floating-point-numbers">Floating-point numbers</h3>
+<p>Non-integral JSON numbers are encoded into binary floating-point representation
+using either base-2 (binary) or base-10 (decimal) fractions.
+The first byte of the value encoding
+is 0x10 for floating-point with a binary fraction,
+and 0x11 for floating-point with a decimal fraction.</p>
+<p>Encoders converting from decimal string representation (e.g., JSON text)
+should generally encode the number using a base-10 fraction
+in order to avoid losing precision in the conversion.
+Encoders converting from internal binary floating-point representations,
+however,
+can use base-2 fractions to encode numbers more space-efficiently
+without loss of precision.</p>
+<p>The binary encoding of the floating-point number
+consists of the 0x10 (binary fraction) or 0x11 (decimal fraction) prefix,
+followed by a CBE-encoded exponent,
+and finally a mantissa comprising the rest of the encoded byte sequence.</p>
+<p>The exponent consists of a variable-length signed integer,
+which is first zigzag-encoded into a binary unsigned integer,
+then serialized into a big-endian byte string,
+and finally CBE-encoded to delimit its length.</p>
+<p>In the exponent&rsquo;s zigzag encoding,
+the encoded value 1 is special
+and indicates infinity or not-a-number (NaN) values,
+rather than a negative zero exponent.</p>
+<p>Some example exponents are as follows
+after both zigzag-encoding and CBE-encoding:</p>
+<pre><code>    e = 0        -&gt; [0x00]            1-byte CBE-encoding for
+    infinity/NaN -&gt; [0x01]            1-byte exponent 0x00-0x7f
+    e = +1       -&gt; [0x02]
+    e = -1       -&gt; [0x03]
+    e = +2       -&gt; [0x04]
+    e = -2       -&gt; [0x05]
+    e = +63      -&gt; [0x7e]
+    e = -63      -&gt; [0x7f]
+    e = +64      -&gt; [0x81,0x80]       2-byte CBE-encoding for
+    e = -64      -&gt; [0x81,0x81]       1-byte exponent 0x80-0xff
+    e = +127     -&gt; [0x81,0xfe]
+    e = -127     -&gt; [0x81,0xff]
+    e = +128     -&gt; [0x82,0x01,0x00]  3-byte CBE-encoding for
+    e = -128     -&gt; [0x82,0x01,0x01]  2-byte exponents
+    e = +32767   -&gt; [0x82,0xff,0xfe]
+    e = -32767   -&gt; [0x82,0xff,0xff]
+</code></pre>
+<p>Finally, the mantissa uses the same zigzag encoding as for integers,
+with encoded values 0 and 1 representing positive and negative zero.
+The mantissa is then serialized in network (big-endian) byte order
+<em>without</em> CBE-encoding,
+which is unnecessary as the mantissa always accounts for the remainder
+of the encoded floating-point number.</p>
+<p>When representing zeros and infinities,
+the mantissa field can be empty, i.e., zero bytes long.
+This is the preferred representation since it is the most compact.</p>
+<p>Some example mantissa encodings are as follows:</p>
+<pre><code>    m = +0     -&gt; []
+    m = -0     -&gt; [0x01]
+    m = +1     -&gt; [0x02]
+    m = -1     -&gt; [0x03]
+    m = +2     -&gt; [0x04]
+    m = -2     -&gt; [0x05]
+    m = +127   -&gt; [0xfe]
+    m = -127   -&gt; [0xff]
+    m = +128   -&gt; [0x01,0x00]
+    m = -128   -&gt; [0x01,0x01]
+    m = +32767 -&gt; [0xff,0xfe]
+    m = -32767 -&gt; [0xff,0xff]
+</code></pre>
+<p>Readers must be prepared to accept leading zero bytes
+in the exponent and/or mantissa.
+Writers should normally avoid producing leading zero bytes
+when compactness is desired,
+but may produce leading zeros in order to ensure that encoded values
+are some fixed (but explicitly-encoded) length.</p>
+<p>For NaNs, consistent with IEEE 754,
+the most-significant bit of the (first byte of the) mantissa
+indicates whether the NaN is a quiet or signaling NaN.
+Since the variable-length floating-point mantissa
+can be any number of bytes long,
+this means that the quiet or signaling NaN flag
+can be mantissa bit 7, 15, 23, etc.</p>
+<h3 id="arrays">Arrays</h3>
+<p>A binary-encoded JSON array consists of
+the prefix byte 0x12 followed by a sequence of
+any number of items.
+Each item is first binary encoded
+using the untyped schema encoding defined in this section,
+then CBE-encoded to delimit its length,
+and finally all the CBE-encoded items are concatenated.</p>
+<h3 id="keyvalue-maps-or-objects">Key/value maps or objects</h3>
+<p>A binary-encoded JSON object consists of
+the prefix byte 0x13 followed by a sequence of
+any number of key/value pairs.
+The keys and values are each first binary encoded
+using the untyped schema encoding defined in this section,
+then CBE-encoded to delimit their lengths,
+and finally all the key/value pairs are concatenated.</p>
+<h3 id="boolean-values">Boolean values</h3>
+<p>A boolean value is represented by either
+the single byte 0x14, denoting <code>true</code>,
+or the single byte 0x15, denoting <code>false</code>.
+Writers should ensure that the encoding is only one byte,
+and readers should ignore any bytes beyond the first.</p>
+<h3 id="null-values">Null values</h3>
+<p>A <code>null</code> value is represented by the single byte 0x16.
+Writers should ensure that the encoding is only one byte,
+and readers should ignore any bytes beyond the first.</p>
+<h3 id="string-values">String values</h3>
+<p>The normal binary encoding of a JSON string value
+is simply the UTF-8 encoding of the string,
+provided that the string is nonempty and its first character
+is not an ASCII control character,
+namely 0x00-0x1f or 0x7f.</p>
+<p>In this way, the binary encodings of most strings incur no space overhead.
+Further, because the CBE encoding of a string consisting
+of only one ASCII character remains only one byte long after encoding,
+the common space-saving practice of using single-character property names
+in JSON data translates to single-byte CBE-encoded property keys
+in the binary representation of objects as well.</p>
+<p>If the JSON string to be encoded is empty
+or its first character is a control character,
+then its BESO untyped encoding is a single byte 0x7f (ASCII DEL)
+followed by the string&rsquo;s UTF-8 encoding.
+While writers generally should only prepend the 0x7f prefix
+only to strings that start with control characters,
+readers should be prepared to accept any UTF-8 string escaped this way.</p>
+<h4 id="strings-containing-base64-encoded-binary-data">Strings containing base64-encoded binary data</h4>
+<p>It is common practice to embed binary data in JSON strings
+using <a href="https://en.wikipedia.org/wiki/Base64">base64</a> encoding.
+To reduce the space overhead incurred by base64 encoding,
+JSON string values that strictly conform to the
+<a href="https://tools.ietf.org/html/rfc4648">base64 specification</a>
+can be encoded in a compact binary form,
+consisting of a single 0x1f byte
+followed by the raw <em>decoded</em> binary content of the base64-encoded string.</p>
+<h2 id="enumerated-schema">Enumerated schema</h2>
+<p>When a JSON schema specifies an <code>enum</code> constraint,
+regardless of the presence or absence of a <code>type</code> constraint,
+the corresponding binary encoding uses compact unsigned integers
+to represent indices in the list of allowed values.</p>
+<p>When the value to be encoded is one of those listed in the <code>enum</code> constraint,
+the binary encoding is its zero-based position in the <code>enum</code> list,
+serialized to a variable-length byte string in network byte order.
+If the first byte of this serialization is 0xff,
+then a leading zero byte is prepended.</p>
+<p>The preferred encoding of the first value in the <code>enum</code> list
+is the empty byte string.
+Since a schema with a
+<a href="https://json-schema.org/understanding-json-schema/reference/generic.html#constant-values"><code>const</code> property</a>
+is synonymous with a single-value <code>enum</code>,
+this implies that a constant schema may be encoded as the empty string.</p>
+<p>If the value to be encoded is not one of those allowed by the <code>enum</code>,
+i.e., a value non-conformant to the schema,
+then the binary encoding is a single 0xff byte
+followed by the untyped encoding of the value.</p>
+<p>Consider this schema, for example:</p>
+<pre><code>    {
+      &quot;enum&quot;: [&quot;red&quot;, &quot;amber&quot;, &quot;green&quot;]
+    }
+</code></pre>
+<p>The following illustrates how four example values are encoded:</p>
+<pre><code>    &quot;red&quot;   -&gt; []
+    &quot;amber&quot; -&gt; [0x01]
+    &quot;green&quot; -&gt; [0x02]
+    &quot;blue&quot;  -&gt; [0xff,0x62,0x6c,0x75,0x65]
+</code></pre>
+<h2 id="schema-of-integer-type">Schema of integer type</h2>
+<p>When the scheme specifies a <code>type</code> of <code>integer</code>,
+the binary representation is specialized for maximum space-efficiency
+in representing binary integers,
+while still allowing values non-conformant to the schema to be represented.</p>
+<p>An integer value is first zigzag-encoded
+and serialized into a variable-length big-endian byte string,
+in exactly the same way as for integers encoded with untyped schema.
+Then, only if the serialized integer&rsquo;s first byte is 0xff,
+a leading zero byte is prepended.</p>
+<p>A non-integer value not conforming to the schema
+is first encoded as for untyped schema,
+then a single 0xff byte is prepended to that encoding.</p>
+<p>An integer with value +0 may be encoded as the empty string,
+and this is the preferred encoding.</p>
+<p>With this encoding, integers between -126 and +127
+require at most one byte to represent,
+integers between -32639 and +32639 require at most two bytes,
+and so on,
+as the following encoding examples illustrate:</p>
+<pre><code>    +0      -&gt; []
+    -0      -&gt; [0x01]
+    +1      -&gt; [0x02]
+    -1      -&gt; [0x03]
+    +126    -&gt; [0xfc]
+    -126    -&gt; [0xfd]
+    +127    -&gt; [0xfe]
+    -127    -&gt; [0x00,0xff]
+    +128    -&gt; [0x01,0x00]
+    -128    -&gt; [0x01,0x01]
+    +32639  -&gt; [0xfe,0xfe]
+    -32639  -&gt; [0xfe,0xff]
+    +32640  -&gt; [0x00,0xff,0x00]
+    -32640  -&gt; [0x00,0xff,0x01]
+    +32767  -&gt; [0x00,0xff,0xfe]
+    -32767  -&gt; [0x00,0xff,0xff]
+    +32768  -&gt; [0x01,0x00,0x00]
+    -32768  -&gt; [0x01,0x00,0x01]
+    null    -&gt; [0xff,0x1e]
+    &quot;a&quot;     -&gt; [0xff,0x61]
+</code></pre>
+<h2 id="schema-of-number-type">Schema of number type</h2>
+<p>XXX</p>
+<p>0x00-0x7f for first byte of integer
+0x80-0xbf for first byte of base-2 exponent?
+0x80-0xbf for first byte of base-10 exponent?
+but may be a bit complex&hellip;</p>
+<p>alternately:</p>
+<p>0x00-0xfc for first byte of integer
+0xfd followed by floating-point with base-2 exponent
+0xfe followed by floating-point with base-10 exponent
+0xff for non-conformant value</p>
+<p>alternatively:</p>
+<p>0x00-0xff for first byte of zigzag-encoded exponent
+shifted left another 1 bit to select base 2 vs 10?</p>
+<p>alternatively:</p>
+<p>just keep it simple and use the untyped schema representation?</p>
+<h2 id="schema-of-array-type">Schema of array type</h2>
+<p>To encode a JSON array value with a schema of type <code>array</code>,
+the array&rsquo;s individual elements are first binary encoded
+using the appropriate sub-schema for the array&rsquo;s individual items,
+as specified in <code>items</code> and <code>additionalItems</code> properties if present.
+These binary-encoded items are then individually CBE-encoded
+then concatenated in order.
+Finally, if the first byte of the resulting array encoding
+is either 0xfe or 0xff,
+then a single 0xfe byte is prepended.</p>
+<p>To encode a JSON value other than an array,
+the value is first encoded using the untyped encoding,
+then a single 0xff byte is prepended.</p>
+<h2 id="schema-of-object-type">Schema of object type</h2>
+<p>To encode a JSON object with a schema of type <code>object</code>,
+the properties in the object to be encoded are first classified
+into three categories: <em>required</em>, <em>known</em>, and <em>unknown</em>.
+Required properties are those listed in the schema&rsquo;s <code>required</code> clause, if any.
+Known properties are those listed in the object schema&rsquo;s <code>properties</code> clause.
+Unknown properties are any appearing in neither clause.</p>
+<p>The binary encoding of such a JSON object consists of
+an optional 0xfe prefix byte,
+followed by an array encoding of the object&rsquo;s required properties,
+and finally by a sequence of key/value pairs representing
+the known and unknown optional properties.
+Once the object&rsquo;s properties have been serialized,
+if the first byte of their encoding is either 0xfe or 0xff,
+then a single 0xfe byte is prepended.</p>
+<p>To encode a JSON object conforming to the schema,
+each of the object&rsquo;s required properties
+is first encoded using the schema specified for that property, if any.
+Each required property is then individually CBE-encoded in order,
+just as for arrays.
+The number of CBE-encoded blobs in this sequence
+must exactly match the number of properties the schema lists as `required&rsquo;.
+If any required properties
+are not actually present in the object to be encoded
+(implying that the object is non-conformant with the schema),
+then the object must be encoded as for an untyped schema
+with a 0xff prefix byte prepended as specified below.</p>
+<p>Following the encodings of the required properties
+is a variable-length sequence of key/value pairs
+representing the known and unknown optional properties,
+in arbitrary order.</p>
+<p>For known properties,
+the key is encoded as an unsigned integer index
+into the schema&rsquo;s <code>properties</code> clause.
+Zero represents the first property the schema lists in its <code>properties</code> object,
+one represents the second property listed, and so on.
+This implies that while for schema <em>validation</em>
+the order in which properties are listed is not important,
+for JSBE encoding using a schema the order of properties <em>is</em> important:
+reordering the properties list will change the schema&rsquo;s binary encoding.
+The unsigned integer key is then serialized into a big-endian byte string.
+If the first byte of the resulting string
+is not in the range 0x00 through 1e,
+then a leading zero byte is prepended.
+Finally, the serialized key is CBE-encoded.</p>
+<p>For unknown properties,
+the property name string is first encoded as for untyped schema,
+resulting in either a regular string or base64 string encoding
+whose first byte is in the range 0x1f through 0xff.
+This encoded property name string is then CBE-encoded.</p>
+<p>The value of a known property is first binary encoded
+using the appropriate schema for that property,
+then this binary encoding is CBE-encoded.
+The value of an unknown property is binary encoded
+as for untyped schema,
+then CBE-encoded.</p>
+<p>For non-conformant JSON values that are not objects
+or that do not have all the properties the schema lists as <code>required</code>,
+the entire object is first encoded as for untyped schema,
+then a single 0xff byte is prepended to the encoding.</p>
+<p>XXX some examples</p>
+<h2 id="schema-of-other-types">Schema of other types</h2>
+<p>For schema of type <code>boolean</code>, <code>null</code>, or <code>string</code>,
+the binary encoding is identical to that of untyped schema.
+That is, the encodings of these types of values
+are not specialized and do not receive
+any space-efficiency benefit from having a schema.
+This is mainly because the untyped encodings of these JSON value types
+are already extremely space-efficient,
+and the complexity cost of specialization for these types
+would probably not be worth the small opportunity for further space saving.</p>
+<h1 id="evolution-of-schema-based-encodings">Evolution of schema-based encodings</h1>
+<h2 id="backwards-compatible-extensibility">Backwards-compatible extensibility</h2>
+<p>Adding new optional properties to an object doesn&rsquo;t break existing encodings,
+provided the new fields are added to the end of the <code>properties</code> list.</p>
+<h2 id="schema-negotiation">Schema negotiation</h2>
+<p>XXX</p>
+<h1 id="jbs-custom">JBS Custom</h1>
+<p>JBS Custom allows the specification of customized binary representations
+via extensions to the JSON Schema language.</p>
+<h3 id="variable-width-unsigned-integers">Variable-width unsigned integers</h3>
+<p>When the scheme <code>type</code> is <code>integer</code>,
+an <code>encoding</code> property of <code>unsigned</code> indicates
+that values greater than or equal to zero are to be encoded
+in a variable-length binary representation:</p>
+<pre><code>{
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;encoding&quot;: &quot;binary&quot;
+}
+</code></pre>
+<p>A <code>byteOrder</code> property may specify
+the byte order for the encoded integer,
+either <code>bigEndian</code> (most-significant byte first)
+or <code>littleEndian</code> (least-significant byte first).</p>
+<pre><code>{
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;encoding&quot;: &quot;binary&quot;,
+    &quot;byteOrder&quot;: &quot;littleEndian&quot;
+}
+</code></pre>
+<p>In this encoding, the integer 65 is encoded
+as the one-byte stream [0x41],
+while the integer 256 is encoded as the byte-stream [0x00,0x01].</p>
+<p>In strict schema validation,
+the byteOrder property is required.
+In permissive scheme validation,
+the byteOrder property is optional
+and defaults to <code>bigEndian</code> (network byte order).</p>
+<h3 id="variable-width-signed-integers">Variable-width signed integers</h3>
+<p>When the scheme <code>type</code> is <code>integer</code>,
+an <code>encoding</code> property of <code>zigzag</code> indicates
+that signed integer values are to be zigzag-encoded first
+into unsigned integer values,
+then the latter encoded as a binary unsigned integer
+as described above.</p>
+<pre><code>{
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;encoding&quot;: &quot;zigzag&quot;,
+}
+</code></pre>
+<p>In zigzag encoding,
+a positive integer value <em>v</em> is encoded as the unsigned integer 2<em>v</em>,
+while negative integer values <em>v</em> are encoded as -2<em>v</em> - 1.
+That is:</p>
+<pre><code>0	0
+-1	1
+1	2
+-2	3
+2	4
+-2	5
+etc.
+</code></pre>
+<h2 id="unsigned-integers">Unsigned integers</h2>
+<p>When the scheme <code>type</code> is <code>integer</code>
+and has a <code>minimum</code> value greater than or equal to zero,
+the scheme represents an unsigned integer or natural number.</p>
+<h3 id="fixed-length-unsigned-integers">Fixed-length unsigned integers</h3>
+<p>An <code>encoding</code> of <code>unsigned</code> indicates that an integer
+is to be encoded in unsigned binary representation
+a given number of bits wide.
+For example, this type indicates an integer
+encoded in exactly one byte as an unsigned integer:</p>
+<pre><code>{
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;encoding&quot;: &quot;unsigned&quot;,
+    &quot;bits&quot;: 8
+}
+</code></pre>
+<p>The `bits&rsquo; property&rsquo;s value must be a nonnegative integer
+indicating the bit-width of this representation.</p>
+<p>If <code>bits</code> is greater than 8,
+then the <code>encoding</code> property must also have a <code>byteOrder</code> property
+specifying the endianness of the representation:
+either <code>bigEndian</code> (network byte order) or <code>littleEndian</code>.</p>
+<p>XXX or should <code>encoding</code> default to network byte order (<code>bigEndian</code>)?
+Perhaps it should for purposes of defining new formats,
+but a strict-specification mode for schema validators
+should require endianness to be specified?</p>
+<p>An example of a 32-bit unsigned integer encoding in network byte-order:</p>
+<pre><code>{
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;encoding&quot;: &quot;unsigned&quot;,
+    &quot;byteOrder&quot;: &quot;bigEndian&quot;,
+    &quot;bits&quot;: 32
+}
+</code></pre>
+<p>The <code>bits</code> field need not be a power of two.
+For example, this integer is encoded in three bytes:</p>
+<pre><code>{
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;encoding&quot;: &quot;unsigned&quot;,
+    &quot;byteOrder&quot;: &quot;littleEndian&quot;,
+    &quot;bits&quot;: 24
+}
+</code></pre>
+<p>Note that the above examples did not specify a semantic value range
+via <code>minimum</code> or <code>maximum</code>,
+although the specified encoding can represent only a certain range of values.
+This is not necessarily an error:
+it simply means that not all <em>semantically</em> permitted values
+are representable in the specified binary representation.
+This corresponds to the arguably lazy but common practice in designing
+software, programming languages, and binary formats to postulate
+that some number of bits &ldquo;should be enough&rdquo; for all expected values
+even though a specific value range has not been clearly defined.
+Semantically allowing unrepresentable values may arguably be considered
+bad practice for designing new formats and schemas, however,
+so schema validators may want to provide a configuration option
+that yields warnings or errors when a fixed-length representation is specified
+without a specified <code>minimum</code> and <code>maximum</code> that is representable.</p>
+<p>The following variant of the above 24-bit integer example
+restricts the semantic value to a range of 1 through 16,000,000,
+a subset of the representable value range of 0 through 16,777,215 (2^24-1).</p>
+<pre><code>{
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;minimum&quot;: 1,
+    &quot;maximum&quot;: 16000000
+    &quot;encoding&quot;: &quot;unsigned&quot;,
+    &quot;byteOrder&quot;: &quot;littleEndian&quot;,
+    &quot;bits&quot;: 24
+}
+</code></pre>
+<p>For now, <code>bits</code> must be a multiple of 8.
+We might later want to relax this to support
+packed bit fields and bit streams.
+But then we will probably also need to define a <code>bitOrder</code> property
+specifying the bit order within bytes
+(i.e., whether we start filling bytes
+from the most-significant or the least-significant bit).</p>
+<h3 id="fixed-length-signed-integers">Fixed-length signed integers</h3>
+<p>An <code>encoding</code> property of <code>unsigned</code> indicates
+that an integer is to be encoded as a fixed-width integer
+in standard binary two&rsquo;s-complement encoding,
+with the most-significant bit serving as the sign bit.
+As with unsigned integers,
+a <code>bits</code> property is required and must be a multiple of 8 for now,
+and a <code>byteOrder</code> property is required if <code>bits</code> is greater than 8.</p>
+<p>An example of an 8-bit signed integer:</p>
+<pre><code>{
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;encoding&quot;: &quot;signed&quot;,
+    &quot;bits&quot;: 8
+}
+</code></pre>
+<p>Similarly, a 64-bit little-endian signed integer:</p>
+<pre><code>{
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;encoding&quot;: &quot;signed&quot;,
+    &quot;bits&quot;: 64,
+    &quot;byteOrder&quot;: &quot;littleEndian&quot;
+}
+</code></pre>
+<h3 id="offset-encoded-integers">Offset-encoded integers</h3>
+<p>Integers may have an <code>offset</code> property to indicate
+that the semantic value is the offset plus the encoded value.
+For example, this schema type represents semantic values
+between 200 through 300 inclusive,
+encoded as single-byte values from 0 through 100:</p>
+<pre><code>{
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;minimum&quot;: 200,
+    &quot;maximum&quot;: 300,
+    &quot;offset&quot;: 200,
+    &quot;encoding&quot;: &quot;unsigned/bigEndian&quot;,
+    &quot;bits&quot;: 8
+}
+</code></pre>
+<p>When an <code>offset</code> is specified and is less than or equal to the <code>minimum</code>,
+an unsigned-integer representation may be used
+even if <code>minimum</code> is less than or equal to zero.
+This example encodes values from -100 through 100 in one byte,
+with byte value 0 representing semantic value -100,
+100 representing 0,
+and 200 representing 100:</p>
+<pre><code>{
+    &quot;type&quot;: &quot;integer&quot;,
+    &quot;minimum&quot;: -100,
+    &quot;maximum&quot;: 100,
+    &quot;offset&quot;: -100,
+    &quot;encoding&quot;: &quot;unsigned&quot;,
+    &quot;bits&quot;: 8
+}
+</code></pre>
+<h2 id="floating-point-numbers-1">Floating-point numbers</h2>
+<h3 id="fixed-length-binary-floating-point-numbers">Fixed-length binary floating-point numbers</h3>
+<p>When the scheme type is <code>number</code>,
+an associated `encoding&rsquo; property may name one of the
+<a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a>
+standard fixed-length floating-point number representations
+to indicate that representation be used
+as the binary encoding of this number.
+For example:</p>
+<pre><code>{
+    &quot;type&quot;: &quot;number&quot;,
+    &quot;encoding&quot;: &quot;binary32&quot;,
+}
+</code></pre>
+<p>The floating-point representations currently defined in
+<a href="https://en.wikipedia.org/wiki/IEEE_754-2008_revision">IEEE 754-2008</a>
+are <code>binary16</code>, <code>binary32</code>, <code>binary64</code>, and <code>binary128</code>
+for binary floating-point representations,
+and <code>decimal32</code>, <code>decimal64</code>, and <code>decimal128</code>
+for decimal floating-point representations.
+More standard floating-point encodings may be defined in the future,
+of course.</p>
+<h3 id="variable-length-binary-floating-point-numbers">Variable-length binary floating-point numbers</h3>
+<h2 id="variable-length-strings">Variable-length strings</h2>
+<h2 id="packed-arrays-with-fixed-length-items">Packed arrays with fixed-length items</h2>
+<p>A schema of type <code>array</code> may specify an <code>encoding</code> of <code>packed</code>
+to indicate a packed array of fixed-length elements.
+This example expresses a packed array of 8-bit unsigned integers:</p>
+<pre><code>{
+    &quot;type&quot;: &quot;array&quot;,
+    &quot;items&quot;: {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;encoding&quot;: &quot;unsigned&quot;,
+        &quot;bits&quot;: 8
+    }
+}
+</code></pre>
+<p>The array element schema specified in the <code>items</code> property
+<em>must</em> have a fixed-length binary representation for packed array encoding.</p>
+<p>If the array also has a fixed length,
+i.e., <code>minItems</code> and <code>maxItems</code> values both specified and equal,
+then the resulting packed array has a fixed-length binary representation,
+which is exactly the element type length times the array length.</p>
+<h2 id="cbe-encoded-arrays-with-variable-length-items">CBE-encoded arrays with variable-length items</h2>
+<p>A schema of type <code>array</code> with an <code>encoding</code> of <code>cbe</code>
+indicates that the array has a binary representation consisting of
+a sequence of variable-length items, each individually CBE-encoded.</p>
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

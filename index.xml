@@ -1665,6 +1665,16 @@ Just garbage.
     </item>
     
     <item>
+      <title>Binary Encoded Schematic Objects (BESO)</title>
+      <link>https://bford.info/draft/beso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/beso/</guid>
+      <description>BESO provides a generic representation for any JSON, using JSON Schema information to provide a compact binary encoding. Unlike schema-free binary encodings like BSON and CBOR, BESO encoding leverages the schema to optimize the encoded representation, for example by replacing object tags specified in the schema with small integers, by representing numbers in binary integer or floating-point forms, etc.
+BESO Generic does not modify the JSON Schema language at all. It takes only the information already specified in a JSON schema and provides a more compact schema-optimized binary representation.</description>
+    </item>
+    
+    <item>
       <title>Bonn</title>
       <link>https://bford.info/album/2005/0709-Bonn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1802,6 +1812,16 @@ Goals:
     </item>
     
     <item>
+      <title>eXtensible Syntax Object Notation (XSON)</title>
+      <link>https://bford.info/draft/xson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/xson/</guid>
+      <description>Goals:
+ Consistent with and easily convertible to and from JSON Support syntactic and semantic extensions for expressiveness Incremental complexity growth: simple formats and schemas stay simple Baseline even more minimalistic than JSON (&amp;ldquo;minXSON&amp;rdquo;) All elements have both human-readable and compact binary representations  The XSON header An XSON stream starts with xson[imports], where imports is a comma-separated list of syntax imports. These can be simple identifiers for extensions defined in this document, or may (how?</description>
+    </item>
+    
+    <item>
       <title>Flowers in Lausanne</title>
       <link>https://bford.info/album/2006/0430-Flowers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1835,6 +1855,18 @@ Goals:
 
  Paragliders jumping off Mont Sal&amp;egrave;ve  
 Someone else getting ready to fly</description>
+    </item>
+    
+    <item>
+      <title>JSON Binary Schema</title>
+      <link>https://bford.info/draft/jbs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/jbs/</guid>
+      <description>JBS allows the specification of customized binary representations via extensions to the JSON Schema language.
+XXX allow specifying BESO (or CBOR or &amp;hellip;) as a default binary encoding
+XXX related: Katai Struct, The Next 700 Data Description Languages, binpac, IDRIS, etc.
+Variable-width unsigned integers When the scheme type is integer, an encoding property of unsigned indicates that values greater than or equal to zero are to be encoded in a variable-length binary representation:</description>
     </item>
     
     <item>
@@ -2113,6 +2145,15 @@ Garden at the Hundertwasser House   Belvedere
       
       <guid>https://bford.info/draft/vipcode/</guid>
       <description>In this post I would like to introduce VIPcode, a library that encodes and decodes structured data specified by verifiable interface presentations or VIPs in the Go language. In brief, VIPs are presentations or mappings of an abstract wire-format interface into the concrete data types of a specific target language (in this case Go). While embodying all information needed to marshal and unmarshall complex data, VIPs may also be verified automatically for compliance with a language-neutral interface specification, such as a .</description>
+    </item>
+    
+    <item>
+      <title>XTAX: an Extensible Sytntax Metalanguage</title>
+      <link>https://bford.info/draft/xtax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/xtax/</guid>
+      <description></description>
     </item>
     
   </channel>
