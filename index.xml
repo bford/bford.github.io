@@ -6,7 +6,7 @@
     <description>Recent content on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
     
@@ -72,6 +72,17 @@
       
       <guid>https://bford.info/selforg/choice/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Design choices for Central Bank Digital Currency</title>
+      <link>https://bford.info/pub/dec/cbdc/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/cbdc/</guid>
+      <description>Sarah Allen, Srdjan Capkun, Ittay Eyal, Giulia Fanti, Bryan Ford, James Grimmelmann, Ari Juels, Kari Kostiainen, Sarah Meiklejohn, Andrew Miller, Eswar Prasad, Karl Wüst, and Fan Zhang   Global Economy &amp; Development Working Paper 140,
+Brookings Institution,
+July 23, 2020. Abstract:  Central banks around the world are exploring and in some cases even piloting central bank digital currencies (CBDCs). CBDCs promise to realize a broad range of new capabilities, including direct government disbursements to citizens, frictionless consumer payment and money-transfer systems, and a range of new financial instruments and monetary policy levers.</description>
     </item>
     
     <item>
@@ -1885,6 +1896,19 @@ Variable-width unsigned integers When the scheme type is integer, an encoding pr
       
       <guid>https://bford.info/album/2001/1021-LakeLouise/</guid>
       <description>Lake Louise October 21, 2001  These pictures are from a day hike I took with others in the PDOS group during the ACM Symposium on Operating System Principles, which was held this year at Chateau Lake Louise in Banff, Canada.   The lake and the Fairmont Chateau   Gettin&#39; a little stormy out there...  Lake Louise from higher up.      Chuck and Benji take time out for a little baseball practice.</description>
+    </item>
+    
+    <item>
+      <title>Magnitudes: When an Integer is Too Precise</title>
+      <link>https://bford.info/draft/mag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/mag/</guid>
+      <description>Interesting uses:
+  Side-channel leak control: PURBs
+  Indexing and counting for divide-and-conquer algorithms. Example: binary search (works) vs linear search (breaks quickly); quick/merge sorts (works) vs naive sorts (breaks); &amp;hellip;
+  Related: summary data for large-scale data for parallel processing
+  Efficient memory allocation with fragmentation control Use next mag to bucket allocation units; allocation can scavenge and split a larger bucket and (proof?) remainder will also fall into a valid bucket (subtraction closure: mag minus a mag is a mag if no underflow)</description>
     </item>
     
     <item>

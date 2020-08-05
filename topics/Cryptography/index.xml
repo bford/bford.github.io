@@ -6,10 +6,21 @@
     <description>Recent content in Cryptography on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/topics/Cryptography/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Design choices for Central Bank Digital Currency</title>
+      <link>https://bford.info/pub/dec/cbdc/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/cbdc/</guid>
+      <description>Sarah Allen, Srdjan Capkun, Ittay Eyal, Giulia Fanti, Bryan Ford, James Grimmelmann, Ari Juels, Kari Kostiainen, Sarah Meiklejohn, Andrew Miller, Eswar Prasad, Karl Wüst, and Fan Zhang   Global Economy &amp; Development Working Paper 140,
+Brookings Institution,
+July 23, 2020. Abstract:  Central banks around the world are exploring and in some cases even piloting central bank digital currencies (CBDCs). CBDCs promise to realize a broad range of new capabilities, including direct government disbursements to citizens, frictionless consumer payment and money-transfer systems, and a range of new financial instruments and monetary policy levers.</description>
+    </item>
     
     <item>
       <title>Secure, Confidential Blockchains Providing High Throughput and Low Latency</title>

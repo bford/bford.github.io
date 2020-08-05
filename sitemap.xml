@@ -32,17 +32,62 @@
   
   <url>
     <loc>https://bford.info/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://bford.info/topics/Blockchain/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://bford.info/pub/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Cryptography/</loc>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/dec/cbdc/</loc>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Economics/</loc>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Identity/</loc>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Law/</loc>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Privacy/</loc>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Security/</loc>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Surveillance/</loc>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/</loc>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -51,27 +96,7 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Economics/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Identity/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/topics/Personhood/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Privacy/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Security/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -86,17 +111,7 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/topics/Consensus/</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Cryptography/</loc>
     <lastmod>2019-09-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -256,22 +271,12 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Law/</loc>
-    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/pub/dec/omniledger-abs/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://bford.info/pub/dec/immunity-abs/</loc>
-    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Surveillance/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -1181,6 +1186,10 @@
   
   <url>
     <loc>https://bford.info/album/2001/1021-LakeLouise/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/mag/</loc>
   </url>
   
   <url>

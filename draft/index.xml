@@ -200,6 +200,19 @@ Variable-width unsigned integers When the scheme type is integer, an encoding pr
     </item>
     
     <item>
+      <title>Magnitudes: When an Integer is Too Precise</title>
+      <link>https://bford.info/draft/mag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/mag/</guid>
+      <description>Interesting uses:
+  Side-channel leak control: PURBs
+  Indexing and counting for divide-and-conquer algorithms. Example: binary search (works) vs linear search (breaks quickly); quick/merge sorts (works) vs naive sorts (breaks); &amp;hellip;
+  Related: summary data for large-scale data for parallel processing
+  Efficient memory allocation with fragmentation control Use next mag to bucket allocation units; allocation can scavenge and split a larger bucket and (proof?) remainder will also fall into a valid bucket (subtraction closure: mag minus a mag is a mag if no underflow)</description>
+    </item>
+    
+    <item>
       <title>Rethinking Social Media to Escape the Echo Chamber</title>
       <link>https://bford.info/2016/11/13/info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

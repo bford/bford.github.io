@@ -6,7 +6,7 @@
     <description>Recent content in Writings by Topic on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,72 @@
     <item>
       <title>Blockchain</title>
       <link>https://bford.info/topics/Blockchain/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cryptography</title>
+      <link>https://bford.info/topics/Cryptography/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Cryptography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Economics</title>
+      <link>https://bford.info/topics/Economics/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Economics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Identity</title>
+      <link>https://bford.info/topics/Identity/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Identity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Law</title>
+      <link>https://bford.info/topics/Law/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Law/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy</title>
+      <link>https://bford.info/topics/Privacy/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Privacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://bford.info/topics/Security/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Surveillance</title>
+      <link>https://bford.info/topics/Surveillance/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Surveillance/</guid>
       <description></description>
     </item>
     
@@ -30,47 +93,11 @@
     </item>
     
     <item>
-      <title>Economics</title>
-      <link>https://bford.info/topics/Economics/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Economics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Identity</title>
-      <link>https://bford.info/topics/Identity/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Identity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Personhood</title>
       <link>https://bford.info/topics/Personhood/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Personhood/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Privacy</title>
-      <link>https://bford.info/topics/Privacy/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Privacy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://bford.info/topics/Security/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Security/</guid>
       <description></description>
     </item>
     
@@ -89,15 +116,6 @@
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Consensus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cryptography</title>
-      <link>https://bford.info/topics/Cryptography/</link>
-      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Cryptography/</guid>
       <description></description>
     </item>
     
@@ -224,24 +242,6 @@
       <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Humanitarian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Law</title>
-      <link>https://bford.info/topics/Law/</link>
-      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Law/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Surveillance</title>
-      <link>https://bford.info/topics/Surveillance/</link>
-      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Surveillance/</guid>
       <description></description>
     </item>
     
