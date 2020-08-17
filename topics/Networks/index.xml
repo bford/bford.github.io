@@ -6,10 +6,20 @@
     <description>Recent content in Networks on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/topics/Networks/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PriFi: Low-Latency Anonymity for Organizational Networks</title>
+      <link>https://bford.info/pub/sec/prifi/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/prifi/</guid>
+      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Privacy Enhancing Technologies Symposium
+July 13, 2020  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
+    </item>
     
     <item>
       <title>MorphIT: Morphing Packet Reports for Internet Transparency</title>
@@ -33,16 +43,6 @@ Stanford  Srinivas Devadas
 MIT  Bryan Ford
 EPFL    26th ACM Symposium on Operating Systems Principles (SOSP)
 October 30, 2017 Abstract: Atom is an anonymous messaging system that protects against traffic-analysis attacks. Unlike many prior systems, each Atom server touches only a small fraction of the total messages routed through the network. As a result, the system’s capacity scales near-linearly with the number of servers.</description>
-    </item>
-    
-    <item>
-      <title>PriFi: Low-Latency Anonymity for Organizational Networks</title>
-      <link>https://bford.info/pub/sec/prifi/</link>
-      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/pub/sec/prifi/</guid>
-      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Proceedings on Privacy Enhancing Technologies
-(to appear)  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
     </item>
     
     <item>

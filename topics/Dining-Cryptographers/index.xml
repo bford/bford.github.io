@@ -6,7 +6,7 @@
     <description>Recent content in Dining Cryptographers on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bford.info/topics/Dining-Cryptographers/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,11 +14,11 @@
     <item>
       <title>PriFi: Low-Latency Anonymity for Organizational Networks</title>
       <link>https://bford.info/pub/sec/prifi/</link>
-      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/prifi/</guid>
-      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Proceedings on Privacy Enhancing Technologies
-(to appear)  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
+      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Privacy Enhancing Technologies Symposium
+July 13, 2020  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
     </item>
     
     <item>

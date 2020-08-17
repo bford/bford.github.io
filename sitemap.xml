@@ -91,6 +91,26 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Anonymity/</loc>
+    <lastmod>2020-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Dining-Cryptographers/</loc>
+    <lastmod>2020-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Networks/</loc>
+    <lastmod>2020-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/prifi/</loc>
+    <lastmod>2020-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/topics/Democracy/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
@@ -186,17 +206,7 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Anonymity/</loc>
-    <lastmod>2019-05-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/pub/net/morphit-abs/</loc>
-    <lastmod>2019-05-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Networks/</loc>
     <lastmod>2019-05-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -333,16 +343,6 @@
   <url>
     <loc>https://bford.info/2016/10/25/mining/</loc>
     <lastmod>2016-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Dining-Cryptographers/</loc>
-    <lastmod>2016-10-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/pub/sec/prifi/</loc>
-    <lastmod>2016-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1146,6 +1146,10 @@
   
   <url>
     <loc>https://bford.info/draft/delimited-syntax/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/draft/drand/</loc>
   </url>
   
   <url>

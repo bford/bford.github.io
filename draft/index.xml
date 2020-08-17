@@ -160,6 +160,16 @@ Goals:
     </item>
     
     <item>
+      <title>Distributed randomness, drand, and the League of Entropy</title>
+      <link>https://bford.info/draft/drand/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/drand/</guid>
+      <description>&amp;ldquo;The coin to us is sacred.&amp;rdquo; - Thomas Shelby (Peaky Blinders)
+ Public randomness – or &amp;ldquo;flipping coins&amp;rdquo; in some way so that anyone can see (and trust) the outcome – is fundamental to numerous social and technical processes. Besides gambling and lotteries (obviously), we need public randomness to choose a sample of some population fairly. The ancient Greeks used sortition, or selection by random lottery, to appoint political officials to office.</description>
+    </item>
+    
+    <item>
       <title>Efficient Stream Embedding with Composable Binary Encoding (CBE)</title>
       <link>https://bford.info/draft/cbe/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

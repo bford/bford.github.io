@@ -86,6 +86,16 @@ July 23, 2020. Abstract:  Central banks around the world are exploring and in so
     </item>
     
     <item>
+      <title>PriFi: Low-Latency Anonymity for Organizational Networks</title>
+      <link>https://bford.info/pub/sec/prifi/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/prifi/</guid>
+      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Privacy Enhancing Technologies Symposium
+July 13, 2020  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
+    </item>
+    
+    <item>
       <title>Technologizing Democracy or Democratizing Technology? A Layered-Architecture Perspective on Potentials and Challenges</title>
       <link>https://bford.info/pub/soc/dt2-chapter-abs/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
@@ -370,16 +380,6 @@ if you withhold a block, you can&amp;rsquo;t get a collective signature on it; w
       <guid>https://bford.info/2016/10/25/mining/</guid>
       <description>--   As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&amp;rsquo;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
 In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
-    </item>
-    
-    <item>
-      <title>PriFi: Low-Latency Anonymity for Organizational Networks</title>
-      <link>https://bford.info/pub/sec/prifi/</link>
-      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/pub/sec/prifi/</guid>
-      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Proceedings on Privacy Enhancing Technologies
-(to appear)  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
     </item>
     
     <item>
@@ -1793,6 +1793,16 @@ But to avoid further confusion, would be best to have one &amp;ldquo;standardize
       <description>or Composable Text/Binary Syntax (CTS/CBS)?
 Goals:
  Text format self-describing and human-readable Binary format for compactness and efficiency  Either self-describing or schema-dependent   Easy cross-conversion between text and binary formats  Easy for schemas to define both text and binary equivalents at once   Streamable: encoder can start sending long composites before knowing length Embeddable:  for embeddability, see for example JSON Schema&amp;rsquo;s desire to be able to embed arbitrary non-JSON data with a MIME Media Type: https://json-schema.</description>
+    </item>
+    
+    <item>
+      <title>Distributed randomness, drand, and the League of Entropy</title>
+      <link>https://bford.info/draft/drand/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/drand/</guid>
+      <description>&amp;ldquo;The coin to us is sacred.&amp;rdquo; - Thomas Shelby (Peaky Blinders)
+ Public randomness – or &amp;ldquo;flipping coins&amp;rdquo; in some way so that anyone can see (and trust) the outcome – is fundamental to numerous social and technical processes. Besides gambling and lotteries (obviously), we need public randomness to choose a sample of some population fairly. The ancient Greeks used sortition, or selection by random lottery, to appoint political officials to office.</description>
     </item>
     
     <item>
