@@ -29,7 +29,8 @@ July 23, 2020. Abstract:  Central banks around the world are exploring and in so
       
       <guid>https://bford.info/pub/sec/prifi/</guid>
       <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Privacy Enhancing Technologies Symposium
-July 13, 2020  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
+July 13, 2020  Proceedings on Privacy Enhancing Technologies
+Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
     </item>
     
     <item>
@@ -59,8 +60,9 @@ September 27, 2019  Abstract:  One of the core promises of blockchain technology
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/purb-abs/</guid>
-      <description>Kirill Nikitin, Ludovic Barman, Wouter Lueks, Matthew Underwood, Jean-Pierre Hubaux and Bryan Ford EPFL - IC - DEDIS   Proceedings on Privacy Enhancing Technologies
-July 2019.  Abstract: Most encrypted data formats leak metadata via their plaintext headers, such as format version, encryption schemes used, number of recipients who can decrypt the data, and even the recipients’ identities. This leakage can pose security and privacy risks to users, e.</description>
+      <description>Kirill Nikitin, Ludovic Barman, Wouter Lueks, Matthew Underwood, Jean-Pierre Hubaux and Bryan Ford EPFL - IC - DEDIS   Privacy Enhancing Technologies Symposium
+July 2019.  Proceedings on Privacy Enhancing Technologies
+Volume 2019, Issue 4.  Abstract: Most encrypted data formats leak metadata via their plaintext headers, such as format version, encryption schemes used, number of recipients who can decrypt the data, and even the recipients’ identities.</description>
     </item>
     
     <item>
@@ -491,6 +493,15 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <description>Bryan Ford and Jacob Strauss 
 Massachusetts Institute of Technology First Workshop on Social Network Systems
 April 1, 2008 Abstract:  Online anonymity often appears to undermine accountability, offering little incentive for civil behavior, but accountability failures usually result not from anonymity itself but from the disposability of virtual identities. A user banned for misbehavior&amp;mdash;e.g., spamming from a free E-mail account or stuffing an online ballot box&amp;mdash;can simply open other accounts or connect from other IP addresses.</description>
+    </item>
+    
+    <item>
+      <title>Sybil Parties: An Offline Foundation for Online Accountability</title>
+      <link>https://bford.info/log/2006/0924-SybilParties.html</link>
+      <pubDate>Sun, 24 Sep 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/log/2006/0924-SybilParties.html</guid>
+      <description>Bryan Ford - September 24, 2006 Preliminary draft: see here for the final published paper  The Human Recognition Problem  Today&#39;s online ecosphere continually suffers from its inability to tell who is a genuine, unique human and who isn&#39;t. Because open-access messaging systems cannot isolate or authenticate the human source of messages for the purpose of suppressing abuses, spam has already relegated USENET to historical obscurity [Templeton01], threatens the usability of E-mail [Wouters05], and is even advancing on Skype.</description>
     </item>
     
   </channel>

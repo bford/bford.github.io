@@ -229,6 +229,15 @@ November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provide
     </item>
     
     <item>
+      <title>Sybil Parties: An Offline Foundation for Online Accountability</title>
+      <link>https://bford.info/log/2006/0924-SybilParties.html</link>
+      <pubDate>Sun, 24 Sep 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/log/2006/0924-SybilParties.html</guid>
+      <description>Bryan Ford - September 24, 2006 Preliminary draft: see here for the final published paper  The Human Recognition Problem  Today&#39;s online ecosphere continually suffers from its inability to tell who is a genuine, unique human and who isn&#39;t. Because open-access messaging systems cannot isolate or authenticate the human source of messages for the purpose of suppressing abuses, spam has already relegated USENET to historical obscurity [Templeton01], threatens the usability of E-mail [Wouters05], and is even advancing on Skype.</description>
+    </item>
+    
+    <item>
       <title>User-Relative Names for Globally Connected Personal Devices</title>
       <link>https://bford.info/pub/net/uia-iptps-abs/</link>
       <pubDate>Mon, 27 Feb 2006 00:00:00 +0000</pubDate>

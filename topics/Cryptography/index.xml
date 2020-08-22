@@ -29,7 +29,8 @@ July 23, 2020. Abstract:  Central banks around the world are exploring and in so
       
       <guid>https://bford.info/pub/sec/prifi/</guid>
       <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Privacy Enhancing Technologies Symposium
-July 13, 2020  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
+July 13, 2020  Proceedings on Privacy Enhancing Technologies
+Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
     </item>
     
     <item>
@@ -48,8 +49,9 @@ September 27, 2019  Abstract:  One of the core promises of blockchain technology
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/purb-abs/</guid>
-      <description>Kirill Nikitin, Ludovic Barman, Wouter Lueks, Matthew Underwood, Jean-Pierre Hubaux and Bryan Ford EPFL - IC - DEDIS   Proceedings on Privacy Enhancing Technologies
-July 2019.  Abstract: Most encrypted data formats leak metadata via their plaintext headers, such as format version, encryption schemes used, number of recipients who can decrypt the data, and even the recipients’ identities. This leakage can pose security and privacy risks to users, e.</description>
+      <description>Kirill Nikitin, Ludovic Barman, Wouter Lueks, Matthew Underwood, Jean-Pierre Hubaux and Bryan Ford EPFL - IC - DEDIS   Privacy Enhancing Technologies Symposium
+July 2019.  Proceedings on Privacy Enhancing Technologies
+Volume 2019, Issue 4.  Abstract: Most encrypted data formats leak metadata via their plaintext headers, such as format version, encryption schemes used, number of recipients who can decrypt the data, and even the recipients’ identities.</description>
     </item>
     
     <item>

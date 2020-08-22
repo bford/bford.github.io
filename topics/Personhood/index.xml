@@ -64,5 +64,14 @@ Massachusetts Institute of Technology First Workshop on Social Network Systems
 April 1, 2008 Abstract:  Online anonymity often appears to undermine accountability, offering little incentive for civil behavior, but accountability failures usually result not from anonymity itself but from the disposability of virtual identities. A user banned for misbehavior&amp;mdash;e.g., spamming from a free E-mail account or stuffing an online ballot box&amp;mdash;can simply open other accounts or connect from other IP addresses.</description>
     </item>
     
+    <item>
+      <title>Sybil Parties: An Offline Foundation for Online Accountability</title>
+      <link>https://bford.info/log/2006/0924-SybilParties.html</link>
+      <pubDate>Sun, 24 Sep 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/log/2006/0924-SybilParties.html</guid>
+      <description>Bryan Ford - September 24, 2006 Preliminary draft: see here for the final published paper  The Human Recognition Problem  Today&#39;s online ecosphere continually suffers from its inability to tell who is a genuine, unique human and who isn&#39;t. Because open-access messaging systems cannot isolate or authenticate the human source of messages for the purpose of suppressing abuses, spam has already relegated USENET to historical obscurity [Templeton01], threatens the usability of E-mail [Wouters05], and is even advancing on Skype.</description>
+    </item>
+    
   </channel>
 </rss>
