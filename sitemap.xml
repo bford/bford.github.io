@@ -41,11 +41,6 @@
   </url>
   
   <url>
-    <loc>https://bford.info/pub/</loc>
-    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/topics/Cryptography/</loc>
     <lastmod>2020-07-23T00:00:00+00:00</lastmod>
   </url>
@@ -72,6 +67,11 @@
   
   <url>
     <loc>https://bford.info/topics/Privacy/</loc>
+    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/</loc>
     <lastmod>2020-07-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -676,6 +676,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Compression/</loc>
+    <lastmod>2012-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/pub/os/non-linear/</loc>
     <lastmod>2012-06-14T00:00:00+00:00</lastmod>
   </url>
@@ -1058,6 +1063,11 @@
   <url>
     <loc>https://bford.info/pub/os/threadmodel-93-abs/</loc>
     <lastmod>1993-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/os/datenpresse/</loc>
+    <lastmod>1992-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bryan Ford&#39;s Publications on Bryan Ford&#39;s Home Page</title>
+    <title>Publications – Bryan Ford on Bryan Ford&#39;s Home Page</title>
     <link>https://bford.info/pub/</link>
-    <description>Recent content in Bryan Ford&#39;s Publications on Bryan Ford&#39;s Home Page</description>
+    <description>Recent content in Publications – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
@@ -1092,6 +1092,16 @@ April 1993  Abstract: The advantages in modularity and power of microkernel-base
       <guid>https://bford.info/pub/os/threadmodel-93-abs/</guid>
       <description>Bryan Ford, Mike Hibler, and Jay Lepreau Department of Computer Science, University of Utah   Technical Report UUCS-93-012
 April 1993  Abstract: During the Mach In-Kernel Servers work, we explored two alternate thread models that could be used to support traps to in-kernel servers. In the &amp;ldquo;migrating threads&amp;rdquo; model we used, the client&#39;s thread temporarily moves into the server&#39;s task for the duration of the call. In the &amp;ldquo;thread switching&amp;rdquo; model, an actual server thread is dispatched to handle client traps.</description>
+    </item>
+    
+    <item>
+      <title>Die Datenpresse</title>
+      <link>https://bford.info/pub/os/datenpresse/</link>
+      <pubDate>Sat, 01 Aug 1992 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/datenpresse/</guid>
+      <description>  Urban D. Mueller, Christian Schneider, and Bryan Ford
+ AmigaPlus, August 1992.   Article: unavailable online to my knowledge ☹️  </description>
     </item>
     
     <item>

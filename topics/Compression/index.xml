@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Compression on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Compression/</link>
+    <description>Recent content in Compression on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Jun 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bford.info/topics/Compression/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Non-Linear Compression: Gzip Me Not!</title>
+      <link>https://bford.info/pub/os/non-linear/</link>
+      <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/non-linear/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>A Dynamic Recursive Unified Internet Design (DRUID)</title>
+      <link>https://bford.info/pub/net/druid-abs/</link>
+      <pubDate>Fri, 24 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/druid-abs/</guid>
+      <description>Joe Touch, Ilia Baldine, Rudra Dutta, Gregory G. Finn, Bryan Ford, Scott Jordan, Dan Massey, Abraham Matta, Christos Papadopoulos, Peter Reiher, George Rouskas   Computer Networks December 24, 2010 Abstract: The Dynamic Recursive Unified Internet Design (DRUID) is a future Internet design that unifies overlay networks with conventional layered network architectures. DRUID is based on the fundamental concept of recursion, enabling a simple and direct network architecture that unifies the data, control, management, and security aspects of the current Internet, leading to a more trustworthy network.</description>
+    </item>
+    
+    <item>
+      <title>VXA: A Virtual Architecture for Durable Compressed Archives</title>
+      <link>https://bford.info/pub/os/vxa-abs/</link>
+      <pubDate>Fri, 16 Dec 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/vxa-abs/</guid>
+      <description>Bryan Ford
+Massachusetts Institute of Technology 4th USENIX Conference on File and Storage Technologies (FAST &#39;05)
+December 16, 2005, San Francisco, California, USA. Abstract:  Data compression algorithms change frequently, and obsolete decoders do not always run on new hardware and operating systems, threatening the long-term usability of content archived using those algorithms. Re-encoding content into new formats is cumbersome, and highly undesirable when lossy compression is involved. Processor architectures, in contrast, have remained comparatively stable over recent decades.</description>
+    </item>
+    
+    <item>
+      <title>Die Datenpresse</title>
+      <link>https://bford.info/pub/os/datenpresse/</link>
+      <pubDate>Sat, 01 Aug 1992 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/datenpresse/</guid>
+      <description>  Urban D. Mueller, Christian Schneider, and Bryan Ford
+ AmigaPlus, August 1992.   Article: unavailable online to my knowledge ☹️  </description>
+    </item>
+    
+  </channel>
+</rss>
