@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Que Sera Consensus: Simple Asynchronous Agreement with Private Coins and Threshold Logical Clocks &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Que Sera Consensus: Simple Asynchronous Agreement with Private Coins and Threshold Logical Clocks</h1>
+  
+<center>
+<strong>
+Bryan Ford, Philipp Jovanovic, and Ewa Syta<br>
+</strong>
+March 4, 2020
+
+<p>
+<a href="https://arxiv.org/abs/2003.02291">arXiv preprint</a><br>
+</center>
+
+<h3>Abstract:</h3>
+It is commonly held that asynchronous consensus is much more complex,
+difficult, and costly than partially-synchronous algorithms, especially without
+using common coins. This paper challenges that conventional wisdom with que
+sera consensus QSC, an approach to consensus that cleanly decomposes the
+agreement problem from that of network asynchrony. QSC uses only private coins
+and reaches consensus in O(1) expected communication rounds. It relies on
+"lock-step" synchronous broadcast, but can run atop a threshold logical clock
+(TLC) algorithm to time and pace partially-reliable communication atop an
+underlying asynchronous network. This combination is arguably simpler than
+partially-synchronous consensus approaches like (Multi-)Paxos or Raft with
+leader election, and is more robust to slow leaders or targeted network
+denial-of-service attacks. The simplest formulations of QSC atop TLC incur
+expected O(n2) messages and O(n4) bits per agreement, or O(n3) bits with
+straightforward optimizations. An on-demand implementation, in which clients
+act as "natural leaders" to execute the protocol atop stateful servers that
+merely implement passive key-value stores, can achieve O(n2) expected
+communication bits per client-driven agreement.
+
+<h3>Preprint:
+<a href="https://arxiv.org/pdf/2003.02291.pdf">PDF</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Consensus/">Consensus</a>
+	
+		<a href="/topics/Networks/">Networks</a>
+	
+		<a href="/topics/Reliability-and-Robustness/">Reliability and Robustness</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

@@ -23,6 +23,27 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
     </item>
     
     <item>
+      <title>Que Sera Consensus: Simple Asynchronous Agreement with Private Coins and Threshold Logical Clocks</title>
+      <link>https://bford.info/pub/net/qsc/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/qsc/</guid>
+      <description>Bryan Ford, Philipp Jovanovic, and Ewa Syta
+ March 4, 2020  arXiv preprint
+ Abstract: It is commonly held that asynchronous consensus is much more complex, difficult, and costly than partially-synchronous algorithms, especially without using common coins. This paper challenges that conventional wisdom with que sera consensus QSC, an approach to consensus that cleanly decomposes the agreement problem from that of network asynchrony. QSC uses only private coins and reaches consensus in O(1) expected communication rounds.</description>
+    </item>
+    
+    <item>
+      <title>Threshold Logical Clocks for Asynchronous Distributed Coordination and Consensus</title>
+      <link>https://bford.info/pub/net/tlc/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/tlc/</guid>
+      <description>Bryan Ford  July 16, 2019  arXiv preprint
+ Abstract: Consensus protocols for asynchronous networks are usually complex and inefficient, leading practical systems to rely on synchronous protocols. This paper attempts to simplify asynchronous consensus by building atop a novel threshold logical clock abstraction, which enables upper layers to operate as if on a synchronous network. This approach yields an asynchronous consensus protocol for fail-stop nodes that may be simpler and more robust than Paxos and its leader-based variants, requiring no common coins and achieving consensus in a constant expected number of rounds.</description>
+    </item>
+    
+    <item>
       <title>MorphIT: Morphing Packet Reports for Internet Transparency</title>
       <link>https://bford.info/pub/net/morphit-abs/</link>
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>

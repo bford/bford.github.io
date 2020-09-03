@@ -66,12 +66,12 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Privacy/</loc>
+    <loc>https://bford.info/pub/</loc>
     <lastmod>2020-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bford.info/pub/</loc>
+    <loc>https://bford.info/topics/Privacy/</loc>
     <lastmod>2020-07-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -111,6 +111,21 @@
   </url>
   
   <url>
+    <loc>https://bford.info/topics/Consensus/</loc>
+    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/qsc/</loc>
+    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Reliability-and-Robustness/</loc>
+    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/topics/Democracy/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
@@ -128,11 +143,6 @@
   <url>
     <loc>https://bford.info/topics/Voting/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Consensus/</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -183,6 +193,11 @@
   <url>
     <loc>https://bford.info/pub/sec/purb-abs/</loc>
     <lastmod>2019-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/net/tlc/</loc>
+    <lastmod>2019-07-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -241,6 +256,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/soc/liquid/</loc>
+    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/2018/09/11/blockchain/</loc>
     <lastmod>2018-09-11T00:00:00+00:00</lastmod>
   </url>
@@ -276,6 +296,11 @@
   </url>
   
   <url>
+    <loc>https://bford.info/pub/soc/money/</loc>
+    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bford.info/topics/Humanitarian/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url>
@@ -288,6 +313,11 @@
   <url>
     <loc>https://bford.info/pub/dec/immunity-abs/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/calypso/</loc>
+    <lastmod>2018-02-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -467,11 +497,6 @@
   
   <url>
     <loc>https://bford.info/thesis/2015-syta/</loc>
-    <lastmod>2015-08-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Reliability-and-Robustness/</loc>
     <lastmod>2015-08-11T00:00:00+00:00</lastmod>
   </url>
   

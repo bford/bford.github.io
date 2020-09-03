@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications – Bryan Ford on Bryan Ford&#39;s Home Page</title>
+    <title>Papers – Bryan Ford on Bryan Ford&#39;s Home Page</title>
     <link>https://bford.info/pub/</link>
-    <description>Recent content in Publications – Bryan Ford on Bryan Ford&#39;s Home Page</description>
+    <description>Recent content in Papers – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
@@ -34,6 +34,17 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
     </item>
     
     <item>
+      <title>Que Sera Consensus: Simple Asynchronous Agreement with Private Coins and Threshold Logical Clocks</title>
+      <link>https://bford.info/pub/net/qsc/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/qsc/</guid>
+      <description>Bryan Ford, Philipp Jovanovic, and Ewa Syta
+ March 4, 2020  arXiv preprint
+ Abstract: It is commonly held that asynchronous consensus is much more complex, difficult, and costly than partially-synchronous algorithms, especially without using common coins. This paper challenges that conventional wisdom with que sera consensus QSC, an approach to consensus that cleanly decomposes the agreement problem from that of network asynchrony. QSC uses only private coins and reaches consensus in O(1) expected communication rounds.</description>
+    </item>
+    
+    <item>
       <title>Technologizing Democracy or Democratizing Technology? A Layered-Architecture Perspective on Potentials and Challenges</title>
       <link>https://bford.info/pub/soc/dt2-chapter-abs/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
@@ -53,6 +64,16 @@ Final version to appear in forthcoming book Digital Technology and Democratic Th
       <description>Kirill Nikitin, Ludovic Barman, Wouter Lueks, Matthew Underwood, Jean-Pierre Hubaux and Bryan Ford EPFL - IC - DEDIS   Privacy Enhancing Technologies Symposium
 July 2019.  Proceedings on Privacy Enhancing Technologies
 Volume 2019, Issue 4.  Abstract: Most encrypted data formats leak metadata via their plaintext headers, such as format version, encryption schemes used, number of recipients who can decrypt the data, and even the recipients’ identities.</description>
+    </item>
+    
+    <item>
+      <title>Threshold Logical Clocks for Asynchronous Distributed Coordination and Consensus</title>
+      <link>https://bford.info/pub/net/tlc/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/tlc/</guid>
+      <description>Bryan Ford  July 16, 2019  arXiv preprint
+ Abstract: Consensus protocols for asynchronous networks are usually complex and inefficient, leading practical systems to rely on synchronous protocols. This paper attempts to simplify asynchronous consensus by building atop a novel threshold logical clock abstraction, which enables upper layers to operate as if on a synchronous network. This approach yields an asynchronous consensus protocol for fail-stop nodes that may be simpler and more robust than Paxos and its leader-based variants, requiring no common coins and achieving consensus in a constant expected number of rounds.</description>
     </item>
     
     <item>
@@ -86,6 +107,16 @@ May 4, 2019.  Abstract: Can we improve Internet transparency without worsening u
     </item>
     
     <item>
+      <title>A Liquid Perspective on Democratic Choice</title>
+      <link>https://bford.info/pub/soc/liquid/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/soc/liquid/</guid>
+      <description>Bryan Ford  November 2018 (first draft)  arXiv preprint
+ Abstract: The idea of liquid democracy responds to a widely-felt desire to make democracy more &#34;fluid&#34; and continuously participatory. Its central premise is to enable users to employ networked technologies to control and delegate voting power, to approximate the ideal of direct democracy in a scalable fashion that accounts for time and attention limits. There are many potential definitions, meanings, and ways to implement liquid democracy, however, and many distinct purposes to which it might be deployed.</description>
+    </item>
+    
+    <item>
       <title>MedCo: Enabling Secure and Privacy-Conscious Exploration of Distributed Clinical and Genomic Data</title>
       <link>https://bford.info/pub/dec/medco-abs/</link>
       <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
@@ -93,6 +124,16 @@ May 4, 2019.  Abstract: Can we improve Internet transparency without worsening u
       <guid>https://bford.info/pub/dec/medco-abs/</guid>
       <description>Jean Louis Raisaro, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Micka&amp;euml;l Misbach, Jo&amp;atilde;o S&amp;aacute; Sousa, Sylvain Pradervand, Edoardo Missiaglia, Olivier Michielin, Bryan Ford, and Jean-Pierre Hubaux   IEEE/ACM Transactions on Computational Biology and Bioinformatics,
 July 13, 2018. Abstract: The increasing number of health-data breaches is creating a complicated environment for medical-data sharing and, consequently, for medical progress. Therefore, the development of new solutions that can reassure clinical sites by enabling privacy-preserving sharing of sensitive medical data in compliance with stringent regulations (e.</description>
+    </item>
+    
+    <item>
+      <title>Democratic Value and Money for Decentralized Digital Society</title>
+      <link>https://bford.info/pub/soc/money/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/soc/money/</guid>
+      <description>Bryan Ford  June 2018 (first draft)  arXiv preprint
+ Abstract: Classical monetary systems regularly subject the most vulnerable majority of the world&#39;s population to debilitating financial shocks, and have manifestly allowed uncontrolled global inequality over the long term. Given these basic failures, how can we avoid asking whether mainstream macroeconomic principles are actually compatible with democratic principles such as equality or the protection of human rights and dignity?</description>
     </item>
     
     <item>
@@ -115,6 +156,16 @@ May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blo
       <description>Stevens Le Blond, Alejandro Cuevas, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Philipp Jovanovic, Bryan Ford, and Jean-Pierre Hubaux
 EPFL  Distinguished Paper Award   IEEE Security &amp; Privacy (IEEE S&amp;P)
 May 22, 2018 Abstract: Humanitarian action, the process of aiding individuals in situations of crises, poses unique information-security challenges due to natural or manmade disasters, the adverse environments in which it takes place, and the scale and multidisciplinary nature of the problems.</description>
+    </item>
+    
+    <item>
+      <title>Verifiable Management of Private Data under Byzantine Failures</title>
+      <link>https://bford.info/pub/sec/calypso/</link>
+      <pubDate>Wed, 21 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/calypso/</guid>
+      <description>Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford   Cryptology ePrint Archive
+February 21, 2018  Abstract: Distributed ledger technologies provide high availability and integrity, making them a key enabler for practical and secure computation of distributed workloads among mutually distrustful parties. However, many practical applications also require confidentiality, the third pillar of the CIA triad. In this work, we enhance permissioned and permissionless blockchains with the ability to manage confidential data without forfeiting availability or decentralization.</description>
     </item>
     
     <item>
