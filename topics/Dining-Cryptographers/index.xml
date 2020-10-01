@@ -6,11 +6,7 @@
     <description>Recent content in Dining Cryptographers on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://bford.info/topics/Dining-Cryptographers/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Dining-Cryptographers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PriFi: Low-Latency Anonymity for Organizational Networks</title>
       <link>https://bford.info/pub/sec/prifi/</link>

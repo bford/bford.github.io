@@ -6,11 +6,7 @@
     <description>Recent content in Transport Layer on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Feb 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://bford.info/topics/Transport-Layer/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 21 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Transport-Layer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Metadata Protection Considerations for TLS Present and Future</title>
       <link>https://bford.info/pub/net/tlsmeta-abs/</link>

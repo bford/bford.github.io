@@ -176,11 +176,11 @@ Work on <a href="http://www.cs.utexas.edu/~lorenzo/papers/sosp05.pdf"
 >the BAR model (Byzantine-Altruistic-Rational)</a>
 and
 <a href="http://www.cs.utexas.edu/~lorenzo/papers/Abraham11Distributed.pdf"
->*(k,t)*-robustness</a>
+><em>(k,t)</em>-robustness</a>
 exemplifies this goal,
 which sometimes appears achievable in closed systems with strong identities.
 But a direct implication of our metacircular argument is that
-an *open* system cannot generally be secure if all participants
+an <em>open</em> system cannot generally be secure if all participants
 are either Byzantine or rational.</p>
 <h2 id="assumptions-underlying-the-argument">Assumptions Underlying the Argument</h2>
 <p>The metacircular argument makes three main assumptions.</p>
@@ -251,7 +251,7 @@ from participating in <em>S</em> is some fraction
 of the total economic value currently embodied in <em>S</em>
 (e.g., its market cap).
 For most realistic permissionless systems
-embodying strong founders&rsquo; or early-adopters&rsquo; rewards,
+embodying strong founders' or early-adopters' rewards,
 if <em>P</em> is not one of the original founders of <em>S</em>
 but arrives substantially after launch,
 then <em>P</em>&rsquo;s near-term payoff prospectives from joining <em>S</em>
@@ -270,16 +270,16 @@ By assumption 2,
 <em>P</em> may in particular have access to, or be able to borrow temporarily,
 financial resources comparable to or larger than the total value of <em>S</em>.</p>
 <p>Suppose the facilities external to <em>S</em> include
-another Ethereum-like cryptocurrency <em>S&rsquo;</em>,
+another Ethereum-like cryptocurrency <em>S'</em>,
 which includes a smart contract facility with which
 decentralized exchanges, futures markets, and the like may be implemented.
 (This is not really a separate assumption because
-even if <em>S&rsquo;</em> did not already exist, <em>P</em> could create and launch it,
+even if <em>S'</em> did not already exist, <em>P</em> could create and launch it,
 given sufficient economic resources under assumption 2.)
-Further, suppose that someone (perhaps <em>P</em>) has created on external system <em>S&rsquo;</em>
+Further, suppose that someone (perhaps <em>P</em>) has created on external system <em>S'</em>
 a decentralized exchange, futures market, or any other mechanism
 by which tokens representing shares of the value of <em>S</em>
-may be traded or speculated upon in the context of <em>S&rsquo;</em>:
+may be traded or speculated upon in the context of <em>S'</em>:
 e.g., a series of tradeable Ethereum tokens
 pegged to <em>S</em>&rsquo;s cryptocurrency or stake units.</p>
 <p>Now suppose participant <em>P</em> finds
@@ -306,7 +306,7 @@ by which <em>P</em> can position itself to violate <em>S</em>&rsquo;s behavioral
 <p>In addition to infiltrating and positioning itself within <em>S</em>,
 <em>P</em> also invokes or borrows enough external funds
 and uses them to short-sell (bet against) shares of <em>S</em>&rsquo;s value massively
-in the context of the external system <em>S&rsquo;</em>,
+in the context of the external system <em>S'</em>,
 which (unlike <em>S</em>) <em>P</em> trusts will remain operational and hold its value
 independently of <em>S</em>.
 Provided <em>P</em> reaches this short-selling position gradually and carefully enough
@@ -315,9 +315,9 @@ the funds <em>P</em> must invoke or borrow for this purpose
 must be bounded by some fraction of the total economic value of <em>S</em>.
 And provided there are at least some participants and/or observers of <em>S</em>
 who believe that <em>S</em> is secure and will remain operating correctly,
-and are willing to bet to that effect on <em>S&rsquo;</em>,
+and are willing to bet to that effect on <em>S'</em>,
 <em>P</em> will eventually be able to build its short position.</p>
-<p>Finally, once <em>P</em> is positioned correctly within both <em>S</em> and <em>S&rsquo;</em>,
+<p>Finally, once <em>P</em> is positioned correctly within both <em>S</em> and <em>S'</em>,
 <em>P</em> then launches its assumption-violating behavior in <em>S</em>
 that will observably cause <em>S</em> to fail as per assumption 2.
 This might manifest as a denial-of-service attack,
@@ -327,19 +327,19 @@ which a nontrivial number of the existing participants in <em>S</em>
 believed would not happen because they believed in <em>S</em> and its threat model.
 The fact that <em>S</em> is now observed to be broken,
 and its basic design assumptions manifestly violated,
-causes the shares of <em>S</em>&rsquo;s value to drop precipitously on external market <em>S&rsquo;</em>,
+causes the shares of <em>S</em>&rsquo;s value to drop precipitously on external market <em>S'</em>,
 on which <em>P</em> takes a handsome profit.
 Perhaps <em>S</em> recovers and continues, or perhaps it fails entirely –
 but either way, <em>P</em> has essentially transferred
 a significant fraction of system <em>S</em>&rsquo;s economic value
-from system <em>S</em> itself to <em>P</em>&rsquo;s own short-sold position on external market <em>S&rsquo;</em>.
+from system <em>S</em> itself to <em>P</em>&rsquo;s own short-sold position on external market <em>S'</em>.
 And to do so, <em>P</em> needed only to find a way – any way –
 to <em>surprise</em> all those who believed <em>S</em> was secure
 and that its threat model accurately modeled <em>S</em>&rsquo;s real-world participants.</p>
 <p>Even if <em>P</em>&rsquo;s assumption-violating behavioral strategy
 does not break <em>S</em> with perfect reliability, but only with some probability,
 <em>P</em> can still create an <em>expectation</em> of positive profit from its attack
-by hedging its bets appropriately on <em>S&rsquo;</em>.
+by hedging its bets appropriately on <em>S'</em>.
 <em>P</em> does not need a perfect attack,
 but merely needs to possess the <em>correct</em> knowledge
 that <em>S</em>&rsquo;s failure probability is much higher
@@ -357,7 +357,7 @@ higher than most of <em>S</em>&rsquo;s participants thought it was.</p>
 specifically violating the assumptions <em>S</em>&rsquo;s designers thought
 participants would not exhibit and thus excluded from <em>S</em>&rsquo;s threat model.
 Considered in the larger context of the external world
-in which <em>S</em> is embedded, however, including the external trading system <em>S&rsquo;</em>,
+in which <em>S</em> is embedded, however, including the external trading system <em>S'</em>,
 <em>P</em>&rsquo;s behavior is perfectly rational and economically-motivated.
 Thus, the very rationality of <em>P</em> in the larger open world
 is precisely what motivates <em>P</em> to break, and profit from,
@@ -408,7 +408,7 @@ of any prior attempt to summarize the lessons learned
 and formulate a general impossibility statement.</p>
 <p>For most practical systems,
 we do not even know if they are incentive compatible
-in the absence of an external system <em>S&rsquo;</em> –
+in the absence of an external system <em>S'</em> –
 i.e., where assumption 2 is violated –
 and probably they are not.
 Almost all game-theoretic treatments of (parts of) the Bitcoin protocol
@@ -436,7 +436,7 @@ it is more general and effectively
 against <em>all</em> open systems that assume participants are rational.</p>
 <p>Another related observation is that
 financial markets on derivatives of a system <em>S</em> mature in the external world
-(e.g., <em>S&rsquo;</em>)
+(e.g., <em>S'</em>)
 as <em>S</em> grows and becomes more relevant.
 So in some sense, systems built on the rationality assumption
 are temporarily more secure only until they become fat enough targets

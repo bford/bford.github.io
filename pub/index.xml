@@ -6,11 +6,7 @@
     <description>Recent content in Papers – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://bford.info/pub/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/pub/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Design choices for Central Bank Digital Currency</title>
       <link>https://bford.info/pub/dec/cbdc/</link>
@@ -251,7 +247,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
     </item>
     
     <item>
-      <title>An Efficient Communication System With Strong Anonymity</title>
+      <title>Riffle: An Efficient Communication System With Strong Anonymity</title>
       <link>https://bford.info/pub/dec/riffle/</link>
       <pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate>
       

@@ -6,11 +6,7 @@
     <description>Recent content in Biometrics on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Aug 2015 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://bford.info/topics/Biometrics/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 11 Aug 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Biometrics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Identity Management through Privacy-Preserving Authentication</title>
       <link>https://bford.info/thesis/2015-syta/</link>

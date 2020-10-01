@@ -5,11 +5,7 @@
     <link>https://bford.info/album/</link>
     <description>Recent content in Bryan&#39;s Photo Album on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://bford.info/album/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://bford.info/album/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Aachen</title>
       <link>https://bford.info/album/2005/0717-Aachen/</link>

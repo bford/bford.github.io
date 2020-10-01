@@ -5,11 +5,7 @@
     <link>https://bford.info/selforg/</link>
     <description>Recent content in Selforgs on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://bford.info/selforg/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://bford.info/selforg/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction: Promise, Failures, and Future of Self-Organizing Technologies</title>
       <link>https://bford.info/selforg/intro/</link>

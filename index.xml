@@ -6,11 +6,7 @@
     <description>Recent content on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction: Promise, Failures, and Future of Self-Organizing Technologies</title>
       <link>https://bford.info/selforg/intro/</link>
@@ -245,7 +241,7 @@ Break this down:
       <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2018/09/11/blockchain/</guid>
-      <description>Blockchain is certainly one of the hot technology topics today. Yes, it&amp;rsquo;s probably in part a hype bubble – but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFL has been investing years of effort in building next generation blockchain architectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled &amp;lt;a href=&amp;quot;https://blockonomi.</description>
+      <description>Blockchain is certainly one of the hot technology topics today. Yes, it&amp;rsquo;s probably in part a hype bubble – but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFL has been investing years of effort in building next generation blockchain architectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled &amp;lt;a href=&amp;ldquo;https://blockonomi.</description>
     </item>
     
     <item>
@@ -454,7 +450,7 @@ In short, miners motivated by transaction fees have even greater incentive to de
     </item>
     
     <item>
-      <title>An Efficient Communication System With Strong Anonymity</title>
+      <title>Riffle: An Efficient Communication System With Strong Anonymity</title>
       <link>https://bford.info/pub/dec/riffle/</link>
       <pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate>
       
@@ -2095,7 +2091,7 @@ Chessboard Hill Cascade   &amp;nbsp;    &amp;nbsp;  &amp;nbsp;  The Grand Cascad
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/11/13/info/</guid>
-      <description>Hillary Clinton&amp;rsquo;s electoral college defeat has provoked many questions about how so many Americans could have choosen a misogynistic, xenophobic, pathologically lying, authoritarian ideologue as their next President &amp;ndash; and one of many targets of their blame is social media. Compounding its polarizing &amp;ldquo;echo chamber&amp;rdquo; effect, online discussions were tarnished with deliberate misinformation, including incorrect instructions on how to vote. But is the solution for social media companies like Facebook to ``do a better job&amp;rsquo;&amp;rsquo; at curating the world&amp;rsquo;s content to suppress out false or hateful speech?</description>
+      <description>Hillary Clinton&amp;rsquo;s electoral college defeat has provoked many questions about how so many Americans could have choosen a misogynistic, xenophobic, pathologically lying, authoritarian ideologue as their next President &amp;ndash; and one of many targets of their blame is social media. Compounding its polarizing &amp;ldquo;echo chamber&amp;rdquo; effect, online discussions were tarnished with deliberate misinformation, including incorrect instructions on how to vote. But is the solution for social media companies like Facebook to ``do a better job&#39;&#39; at curating the world&amp;rsquo;s content to suppress out false or hateful speech?</description>
     </item>
     
     <item>

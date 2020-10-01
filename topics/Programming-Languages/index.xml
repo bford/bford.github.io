@@ -6,11 +6,7 @@
     <description>Recent content in Programming Languages on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://bford.info/topics/Programming-Languages/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Programming-Languages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Are Only Type Parameters Generic Enough for Go 2 Generics?</title>
       <link>https://bford.info/2019/07/29/go-generics/</link>
