@@ -200,8 +200,8 @@ May 12-15, 2019.  Abstract: While showing great promise, smart contracts are dif
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/morphit-abs/</guid>
-      <description>Georgia Fragkouli, Katerina Argyraki, and Bryan Ford EPFL   Proceedings on Privacy Enhancing Technologies
-May 4, 2019.  Abstract: Can we improve Internet transparency without worsening user anonymity? For a long time, researchers have been proposing transparency systems, where traffic reports produced at strategic network points help assess network behavior and verify service-level agreements or neutrality compliance. However, such reports necessarily reveal when certain traffic appeared at a certain network point, and this information could, in principle, be used to compromise low-latency anonymity networks like Tor.</description>
+      <description>Georgia Fragkouli, Katerina Argyraki, and Bryan Ford EPFL Winner of Applied Networking Research Prize (ANRP)  Proceedings on Privacy Enhancing Technologies
+May 4, 2019. Abstract: Can we improve Internet transparency without worsening user anonymity? For a long time, researchers have been proposing transparency systems, where traffic reports produced at strategic network points help assess network behavior and verify service-level agreements or neutrality compliance. However, such reports necessarily reveal when certain traffic appeared at a certain network point, and this information could, in principle, be used to compromise low-latency anonymity networks like Tor.</description>
     </item>
     
     <item>
@@ -311,7 +311,7 @@ May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blo
       
       <guid>https://bford.info/pub/dec/immunity-abs/</guid>
       <description>Stevens Le Blond, Alejandro Cuevas, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Philipp Jovanovic, Bryan Ford, and Jean-Pierre Hubaux
-EPFL  Distinguished Paper Award   IEEE Security &amp; Privacy (IEEE S&amp;P)
+EPFL Winner of Distinguished Paper Award  IEEE Security &amp; Privacy (IEEE S&amp;P)
 May 22, 2018 Abstract: Humanitarian action, the process of aiding individuals in situations of crises, poses unique information-security challenges due to natural or manmade disasters, the adverse environments in which it takes place, and the scale and multidisciplinary nature of the problems.</description>
     </item>
     
@@ -1082,8 +1082,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Mon, 04 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/dissent-abs/</guid>
-      <description>Henry Corrigan-Gibbs and Bryan Ford
-	Yale University  To appear in 17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract:  Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
+      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award  17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract:  Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
     </item>
     
     <item>
@@ -1189,8 +1188,7 @@ Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  
       
       <guid>https://bford.info/pub/os/vx32-abs/</guid>
       <description>Bryan Ford and Russ Cox
-Massachusetts Institute of Technology USENIX Annual Technical Conference
-Awarded Best Student Paper
+Massachusetts Institute of Technology  Winnder of Best Student Paper Award  USENIX Annual Technical Conference
 June 22-27, 2008, Boston, Massachusetts. Abstract:  Code sandboxing is useful for many purposes, but most sandboxing techniques require kernel modifications, do not completely isolate guest code, or incur substantial performance costs. Vx32 is a multipurpose user-level sandbox that enables any application to load and safely execute one or more guest plug-ins, confining each guest to a system call API controlled by the host application and to a restricted memory region within the host&amp;rsquo;s address space.</description>
     </item>
     
@@ -2131,6 +2129,16 @@ Chessboard Hill Cascade   &amp;nbsp;    &amp;nbsp;  &amp;nbsp;  The Grand Cascad
       <description>St. Petersburg June 20-27, 2003     &amp;nbsp;  &amp;nbsp;    &amp;nbsp;   Palace Square   &amp;nbsp;   Kazan Cathedral     &amp;nbsp;  &amp;nbsp;   St. Isaac&#39;s Cathedral   &amp;nbsp;  &amp;nbsp;    &amp;nbsp;  &amp;nbsp;  White nights in the channels  
 Peter and Paul Fortress 
 Atlas holding up the New Hermitage</description>
+    </item>
+    
+    <item>
+      <title>Secure, Scalable Proof-of-Stake Blockchains</title>
+      <link>https://bford.info/draft/sybil-minions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/sybil-minions/</guid>
+      <description>My preliminary analysis of proof-of-personhood designs that assign a mixture of human and Sybil identities into random groups for simultaneous verification - as in Pseudonym Pairs, Idena, or Encointer - works out a bit differently.
+In my model, the attacker works in rounds, taking the time needed to double the number of Sybil identities in each round and reach a new sustainable state, where the attacker collects enough basic income from Sybils to (more than) cover the minions he hires to keep them verified.</description>
     </item>
     
     <item>

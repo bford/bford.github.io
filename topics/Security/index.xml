@@ -137,7 +137,7 @@ May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blo
       
       <guid>https://bford.info/pub/dec/immunity-abs/</guid>
       <description>Stevens Le Blond, Alejandro Cuevas, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Philipp Jovanovic, Bryan Ford, and Jean-Pierre Hubaux
-EPFL  Distinguished Paper Award   IEEE Security &amp; Privacy (IEEE S&amp;P)
+EPFL Winner of Distinguished Paper Award  IEEE Security &amp; Privacy (IEEE S&amp;P)
 May 22, 2018 Abstract: Humanitarian action, the process of aiding individuals in situations of crises, poses unique information-security challenges due to natural or manmade disasters, the adverse environments in which it takes place, and the scale and multidisciplinary nature of the problems.</description>
     </item>
     
@@ -624,8 +624,7 @@ Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  
       
       <guid>https://bford.info/pub/os/vx32-abs/</guid>
       <description>Bryan Ford and Russ Cox
-Massachusetts Institute of Technology USENIX Annual Technical Conference
-Awarded Best Student Paper
+Massachusetts Institute of Technology  Winnder of Best Student Paper Award  USENIX Annual Technical Conference
 June 22-27, 2008, Boston, Massachusetts. Abstract:  Code sandboxing is useful for many purposes, but most sandboxing techniques require kernel modifications, do not completely isolate guest code, or incur substantial performance costs. Vx32 is a multipurpose user-level sandbox that enables any application to load and safely execute one or more guest plug-ins, confining each guest to a system call API controlled by the host application and to a restricted memory region within the host&amp;rsquo;s address space.</description>
     </item>
     
