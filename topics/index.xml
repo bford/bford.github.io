@@ -6,13 +6,40 @@
     <description>Recent content in Writings by Topic – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Democracy</title>
       <link>https://bford.info/topics/Democracy/</link>
-      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Democracy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Law</title>
+      <link>https://bford.info/topics/Law/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Law/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Surveillance</title>
+      <link>https://bford.info/topics/Surveillance/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Surveillance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transparency</title>
+      <link>https://bford.info/topics/Transparency/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Transparency/</guid>
       <description></description>
     </item>
     
@@ -71,15 +98,6 @@
     </item>
     
     <item>
-      <title>Transparency</title>
-      <link>https://bford.info/topics/Transparency/</link>
-      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Transparency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Voting</title>
       <link>https://bford.info/topics/Voting/</link>
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
@@ -112,24 +130,6 @@
       <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Economics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Law</title>
-      <link>https://bford.info/topics/Law/</link>
-      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Law/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Surveillance</title>
-      <link>https://bford.info/topics/Surveillance/</link>
-      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Surveillance/</guid>
       <description></description>
     </item>
     

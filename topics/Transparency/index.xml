@@ -6,7 +6,18 @@
     <description>Recent content in Transparency on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Transparency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Transparency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI for Governance Belongs in Mechanism, Not Policy</title>
+      <link>https://bford.info/post/2020-11-18-ai-governance/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2020-11-18-ai-governance/</guid>
+      <description>AI in Policy?   This post contains an address delivered at the IRGC conference on Governance Of and By Digital Technology.
+ The separation of mechanism and policy Computer science has a well-established design principle known as separation of mechanism and policy. I think this principle may be equally applicable to human governance &amp;ndash; especially in considering the question of where AI does and does not belong.
+I believe the cautious use of today&amp;rsquo;s powerful AI technologies based on machine learning can justifiably play many useful roles in implementing low-level mechanisms used in governance.</description>
+    </item>
+    
     <item>
       <title>Identity and Personhood in Digital Democracy: Evaluating Inclusion, Equality, Security, and Privacy in Pseudonym Parties and Other Proofs of Personhood</title>
       <link>https://bford.info/pub/soc/personhood/</link>
