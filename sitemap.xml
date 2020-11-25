@@ -32,7 +32,42 @@
   
   <url>
     <loc>https://bford.info/</loc>
-    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Blockchain/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/sec/calypso/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Cryptography/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/pub/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Privacy/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/Security/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bford.info/topics/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -66,11 +101,6 @@
   </url>
   
   <url>
-    <loc>https://bford.info/topics/</loc>
-    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/topics/Identity/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
   </url>
@@ -81,27 +111,12 @@
   </url>
   
   <url>
-    <loc>https://bford.info/pub/</loc>
-    <lastmod>2020-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/topics/Personhood/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bford.info/topics/Privacy/</loc>
-    <lastmod>2020-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bford.info/topics/Rights/</loc>
-    <lastmod>2020-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Security/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -113,16 +128,6 @@
   <url>
     <loc>https://bford.info/topics/Voting/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Blockchain/</loc>
-    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/topics/Cryptography/</loc>
-    <lastmod>2020-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -328,11 +333,6 @@
   <url>
     <loc>https://bford.info/pub/dec/immunity-abs/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bford.info/pub/sec/calypso/</loc>
-    <lastmod>2018-02-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>

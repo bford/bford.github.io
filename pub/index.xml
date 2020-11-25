@@ -6,7 +6,18 @@
     <description>Recent content in Papers – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/pub/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/pub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CALYPSO: Private Data Management for Decentralized Ledgers</title>
+      <link>https://bford.info/pub/sec/calypso/</link>
+      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/calypso/</guid>
+      <description>Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford  To appear in
+47th International Conference on Very Large Data Bases (VLDB 2021)
+Copenhagen, Denmark &amp;ndash; August 16-20, 2021 Abstract: Distributed ledgers provide high availability and integrity, making them a key enabler for practical and secure computation of distributed workloads among mutually distrustful parties. Many practical applications also require strong confidentiality, however, the third pillar of the CIA triad.</description>
+    </item>
+    
     <item>
       <title>Identity and Personhood in Digital Democracy: Evaluating Inclusion, Equality, Security, and Privacy in Pseudonym Parties and Other Proofs of Personhood</title>
       <link>https://bford.info/pub/soc/personhood/</link>
@@ -162,16 +173,6 @@ May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blo
       <description>Stevens Le Blond, Alejandro Cuevas, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Philipp Jovanovic, Bryan Ford, and Jean-Pierre Hubaux
 EPFL Winner of Distinguished Paper Award  IEEE Security &amp; Privacy (IEEE S&amp;P)
 May 22, 2018 Abstract: Humanitarian action, the process of aiding individuals in situations of crises, poses unique information-security challenges due to natural or manmade disasters, the adverse environments in which it takes place, and the scale and multidisciplinary nature of the problems.</description>
-    </item>
-    
-    <item>
-      <title>Verifiable Management of Private Data under Byzantine Failures</title>
-      <link>https://bford.info/pub/sec/calypso/</link>
-      <pubDate>Wed, 21 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/pub/sec/calypso/</guid>
-      <description>Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford   Cryptology ePrint Archive
-February 21, 2018  Abstract: Distributed ledger technologies provide high availability and integrity, making them a key enabler for practical and secure computation of distributed workloads among mutually distrustful parties. However, many practical applications also require confidentiality, the third pillar of the CIA triad. In this work, we enhance permissioned and permissionless blockchains with the ability to manage confidential data without forfeiting availability or decentralization.</description>
     </item>
     
     <item>

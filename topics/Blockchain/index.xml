@@ -6,7 +6,18 @@
     <description>Recent content in Blockchain on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CALYPSO: Private Data Management for Decentralized Ledgers</title>
+      <link>https://bford.info/pub/sec/calypso/</link>
+      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/calypso/</guid>
+      <description>Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford  To appear in
+47th International Conference on Very Large Data Bases (VLDB 2021)
+Copenhagen, Denmark &amp;ndash; August 16-20, 2021 Abstract: Distributed ledgers provide high availability and integrity, making them a key enabler for practical and secure computation of distributed workloads among mutually distrustful parties. Many practical applications also require strong confidentiality, however, the third pillar of the CIA triad.</description>
+    </item>
+    
     <item>
       <title>Design choices for Central Bank Digital Currency</title>
       <link>https://bford.info/pub/dec/cbdc/</link>
@@ -96,16 +107,6 @@ May 12-15, 2019.  Abstract: While showing great promise, smart contracts are dif
       <description>Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, Ewa Syta, and Bryan Ford
   IEEE Security &amp; Privacy (IEEE S&amp;P)
 May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blockchain) that performs on par with centralized payment processors, such as Visa, is a challenging task. Most existing distributed ledgers are unable to scale-out, i.e., to grow their total processing capacity with the number of validators; and those that do, compromise security or decentralization.</description>
-    </item>
-    
-    <item>
-      <title>Verifiable Management of Private Data under Byzantine Failures</title>
-      <link>https://bford.info/pub/sec/calypso/</link>
-      <pubDate>Wed, 21 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/pub/sec/calypso/</guid>
-      <description>Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford   Cryptology ePrint Archive
-February 21, 2018  Abstract: Distributed ledger technologies provide high availability and integrity, making them a key enabler for practical and secure computation of distributed workloads among mutually distrustful parties. However, many practical applications also require confidentiality, the third pillar of the CIA triad. In this work, we enhance permissioned and permissionless blockchains with the ability to manage confidential data without forfeiting availability or decentralization.</description>
     </item>
     
     <item>

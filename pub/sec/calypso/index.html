@@ -7,7 +7,7 @@
       <meta name="Author" content="Bryan Ford">
     
     <title>
-  Verifiable Management of Private Data under Byzantine Failures &ndash; Bryan Ford&#39;s Home Page
+  CALYPSO: Private Data Management for Decentralized Ledgers &ndash; Bryan Ford&#39;s Home Page
 </title>
     <link rel="shortcut icon" href="/img/favicon.ico"
 	type="image/x-icon" />
@@ -39,43 +39,45 @@
     
 
     
-  <h1>Verifiable Management of Private Data under Byzantine Failures</h1>
+  <h1>CALYPSO: Private Data Management for Decentralized Ledgers</h1>
   
-<center>
+<p align="center">
 <strong>
 Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford
 </strong>
+</p>
 
-<p>
-<a href="https://eprint.iacr.org/2018/209">Cryptology ePrint Archive</a><br>
-February 21, 2018
-</center>
+<p align="center">
+To appear in<br>
+<a href="https://vldb.org/2021/">47th International Conference on
+	Very Large Data Bases (VLDB 2021)</a><br>
+Copenhagen, Denmark &ndash; August 16-20, 2021
+</p>
 
 <h3>Abstract:</h3>
-Distributed ledger technologies provide high availability and integrity, making
-them a key enabler for practical and secure computation of distributed
-workloads among mutually distrustful parties. However, many practical
-applications also require confidentiality, the third pillar of the CIA triad.
-In this work, we enhance permissioned and permissionless blockchains with the
-ability to manage confidential data without forfeiting availability or
-decentralization. More specifically, CALYPSO sets out to achieve two orthogonal
-goals that challenge modern distributed ledgers: (a) enable blockchains to
-auditably manage secrets and (b) protect distributed computations against
-arbitrage attacks when their results depend on the ordering and secrecy of
-inputs.
+Distributed ledgers provide high availability and integrity, making them a key
+enabler for practical and secure computation of distributed workloads among
+mutually distrustful parties. Many practical applications also require strong
+confidentiality, however, the third pillar of the CIA triad. In this work, we
+enhance permissioned and permissionless blockchains with the ability to
+manage confidential data without forfeiting availability or decentralization.
+More specifically, Calypso, the system we propose, sets out to achieve two
+orthogonal goals that challenge modern distributed ledgers: (a) enable the
+auditable management of secrets and (b) protect distributed computations
+against arbitrage attacks when their results depend on the ordering and secrecy
+of inputs.
 
 <p>
-To this end, CALYPSO proposes on-chain secrets, a novel abstraction that
+To this end, Calypso introduces on-chain secrets, a novel abstraction that
 enforces atomic deposition of an auditable trace whenever users access
-confidential data. Furthermore, CALYPSO provides user-controlled consent
-management that ensures revocation atomicity and accountable anonymity.
-Finally, to enable the permissionless deployment of CALYPSO, we introduce an
-incentive scheme and provide users with the option to select their preferred
-trustees. We evaluated our CALYPSO prototype with a confidential document
-sharing application and a decentralized lottery. Our benchmarks show that the
-latency of processing transactions increases linearly to the added security (in
-number of trustees) and is in the range of 0.2 to 8 seconds for 16 to 128
-trustees.
+confidential data. Calypso provides user-controlled consent management that
+ensures revocation atomicity and accountable anonymity. Finally, to enable the
+permissionless deployment of Calypso, we introduce an incentive scheme and
+provide users with the option to select their preferred trustees. We evaluated
+our Calypso prototype with a confidential document sharing application and a
+decentralized lottery. Our benchmarks show that the latency of processing
+transactions increases linearly to the added security (in number of trustees)
+and is in the range of 0.2 to 8 seconds for 16 to 128 trustees.
 
 <h3>Draft:
 <a href="https://eprint.iacr.org/2018/209">PDF</a>
