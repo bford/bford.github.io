@@ -40,7 +40,8 @@
 
     
   <h1>Binary Encoded Schematic Objects (BESO)</h1>
-  <p>BESO provides a generic representation for any JSON,
+  <p>(or JBIN? or&hellip;?)</p>
+<p>BESO provides a generic representation for any JSON,
 using JSON Schema information to provide a compact binary encoding.
 Unlike schema-free binary encodings like BSON and CBOR,
 BESO encoding leverages the schema to optimize the encoded representation,
@@ -113,19 +114,19 @@ is not in the range 0x00 through 0x0f,
 then a leading zero byte is prepended.</p>
 <p>Some example encodings of integers are as follows:</p>
 <pre><code>    +0   -&gt; [0x00]
-    -0   -&gt; [0x01]
-    +1   -&gt; [0x02]
-    -1   -&gt; [0x03]
-    +2   -&gt; [0x04]
-    -2   -&gt; [0x05]
-    +7   -&gt; [0x0e]
-    -7   -&gt; [0x0f]
-    +8   -&gt; [0x00,0x10]
-    -8   -&gt; [0x00,0x11]
-    +128 -&gt; [0x01,0x00]
-    -128 -&gt; [0x01,0x01]
-    +256 -&gt; [0x02,0x00]
-    -256 -&gt; [0x02,0x01]
+	-0   -&gt; [0x01]
+	+1   -&gt; [0x02]
+	-1   -&gt; [0x03]
+	+2   -&gt; [0x04]
+	-2   -&gt; [0x05]
+	+7   -&gt; [0x0e]
+	-7   -&gt; [0x0f]
+	+8   -&gt; [0x00,0x10]
+	-8   -&gt; [0x00,0x11]
+	+128 -&gt; [0x01,0x00]
+	-128 -&gt; [0x01,0x01]
+	+256 -&gt; [0x02,0x00]
+	-256 -&gt; [0x02,0x01]
 </code></pre>
 <p>In this way, integers close to zero remain small after zigzag-encoding,
 and thus require few bytes to serialize.
@@ -178,21 +179,21 @@ rather than a negative zero exponent.</p>
 <p>Some example exponents are as follows
 after both zigzag-encoding and CBE-encoding:</p>
 <pre><code>    e = 0        -&gt; [0x00]            1-byte CBE-encoding for
-    infinity/NaN -&gt; [0x01]            1-byte exponent 0x00-0x7f
-    e = +1       -&gt; [0x02]
-    e = -1       -&gt; [0x03]
-    e = +2       -&gt; [0x04]
-    e = -2       -&gt; [0x05]
-    e = +63      -&gt; [0x7e]
-    e = -63      -&gt; [0x7f]
-    e = +64      -&gt; [0x81,0x80]       2-byte CBE-encoding for
-    e = -64      -&gt; [0x81,0x81]       1-byte exponent 0x80-0xff
-    e = +127     -&gt; [0x81,0xfe]
-    e = -127     -&gt; [0x81,0xff]
-    e = +128     -&gt; [0x82,0x01,0x00]  3-byte CBE-encoding for
-    e = -128     -&gt; [0x82,0x01,0x01]  2-byte exponents
-    e = +32767   -&gt; [0x82,0xff,0xfe]
-    e = -32767   -&gt; [0x82,0xff,0xff]
+	infinity/NaN -&gt; [0x01]            1-byte exponent 0x00-0x7f
+	e = +1       -&gt; [0x02]
+	e = -1       -&gt; [0x03]
+	e = +2       -&gt; [0x04]
+	e = -2       -&gt; [0x05]
+	e = +63      -&gt; [0x7e]
+	e = -63      -&gt; [0x7f]
+	e = +64      -&gt; [0x81,0x80]       2-byte CBE-encoding for
+	e = -64      -&gt; [0x81,0x81]       1-byte exponent 0x80-0xff
+	e = +127     -&gt; [0x81,0xfe]
+	e = -127     -&gt; [0x81,0xff]
+	e = +128     -&gt; [0x82,0x01,0x00]  3-byte CBE-encoding for
+	e = -128     -&gt; [0x82,0x01,0x01]  2-byte exponents
+	e = +32767   -&gt; [0x82,0xff,0xfe]
+	e = -32767   -&gt; [0x82,0xff,0xff]
 </code></pre>
 <p>Finally, the mantissa uses the same zigzag encoding as for integers,
 with encoded values 0 and 1 representing positive and negative zero.
@@ -205,17 +206,17 @@ the mantissa field can be empty, i.e., zero bytes long.
 This is the preferred representation since it is the most compact.</p>
 <p>Some example mantissa encodings are as follows:</p>
 <pre><code>    m = +0     -&gt; []
-    m = -0     -&gt; [0x01]
-    m = +1     -&gt; [0x02]
-    m = -1     -&gt; [0x03]
-    m = +2     -&gt; [0x04]
-    m = -2     -&gt; [0x05]
-    m = +127   -&gt; [0xfe]
-    m = -127   -&gt; [0xff]
-    m = +128   -&gt; [0x01,0x00]
-    m = -128   -&gt; [0x01,0x01]
-    m = +32767 -&gt; [0xff,0xfe]
-    m = -32767 -&gt; [0xff,0xff]
+	m = -0     -&gt; [0x01]
+	m = +1     -&gt; [0x02]
+	m = -1     -&gt; [0x03]
+	m = +2     -&gt; [0x04]
+	m = -2     -&gt; [0x05]
+	m = +127   -&gt; [0xfe]
+	m = -127   -&gt; [0xff]
+	m = +128   -&gt; [0x01,0x00]
+	m = -128   -&gt; [0x01,0x01]
+	m = +32767 -&gt; [0xff,0xfe]
+	m = -32767 -&gt; [0xff,0xff]
 </code></pre>
 <p>Readers must be prepared to accept leading zero bytes
 in the exponent and/or mantissa.
@@ -307,13 +308,13 @@ followed by the untyped encoding of the value.</p>
 <p>Consider this schema, for example:</p>
 <pre><code>    {
       &quot;enum&quot;: [&quot;red&quot;, &quot;amber&quot;, &quot;green&quot;]
-    }
+	}
 </code></pre>
 <p>The following illustrates how four example values are encoded:</p>
 <pre><code>    &quot;red&quot;   -&gt; []
-    &quot;amber&quot; -&gt; [0x01]
-    &quot;green&quot; -&gt; [0x02]
-    &quot;blue&quot;  -&gt; [0xff,0x62,0x6c,0x75,0x65]
+	&quot;amber&quot; -&gt; [0x01]
+	&quot;green&quot; -&gt; [0x02]
+	&quot;blue&quot;  -&gt; [0xff,0x62,0x6c,0x75,0x65]
 </code></pre>
 <h2 id="schema-of-integer-type">Schema of integer type</h2>
 <p>When the scheme specifies a <code>type</code> of <code>integer</code>,
@@ -336,25 +337,25 @@ integers between -32639 and +32639 require at most two bytes,
 and so on,
 as the following encoding examples illustrate:</p>
 <pre><code>    +0      -&gt; []
-    -0      -&gt; [0x01]
-    +1      -&gt; [0x02]
-    -1      -&gt; [0x03]
-    +126    -&gt; [0xfc]
-    -126    -&gt; [0xfd]
-    +127    -&gt; [0xfe]
-    -127    -&gt; [0x00,0xff]
-    +128    -&gt; [0x01,0x00]
-    -128    -&gt; [0x01,0x01]
-    +32639  -&gt; [0xfe,0xfe]
-    -32639  -&gt; [0xfe,0xff]
-    +32640  -&gt; [0x00,0xff,0x00]
-    -32640  -&gt; [0x00,0xff,0x01]
-    +32767  -&gt; [0x00,0xff,0xfe]
-    -32767  -&gt; [0x00,0xff,0xff]
-    +32768  -&gt; [0x01,0x00,0x00]
-    -32768  -&gt; [0x01,0x00,0x01]
-    null    -&gt; [0xff,0x1e]
-    &quot;a&quot;     -&gt; [0xff,0x61]
+	-0      -&gt; [0x01]
+	+1      -&gt; [0x02]
+	-1      -&gt; [0x03]
+	+126    -&gt; [0xfc]
+	-126    -&gt; [0xfd]
+	+127    -&gt; [0xfe]
+	-127    -&gt; [0x00,0xff]
+	+128    -&gt; [0x01,0x00]
+	-128    -&gt; [0x01,0x01]
+	+32639  -&gt; [0xfe,0xfe]
+	-32639  -&gt; [0xfe,0xff]
+	+32640  -&gt; [0x00,0xff,0x00]
+	-32640  -&gt; [0x00,0xff,0x01]
+	+32767  -&gt; [0x00,0xff,0xfe]
+	-32767  -&gt; [0x00,0xff,0xff]
+	+32768  -&gt; [0x01,0x00,0x00]
+	-32768  -&gt; [0x01,0x00,0x01]
+	null    -&gt; [0xff,0x1e]
+	&quot;a&quot;     -&gt; [0xff,0x61]
 </code></pre>
 <h2 id="schema-of-number-type">Schema of number type</h2>
 <p>XXX</p>
@@ -471,8 +472,8 @@ an <code>encoding</code> property of <code>unsigned</code> indicates
 that values greater than or equal to zero are to be encoded
 in a variable-length binary representation:</p>
 <pre><code>{
-    &quot;type&quot;: &quot;integer&quot;,
-    &quot;encoding&quot;: &quot;binary&quot;
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;binary&quot;
 }
 </code></pre>
 <p>A <code>byteOrder</code> property may specify
@@ -480,9 +481,9 @@ the byte order for the encoded integer,
 either <code>bigEndian</code> (most-significant byte first)
 or <code>littleEndian</code> (least-significant byte first).</p>
 <pre><code>{
-    &quot;type&quot;: &quot;integer&quot;,
-    &quot;encoding&quot;: &quot;binary&quot;,
-    &quot;byteOrder&quot;: &quot;littleEndian&quot;
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;binary&quot;,
+	&quot;byteOrder&quot;: &quot;littleEndian&quot;
 }
 </code></pre>
 <p>In this encoding, the integer 65 is encoded
@@ -501,8 +502,8 @@ into unsigned integer values,
 then the latter encoded as a binary unsigned integer
 as described above.</p>
 <pre><code>{
-    &quot;type&quot;: &quot;integer&quot;,
-    &quot;encoding&quot;: &quot;zigzag&quot;,
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;zigzag&quot;,
 }
 </code></pre>
 <p>In zigzag encoding,
@@ -528,9 +529,9 @@ a given number of bits wide.
 For example, this type indicates an integer
 encoded in exactly one byte as an unsigned integer:</p>
 <pre><code>{
-    &quot;type&quot;: &quot;integer&quot;,
-    &quot;encoding&quot;: &quot;unsigned&quot;,
-    &quot;bits&quot;: 8
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;unsigned&quot;,
+	&quot;bits&quot;: 8
 }
 </code></pre>
 <p>The `bits' property&rsquo;s value must be a nonnegative integer
@@ -545,19 +546,19 @@ but a strict-specification mode for schema validators
 should require endianness to be specified?</p>
 <p>An example of a 32-bit unsigned integer encoding in network byte-order:</p>
 <pre><code>{
-    &quot;type&quot;: &quot;integer&quot;,
-    &quot;encoding&quot;: &quot;unsigned&quot;,
-    &quot;byteOrder&quot;: &quot;bigEndian&quot;,
-    &quot;bits&quot;: 32
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;unsigned&quot;,
+	&quot;byteOrder&quot;: &quot;bigEndian&quot;,
+	&quot;bits&quot;: 32
 }
 </code></pre>
 <p>The <code>bits</code> field need not be a power of two.
 For example, this integer is encoded in three bytes:</p>
 <pre><code>{
-    &quot;type&quot;: &quot;integer&quot;,
-    &quot;encoding&quot;: &quot;unsigned&quot;,
-    &quot;byteOrder&quot;: &quot;littleEndian&quot;,
-    &quot;bits&quot;: 24
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;unsigned&quot;,
+	&quot;byteOrder&quot;: &quot;littleEndian&quot;,
+	&quot;bits&quot;: 24
 }
 </code></pre>
 <p>Note that the above examples did not specify a semantic value range
@@ -579,12 +580,12 @@ without a specified <code>minimum</code> and <code>maximum</code> that is repres
 restricts the semantic value to a range of 1 through 16,000,000,
 a subset of the representable value range of 0 through 16,777,215 (2^24-1).</p>
 <pre><code>{
-    &quot;type&quot;: &quot;integer&quot;,
-    &quot;minimum&quot;: 1,
-    &quot;maximum&quot;: 16000000
-    &quot;encoding&quot;: &quot;unsigned&quot;,
-    &quot;byteOrder&quot;: &quot;littleEndian&quot;,
-    &quot;bits&quot;: 24
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;minimum&quot;: 1,
+	&quot;maximum&quot;: 16000000
+	&quot;encoding&quot;: &quot;unsigned&quot;,
+	&quot;byteOrder&quot;: &quot;littleEndian&quot;,
+	&quot;bits&quot;: 24
 }
 </code></pre>
 <p>For now, <code>bits</code> must be a multiple of 8.
@@ -604,17 +605,17 @@ a <code>bits</code> property is required and must be a multiple of 8 for now,
 and a <code>byteOrder</code> property is required if <code>bits</code> is greater than 8.</p>
 <p>An example of an 8-bit signed integer:</p>
 <pre><code>{
-    &quot;type&quot;: &quot;integer&quot;,
-    &quot;encoding&quot;: &quot;signed&quot;,
-    &quot;bits&quot;: 8
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;signed&quot;,
+	&quot;bits&quot;: 8
 }
 </code></pre>
 <p>Similarly, a 64-bit little-endian signed integer:</p>
 <pre><code>{
-    &quot;type&quot;: &quot;integer&quot;,
-    &quot;encoding&quot;: &quot;signed&quot;,
-    &quot;bits&quot;: 64,
-    &quot;byteOrder&quot;: &quot;littleEndian&quot;
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;signed&quot;,
+	&quot;bits&quot;: 64,
+	&quot;byteOrder&quot;: &quot;littleEndian&quot;
 }
 </code></pre>
 <h3 id="offset-encoded-integers">Offset-encoded integers</h3>
@@ -624,12 +625,12 @@ For example, this schema type represents semantic values
 between 200 through 300 inclusive,
 encoded as single-byte values from 0 through 100:</p>
 <pre><code>{
-    &quot;type&quot;: &quot;integer&quot;,
-    &quot;minimum&quot;: 200,
-    &quot;maximum&quot;: 300,
-    &quot;offset&quot;: 200,
-    &quot;encoding&quot;: &quot;unsigned/bigEndian&quot;,
-    &quot;bits&quot;: 8
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;minimum&quot;: 200,
+	&quot;maximum&quot;: 300,
+	&quot;offset&quot;: 200,
+	&quot;encoding&quot;: &quot;unsigned/bigEndian&quot;,
+	&quot;bits&quot;: 8
 }
 </code></pre>
 <p>When an <code>offset</code> is specified and is less than or equal to the <code>minimum</code>,
@@ -640,12 +641,12 @@ with byte value 0 representing semantic value -100,
 100 representing 0,
 and 200 representing 100:</p>
 <pre><code>{
-    &quot;type&quot;: &quot;integer&quot;,
-    &quot;minimum&quot;: -100,
-    &quot;maximum&quot;: 100,
-    &quot;offset&quot;: -100,
-    &quot;encoding&quot;: &quot;unsigned&quot;,
-    &quot;bits&quot;: 8
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;minimum&quot;: -100,
+	&quot;maximum&quot;: 100,
+	&quot;offset&quot;: -100,
+	&quot;encoding&quot;: &quot;unsigned&quot;,
+	&quot;bits&quot;: 8
 }
 </code></pre>
 <h2 id="floating-point-numbers-1">Floating-point numbers</h2>
@@ -658,8 +659,8 @@ to indicate that representation be used
 as the binary encoding of this number.
 For example:</p>
 <pre><code>{
-    &quot;type&quot;: &quot;number&quot;,
-    &quot;encoding&quot;: &quot;binary32&quot;,
+	&quot;type&quot;: &quot;number&quot;,
+	&quot;encoding&quot;: &quot;binary32&quot;,
 }
 </code></pre>
 <p>The floating-point representations currently defined in
@@ -677,12 +678,12 @@ of course.</p>
 to indicate a packed array of fixed-length elements.
 This example expresses a packed array of 8-bit unsigned integers:</p>
 <pre><code>{
-    &quot;type&quot;: &quot;array&quot;,
-    &quot;items&quot;: {
+	&quot;type&quot;: &quot;array&quot;,
+	&quot;items&quot;: {
         &quot;type&quot;: &quot;integer&quot;,
         &quot;encoding&quot;: &quot;unsigned&quot;,
         &quot;bits&quot;: 8
-    }
+	}
 }
 </code></pre>
 <p>The array element schema specified in the <code>items</code> property
@@ -695,6 +696,12 @@ which is exactly the element type length times the array length.</p>
 <p>A schema of type <code>array</code> with an <code>encoding</code> of <code>cbe</code>
 indicates that the array has a binary representation consisting of
 a sequence of variable-length items, each individually CBE-encoded.</p>
+<h1 id="comparison-with-other-popular-binary-formats">Comparison with other popular binary formats</h1>
+<p><a href="https://avro.apache.org">Avro</a>,
+<a href="https://developers.google.com/protocol-buffers">Protobuf</a>,
+<a href="https://thrift.apache.org">Thrift</a>.</p>
+<p>Non-schematic:
+CBOR, BSON, UBJSON, etc.</p>
 
 
 

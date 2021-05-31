@@ -342,7 +342,7 @@ the following two CRIs are <em>not</em> equivalent
 because they represent queries for different <em>literal</em> query strings
 (which happen to be CRIs in this case but need not necessarily be):</p>
 <pre><code>    https[//checker.org/web?page=https[//bford.info/~user/]]
-    https[//checker.org/web?page=https[//bford.info/%7Euser/]]
+	https[//checker.org/web?page=https[//bford.info/%7Euser/]]
 </code></pre>
 <p>The inner bracket pair essentially quotes special characters
 such as percent signs,
@@ -394,14 +394,14 @@ and complete bracketed substrings may be percent-encoded and decoded in CRIs
 without changing the meaning of a CRI,
 the following URI and three CRIs are all equivalent:</p>
 <pre><code>    https://checker.org/web?page=https%5B%2F%2Fbford%2Einfo%2F%5D
-    https[//checker.org/web?page=https%5B%2F%2Fbford%2Einfo%2F%5D]
-    https[//checker.org/web?page=https%5B%2F%2Fbford.info%2F%5D]
-    https[//checker.org/web?page=https[//bford.info/]]
+	https[//checker.org/web?page=https%5B%2F%2Fbford%2Einfo%2F%5D]
+	https[//checker.org/web?page=https%5B%2F%2Fbford.info%2F%5D]
+	https[//checker.org/web?page=https[//bford.info/]]
 </code></pre>
 <p>The following CRIs, however, are <em>not</em> equivalent to those above
 but represent different literal query strings:</p>
 <pre><code>    https[//checker.org/web?page=https[//bford%2Einfo/]]
-    https[//checker.org/web?page=https[%2F%2Fbford%2Einfo%2F]]
+	https[//checker.org/web?page=https[%2F%2Fbford%2Einfo%2F]]
 </code></pre>
 <p>URIs and IRIs already constrain
 <a href="https://tools.ietf.org/html/rfc3986#section-3.1">scheme names</a>
@@ -565,13 +565,13 @@ and drop its closing square bracket.</li>
 </ol>
 <p>Here are a few examples before and after conversion from CRI to IRI/URI:</p>
 <pre><code>    https[//bford.info/]
-    https://bford.info/
+	https://bford.info/
 
-    https[//ip4[1.2.3.4]/find?set={a,b,c};page=https[//bford.info/]]
-    https://1.2.3.4/find?set=%7Ba%2Cb%2Cc%7D;page=https%5B%2F%2Fbford.info%2F%5D
+	https[//ip4[1.2.3.4]/find?set={a,b,c};page=https[//bford.info/]]
+	https://1.2.3.4/find?set=%7Ba%2Cb%2Cc%7D;page=https%5B%2F%2Fbford.info%2F%5D
 
-    https[//ip6[fe80::1234%eth0]/unzip/https[//bford.info/stuff.zip]/dest/path/]
-    https://[fe80::1234%25eth0]/unzip/https%5B%2F%2Fbford.info%2Fstuff.zip%5D/dest/path/
+	https[//ip6[fe80::1234%eth0]/unzip/https[//bford.info/stuff.zip]/dest/path/]
+	https://[fe80::1234%25eth0]/unzip/https%5B%2F%2Fbford.info%2Fstuff.zip%5D/dest/path/
 </code></pre>
 <h2 id="converting-uris-and-iris-to-cris">Converting URIs and IRIs to CRIs</h2>
 <p>The reverse conversion is possible too, of course.
@@ -609,7 +609,7 @@ or matched brackets containing forbidden characters,
 these sequences are left percent-encoded in the resulting CRI.</p>
 <p>Here is an illustrative example of a conversion from IRI/URI to CRI:</p>
 <pre><code>    https://search.org/find?chr=%5B;str=%5Ba%5B%5Bb%5D%5D%20%5D;page=https%5B%2F%2Fbford.info%2F%5D
-    https[//search.org/find?chr=%5B;str=%5Ba[[b]]%20%5D;page=https[//bford.info/]]
+	https[//search.org/find?chr=%5B;str=%5Ba[[b]]%20%5D;page=https[//bford.info/]]
 </code></pre>
 <p>Notice that while the nested CRI in the <code>page</code> parameter is fully decoded,
 the unbalanced open bracket passed to the <code>chr</code> parameter is not decoded.

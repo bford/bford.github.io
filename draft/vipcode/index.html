@@ -123,15 +123,15 @@ and other wire formats in the future:</p>
         a []byte	// a variable-length byte array
         v [3]float32	// a fixed-length vector of three floats
         r []Example	// a recursive list of structs
-    }
+	}
 </code></pre>
 <p>Using the
 <a href="xxx">vipcode/protobuf</a> package,
 you can marshal an instance of the <code>Example</code> struct into
 protobuf wire format as follows:</p>
 <pre><code>    var e Example
-    // ... (fill in fields of e) ...
-    buf, err := protobuf.Encode(&amp;e)
+	// ... (fill in fields of e) ...
+	buf, err := protobuf.Encode(&amp;e)
 </code></pre>
 <p>You can similarly unmarshal a serialized instance as follows:</p>
 <pre><code>    err := protobuf.Decode(buf, &amp;e)
@@ -188,16 +188,16 @@ specifying this language-independent &ldquo;message&rdquo; definition:</p>
         bytes a = 5;
         repeated float v = 6;
         repeated Example e = 7;
-    }
+	}
 </code></pre>
 <p>In one of your <code>_test.go</code> files
 for the package containing the Go <code>type Example struct</code> definition above,
 you should include a test that looks like this:</p>
 <pre><code>    import &quot;vipcode/protobuf&quot;
 
-    func TestExampleProto(t *testing.T) {
+	func TestExampleProto(t *testing.T) {
         protobuf.TestProto(t, &quot;example.proto&quot;, &amp;Example{})
-    }
+	}
 </code></pre>
 <p>This test will verify that the Go type of the object passed to <code>TestProto</code>
 matches the language-independent message definition of the same name

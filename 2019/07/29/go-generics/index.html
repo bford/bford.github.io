@@ -72,9 +72,9 @@ with a set of optional type parameters,
 separate from and preceding the function&rsquo;s regular parameters,
 as illustrated in the proposal&rsquo;s simple generic <code>Print</code> example:</p>
 <pre><code>func Print(type T)(s []T) {
-    for _, v := range s {
+	for _, v := range s {
         fmt.Println(v)
-    }
+	}
 }
 </code></pre>
 <p>What is actually going on here is that
@@ -134,9 +134,9 @@ from overloading either angle brackets or square brackets for this purpose.
 But merely taking C++-style syntax as a comparison point for now,
 the above <code>Print</code> generic function might become:</p>
 <pre><code>func Print&lt;T&gt;(s []T) {
-    for _, v := range s {
+	for _, v := range s {
         fmt.Println(v)
-    }
+	}
 }
 </code></pre>
 <p>But <em>must</em> all generic parameters be types and only types?
@@ -159,11 +159,11 @@ Again adopting C++-like syntax for now,
 we could write a generic dot-product function over <code>float32</code> arrays
 of any length fixed at compile-time as follows:</p>
 <pre><code>func DotProduct&lt;N int&gt;(a, b [N]int) float32 {
-    var sum float32
-    for i := range a {
+	var sum float32
+	for i := range a {
         sum += a[i] * b[i]
-    }
-    return sum
+	}
+	return sum
 }
 </code></pre>
 <p>Of course it would be nice to make such a function generic
@@ -176,11 +176,11 @@ But for the moment let&rsquo;s ignore the contract issues
 and pretend that <em>all</em> types magically supported the <code>*</code> operator.
 The above <code>DotProduct</code> example might then become:</p>
 <pre><code>func DotProduct&lt;N int, T type&gt;(a, b [N]T) T {
-    var sum T
-    for i := range a {
+	var sum T
+	for i := range a {
         sum += a[i] * b[i]
-    }
-    return sum
+	}
+	return sum
 }
 </code></pre>
 <p>Notice that we now have both type and non-type compile-time parameters,
@@ -261,9 +261,9 @@ syntax would be to use <code>const</code> instead of <code>type</code> to introd
 compile-time parameter lists for generics.
 For example, the basic <code>Print</code> generic would become:</p>
 <pre><code>func Print(const T type)(s []T) {
-    for _, v := range s {
+	for _, v := range s {
         fmt.Println(v)
-    }
+	}
 }
 </code></pre>
 <p>A generic function with two compile-time type parameters
@@ -387,26 +387,26 @@ For example, the Go standard library or other libraries
 could include generic vector operations taking either
 runtime-dimensioned slices or compile-time-dimensioned vectors:</p>
 <pre><code>contract Numeric(T) {
-    T float32, float64, int, int32, ...
+	T float32, float64, int, int32, ...
 }
 
 contract Vector(const N int, E Numeric, V type) {
-    V []E, *[N]E	// a slice of E or a pointer to an array of E
+	V []E, *[N]E	// a slice of E or a pointer to an array of E
 }
 
 func (r V) Add(const N, E, V Vector)(a, b V) V {
-    for i := range r {
+	for i := range r {
         r[i] = a[i] + b[i]
-    }
-    return r
+	}
+	return r
 }
 
 func DotProduct(const N, E, V Vector)(a, b V) E {
-    var sum E
-    for i := range r {
+	var sum E
+	for i := range r {
         sum += a[i] * b[i]
-    }
-    return sum
+	}
+	return sum
 }
 </code></pre>
 <p>This capability would get even more useful and powerful
@@ -420,16 +420,16 @@ but also enforce appropriate dimension invariants on arrays at compile-time.</p>
 when applied to matrices represented as 2-dimensional arrays,
 ensure at compile-time that the matrix is square:</p>
 <pre><code>contract Transposable(const n int, E Numeric, M type)  {
-    M [][]E, *[n][n]E
+	M [][]E, *[n][n]E
 }
 
 func (r Mr) Transpose(const n, E, M Transposable)(a M) M {
-    for i := range r {
+	for i := range r {
         for j := range r {
             r[i][j] = a[j][i]
         }
-    }
-    return r
+	}
+	return r
 }
 </code></pre>
 <p>Similarly, a generic function for matrix multiplication
@@ -440,13 +440,13 @@ the correct dimension correspondences via type unification,
 and specialize the code
 to the specific types and dimensions an application actually uses:</p>
 <pre><code>contract Multable(const n, m, p int, E Numeric, Ma, Mb, Mr type) {
-    Ma [][]E, *[n][m]E
-    Mb [][]E, *[m][p]E
-    Mr [][]E, *[n][p]E
+	Ma [][]E, *[n][m]E
+	Mb [][]E, *[m][p]E
+	Mr [][]E, *[n][p]E
 }
 
 func (r Mr) MatMult(const n,m,p,E,Ma,Mb,Mr Multable)(a Ma, b Mb) Mr {
-    for i := range r {
+	for i := range r {
         for j := range r[i] {
             var sum E
             for k := range a[i] {
@@ -454,8 +454,8 @@ func (r Mr) MatMult(const n,m,p,E,Ma,Mb,Mr Multable)(a Ma, b Mb) Mr {
             }
             r[i][j] = sum
         }
-    }
-    return r
+	}
+	return r
 }
 </code></pre>
 <p>If we add run-time checks to the above code for proper dimension correspondence,
@@ -506,9 +506,9 @@ For example:</p>
 
 type Signedness int
 const (
-    SignBit Signedness = iota, // default: separate sign bit
-    Unsigned,                  // no sign bit, unsigned values only
-    TwosComplement,            // topmost integer bit is sign bit
+	SignBit Signedness = iota, // default: separate sign bit
+	Unsigned,                  // no sign bit, unsigned values only
+	TwosComplement,            // topmost integer bit is sign bit
 )
 </code></pre>
 <p>Configuring <code>GenericInt</code> with <code>bits == 0</code>
@@ -605,11 +605,11 @@ as their one compile-time parameter.
 Such a compile-time <code>Config</code> struct for <code>big.Float</code>
 might look something like this:</p>
 <pre><code>type FloatConfig struct {
-    MaxPrec int,      // Mantissa precision in bits, 0 for variable
-    Nonzero bool,     // Zero values disallowed
-    Unsigned bool,    // Negative values disallowed
-    Mode RoundngMode, // Fixed rounding mode, Any for variable
-    _ struct{},       // Ensure extensibility with future parameters
+	MaxPrec int,      // Mantissa precision in bits, 0 for variable
+	Nonzero bool,     // Zero values disallowed
+	Unsigned bool,    // Negative values disallowed
+	Mode RoundngMode, // Fixed rounding mode, Any for variable
+	_ struct{},       // Ensure extensibility with future parameters
 }
 
 type Float(const config FloatConfig) struct { ... }

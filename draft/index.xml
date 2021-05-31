@@ -86,8 +86,9 @@ Chaum&amp;rsquo;s second approach, dining cryptographers, instead uses informati
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/beso/</guid>
-      <description>BESO provides a generic representation for any JSON, using JSON Schema information to provide a compact binary encoding. Unlike schema-free binary encodings like BSON and CBOR, BESO encoding leverages the schema to optimize the encoded representation, for example by replacing object tags specified in the schema with small integers, by representing numbers in binary integer or floating-point forms, etc.
-BESO Generic does not modify the JSON Schema language at all. It takes only the information already specified in a JSON schema and provides a more compact schema-optimized binary representation.</description>
+      <description>(or JBIN? or&amp;hellip;?)
+BESO provides a generic representation for any JSON, using JSON Schema information to provide a compact binary encoding. Unlike schema-free binary encodings like BSON and CBOR, BESO encoding leverages the schema to optimize the encoded representation, for example by replacing object tags specified in the schema with small integers, by representing numbers in binary integer or floating-point forms, etc.
+BESO Generic does not modify the JSON Schema language at all.</description>
     </item>
     
     <item>
@@ -171,7 +172,8 @@ Goals:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/cbe/</guid>
-      <description>An old problem in data format design is embedding an arbitrary variable-length byte sequence in a longer one, so that a decoder can tell unambiguously where the embedded string ends. This problem is ubiquitous in the design of machine-readable data formats, which often hierarchically compose large and complex data streams from sequences of nested substrings and strings using simpler encodings. Embedding challenges include encoding and decoding simplicity, keeping space overheads low and predictable for both small and large embedded strings, and allowing for stream processing in which an encoder must start writing an embedded sequence before knowing how long it will be.</description>
+      <description>(Alternate names: Blobifer? Binframe? Framer? Framify? Framifer? Byteframe? Bnest? Bytenest? Binest?)
+An old problem in data format design is embedding an arbitrary variable-length byte sequence in a longer one, so that a decoder can tell unambiguously where the embedded string ends. This problem is ubiquitous in the design of machine-readable data formats, which often hierarchically compose large and complex data streams from sequences of nested substrings and strings using simpler encodings.</description>
     </item>
     
     <item>
@@ -200,6 +202,7 @@ Goals:
       
       <guid>https://bford.info/draft/jbs/</guid>
       <description>JBS allows the specification of customized binary representations via extensions to the JSON Schema language.
+(or JBIN? or BINSON?)
 XXX allow specifying BESO (or CBOR or &amp;hellip;) as a default binary encoding
 XXX related: Katai Struct, The Next 700 Data Description Languages, binpac, IDRIS, etc.
 Variable-width unsigned integers When the scheme type is integer, an encoding property of unsigned indicates that values greater than or equal to zero are to be encoded in a variable-length binary representation:</description>
