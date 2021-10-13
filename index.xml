@@ -6,7 +6,7 @@
     <description>Recent content on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction: Promise, Failures, and Future of Self-Organizing Technologies</title>
       <link>https://bford.info/selforg/intro/</link>
@@ -71,6 +71,16 @@
     </item>
     
     <item>
+      <title>Immunizing Systems from Distant Failures by Limiting Lamport Exposure</title>
+      <link>https://bford.info/pub/net/limix/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/limix/</guid>
+      <description>Cristina Băsescu and Bryan Ford  Twentieth ACM Workshop on Hot Topics in Networks (HotNets)
+November 10-12, 2021 Abstract: Failures far away from a user should intuitively be less likely to affect that user. Today&#39;s ecosystem miserably fails this test, however, despite high-availability best practices. Correlated and cascading failures &amp;ndash; triggered by misconfigurations, bugs, and network partitions &amp;ndash; often invalidate assumptions of failure independence. We propose that distributed services need not and should not expose local activities to distant failures or partitions, no matter how severe.</description>
+    </item>
+    
+    <item>
       <title>CALYPSO: Private Data Management for Decentralized Ledgers</title>
       <link>https://bford.info/pub/sec/calypso/</link>
       <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
@@ -79,6 +89,16 @@
       <description>Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford  To appear in
 47th International Conference on Very Large Data Bases (VLDB 2021)
 Copenhagen, Denmark &amp;ndash; August 16-20, 2021 Abstract: Distributed ledgers provide high availability and integrity, making them a key enabler for practical and secure computation of distributed workloads among mutually distrustful parties. Many practical applications also require strong confidentiality, however, the third pillar of the CIA triad.</description>
+    </item>
+    
+    <item>
+      <title>Technologizing Democracy or Democratizing Technology? A Layered-Architecture Perspective on Potentials and Challenges</title>
+      <link>https://bford.info/pub/soc/dt2-chapter-abs/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/soc/dt2-chapter-abs/</guid>
+      <description>Bryan Ford Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press
+ Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way?</description>
     </item>
     
     <item>
@@ -133,17 +153,6 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <description>Bryan Ford, Philipp Jovanovic, and Ewa Syta
  March 4, 2020  arXiv preprint
  Abstract: It is commonly held that asynchronous consensus is much more complex, difficult, and costly than partially-synchronous algorithms, especially without using common coins. This paper challenges that conventional wisdom with que sera consensus QSC, an approach to consensus that cleanly decomposes the agreement problem from that of network asynchrony. QSC uses only private coins and reaches consensus in O(1) expected communication rounds.</description>
-    </item>
-    
-    <item>
-      <title>Technologizing Democracy or Democratizing Technology? A Layered-Architecture Perspective on Potentials and Challenges</title>
-      <link>https://bford.info/pub/soc/dt2-chapter-abs/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/pub/soc/dt2-chapter-abs/</guid>
-      <description>Bryan Ford Draft &amp;ndash; June 4, 2020
-Final version to appear in forthcoming book Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press
- Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way?</description>
     </item>
     
     <item>

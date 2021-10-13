@@ -6,7 +6,43 @@
     <description>Recent content in Writings by Topic – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Computing</title>
+      <link>https://bford.info/topics/Cloud-Computing/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Cloud-Computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networks</title>
+      <link>https://bford.info/topics/Networks/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Peer-to-Peer</title>
+      <link>https://bford.info/topics/Peer-to-Peer/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Peer-to-Peer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reliability and Robustness</title>
+      <link>https://bford.info/topics/Reliability-and-Robustness/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Reliability-and-Robustness/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Blockchain</title>
       <link>https://bford.info/topics/Blockchain/</link>
@@ -46,9 +82,45 @@
     <item>
       <title>Democracy</title>
       <link>https://bford.info/topics/Democracy/</link>
-      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Democracy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Economics</title>
+      <link>https://bford.info/topics/Economics/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Economics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Identity</title>
+      <link>https://bford.info/topics/Identity/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Identity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personhood</title>
+      <link>https://bford.info/topics/Personhood/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Personhood/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Voting</title>
+      <link>https://bford.info/topics/Voting/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Voting/</guid>
       <description></description>
     </item>
     
@@ -80,24 +152,6 @@
     </item>
     
     <item>
-      <title>Identity</title>
-      <link>https://bford.info/topics/Identity/</link>
-      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Identity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Personhood</title>
-      <link>https://bford.info/topics/Personhood/</link>
-      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Personhood/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Rights</title>
       <link>https://bford.info/topics/Rights/</link>
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
@@ -112,24 +166,6 @@
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Social-Networks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Voting</title>
-      <link>https://bford.info/topics/Voting/</link>
-      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Voting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Economics</title>
-      <link>https://bford.info/topics/Economics/</link>
-      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Economics/</guid>
       <description></description>
     </item>
     
@@ -152,29 +188,11 @@
     </item>
     
     <item>
-      <title>Networks</title>
-      <link>https://bford.info/topics/Networks/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Networks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Consensus</title>
       <link>https://bford.info/topics/Consensus/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Consensus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reliability and Robustness</title>
-      <link>https://bford.info/topics/Reliability-and-Robustness/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Reliability-and-Robustness/</guid>
       <description></description>
     </item>
     
@@ -314,15 +332,6 @@
     </item>
     
     <item>
-      <title>Cloud Computing</title>
-      <link>https://bford.info/topics/Cloud-Computing/</link>
-      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Cloud-Computing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Storage</title>
       <link>https://bford.info/topics/Storage/</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
@@ -382,15 +391,6 @@
       <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Formal-Verification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Peer-to-Peer</title>
-      <link>https://bford.info/topics/Peer-to-Peer/</link>
-      <pubDate>Wed, 15 Jun 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Peer-to-Peer/</guid>
       <description></description>
     </item>
     
