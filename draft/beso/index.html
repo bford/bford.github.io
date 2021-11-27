@@ -113,7 +113,7 @@ Finally, if the first (most-significant) byte of the encoding
 is not in the range 0x00 through 0x0f,
 then a leading zero byte is prepended.</p>
 <p>Some example encodings of integers are as follows:</p>
-<pre><code>    +0   -&gt; [0x00]
+<pre><code>	+0   -&gt; [0x00]
 	-0   -&gt; [0x01]
 	+1   -&gt; [0x02]
 	-1   -&gt; [0x03]
@@ -178,7 +178,7 @@ and indicates infinity or not-a-number (NaN) values,
 rather than a negative zero exponent.</p>
 <p>Some example exponents are as follows
 after both zigzag-encoding and CBE-encoding:</p>
-<pre><code>    e = 0        -&gt; [0x00]            1-byte CBE-encoding for
+<pre><code>	e = 0        -&gt; [0x00]            1-byte CBE-encoding for
 	infinity/NaN -&gt; [0x01]            1-byte exponent 0x00-0x7f
 	e = +1       -&gt; [0x02]
 	e = -1       -&gt; [0x03]
@@ -205,7 +205,7 @@ of the encoded floating-point number.</p>
 the mantissa field can be empty, i.e., zero bytes long.
 This is the preferred representation since it is the most compact.</p>
 <p>Some example mantissa encodings are as follows:</p>
-<pre><code>    m = +0     -&gt; []
+<pre><code>	m = +0     -&gt; []
 	m = -0     -&gt; [0x01]
 	m = +1     -&gt; [0x02]
 	m = -1     -&gt; [0x03]
@@ -306,12 +306,12 @@ i.e., a value non-conformant to the schema,
 then the binary encoding is a single 0xff byte
 followed by the untyped encoding of the value.</p>
 <p>Consider this schema, for example:</p>
-<pre><code>    {
-      &quot;enum&quot;: [&quot;red&quot;, &quot;amber&quot;, &quot;green&quot;]
+<pre><code>	{
+	  &quot;enum&quot;: [&quot;red&quot;, &quot;amber&quot;, &quot;green&quot;]
 	}
 </code></pre>
 <p>The following illustrates how four example values are encoded:</p>
-<pre><code>    &quot;red&quot;   -&gt; []
+<pre><code>	&quot;red&quot;   -&gt; []
 	&quot;amber&quot; -&gt; [0x01]
 	&quot;green&quot; -&gt; [0x02]
 	&quot;blue&quot;  -&gt; [0xff,0x62,0x6c,0x75,0x65]
@@ -336,7 +336,7 @@ require at most one byte to represent,
 integers between -32639 and +32639 require at most two bytes,
 and so on,
 as the following encoding examples illustrate:</p>
-<pre><code>    +0      -&gt; []
+<pre><code>	+0      -&gt; []
 	-0      -&gt; [0x01]
 	+1      -&gt; [0x02]
 	-1      -&gt; [0x03]
@@ -680,9 +680,9 @@ This example expresses a packed array of 8-bit unsigned integers:</p>
 <pre><code>{
 	&quot;type&quot;: &quot;array&quot;,
 	&quot;items&quot;: {
-        &quot;type&quot;: &quot;integer&quot;,
-        &quot;encoding&quot;: &quot;unsigned&quot;,
-        &quot;bits&quot;: 8
+		&quot;type&quot;: &quot;integer&quot;,
+		&quot;encoding&quot;: &quot;unsigned&quot;,
+		&quot;bits&quot;: 8
 	}
 }
 </code></pre>

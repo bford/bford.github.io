@@ -73,7 +73,7 @@ separate from and preceding the function&rsquo;s regular parameters,
 as illustrated in the proposal&rsquo;s simple generic <code>Print</code> example:</p>
 <pre><code>func Print(type T)(s []T) {
 	for _, v := range s {
-        fmt.Println(v)
+		fmt.Println(v)
 	}
 }
 </code></pre>
@@ -135,7 +135,7 @@ But merely taking C++-style syntax as a comparison point for now,
 the above <code>Print</code> generic function might become:</p>
 <pre><code>func Print&lt;T&gt;(s []T) {
 	for _, v := range s {
-        fmt.Println(v)
+		fmt.Println(v)
 	}
 }
 </code></pre>
@@ -161,7 +161,7 @@ of any length fixed at compile-time as follows:</p>
 <pre><code>func DotProduct&lt;N int&gt;(a, b [N]int) float32 {
 	var sum float32
 	for i := range a {
-        sum += a[i] * b[i]
+		sum += a[i] * b[i]
 	}
 	return sum
 }
@@ -178,7 +178,7 @@ The above <code>DotProduct</code> example might then become:</p>
 <pre><code>func DotProduct&lt;N int, T type&gt;(a, b [N]T) T {
 	var sum T
 	for i := range a {
-        sum += a[i] * b[i]
+		sum += a[i] * b[i]
 	}
 	return sum
 }
@@ -262,7 +262,7 @@ compile-time parameter lists for generics.
 For example, the basic <code>Print</code> generic would become:</p>
 <pre><code>func Print(const T type)(s []T) {
 	for _, v := range s {
-        fmt.Println(v)
+		fmt.Println(v)
 	}
 }
 </code></pre>
@@ -396,7 +396,7 @@ contract Vector(const N int, E Numeric, V type) {
 
 func (r V) Add(const N, E, V Vector)(a, b V) V {
 	for i := range r {
-        r[i] = a[i] + b[i]
+		r[i] = a[i] + b[i]
 	}
 	return r
 }
@@ -404,7 +404,7 @@ func (r V) Add(const N, E, V Vector)(a, b V) V {
 func DotProduct(const N, E, V Vector)(a, b V) E {
 	var sum E
 	for i := range r {
-        sum += a[i] * b[i]
+		sum += a[i] * b[i]
 	}
 	return sum
 }
@@ -425,9 +425,9 @@ ensure at compile-time that the matrix is square:</p>
 
 func (r Mr) Transpose(const n, E, M Transposable)(a M) M {
 	for i := range r {
-        for j := range r {
-            r[i][j] = a[j][i]
-        }
+		for j := range r {
+			r[i][j] = a[j][i]
+		}
 	}
 	return r
 }
@@ -447,13 +447,13 @@ to the specific types and dimensions an application actually uses:</p>
 
 func (r Mr) MatMult(const n,m,p,E,Ma,Mb,Mr Multable)(a Ma, b Mb) Mr {
 	for i := range r {
-        for j := range r[i] {
-            var sum E
-            for k := range a[i] {
-                sum += a[i][k] * b[k][j]
-            }
-            r[i][j] = sum
-        }
+		for j := range r[i] {
+			var sum E
+			for k := range a[i] {
+				sum += a[i][k] * b[k][j]
+			}
+			r[i][j] = sum
+		}
 	}
 	return r
 }

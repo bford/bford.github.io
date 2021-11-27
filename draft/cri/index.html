@@ -61,7 +61,7 @@ URIs and IRIs have two major usability flaws, however.</p>
 <a href="https://blog.codinghorror.com/the-problem-with-urls/">can&rsquo;t reliably tell where they end</a>
 in surrounding text.
 Suppose I type or paste into an E-mail:</p>
-<pre><code>    My site is https://bford.info/index.html.
+<pre><code>	My site is https://bford.info/index.html.
 </code></pre>
 <p>Rich text editors often notice the URI
 and helpfully turn it into a hyperlink –
@@ -70,12 +70,12 @@ It could be either, since periods are valid and
 <a href="https://tools.ietf.org/html/rfc3986#section-2.3">unreserved</a> URI characters,
 and a wrong heuristic guess yields a broken link.
 Suppose I try to &ldquo;armor&rdquo; the URI using parentheses, like this:</p>
-<pre><code>    See my website (https://bford.info/).
+<pre><code>	See my website (https://bford.info/).
 </code></pre>
 <p>This doesn&rsquo;t really help because parentheses are valid in URIs too,
 and heavily used by Wikipedia for example – as in
 this cruel joke of a URI:</p>
-<pre><code>    https://en.wikipedia.org/wiki/URL_(disambiguation)
+<pre><code>	https://en.wikipedia.org/wiki/URL_(disambiguation)
 </code></pre>
 <p><a href="https://tools.ietf.org/html/rfc3986#appendix-C">In an appendix</a>,
 the URI specification recommends delimiting URIs with angle brackets,
@@ -152,7 +152,7 @@ into the <a href="https://www.w3.org">W3C</a>&rsquo;s official
 for example,
 mangles the target URI into this
 obfuscated percent-encoded query string:</p>
-<pre><code>    https://validator.w3.org/nu/?doc=https%3A%2F%2Fbford.info%2F
+<pre><code>	https://validator.w3.org/nu/?doc=https%3A%2F%2Fbford.info%2F
 </code></pre>
 <p>So much for URIs being &ldquo;human-readable&rdquo;,
 at least in these contexts.
@@ -275,7 +275,7 @@ such as
 a user merely needs to copy-and-paste the target CRI
 into a suitable template to form
 a clean and readable query CRI such as:</p>
-<pre><code>    https[//validator.w3.org/nu/?doc=https[//bford.info/]]
+<pre><code>	https[//validator.w3.org/nu/?doc=https[//bford.info/]]
 </code></pre>
 <p>This property extends to multiple nesting levels,
 with no percent-encoding or progressive text expansion for successive levels.
@@ -283,11 +283,11 @@ If the web page checker I wish to use is available only in English
 and I would like to translate its results to French, for example,
 then I currently end up with a delightfully-obfuscated URI
 with two levels of percent-encoding, like this:</p>
-<pre><code>    https://translate.google.com/translate?hl=en&amp;sl=auto&amp;tl=fr&amp;u=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fbford.info%252F
+<pre><code>	https://translate.google.com/translate?hl=en&amp;sl=auto&amp;tl=fr&amp;u=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fbford.info%252F
 </code></pre>
 <p>With CRIs, in contrast,
 such a multi-level query becomes both shorter and more comprehensible:</p>
-<pre><code>    https[//translate.google.com/translate?hl=en&amp;sl=auto&amp;tl=fr&amp;u=https[//validator.w3.org/nu/?doc=https[//bford.info/]]]
+<pre><code>	https[//translate.google.com/translate?hl=en&amp;sl=auto&amp;tl=fr&amp;u=https[//validator.w3.org/nu/?doc=https[//bford.info/]]]
 </code></pre>
 <p>Nestability is not limited to query strings,
 but may also be used in other CRI components.
@@ -300,7 +300,7 @@ To use the service <code>unarchiver.org</code> to open a Zip file hosted at
 <code>https[//bford.info/stuff.zip]</code>
 and browse into the subdirectory <code>/dest/path</code> within the archive, for example,
 we might use a CRI like this:</p>
-<pre><code>    https[//unarchiver.org/unzip/https[//bford.info/stuff.zip]/dest/path/]
+<pre><code>	https[//unarchiver.org/unzip/https[//bford.info/stuff.zip]/dest/path/]
 </code></pre>
 <p>Finally, the ugly and problematic need for the &ldquo;base&rdquo; URI format
 to know about IP addresses and port number syntax in their many variants
@@ -328,7 +328,7 @@ must be percent-encoded.
 A query to search for a literal open bracket
 (‘<code>[</code>’, ASCII code 0x5B) on a target web page, for example,
 must still be percent-encoded like this:</p>
-<pre><code>    https[//search.org/page?string=%5B;page=https[//bford.info/]]
+<pre><code>	https[//search.org/page?string=%5B;page=https[//bford.info/]]
 </code></pre>
 <p>Within any <em>inner</em> pair of square brackets nested within a CRI&rsquo;s body,
 all reserved URI characters including the percent character (‘<code>%</code>’)
@@ -341,7 +341,7 @@ For example, while the CRI
 the following two CRIs are <em>not</em> equivalent
 because they represent queries for different <em>literal</em> query strings
 (which happen to be CRIs in this case but need not necessarily be):</p>
-<pre><code>    https[//checker.org/web?page=https[//bford.info/~user/]]
+<pre><code>	https[//checker.org/web?page=https[//bford.info/~user/]]
 	https[//checker.org/web?page=https[//bford.info/%7Euser/]]
 </code></pre>
 <p>The inner bracket pair essentially quotes special characters
@@ -393,14 +393,14 @@ Further, this equivalence applies only to complete substrings nested
 and complete bracketed substrings may be percent-encoded and decoded in CRIs
 without changing the meaning of a CRI,
 the following URI and three CRIs are all equivalent:</p>
-<pre><code>    https://checker.org/web?page=https%5B%2F%2Fbford%2Einfo%2F%5D
+<pre><code>	https://checker.org/web?page=https%5B%2F%2Fbford%2Einfo%2F%5D
 	https[//checker.org/web?page=https%5B%2F%2Fbford%2Einfo%2F%5D]
 	https[//checker.org/web?page=https%5B%2F%2Fbford.info%2F%5D]
 	https[//checker.org/web?page=https[//bford.info/]]
 </code></pre>
 <p>The following CRIs, however, are <em>not</em> equivalent to those above
 but represent different literal query strings:</p>
-<pre><code>    https[//checker.org/web?page=https[//bford%2Einfo/]]
+<pre><code>	https[//checker.org/web?page=https[//bford%2Einfo/]]
 	https[//checker.org/web?page=https[%2F%2Fbford%2Einfo%2F]]
 </code></pre>
 <p>URIs and IRIs already constrain
@@ -564,7 +564,7 @@ convert it to a UTF-8 byte sequence, then percent-encode each byte.</li>
 and drop its closing square bracket.</li>
 </ol>
 <p>Here are a few examples before and after conversion from CRI to IRI/URI:</p>
-<pre><code>    https[//bford.info/]
+<pre><code>	https[//bford.info/]
 	https://bford.info/
 
 	https[//ip4[1.2.3.4]/find?set={a,b,c};page=https[//bford.info/]]
@@ -608,7 +608,7 @@ If the original URI contains unmatched brackets,
 or matched brackets containing forbidden characters,
 these sequences are left percent-encoded in the resulting CRI.</p>
 <p>Here is an illustrative example of a conversion from IRI/URI to CRI:</p>
-<pre><code>    https://search.org/find?chr=%5B;str=%5Ba%5B%5Bb%5D%5D%20%5D;page=https%5B%2F%2Fbford.info%2F%5D
+<pre><code>	https://search.org/find?chr=%5B;str=%5Ba%5B%5Bb%5D%5D%20%5D;page=https%5B%2F%2Fbford.info%2F%5D
 	https[//search.org/find?chr=%5B;str=%5Ba[[b]]%20%5D;page=https[//bford.info/]]
 </code></pre>
 <p>Notice that while the nested CRI in the <code>page</code> parameter is fully decoded,

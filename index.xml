@@ -86,8 +86,7 @@ November 10-12, 2021 Abstract: Failures far away from a user should intuitively 
       <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/calypso/</guid>
-      <description>Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford  To appear in
-47th International Conference on Very Large Data Bases (VLDB 2021)
+      <description>Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford  47th International Conference on Very Large Data Bases (VLDB 2021)
 Copenhagen, Denmark &amp;ndash; August 16-20, 2021 Abstract: Distributed ledgers provide high availability and integrity, making them a key enabler for practical and secure computation of distributed workloads among mutually distrustful parties. Many practical applications also require strong confidentiality, however, the third pillar of the CIA triad.</description>
     </item>
     
