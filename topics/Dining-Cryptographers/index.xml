@@ -6,7 +6,17 @@
     <description>Recent content in Dining Cryptographers on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Dining-Cryptographers/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Dining-Cryptographers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analyzing and Protecting Communication Metadata</title>
+      <link>https://bford.info/thesis/2021-barman/</link>
+      <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2021-barman/</guid>
+      <description>Ludovic Barman  Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
+September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instant messengers, VPNs) use encryption to prevent third parties from learning sensitive information. However, encrypted communications protect the contents but often leak metadata: the amount of data sent and the time it was sent, the way the data should be decrypted, the identity of the sender and the recipient.</description>
+    </item>
+    
     <item>
       <title>PriFi: Low-Latency Anonymity for Organizational Networks</title>
       <link>https://bford.info/pub/sec/prifi/</link>

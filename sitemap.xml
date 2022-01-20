@@ -17,7 +17,40 @@
     <loc>https://bford.info/selforg/choice/</loc>
   </url><url>
     <loc>https://bford.info/</loc>
-    <lastmod>2021-11-10T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Anonymity/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Blockchain/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Cryptography/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/thesis/2021-nikitin/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Metadata/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Privacy/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Security/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Side-Channels/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/thesis/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Transparency/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Cloud-Computing/</loc>
     <lastmod>2021-11-10T00:00:00+00:00</lastmod>
@@ -37,22 +70,19 @@
     <loc>https://bford.info/topics/Reliability-and-Robustness/</loc>
     <lastmod>2021-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/</loc>
-    <lastmod>2021-11-10T00:00:00+00:00</lastmod>
+    <loc>https://bford.info/thesis/2021-froelicher/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/Blockchain/</loc>
-    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <loc>https://bford.info/topics/Research/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/thesis/2021-barman/</loc>
+    <lastmod>2021-09-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Dining-Cryptographers/</loc>
+    <lastmod>2021-09-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/pub/sec/calypso/</loc>
-    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Cryptography/</loc>
-    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Privacy/</loc>
-    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Security/</loc>
     <lastmod>2021-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Democracy/</loc>
@@ -85,9 +115,6 @@
     <loc>https://bford.info/topics/Surveillance/</loc>
     <lastmod>2020-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/Transparency/</loc>
-    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/pub/soc/personhood/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -99,12 +126,6 @@
   </url><url>
     <loc>https://bford.info/pub/dec/cbdc/</loc>
     <lastmod>2020-07-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Anonymity/</loc>
-    <lastmod>2020-07-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Dining-Cryptographers/</loc>
-    <lastmod>2020-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/pub/sec/prifi/</loc>
     <lastmod>2020-07-13T00:00:00+00:00</lastmod>
@@ -124,9 +145,6 @@
     <loc>https://bford.info/thesis/2019-kokoris-kogias/</loc>
     <lastmod>2019-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/thesis/</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/2019/09/23/rational/</loc>
     <lastmod>2019-09-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -135,9 +153,6 @@
   </url><url>
     <loc>https://bford.info/topics/Programming-Languages/</loc>
     <lastmod>2019-07-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Metadata/</loc>
-    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/pub/sec/purb-abs/</loc>
     <lastmod>2019-07-18T00:00:00+00:00</lastmod>
@@ -188,9 +203,6 @@
     <lastmod>2018-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/2018/06/27/muslim-ban/</loc>
-    <lastmod>2018-06-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Research/</loc>
     <lastmod>2018-06-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/2018/06/16/lausanne/</loc>
@@ -296,9 +308,6 @@
     <lastmod>2015-10-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Parallelism/</loc>
-    <lastmod>2015-10-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Side-Channels/</loc>
     <lastmod>2015-10-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/pub/net/panopticon-cacm/</loc>

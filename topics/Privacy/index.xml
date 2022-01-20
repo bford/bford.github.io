@@ -6,7 +6,37 @@
     <description>Recent content in Privacy on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Privacy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Privacy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integrity and Metadata Protection in Data Retrieval</title>
+      <link>https://bford.info/thesis/2021-nikitin/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2021-nikitin/</guid>
+      <description>Kirill Nikitin  Ph.D. thesis advised by Bryan Ford
+November 26, 2021  Abstract: Secure retrieval of data requires integrity, confidentially, transparency, and metadata-privacy of the process. Existing protection mechanisms, however, provide only partially these properties: encryption schemes still expose cleartext metadata, protocols for private information retrieval neglect data integrity, and data-distribution architectures forego transparency. In this dissertation, by designing new cryptographic primitives and security architectures that provide a more comprehensive protection, we improve on the current security and privacy practices in data retrieval.</description>
+    </item>
+    
+    <item>
+      <title>Privacy-Preserving Federated Analytics using Multiparty Homomorphic Encryption</title>
+      <link>https://bford.info/thesis/2021-froelicher/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2021-froelicher/</guid>
+      <description>David Jules Froelicher  Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
+October 1, 2021  Abstract: Analyzing and processing data that are siloed and dispersed among multiple distrustful stakeholders is difficult and can even become impossible when the data are sensitive or confidential. Current data-protection and privacy regulations (e.g., GDPR) highly restrict the sharing and outsourcing of personal information among stakeholders that are in different jurisdictions.</description>
+    </item>
+    
+    <item>
+      <title>Analyzing and Protecting Communication Metadata</title>
+      <link>https://bford.info/thesis/2021-barman/</link>
+      <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2021-barman/</guid>
+      <description>Ludovic Barman  Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
+September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instant messengers, VPNs) use encryption to prevent third parties from learning sensitive information. However, encrypted communications protect the contents but often leak metadata: the amount of data sent and the time it was sent, the way the data should be decrypted, the identity of the sender and the recipient.</description>
+    </item>
+    
     <item>
       <title>CALYPSO: Private Data Management for Decentralized Ledgers</title>
       <link>https://bford.info/pub/sec/calypso/</link>

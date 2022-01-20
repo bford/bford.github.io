@@ -6,7 +6,79 @@
     <description>Recent content in Writings by Topic – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anonymity</title>
+      <link>https://bford.info/topics/Anonymity/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Anonymity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blockchain</title>
+      <link>https://bford.info/topics/Blockchain/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cryptography</title>
+      <link>https://bford.info/topics/Cryptography/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Cryptography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Metadata</title>
+      <link>https://bford.info/topics/Metadata/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Metadata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy</title>
+      <link>https://bford.info/topics/Privacy/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Privacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://bford.info/topics/Security/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Side-Channels</title>
+      <link>https://bford.info/topics/Side-Channels/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Side-Channels/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transparency</title>
+      <link>https://bford.info/topics/Transparency/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Transparency/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Cloud Computing</title>
       <link>https://bford.info/topics/Cloud-Computing/</link>
@@ -44,38 +116,20 @@
     </item>
     
     <item>
-      <title>Blockchain</title>
-      <link>https://bford.info/topics/Blockchain/</link>
-      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
+      <title>Research</title>
+      <link>https://bford.info/topics/Research/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.info/topics/Blockchain/</guid>
+      <guid>https://bford.info/topics/Research/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Cryptography</title>
-      <link>https://bford.info/topics/Cryptography/</link>
-      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
+      <title>Dining Cryptographers</title>
+      <link>https://bford.info/topics/Dining-Cryptographers/</link>
+      <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.info/topics/Cryptography/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Privacy</title>
-      <link>https://bford.info/topics/Privacy/</link>
-      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Privacy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://bford.info/topics/Security/</link>
-      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Security/</guid>
+      <guid>https://bford.info/topics/Dining-Cryptographers/</guid>
       <description></description>
     </item>
     
@@ -143,15 +197,6 @@
     </item>
     
     <item>
-      <title>Transparency</title>
-      <link>https://bford.info/topics/Transparency/</link>
-      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Transparency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Rights</title>
       <link>https://bford.info/topics/Rights/</link>
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
@@ -166,24 +211,6 @@
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Social-Networks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Anonymity</title>
-      <link>https://bford.info/topics/Anonymity/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Anonymity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dining Cryptographers</title>
-      <link>https://bford.info/topics/Dining-Cryptographers/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Dining-Cryptographers/</guid>
       <description></description>
     </item>
     
@@ -224,15 +251,6 @@
     </item>
     
     <item>
-      <title>Metadata</title>
-      <link>https://bford.info/topics/Metadata/</link>
-      <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Metadata/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Modularity</title>
       <link>https://bford.info/topics/Modularity/</link>
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
@@ -256,15 +274,6 @@
       <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Verifiable-Shuffles/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Research</title>
-      <link>https://bford.info/topics/Research/</link>
-      <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Research/</guid>
       <description></description>
     </item>
     
@@ -310,15 +319,6 @@
       <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Parallelism/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Side-Channels</title>
-      <link>https://bford.info/topics/Side-Channels/</link>
-      <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Side-Channels/</guid>
       <description></description>
     </item>
     

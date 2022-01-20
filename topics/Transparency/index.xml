@@ -6,7 +6,17 @@
     <description>Recent content in Transparency on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Transparency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Transparency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integrity and Metadata Protection in Data Retrieval</title>
+      <link>https://bford.info/thesis/2021-nikitin/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2021-nikitin/</guid>
+      <description>Kirill Nikitin  Ph.D. thesis advised by Bryan Ford
+November 26, 2021  Abstract: Secure retrieval of data requires integrity, confidentially, transparency, and metadata-privacy of the process. Existing protection mechanisms, however, provide only partially these properties: encryption schemes still expose cleartext metadata, protocols for private information retrieval neglect data integrity, and data-distribution architectures forego transparency. In this dissertation, by designing new cryptographic primitives and security architectures that provide a more comprehensive protection, we improve on the current security and privacy practices in data retrieval.</description>
+    </item>
+    
     <item>
       <title>AI for Governance Belongs in Mechanism, Not Policy</title>
       <link>https://bford.info/post/2020-11-18-ai-governance/</link>

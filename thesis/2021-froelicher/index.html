@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Privacy-Preserving Federated Analytics using Multiparty Homomorphic Encryption &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Privacy-Preserving Federated Analytics using Multiparty Homomorphic Encryption</h1>
+  
+<center>
+<STRONG>
+David Jules Froelicher
+</STRONG>
+<br>
+Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford<br>
+
+October 1, 2021
+</p>
+</center>
+
+<H3>Abstract:</H3>
+
+Analyzing and processing data that are siloed and dispersed among multiple
+distrustful stakeholders is difficult and can even become impossible when the
+data are sensitive or confidential. Current data-protection and privacy
+regulations (e.g., GDPR) highly restrict the sharing and outsourcing of
+personal information among stakeholders that are in different jurisdictions.
+Sharing data is, however, required in many domains such as finance and
+medicine. The medical sector is a paradigmatic example: Privacy is paramount
+and data sharing is needed in numerous applications where data is scarce (e.g.,
+patients with rare diseases) and scattered among multiple stakeholders around
+the world. Existing privacy-preserving solutions for federated analytics rely
+either (1) on data centralization or outsourcing to a limited number of
+entities, which incur multiple security and trust issues, or (2) on the
+iterative exchange of cleartext aggregated and optionally obfuscated data,
+which can leak personal information or introduce bias in the final result. In
+this thesis, our goal is (1) to propose privacy-preserving federated solutions
+for exploration, and for statistical and machine-learning analyses on data held
+by multiple distrustful stakeholders, and (2) to analyze and evaluate the
+proposed systems, thus showing that they provide an efficient, secure,
+scalable, and accurate alternative to existing solutions for federated analysis
+by proving their utility in real-world state-of-the-art biomedical studies. In
+order to do this, we rely on multiparty homomorphic encryption (MHE). MHE
+combines secure multiparty computation (SMC) techniques with homomorphic
+encryption (HE) by pooling the advantages of both SMC and HE, i.e.,
+interactivity and flexibility, and by minimizing their disadvantages, i.e.,
+difficulty in scaling to a large number of parties and computation complexity.
+
+<p> First, we design UNLYNX, a system that enables privacy-preserving federated
+data exploration on a distributed dataset held by multiple data-providers
+(DPs), where N-1 out of N of the nodes performing the computations can be
+malicious. To achieve this, we build interactive protocols by relying on
+ElGamal additive homomorphic encryption (AHE) and ensure that each
+untrusted-node operation can be publicly verified by means of zero-knowledge
+proofs (ZKPs). We then explore how statistics, e.g., standard deviation and
+variance, can be computed by relying on AHE and ZKPs through the design of
+another system named DRYNX. In DRYNX, we also explore how to limit the
+influence of an entity that inputs wrong data in the system, and we propose an
+efficient federated solution for correctness verification.
+
+<p> We also propose SPINDLE, a solution for secure cooperative gradient descent
+on federated data that we instantiate for the privacy-preserving training and
+oblivious evaluation of generalized linear models. SPINDLE covers the entire
+machine-learning workflow, as it enables oblivious predictions to be performed
+on a trained model that remains secret. It ensures both data and model
+confidentiality in a passive adversarial model in which N-1 out of N DPs can
+collude. Finally, we demonstrate that the solutions proposed in this thesis can
+be efficient enablers for large-scale, highly sensitive, multi-site biomedical
+studies. We design and test, by replicating recent state-of-the-art medical
+studies, secure workflows for the federated execution of computations that
+span from analyses with low computational complexity, such as non-parametric
+survival analyses often used in oncology, to analyses with high computational
+complexity such as one of the key tools for genomic studies, genome-wide
+association studies (GWAS) on millions of variants.
+
+<h3>Ph.D. Thesis:
+<a href="froelicher-thesis.pdf">PDF</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Security/">Security</a>
+	
+		<a href="/topics/Privacy/">Privacy</a>
+	
+		<a href="/topics/Cryptography/">Cryptography</a>
+	
+		<a href="/topics/Research/">Research</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>
