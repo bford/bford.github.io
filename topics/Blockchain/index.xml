@@ -33,8 +33,9 @@ Copenhagen, Denmark &amp;ndash; August 16-20, 2021 Abstract: Distributed ledgers
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/dt2-chapter-abs/</guid>
-      <description>Bryan Ford Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press
- Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way?</description>
+      <description>Bryan Ford
+Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press 
+Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way?</description>
     </item>
     
     <item>
@@ -64,7 +65,7 @@ September 27, 2019  Abstract:  One of the core promises of blockchain technology
       <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2019/09/23/rational/</guid>
-      <description>by Bryan Ford and Rainer Böhme &amp;mdash; PDF preprint version available   Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
+      <description>by Bryan Ford and Rainer Böhme &amp;mdash; PDF preprint version available    Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
     </item>
     
     <item>
@@ -93,7 +94,7 @@ May 12-15, 2019.  Abstract: While showing great promise, smart contracts are dif
       <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2018/09/11/blockchain/</guid>
-      <description>Blockchain is certainly one of the hot technology topics today. Yes, it&amp;rsquo;s probably in part a hype bubble – but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFL has been investing years of effort in building next generation blockchain architectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled &amp;lt;a href=&amp;ldquo;https://blockonomi.</description>
+      <description>Blockchain is certainly one of the hot technology topics today. Yes, it&amp;rsquo;s probably in part a hype bubble &amp;ndash; but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFL has been investing years of effort in building next generation blockchain architectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled financial market for cryptocurrencies.</description>
     </item>
     
     <item>
@@ -133,7 +134,8 @@ May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blo
       
       <guid>https://bford.info/2017/08/01/skipchain/</guid>
       <description>A blockchain, or distributed ledger, is a log maintained collectively by a distributed group of participants who agree on and record transactions without relying for security on any single trusted party. While initially popularized by Bitcoin and its derivatives, the blockchain abstraction is not specific to currencies, and there is exploding industry interest in many non-currency uses.
-  Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
+ 
+Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
     </item>
     
     <item>
@@ -153,7 +155,8 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/10/25/mining/</guid>
-      <description>--   As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&amp;rsquo;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
+      <description>--  
+As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&amp;rsquo;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
 In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
     </item>
     

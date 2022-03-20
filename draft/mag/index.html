@@ -42,25 +42,21 @@
     
   <h1>Magnitudes: When an Integer is Too Precise</h1>
   <p>Interesting uses:</p>
+
 <ul>
-<li>
-<p>Side-channel leak control: PURBs</p>
-</li>
-<li>
-<p>Indexing and counting for divide-and-conquer algorithms.
+<li><p>Side-channel leak control: PURBs</p></li>
+
+<li><p>Indexing and counting for divide-and-conquer algorithms.
 Example: binary search (works) vs linear search (breaks quickly);
-quick/merge sorts (works) vs naive sorts (breaks); &hellip;</p>
-</li>
-<li>
-<p>Related: summary data for large-scale data for parallel processing</p>
-</li>
-<li>
-<p>Efficient memory allocation with fragmentation control
+quick/merge sorts (works) vs naive sorts (breaks); &hellip;</p></li>
+
+<li><p>Related: summary data for large-scale data for parallel processing</p></li>
+
+<li><p>Efficient memory allocation with fragmentation control
 Use next mag to bucket allocation units;
 allocation can scavenge and split a larger bucket
 and (proof?) remainder will also fall into a valid bucket
-(subtraction closure: mag minus a mag is a mag if no underflow)</p>
-</li>
+    (subtraction closure: mag minus a mag is a mag if no underflow)</p></li>
 </ul>
 
 

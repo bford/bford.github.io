@@ -51,7 +51,8 @@
 
       <h1>Rationality is Self-Defeating in Permissionless Systems</h1>
 
-      <blockquote>
+      
+<blockquote>
 <i>
 by <a href="https://bford.info">Bryan Ford</a> and
 <a href="https://informationsecurity.uibk.ac.at/people/rainer-boehme/"
@@ -61,111 +62,139 @@ by <a href="https://bford.info">Bryan Ford</a> and
 	>PDF preprint</a> version available
 </i>
 </blockquote>
-<p>Many blockchain and cryptocurrency fans seem to prefer
+
+<p>
+Many blockchain and cryptocurrency fans seem to prefer
 building and analyzing decentralized systems
 in a rational or &ldquo;greedy behavior&rdquo; failure model,
 rather than a Byzantine or &ldquo;arbitrary behavior&rdquo; failure model.
 Many of the same blockchain and cryptocurrency fans
 also like open, permissionless systems like Bitcoin and Ethereum,
 which anyone can join and participate
-in using weak identities such as anonymous cryptography key pairs.</p>
-<p>What most of these heavily-overlapping sets of fans
+in using weak identities such as anonymous cryptography key pairs.
+
+<p>
+What most of these heavily-overlapping sets of fans
 do not seem to realize, however,
 is that rationality assumptions are self-defeating
 in open permissionless systems with weak identities.
-A fairly simple metacircular argument –
+A fairly simple metacircular argument &ndash;
 a kind of
-&ldquo;&lt;a href=&ldquo;<a href="https://en.wikipedia.org/wiki/G">https://en.wikipedia.org/wiki/G</a>ödel%27s_incompleteness_theorems&rdquo;
-&gt;Gödel&rsquo;s incompleteness theorem</a> for rationality&rdquo; –
-shows that for any system <em>S</em> that makes
-<em>any</em> behavioral assumption,
+&ldquo;<a href="https://en.wikipedia.org/wiki/Gödel%27s_incompleteness_theorems"
+	>Gödel's incompleteness theorem</a> for rationality&rdquo; &ndash;
+shows that for any system <i>S</i> that makes
+<i>any</i> behavioral assumption,
 including but not limited to a rationality assumption,
-a rational attacker both exists and <em>has an incentive</em>
+a rational attacker both exists and <i>has an incentive</i>
 to defeat that behavioral assumption,
 thereby violating that assumption and exhibiting Byzantine behavior
-from the perspective of the system.</p>
-<p>As a quick summary of the argument we will expand below,
+from the perspective of the system.
+
+<p>
+As a quick summary of the argument we will expand below,
 suppose a permissionless system like Bitcoin
 is secure against rational attacks,
 but has some weakness against irrational Byzantine attacks
 in which the attacker would lose money.
 Because the system is open, permissionless,
 and exists within a larger ecosystem,
-a rational attacker can find ways to &ldquo;bet against&rdquo; Bitcoin&rsquo;s security
-in <em>other</em> financially-connected systems (e.g., Ethereum),
-making a profit <em>outside of</em> Bitcoin on this attack against Bitcoin.
+a rational attacker can find ways to &ldquo;bet against&rdquo; Bitcoin's security
+in <i>other</i> financially-connected systems (e.g., Ethereum),
+making a profit <i>outside of</i> Bitcoin on this attack against Bitcoin.
 An attack that appears irrational in the context of Bitcoin
-may be perfectly rational in the context of the larger ecosystem.</p>
-<p>For this reason,
+may be perfectly rational in the context of the larger ecosystem.
+
+<p>
+For this reason,
 an open permissionless system
 designed to be secure only against rational adversaries
-is actually just <em>insecure</em>,
+is actually just <i>insecure</i>,
 unless it remains secure even when the &ldquo;rational&rdquo; participants
 become fully Byzantine.
 Given this, one might as well have designed the permissionless system
 in a Byzantine model in the first place.
 The rationality assumption offers no actual benefit,
-but merely can make an insecure system appear secure under flawed analysis.</p>
-<p>This blog post is based partly on ideas in
-<a href="https://bdlt.school/files/slides/talk-rainer-b%C3%B6hme-a-primer-on-economics-for-cryptocurrencies.pdf">Rainer Böhme&rsquo;s talk</a>
-at the recent <a href="https://bdlt.school">BDLT Summer School in Vienna</a>.
+but merely can make an insecure system appear secure under flawed analysis.
+
+<p>
+This blog post is based partly on ideas in
+<a href="https://web.archive.org/web/20191124192837/https://bdlt.school/files/slides/talk-rainer-böhme-a-primer-on-economics-for-cryptocurrencies.pdf">Rainer Böhme's talk</a>
+at the recent
+<a href="https://web.archive.org/web/20210416231544/https://bdlt.school/">BDLT Summer School in Vienna</a>.
 While formalizing the argument would require some effort,
 we thought it would be worth at least sketching the argument intuitively
-for the public record.</p>
-<h2 id="threat-modeling-honest-byzantine-and-rational-participants">Threat Modeling: Honest, Byzantine, and Rational Participants</h2>
-<p>In designing or analyzing the security of any decentralized system,
-we must define the system&rsquo;s <em>threat model</em>,
+for the public record.
+
+
+<h2> Threat Modeling: Honest, Byzantine, and Rational Participants </h2>
+
+<p>
+In designing or analyzing the security of any decentralized system,
+we must define the system's <i>threat model</i>,
 and in particular our assumptions about the behaviors
 of the participants in the system.
-An <em>honest</em>, <em>correct</em>, or <em>altruistic</em> participant is one
-that we assume to follow the system&rsquo;s protocol rules as specified,
+An <i>honest</i>, <i>correct</i>, or <i>altruistic</i> participant is one
+that we assume to follow the system's protocol rules as specified,
 hence representing a &ldquo;well-behaved&rdquo; participant
-exhibiting no adversarial behavior.</p>
-<p>A <em>Byzantine</em> participant,
+exhibiting no adversarial behavior.
+
+<p>
+A <i>Byzantine</i> participant,
 named after the
-&lt;a href=&ldquo;<a href="http://theory.stanford.edu/~trevisan/cs174/byzantine.pdf%22">http://theory.stanford.edu/~trevisan/cs174/byzantine.pdf&quot;</a>
-&gt;Byzantine Generals Problem</a>, is one we make <em>no</em> assumptions about.
-A Byzantine participant can behave in <em>arbitrary</em> fashion, without restriction,
-and hence by definition represents the strongest possible adversary.</p>
-<p>We would like to build systems that could withstand
-<em>all</em> participants being Byzantine,
+<a href="http://theory.stanford.edu/~trevisan/cs174/byzantine.pdf"
+	>Byzantine Generals Problem</a>, is one we make <i>no</i> assumptions about.
+A Byzantine participant can behave in <i>arbitrary</i> fashion, without restriction,
+and hence by definition represents the strongest possible adversary.
+
+<p>
+We would like to build systems that could withstand
+<i>all</i> participants being Byzantine,
 but this appears fundamentally impossible.
 We therefore in practice have to make threshold security assumptions,
 such as
 that over two-thirds of the participants
 in classic Byzantine consensus protocols are honest,
 or that the participants controlling over half the hashpower
-in Bitcoin are well-behaved.</p>
-<p>Even with threshold assumptions, however,
+in Bitcoin are well-behaved.
+
+<p>
+Even with threshold assumptions, however,
 building systems that resist Byzantine behavior is extremely difficult,
 and the resulting systems are often much more complex and inefficient
 than systems tolerating weaker adversaries.
-We may therefore be tempted to improve a design&rsquo;s simplicity or efficiency
+We may therefore be tempted to improve a design's simplicity or efficiency
 by making stronger assumptions about
 the behavior of adversarial participants,
-effectively weakening the assumed adversary.</p>
+effectively weakening the assumed adversary.
+
 <center>
 <img src="adversaries.svg" alt="Types of adversaries" style="float:right">
 </center>
-<p>One such popular assumption, especially in economic circles,
-is <em>rationality</em>.
+
+<p>
+One such popular assumption, especially in economic circles,
+is <i>rationality</i>.
 In essence, we assume that rational participants
 may deviate from the rules in arbitrary ways
-but <em>only when doing so is in their economic self-interest</em>,
-improving their expected rewards –
-usually but not always financial –
-in comparison with following the rules honestly.</p>
-<p>By assuming that adversarial participants are rational rather than Byzantine,
-we need not secure the system against <em>all</em> possible participant behaviors,
+but <i>only when doing so is in their economic self-interest</i>,
+improving their expected rewards &ndash;
+usually but not always financial &ndash;
+in comparison with following the rules honestly.
+
+<p>
+By assuming that adversarial participants are rational rather than Byzantine,
+we need not secure the system against <i>all</i> possible participant behaviors,
 such as against participants who pay money with no reward
 merely to sow chaos and destruction.
-Instead, we merely need to prove that the system is <em>incentive compatible</em>,
+Instead, we merely need to prove that the system is <i>incentive compatible</i>,
 for example by showing that its rules represent a Nash equilibrium,
 in which deviations from the equilibrium
-will not give participants a greater financial reward.</p>
-<p>Besides simplicity and efficiency,
+will not give participants a greater financial reward.
+
+<p>
+Besides simplicity and efficiency,
 another appeal of rationality assumptions
-is the promise of <em>strengthening</em> the system&rsquo;s security
+is the promise of <i>strengthening</i> the system's security
 by lowering the threshold of participants we assume to be fully honest.
 To circumvent the classical Byzantine consensus requirement
 that fewer than one third of participants may be faulty,
@@ -173,213 +202,250 @@ for example,
 we might hope to tolerate closer to 50%, or even 100%,
 of participants being &ldquo;adversarial&rdquo;
 if we assume they are rational and not Byzantine.
-Work on &lt;a href=&ldquo;<a href="http://www.cs.utexas.edu/~lorenzo/papers/sosp05.pdf%22">http://www.cs.utexas.edu/~lorenzo/papers/sosp05.pdf&quot;</a>
-&gt;the BAR model (Byzantine-Altruistic-Rational)</a>
+Work on <a href="http://www.cs.utexas.edu/~lorenzo/papers/sosp05.pdf"
+	>the BAR model (Byzantine-Altruistic-Rational)</a>
 and
-&lt;a href=&ldquo;<a href="http://www.cs.utexas.edu/~lorenzo/papers/Abraham11Distributed.pdf%22">http://www.cs.utexas.edu/~lorenzo/papers/Abraham11Distributed.pdf&quot;</a>
-&gt;<em>(k,t)</em>-robustness</a>
+<a href="http://www.cs.utexas.edu/~lorenzo/papers/Abraham11Distributed.pdf"
+	><i>(k,t)</i>-robustness</a>
 exemplifies this goal,
 which sometimes appears achievable in closed systems with strong identities.
 But a direct implication of our metacircular argument is that
-an <em>open</em> system cannot generally be secure if all participants
-are either Byzantine or rational.</p>
-<h2 id="assumptions-underlying-the-argument">Assumptions Underlying the Argument</h2>
-<p>The metacircular argument makes three main assumptions.</p>
-<p>First, the system <em>S</em> under consideration is open and permissionless,
+an <i>open</i> system cannot generally be secure if all participants
+are either Byzantine or rational.
+
+
+<h2> Assumptions Underlying the Argument </h2>
+
+<p>
+The metacircular argument makes three main assumptions.
+
+<p>
+First, the system <i>S</i> under consideration is open and permissionless,
 allowing anyone to join and participate in the system using
 only weak, anonymous identities such as bare cryptographic key pairs.
-Identities in <em>S</em> need not even be costless provided their price is modest:
-the argument still works even if <em>S</em> imposes membership fees
+Identities in <i>S</i> need not even be costless provided their price is modest:
+the argument still works even if <i>S</i> imposes membership fees
 or requires new wallet keys to be &ldquo;mined&rdquo;, for example.
 Proof-of-Work cryptocurrencies such as Bitcoin and Ethereum,
 Proof-of-Stake systems such as Algorand and Ouroboros,
 and most other permissionless systems seem to satisfy this openness property.
 Because participation is open to anyone globally and can be anonymous,
-we cannot reasonably expect police or governments to protect <em>S</em> from attack:
+we cannot reasonably expect police or governments to protect <i>S</i> from attack:
 even if they wanted to and considered it their job,
 they would not be able to find or discipline a smart rational attacker
 who might be attacking from anywhere around the globe,
 especially from a country
 with weak international agreements and extradition rules.
-Thus, <em>S</em> must &ldquo;stand on its own&rdquo;,
+Thus, <i>S</i> must &ldquo;stand on its own&rdquo;,
 by successfully either withstanding or disincentivizing attacks
 coming from anywhere.
-(And it will turn out that merely disincentivizing such attacks is impossible.)</p>
-<p>Second, the system <em>S</em> does not control a majority
+(And it will turn out that merely disincentivizing such attacks is impossible.)
+
+<p>
+Second, the system <i>S</i> does not control a majority
 of total economic power or value in the world:
 i.e., it is not totally economically dominant from a global perspective.
-Instead, there may be (and probably are) actors outside of <em>S</em>
+Instead, there may be (and probably are) actors outside of <i>S</i>
 who, if rationally incentivized to do so,
-can at least temporarily muster an amount of economic power outside of <em>S</em>
-comparable to or greater than the economic value within or controlled by <em>S</em>.
-In other words, we assume that <em>S</em> is not the &ldquo;biggest fish in the ocean.&rdquo;
+can at least temporarily muster an amount of economic power outside of <i>S</i>
+comparable to or greater than the economic value within or controlled by <i>S</i>.
+In other words, we assume that <i>S</i> is not the &ldquo;biggest fish in the ocean.&rdquo;
 Given that there can be at most one globally dominant economic system at a time,
 it seems neither useful nor advisable to design systems that are secure
 only when they are the biggest fish in the ocean,
-because almost always they are not.</p>
-<p>Third, the system <em>S</em> actually <em>leverages</em> in some fashion
+because almost always they are not.
+
+<p>
+Third, the system <i>S</i> actually <i>leverages</i> in some fashion
 the behavioral assumption(s) it makes on participants,
 such as a rationality assumption.
 That is, we assume there exist one or more (arbitrary) behavioral strategies
-that <em>S</em> assumes some participants <em>will not</em> follow,
+that <i>S</i> assumes some participants <i>will not</i> follow,
 such as economically-losing behaviors in the case of rationality.
 Further, we assume there exists such an assumption-violating strategy
-that will cause <em>S</em> to malfunction
+that will cause <i>S</i> to malfunction
 or otherwise deviate observably from its correct operation.
 In fact, we need not assume that this deviant behavior
-will <em>always</em> succeed in breaking <em>S</em>,
-but only that it will non-negligibly <em>raise the probability</em> of <em>S</em> failing.
+will <i>always</i> succeed in breaking <i>S</i>,
+but only that it will non-negligibly <i>raise the probability</i> of <i>S</i> failing.
 If this were not the case,
-and <em>S</em> in fact operates correctly, securely, and indistinguishably from its ideal
+and <i>S</i> in fact operates correctly, securely, and indistinguishably from its ideal
 even if participants do violate their behavioral assumptions,
-then <em>S</em> is actually Byzantine secure after all.
+then <i>S</i> is actually Byzantine secure after all.
 In that case,
-<em>S</em> is not actually benefiting from its assumptions about participant behavior,
-which are redundant and thus may be simply discarded.</p>
-<h2 id="the-metacircular-argument-rational-attacks-on-rationality">The Metacircular Argument: Rational Attacks on Rationality</h2>
-<p>Suppose permissionless system <em>S</em> is launched,
+<i>S</i> is not actually benefiting from its assumptions about participant behavior,
+which are redundant and thus may be simply discarded.
+
+
+<h2> The Metacircular Argument: Rational Attacks on Rationality </h2>
+
+<p>
+Suppose permissionless system <i>S</i> is launched,
 and operates smoothly for some time,
-with all participants conforming to <em>S</em>&rsquo;s assumptions about them.
-Because <em>S</em> is permissionless (assumption 1)
+with all participants conforming to <i>S</i>'s assumptions about them.
+Because <i>S</i> is permissionless (assumption 1)
 and exists in a larger open world (assumption 2),
 new rational participants may arrive at any time,
-attracted by <em>S</em>&rsquo;s success and presumably growing economic value
-provided there is an opportunity to profit from doing so.</p>
-<p>Consider a particular newly-arriving participant <em>P</em>.
-<em>P</em> could of course play by the rules <em>S</em> assumes of <em>P</em>,
-in which case the greatest immediate economic benefit <em>P</em> could derive
-from participating in <em>S</em> is some fraction
-of the total economic value currently embodied in <em>S</em>
+attracted by <i>S</i>'s success and presumably growing economic value
+provided there is an opportunity to profit from doing so.
+
+<p>
+Consider a particular newly-arriving participant <i>P</i>.
+<i>P</i> could of course play by the rules <i>S</i> assumes of <i>P</i>,
+in which case the greatest immediate economic benefit <i>P</i> could derive
+from participating in <i>S</i> is some fraction
+of the total economic value currently embodied in <i>S</i>
 (e.g., its market cap).
 For most realistic permissionless systems
 embodying strong founders' or early-adopters' rewards,
-if <em>P</em> is not one of the original founders of <em>S</em>
+if <i>P</i> is not one of the original founders of <i>S</i>
 but arrives substantially after launch,
-then <em>P</em>&rsquo;s near-term payoff prospectives from joining <em>S</em>
-is likely bounded to a fairly <em>small</em> fraction of <em>S</em>&rsquo;s total value.
-But what if there were another strategy <em>P</em> could take,
-for perfectly <em>rational</em> and economically-motivated reasons,
-by which <em>P</em> could in relatively short order
-acquire a <em>large</em> fraction of <em>S</em>&rsquo;s total value?</p>
+then <i>P</i>'s near-term payoff prospectives from joining <i>S</i>
+is likely bounded to a fairly <i>small</i> fraction of <i>S</i>'s total value.
+But what if there were another strategy <i>P</i> could take,
+for perfectly <i>rational</i> and economically-motivated reasons,
+by which <i>P</i> could in relatively short order
+acquire a <i>large</i> fraction of <i>S</i>'s total value?
+
 <center>
 <img src="open-world.svg" alt="Open world with S and S'" style="float:right">
 </center>
-<p>Because <em>S</em> is permissionless and operating in a larger open world,
-<em>P</em> is not confined to operating exclusively within the boundaries of <em>S</em>.
-<em>P</em> can also make use of facilities external to <em>S</em>.
+
+<p>
+Because <i>S</i> is permissionless and operating in a larger open world,
+<i>P</i> is not confined to operating exclusively within the boundaries of <i>S</i>.
+<i>P</i> can also make use of facilities external to <i>S</i>.
 By assumption 2,
-<em>P</em> may in particular have access to, or be able to borrow temporarily,
-financial resources comparable to or larger than the total value of <em>S</em>.</p>
-<p>Suppose the facilities external to <em>S</em> include
-another Ethereum-like cryptocurrency <em>S'</em>,
+<i>P</i> may in particular have access to, or be able to borrow temporarily,
+financial resources comparable to or larger than the total value of <i>S</i>.
+
+<p>
+Suppose the facilities external to <i>S</i> include
+another Ethereum-like cryptocurrency <i>S'</i>,
 which includes a smart contract facility with which
 decentralized exchanges, futures markets, and the like may be implemented.
 (This is not really a separate assumption because
-even if <em>S'</em> did not already exist, <em>P</em> could create and launch it,
+even if <i>S'</i> did not already exist, <i>P</i> could create and launch it,
 given sufficient economic resources under assumption 2.)
-Further, suppose that someone (perhaps <em>P</em>) has created on external system <em>S'</em>
+Further, suppose that someone (perhaps <i>P</i>) has created on external system <i>S'</i>
 a decentralized exchange, futures market, or any other mechanism
-by which tokens representing shares of the value of <em>S</em>
-may be traded or speculated upon in the context of <em>S'</em>:
+by which tokens representing shares of the value of <i>S</i>
+may be traded or speculated upon in the context of <i>S'</i>:
 e.g., a series of tradeable Ethereum tokens
-pegged to <em>S</em>&rsquo;s cryptocurrency or stake units.</p>
-<p>Now suppose participant <em>P</em> finds
-some behavioral strategy that system <em>S</em> depends on participants <em>not</em> exhibiting,
-and that will observably break <em>S</em> –
-or even that just <em>might</em> break <em>S</em> with significant non-negligible probability.
+pegged to <i>S</i>'s cryptocurrency or stake units.
+
+<p>
+Now suppose participant <i>P</i> finds
+some behavioral strategy that system <i>S</i> depends on participants <i>not</i> exhibiting,
+and that will observably break <i>S</i> &ndash;
+or even that just <i>might</i> break <i>S</i> with significant non-negligible probability.
 Assumption 3 above guarantees the existence of such a behavioral strategy,
-unless <em>S</em>&rsquo;s rationality assumptions were in fact redundant and worthless.
-<em>P</em> must merely be clever enough to find and implement such a strategy.
-It is possible this strategy might first require <em>P</em>
-to pretend to be one or more well-behaved participants of <em>S</em> for a while,
+unless <i>S</i>'s rationality assumptions were in fact redundant and worthless.
+<i>P</i> must merely be clever enough to find and implement such a strategy.
+It is possible this strategy might first require <i>P</i>
+to pretend to be one or more well-behaved participants of <i>S</i> for a while,
 to build up the necessary reputation or otherwise get correctly positioned
-in <em>S</em>&rsquo;s state space;
-a bit of patience and persistence on <em>P</em>&rsquo;s part will satisfy this requirement.
-<em>P</em> may also have to &ldquo;buy into&rdquo; <em>S</em>
-enough to surmount any entry costs or stake thresholds <em>S</em> might impose;
-the external funds <em>P</em> can invoke or borrow by assumption 2
+in <i>S</i>'s state space;
+a bit of patience and persistence on <i>P</i>'s part will satisfy this requirement.
+<i>P</i> may also have to &ldquo;buy into&rdquo; <i>S</i>
+enough to surmount any entry costs or stake thresholds <i>S</i> might impose;
+the external funds <i>P</i> can invoke or borrow by assumption 2 
 can satisfy this requirement,
-and are bounded by the total value of <em>S</em>.
-In general, <em>S</em>&rsquo;s openness by assumption 1
+and are bounded by the total value of <i>S</i>.
+In general, <i>S</i>'s openness by assumption 1
 and the existence of a correctness-violating strategy by assumption 3
 ensures that there exists some course of action and supply of external resources
-by which <em>P</em> can position itself to violate <em>S</em>&rsquo;s behavioral assumption.</p>
-<p>In addition to infiltrating and positioning itself within <em>S</em>,
-<em>P</em> also invokes or borrows enough external funds
-and uses them to short-sell (bet against) shares of <em>S</em>&rsquo;s value massively
-in the context of the external system <em>S'</em>,
-which (unlike <em>S</em>) <em>P</em> trusts will remain operational and hold its value
-independently of <em>S</em>.
-Provided <em>P</em> reaches this short-selling position gradually and carefully enough
+by which <i>P</i> can position itself to violate <i>S</i>'s behavioral assumption.
+
+<p>
+In addition to infiltrating and positioning itself within <i>S</i>,
+<i>P</i> also invokes or borrows enough external funds
+and uses them to short-sell (bet against) shares of <i>S</i>'s value massively
+in the context of the external system <i>S'</i>,
+which (unlike <i>S</i>) <i>P</i> trusts will remain operational and hold its value
+independently of <i>S</i>.
+Provided <i>P</i> reaches this short-selling position gradually and carefully enough
 to avoid revealing its strategy early,
-the funds <em>P</em> must invoke or borrow for this purpose
-must be bounded by some fraction of the total economic value of <em>S</em>.
-And provided there are at least some participants and/or observers of <em>S</em>
-who believe that <em>S</em> is secure and will remain operating correctly,
-and are willing to bet to that effect on <em>S'</em>,
-<em>P</em> will eventually be able to build its short position.</p>
-<p>Finally, once <em>P</em> is positioned correctly within both <em>S</em> and <em>S'</em>,
-<em>P</em> then launches its assumption-violating behavior in <em>S</em>
-that will observably cause <em>S</em> to fail as per assumption 2.
+the funds <i>P</i> must invoke or borrow for this purpose 
+must be bounded by some fraction of the total economic value of <i>S</i>.
+And provided there are at least some participants and/or observers of <i>S</i>
+who believe that <i>S</i> is secure and will remain operating correctly,
+and are willing to bet to that effect on <i>S'</i>,
+<i>P</i> will eventually be able to build its short position.
+
+<p>
+Finally, once <i>P</i> is positioned correctly within both <i>S</i> and <i>S'</i>,
+<i>P</i> then launches its assumption-violating behavior in <i>S</i>
+that will observably cause <i>S</i> to fail as per assumption 2.
 This might manifest as a denial-of-service attack,
 a correctness attack, or in any other fashion.
-The only requirement is that <em>P</em>&rsquo;s behavior creates an <em>observable</em> failure,
-which a nontrivial number of the existing participants in <em>S</em>
-believed would not happen because they believed in <em>S</em> and its threat model.
-The fact that <em>S</em> is now observed to be broken,
+The only requirement is that <i>P</i>'s behavior creates an <i>observable</i> failure,
+which a nontrivial number of the existing participants in <i>S</i>
+believed would not happen because they believed in <i>S</i> and its threat model.
+The fact that <i>S</i> is now observed to be broken,
 and its basic design assumptions manifestly violated,
-causes the shares of <em>S</em>&rsquo;s value to drop precipitously on external market <em>S'</em>,
-on which <em>P</em> takes a handsome profit.
-Perhaps <em>S</em> recovers and continues, or perhaps it fails entirely –
-but either way, <em>P</em> has essentially transferred
-a significant fraction of system <em>S</em>&rsquo;s economic value
-from system <em>S</em> itself to <em>P</em>&rsquo;s own short-sold position on external market <em>S'</em>.
-And to do so, <em>P</em> needed only to find a way – any way –
-to <em>surprise</em> all those who believed <em>S</em> was secure
-and that its threat model accurately modeled <em>S</em>&rsquo;s real-world participants.</p>
-<p>Even if <em>P</em>&rsquo;s assumption-violating behavioral strategy
-does not break <em>S</em> with perfect reliability, but only with some probability,
-<em>P</em> can still create an <em>expectation</em> of positive profit from its attack
-by hedging its bets appropriately on <em>S'</em>.
-<em>P</em> does not need a perfect attack,
-but merely needs to possess the <em>correct</em> knowledge
-that <em>S</em>&rsquo;s failure probability is much higher
-than the other participants in <em>S</em> believe it to be –
-because only <em>P</em> knows that (and precisely when)
-it will violate <em>S</em>&rsquo;s design assumptions
+causes the shares of <i>S</i>'s value to drop precipitously on external market <i>S'</i>,
+on which <i>P</i> takes a handsome profit.
+Perhaps <i>S</i> recovers and continues, or perhaps it fails entirely &ndash;
+but either way, <i>P</i> has essentially transferred
+a significant fraction of system <i>S</i>'s economic value
+from system <i>S</i> itself to <i>P</i>'s own short-sold position on external market <i>S'</i>.
+And to do so, <i>P</i> needed only to find a way &ndash; any way &ndash;
+to <i>surprise</i> all those who believed <i>S</i> was secure
+and that its threat model accurately modeled <i>S</i>'s real-world participants.
+
+<p>
+Even if <i>P</i>'s assumption-violating behavioral strategy
+does not break <i>S</i> with perfect reliability, but only with some probability,
+<i>P</i> can still create an <i>expectation</i> of positive profit from its attack
+by hedging its bets appropriately on <i>S'</i>.
+<i>P</i> does not need a perfect attack,
+but merely needs to possess the <i>correct</i> knowledge
+that <i>S</i>'s failure probability is much higher
+than the other participants in <i>S</i> believe it to be &ndash;
+because only <i>P</i> knows that (and precisely when)
+it will violate <i>S</i>'s design assumptions
 to create that higher failure probability.
-Furthermore, even if <em>P</em>&rsquo;s attack fails,
+Furthermore, even if <i>P</i>'s attack fails,
 and the vulnerability it exploits is quickly detected and patched,
-<em>P</em> may still profit marginally from the market&rsquo;s adjustment
-to a realization that <em>S</em>&rsquo;s failure probability was (even temporarily)
-higher than most of <em>S</em>&rsquo;s participants thought it was.</p>
-<p>Within the context of system <em>S</em>,
-<em>P</em>&rsquo;s behavior manifests as Byzantine behavior,
-specifically violating the assumptions <em>S</em>&rsquo;s designers thought
-participants would not exhibit and thus excluded from <em>S</em>&rsquo;s threat model.
+<i>P</i> may still profit marginally from the market's adjustment
+to a realization that <i>S</i>'s failure probability was (even temporarily)
+higher than most of <i>S</i>'s participants thought it was.
+
+<p>
+Within the context of system <i>S</i>,
+<i>P</i>'s behavior manifests as Byzantine behavior,
+specifically violating the assumptions <i>S</i>'s designers thought
+participants would not exhibit and thus excluded from <i>S</i>'s threat model.
 Considered in the larger context of the external world
-in which <em>S</em> is embedded, however, including the external trading system <em>S'</em>,
-<em>P</em>&rsquo;s behavior is perfectly rational and economically-motivated.
-Thus, the very rationality of <em>P</em> in the larger open world
-is precisely what motivates <em>P</em> to break, and profit from,
-<em>S</em>&rsquo;s ill-considered assumption that its participants
-would behave rationally.</p>
-<h2 id="implications-for-practical-systems">Implications for Practical Systems</h2>
-<p>This type of financial attack is by no means entirely theoretical
+in which <i>S</i> is embedded, however, including the external trading system <i>S'</i>,
+<i>P</i>'s behavior is perfectly rational and economically-motivated.
+Thus, the very rationality of <i>P</i> in the larger open world
+is precisely what motivates <i>P</i> to break, and profit from,
+<i>S</i>'s ill-considered assumption that its participants
+would behave rationally.
+
+
+<h2> Implications for Practical Systems </h2>
+
+<p>
+This type of financial attack is by no means entirely theoretical
 or limited to fully-digital systems such as cryptocurrencies.
 In our scenario,
-<em>P</em> is essentially playing a game closely-analogous to the investors in
-&lt;a href=&ldquo;<a href="https://en.wikipedia.org/wiki/Credit_default_swap%22">https://en.wikipedia.org/wiki/Credit_default_swap&quot;</a>
-&gt;credit default swaps</a>
+<i>P</i> is essentially playing a game closely-analogous to the investors in
+<a href="https://en.wikipedia.org/wiki/Credit_default_swap"
+	>credit default swaps</a>
 who both contributed to, and profited handsomely from,
-the &lt;a href=&ldquo;<a href="https://en.wikipedia.org/wiki/Financial_crisis_of_2007">https://en.wikipedia.org/wiki/Financial_crisis_of_2007</a>–2008&rdquo;
-&gt;2007-2008 financial crisis</a>,
+the <a href="https://en.wikipedia.org/wiki/Financial_crisis_of_2007–2008"
+	>2007-2008 financial crisis</a>,
 as covered more recently in the film
-<a href="https://en.wikipedia.org/wiki/The_Big_Short_(film)">The Big Short</a>.</p>
-<p>In the cryptocurrency space,
-some real-world attacks we are seeing –
+<a href="https://en.wikipedia.org/wiki/The_Big_Short_(film)">The Big Short</a>.
+
+<p>
+In the cryptocurrency space,
+some real-world attacks we are seeing &ndash;
 such as increasingly-common
-<a href="https://cryptoslate.com/prolific-51-attacks-crypto-verge-ethereum-classic-bitcoin-gold-feathercoin-vertcoin/">51% attacks</a> –
+<a href="https://cryptoslate.com/prolific-51-attacks-crypto-verge-ethereum-classic-bitcoin-gold-feathercoin-vertcoin/">51% attacks</a> &ndash;
 might be viewed as special cases of this metacircular attack on rationality.
 It is often claimed that large proof-of-work miners
 (or proof-of-stake holders)
@@ -388,36 +454,40 @@ the value of the cryptocurrency in which they by definition hold a large stake,
 and hence would be &ldquo;irrational&rdquo;.
 But this argument falls apart if the attack allows the large stakeholder
 to reap rewards outside the attacked system,
-e.g., by defrauding exchanges or selling <em>S</em> short in other systems.</p>
-<p>Externally-motivated attacks on cryptocurrencies have been predicted before
+e.g., by defrauding exchanges or selling <i>S</i> short in other systems.
+
+<p>
+Externally-motivated attacks on cryptocurrencies have been predicted before
 in the form of
-&lt;a href=&ldquo;<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2041492%22">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2041492&quot;</a>
-&gt;virtual protest or &ldquo;Occupy Bitcoin&rdquo; attacks</a>,
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2041492"
+	>virtual protest or "Occupy Bitcoin" attacks</a>,
 <a href="https://www.econinfosec.org/archive/weis2013/papers/KrollDaveyFeltenWEIS2013.pdf">Goldfinger attacks</a>,
-&lt;a href=&ldquo;<a href="https://www.comp.nus.edu.sg/~prateeks/papers/38Attack.pdf%22">https://www.comp.nus.edu.sg/~prateeks/papers/38Attack.pdf&quot;</a>
-&gt;puzzle transaction attacks</a>,
-&lt;a href=&ldquo;<a href="https://www.sba-research.org/wp-content/uploads/publications/201709%20-%20AJudmayer%20-%20CBT_Merged_Mining_camera_ready_final.pdf%22">https://www.sba-research.org/wp-content/uploads/publications/201709%20-%20AJudmayer%20-%20CBT_Merged_Mining_camera_ready_final.pdf&quot;</a>
-&gt;merged mining attacks</a>,
-&lt;a href=&ldquo;<a href="https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final17.pdf%22">https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final17.pdf&quot;</a>
-&gt;hostile blockchain takeovers</a>,
+<a href="https://www.comp.nus.edu.sg/~prateeks/papers/38Attack.pdf"
+	>puzzle transaction attacks</a>,
+<a href="https://www.sba-research.org/wp-content/uploads/publications/201709%20-%20AJudmayer%20-%20CBT_Merged_Mining_camera_ready_final.pdf"
+	>merged mining attacks</a>,
+<a href="https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final17.pdf"
+	>hostile blockchain takeovers</a>,
 and out-of-band variants of
 <a href="https://eprint.iacr.org/2019/775.pdf">pay-to-win attacks</a>.
 All these attacks are specific instances of our argument.
 They have been presented in the literature as open yet solvable challenges.
 We are not aware, however,
 of any prior attempt to summarize the lessons learned
-and formulate a general impossibility statement.</p>
-<p>For most practical systems,
+and formulate a general impossibility statement.
+
+<p>
+For most practical systems,
 we do not even know if they are incentive compatible
-in the absence of an external system <em>S'</em> –
-i.e., where assumption 2 is violated –
+in the absence of an external system <i>S'</i> &ndash;
+i.e., where assumption 2 is violated &ndash;
 and probably they are not.
 Almost all game-theoretic treatments of (parts of) the Bitcoin protocol
 deliver negative results.
 Many attacks against specific cryptocurrency system designs
 are known to be profitable in expectation,
 such as
-<a href="https://www.avivz.net/pubs/12/Bitcoin_EC0212.pdf">transaction withholding</a>,
+<a href="https://www.avivz.net/pubs/12/Bitcoin_EC0212.pdf">ransaction withholding</a>,
 <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2407834">empty block mining</a>,
 <a href="https://www.cs.cornell.edu/~ie53/publications/btcProcFC.pdf">selfish mining</a>,
 <a href="http://webee.technion.ac.il/people/ittay/publications/btcPoolsSP15.pdf">block withholding</a>,
@@ -430,15 +500,17 @@ such as risk aversion and other costs
 that we rarely observe such attacks in large deployed systems.
 Many specific attacks do not even depend on assumption 1,
 underlining the fact that rationality is not a silver bullet
-even where this metacircular argument does not apply.
+even where this metacircular argument does not apply. 
 Where it does apply,
 it is more general and effectively
-<em>guarantees</em> the existence of attacks
-against <em>all</em> open systems that assume participants are rational.</p>
-<p>Another related observation is that
-financial markets on derivatives of a system <em>S</em> mature in the external world
-(e.g., <em>S'</em>)
-as <em>S</em> grows and becomes more relevant.
+<i>guarantees</i> the existence of attacks 
+against <i>all</i> open systems that assume participants are rational.
+
+<p>
+Another related observation is that
+financial markets on derivatives of a system <i>S</i> mature in the external world
+(e.g., <i>S'</i>)
+as <i>S</i> grows and becomes more relevant.
 So in some sense, systems built on the rationality assumption
 are temporarily more secure only until they become fat enough targets
 to be eaten by their own success.
@@ -451,12 +523,18 @@ rule of thumb that the ratio of processors to individuals
 varies in a small band.
 Such dynamics happen in the real world, too.
 But there they have traditionally taken centuries or decades
-while in cryptocurrency space everything happens in time-lapse.</p>
-<h2 id="limitations-of-the-argument">Limitations of the Argument</h2>
-<p>This argument is of course currently only a rough and informal sketch.
+while in cryptocurrency space everything happens in time-lapse.
+
+
+<h2> Limitations of the Argument </h2>
+
+<p>
+This argument is of course currently only a rough and informal sketch.
 An enterprising student might wish to try formalizing it,
-or maybe someone has already done so but we are unaware of it.</p>
-<p>The metacircular argument
+or maybe someone has already done so but we are unaware of it.
+
+<p>
+The metacircular argument
 certainly does not apply to all cryptocurrencies or decentralized systems.
 In a permissioned system, for example,
 in which a closed group of participants are strongly-identified
@@ -467,8 +545,10 @@ Similarly, in a national cryptocurrency,
 which might be relatively open but only to citizens of a given country,
 and which require verified identities with which the police
 can expect to track down and jail misbehaving participants,
-this metacircular argument does not necessarily apply.</p>
-<p>Apart from police enforcement,
+this metacircular argument does not necessarily apply.
+
+<p>
+Apart from police enforcement,
 rationality assumptions may be weakened in other ways
 to circumvent the metacircular argument.
 For example, an open system might be designed according to a
@@ -477,37 +557,46 @@ to join the system in the first place (e.g., mining rewards in Bitcoin),
 but that after having become stakeholders, most will then behave honestly.
 In this case, rational incentives serve only as a tool for system growth,
 but become irrelevant and equivalent to a strong honesty assumption
-in terms of the internal security of the system itself.</p>
-<h2 id="conclusion-irrationality-can-be-rational">Conclusion: Irrationality Can Be Rational</h2>
+in terms of the internal security of the system itself.
+
+<h2> Conclusion: Irrationality Can Be Rational </h2>
+
 <center>
 <img src="adversaries-open.svg" alt="Types of adversaries" style="float:right">
 </center>
-<p>What many in the cryptocurrency community seem to want
+
+<p>
+What many in the cryptocurrency community seem to want
 is a system that is both permissionless
-and tolerant of strongly-rational behavior –
+and tolerant of strongly-rational behavior &ndash;
 either beyond the thresholds a similar a Byzantine system would tolerate
 (such as a rational majority),
 or by deriving some simplicity or efficiency benefit
 from assuming rationality.
 But in an open world in which
 the permissionless system is not the only game in town,
-a potential <em>perfectly rational</em> attacker can always exist,
+a potential <i>perfectly rational</i> attacker can always exist,
 or appear at any time,
-whose entirely rational behavior is precisely to profit from
-bringing the system down by violating its assumptions on participant behavior.</p>
-<p>So if you think you have designed a permissionless decentralized system
-that is cleverly secured based on rationality assumptions, you haven&rsquo;t.
-You have merely obfuscated the rational attacker&rsquo;s motive and opportunity
+whose entirely rational behavior is precisely to profit from 
+bringing the system down by violating its assumptions on participant behavior.
+
+<p>
+So if you think you have designed a permissionless decentralized system
+that is cleverly secured based on rationality assumptions, you haven't.
+You have merely obfuscated the rational attacker's motive and opportunity
 to profit outside your system from breaking your rationality assumptions.
 The only practical way to eliminate this threat appears to be
 either to close the system and require strong identities and police protection,
 or else secure the system against arbitrary Byzantine behavior,
-thereby rendering rationality assumptions redundant and useless for security.</p>
+thereby rendering rationality assumptions redundant and useless for security.
+
+
 <blockquote><i>
 We wish to thank Jeff Allen, Ittay Eyal,
 Damir Filipovic, Patrik Keller, Alexander Lipton, Andrew Miller,
 and Haoqian Zhang
 for helpful feedback on early drafts of this post.
+
 <p>
 Updated 27-Oct-2019 with link to 
 <a href="https://arxiv.org/pdf/1910.08820.pdf"

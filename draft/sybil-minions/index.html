@@ -42,26 +42,44 @@
     
   <h1>Secure, Scalable Proof-of-Stake Blockchains</h1>
   <p>My preliminary analysis of proof-of-personhood designs that assign a mixture of human and Sybil identities into random groups for simultaneous verification - as in Pseudonym Pairs, Idena, or Encointer - works out a bit differently.</p>
+
 <p>In my model, the attacker works in rounds, taking the time needed to double the number of Sybil identities in each round and reach a new sustainable state, where the attacker collects enough basic income from Sybils to (more than) cover the minions he hires to keep them verified.</p>
+
 <p>This is the type of profit-driven Sybil attack scenario against crypt-UBI schemes that I discuss briefly in my new draft of Proofs of Personhood, section 4.7 &ldquo;Threshold verification&rdquo; in this version.  I&rsquo;ll expand on this explanation in future versions.</p>
+
 <p>Each attack round consists of a &ldquo;savings&rdquo; phase, where the attacker saves up excess basic income (attack profit) collected from current Sybils, followed by an &ldquo;expansion&rdquo; phase, where he invests those profits in hiring additional minions long enough to get more Sybils verified.</p>
+
 <p>After each attack round (both the savings and expansion phases), the attacker reaches a new, profitable steady state in which the basic incomes he must pay his replaceable human minions to keep his Sybils verified is less than the basic income he is taking in from those Sybils.</p>
+
 <p>This profitability can come from two factors in this model: (a) a verification threshold defining the percentage of verification assignments a human must attend in order to keep an identity earning basic income, and (b) the size of each random verification group, ie, 2 for pairs.</p>
+
 <p>Here is a graph showing the time in PoP verification cycles that this attacker model needs to take over completely a network of 10,000 honest users, with different verification thresholds between 50% and 100%, when identities are assigned in pairs as in Idena or Pseudonym Pairs.</p>
+
 <p>With a 50% verification threshold, the network survives only 44 verification cycles. With higher verification thresholds, the takeover takes longer. But even with a 100% threshold, the attacker still gets a trickle of profit from all-Sybil pairs, which eventually becomes a flood.</p>
+
 <p>This graph shows the scenario where identities are randomly assigned to larger verification groups of 10 as in Encointer.  Note that both axes are log-scale in this graph.</p>
+
 <p>If verification threshold is anything less than 100%, then this dominates the attacker&rsquo;s profit opportunity from the start, so group size makes almost no difference.  But for a 100% verification threshold, using larger verification groups as in Idena can greatly slow this attack.</p>
+
 <p>For a sufficiently high (ideally 100%) verification threshold and sufficiently large verification groups, it is probably reasonable to hope and expect that the economic frictions (not modeled) that a real attacker would face in hiring minions would make this attack unattractive.</p>
+
 <p>But this model also assumes the actual verifications are perfect: e.g., that Idena&rsquo;s AI-hard puzzles really are AI-hard and human-easy, and that AI deep fakes can never deceive real humans in Pseudonym Pairs. Any slippage of these assumptions, even a bit, is a profit opportunity.</p>
+
 <p>For anyone interested in examining the details of this attack model and playing with the parameters or modifying it, here it is in a LibraOffice spreadsheet. Note: there are several sheets. You can view via Google Drive but must download to see the graphs.</p>
+
 <p>The entire purpose of the gig economy
 is to convert human beings into replaceable minions,
 serving anyone with money,
 with perfect elasticity and no economic frictions.</p>
+
 <p>(illustration: human meat grinder from The Wall emitting minions.)</p>
+
 <p>TODO: address entry threshold costs.</p>
+
 <p>TODO: model profit sharing between attacker mastermind and minions.</p>
+
 <p>This is simply the Matthew Effect, or &ldquo;rich get richer&rdquo; principle, at work.</p>
+
 <p>Online verification approaches give an attacker
 the further advantage of being able to hire human minions
 working from anywhere in the world,

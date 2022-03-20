@@ -41,88 +41,105 @@
 
     
   <h1>Composable Markup (CMark)</h1>
-  <ul>
-<li>
-<pre><code>  	Hyphen
-</code></pre>
-X	[-]	Optional line-breaking hyphen???
-&ndash;	–	[&ndash;]	En-dash or numeric range
-&mdash;	—	[&mdash;]	Em-dash
-&hellip;	…	[&hellip;]	Ellipsis</li>
+  
+
+<ul>
+<li>Hyphen
+X   [-] Optional line-breaking hyphen???
+&ndash;  –   [&ndash;]    En-dash or numeric range
+&mdash; —   [&mdash;]   Em-dash
+&hellip; …   [&hellip;]   Ellipsis</li>
 </ul>
-<p>&ldquo;&hellip;&rdquo;			Quoted string: quotes become left/right</p>
-<pre><code>⏎	[br]	Line break
-␍	[r]	Carriage return character mark
-␤	[n]	Newline character mark
-¶	[p]	Paragraph mark
 
-X	[o']	Open single quote
-X	[c']	Close single quote
-X	[o&quot;]	Open double quote
-X	[c&quot;]	Close double quote
+<p>&rdquo;&hellip;&rdquo;           Quoted string: quotes become left/right</p>
+<pre tabindex="0"><code>⏎   [br]    Line break
+␍   [r] Carriage return character mark
+␤   [n] Newline character mark
+¶   [p] Paragraph mark
 
-X	[o&lt;&gt;]	Open angle bracket
-X	[c&lt;&gt;]	Close angle bracket
-X	[o&lt;&lt;&gt;&gt;]	Open double angle bracket
-X	[c&lt;&lt;&gt;&gt;]	Close double angle bracket
-</code></pre>
+X   [o&#39;]    Open single quote
+X   [c&#39;]    Close single quote
+X   [o&#34;]    Open double quote
+X   [c&#34;]    Close double quote
+
+X   [o&lt;&gt;]   Open angle bracket
+X   [c&lt;&gt;]   Close angle bracket
+X   [o&lt;&lt;&gt;&gt;] Open double angle bracket
+X   [c&lt;&lt;&gt;&gt;] Close double angle bracket</code></pre>
 <p>Spacing:
-&quot; &quot;	[mq_]	Em quad space
-&quot; &quot;	[nq_]	En quad space
-&quot; &quot;	[m_]	Em space
-&quot; &quot;	[n_]	En space
-&quot; &quot;	[3m_]	Three-per-Em space
-&quot; &quot;	[4m_]	Four-per-Em space
-&quot; &quot;	[6m_]	Six-per-Em space
-&quot; &quot;	[d_]	Figure (digit) space
-&quot; &quot;	[.<em>]	Punctuation space (width of a period)
-&quot; &quot;	[t</em>]	Thin space
-&quot; &quot;	[h_]	Hair space
-\u200B	[0_]	Zero-width space</p>
-<pre><code>&quot; &quot;	[~_]	No-break space
-\u202f	[~t_]	Narrow no-break space
-\ufeff	[~0_]	Zero-width no-break space
-</code></pre>
+    &ldquo; &rdquo; [mq<em>]   Em quad space
+    &ldquo; &rdquo; [nq</em>]   En quad space
+    &ldquo; &rdquo; [m<em>]    Em space
+    &ldquo; &rdquo; [n</em>]    En space
+    &ldquo; &rdquo; [3m<em>]   Three-per-Em space
+    &ldquo; &rdquo; [4m</em>]   Four-per-Em space
+    &ldquo; &rdquo; [6m<em>]   Six-per-Em space
+    &ldquo; &rdquo; [d</em>]    Figure (digit) space
+    &ldquo; &rdquo; [.<em>]    Punctuation space (width of a period)
+    &ldquo; &rdquo; [t</em>]    Thin space
+    &ldquo; &rdquo; [h<em>]    Hair space
+    \u200B  [0</em>]    Zero-width space</p>
+<pre tabindex="0"><code>&#34; &#34; [~_]    No-break space
+\u202f  [~t_]   Narrow no-break space
+\ufeff  [~0_]   Zero-width no-break space</code></pre>
 <h2 id="character-markup">Character markup</h2>
-<p>a(uri)[&hellip;]		Link to uri/cri</p>
-<p>i[&hellip;]			Italics
-b[&hellip;]			Bold
-_[&hellip;]			Underline</p>
-<p>sub[&hellip;]		Subscript
-sup[&hellip;]		Superscript</p>
-<p>sq[&hellip;]			Single-quoted text
-dq[&hellip;]			Double-quoted text
-[sq][&hellip;]		Single-quoted text, Unicode symbolization requested
-[dq][&hellip;]		Double-quoted text, Unicode symbolization requested</p>
-<p>o()			Open parenthesis
-c()			Close parenthesis
-o[]			Open square bracket
-c[]			Close square bracket
-o{}			Open curly brace
-c{}			Close curly brace</p>
-<p>[entity]		HTML entity by name
-[#n]			HTML entity by number</p>
-<p>![&hellip;]			markup comment?</p>
+
+<p>a(uri)[&hellip;]     Link to uri/cri</p>
+
+<p>i[&hellip;]          Italics
+b[&hellip;]          Bold
+_[&hellip;]          Underline</p>
+
+<p>sub[&hellip;]        Subscript
+sup[&hellip;]        Superscript</p>
+
+<p>sq[&hellip;]         Single-quoted text
+dq[&hellip;]         Double-quoted text
+[sq][&hellip;]       Single-quoted text, Unicode symbolization requested
+[dq][&hellip;]       Double-quoted text, Unicode symbolization requested</p>
+
+<p>o()         Open parenthesis
+c()         Close parenthesis
+o[]         Open square bracket
+c[]         Close square bracket
+o{}         Open curly brace
+c{}         Close curly brace</p>
+
+<p>[entity]        HTML entity by name
+[#n]            HTML entity by number</p>
+
+<p>![&hellip;]          markup comment?</p>
+
 <h2 id="block-markup">Block markup</h2>
-<p>span[&hellip;]		Text span element
-div[&hellip;]		Block division element</p>
-<p>p[&hellip;]			Paragraph element</p>
-<p>h1[&hellip;]			Level-1 heading
-h2[&hellip;]			Level-2 heading
+
+<p>span[&hellip;]       Text span element
+div[&hellip;]        Block division element</p>
+
+<p>p[&hellip;]          Paragraph element</p>
+
+<p>h1[&hellip;]         Level-1 heading
+h2[&hellip;]         Level-2 heading
 &hellip;</p>
-<p>quote[&hellip;]		Block quote</p>
-<p>color(c)[&hellip;]		Color c text</p>
-<p>img(args)[alt]		Embedded image</p>
-<p>ul[&hellip;]			Unordered list
-ol[&hellip;]			Ordered list
-li[&hellip;]			List item</p>
-<p>dl[&hellip;]			Description list
-dt[&hellip;]			Description term
-dd[&hellip;]			Description</p>
+
+<p>quote[&hellip;]      Block quote</p>
+
+<p>color&copy;[&hellip;]       Color c text</p>
+
+<p>img(args)[alt]      Embedded image</p>
+
+<p>ul[&hellip;]         Unordered list
+ol[&hellip;]         Ordered list
+li[&hellip;]         List item</p>
+
+<p>dl[&hellip;]         Description list
+dt[&hellip;]         Description term
+dd[&hellip;]         Description</p>
+
 <h2 id="tables">Tables</h2>
-<p>table(args)[&hellip;]	Table
-tr(args)[&hellip;]		Table row
-td(args)[&hellip;])		Table data/cell</p>
+
+<p>table(args)[&hellip;]    Table
+tr(args)[&hellip;]       Table row
+td(args)[&hellip;])      Table data/cell</p>
 
 
 

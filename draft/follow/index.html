@@ -41,53 +41,63 @@
 
     
   <h1>Decentralized Update Governance (DUG)</h1>
-  <p>Orthogonal concepts to be defined independently but worked together:</p>
-<ul>
-<li>identification (e.g., by content hash) of current version</li>
-<li>linkage of versions into a linear series, SkipChain, or TimeTree</li>
-<li>update authorization by one or quorum of identities</li>
-<li>authentication of identities (people or devices) eg by signing</li>
-<li>registration of updates on authoritative registry or registries
-<ul>
-<li>checking of witnesses by threshold</li>
-</ul>
-</li>
-<li>definition of unambiguous authoritative chain by timescale?</li>
-</ul>
+  <p>Orthogonal concepts to be defined independently but worked together:
+- identification (e.g., by content hash) of current version
+- linkage of versions into a linear series, SkipChain, or TimeTree
+- update authorization by one or quorum of identities
+- authentication of identities (people or devices) eg by signing
+- registration of updates on authoritative registry or registries
+    - checking of witnesses by threshold
+- definition of unambiguous authoritative chain by timescale?</p>
+
 <p>&ndash;
 Version Identifier (VID) scheme:</p>
+
 <p>Intended to be a type of URI that you put into your
 source Web content (or other content)
 to represent a trackable object,
 whose VIDs can be upgraded automatically when the target changes.
 Or better to put the VID info in the target&rsquo;s metadata?</p>
+
 <p>&ndash;
 DUG scheme:</p>
+
 <p>In a web page, insert into a META tag in the header.
 In other types of files, can be in a comment etc toward the beginning.</p>
+
 <p>Can specify either directly in-line or out-of-line the update governance spec?</p>
-<p>Needs to tell readers:</p>
-<ul>
-<li>how to be certain that this is a valid/correct DUG spec</li>
-<li>at what location(s) the current/updated status, versions can be found</li>
-<li>how to validate their authorization, correctness, and consistency</li>
-</ul>
+
+<p>Needs to tell readers:
+- how to be certain that this is a valid/correct DUG spec
+- at what location(s) the current/updated status, versions can be found
+- how to validate their authorization, correctness, and consistency</p>
+
 <p>To head off DUG attacks on temporarily-hacked websites or subpages,
 need to have a root-level robots.txt-like indication for readers
 to consider DUG specs to be authoritative?</p>
+
 <p>Example full VID reference:</p>
+
 <p>vid[<vid-scheme>:<version-hash>/<path-within-version>]
 vid[sha256:<base64>/foo/bar/#blah]</p>
+
 <p>Alternatively, for agility, make VIDs a list of alternate sub-CRIs
 with different schemes/ciphersuites?</p>
+
 <p>Example:</p>
+
 <p>vid[1[<version-hash>/<path-within-version>],2[<version-hash>/<path>]]</p>
+
 <p>Proto-VID marker:</p>
+
 <p>vid[]</p>
+
 <p>This just requests the content/version control system to replace this marker
 with a full VID on initial checkin.</p>
+
 <p>&ndash;
 Functionality I want from governed versioned series:</p>
+
 <ul>
 <li>Anyone can produce a series in most any way</li>
 <li>Format and cryptographic agility</li>
@@ -100,8 +110,11 @@ signoffs via multiple devices, users, etc.</li>
 (push notifications, etc)</li>
 <li>blockchain/registry agility: Bitcoin, Ethereum, private, etc.</li>
 </ul>
+
 <p>&ndash;</p>
+
 <p>Functionality I want from TimeTrees:</p>
+
 <ul>
 <li>Any device can create/maintain its own TimeTree</li>
 <li>authenticated by one or more device keypairs
@@ -115,6 +128,7 @@ via various protocols: HTTP, git, peer-to-peer, IPFS, Tor, etc.</li>
 <li>it&rsquo;s up to application/device whether leaves remain published forever
 or get pruned with time or when no longer needed</li>
 </ul>
+
 <p>&ndash;
 TimeTree state ID (or TimeTree Stamp?):
 consists of optional human-readable date stamp in RFC 3339 format,
@@ -124,17 +138,23 @@ of the number of seconds since Unix Epoch,
 with present hashes for one bits and omitted hashes for zero bits.
 Each hash is the root of a complete binary Merkle tree
 of height corresponding to that bit position.</p>
+
 <p>Optionally may have more bits representing stamps
 with greater precision represented as a binary fraction of a second.</p>
-<p>Syntax: &ldquo;hash_n;[hash_n-1];&hellip;;[hash_0][.[hash_-1];&hellip;;[hash_-m]]&rdquo;
+
+<p>Syntax: &ldquo;hash_n;[hash<em>n-1];&hellip;;[hash_0][.[hash</em>-1];&hellip;;[hash_-m]]&rdquo;
 where n is the highest set bit in the timestamp,
 and m is the number of fractional bits in the timestamp.</p>
+
 <p>Since the number of seconds since the Unix Epoch is directly derivable,
 the TimeTree state ID also serves as a representation of the timestamp.</p>
+
 <p>Defined with respect to a particular cryptographic hash algorithm,
 such as sha256.</p>
+
 <p>Full URI:
-&ldquo;tts:sha256:hash_n;&hellip;;[hash_-m]&rdquo;</p>
+&ldquo;tts:sha256:hash<em>n;&hellip;;[hash</em>-m]&rdquo;</p>
+
 <p>Binary-to-ASCII encoding specified with tts scheme?  Base85?</p>
 
 

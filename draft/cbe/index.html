@@ -41,7 +41,10 @@
 
     
   <h1>Efficient Stream Embedding with Composable Binary Encoding (CBE)</h1>
-  <p>(Alternate names: Blobifer? Binframe? Framer? Framify? Framifer? Byteframe? Bnest? Bytenest? Binest?)</p>
+  
+
+<p>(Alternate names: Blobifer? Binframe? Framer? Framify? Framifer? Byteframe? Bnest? Bytenest? Binest?)</p>
+
 <p>An old problem in data format design is
 embedding an arbitrary variable-length byte sequence in a longer one,
 so that a decoder can tell unambiguously where the embedded string ends.
@@ -53,9 +56,11 @@ keeping space overheads low and predictable
 for both small and large embedded strings,
 and allowing for stream processing in which an encoder
 must start writing an embedded sequence before knowing how long it will be.</p>
-<center>
+
+<p><center>
 <img src="find-the-end.svg" alt="finding the end of an embedded binary string" width="400px">
-</center>
+</center></p>
+
 <p>This post proposes a scheme I&rsquo;ll call <em>composable binary encoding</em> or <em>CBE</em>,
 which represents a point in this vast design space
 with a combination of properties that I find particularly attractive.
@@ -63,28 +68,29 @@ Given an arbitrary byte string of any length from zero to infinity (endless),
 CBE embeds it in a larger byte sequence so that a decoder
 can easily and unambiguously find the end.
 The CBE encoding is designed to achieve the following properties:</p>
+
 <ul>
 <li><strong>Simplicity:</strong>
 Both encoding and decoding is simple,
 with only a few cases.
+
 <ul>
 <li>Encoding and decoding is even simpler
 when embedded strings are constrained to be short.</li>
-</ul>
-</li>
+</ul></li>
 <li><strong>Compactness:</strong>
 Embedding is space-efficient for strings of all lengths,
 incurring:
+
 <ul>
 <li>0-byte overhead when the embedded string is
 a single 7-bit integer or ASCII character.</li>
 <li>1-byte overhead for embedded strings less than 64 bytes.</li>
 <li>2-byte overhead for embedded strings less than 16448 bytes.</li>
 <li>Rapidly-diminishing overhead for large strings,
-reaching a limit of ∼0.0001% overhead
+reaching a limit of &sim;0.0001% overhead
 when streaming with the maximum chunk size.</li>
-</ul>
-</li>
+</ul></li>
 <li><strong>Directness:</strong>
 Every byte of an embedded string appears verbatim and in-order
 in its CBE-encoding, with no transformation or obfuscation
@@ -98,18 +104,22 @@ making CBE embedding automatically
 in this common case.</li>
 <li><strong>Streaming:</strong>
 Encoders can delimit arbitrarily-long embedded strings
-progressively in variable-size chunks between ∼16KB and ∼4MB.</li>
+progressively in variable-size chunks between &sim;16KB and &sim;4MB.</li>
 </ul>
+
 <p>A <a href="https://github.com/bford/cofo">prototype implementation in Go</a>
 is already available,
 and porting CBE to other language should be easy.</p>
+
 <h2 id="the-binary-sequence-embedding-challenge">The binary sequence embedding challenge</h2>
+
 <p>We often wish to encode data in a <em>composable</em> hierarchical structure,
 so that we can build larger, more complex encoded structures
 out of sequences and trees comprised of smaller, simpler ones.
 Countless application-specific formats achieve this goal in countless ways
 adapted to the particular types of data being encoded:
 strings, integers, real numbers, dates, pixels, etc.</p>
+
 <p>Because of vast body of relevant data types
 and the complexity managing them and tracking their evolution,
 it is often simplest to compose or embed data
@@ -118,13 +128,15 @@ Since essentially any data type may be serialized into a byte string,
 embedding allows container formats to treat embedded data
 as opaque byte sequences.
 This approach readily allows the embedding of data in a format or version
-that may be unknown to the container format —
+that may be unknown to the container format &mdash;
 or even of encrypted data that is
 <a href="https://en.wikipedia.org/wiki/PURB_(cryptography)">indistinguishable from random bits</a>
 without the proper key.</p>
+
 <p>The main technical challenge in byte string embedding
 is enabling the decoder to <em>find the end</em> of the embedded sequence
 without constraining either its length or its content.</p>
+
 <p>If we just pick a distinguished
 <a href="https://en.wikipedia.org/wiki/Delimiter">delimiter</a>
 byte value to terminate the embedded sequence, for example,
@@ -142,6 +154,7 @@ can make a string &ldquo;delimiter-safe&rdquo; with more predictable overhead,
 at the cost of nontrivial transformations to the embedded string.
 And even modest escaping or delimiter-removal overheads
 can grow rapidly with multiple levels of nested embedding.</p>
+
 <p>The standard alternative is
 to encode the length of the embedded string
 prior to the embedded data itself,
@@ -164,6 +177,7 @@ in which encoders must produce the beginning of a long output stream
 concurrently with the reading of input stream(s) the output is derived from,
 each of which may be larger in total than the processor&rsquo;s working memory
 or even infinite (endless) in principle.</p>
+
 <p>We can in turn make the length field variable-size, of course.
 Using a base-7
 <a href="https://en.wikipedia.org/wiki/Variable-length_quantity">variable-length encoding</a>
@@ -180,12 +194,15 @@ without limiting their maximum size in principle,
 but incurs a nontrivial 14% constant overhead when encoding larger values
 such as cryptographic numbers with hundreds or thousands of bits,
 and does not address the streaming problem.</p>
+
 <h2 id="introducing-composable-binary-encoding-cbe">Introducing composable binary encoding (CBE)</h2>
+
 <p>While any embedding scheme will embody tradeoffs,
 we now explore <em>composable binary encoding</em> or <em>CBE</em>,
 an embedding scheme designed to balance simplicity, power, and efficiency.</p>
-<p>CBE simply takes an arbitrary byte sequence or <em>blob</em> of any length –
-even an endless stream –
+
+<p>CBE simply takes an arbitrary byte sequence or <em>blob</em> of any length &ndash;
+even an endless stream &ndash;
 and encodes it so that when embedded in another &ldquo;container&rdquo; byte stream,
 a decoder can unambiguously find the blob&rsquo;s end (if it has one).
 CBE has no notion of data types aside from byte sequences
@@ -194,6 +211,7 @@ it assumes the context in which the CBE-encoded blob appears
 will determine that.
 CBE&rsquo;s goal is to do only one thing well,
 namely embed variable-length byte sequences efficiently.</p>
+
 <p>While generalizing to arbitrary-length embedded blobs,
 CBE optimizes for the important common case of <em>short</em> strings
 in terms of both space-efficiency and encoding/decoding simplicity.
@@ -206,65 +224,73 @@ into one or more successive chunks to support streaming operation.
 This way, an encoder can produce <em>partial</em> chunks of large blobs progressively
 without knowing how many more chunks there will be
 until it produces the one <em>final</em> chunk.</p>
+
 <h3 id="chunk-headers">Chunk headers</h3>
+
 <p>Each chunk consists of a CBE blob
-contains a <em>header</em> of 1–4 bytes
+contains a <em>header</em> of 1&ndash;4 bytes
 and a <em>payload</em> of up to 4,210,751 bytes
 (2<sup>6</sup>+2<sup>14</sup>+2<sup>22</sup>-1).
 The payload immediately follows the header,
 except in the case of 1-byte payloads,
 which are part of the header itself.
 There are seven header encodings total, as follows:</p>
+
 <table align="center" style="border-spacing: 20px 0;">
-<tr align="left"><th> Header encoding <th> Description		<th> Payload
-<tr><td> <tt>0b10000000</tt>	<td> 0-byte empty final chunk	<td> none
+<tr align="left"><th> Header encoding <th> Description      <th> Payload
+<tr><td> <tt>0b10000000</tt>    <td> 0-byte empty final chunk   <td> none
 <tr><td> <tt>0b0<i>vvvvvvv</i></tt>
-		<td> 1-byte final chunk with payload <tt>0b0<i>vvvvvvv</i></tt> (0-127)
-				<td> 1 byte within header
+        <td> 1-byte final chunk with payload <tt>0b0<i>vvvvvvv</i></tt> (0-127)
+                <td> 1 byte within header
 <tr><td> <tt>0b10000001,1<i>vvvvvvv</i></tt>
-		<td> 1-byte final chunk with payload <tt>0b1<i>vvvvvvv</i></tt> (128-255) &nbsp;
-				<td> 1 byte within header
+        <td> 1-byte final chunk with payload <tt>0b1<i>vvvvvvv</i></tt> (128-255) &nbsp;
+                <td> 1 byte within header
 <tr><td> <tt>0b10<i>nnnnnn</i></tt>
-		<td> final chunk of payload length <i>n</i>
-			with 6-bit <i>n</i>
-				<td> 2&ndash;63 bytes following header
+        <td> final chunk of payload length <i>n</i>
+            with 6-bit <i>n</i>
+                <td> 2&ndash;63 bytes following header
 <tr><td> <tt>0b11<i>nnnnnn</i>,<i>nnnnnnnn</i></tt>
-		<td> final chunk of payload length 64+<i>n</i>
-			with 14-bit <i>n</i>
-				<td> 64&ndash;16447 bytes following header
+        <td> final chunk of payload length 64+<i>n</i>
+            with 14-bit <i>n</i>
+                <td> 64&ndash;16447 bytes following header
 <tr><td> <tt>0b10000001,00<i>nnnnnn</i>,<i>nnnnnnnn</i>,<i>nnnnnnnn</i></tt>
-		<td> final chunk of payload length 16448+<i>n</i>
-			with 22-bit <i>n</i>
-				<td> 16448&ndash;4,210,751 bytes
-					following header
+        <td> final chunk of payload length 16448+<i>n</i>
+            with 22-bit <i>n</i>
+                <td> 16448&ndash;4,210,751 bytes
+                    following header
 <tr><td> <tt>0b10000001,01<i>nnnnnn</i>,<i>nnnnnnnn</i>,<i>nnnnnnnn</i></tt> &nbsp;
-		<td> partial chunk of payload length 16448+<i>n</i>
-			with 22-bit <i>n</i>
-				<td> 16448&ndash;4,210,751 bytes
-					following header
+        <td> partial chunk of payload length 16448+<i>n</i>
+            with 22-bit <i>n</i>
+                <td> 16448&ndash;4,210,751 bytes
+                    following header
 </table>
+
 <p>In the last three header encodings,
 the bits comprising the value <em>n</em> are in big-endian byte order,
 with the most-significant bits in the second header byte.</p>
+
 <p>The first header variant is really just a special case of the fourth,
 in which the 6-bit length <em>n</em> is zero,
 and accordingly, zero payload bytes follow the 1-byte header.
 Encoders and decoders therefore need not actually distinguish these two cases.
 The above table shows the empty-blob case separately
 only for clarity of presentation.</p>
+
 <h3 id="encoding-and-decoding-small-blobs">Encoding and decoding small blobs</h3>
+
 <p>CBE optimizes small blobs for space-efficiency
 by incurring at most one byte of header overhead
 when the payload is less than 64 bytes long,
 and only two bytes of overhead for all small blobs
 containing less than 16448 bytes.
 In the special case of a blob containing a 1-byte payload
-whose most-significant bit is zero –
-such as a small integer in the range 0–127
-or a single ASCII character –
+whose most-significant bit is zero &ndash;
+such as a small integer in the range 0&ndash;127
+or a single ASCII character &ndash;
 CBE encodes the header <em>and</em> payload into a single byte
 using the second header variant above.
 In this case, the payload <em>is</em> the header.</p>
+
 <p>In every case including 1-byte payloads embedded within the header,
 all payload bytes appear verbatim and contiguously
 either within or immediately following the header,
@@ -278,11 +304,12 @@ or other embedded content for example.
 Avoiding payload transformation
 also ensures that CBE decoders often need not copy payloads,
 but can leave them in the input buffer
-and simply pass a pointer and length –
+and simply pass a pointer and length &ndash;
 or a slice in modern systems languages like
 <a href="https://golang.org">Go</a> and
-<a href="https://www.rust-lang.org">Rust</a> –
+<a href="https://www.rust-lang.org">Rust</a> &ndash;
 to some function that consumes the chunk&rsquo;s payload.</p>
+
 <p>Small blobs are automatically
 <a href="https://en.wikipedia.org/wiki/Canonicalization"><em>canonical</em></a>
 or
@@ -302,20 +329,23 @@ In this sense,
 CBE can serve the same purpose as the
 <a href="https://en.wikipedia.org/wiki/X.690#DER_encoding">X.690 distinguished encoding rules (DER)</a>,
 but with a simpler and more efficient encoding.</p>
+
 <p>Because the only encoding for <em>partial</em> chunks
 uses the final 4-byte header variant above
 with a minimum payload size of 16448 bytes,
 small blobs less than this size are always contiguous
 and can never be split into multiple chunks.
 This property ensures that in formats and protocols
-that CBE-encode data items known – or deliberately constrained –
+that CBE-encode data items known &ndash; or deliberately constrained &ndash;
 to be less than 16448 bytes,
 the decoder need not incur the code complexity
 of even knowing how to decode multi-chunk blobs.
 In this way, CBE optimizes not just space-efficiency
 but also implementation simplicity
 in the common case of small blobs.</p>
+
 <h3 id="encoding-and-decoding-large-blobs">Encoding and decoding large blobs</h3>
+
 <p>Blobs embedding strings 16448 bytes or larger
 may be split into zero or more <em>partial</em> chunks
 followed by exactly one <em>final</em> chunk.
@@ -326,11 +356,13 @@ so that each non-final chunk contains a payload of between
 The final chunk comprising a blob
 can use any of the final chunk encodings defined above,
 and thus can contain payloads between 0 and 4,210,751 bytes.</p>
+
 <p>Streaming a long blob in minimum-size chunks
 incurs four bytes of metadata overhead every 16448 bytes of content,
-for an overhead of ∼0.2%.
+for an overhead of &sim;0.2%.
 Using maximum-size chunks, in contrast,
 yields an overhead of less than 0.0001% in the limit.</p>
+
 <p>This chunk sizing flexibility
 allows streaming encoders to choose a balance
 between the space and processing efficiency of using large chunks,
@@ -341,13 +373,14 @@ but chosen to correspond roughly to the range of chunk and block sizes
 most frequently used in storing or processing bulk data
 in many typical formats and protocols:
 e.g., the 16-byte records typical of <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a>,
-the 4KiB–1MiB block sizes commonly used in clustered storage systems
+the 4KiB&ndash;1MiB block sizes commonly used in clustered storage systems
 or <a href="https://en.wikipedia.org/wiki/InterPlanetary_File_System">IPFS</a>,
-the 64–256KiB block sizes typical of
+the 64&ndash;256KiB block sizes typical of
 <a href="https://en.wikipedia.org/wiki/Flash_memory">flash memories</a>,
 the 32KiB window used in <a href="https://en.wikipedia.org/wiki/Gzip">gzip</a> compression
 to the 100-900KiB block sizes of <a href="https://en.wikipedia.org/wiki/Bzip2">bzip2</a>,
 etc.</p>
+
 <p>One cost of this chunk size flexibility in large blobs
 is that decoders must be prepared to decode and combine chunks of varying size.
 If CBE&rsquo;s range of chunk sizes is too broad
@@ -357,6 +390,7 @@ in that particular context.
 A protocol using CBE could restrict chunks to be strict powers of two
 between 2<sup>15</sup> (32KiB) and 2<sup>22</sup> (4MiB), for example,
 or a more restrictive range.</p>
+
 <p>Unlike small blobs,
 the encodings of large blobs are no longer automatically canonical,
 since different encoders may split blobs with different chunk boundaries.
@@ -366,6 +400,7 @@ in a context requiring a canonical encoding,
 thereby achieving the properties of
 <a href="https://en.wikipedia.org/wiki/X.690#DER_encoding">DER</a>
 for large blobs as well as small.</p>
+
 <p>The design choice to make small blobs automatically canonical,
 while allowing chunking flexibility for large blobs,
 reflects a balancing of priorities tailored to each case.
@@ -377,7 +412,9 @@ For large &ldquo;bulk&rdquo; data, in contrast,
 CBE large blobs
 support streaming operation with the flexibility of
 variable chunk sizes.</p>
+
 <h2 id="blob-encoding-common-data-types">Blob-encoding common data types</h2>
+
 <p>CBE does not know or care what you put in a blob;
 that is the point of the type-agnostic byte-string approach.
 However, CBE was designed in the expectation
@@ -388,7 +425,9 @@ for such common-case uses of blobs,
 without in any way intending to restrictive or prescriptive.
 If this blog post constituted a standard,
 then this section would be marked non-normative.</p>
+
 <h3 id="encoding-variable-length-integers-in-cbe-blobs">Encoding variable-length integers in CBE blobs</h3>
+
 <p>Integers are one of the most common basic data types
 used throughout innumerable data formats and protocols.
 It is simple and natural to use CBE blobs
@@ -397,10 +436,13 @@ as an alternative to base-7
 <a href="https://developers.google.com/protocol-buffers/docs/encoding">varints</a>
 for example.
 This section discusses this use first for unsigned, then signed integers.</p>
+
 <h4 id="unsigned-integers">Unsigned integers</h4>
+
 <p>Blob-encoding a variable-length unsigned integer is easy in principle:
 simply serialize the integer 8 bits at a time into a byte sequence,
 then CBE-encode that byte sequence.</p>
+
 <p>CBE does not care whether you serialize the integer
 in big-endian or little-endian byte order.
 I recommend big-endian, however,
@@ -410,8 +452,7 @@ in manual inspection.
 Because CBE avoids transforming the payload of a blob, for example,
 encoding the 64-bit integer 0xDEADBEEF4BADF00D this way
 will be fairly recognizable in a hex dump:</p>
-<pre><code>	... 88 DE AD BE EF 4B AD F0 0D ...
-</code></pre>
+<pre tabindex="0"><code>    ... 88 DE AD BE EF 4B AD F0 0D ...</code></pre>
 <p>When we blob-encode a serialized integer,
 we automatically get an extremely compact, 1-byte encoding
 of small integer values less than 128,
@@ -419,12 +460,15 @@ an important common case in many situations.
 For example, data formats and protocols often encode
 data and message type codes, keys, enumeration values,
 and the like as small integer constants.</p>
+
 <p>Blob encoding incurs further overhead gradually,
 representing integers of up to 504 bits with only 1-byte overhead
 for example,
 and representing larger integers commonly used in cryptography
 (e.g., 4096-bit RSA numbers) with only 2-byte overhead.</p>
+
 <h4 id="signed-integers">Signed integers</h4>
+
 <p>CBE again does not particularly care how signed integers are serialized.
 However, the
 <a href="https://developers.google.com/protocol-buffers/docs/encoding">ZigZag encoding</a>
@@ -432,47 +476,56 @@ used in
 Protobuf and other formats is also well-matched to CBE.
 This encoding transforms a signed integer into an unsigned integer,
 which we then serialize and CBE-encode as discussed above.</p>
+
 <p>In contrast with standard two&rsquo;s-complement integers,
 ZigZag encoding makes uses the integer&rsquo;s <em>least</em>-significant bit
 as the sign bit.
 The bits above it encode either the integer <em>value</em> itself if non-negative,
-or (−<em>value</em>−1) otherwise.
+or (&minus;<em>value</em>&minus;1) otherwise.
 Zero becomes 0, -1 becomes 1, 1 becomes 2, -2 becomes 3, and so on.</p>
+
 <p>ZigZag encoding is well-suited to CBE
 because it encodes both small positive and small negative numbers,
 in the range -64 and +63,
 as 7-bit unsigned integers from 0 to 127.
 CBE in turn encodes these small integers
 into a single byte with no header overhead.</p>
+
 <h4 id="comparing-cbe-against-base-7-varint-encoding">Comparing CBE against base-7 varint encoding</h4>
+
 <p>CBE-encoded integers share the same basic advantages of base-7 varints,
 namely efficient encoding of small integers
 while supporting arbitrarily-large integers in principle,
 with gradually-increasing encoding overhead.
 CBE-encoding yields exactly the same encoding space-efficiency
 for many small-integer sizes
-such as unsigned integers from 0–8 bits,
-15–16 bits,
-29–32 bits, etc.
+such as unsigned integers from 0&ndash;8 bits,
+15&ndash;16 bits,
+29&ndash;32 bits, etc.
 Varint encoding is one byte smaller for some other small-integer sizes,
-such as 9–14 bits and 17–28 bits.</p>
+such as 9&ndash;14 bits and 17&ndash;28 bits.</p>
+
 <p>Starting at 50 bits, however,
 CBE encoding is always at least as space-efficient as base-7 encoding,
 and CBE rapidly becomes more efficient for larger integers.
-Base-7 incurs a constant ∼14% overhead on all integer widths,
+Base-7 incurs a constant &sim;14% overhead on all integer widths,
 whereas CBE&rsquo;s relative overhead diminishes with blob size.
 Encoding a 256-bit cryptographic integer, for example,
-requires 37 bytes as a varint but only 33 bytes in CBE (∼3% overhead),
+requires 37 bytes as a varint but only 33 bytes in CBE (&sim;3% overhead),
 while a 4096-bit RSA integer
-takes 585 bytes as a varint but only 514 bytes in CBE (∼0.4% overhead).</p>
+takes 585 bytes as a varint but only 514 bytes in CBE (&sim;0.4% overhead).</p>
+
 <p>CBE encoding of integers also has the advantage of
 not requiring odd shifts within bytes on encoding and decoding,
 and is less obfuscated against manual inspection.
 The varint encoding of an integer like the  0xDEADBEEF4BADF00D example above
 would not be particularly recognizable in a hex dump, for example.</p>
+
 <p>Finally, while varint encoding is specialized to integers,
 CBE encoding is more general and readily-applicable to many other data types.</p>
+
 <h3 id="string-blobs">String blobs</h3>
+
 <p><a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a>
 has become the dominant code for serializing
 internationalized character strings into byte sequences.
@@ -483,6 +536,7 @@ unless there is a particular reason to do otherwise
 and the format in which the strings are embedded
 has established a way for encoders to signal or agree on
 another character encoding.</p>
+
 <p>A string consisting of only a single character
 from the US-ASCII character set (Unicode/UCS character codes 0-127)
 will get encoded not only by UTF-8,
@@ -492,13 +546,16 @@ Thus, blob encoding not only ensures that ASCII text
 embedded in binary data is not unnecessarily obfuscated
 and can readily be found by file scanning tools and such,
 but also that single-character strings occupy only one byte.</p>
-<p>A UTF-8 string requiring multiple bytes to encode –
+
+<p>A UTF-8 string requiring multiple bytes to encode &ndash;
 whether because it contains multiple characters
-or because it encodes a single non-ASCII character –
+or because it encodes a single non-ASCII character &ndash;
 get blob-encoded with only one additional byte of embedding overhead
 provided the string&rsquo;s UTF-8 serialization is less than 64 bytes long,
 or two bytes of overhead for strings up to 16447 bytes.</p>
+
 <h3 id="typed-data-encoded-with-type-value-pairs">Typed data encoded with type-value pairs</h3>
+
 <p>While CBE itself encodes no data type information,
 CBE may be used as a primitive in a data format that does so.
 If a data format defines a particular set of type codes as integers,
@@ -510,6 +567,7 @@ contained in the second byte sequence.
 Assuming the most commonly-used types are assigned codes from 0 to 127,
 these types will CBE-encode to a single byte,
 without restricting the size or extensibility of the type code space.</p>
+
 <p>Alternatively, if the data format wishes types to be human-readable strings,
 such as
 <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI schemes</a> or
@@ -520,7 +578,9 @@ If compactness is desired despite the use of strings as type names,
 then the most commonly-used types may be assigned shorthands
 comprised of a single 7-bit ASCII character,
 again ensuring that these types encode to only one byte.</p>
+
 <h3 id="maps-of-key-value-pairs">Maps of key-value pairs</h3>
+
 <p>A related already-common practice is to encode
 a <em>maps</em>, <em>dictionaries</em>, or <em>objects</em> as a sequence of key-value pairs.
 Each key may be a string,
@@ -532,24 +592,27 @@ Using CBE-encoded pairs for this purpose makes it easy
 for both the key and the value part of each pair
 to be arbitrary-length in principle
 while optimizing common cases like small-integer or single-character keys.</p>
+
 <p>The entire even-length sequence of CBE-encoded blobs
 may then be CBE-encoded in turn
 to bind together all the pairs comprising a particular map structure
 and embed it in other structures,
 including in other maps.</p>
+
 <h2 id="conclusion">Conclusion</h2>
+
 <p>CBE is a simple but power binary data-encoding primitive
 designed to do only one thing well:
 efficiently encode the size (or end) of an embedded byte sequence.
 In doing so,
 it optimizes for both space efficiency and encode/decode simplicity
 for common cases of short embedded sequences
-sequences of one byte, &lt;64 bytes, or &lt;∼16K bytes.
+sequences of one byte, &lt;64 bytes, or &lt;&sim;16K bytes.
 It allows sequences to be arbitrarily large or infinite in principle, however,
 and optimizes large sequences for both space efficiency
 and encoding flexibility,
 allowing encoders to stream large sequences in chunks of
-∼16KB through ∼4MB.
+&sim;16KB through &sim;4MB.
 While not directly knowing or caring about data types,
 CBE is usable as an efficient primitive in encoding
 rich typed and hierarchically-structured data.

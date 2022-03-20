@@ -126,8 +126,9 @@ Copenhagen, Denmark &amp;ndash; August 16-20, 2021 Abstract: Distributed ledgers
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/dt2-chapter-abs/</guid>
-      <description>Bryan Ford Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press
- Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way?</description>
+      <description>Bryan Ford
+Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press 
+Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way?</description>
     </item>
     
     <item>
@@ -200,7 +201,7 @@ September 27, 2019  Abstract:  One of the core promises of blockchain technology
       <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2019/09/23/rational/</guid>
-      <description>by Bryan Ford and Rainer Böhme &amp;mdash; PDF preprint version available   Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
+      <description>by Bryan Ford and Rainer Böhme &amp;mdash; PDF preprint version available    Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
     </item>
     
     <item>
@@ -301,8 +302,8 @@ The problem of identity has become a hot topic, with the idea of self-sovereign 
       
       <guid>https://bford.info/draft/biometric-id/</guid>
       <description>Are biometrics good for determining whether a digital identity uniquely represents a real person?
-Break this down:
- Does it represent [the characteristics of] a person? Does it uniquely represent a person: i.e., the only identity of that person? Does it uniquely represent a real living person?  Authentication, Identification, and Real Personhood Biometric authentication is practical, and not necessarily a privacy disaster. Biometric template only needs to be stored on the device, &amp;hellip;</description>
+Break this down: - Does it represent [the characteristics of] a person? - Does it uniquely represent a person: i.e., the only identity of that person? - Does it uniquely represent a real living person?
+Authentication, Identification, and Real Personhood Biometric authentication is practical, and not necessarily a privacy disaster. Biometric template only needs to be stored on the device, &amp;hellip;</description>
     </item>
     
     <item>
@@ -321,7 +322,7 @@ Break this down:
       <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2018/09/11/blockchain/</guid>
-      <description>Blockchain is certainly one of the hot technology topics today. Yes, it&amp;rsquo;s probably in part a hype bubble – but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFL has been investing years of effort in building next generation blockchain architectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled &amp;lt;a href=&amp;ldquo;https://blockonomi.</description>
+      <description>Blockchain is certainly one of the hot technology topics today. Yes, it&amp;rsquo;s probably in part a hype bubble &amp;ndash; but from my perspective as a long-time researcher in decentralized systems I believe there is also a lot of potential value in the concept, which is why my DEDIS lab at EPFL has been investing years of effort in building next generation blockchain architectures. I also believe the value of the blockchain concept is relatively independent of the unpredictable and scam-riddled financial market for cryptocurrencies.</description>
     </item>
     
     <item>
@@ -340,7 +341,7 @@ July 13, 2018. Abstract: The increasing number of health-data breaches is creati
       <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2018/06/27/muslim-ban/</guid>
-      <description>So the U.S. Supreme Court has upheld Trump&amp;rsquo;s so-called “travel ban” – more honestly labeled a Muslim ban. More precisely, it is a ban on people from Muslim-majority countries not hosting Trump business properties (see map and fact check).
+      <description>So the U.S. Supreme Court has upheld Trump&amp;rsquo;s so-called &amp;ldquo;travel ban&amp;rdquo; &amp;ndash; more honestly labeled a Muslim ban. More precisely, it is a ban on people from Muslim-majority countries not hosting Trump business properties (see map and fact check).
 Where to Hold Conferences? This development naturally and rightfully raises again to prominence the question of where responsible scientists should hold their international conferences. We may soon see renewed calls to boycott US-based conferences, in solidarity with the many scientists around the world who can no longer attend conferences held in the U.</description>
     </item>
     
@@ -424,7 +425,8 @@ October 30, 2017 Abstract: Atom is an anonymous messaging system that protects a
       
       <guid>https://bford.info/2017/08/01/skipchain/</guid>
       <description>A blockchain, or distributed ledger, is a log maintained collectively by a distributed group of participants who agree on and record transactions without relying for security on any single trusted party. While initially popularized by Bitcoin and its derivatives, the blockchain abstraction is not specific to currencies, and there is exploding industry interest in many non-currency uses.
-  Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
+ 
+Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
     </item>
     
     <item>
@@ -443,7 +445,8 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Fri, 23 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2017/06/23/turing50/</guid>
-      <description>This blog post is a transcript of my opening remarks on the panel &#34;Restoring Personal Privacy without Compromising National Security&#34; at the 50 Years of the ACM Turing Award Celebration.   We now live in a world in which the rules coded into the technology we use plays as important a role in governing our lives as the formal laws written in the public law books. Code is law already, for better or worse.</description>
+      <description>This blog post is a transcript of my opening remarks on the panel &amp;ldquo;Restoring Personal Privacy without Compromising National Security&amp;rdquo; at the 50 Years of the ACM Turing Award Celebration. 
+We now live in a world in which the rules coded into the technology we use plays as important a role in governing our lives as the formal laws written in the public law books. Code is law already, for better or worse.</description>
     </item>
     
     <item>
@@ -497,7 +500,8 @@ if you withhold a block, you can&amp;rsquo;t get a collective signature on it; w
       <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/10/25/mining/</guid>
-      <description>--   As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&amp;rsquo;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
+      <description>--  
+As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&amp;rsquo;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
 In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
     </item>
     
@@ -570,7 +574,8 @@ In short, miners motivated by transaction fees have even greater incentive to de
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/03/10/apple/</guid>
-      <description>*This post [originally appeared](https://freedom-to-tinker.com/blog/bford/apple-fbi-and-software-transparency/) on the [Freedom to Tinker](https://freedom-to-tinker.com/) blog by the [Center for Information Technology Policy](https://citp.princeton.edu) at [Princeton University](http://www.princeton.edu/).*  The Apple versus FBI showdown has quickly become a crucial flashpoint of the “new Crypto War.” On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters.</description>
+      <description>This post originally appeared on the Freedom to Tinker blog by the Center for Information Technology Policy at Princeton University. 
+The Apple versus FBI showdown has quickly become a crucial flashpoint of the &amp;ldquo;new Crypto War.&amp;rdquo; On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters.</description>
     </item>
     
     <item>
@@ -580,8 +585,8 @@ In short, miners motivated by transaction fees have even greater incentive to de
       
       <guid>https://bford.info/2016/03/08/crypto/</guid>
       <description>{{ page.title }} Interesting features:
-  An abstract group arithmetic framework for public-key cryptography based on the discrete logarithm problem.
-  Several alternative concrete instantiations of this abstract group arithmetic framework, based on the NIST elliptic curve implementations in the Go standard library and in the OpenSSL crypto library, and implementations of both generic Edwards curves and an adaptation of Adam Langley&amp;rsquo;s Ed25519-curve-specific optimized group arithmetic code to the abstract group API.</description>
+ An abstract group arithmetic framework for public-key cryptography based on the discrete logarithm problem.
+ Several alternative concrete instantiations of this abstract group arithmetic framework, based on the NIST elliptic curve implementations in the Go standard library and in the OpenSSL crypto library, and implementations of both generic Edwards curves and an adaptation of Adam Langley&amp;rsquo;s Ed25519-curve-specific optimized group arithmetic code to the abstract group API.</description>
     </item>
     
     <item>
@@ -1873,8 +1878,8 @@ In the Rheingarten.    &amp;nbsp;</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/cmark/</guid>
-      <description>Hyphen  X	[-]	Optional line-breaking hyphen??? &amp;ndash;	–	[&amp;ndash;]	En-dash or numeric range &amp;mdash;	—	[&amp;mdash;]	Em-dash &amp;hellip;	…	[&amp;hellip;]	Ellipsis  &amp;ldquo;&amp;hellip;&amp;rdquo;	Quoted string: quotes become left/right
-⏎	[br]	Line break ␍	[r]	Carriage return character mark ␤	[n]	Newline character mark ¶	[p]	Paragraph mark X	[o&#39;]	Open single quote X	[c&#39;]	Close single quote X	[o&amp;quot;]	Open double quote X	[c&amp;quot;]	Close double quote X	[o&amp;lt;&amp;gt;]	Open angle bracket X	[c&amp;lt;&amp;gt;]	Close angle bracket X	[o&amp;lt;&amp;lt;&amp;gt;&amp;gt;]	Open double angle bracket X	[c&amp;lt;&amp;lt;&amp;gt;&amp;gt;]	Close double angle bracket  Spacing: &amp;quot; &amp;quot;	[mq_]	Em quad space &amp;quot; &amp;quot;	[nq_]	En quad space &amp;quot; &amp;quot;	[m_]	Em space &amp;quot; &amp;quot;	[n_]	En space &amp;quot; &amp;quot;	[3m_]	Three-per-Em space &amp;quot; &amp;quot;	[4m_]	Four-per-Em space &amp;quot; &amp;quot;	[6m_]	Six-per-Em space &amp;quot; &amp;quot;	[d_]	Figure (digit) space &amp;quot; &amp;quot;	[.</description>
+      <description>Hyphen X [-] Optional line-breaking hyphen??? &amp;ndash; – [&amp;ndash;] En-dash or numeric range &amp;mdash; — [&amp;mdash;] Em-dash &amp;hellip; … [&amp;hellip;] Ellipsis  &amp;rdquo;&amp;hellip;&amp;rdquo; Quoted string: quotes become left/right
+⏎ [br] Line break ␍ [r] Carriage return character mark ␤ [n] Newline character mark ¶ [p] Paragraph mark X [o&amp;#39;] Open single quote X [c&amp;#39;] Close single quote X [o&amp;#34;] Open double quote X [c&amp;#34;] Close double quote X [o&amp;lt;&amp;gt;] Open angle bracket X [c&amp;lt;&amp;gt;] Close angle bracket X [o&amp;lt;&amp;lt;&amp;gt;&amp;gt;] Open double angle bracket X [c&amp;lt;&amp;lt;&amp;gt;&amp;gt;] Close double angle bracket Spacing: &amp;ldquo; &amp;rdquo; [mq] Em quad space &amp;ldquo; &amp;rdquo; [nq] En quad space &amp;ldquo; &amp;rdquo; [m] Em space &amp;ldquo; &amp;rdquo; [n] En space &amp;ldquo; &amp;rdquo; [3m] Three-per-Em space &amp;ldquo; &amp;rdquo; [4m] Four-per-Em space &amp;ldquo; &amp;rdquo; [6m] Six-per-Em space &amp;ldquo; &amp;rdquo; [d] Figure (digit) space &amp;ldquo; &amp;rdquo; [.</description>
     </item>
     
     <item>
@@ -1883,8 +1888,8 @@ In the Rheingarten.    &amp;nbsp;</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/cmath/</guid>
-      <description>Symbols Arithmetic Basic:
-   Plus sign     −	[-]	Minus sign   ×	Multiplication ÷	[d]	Division /	⁄	[/]	Fraction slash  Technical: ±	[+-]	Plus-minus sign ∕	[d/]	Division slash ⋅	[.]	Multiplication or dot product √	[root]	Square root ∛	[3root]	Cube root ∜	[4root]	Fourth root ∞	[inf]	Infinity ∶	[:]	Ratio ∷	[::]	Proportion sum	∑	[sum]	Sum prod	∏	[prod]	Product 𝔼	[expect] Expected value pi	π	[pi]	Mathematical value pi (3.</description>
+      <description>Symbols Arithmetic Basic: + Plus sign - − [-] Minus sign * × [x] Multiplication ÷ [d] Division / ⁄ [/] Fraction slash
+Technical: ± [+-] Plus-minus sign ∕ [d/] Division slash ⋅ [.] Multiplication or dot product √ [root] Square root ∛ [3root] Cube root ∜ [4root] Fourth root ∞ [inf] Infinity ∶ [:] Ratio ∷ [::] Proportion sum ∑ [sum] Sum prod ∏ [prod] Product 𝔼 [expect] Expected value pi π [pi] Mathematical value pi (3.</description>
     </item>
     
     <item>
@@ -1917,8 +1922,7 @@ But to avoid further confusion, would be best to have one &amp;ldquo;standardize
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/follow/</guid>
-      <description>Orthogonal concepts to be defined independently but worked together:
- identification (e.g., by content hash) of current version linkage of versions into a linear series, SkipChain, or TimeTree update authorization by one or quorum of identities authentication of identities (people or devices) eg by signing registration of updates on authoritative registry or registries  checking of witnesses by threshold   definition of unambiguous authoritative chain by timescale?  &amp;ndash; Version Identifier (VID) scheme:</description>
+      <description>Orthogonal concepts to be defined independently but worked together: - identification (e.g., by content hash) of current version - linkage of versions into a linear series, SkipChain, or TimeTree - update authorization by one or quorum of identities - authentication of identities (people or devices) eg by signing - registration of updates on authoritative registry or registries - checking of witnesses by threshold - definition of unambiguous authoritative chain by timescale?</description>
     </item>
     
     <item>
@@ -1929,7 +1933,7 @@ But to avoid further confusion, would be best to have one &amp;ldquo;standardize
       <guid>https://bford.info/draft/delimited-syntax/</guid>
       <description>or Composable Text/Binary Syntax (CTS/CBS)?
 Goals:
- Text format self-describing and human-readable Binary format for compactness and efficiency  Either self-describing or schema-dependent   Easy cross-conversion between text and binary formats  Easy for schemas to define both text and binary equivalents at once   Streamable: encoder can start sending long composites before knowing length Embeddable:  for embeddability, see for example JSON Schema&amp;rsquo;s desire to be able to embed arbitrary non-JSON data with a MIME Media Type: https://json-schema.</description>
+ Text format self-describing and human-readable Binary format for compactness and efficiency  Either self-describing or schema-dependent  Easy cross-conversion between text and binary formats  Easy for schemas to define both text and binary equivalents at once  Streamable: encoder can start sending long composites before knowing length Embeddable:  for embeddability, see for example JSON Schema&amp;rsquo;s desire to be able to embed arbitrary non-JSON data with a MIME Media Type: https://json-schema.</description>
     </item>
     
     <item>
@@ -1939,7 +1943,7 @@ Goals:
       
       <guid>https://bford.info/draft/drand/</guid>
       <description>&amp;ldquo;The coin to us is sacred.&amp;rdquo; - Thomas Shelby (Peaky Blinders)
- Public randomness – or &amp;ldquo;flipping coins&amp;rdquo; in some way so that anyone can see (and trust) the outcome – is fundamental to numerous social and technical processes. Besides gambling and lotteries (obviously), we need public randomness to choose a sample of some population fairly. The ancient Greeks used sortition, or selection by random lottery, to appoint political officials to office.</description>
+ Public randomness &amp;ndash; or &amp;ldquo;flipping coins&amp;rdquo; in some way so that anyone can see (and trust) the outcome &amp;ndash; is fundamental to numerous social and technical processes. Besides gambling and lotteries (obviously), we need public randomness to choose a sample of some population fairly. The ancient Greeks used sortition, or selection by random lottery, to appoint political officials to office.</description>
     </item>
     
     <item>
@@ -2054,10 +2058,10 @@ Variable-width unsigned integers When the scheme type is integer, an encoding pr
       
       <guid>https://bford.info/draft/mag/</guid>
       <description>Interesting uses:
-  Side-channel leak control: PURBs
-  Indexing and counting for divide-and-conquer algorithms. Example: binary search (works) vs linear search (breaks quickly); quick/merge sorts (works) vs naive sorts (breaks); &amp;hellip;
-  Related: summary data for large-scale data for parallel processing
-  Efficient memory allocation with fragmentation control Use next mag to bucket allocation units; allocation can scavenge and split a larger bucket and (proof?) remainder will also fall into a valid bucket (subtraction closure: mag minus a mag is a mag if no underflow)</description>
+ Side-channel leak control: PURBs
+ Indexing and counting for divide-and-conquer algorithms. Example: binary search (works) vs linear search (breaks quickly); quick/merge sorts (works) vs naive sorts (breaks); &amp;hellip;
+ Related: summary data for large-scale data for parallel processing
+ Efficient memory allocation with fragmentation control Use next mag to bucket allocation units; allocation can scavenge and split a larger bucket and (proof?) remainder will also fall into a valid bucket (subtraction closure: mag minus a mag is a mag if no underflow)</description>
     </item>
     
     <item>
@@ -2162,7 +2166,7 @@ Chessboard Hill Cascade   &amp;nbsp;    &amp;nbsp;  &amp;nbsp;  The Grand Cascad
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/11/13/info/</guid>
-      <description>Hillary Clinton&amp;rsquo;s electoral college defeat has provoked many questions about how so many Americans could have choosen a misogynistic, xenophobic, pathologically lying, authoritarian ideologue as their next President &amp;ndash; and one of many targets of their blame is social media. Compounding its polarizing &amp;ldquo;echo chamber&amp;rdquo; effect, online discussions were tarnished with deliberate misinformation, including incorrect instructions on how to vote. But is the solution for social media companies like Facebook to ``do a better job&#39;&#39; at curating the world&amp;rsquo;s content to suppress out false or hateful speech?</description>
+      <description>Hillary Clinton&amp;rsquo;s [electoral college defeat]() has provoked many questions about how so many Americans could have choosen a [misogynistic](), [xenophobic](), [pathologically lying](), [authoritarian]() [ideologue]() as their next President &amp;ndash; and one of many targets of their blame is [social media](). Compounding its [polarizing &amp;ldquo;echo chamber&amp;rdquo; effect](), online discussions were tarnished with [deliberate misinformation](), including [incorrect instructions on how to vote](). But is the solution for social media companies like Facebook to ``do a better job&amp;rdquo; at curating the world&amp;rsquo;s content to suppress out false or hateful speech?</description>
     </item>
     
     <item>
