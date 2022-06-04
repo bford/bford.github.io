@@ -171,7 +171,7 @@ Goals:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/cbe/</guid>
-      <description>(Alternate names: Blobifer? Binframe? Framer? Framify? Framifer? Byteframe? Bnest? Bytenest? Binest?)
+      <description>(Alternate names: Blobifer? Binframe? Framer? Framify? Framifer? Byteframe? Bnest? Bytenest? Binest? Cobyfr (Compact Byte Framing)?)
 An old problem in data format design is embedding an arbitrary variable-length byte sequence in a longer one, so that a decoder can tell unambiguously where the embedded string ends. This problem is ubiquitous in the design of machine-readable data formats, which often hierarchically compose large and complex data streams from sequences of nested substrings and strings using simpler encodings.</description>
     </item>
     

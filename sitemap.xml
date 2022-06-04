@@ -17,15 +17,30 @@
     <loc>https://bford.info/selforg/choice/</loc>
   </url><url>
     <loc>https://bford.info/</loc>
-    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Anonymity/</loc>
-    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Blockchain/</loc>
-    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Consensus/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Cryptography/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/pub/sec/f3b/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/pub/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Security/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Anonymity/</loc>
     <lastmod>2021-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/thesis/2021-nikitin/</loc>
@@ -37,9 +52,6 @@
     <loc>https://bford.info/topics/Privacy/</loc>
     <lastmod>2021-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/Security/</loc>
-    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/topics/Side-Channels/</loc>
     <lastmod>2021-11-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -49,9 +61,6 @@
     <loc>https://bford.info/topics/Transparency/</loc>
     <lastmod>2021-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/</loc>
-    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/topics/Cloud-Computing/</loc>
     <lastmod>2021-11-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -59,9 +68,6 @@
     <lastmod>2021-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Networks/</loc>
-    <lastmod>2021-11-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/pub/</loc>
     <lastmod>2021-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Peer-to-Peer/</loc>
@@ -129,9 +135,6 @@
   </url><url>
     <loc>https://bford.info/pub/sec/prifi/</loc>
     <lastmod>2020-07-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Consensus/</loc>
-    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/pub/net/qsc/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>

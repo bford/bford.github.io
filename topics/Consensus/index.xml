@@ -6,7 +6,17 @@
     <description>Recent content in Consensus on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Consensus/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Consensus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flash Freezing Flash Boys: Countering Blockchain Front-Running</title>
+      <link>https://bford.info/pub/sec/f3b/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/f3b/</guid>
+      <description>Haoqian Zhang, Louis-Henri Merino, Vero Estrada-Galiñanes, and Bryan Ford  Decentralized Internet, Networks, Protocols, and Systems (DINPS)
+Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice of benefiting from advanced knowledge of pending transactions, has proliferated in the cryptocurrency space with the emergence of decentralized finance. Front-running causes devastating losses to honest participants—estimated at $280M each month—and endangers the fairness of the ecosystem. We present Flash Freezing Flash Boys (F3B), an architecture to address front-running attacks by relying on a commit-and-reveal scheme where the contents of a transaction are encrypted and later revealed by a decentralized secret-management committee (SMC) when the transaction has been committed by the underlying consensus layer.</description>
+    </item>
+    
     <item>
       <title>Que Sera Consensus: Simple Asynchronous Agreement with Private Coins and Threshold Logical Clocks</title>
       <link>https://bford.info/pub/net/qsc/</link>

@@ -6,31 +6,49 @@
     <description>Recent content in Writings by Topic – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Anonymity</title>
-      <link>https://bford.info/topics/Anonymity/</link>
-      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Anonymity/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blockchain</title>
       <link>https://bford.info/topics/Blockchain/</link>
-      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Blockchain/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Consensus</title>
+      <link>https://bford.info/topics/Consensus/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Consensus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cryptography</title>
       <link>https://bford.info/topics/Cryptography/</link>
-      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Cryptography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://bford.info/topics/Security/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Anonymity</title>
+      <link>https://bford.info/topics/Anonymity/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Anonymity/</guid>
       <description></description>
     </item>
     
@@ -49,15 +67,6 @@
       <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Privacy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://bford.info/topics/Security/</link>
-      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Security/</guid>
       <description></description>
     </item>
     
@@ -211,15 +220,6 @@
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Social-Networks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Consensus</title>
-      <link>https://bford.info/topics/Consensus/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Consensus/</guid>
       <description></description>
     </item>
     
