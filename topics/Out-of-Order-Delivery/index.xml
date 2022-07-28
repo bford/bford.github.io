@@ -13,7 +13,7 @@
       <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/tor-unordered/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/non-linear/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Fri, 27 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/nsdi12-minion-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@
       
       <guid>https://bford.info/pub/net/sst-abs/</guid>
       <description>Bryan Ford
-Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract:  Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
+Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract: Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
     </item>
     
   </channel>

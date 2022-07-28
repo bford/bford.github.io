@@ -52,23 +52,23 @@
       <h1>Untangling Mining Incentives in Bitcoin and ByzCoin</h1>
 
       
-
 <!--
 <figure><img src="blockchain.jpg"/>
 </figure>
 
 -->
 
-<p><center>
+<center>
 <img src="blockchain.jpg" width="100%">
-</center></p>
+</center>
 
-<p>As the first widely-deployed cryptocurrency,
+<p>
+As the first widely-deployed cryptocurrency,
 <a href="https://bitcoin.org/">Bitcoin</a>
 has proven hugely successful and inspired a
 <a href="https://www.cryptocoinsnews.com/study-shows-bitcoin-blockchain-investments-near-300-million-first-six-months/">blockchain fever</a>
 (or <a href="https://joi.ito.com/weblog/2016/06/14/-the-fintech-bu.html">is it a bubble?</a>).
-Bitcoin&rsquo;s security and economic assumptions
+Bitcoin's security and economic assumptions
 are showing significant fractures, however.
 Following previously-identified
 <a href="http://hackingdistributed.com/2013/11/04/bitcoin-is-broken/">selfish mining</a>
@@ -80,13 +80,14 @@ being
 identifies further incentive weaknesses
 that appear as
 <a href="http://qz.com/681996/everything-you-need-to-know-about-the-bitcoin-halving-event/">transaction fees supplant block rewards</a>
-as the primary incentive for mining.</p>
+as the primary incentive for mining.
 
-<p>In short, miners motivated by transaction fees have even greater incentive
+<p>
+In short, miners motivated by transaction fees have even greater incentive
 to deviate strategically from the standard Bitcoin protocol
 in selfish and potentially destructive ways.
 In his summary,
-<a href="http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/">Arvind Narayanan notes</a>:</p>
+<a href="http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/">Arvind Narayanan notes</a>:
 
 <blockquote>
 <i>
@@ -94,12 +95,14 @@ At a deeper level, our results suggest a fundamental rethinking of the role of b
 </i>
 </blockquote>
 
-<p>At least one such &ldquo;rethinking of the role of block rewards&rdquo;
+<p>
+At least one such &ldquo;rethinking of the role of block rewards&rdquo;
 already exists, however.
 You may judge for yourself
-how &ldquo;fundamental&rdquo; this rethinking is.</p>
+how &ldquo;fundamental&rdquo; this rethinking is.
 
-<p><a href="http://hackingdistributed.com/2016/08/04/byzcoin/">ByzCoin</a>
+<p>
+<a href="http://hackingdistributed.com/2016/08/04/byzcoin/">ByzCoin</a>
 is an experimental protocol created by the
 <a href="https://dedis.epfl.ch/">Decentralized and Distributed Systems (DEDIS) lab</a> at
 <a href="http://epfl.ch/">EPFL</a>
@@ -107,52 +110,55 @@ and presented at the
 <a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/kogias">USENIX Security</a>
 conference this past summer.
 While a rigorous incentive analysis has not yet been done on ByzCoin,
-informal analysis suggests that ByzCoin&rsquo;s architecture
+informal analysis suggests that ByzCoin's architecture
 may be far more resilient to these known incentive-compatibility weaknesses.
 In essence, both the new attacks &mdash;
 and the earlier selfish or stubborn mining attacks &mdash;
 appear to be ineffective against ByzCoin.
 This blog post informally compares the way Bitcoin and ByzCoin
 handle transaction fee incentives,
-deferring the topic of selfish mining to a followup post.</p>
+deferring the topic of selfish mining to a followup post.
 
-<h2 id="instant-gratification-in-bitcoin">Instant Gratification in Bitcoin</h2>
+<h2>Instant Gratification in Bitcoin</h2>
 
-<p><a href="http://www.bigfatpurse.com/2015/01/12-timeless-and-invaluable-investment-lessons-from-dilbert/">
+<p>
+<a href="http://www.bigfatpurse.com/2015/01/12-timeless-and-invaluable-investment-lessons-from-dilbert/">
 <img src="dilbert.png" style="float:right">
-</a></p>
+</a>
 
-<p>In Bitcoin, miners earn <em>immediate rewards</em>
+<p>
+In Bitcoin, miners earn <i>immediate rewards</i>
 for successfully solving the cryptographic puzzles
 that allow them to extend the blockchain.
-These rewards are divided into <em>block rewards</em>,
+These rewards are divided into <i>block rewards</i>,
 in which the miner may create a fixed amount of &ldquo;new money&rdquo;
 according to
 <a href="http://www.coindesk.com/making-sense-bitcoins-halving/">a hard-coded schedule</a>,
-and <em>transaction fees</em>,
+and <i>transaction fees</i>,
 which the miner receives from Bitcoin users as an incentive
 to include their transactions in the blockchain.
 As block rewards regularly decrease by half &mdash;
 eventually dropping to zero in the year 2140 &mdash;
-miners&rsquo; incentives shift from block rewards to transaction fees.
+miners' incentives shift from block rewards to transaction fees.
 For the moment, however, the important point
 is that Bitcoin confers both block rewards and transaction fees
-to miners <em>immediately</em>
+to miners <i>immediately</i>
 upon the successful mining of a new block.
 We might describe Bitcoin
-as an &ldquo;instant gratification cryptocurrency.&rdquo;</p>
+as an &ldquo;instant gratification cryptocurrency.&rdquo;
 
-<p>Note that Bitcoin does impose a 100-block delay
-before newly-mined block rewards can actually be <em>spent</em>.
+<p>
+Note that Bitcoin does impose a 100-block delay
+before newly-mined block rewards can actually be <i>spent</i>.
 But this rule does not apply to transaction fees &mdash;
 and even if it did, that would be irrelevant for mining incentive purposes.
-The critical fact is that the miner immediately <em>knows</em> what his payoff will be
+The critical fact is that the miner immediately <i>knows</i> what his payoff will be
 for successfully mining a particular block at a particular time,
 and can use that information to mine strategically,
 e.g., by selfishly withholding blocks
-or deliberately forking the blockchain.</p>
+or deliberately forking the blockchain.
 
-<h2 id="delayed-gratification-in-byzcoin">Delayed Gratification in ByzCoin</h2>
+<h2>Delayed Gratification in ByzCoin</h2>
 
 <div style="float:right">
 <center>
@@ -162,44 +168,47 @@ or deliberately forking the blockchain.</p>
 </center>
 </div>
 
-<p>Mining in ByzCoin, in contrast,
-does not immediately confer <em>any</em> reward on the successful miner,
-but instead represents an <em>investment</em>
+<p>
+Mining in ByzCoin, in contrast,
+does not immediately confer <i>any</i> reward on the successful miner,
+but instead represents an <i>investment</i>
 whose rewards accrue gradually over a fixed time period,
 such as the following day or week.
 In particular, solving a cryptographic puzzle
-and mining a <em>keyblock</em> in ByzCoin
-rewards the miner with a temporary <em>share</em> in a <em>consensus group</em>.
+and mining a <i>keyblock</i> in ByzCoin
+rewards the miner with a temporary <i>share</i> in a <i>consensus group</i>.
 This consensus group is defined by a sliding window
 of recently-mined blocks:
 e.g., the last 1008 blocks, representing one share per keyblock mined
 within approximately the past week,
-at Bitcoin&rsquo;s self-adjusting mining rate of 10 minutes per block.
+at Bitcoin's self-adjusting mining rate of 10 minutes per block.
 Adopting a refinement
 <a href="http://eprint.iacr.org/2016/917.pdf">recently suggested by Pass and Shi</a>,
 ByzCoin also adds a short delay, e.g., six blocks (about one hour),
-before a newly-mined keyblock <em>enters</em> the consensus group,
+before a newly-mined keyblock <i>enters</i> the consensus group,
 ensuring that miners agree on all rather than just &ldquo;almost all&rdquo;
-consensus group members in the presence of temporary keyblock forks.</p>
+consensus group members in the presence of temporary keyblock forks.
 
-<p>The consensus group formed this way
+<p>
+The consensus group formed this way
 then uses a scalable
 <a href="https://en.wikipedia.org/wiki/Byzantine_fault_tolerance">Byzantine consensus</a>
 protocol based on
 <a href="https://dedis.cs.yale.edu/dissent/papers/witness-abs">collective signing</a>
-to agree on and commit to <em>microblocks</em> containing actual transactions.
-Building on ideas in Eyal and Sirer&rsquo;s
+to agree on and commit to <i>microblocks</i> containing actual transactions.
+Building on ideas in Eyal and Sirer's 
 <a href="http://hackingdistributed.com/2015/10/14/bitcoin-ng/">Bitcoin-NG</a>,
-this decoupling enables ByzCoin to commit transaction microblocks
+this decoupling enables ByzCoin to commit transaction microblocks 
 much more frequently than keyblocks are mined
 (e.g., in seconds rather than minutes).
 Due to its Byzantine consensus, however,
 ByzCoin subsequently
 ensures that microblocks are immediately committed permanently and
 cannot subsequently be reverted or double-spent even in the near future,
-as is possible in Bitcoin or Bitcoin-NG.</p>
+as is possible in Bitcoin or Bitcoin-NG.
 
-<p>Independent of its Byzantine consensus process,
+<p>
+Independent of its Byzantine consensus process,
 ByzCoin also makes an important change to the way miners earn rewards.
 Instead of conferring block rewards and transaction fees immediately
 on the miner of each new block,
@@ -212,33 +221,37 @@ while this consensus group is in charge &mdash;
 together with the block reward associated
 with the mining of the next keyblock &mdash;
 are split evenly among the 1008 shareholders
-comprising the current consensus group.</p>
+comprising the current consensus group.
 
-<p>Thus, while ByzCoin miners earn no rewards immediately
+<p>
+Thus, while ByzCoin miners earn no rewards immediately
 upon mining a new keyblock,
-that keyblock confers on them a <sup>1</sup>&frasl;<sub>1008</sub> share
-of all the block rewards <em>and</em> transaction fees earned by anyone
+that keyblock confers on them a 1/1008 share
+of all the block rewards <i>and</i> transaction fees earned by anyone
 during the 1008 sliding-window positions
 during which this share is within the consensus group.
-In short, ByzCoin gives miners <em>delayed</em>
+In short, ByzCoin gives miners <i>delayed</i>
 rather than instant gratification.
 And this characteristic could have important benefits
 in the stability and security of its mining incentives,
-as we discuss next.</p>
+as we discuss next.
 
-<p><img src="golden-egg.jpg" style="float:right;width:256px;height:266px"></p>
+<p>
+<img src="golden-egg.jpg" style="float:right;width:256px;height:266px">
 
-<h2 id="the-goose-egg-problem">The Goose Egg Problem</h2>
+<h2>The Goose Egg Problem</h2>
 
-<p>The creator of any Bitcoin transaction defines a <em>transaction fee</em>,
+<p>
+The creator of any Bitcoin transaction defines a <i>transaction fee</i>,
 which goes to the miner
 as an incentive to include the transaction in the blockchain.
 Occasionally &mdash;
 most likely in error &mdash;
 users have proven spectacularly generous with their transaction fees.
-Transactions with inordinately huge fees are sometimes called <em>goose eggs</em>.</p>
+Transactions with inordinately huge fees are sometimes called <i>goose eggs</i>.
 
-<p>For example,
+<p>
+For example,
 in 2015 a user
 <a href="https://bitcointalk.org/index.php?topic=135665.0">accidentally donated 111 BTC to a miner</a>,
 which in this case the lucky miner graciously refunded.
@@ -247,9 +260,10 @@ This past April a transaction with
 (worth $139,000 at the time) appeared.
 But these are only the most spectacular goose eggs:
 as Arvind Narayanan observed in May,
-&ldquo;<a href="https://twitter.com/random_walker/status/729800710280335361">there have been ~150 transactions with a fee over $1,000.</a>&rdquo;</p>
+&ldquo;<a href="https://twitter.com/random_walker/status/729800710280335361">there have been ~150 transactions with a fee over $1,000.</a>&rdquo;
 
-<p>For several years,
+<p>
+For several years,
 <a href="https://www.cs.cornell.edu/people/egs/">Emin Gün Sirer</a>
 and others have warned that goose eggs pose
 an incentive problem to Bitcoin security,
@@ -258,19 +272,20 @@ Suppose for example that a goose egg appears in the transaction pool,
 and Innocent Ivan is the first miner lucky enough
 to create a valid Bitcoin block including this transaction.
 But suppose another miner, Greedy Griffith, is paying attention and controls
-significant mining power (but still under <sup>1</sup>&frasl;<sub>3</sub> of the total).</p>
+significant mining power (but still under 1/3 of the total).
 
-<p>Even if Greedy Griffith is well aware of Innocent Ivan&rsquo;s new block,
+<p>
+Even if Greedy Griffith is well aware of Innocent Ivan's new block,
 Griffith may be strongly inclined to ignore it and instead try to mine
-a <em>competing</em> block in hopes of &ldquo;stealing&rdquo; the goose egg from Ivan.
+a <i>competing</i> block in hopes of &ldquo;stealing&rdquo; the goose egg from Ivan.
 To pull off this heist,
 Griffith may have to &ldquo;get lucky&rdquo; twice in a row
-and produce <em>two</em> new blocks
-before another miner extends Ivan&rsquo;s chain:
-one block to compete with Ivan&rsquo;s, and a second block
-to convince other miners to ditch Ivan&rsquo;s chain for Griffith&rsquo;s.
+and produce <i>two</i> new blocks
+before another miner extends Ivan's chain:
+one block to compete with Ivan's, and a second block
+to convince other miners to ditch Ivan's chain for Griffith's.
 Even if this gamble presents fairly long odds for Griffith,
-the spectacular payoff presented by the goose egg makes it worth the risk.</p>
+the spectacular payoff presented by the goose egg makes it worth the risk.
 
 <div style="float:right">
 
@@ -293,79 +308,85 @@ the spectacular payoff presented by the goose egg makes it worth the risk.</p>
 </center>
 </div>
 
-<p>If <em>multiple</em> miners independently emulate Greedy Griffith,
+<p>
+If <i>multiple</i> miners independently emulate Greedy Griffith,
 this could lead to chaos and large amounts of wasted hash power
 as miners clamor over the goose egg.
 In the worst case, if multiple large mining pools behaved this way,
 the blockchain could even deadlock or permanently hard-fork
 as different entrenched pools stubbornly refuse to honor any blockchain
-other than the one in which <em>they</em> captured the egg.</p>
+other than the one in which <i>they</i> captured the egg.
 
-<p>Consider ByzCoin, in contrast,
+<p>
+Consider ByzCoin, in contrast,
 where mining a keyblock confers no immediate reward,
-but merely a <em>share</em> in rewards that arrive later
+but merely a <i>share</i> in rewards that arrive later
 while the mined keyblock is part of a consensus group.
 If a transaction containing a goose egg appears,
-the one and only way for <em>any</em> miner to profit from it
+the one and only way for <i>any</i> miner to profit from it
 is to divide it equally across the entire consensus group,
 like dividends paid to shareholders.
 At this point, it is too late for any greedy keyblock mining strategy
-to affect this distribution of profits significantly.</p>
+to affect this distribution of profits significantly.
 
-<p>To start with, since ByzCoin irreversibly commits transactions
+<p>
+To start with, since ByzCoin irreversibly commits transactions 
 every few seconds as part of microblocks,
 a greedy miner has only seconds, not minutes,
 to carry out any potential mining strategy &mdash;
 whereas the expected time to mine a new keyblock is still long
 (e.g., 10 minutes).
 Second, any profit advantage of such a strategy will be counted
-only in <em>shares</em> of a goose egg;
+only in <i>shares</i> of a goose egg;
 no single miner ever gets the whole egg.
 For example, suppose a goose egg appears at about the time Innocent Ivan
 mines a new keyblock.
-Greedy Griffith can try to mine against Ivan&rsquo;s keyblock,
+Greedy Griffith can try to mine against Ivan's keyblock,
 but this will not change the consensus group that distributes the goose egg,
 since new keyblocks must &ldquo;mature&rdquo; for a time (e.g., six blocks)
 before they become active shares in any consensus group.
-Griffith would have to displace not only Ivan&rsquo;s keyblock
-but <em>several blocks before it</em> to affect the profit distribution at all.
+Griffith would have to displace not only Ivan's keyblock
+but <i>several blocks before it</i> to affect the profit distribution at all.
 Even if he succeeded, Griffith would get only an additional 1/1008th
-of the goose egg for each additional share acquired strategically.</p>
+of the goose egg for each additional share acquired strategically.
 
-<h2 id="transaction-fee-market-incentives">Transaction Fee Market Incentives</h2>
+<h2>Transaction Fee Market Incentives</h2>
 
-<p>The <a href="http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/">new incentive analysis by Narayanan&rsquo;s group</a>
+<p>
+The <a href="http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/">new incentive analysis by Narayanan's group</a>
 in essence observes that,
 as block rewards decrease and transaction fees gradually supplant them
 as the primary motivation for miners to mine,
 Bitcoin encounters a miniature goose egg problem
-at <em>every single block</em>.
+at <i>every single block</i>.
 The problem is that just after any block has been successfully mined,
 there are few uncommitted transactions available &mdash;
 and hence minimal fees to be collected &mdash;
 for mining a subsequent block.
 Thus, at least until this pool of uncommitted transactions builds up again,
 it is more profitable for miners to treat
-the bundle of ordinary transaction fees in the <em>previous</em> block
+the bundle of ordinary transaction fees in the <i>previous</i> block
 as a small goose egg and try to capture it
-by mining <em>against</em> it rather than on top of it.</p>
+by mining <i>against</i> it rather than on top of it.
 
-<p>Further, Narayanan&rsquo;s group identifies &ldquo;second-order&rdquo;
+<p>
+Further, Narayanan's group identifies &ldquo;second-order&rdquo;
 greedy deviations that work even better when other miners are greedy.
 For example, if Innocent Ivan has just mined a block that commits
 transactions worth 10 BTC in fees,
-Greedy Griffith no longer necessarily needs to mine <em>two</em> blocks
-in order to steal Ivan&rsquo;s fees;
-instead Griffith might just mine <em>one</em> block that deliberately
+Greedy Griffith no longer necessarily needs to mine <i>two</i> blocks
+in order to steal Ivan's fees;
+instead Griffith might just mine <i>one</i> block that deliberately
 &ldquo;consumes&rdquo; only a subset of transactions worth 5 BTC of fees,
 deliberately leaving the other 5 BTC worth of fees
-as an incentive for other greedy miners to prefer Griffith&rsquo;s chain over Ivan&rsquo;s.</p>
+as an incentive for other greedy miners to prefer Griffith's chain over Ivan's.
 
-<p>Now consider again how ByzCoin affects this situation.
+<p>
+Now consider again how ByzCoin affects this situation.
 Since transaction fees are divided equally
 among the current consensus group,
-whose membership is determined not by the <em>latest</em> keyblock miner
-but by <em>all</em> the successful miners between an hour and a week ago,
+whose membership is determined not by the <i>latest</i> keyblock miner
+but by <i>all</i> the successful miners between an hour and a week ago,
 any keyblock mining strategy has a minuscule chance
 of affecting profit distribution significantly.
 Since ByzCoin commits many transaction microblocks for each mined keyblock,
@@ -377,50 +398,55 @@ Strategic keyblock mining might, at best,
 affect transactions committed close to another keyblock mining event
 causing a consensus group shift &mdash;
 but any such effect can at most amount to changing the distribution
-of one share (e.g., <sup>1</sup>&frasl;<sub>1008</sub>) worth of transaction fee profits
-from that microblock.</p>
+of one share (e.g., 1/1008) worth of transaction fee profits
+from that microblock.
 
-<h2 id="conclusion">Conclusion</h2>
+<h2>Conclusion</h2>
 
-<p>This post of course represents only an informal
+<p>
+This post of course represents only an informal
 and certainly incomplete analysis
 of differences in incentives between Bitcoin and ByzCoin,
 focusing specifically on transaction fees.
 It is quite possible that a full, rigorous analysis of ByzCoin
 may reveal new incentive-compatibility issues that its architecture introduces.
 Further, ByzCoin is still an experimental protocol
-under rapid development and evolution.</p>
+under rapid development and evolution.
 
-<p>Given these caveats, however,
-ByzCoin&rsquo;s architecture at least appears to be much more resilient
+<p>
+Given these caveats, however,
+ByzCoin's architecture at least appears to be much more resilient
 to several known strategic mining attacks against Bitcoin,
-including the new attacks identified by Narayanan&rsquo;s group.
-By replacing Bitcoin&rsquo;s instant-gratification, winner-take-all reward model
+including the new attacks identified by Narayanan's group.
+By replacing Bitcoin's instant-gratification, winner-take-all reward model
 with a delayed-gratification, investment-dividend model,
 ByzCoin ensures that the distribution of mining profits are fixed
 long before any strategic miner might know about or be able to respond to
-the appearance of a goose egg or other transaction fee variance.</p>
+the appearance of a goose egg or other transaction fee variance.
 
-<p>In short, it does not appear necessary for new cryptocurrencies to
-&ldquo;<a href="http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/">make the block reward permanent and accept monetary inflation
-as inevitable</a>&rdquo;
+<p>
+In short, it does not appear necessary for new cryptocurrencies to
+&ldquo;<a href="http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/">make the block reward permanent and accept monetary inflation as inevitable</a>&rdquo;
 as Narayanan suggests.
 Whether inflationary or deflationary monetary policies are preferable
 is an important and highly debatable question,
-but its answer need not be constrained by Bitcoin&rsquo;s technical weaknesses.
+but its answer need not be constrained by Bitcoin's technical weaknesses.
 With more sophisticated blockchain architectures such as ByzCoin,
 there is plenty of hope that mining incentives can work
-independent of monetary policy.</p>
+independent of monetary policy.
 
-<hr />
+<p>
+<hr width="50%">
 
-<p><em>The author wishes to thank
+<p>
+<i>The author wishes to thank
 <a href="https://github.com/Daeinar">Philipp Jovanovic</a>,
 <a href="https://twitter.com/kreuzuquer">Ismail Khoffi</a>,
 <a href="https://twitter.com/lefkok">Lefteris Kokoris-Kogias</a>,
-<a href="http://randomwalker.info/">Arvind Narayanan</a>,
-<a href="https://www.cs.cornell.edu/people/egs/">Emin Gün Sirer</a>, and
-for helpful feedback on early drafts of this post.</em></p>
+<a href="http://randomwalker.info/">Arvind Narayanan</a>, and
+<a href="https://www.cs.cornell.edu/people/egs/">Emin Gün Sirer</a>,
+for helpful feedback on early drafts of this post.</i>
+
 
     </div>
 

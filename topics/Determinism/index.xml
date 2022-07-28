@@ -13,7 +13,7 @@
       <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-timing/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -22,8 +22,8 @@
       <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-wu/</guid>
-      <description>   Weiyi Wu  Ph.D. thesis advised by Bryan Ford
-August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
+      <description> Weiyi Wu Ph.D. thesis advised by Bryan Ford
+August 10, 2015 Abstract: XXX Ph.D. Thesis: PDF </description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@ August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
       <pubDate>Mon, 29 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/lazy-tree-mapping/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -41,8 +41,8 @@ August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
       <pubDate>Thu, 20 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2012-aviram/</guid>
-      <description>Amittai F. Aviram  Ph.D. thesis advised by Bryan Ford
-September 20, 2012  Abstract: Researchers widely agree that determinism in parallel programs is desirable. Although experimental parallel programming languages have long featured deterministic semantics, in mainstream parallel environments, developers still build on non-deterministic constructs such as mutexes, leading to time- or schedule-dependent heisenbugs. To make deterministic programming more accessible, we introduce DOMP, a deterministic extension to OpenMP, preserving the familiarity of traditional languages such as C and Fortran, and maintaining source-compatibility with much of the existing OpenMP standard.</description>
+      <description>Amittai F. Aviram Ph.D. thesis advised by Bryan Ford
+September 20, 2012 Abstract: Researchers widely agree that determinism in parallel programs is desirable. Although experimental parallel programming languages have long featured deterministic semantics, in mainstream parallel environments, developers still build on non-deterministic constructs such as mutexes, leading to time- or schedule-dependent heisenbugs. To make deterministic programming more accessible, we introduce DOMP, a deterministic extension to OpenMP, preserving the familiarity of traditional languages such as C and Fortran, and maintaining source-compatibility with much of the existing OpenMP standard.</description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@ September 20, 2012  Abstract: Researchers widely agree that determinism in paral
       <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/tifc-hotcloud12/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -60,7 +60,7 @@ September 20, 2012  Abstract: Researchers widely agree that determinism in paral
       <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-vm/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -69,7 +69,7 @@ September 20, 2012  Abstract: Researchers widely agree that determinism in paral
       <pubDate>Thu, 26 May 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-openmp/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -78,7 +78,7 @@ September 20, 2012  Abstract: Researchers widely agree that determinism in paral
       <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/workspace-consistency/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -88,8 +88,8 @@ September 20, 2012  Abstract: Researchers widely agree that determinism in paral
       
       <guid>https://bford.info/pub/os/timing-abs/</guid>
       <description>Amittai Aviram, Sen Hu, Bryan Ford
-	Ramakrishna Gummadi
-	Yale University 	University of Massachusetts Amherst  The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
+Ramakrishna Gummadi
+Yale University University of Massachusetts Amherst The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
     </item>
     
     <item>
@@ -98,7 +98,7 @@ September 20, 2012  Abstract: Researchers widely agree that determinism in paral
       <pubDate>Tue, 05 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-osdi10/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
   </channel>

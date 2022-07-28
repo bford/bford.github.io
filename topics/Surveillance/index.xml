@@ -13,8 +13,8 @@
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/post/2020-11-18-ai-governance/</guid>
-      <description>AI in Policy?   This post contains an address delivered at the IRGC conference on Governance Of and By Digital Technology.
- The separation of mechanism and policy Computer science has a well-established design principle known as separation of mechanism and policy. I think this principle may be equally applicable to human governance &amp;ndash; especially in considering the question of where AI does and does not belong.
+      <description>This post contains an address delivered at the IRGC conference on Governance Of and By Digital Technology.
+The separation of mechanism and policy Computer science has a well-established design principle known as separation of mechanism and policy. I think this principle may be equally applicable to human governance &amp;ndash; especially in considering the question of where AI does and does not belong.
 I believe the cautious use of today&amp;rsquo;s powerful AI technologies based on machine learning can justifiably play many useful roles in implementing low-level mechanisms used in governance.</description>
     </item>
     
@@ -24,9 +24,9 @@ I believe the cautious use of today&amp;rsquo;s powerful AI technologies based o
       <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/cbdc/</guid>
-      <description>Sarah Allen, Srdjan Capkun, Ittay Eyal, Giulia Fanti, Bryan Ford, James Grimmelmann, Ari Juels, Kari Kostiainen, Sarah Meiklejohn, Andrew Miller, Eswar Prasad, Karl Wüst, and Fan Zhang   Global Economy &amp; Development Working Paper 140,
+      <description>Sarah Allen, Srdjan Capkun, Ittay Eyal, Giulia Fanti, Bryan Ford, James Grimmelmann, Ari Juels, Kari Kostiainen, Sarah Meiklejohn, Andrew Miller, Eswar Prasad, Karl Wüst, and Fan Zhang Global Economy &amp; Development Working Paper 140,
 Brookings Institution,
-July 23, 2020. Abstract:  Central banks around the world are exploring and in some cases even piloting central bank digital currencies (CBDCs). CBDCs promise to realize a broad range of new capabilities, including direct government disbursements to citizens, frictionless consumer payment and money-transfer systems, and a range of new financial instruments and monetary policy levers.</description>
+July 23, 2020. Abstract: Central banks around the world are exploring and in some cases even piloting central bank digital currencies (CBDCs). CBDCs promise to realize a broad range of new capabilities, including direct government disbursements to citizens, frictionless consumer payment and money-transfer systems, and a range of new financial instruments and monetary policy levers.</description>
     </item>
     
     <item>
@@ -36,8 +36,8 @@ July 23, 2020. Abstract:  Central banks around the world are exploring and in so
       
       <guid>https://bford.info/pub/dec/immunity-abs/</guid>
       <description>Stevens Le Blond, Alejandro Cuevas, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Philipp Jovanovic, Bryan Ford, and Jean-Pierre Hubaux
-EPFL Winner of Distinguished Paper Award  IEEE Security &amp; Privacy (IEEE S&amp;P)
-May 22, 2018 Abstract: Humanitarian action, the process of aiding individuals in situations of crises, poses unique information-security challenges due to natural or manmade disasters, the adverse environments in which it takes place, and the scale and multidisciplinary nature of the problems.</description>
+EPFL Winner of Distinguished Paper Award IEEE Security &amp; Privacy (IEEE S&amp;P)
+May 22, 2018 Abstract: Humanitarian action, the process of aiding individuals in situations of crises, poses unique information-security challenges due to natural or manmade disasters, the adverse environments in which it takes place, and the scale and multidisciplinary nature of the problems. Despite these challenges, humanitarian organizations are transitioning towards a strong reliance on the digitization of collected data and digital tools, which improves their effectiveness but also exposes them to computer-security threats.</description>
     </item>
     
     <item>
@@ -46,8 +46,7 @@ May 22, 2018 Abstract: Humanitarian action, the process of aiding individuals in
       <pubDate>Fri, 23 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2017/06/23/turing50/</guid>
-      <description>This blog post is a transcript of my opening remarks on the panel &amp;ldquo;Restoring Personal Privacy without Compromising National Security&amp;rdquo; at the 50 Years of the ACM Turing Award Celebration. 
-We now live in a world in which the rules coded into the technology we use plays as important a role in governing our lives as the formal laws written in the public law books. Code is law already, for better or worse.</description>
+      <description>We now live in a world in which the rules coded into the technology we use plays as important a role in governing our lives as the formal laws written in the public law books. Code is law already, for better or worse. Unfortunately both the technology and policy communities still tend to treat technology as a simple set of tools, like a mechanical watch, home appliance, or automobile, which always unquestioningly serves its operator.</description>
     </item>
     
     <item>
@@ -56,7 +55,7 @@ We now live in a world in which the rules coded into the technology we use plays
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/lawful-surveillance/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -65,7 +64,7 @@ We now live in a world in which the rules coded into the technology we use plays
       <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/contact-chaining/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -74,7 +73,7 @@ We now live in a world in which the rules coded into the technology we use plays
       <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/open-surveillance/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -83,7 +82,7 @@ We now live in a world in which the rules coded into the technology we use plays
       <pubDate>Tue, 21 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/post/2014-10-22-open-surveillance/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -92,7 +91,7 @@ We now live in a world in which the rules coded into the technology we use plays
       <pubDate>Mon, 18 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/bandits/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
   </channel>

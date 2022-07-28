@@ -13,8 +13,8 @@
       <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2021-barman/</guid>
-      <description>Ludovic Barman  Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
-September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instant messengers, VPNs) use encryption to prevent third parties from learning sensitive information. However, encrypted communications protect the contents but often leak metadata: the amount of data sent and the time it was sent, the way the data should be decrypted, the identity of the sender and the recipient.</description>
+      <description>Ludovic Barman Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
+September 17, 2021 Abstract: Most communication systems (e.g., e-mails, instant messengers, VPNs) use encryption to prevent third parties from learning sensitive information. However, encrypted communications protect the contents but often leak metadata: the amount of data sent and the time it was sent, the way the data should be decrypted, the identity of the sender and the recipient. These metadata are a pervasive threat to privacy: They enable a variety of attacks that range from recovering plaintext contents from encrypted communications to inferring communicating parties.</description>
     </item>
     
     <item>
@@ -23,9 +23,9 @@ September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instan
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/prifi/</guid>
-      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Privacy Enhancing Technologies Symposium
-July 13, 2020  Proceedings on Privacy Enhancing Technologies
-Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
+      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum Privacy Enhancing Technologies Symposium
+July 13, 2020 Proceedings on Privacy Enhancing Technologies
+Volume 2020, Issue 4. Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/panopticon-cacm/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/dissent-analysis/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/buddies/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/verdict/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -70,7 +70,7 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/dissent-in-numbers/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -79,7 +79,7 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/anytrust/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -88,7 +88,7 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <pubDate>Mon, 04 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/dissent-abs/</guid>
-      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award  17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract:  Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
+      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award 17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract: Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
     </item>
     
   </channel>

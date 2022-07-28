@@ -13,7 +13,7 @@
       <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/f3b/</guid>
-      <description>Haoqian Zhang, Louis-Henri Merino, Vero Estrada-Galiñanes, and Bryan Ford  Decentralized Internet, Networks, Protocols, and Systems (DINPS)
+      <description>Haoqian Zhang, Louis-Henri Merino, Vero Estrada-Galiñanes, and Bryan Ford Decentralized Internet, Networks, Protocols, and Systems (DINPS)
 Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice of benefiting from advanced knowledge of pending transactions, has proliferated in the cryptocurrency space with the emergence of decentralized finance. Front-running causes devastating losses to honest participants—estimated at $280M each month—and endangers the fairness of the ecosystem. We present Flash Freezing Flash Boys (F3B), an architecture to address front-running attacks by relying on a commit-and-reveal scheme where the contents of a transaction are encrypted and later revealed by a decentralized secret-management committee (SMC) when the transaction has been committed by the underlying consensus layer.</description>
     </item>
     
@@ -24,8 +24,8 @@ Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice o
       
       <guid>https://bford.info/pub/net/qsc/</guid>
       <description>Bryan Ford, Philipp Jovanovic, and Ewa Syta
- March 4, 2020  arXiv preprint
- Abstract: It is commonly held that asynchronous consensus is much more complex, difficult, and costly than partially-synchronous algorithms, especially without using common coins. This paper challenges that conventional wisdom with que sera consensus QSC, an approach to consensus that cleanly decomposes the agreement problem from that of network asynchrony. QSC uses only private coins and reaches consensus in O(1) expected communication rounds.</description>
+March 4, 2020 arXiv preprint
+Abstract: It is commonly held that asynchronous consensus is much more complex, difficult, and costly than partially-synchronous algorithms, especially without using common coins. This paper challenges that conventional wisdom with que sera consensus QSC, an approach to consensus that cleanly decomposes the agreement problem from that of network asynchrony. QSC uses only private coins and reaches consensus in O(1) expected communication rounds.</description>
     </item>
     
     <item>
@@ -34,8 +34,8 @@ Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice o
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2019-kokoris-kogias/</guid>
-      <description>Eleftherios Kokoris Kogias  Ph.D. thesis advised by Bryan Ford
-September 27, 2019  Abstract:  One of the core promises of blockchain technology is that of enabling trustworthy data dissemination in a trustless environment. What current blockchain systems deliver, however, is slow dissemination of public data, rendering blockchain technology unusable in settings where latency, transaction capacity or data confidentiality is important. In this thesis, we focus on providing solutions on two of the most pressing problems blockchain technology currently faces: scalability and data confidentiality.</description>
+      <description>Eleftherios Kokoris Kogias Ph.D. thesis advised by Bryan Ford
+September 27, 2019 Abstract: One of the core promises of blockchain technology is that of enabling trustworthy data dissemination in a trustless environment. What current blockchain systems deliver, however, is slow dissemination of public data, rendering blockchain technology unusable in settings where latency, transaction capacity or data confidentiality is important. In this thesis, we focus on providing solutions on two of the most pressing problems blockchain technology currently faces: scalability and data confidentiality.</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@ September 27, 2019  Abstract:  One of the core promises of blockchain technology
       <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2019/09/23/rational/</guid>
-      <description>by Bryan Ford and Rainer Böhme &amp;mdash; PDF preprint version available    Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
+      <description>by Bryan Ford and Rainer Böhme &amp;mdash; PDF preprint version available Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
     </item>
     
     <item>
@@ -53,8 +53,8 @@ September 27, 2019  Abstract:  One of the core promises of blockchain technology
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/tlc/</guid>
-      <description>Bryan Ford  July 16, 2019  arXiv preprint
- Abstract: Consensus protocols for asynchronous networks are usually complex and inefficient, leading practical systems to rely on synchronous protocols. This paper attempts to simplify asynchronous consensus by building atop a novel threshold logical clock abstraction, which enables upper layers to operate as if on a synchronous network. This approach yields an asynchronous consensus protocol for fail-stop nodes that may be simpler and more robust than Paxos and its leader-based variants, requiring no common coins and achieving consensus in a constant expected number of rounds.</description>
+      <description>Bryan Ford July 16, 2019 arXiv preprint
+Abstract: Consensus protocols for asynchronous networks are usually complex and inefficient, leading practical systems to rely on synchronous protocols. This paper attempts to simplify asynchronous consensus by building atop a novel threshold logical clock abstraction, which enables upper layers to operate as if on a synchronous network. This approach yields an asynchronous consensus protocol for fail-stop nodes that may be simpler and more robust than Paxos and its leader-based variants, requiring no common coins and achieving consensus in a constant expected number of rounds.</description>
     </item>
     
     <item>
@@ -63,9 +63,7 @@ September 27, 2019  Abstract:  One of the core promises of blockchain technology
       <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/10/25/mining/</guid>
-      <description>--  
-As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&amp;rsquo;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
-In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
+      <description>As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&#39;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining. In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
     </item>
     
     <item>
@@ -74,7 +72,7 @@ In short, miners motivated by transaction fees have even greater incentive to de
       <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/byzcoin-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
   </channel>

@@ -14,8 +14,8 @@
       
       <guid>https://bford.info/draft/biometric-id/</guid>
       <description>Are biometrics good for determining whether a digital identity uniquely represents a real person?
-Break this down: - Does it represent [the characteristics of] a person? - Does it uniquely represent a person: i.e., the only identity of that person? - Does it uniquely represent a real living person?
-Authentication, Identification, and Real Personhood Biometric authentication is practical, and not necessarily a privacy disaster. Biometric template only needs to be stored on the device, &amp;hellip;</description>
+Break this down:
+Does it represent [the characteristics of] a person? Does it uniquely represent a person: i.e., the only identity of that person? Does it uniquely represent a real living person? Authentication, Identification, and Real Personhood Biometric authentication is practical, and not necessarily a privacy disaster. Biometric template only needs to be stored on the device, &amp;hellip;</description>
     </item>
     
     <item>
@@ -48,8 +48,8 @@ if you withhold a block, you can&amp;rsquo;t get a collective signature on it; w
       
       <guid>https://bford.info/2016/03/08/crypto/</guid>
       <description>{{ page.title }} Interesting features:
- An abstract group arithmetic framework for public-key cryptography based on the discrete logarithm problem.
- Several alternative concrete instantiations of this abstract group arithmetic framework, based on the NIST elliptic curve implementations in the Go standard library and in the OpenSSL crypto library, and implementations of both generic Edwards curves and an adaptation of Adam Langley&amp;rsquo;s Ed25519-curve-specific optimized group arithmetic code to the abstract group API.</description>
+An abstract group arithmetic framework for public-key cryptography based on the discrete logarithm problem.
+Several alternative concrete instantiations of this abstract group arithmetic framework, based on the NIST elliptic curve implementations in the Go standard library and in the OpenSSL crypto library, and implementations of both generic Edwards curves and an adaptation of Adam Langley&amp;rsquo;s Ed25519-curve-specific optimized group arithmetic code to the abstract group API.</description>
     </item>
     
     <item>
@@ -97,8 +97,8 @@ BESO Generic does not modify the JSON Schema language at all.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/cmark/</guid>
-      <description>Hyphen X [-] Optional line-breaking hyphen??? &amp;ndash; – [&amp;ndash;] En-dash or numeric range &amp;mdash; — [&amp;mdash;] Em-dash &amp;hellip; … [&amp;hellip;] Ellipsis  &amp;rdquo;&amp;hellip;&amp;rdquo; Quoted string: quotes become left/right
-⏎ [br] Line break ␍ [r] Carriage return character mark ␤ [n] Newline character mark ¶ [p] Paragraph mark X [o&amp;#39;] Open single quote X [c&amp;#39;] Close single quote X [o&amp;#34;] Open double quote X [c&amp;#34;] Close double quote X [o&amp;lt;&amp;gt;] Open angle bracket X [c&amp;lt;&amp;gt;] Close angle bracket X [o&amp;lt;&amp;lt;&amp;gt;&amp;gt;] Open double angle bracket X [c&amp;lt;&amp;lt;&amp;gt;&amp;gt;] Close double angle bracket Spacing: &amp;ldquo; &amp;rdquo; [mq] Em quad space &amp;ldquo; &amp;rdquo; [nq] En quad space &amp;ldquo; &amp;rdquo; [m] Em space &amp;ldquo; &amp;rdquo; [n] En space &amp;ldquo; &amp;rdquo; [3m] Three-per-Em space &amp;ldquo; &amp;rdquo; [4m] Four-per-Em space &amp;ldquo; &amp;rdquo; [6m] Six-per-Em space &amp;ldquo; &amp;rdquo; [d] Figure (digit) space &amp;ldquo; &amp;rdquo; [.</description>
+      <description>Hyphen X	[-]	Optional line-breaking hyphen??? &amp;ndash;	–	[&amp;ndash;]	En-dash or numeric range &amp;mdash;	—	[&amp;mdash;]	Em-dash &amp;hellip;	…	[&amp;hellip;]	Ellipsis &amp;ldquo;&amp;hellip;&amp;rdquo;	Quoted string: quotes become left/right
+⏎	[br]	Line break ␍	[r]	Carriage return character mark ␤	[n]	Newline character mark ¶	[p]	Paragraph mark X	[o&#39;]	Open single quote X	[c&#39;]	Close single quote X	[o&amp;quot;]	Open double quote X	[c&amp;quot;]	Close double quote X	[o&amp;lt;&amp;gt;]	Open angle bracket X	[c&amp;lt;&amp;gt;]	Close angle bracket X	[o&amp;lt;&amp;lt;&amp;gt;&amp;gt;]	Open double angle bracket X	[c&amp;lt;&amp;lt;&amp;gt;&amp;gt;]	Close double angle bracket Spacing: &amp;quot; &amp;quot;	[mq_]	Em quad space &amp;quot; &amp;quot;	[nq_]	En quad space &amp;quot; &amp;quot;	[m_]	Em space &amp;quot; &amp;quot;	[n_]	En space &amp;quot; &amp;quot;	[3m_]	Three-per-Em space &amp;quot; &amp;quot;	[4m_]	Four-per-Em space &amp;quot; &amp;quot;	[6m_]	Six-per-Em space &amp;quot; &amp;quot;	[d_]	Figure (digit) space &amp;quot; &amp;quot;	[.</description>
     </item>
     
     <item>
@@ -107,8 +107,8 @@ BESO Generic does not modify the JSON Schema language at all.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/cmath/</guid>
-      <description>Symbols Arithmetic Basic: + Plus sign - − [-] Minus sign * × [x] Multiplication ÷ [d] Division / ⁄ [/] Fraction slash
-Technical: ± [+-] Plus-minus sign ∕ [d/] Division slash ⋅ [.] Multiplication or dot product √ [root] Square root ∛ [3root] Cube root ∜ [4root] Fourth root ∞ [inf] Infinity ∶ [:] Ratio ∷ [::] Proportion sum ∑ [sum] Sum prod ∏ [prod] Product 𝔼 [expect] Expected value pi π [pi] Mathematical value pi (3.</description>
+      <description>Symbols Arithmetic Basic:
+Plus sign −	[-]	Minus sign ×	Multiplication ÷	[d]	Division /	⁄	[/]	Fraction slash Technical: ±	[+-]	Plus-minus sign ∕	[d/]	Division slash ⋅	[.]	Multiplication or dot product √	[root]	Square root ∛	[3root]	Cube root ∜	[4root]	Fourth root ∞	[inf]	Infinity ∶	[:]	Ratio ∷	[::]	Proportion sum	∑	[sum]	Sum prod	∏	[prod]	Product 𝔼	[expect] Expected value pi	π	[pi]	Mathematical value pi (3.</description>
     </item>
     
     <item>
@@ -141,7 +141,9 @@ But to avoid further confusion, would be best to have one &amp;ldquo;standardize
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/follow/</guid>
-      <description>Orthogonal concepts to be defined independently but worked together: - identification (e.g., by content hash) of current version - linkage of versions into a linear series, SkipChain, or TimeTree - update authorization by one or quorum of identities - authentication of identities (people or devices) eg by signing - registration of updates on authoritative registry or registries - checking of witnesses by threshold - definition of unambiguous authoritative chain by timescale?</description>
+      <description>Orthogonal concepts to be defined independently but worked together:
+identification (e.g., by content hash) of current version linkage of versions into a linear series, SkipChain, or TimeTree update authorization by one or quorum of identities authentication of identities (people or devices) eg by signing registration of updates on authoritative registry or registries checking of witnesses by threshold definition of unambiguous authoritative chain by timescale? &amp;ndash; Version Identifier (VID) scheme:
+Intended to be a type of URI that you put into your source Web content (or other content) to represent a trackable object, whose VIDs can be upgraded automatically when the target changes.</description>
     </item>
     
     <item>
@@ -152,7 +154,7 @@ But to avoid further confusion, would be best to have one &amp;ldquo;standardize
       <guid>https://bford.info/draft/delimited-syntax/</guid>
       <description>or Composable Text/Binary Syntax (CTS/CBS)?
 Goals:
- Text format self-describing and human-readable Binary format for compactness and efficiency  Either self-describing or schema-dependent  Easy cross-conversion between text and binary formats  Easy for schemas to define both text and binary equivalents at once  Streamable: encoder can start sending long composites before knowing length Embeddable:  for embeddability, see for example JSON Schema&amp;rsquo;s desire to be able to embed arbitrary non-JSON data with a MIME Media Type: https://json-schema.</description>
+Text format self-describing and human-readable Binary format for compactness and efficiency Either self-describing or schema-dependent Easy cross-conversion between text and binary formats Easy for schemas to define both text and binary equivalents at once Streamable: encoder can start sending long composites before knowing length Embeddable: for embeddability, see for example JSON Schema&amp;rsquo;s desire to be able to embed arbitrary non-JSON data with a MIME Media Type: https://json-schema.</description>
     </item>
     
     <item>
@@ -162,7 +164,7 @@ Goals:
       
       <guid>https://bford.info/draft/drand/</guid>
       <description>&amp;ldquo;The coin to us is sacred.&amp;rdquo; - Thomas Shelby (Peaky Blinders)
- Public randomness &amp;ndash; or &amp;ldquo;flipping coins&amp;rdquo; in some way so that anyone can see (and trust) the outcome &amp;ndash; is fundamental to numerous social and technical processes. Besides gambling and lotteries (obviously), we need public randomness to choose a sample of some population fairly. The ancient Greeks used sortition, or selection by random lottery, to appoint political officials to office.</description>
+Public randomness – or &amp;ldquo;flipping coins&amp;rdquo; in some way so that anyone can see (and trust) the outcome – is fundamental to numerous social and technical processes. Besides gambling and lotteries (obviously), we need public randomness to choose a sample of some population fairly. The ancient Greeks used sortition, or selection by random lottery, to appoint political officials to office.</description>
     </item>
     
     <item>
@@ -191,7 +193,7 @@ An old problem in data format design is embedding an arbitrary variable-length b
       
       <guid>https://bford.info/draft/xson/</guid>
       <description>Goals:
- Consistent with and easily convertible to and from JSON Support syntactic and semantic extensions for expressiveness Incremental complexity growth: simple formats and schemas stay simple Baseline even more minimalistic than JSON (&amp;ldquo;minXSON&amp;rdquo;) All elements have both human-readable and compact binary representations  The XSON header An XSON stream starts with xson[imports], where imports is a comma-separated list of syntax imports. These can be simple identifiers for extensions defined in this document, or may (how?</description>
+Consistent with and easily convertible to and from JSON Support syntactic and semantic extensions for expressiveness Incremental complexity growth: simple formats and schemas stay simple Baseline even more minimalistic than JSON (&amp;ldquo;minXSON&amp;rdquo;) All elements have both human-readable and compact binary representations The XSON header An XSON stream starts with xson[imports], where imports is a comma-separated list of syntax imports. These can be simple identifiers for extensions defined in this document, or may (how?</description>
     </item>
     
     <item>
@@ -214,10 +216,10 @@ Variable-width unsigned integers When the scheme type is integer, an encoding pr
       
       <guid>https://bford.info/draft/mag/</guid>
       <description>Interesting uses:
- Side-channel leak control: PURBs
- Indexing and counting for divide-and-conquer algorithms. Example: binary search (works) vs linear search (breaks quickly); quick/merge sorts (works) vs naive sorts (breaks); &amp;hellip;
- Related: summary data for large-scale data for parallel processing
- Efficient memory allocation with fragmentation control Use next mag to bucket allocation units; allocation can scavenge and split a larger bucket and (proof?) remainder will also fall into a valid bucket (subtraction closure: mag minus a mag is a mag if no underflow)</description>
+Side-channel leak control: PURBs
+Indexing and counting for divide-and-conquer algorithms. Example: binary search (works) vs linear search (breaks quickly); quick/merge sorts (works) vs naive sorts (breaks); &amp;hellip;
+Related: summary data for large-scale data for parallel processing
+Efficient memory allocation with fragmentation control Use next mag to bucket allocation units; allocation can scavenge and split a larger bucket and (proof?) remainder will also fall into a valid bucket (subtraction closure: mag minus a mag is a mag if no underflow)</description>
     </item>
     
     <item>
@@ -226,7 +228,7 @@ Variable-width unsigned integers When the scheme type is integer, an encoding pr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/11/13/info/</guid>
-      <description>Hillary Clinton&amp;rsquo;s [electoral college defeat]() has provoked many questions about how so many Americans could have choosen a [misogynistic](), [xenophobic](), [pathologically lying](), [authoritarian]() [ideologue]() as their next President &amp;ndash; and one of many targets of their blame is [social media](). Compounding its [polarizing &amp;ldquo;echo chamber&amp;rdquo; effect](), online discussions were tarnished with [deliberate misinformation](), including [incorrect instructions on how to vote](). But is the solution for social media companies like Facebook to ``do a better job&amp;rdquo; at curating the world&amp;rsquo;s content to suppress out false or hateful speech?</description>
+      <description>Hillary Clinton&amp;rsquo;s electoral college defeat has provoked many questions about how so many Americans could have choosen a misogynistic, xenophobic, pathologically lying, authoritarian ideologue as their next President &amp;ndash; and one of many targets of their blame is social media. Compounding its polarizing &amp;ldquo;echo chamber&amp;rdquo; effect, online discussions were tarnished with deliberate misinformation, including incorrect instructions on how to vote. But is the solution for social media companies like Facebook to ``do a better job&amp;rsquo;&amp;rsquo; at curating the world&amp;rsquo;s content to suppress out false or hateful speech?</description>
     </item>
     
     <item>

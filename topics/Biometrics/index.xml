@@ -13,8 +13,8 @@
       <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-syta/</guid>
-      <description>Ewa Syta  Ph.D. thesis advised by Bryan Ford
-August 11, 2015  Abstract:  Maintaining privacy on the Internet is increasingly difficult in this ever-connected world. In most cases, our online interactions are a highly personalized experience and require some form of identity verification, most commonly, logging into an account. Unfortunately, people frequently give away a lot of information while obtaining accounts, reuse usernames and passwords across different services, or link their accounts to take advantage of single sign-on to avoid retyping passwords.</description>
+      <description>Ewa Syta Ph.D. thesis advised by Bryan Ford
+August 11, 2015 Abstract: Maintaining privacy on the Internet is increasingly difficult in this ever-connected world. In most cases, our online interactions are a highly personalized experience and require some form of identity verification, most commonly, logging into an account. Unfortunately, people frequently give away a lot of information while obtaining accounts, reuse usernames and passwords across different services, or link their accounts to take advantage of single sign-on to avoid retyping passwords.</description>
     </item>
     
     <item>
@@ -23,8 +23,8 @@ August 11, 2015  Abstract:  Maintaining privacy on the Internet is increasingly 
       <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/private-eyes-abs/</guid>
-      <description>Ewa Syta, Michael J. Fischer, David Wolinsky, Abraham Silberschatz, Gina Gallegos-García, and Bryan Ford   12th International Conference on Security and Cryptography (SECRYPT)
-July 2015.  Abstract: We propose an efficient remote biometric authentication protocol that gives strong protection to the user’s biometric data in case of two common kinds of security breaches: (1) loss or theft of the user’s token (smart card, handheld device, etc.), giving the attacker full access to any secrets embedded within it; (2) total penetration of the server.</description>
+      <description>Ewa Syta, Michael J. Fischer, David Wolinsky, Abraham Silberschatz, Gina Gallegos-García, and Bryan Ford 12th International Conference on Security and Cryptography (SECRYPT)
+July 2015. Abstract: We propose an efficient remote biometric authentication protocol that gives strong protection to the user’s biometric data in case of two common kinds of security breaches: (1) loss or theft of the user’s token (smart card, handheld device, etc.), giving the attacker full access to any secrets embedded within it; (2) total penetration of the server.</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/biometric-auth/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
   </channel>

@@ -6,15 +6,24 @@
     <description>Recent content in Anonymity on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Anonymity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Anonymity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TRIP: Trustless Coercion-Resistant In-Person Voter Registration</title>
+      <link>https://bford.info/pub/sec/trip/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/trip/</guid>
+      <description>Louis-Henri Merino, Simone Colombo, Jeff Allen, Vero Estrada-Galiñanes, and Bryan Ford arXiv preprint Abstract: Most existing remote electronic voting systems are vulnerable to voter coercion and vote buying. While coercion-resistant voting systems address this challenge, current schemes assume that the voter has access to an untappable, incorruptible device during voter registration. We present TRIP, an in-person voter registration scheme enabling voters to create verifiable and indistinguishable real and fake credentials using an untrusted kiosk inside a privacy booth at a supervised location, e.</description>
+    </item>
+    
     <item>
       <title>Integrity and Metadata Protection in Data Retrieval</title>
       <link>https://bford.info/thesis/2021-nikitin/</link>
       <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2021-nikitin/</guid>
-      <description>Kirill Nikitin  Ph.D. thesis advised by Bryan Ford
-November 26, 2021  Abstract: Secure retrieval of data requires integrity, confidentially, transparency, and metadata-privacy of the process. Existing protection mechanisms, however, provide only partially these properties: encryption schemes still expose cleartext metadata, protocols for private information retrieval neglect data integrity, and data-distribution architectures forego transparency. In this dissertation, by designing new cryptographic primitives and security architectures that provide a more comprehensive protection, we improve on the current security and privacy practices in data retrieval.</description>
+      <description>Kirill Nikitin Ph.D. thesis advised by Bryan Ford
+November 26, 2021 Abstract: Secure retrieval of data requires integrity, confidentially, transparency, and metadata-privacy of the process. Existing protection mechanisms, however, provide only partially these properties: encryption schemes still expose cleartext metadata, protocols for private information retrieval neglect data integrity, and data-distribution architectures forego transparency. In this dissertation, by designing new cryptographic primitives and security architectures that provide a more comprehensive protection, we improve on the current security and privacy practices in data retrieval.</description>
     </item>
     
     <item>
@@ -23,8 +32,8 @@ November 26, 2021  Abstract: Secure retrieval of data requires integrity, confid
       <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2021-barman/</guid>
-      <description>Ludovic Barman  Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
-September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instant messengers, VPNs) use encryption to prevent third parties from learning sensitive information. However, encrypted communications protect the contents but often leak metadata: the amount of data sent and the time it was sent, the way the data should be decrypted, the identity of the sender and the recipient.</description>
+      <description>Ludovic Barman Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
+September 17, 2021 Abstract: Most communication systems (e.g., e-mails, instant messengers, VPNs) use encryption to prevent third parties from learning sensitive information. However, encrypted communications protect the contents but often leak metadata: the amount of data sent and the time it was sent, the way the data should be decrypted, the identity of the sender and the recipient. These metadata are a pervasive threat to privacy: They enable a variety of attacks that range from recovering plaintext contents from encrypted communications to inferring communicating parties.</description>
     </item>
     
     <item>
@@ -33,9 +42,9 @@ September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instan
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/prifi/</guid>
-      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Privacy Enhancing Technologies Symposium
-July 13, 2020  Proceedings on Privacy Enhancing Technologies
-Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
+      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum Privacy Enhancing Technologies Symposium
+July 13, 2020 Proceedings on Privacy Enhancing Technologies
+Volume 2020, Issue 4. Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
     </item>
     
     <item>
@@ -44,7 +53,7 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/morphit-abs/</guid>
-      <description>Georgia Fragkouli, Katerina Argyraki, and Bryan Ford EPFL Winner of Applied Networking Research Prize (ANRP)  Proceedings on Privacy Enhancing Technologies
+      <description>Georgia Fragkouli, Katerina Argyraki, and Bryan Ford EPFL Winner of Applied Networking Research Prize (ANRP) Proceedings on Privacy Enhancing Technologies
 May 4, 2019. Abstract: Can we improve Internet transparency without worsening user anonymity? For a long time, researchers have been proposing transparency systems, where traffic reports produced at strategic network points help assess network behavior and verify service-level agreements or neutrality compliance. However, such reports necessarily reveal when certain traffic appeared at a certain network point, and this information could, in principle, be used to compromise low-latency anonymity networks like Tor.</description>
     </item>
     
@@ -55,11 +64,11 @@ May 4, 2019. Abstract: Can we improve Internet transparency without worsening us
       
       <guid>https://bford.info/pub/dec/atom-abs/</guid>
       <description>Albert Kwon
-MIT  Henry Corrigan-Gibbs
-Stanford  Srinivas Devadas
-MIT  Bryan Ford
-EPFL    26th ACM Symposium on Operating Systems Principles (SOSP)
-October 30, 2017 Abstract: Atom is an anonymous messaging system that protects against traffic-analysis attacks. Unlike many prior systems, each Atom server touches only a small fraction of the total messages routed through the network. As a result, the system’s capacity scales near-linearly with the number of servers.</description>
+MIT Henry Corrigan-Gibbs
+Stanford Srinivas Devadas
+MIT Bryan Ford
+EPFL 26th ACM Symposium on Operating Systems Principles (SOSP)
+October 30, 2017 Abstract: Atom is an anonymous messaging system that protects against traffic-analysis attacks. Unlike many prior systems, each Atom server touches only a small fraction of the total messages routed through the network. As a result, the system’s capacity scales near-linearly with the number of servers. At the same time, each Atom user benefits from &amp;ldquo;best possible&amp;rdquo; anonymity: a user is anonymous among all honest users of the system, even against an active adversary who monitors the entire network, a portion of the system’s servers, and any number of malicious users.</description>
     </item>
     
     <item>
@@ -69,7 +78,7 @@ October 30, 2017 Abstract: Atom is an anonymous messaging system that protects a
       
       <guid>https://bford.info/pub/dec/pop-abs/</guid>
       <description>Maria Borge, Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, and Bryan Ford
-EPFL   IEEE Security &amp; Privacy on the Blockchain (IEEE S&amp;B)
+EPFL IEEE Security &amp; Privacy on the Blockchain (IEEE S&amp;B)
 April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies commonly use proof-of-work (PoW) or proof-of-stake (PoS) to ensure their security, e.g. to prevent double spending attacks. However, both approaches have disadvantages: PoW leads to massive amounts of wasted electricity and re-centralization, whereas major stakeholders in PoS might be able to create a monopoly.</description>
     </item>
     
@@ -79,7 +88,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/contact-chaining/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -88,7 +97,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/riffle/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -97,7 +106,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/anonrep-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -106,7 +115,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/crypto-book-codaspy/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -125,7 +134,7 @@ While I support anonymity and have spent years working to strengthen it, terrori
       <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/panopticon-cacm/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -134,8 +143,8 @@ While I support anonymity and have spent years working to strengthen it, terrori
       <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-syta/</guid>
-      <description>Ewa Syta  Ph.D. thesis advised by Bryan Ford
-August 11, 2015  Abstract:  Maintaining privacy on the Internet is increasingly difficult in this ever-connected world. In most cases, our online interactions are a highly personalized experience and require some form of identity verification, most commonly, logging into an account. Unfortunately, people frequently give away a lot of information while obtaining accounts, reuse usernames and passwords across different services, or link their accounts to take advantage of single sign-on to avoid retyping passwords.</description>
+      <description>Ewa Syta Ph.D. thesis advised by Bryan Ford
+August 11, 2015 Abstract: Maintaining privacy on the Internet is increasingly difficult in this ever-connected world. In most cases, our online interactions are a highly personalized experience and require some form of identity verification, most commonly, logging into an account. Unfortunately, people frequently give away a lot of information while obtaining accounts, reuse usernames and passwords across different services, or link their accounts to take advantage of single sign-on to avoid retyping passwords.</description>
     </item>
     
     <item>
@@ -144,8 +153,8 @@ August 11, 2015  Abstract:  Maintaining privacy on the Internet is increasingly 
       <pubDate>Wed, 24 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-maheswaran/</guid>
-      <description>John Maheswaran  Ph.D. thesis advised by Bryan Ford
-June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflow allow users to log in through a federated identity provider such as Facebook (Log in with Facebook), Google+ or Twitter. This process is called federated authentication. Examples of federated identity providers include social networks as well as other non-social network identity providers such as PayPal.  Federated identity providers have gained widespread popularity among users as a way to manage their online identity across the web.</description>
+      <description>John Maheswaran Ph.D. thesis advised by Bryan Ford
+June 24, 2015 Abstract: Third-party applications such as Quora or StackOverflow allow users to log in through a federated identity provider such as Facebook (Log in with Facebook), Google+ or Twitter. This process is called federated authentication. Examples of federated identity providers include social networks as well as other non-social network identity providers such as PayPal. Federated identity providers have gained widespread popularity among users as a way to manage their online identity across the web.</description>
     </item>
     
     <item>
@@ -154,7 +163,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Mon, 18 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/bandits/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -163,7 +172,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/nymboxes/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -172,7 +181,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/dissent-analysis/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -181,7 +190,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/torcoin/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -190,7 +199,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/onions-to-shallots/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -199,7 +208,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/crypto-book/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -208,7 +217,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/conscript/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -217,7 +226,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/buddies/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -226,7 +235,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/verdict/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -235,7 +244,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/tor-unordered/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -244,7 +253,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/dissent-in-numbers/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -253,7 +262,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Mon, 09 Jul 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/blogdrop/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -262,8 +271,8 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/faceless-abs/</guid>
-      <description>Xiaoxiao Song, David Isaac Wolinsky, and Bryan Ford Yale University   5th Workshop on Social Network Systems
-April 10, 2012  Abstract: Social networks (SNs) enable physically distributed groups to communicate seamlessly. Unfortunately such communi- cation can be easily mined by adversaries in attempts to breach users’ privacy or suppress open discussion on sensi- tive topics. While anonymous posting can help protect users by hiding the link between individuals and the messages they post, existing anonymization schemes are centralized or vul- nerable to well-known attacks.</description>
+      <description>Xiaoxiao Song, David Isaac Wolinsky, and Bryan Ford Yale University 5th Workshop on Social Network Systems
+April 10, 2012 Abstract: Social networks (SNs) enable physically distributed groups to communicate seamlessly. Unfortunately such communi- cation can be easily mined by adversaries in attempts to breach users’ privacy or suppress open discussion on sensi- tive topics. While anonymous posting can help protect users by hiding the link between individuals and the messages they post, existing anonymization schemes are centralized or vul- nerable to well-known attacks.</description>
     </item>
     
     <item>
@@ -272,7 +281,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/anytrust/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -281,7 +290,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Mon, 04 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/dissent-abs/</guid>
-      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award  17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract:  Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
+      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award 17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract: Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
     </item>
     
     <item>
@@ -290,9 +299,8 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Tue, 01 Apr 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/sybil-abs/</guid>
-      <description>Bryan Ford and Jacob Strauss 
-Massachusetts Institute of Technology First Workshop on Social Network Systems
-April 1, 2008 Abstract:  Online anonymity often appears to undermine accountability, offering little incentive for civil behavior, but accountability failures usually result not from anonymity itself but from the disposability of virtual identities. A user banned for misbehavior&amp;mdash;e.g., spamming from a free E-mail account or stuffing an online ballot box&amp;mdash;can simply open other accounts or connect from other IP addresses.</description>
+      <description>Bryan Ford and Jacob Strauss Massachusetts Institute of Technology First Workshop on Social Network Systems
+April 1, 2008 Abstract: Online anonymity often appears to undermine accountability, offering little incentive for civil behavior, but accountability failures usually result not from anonymity itself but from the disposability of virtual identities. A user banned for misbehavior&amp;mdash;e.g., spamming from a free E-mail account or stuffing an online ballot box&amp;mdash;can simply open other accounts or connect from other IP addresses.</description>
     </item>
     
     <item>
@@ -301,7 +309,7 @@ April 1, 2008 Abstract:  Online anonymity often appears to undermine accountabil
       <pubDate>Sun, 24 Sep 2006 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/log/2006/0924-SybilParties.html</guid>
-      <description>Bryan Ford - September 24, 2006 Preliminary draft: see here for the final published paper  The Human Recognition Problem  Today&#39;s online ecosphere continually suffers from its inability to tell who is a genuine, unique human and who isn&#39;t. Because open-access messaging systems cannot isolate or authenticate the human source of messages for the purpose of suppressing abuses, spam has already relegated USENET to historical obscurity [Templeton01], threatens the usability of E-mail [Wouters05], and is even advancing on Skype.</description>
+      <description>Bryan Ford - September 24, 2006 Preliminary draft: see here for the final published paper The Human Recognition Problem Today&#39;s online ecosphere continually suffers from its inability to tell who is a genuine, unique human and who isn&#39;t. Because open-access messaging systems cannot isolate or authenticate the human source of messages for the purpose of suppressing abuses, spam has already relegated USENET to historical obscurity [Templeton01], threatens the usability of E-mail [Wouters05], and is even advancing on Skype.</description>
     </item>
     
   </channel>

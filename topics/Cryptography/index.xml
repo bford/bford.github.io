@@ -13,8 +13,17 @@
       <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/f3b/</guid>
-      <description>Haoqian Zhang, Louis-Henri Merino, Vero Estrada-Galiñanes, and Bryan Ford  Decentralized Internet, Networks, Protocols, and Systems (DINPS)
+      <description>Haoqian Zhang, Louis-Henri Merino, Vero Estrada-Galiñanes, and Bryan Ford Decentralized Internet, Networks, Protocols, and Systems (DINPS)
 Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice of benefiting from advanced knowledge of pending transactions, has proliferated in the cryptocurrency space with the emergence of decentralized finance. Front-running causes devastating losses to honest participants—estimated at $280M each month—and endangers the fairness of the ecosystem. We present Flash Freezing Flash Boys (F3B), an architecture to address front-running attacks by relying on a commit-and-reveal scheme where the contents of a transaction are encrypted and later revealed by a decentralized secret-management committee (SMC) when the transaction has been committed by the underlying consensus layer.</description>
+    </item>
+    
+    <item>
+      <title>TRIP: Trustless Coercion-Resistant In-Person Voter Registration</title>
+      <link>https://bford.info/pub/sec/trip/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/trip/</guid>
+      <description>Louis-Henri Merino, Simone Colombo, Jeff Allen, Vero Estrada-Galiñanes, and Bryan Ford arXiv preprint Abstract: Most existing remote electronic voting systems are vulnerable to voter coercion and vote buying. While coercion-resistant voting systems address this challenge, current schemes assume that the voter has access to an untappable, incorruptible device during voter registration. We present TRIP, an in-person voter registration scheme enabling voters to create verifiable and indistinguishable real and fake credentials using an untrusted kiosk inside a privacy booth at a supervised location, e.</description>
     </item>
     
     <item>
@@ -23,8 +32,8 @@ Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice o
       <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2021-nikitin/</guid>
-      <description>Kirill Nikitin  Ph.D. thesis advised by Bryan Ford
-November 26, 2021  Abstract: Secure retrieval of data requires integrity, confidentially, transparency, and metadata-privacy of the process. Existing protection mechanisms, however, provide only partially these properties: encryption schemes still expose cleartext metadata, protocols for private information retrieval neglect data integrity, and data-distribution architectures forego transparency. In this dissertation, by designing new cryptographic primitives and security architectures that provide a more comprehensive protection, we improve on the current security and privacy practices in data retrieval.</description>
+      <description>Kirill Nikitin Ph.D. thesis advised by Bryan Ford
+November 26, 2021 Abstract: Secure retrieval of data requires integrity, confidentially, transparency, and metadata-privacy of the process. Existing protection mechanisms, however, provide only partially these properties: encryption schemes still expose cleartext metadata, protocols for private information retrieval neglect data integrity, and data-distribution architectures forego transparency. In this dissertation, by designing new cryptographic primitives and security architectures that provide a more comprehensive protection, we improve on the current security and privacy practices in data retrieval.</description>
     </item>
     
     <item>
@@ -33,8 +42,8 @@ November 26, 2021  Abstract: Secure retrieval of data requires integrity, confid
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2021-froelicher/</guid>
-      <description>David Jules Froelicher  Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
-October 1, 2021  Abstract: Analyzing and processing data that are siloed and dispersed among multiple distrustful stakeholders is difficult and can even become impossible when the data are sensitive or confidential. Current data-protection and privacy regulations (e.g., GDPR) highly restrict the sharing and outsourcing of personal information among stakeholders that are in different jurisdictions.</description>
+      <description>David Jules Froelicher Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
+October 1, 2021 Abstract: Analyzing and processing data that are siloed and dispersed among multiple distrustful stakeholders is difficult and can even become impossible when the data are sensitive or confidential. Current data-protection and privacy regulations (e.g., GDPR) highly restrict the sharing and outsourcing of personal information among stakeholders that are in different jurisdictions. Sharing data is, however, required in many domains such as finance and medicine.</description>
     </item>
     
     <item>
@@ -43,8 +52,8 @@ October 1, 2021  Abstract: Analyzing and processing data that are siloed and dis
       <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2021-barman/</guid>
-      <description>Ludovic Barman  Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
-September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instant messengers, VPNs) use encryption to prevent third parties from learning sensitive information. However, encrypted communications protect the contents but often leak metadata: the amount of data sent and the time it was sent, the way the data should be decrypted, the identity of the sender and the recipient.</description>
+      <description>Ludovic Barman Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
+September 17, 2021 Abstract: Most communication systems (e.g., e-mails, instant messengers, VPNs) use encryption to prevent third parties from learning sensitive information. However, encrypted communications protect the contents but often leak metadata: the amount of data sent and the time it was sent, the way the data should be decrypted, the identity of the sender and the recipient. These metadata are a pervasive threat to privacy: They enable a variety of attacks that range from recovering plaintext contents from encrypted communications to inferring communicating parties.</description>
     </item>
     
     <item>
@@ -53,7 +62,7 @@ September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instan
       <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/calypso/</guid>
-      <description>Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford  47th International Conference on Very Large Data Bases (VLDB 2021)
+      <description>Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford 47th International Conference on Very Large Data Bases (VLDB 2021)
 Copenhagen, Denmark &amp;ndash; August 16-20, 2021 Abstract: Distributed ledgers provide high availability and integrity, making them a key enabler for practical and secure computation of distributed workloads among mutually distrustful parties. Many practical applications also require strong confidentiality, however, the third pillar of the CIA triad.</description>
     </item>
     
@@ -63,9 +72,9 @@ Copenhagen, Denmark &amp;ndash; August 16-20, 2021 Abstract: Distributed ledgers
       <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/cbdc/</guid>
-      <description>Sarah Allen, Srdjan Capkun, Ittay Eyal, Giulia Fanti, Bryan Ford, James Grimmelmann, Ari Juels, Kari Kostiainen, Sarah Meiklejohn, Andrew Miller, Eswar Prasad, Karl Wüst, and Fan Zhang   Global Economy &amp; Development Working Paper 140,
+      <description>Sarah Allen, Srdjan Capkun, Ittay Eyal, Giulia Fanti, Bryan Ford, James Grimmelmann, Ari Juels, Kari Kostiainen, Sarah Meiklejohn, Andrew Miller, Eswar Prasad, Karl Wüst, and Fan Zhang Global Economy &amp; Development Working Paper 140,
 Brookings Institution,
-July 23, 2020. Abstract:  Central banks around the world are exploring and in some cases even piloting central bank digital currencies (CBDCs). CBDCs promise to realize a broad range of new capabilities, including direct government disbursements to citizens, frictionless consumer payment and money-transfer systems, and a range of new financial instruments and monetary policy levers.</description>
+July 23, 2020. Abstract: Central banks around the world are exploring and in some cases even piloting central bank digital currencies (CBDCs). CBDCs promise to realize a broad range of new capabilities, including direct government disbursements to citizens, frictionless consumer payment and money-transfer systems, and a range of new financial instruments and monetary policy levers.</description>
     </item>
     
     <item>
@@ -74,9 +83,9 @@ July 23, 2020. Abstract:  Central banks around the world are exploring and in so
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/prifi/</guid>
-      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Privacy Enhancing Technologies Symposium
-July 13, 2020  Proceedings on Privacy Enhancing Technologies
-Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
+      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum Privacy Enhancing Technologies Symposium
+July 13, 2020 Proceedings on Privacy Enhancing Technologies
+Volume 2020, Issue 4. Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
     </item>
     
     <item>
@@ -85,8 +94,8 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2019-kokoris-kogias/</guid>
-      <description>Eleftherios Kokoris Kogias  Ph.D. thesis advised by Bryan Ford
-September 27, 2019  Abstract:  One of the core promises of blockchain technology is that of enabling trustworthy data dissemination in a trustless environment. What current blockchain systems deliver, however, is slow dissemination of public data, rendering blockchain technology unusable in settings where latency, transaction capacity or data confidentiality is important. In this thesis, we focus on providing solutions on two of the most pressing problems blockchain technology currently faces: scalability and data confidentiality.</description>
+      <description>Eleftherios Kokoris Kogias Ph.D. thesis advised by Bryan Ford
+September 27, 2019 Abstract: One of the core promises of blockchain technology is that of enabling trustworthy data dissemination in a trustless environment. What current blockchain systems deliver, however, is slow dissemination of public data, rendering blockchain technology unusable in settings where latency, transaction capacity or data confidentiality is important. In this thesis, we focus on providing solutions on two of the most pressing problems blockchain technology currently faces: scalability and data confidentiality.</description>
     </item>
     
     <item>
@@ -95,9 +104,9 @@ September 27, 2019  Abstract:  One of the core promises of blockchain technology
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/purb-abs/</guid>
-      <description>Kirill Nikitin, Ludovic Barman, Wouter Lueks, Matthew Underwood, Jean-Pierre Hubaux and Bryan Ford EPFL - IC - DEDIS   Privacy Enhancing Technologies Symposium
-July 2019.  Proceedings on Privacy Enhancing Technologies
-Volume 2019, Issue 4.  Abstract: Most encrypted data formats leak metadata via their plaintext headers, such as format version, encryption schemes used, number of recipients who can decrypt the data, and even the recipients’ identities.</description>
+      <description>Kirill Nikitin, Ludovic Barman, Wouter Lueks, Matthew Underwood, Jean-Pierre Hubaux and Bryan Ford EPFL - IC - DEDIS Privacy Enhancing Technologies Symposium
+July 2019. Proceedings on Privacy Enhancing Technologies
+Volume 2019, Issue 4. Abstract: Most encrypted data formats leak metadata via their plaintext headers, such as format version, encryption schemes used, number of recipients who can decrypt the data, and even the recipients’ identities. This leakage can pose security and privacy risks to users, e.</description>
     </item>
     
     <item>
@@ -106,8 +115,8 @@ Volume 2019, Issue 4.  Abstract: Most encrypted data formats leak metadata via t
       <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/two-round-multisig-abs/</guid>
-      <description>Manu Drijvers, Kasra Edalatnejad, Bryan Ford, Eike Kiltz, Julian Loss, Gregory Neven, and Igors Stepanovs   40th IEEE Symposium on Security and Privacy
-May 2019  Abstract: A multi-signature scheme allows a group of signers to collaboratively sign a message, creating a single signature that convinces a verifier that every individual signer approved the message. The increased interest in technologies to decentralize trust has triggered the proposal of highly efficient two-round Schnorr-based multi-signature schemes designed to scale up to thousands of signers, namely BCJ by Bagherzandi et al.</description>
+      <description>Manu Drijvers, Kasra Edalatnejad, Bryan Ford, Eike Kiltz, Julian Loss, Gregory Neven, and Igors Stepanovs 40th IEEE Symposium on Security and Privacy
+May 2019 Abstract: A multi-signature scheme allows a group of signers to collaboratively sign a message, creating a single signature that convinces a verifier that every individual signer approved the message. The increased interest in technologies to decentralize trust has triggered the proposal of highly efficient two-round Schnorr-based multi-signature schemes designed to scale up to thousands of signers, namely BCJ by Bagherzandi et al.</description>
     </item>
     
     <item>
@@ -116,7 +125,7 @@ May 2019  Abstract: A multi-signature scheme allows a group of signers to collab
       <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/medchain/</guid>
-      <description>Juan Ram&amp;oacute;n Troncoso-Pastoriza, Jean Louis Raisaro, Linus Gasser, Bryan Ford, and Jean-Pierre Hubaux   AMIA Informatics Summit,
+      <description>Juan Ram&amp;oacute;n Troncoso-Pastoriza, Jean Louis Raisaro, Linus Gasser, Bryan Ford, and Jean-Pierre Hubaux AMIA Informatics Summit,
 March 25&amp;mdash;28, 2019. Abstract: The current trend towards personalized medicine creates an urgent need to share data among different hospitals and health institutions, which endangers the privacy of the data subjects if not done with the appropriate precautions. Conversely, the frequency of data breaches in the healthcare industry has been rising since 2010, severely holding back health institutions from exposing and sharing their data for the fear of being the next target of cyberattacks.</description>
     </item>
     
@@ -126,7 +135,7 @@ March 25&amp;mdash;28, 2019. Abstract: The current trend towards personalized me
       <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/medco-abs/</guid>
-      <description>Jean Louis Raisaro, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Micka&amp;euml;l Misbach, Jo&amp;atilde;o S&amp;aacute; Sousa, Sylvain Pradervand, Edoardo Missiaglia, Olivier Michielin, Bryan Ford, and Jean-Pierre Hubaux   IEEE/ACM Transactions on Computational Biology and Bioinformatics,
+      <description>Jean Louis Raisaro, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Micka&amp;euml;l Misbach, Jo&amp;atilde;o S&amp;aacute; Sousa, Sylvain Pradervand, Edoardo Missiaglia, Olivier Michielin, Bryan Ford, and Jean-Pierre Hubaux IEEE/ACM Transactions on Computational Biology and Bioinformatics,
 July 13, 2018. Abstract: The increasing number of health-data breaches is creating a complicated environment for medical-data sharing and, consequently, for medical progress. Therefore, the development of new solutions that can reassure clinical sites by enabling privacy-preserving sharing of sensitive medical data in compliance with stringent regulations (e.</description>
     </item>
     
@@ -136,7 +145,7 @@ July 13, 2018. Abstract: The increasing number of health-data breaches is creati
       <pubDate>Fri, 18 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/chainiac-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -145,9 +154,7 @@ July 13, 2018. Abstract: The increasing number of health-data breaches is creati
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2017/08/01/skipchain/</guid>
-      <description>A blockchain, or distributed ledger, is a log maintained collectively by a distributed group of participants who agree on and record transactions without relying for security on any single trusted party. While initially popularized by Bitcoin and its derivatives, the blockchain abstraction is not specific to currencies, and there is exploding industry interest in many non-currency uses.
- 
-Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
+      <description>A blockchain, or distributed ledger, is a log maintained collectively by a distributed group of participants who agree on and record transactions without relying for security on any single trusted party. While initially popularized by Bitcoin and its derivatives, the blockchain abstraction is not specific to currencies, and there is exploding industry interest in many non-currency uses. Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
     </item>
     
     <item>
@@ -156,8 +163,8 @@ Many of these diverse use-cases, however, require users to be able to verify whe
       <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/unlynx-abs/</guid>
-      <description>David Froelicher, Patricia Egger, Jo&amp;atilde;o S&amp;aacute; Sousa, Jean Louis Raisaro, Zhicong Huang, Christian Mouchet, Bryan Ford, and Jean-Pierre Hubaux   Privacy Enhancing Technologies Symposium (PETS)
-July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing among multiple parties either depend on a centralized authority that must be trusted and provides only weakest-link security (e.g., the entity that manages private/secret cryptographic keys), or leverage on decentralized but impractical approaches (e.</description>
+      <description>David Froelicher, Patricia Egger, Jo&amp;atilde;o S&amp;aacute; Sousa, Jean Louis Raisaro, Zhicong Huang, Christian Mouchet, Bryan Ford, and Jean-Pierre Hubaux Privacy Enhancing Technologies Symposium (PETS)
+July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing among multiple parties either depend on a centralized authority that must be trusted and provides only weakest-link security (e.g., the entity that manages private/secret cryptographic keys), or leverage on decentralized but impractical approaches (e.g., secure multi-party computation).</description>
     </item>
     
     <item>
@@ -167,7 +174,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       
       <guid>https://bford.info/pub/dec/random-abs/</guid>
       <description>Ewa Syta, Philipp Jovanovic, Eleftherios Kokoris Kogias, Nicolas Gailly, Linus Gasser, Ismail Khoffi, Michael J. Fischer, and Bryan Ford
-  IEEE Security &amp; Privacy (IEEE S&amp;P)
+IEEE Security &amp; Privacy (IEEE S&amp;P)
 May 23, 2017 Abstract: Bias-resistant public randomness is a critical component in many (distributed) protocols. Generating public randomness is hard, however, because active adversaries may behave dishonestly to bias public random choices toward their advantage. Existing solutions do not scale to hundreds or thousands of participants, as is needed in many decentralized systems.</description>
     </item>
     
@@ -177,7 +184,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/lawful-surveillance/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -186,7 +193,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/contact-chaining/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -195,7 +202,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/byzcoin-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -204,7 +211,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       <pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/riffle/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -213,7 +220,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/open-surveillance/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -222,7 +229,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/cosi/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -231,7 +238,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/anonrep-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -240,7 +247,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/crypto-book-codaspy/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -249,8 +256,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/03/10/apple/</guid>
-      <description>This post originally appeared on the Freedom to Tinker blog by the Center for Information Technology Policy at Princeton University. 
-The Apple versus FBI showdown has quickly become a crucial flashpoint of the &amp;ldquo;new Crypto War.&amp;rdquo; On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters.</description>
+      <description>The Apple versus FBI showdown has quickly become a crucial flashpoint of the “new Crypto War.” On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters. The fact that the FBI allowed Apple to disclose the order publicly, on the same day, represents a rare exception to the government&amp;rsquo;s normal penchant for secrecy.</description>
     </item>
     
     <item>
@@ -259,7 +265,7 @@ The Apple versus FBI showdown has quickly become a crucial flashpoint of the &am
       <pubDate>Tue, 20 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2015-10-20-cosi-ct/</guid>
-      <description>Bryan Ford   draft-ford-trans-witness-00  Abstract: This document proposes a backward-compatible extension to CT enabling log servers to obtain compact collective signatures from any number of well-known &#34;witness&#34; servers, which clients can check without gossip to verify that log server records have been widely witnessed. Collective signatures proactively protect clients from man-in-the- middle attackers who may have stolen the private keys of one or more log servers, even if the attacker controls the client&#39;s network access, the client is unwilling to gossip for privacy reasons, or the client does not wish to incur the network bandwidth and/or latency costs of gossip.</description>
+      <description>Bryan Ford draft-ford-trans-witness-00 Abstract: This document proposes a backward-compatible extension to CT enabling log servers to obtain compact collective signatures from any number of well-known &#34;witness&#34; servers, which clients can check without gossip to verify that log server records have been widely witnessed. Collective signatures proactively protect clients from man-in-the- middle attackers who may have stolen the private keys of one or more log servers, even if the attacker controls the client&#39;s network access, the client is unwilling to gossip for privacy reasons, or the client does not wish to incur the network bandwidth and/or latency costs of gossip.</description>
     </item>
     
     <item>
@@ -268,7 +274,7 @@ The Apple versus FBI showdown has quickly become a crucial flashpoint of the &am
       <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/panopticon-cacm/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -277,8 +283,8 @@ The Apple versus FBI showdown has quickly become a crucial flashpoint of the &am
       <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-syta/</guid>
-      <description>Ewa Syta  Ph.D. thesis advised by Bryan Ford
-August 11, 2015  Abstract:  Maintaining privacy on the Internet is increasingly difficult in this ever-connected world. In most cases, our online interactions are a highly personalized experience and require some form of identity verification, most commonly, logging into an account. Unfortunately, people frequently give away a lot of information while obtaining accounts, reuse usernames and passwords across different services, or link their accounts to take advantage of single sign-on to avoid retyping passwords.</description>
+      <description>Ewa Syta Ph.D. thesis advised by Bryan Ford
+August 11, 2015 Abstract: Maintaining privacy on the Internet is increasingly difficult in this ever-connected world. In most cases, our online interactions are a highly personalized experience and require some form of identity verification, most commonly, logging into an account. Unfortunately, people frequently give away a lot of information while obtaining accounts, reuse usernames and passwords across different services, or link their accounts to take advantage of single sign-on to avoid retyping passwords.</description>
     </item>
     
     <item>
@@ -287,8 +293,8 @@ August 11, 2015  Abstract:  Maintaining privacy on the Internet is increasingly 
       <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/private-eyes-abs/</guid>
-      <description>Ewa Syta, Michael J. Fischer, David Wolinsky, Abraham Silberschatz, Gina Gallegos-García, and Bryan Ford   12th International Conference on Security and Cryptography (SECRYPT)
-July 2015.  Abstract: We propose an efficient remote biometric authentication protocol that gives strong protection to the user’s biometric data in case of two common kinds of security breaches: (1) loss or theft of the user’s token (smart card, handheld device, etc.), giving the attacker full access to any secrets embedded within it; (2) total penetration of the server.</description>
+      <description>Ewa Syta, Michael J. Fischer, David Wolinsky, Abraham Silberschatz, Gina Gallegos-García, and Bryan Ford 12th International Conference on Security and Cryptography (SECRYPT)
+July 2015. Abstract: We propose an efficient remote biometric authentication protocol that gives strong protection to the user’s biometric data in case of two common kinds of security breaches: (1) loss or theft of the user’s token (smart card, handheld device, etc.), giving the attacker full access to any secrets embedded within it; (2) total penetration of the server.</description>
     </item>
     
     <item>
@@ -297,7 +303,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/certco/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -306,8 +312,8 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Wed, 24 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-maheswaran/</guid>
-      <description>John Maheswaran  Ph.D. thesis advised by Bryan Ford
-June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflow allow users to log in through a federated identity provider such as Facebook (Log in with Facebook), Google+ or Twitter. This process is called federated authentication. Examples of federated identity providers include social networks as well as other non-social network identity providers such as PayPal.  Federated identity providers have gained widespread popularity among users as a way to manage their online identity across the web.</description>
+      <description>John Maheswaran Ph.D. thesis advised by Bryan Ford
+June 24, 2015 Abstract: Third-party applications such as Quora or StackOverflow allow users to log in through a federated identity provider such as Facebook (Log in with Facebook), Google+ or Twitter. This process is called federated authentication. Examples of federated identity providers include social networks as well as other non-social network identity providers such as PayPal. Federated identity providers have gained widespread popularity among users as a way to manage their online identity across the web.</description>
     </item>
     
     <item>
@@ -316,7 +322,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Tue, 21 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/post/2014-10-22-open-surveillance/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -325,7 +331,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Mon, 18 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/bandits/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -334,7 +340,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/dissent-analysis/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -343,7 +349,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/torcoin/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -352,7 +358,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/onions-to-shallots/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -361,7 +367,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/crypto-book/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -370,7 +376,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/conscript/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -379,7 +385,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/randomness-keygen/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -388,7 +394,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/buddies/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -397,7 +403,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/verdict/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -406,7 +412,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/dissent-in-numbers/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -415,7 +421,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Mon, 09 Jul 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/blogdrop/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -424,7 +430,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/biometric-auth/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -433,7 +439,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/anytrust/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -443,7 +449,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       
       <guid>https://bford.info/pub/net/eyo-usenix-abs/</guid>
       <description>Jacob Strauss, Justin Mazzola Paluska, Chris Lesniewski-Laas, Bryan Ford, Robert Morris, and Frans Kaashoek
- 2011 USENIX Annual Technical Conference June 15-17, 2011, Portland, OR, USA Abstract: Users increasingly store data collections such as digital photographs on multiple personal devices, each of which typically offers a storage management interface oblivious to the contents of the user’s other devices. As a result, collections become disorganized and drift out of sync.</description>
+2011 USENIX Annual Technical Conference June 15-17, 2011, Portland, OR, USA Abstract: Users increasingly store data collections such as digital photographs on multiple personal devices, each of which typically offers a storage management interface oblivious to the contents of the user’s other devices. As a result, collections become disorganized and drift out of sync. This paper presents Eyo, a novel personal storage system that provides device transparency: a user can think in terms of &amp;ldquo;file X&amp;rdquo;, rather than &amp;ldquo;file X on device Y&amp;rdquo;, and will see the same set of files on all personal devices.</description>
     </item>
     
     <item>
@@ -452,7 +458,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Mon, 04 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/dissent-abs/</guid>
-      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award  17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract:  Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
+      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award 17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract: Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
     </item>
     
     <item>
@@ -462,8 +468,8 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       
       <guid>https://bford.info/pub/net/nego-abs/</guid>
       <description>Bryan Ford
-	Janardhan Iyengar
-	Yale University 	Franklin &amp;amp; Marshall College  Published in Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII) October 22-23, 2009, New York City, NY, USA Abstract: Internet evolution often depends on either inserting new protocol layers or upgrading existing layers to new protocols, but both of these evolutionary paths are obstructed by the difficulty and inefficiency of determining which protocols a pair of hosts mutually support and prefer.</description>
+Janardhan Iyengar
+Yale University Franklin &amp;amp; Marshall College Published in Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII) October 22-23, 2009, New York City, NY, USA Abstract: Internet evolution often depends on either inserting new protocol layers or upgrading existing layers to new protocols, but both of these evolutionary paths are obstructed by the difficulty and inefficiency of determining which protocols a pair of hosts mutually support and prefer.</description>
     </item>
     
     <item>
@@ -473,7 +479,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       
       <guid>https://bford.info/pub/net/phd-abs/</guid>
       <description>Bryan Ford
-Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications.  Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
+Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract: The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications. Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
     </item>
     
     <item>
@@ -483,7 +489,7 @@ Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  
       
       <guid>https://bford.info/pub/net/alpaca-abs/</guid>
       <description>Chris Lesniewski-Laas, Bryan Ford, Jacob Strauss, Robert Morris, and M. Frans Kaashoek
-Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract:  Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
+Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract: Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
     </item>
     
     <item>
@@ -493,7 +499,7 @@ Massachusetts Institute of Technology Published in 14th ACM Conference on Comput
       
       <guid>https://bford.info/pub/net/sst-abs/</guid>
       <description>Bryan Ford
-Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract:  Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
+Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract: Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
     </item>
     
     <item>
@@ -502,8 +508,8 @@ Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-3
       <pubDate>Thu, 20 Nov 2003 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/uip-case-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology   Second Workshop on Hot Topics in Networks
-November 20-21, 2003  Abstract: Though appropriate for core Internet infrastructure, the Internet Protocol is unsuited to routing within and between emerging ad-hoc edge networks due to its dependence on hierarchical, administratively assigned addresses. Existing ad-hoc routing protocols address the management problem but do not scale to Internet-wide networks. The promise of ubiquitous network computing cannot be fulfilled until we develop an Unmanaged Internet Protocol (UIP), a scalable routing protocol that manages itself automatically.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology Second Workshop on Hot Topics in Networks
+November 20-21, 2003 Abstract: Though appropriate for core Internet infrastructure, the Internet Protocol is unsuited to routing within and between emerging ad-hoc edge networks due to its dependence on hierarchical, administratively assigned addresses. Existing ad-hoc routing protocols address the management problem but do not scale to Internet-wide networks. The promise of ubiquitous network computing cannot be fulfilled until we develop an Unmanaged Internet Protocol (UIP), a scalable routing protocol that manages itself automatically.</description>
     </item>
     
   </channel>

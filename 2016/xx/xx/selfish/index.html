@@ -41,27 +41,18 @@
 
     
   <h1>Selfish Mining in Bitcoin and ByzCoin</h1>
-  
-
-<p>XXX intro</p>
-
+  <p>XXX intro</p>
 <p>summary of selfish mining</p>
-
 <p>selfish mining as a transparency problem:
 you get to build on a blockchain head you haven&rsquo;t published.</p>
-
 <p>same as transparency problem in Apple FBI case for example;
 that&rsquo;s what CoSi is for.</p>
-
 <p>solution: any keyblock you build on is collectively signed,
 and the next block&rsquo;s hash covers the last block&rsquo;s signature.</p>
-
 <p>if you withhold a block, you can&rsquo;t get a collective signature on it;
 without that collective signature,
 you can&rsquo;t secretly mine a next block on top of it.</p>
-
 <h2 id="selfish-mining">Selfish Mining</h2>
-
 <p>Finally, we consider the now much more well-understood problem of
 <a href="http://hackingdistributed.com/2013/11/04/bitcoin-is-broken/">selfish mining</a>.
 A selfish miner strategically withholds some of its successfully mined blocks
@@ -74,10 +65,9 @@ Greg quickly races to announce and widely distribute his,
 which may reliably overtake Ivan&rsquo;s if Greg is fast and well-connected.
 Alternatively, if Greg manages to mine a <em>second</em> block in private
 before a competing first block appears,
-then Greg is in the enviable position of being able to &ldquo;trump&rdquo;
+then Greg is in the enviable position of being able to “trump”
 and eliminate that competing block once it does appear,
 simply by revealing his longer private blockchain.</p>
-
 <p>While ByzCoin&rsquo;s keyblock mining mechanism alone is still
 vulnerable to selfish mining,
 its microblock commitment process using Byzantine consensus
@@ -90,7 +80,7 @@ a cryptographic hash of a recently-committed microblock
 Whenever the consensus group commits a new microblock,
 all honest members verify that the keyblock pointer in the new microblock
 is consistent with those in all prior microblocks,
-ensuring that any new keyblock is &ldquo;locked in&rdquo;
+ensuring that any new keyblock is “locked in”
 irreversably once the new keyblock is known.
 This leaves only seconds, rather than minutes,
 in which a selfish miner could
@@ -98,17 +88,14 @@ try to announce and distribute a competing keyblock.
 Further, because each keyblock must reference a recent microblock,
 any newly-mined keyblock becomes invalid and useless
 if its owner fails to announce it
-within a few microblock commitment cycles &mdash;
+within a few microblock commitment cycles —
 again, on the order of seconds rather than minutes.</p>
-
 <p>In essence, ByzCoin&rsquo;s microblock commit mechanism
 enforces transparency on the keyblock mining process,
 ensuring that a selfish ByzCoin miner would likely be faced with
 a vanishingly small probability of profiting from
 any keyblock-withholding strategy.</p>
-
 <h2 id="conclusion">Conclusion</h2>
-
 <p>This post of course represents only an informal,
 and no doubt incomplete, analysis
 of the differences in incentives between Bitcoin and ByzCoin,
@@ -117,7 +104,6 @@ It is quite possible that a full, rigorous incentive analysis of ByzCoin
 may reveal new incentive-compatibility issues that its architecture introduces.
 Further, ByzCoin is still an experimental protocol
 under rapid development and evoluation.</p>
-
 <p>Given these caveats, however,
 ByzCoin&rsquo;s architecture at least appears to be much more resilient
 to the known strategic mining attacks against Bitcoin,
@@ -132,10 +118,9 @@ By ensuring that keyblocks and microblocks track each other cryptographically,
 ByzCoin forces miners either to announce new keyblocks quickly
 or else lose them,
 making selfish mining unprofitable.</p>
-
 <p>In short, it does not appear necessary for new cryptocurrencies to
-&ldquo;<a href="http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/">make the block reward permanent and accept monetary inflation
-as inevitable</a>&rdquo;
+“<a href="http://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/">make the block reward permanent and accept monetary inflation
+as inevitable</a>”
 as Narayanan suggests.
 Whether inflationary or deflationary monetary policies are preferable
 is an important and highly debatable question,
@@ -143,13 +128,8 @@ but it need not be constrained by technical weaknesses of Bitcoin.
 With more sophisticated blockchain architectures such as ByzCoin,
 there is plenty of hope that mining incentives can work
 independent of monetary policy.</p>
-
-<!--
----
-
-*I wish to thank ...
-for helpful feedback on early drafts of this post.*
--->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
 
 

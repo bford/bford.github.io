@@ -13,8 +13,8 @@
       <pubDate>Sun, 15 Jun 1997 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/flick-pldi97-abs/</guid>
-      <description>Eric Eide, Kevin Frei, Bryan Ford, Jay Lepreau, and Gary Lindstrom University of Utah, Department of Computer Science   ACM SIGPLAN Conference on Programming Language Design and Implementation
-June 15-18, 1997.  Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance. Systems like Mach provide a set of general abstractions and attempt to handle every situation, which can lead to poor performance for common cases.</description>
+      <description>Eric Eide, Kevin Frei, Bryan Ford, Jay Lepreau, and Gary Lindstrom University of Utah, Department of Computer Science ACM SIGPLAN Conference on Programming Language Design and Implementation
+June 15-18, 1997. Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance. Systems like Mach provide a set of general abstractions and attempt to handle every situation, which can lead to poor performance for common cases.</description>
     </item>
     
     <item>
@@ -23,8 +23,8 @@ June 15-18, 1997.  Abstract: Modern operating systems must support a wide variet
       <pubDate>Wed, 01 Mar 1995 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/presint3-abs/</guid>
-      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science   Technical Report UUCS-95-014
-March 1995.  Abstract: In RPC-based communication, it is useful to distinguish the RPC interface, which is the “network contract” be- tween the client and the server, from the presentation, which is the “programmer’s contract” between the RPC stubs and the code that calls or is called by them.</description>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science Technical Report UUCS-95-014
+March 1995. Abstract: In RPC-based communication, it is useful to distinguish the RPC interface, which is the “network contract” be- tween the client and the server, from the presentation, which is the “programmer’s contract” between the RPC stubs and the code that calls or is called by them. Presentation is usually a fixed function of the RPC interface, but some RPC systems, such as DCE and Concert, support the notion of a flexible presentation or endpoint modifier, allowing controlled modification of the behavior of the stubs on each side without affecting the contract between the client and the server.</description>
     </item>
     
     <item>
@@ -33,8 +33,8 @@ March 1995.  Abstract: In RPC-based communication, it is useful to distinguish t
       <pubDate>Thu, 01 Dec 1994 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/presint2-abs/</guid>
-      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science   Technical Report UUCS-95-018
-December 1994.  Abstract: In RPC-based communication, we term the interface the set of remote procedures and the types of their arguments; the presentation is the way these procedures and types are mapped to the target language environment in a particular client or server, including semantic requirements. For example, presentation includes the local names assigned to RPC stubs, the physical representation of a logical block of data (e.</description>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science Technical Report UUCS-95-018
+December 1994. Abstract: In RPC-based communication, we term the interface the set of remote procedures and the types of their arguments; the presentation is the way these procedures and types are mapped to the target language environment in a particular client or server, including semantic requirements. For example, presentation includes the local names assigned to RPC stubs, the physical representation of a logical block of data (e.</description>
     </item>
     
   </channel>

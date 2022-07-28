@@ -13,7 +13,7 @@
       <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/limix/</guid>
-      <description>Cristina Băsescu and Bryan Ford  Twentieth ACM Workshop on Hot Topics in Networks (HotNets)
+      <description>Cristina Băsescu and Bryan Ford Twentieth ACM Workshop on Hot Topics in Networks (HotNets)
 November 10-12, 2021 Abstract: Failures far away from a user should intuitively be less likely to affect that user. Today&#39;s ecosystem miserably fails this test, however, despite high-availability best practices. Correlated and cascading failures &amp;ndash; triggered by misconfigurations, bugs, and network partitions &amp;ndash; often invalidate assumptions of failure independence. We propose that distributed services need not and should not expose local activities to distant failures or partitions, no matter how severe.</description>
     </item>
     
@@ -23,8 +23,8 @@ November 10-12, 2021 Abstract: Failures far away from a user should intuitively 
       <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2021-barman/</guid>
-      <description>Ludovic Barman  Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
-September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instant messengers, VPNs) use encryption to prevent third parties from learning sensitive information. However, encrypted communications protect the contents but often leak metadata: the amount of data sent and the time it was sent, the way the data should be decrypted, the identity of the sender and the recipient.</description>
+      <description>Ludovic Barman Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
+September 17, 2021 Abstract: Most communication systems (e.g., e-mails, instant messengers, VPNs) use encryption to prevent third parties from learning sensitive information. However, encrypted communications protect the contents but often leak metadata: the amount of data sent and the time it was sent, the way the data should be decrypted, the identity of the sender and the recipient. These metadata are a pervasive threat to privacy: They enable a variety of attacks that range from recovering plaintext contents from encrypted communications to inferring communicating parties.</description>
     </item>
     
     <item>
@@ -33,9 +33,9 @@ September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instan
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/prifi/</guid>
-      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Privacy Enhancing Technologies Symposium
-July 13, 2020  Proceedings on Privacy Enhancing Technologies
-Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
+      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum Privacy Enhancing Technologies Symposium
+July 13, 2020 Proceedings on Privacy Enhancing Technologies
+Volume 2020, Issue 4. Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
     </item>
     
     <item>
@@ -45,8 +45,8 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       
       <guid>https://bford.info/pub/net/qsc/</guid>
       <description>Bryan Ford, Philipp Jovanovic, and Ewa Syta
- March 4, 2020  arXiv preprint
- Abstract: It is commonly held that asynchronous consensus is much more complex, difficult, and costly than partially-synchronous algorithms, especially without using common coins. This paper challenges that conventional wisdom with que sera consensus QSC, an approach to consensus that cleanly decomposes the agreement problem from that of network asynchrony. QSC uses only private coins and reaches consensus in O(1) expected communication rounds.</description>
+March 4, 2020 arXiv preprint
+Abstract: It is commonly held that asynchronous consensus is much more complex, difficult, and costly than partially-synchronous algorithms, especially without using common coins. This paper challenges that conventional wisdom with que sera consensus QSC, an approach to consensus that cleanly decomposes the agreement problem from that of network asynchrony. QSC uses only private coins and reaches consensus in O(1) expected communication rounds.</description>
     </item>
     
     <item>
@@ -55,8 +55,8 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/tlc/</guid>
-      <description>Bryan Ford  July 16, 2019  arXiv preprint
- Abstract: Consensus protocols for asynchronous networks are usually complex and inefficient, leading practical systems to rely on synchronous protocols. This paper attempts to simplify asynchronous consensus by building atop a novel threshold logical clock abstraction, which enables upper layers to operate as if on a synchronous network. This approach yields an asynchronous consensus protocol for fail-stop nodes that may be simpler and more robust than Paxos and its leader-based variants, requiring no common coins and achieving consensus in a constant expected number of rounds.</description>
+      <description>Bryan Ford July 16, 2019 arXiv preprint
+Abstract: Consensus protocols for asynchronous networks are usually complex and inefficient, leading practical systems to rely on synchronous protocols. This paper attempts to simplify asynchronous consensus by building atop a novel threshold logical clock abstraction, which enables upper layers to operate as if on a synchronous network. This approach yields an asynchronous consensus protocol for fail-stop nodes that may be simpler and more robust than Paxos and its leader-based variants, requiring no common coins and achieving consensus in a constant expected number of rounds.</description>
     </item>
     
     <item>
@@ -65,7 +65,7 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/morphit-abs/</guid>
-      <description>Georgia Fragkouli, Katerina Argyraki, and Bryan Ford EPFL Winner of Applied Networking Research Prize (ANRP)  Proceedings on Privacy Enhancing Technologies
+      <description>Georgia Fragkouli, Katerina Argyraki, and Bryan Ford EPFL Winner of Applied Networking Research Prize (ANRP) Proceedings on Privacy Enhancing Technologies
 May 4, 2019. Abstract: Can we improve Internet transparency without worsening user anonymity? For a long time, researchers have been proposing transparency systems, where traffic reports produced at strategic network points help assess network behavior and verify service-level agreements or neutrality compliance. However, such reports necessarily reveal when certain traffic appeared at a certain network point, and this information could, in principle, be used to compromise low-latency anonymity networks like Tor.</description>
     </item>
     
@@ -76,11 +76,11 @@ May 4, 2019. Abstract: Can we improve Internet transparency without worsening us
       
       <guid>https://bford.info/pub/dec/atom-abs/</guid>
       <description>Albert Kwon
-MIT  Henry Corrigan-Gibbs
-Stanford  Srinivas Devadas
-MIT  Bryan Ford
-EPFL    26th ACM Symposium on Operating Systems Principles (SOSP)
-October 30, 2017 Abstract: Atom is an anonymous messaging system that protects against traffic-analysis attacks. Unlike many prior systems, each Atom server touches only a small fraction of the total messages routed through the network. As a result, the system’s capacity scales near-linearly with the number of servers.</description>
+MIT Henry Corrigan-Gibbs
+Stanford Srinivas Devadas
+MIT Bryan Ford
+EPFL 26th ACM Symposium on Operating Systems Principles (SOSP)
+October 30, 2017 Abstract: Atom is an anonymous messaging system that protects against traffic-analysis attacks. Unlike many prior systems, each Atom server touches only a small fraction of the total messages routed through the network. As a result, the system’s capacity scales near-linearly with the number of servers. At the same time, each Atom user benefits from &amp;ldquo;best possible&amp;rdquo; anonymity: a user is anonymous among all honest users of the system, even against an active adversary who monitors the entire network, a portion of the system’s servers, and any number of malicious users.</description>
     </item>
     
     <item>
@@ -90,7 +90,7 @@ October 30, 2017 Abstract: Atom is an anonymous messaging system that protects a
       
       <guid>https://bford.info/pub/net/tlsmeta-abs/</guid>
       <description>Bryan Ford
-EPFL   TLS 1.3 Ready or Not (TRON) Workshop
+EPFL TLS 1.3 Ready or Not (TRON) Workshop
 February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both performance and security, so far offers little protection against traffic analysis or fingerprinting using unencrypted metadata or other side-channels such as transmission lengths and timings. This paper explores metadata protection mechanisms for TLS, including already-included provisions (e.g., record padding), provisions not yet included but potentially feasible in TLS 1.</description>
     </item>
     
@@ -100,7 +100,7 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       <pubDate>Mon, 14 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/taq-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -109,8 +109,8 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/maple-abs/</guid>
-      <description>Andreas Voellmy, Junchang Wang, Y. Richard Yang, Bryan Ford, and Paul Hudak   ACM SIGCOMM 2013
-August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a simple, centralized programming model for managing complex networks. However, challenges in managing low-level details, such as setting up and maintaining correct and efficient forwarding tables on distributed switches, often compromise this conceptual simplicity. In this paper, we present Maple, a system that simplifies SDN programming by (1) allowing a programmer to use a standard programming language to design an arbitrary, centralized algorithm, which we call an algorithmic policy, to decide the behaviors of an entire network, and (2) providing an abstraction that the programmer-defined, centralized policy runs, conceptually, &amp;ldquo;afresh&amp;rdquo; on every packet entering a network, and hence is oblivious to the challenge of translating a high-level policy into sets of rules on distributed individual switches.</description>
+      <description>Andreas Voellmy, Junchang Wang, Y. Richard Yang, Bryan Ford, and Paul Hudak ACM SIGCOMM 2013
+August 12-16, 2013 Abstract: Software-Defined Networking offers the appeal of a simple, centralized programming model for managing complex networks. However, challenges in managing low-level details, such as setting up and maintaining correct and efficient forwarding tables on distributed switches, often compromise this conceptual simplicity. In this paper, we present Maple, a system that simplifies SDN programming by (1) allowing a programmer to use a standard programming language to design an arbitrary, centralized algorithm, which we call an algorithmic policy, to decide the behaviors of an entire network, and (2) providing an abstraction that the programmer-defined, centralized policy runs, conceptually, &amp;ldquo;afresh&amp;rdquo; on every packet entering a network, and hence is oblivious to the challenge of translating a high-level policy into sets of rules on distributed individual switches.</description>
     </item>
     
     <item>
@@ -119,7 +119,7 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/tor-unordered/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -128,7 +128,7 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/non-linear/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -137,7 +137,7 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Fri, 27 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/nsdi12-minion-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -147,7 +147,7 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       
       <guid>https://bford.info/pub/net/eyo-usenix-abs/</guid>
       <description>Jacob Strauss, Justin Mazzola Paluska, Chris Lesniewski-Laas, Bryan Ford, Robert Morris, and Frans Kaashoek
- 2011 USENIX Annual Technical Conference June 15-17, 2011, Portland, OR, USA Abstract: Users increasingly store data collections such as digital photographs on multiple personal devices, each of which typically offers a storage management interface oblivious to the contents of the user’s other devices. As a result, collections become disorganized and drift out of sync.</description>
+2011 USENIX Annual Technical Conference June 15-17, 2011, Portland, OR, USA Abstract: Users increasingly store data collections such as digital photographs on multiple personal devices, each of which typically offers a storage management interface oblivious to the contents of the user’s other devices. As a result, collections become disorganized and drift out of sync. This paper presents Eyo, a novel personal storage system that provides device transparency: a user can think in terms of &amp;ldquo;file X&amp;rdquo;, rather than &amp;ldquo;file X on device Y&amp;rdquo;, and will see the same set of files on all personal devices.</description>
     </item>
     
     <item>
@@ -156,7 +156,7 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Fri, 24 Dec 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/druid-abs/</guid>
-      <description>Joe Touch, Ilia Baldine, Rudra Dutta, Gregory G. Finn, Bryan Ford, Scott Jordan, Dan Massey, Abraham Matta, Christos Papadopoulos, Peter Reiher, George Rouskas   Computer Networks December 24, 2010 Abstract: The Dynamic Recursive Unified Internet Design (DRUID) is a future Internet design that unifies overlay networks with conventional layered network architectures. DRUID is based on the fundamental concept of recursion, enabling a simple and direct network architecture that unifies the data, control, management, and security aspects of the current Internet, leading to a more trustworthy network.</description>
+      <description>Joe Touch, Ilia Baldine, Rudra Dutta, Gregory G. Finn, Bryan Ford, Scott Jordan, Dan Massey, Abraham Matta, Christos Papadopoulos, Peter Reiher, George Rouskas Computer Networks December 24, 2010 Abstract: The Dynamic Recursive Unified Internet Design (DRUID) is a future Internet design that unifies overlay networks with conventional layered network architectures. DRUID is based on the fundamental concept of recursion, enabling a simple and direct network architecture that unifies the data, control, management, and security aspects of the current Internet, leading to a more trustworthy network.</description>
     </item>
     
     <item>
@@ -165,7 +165,7 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Sun, 28 Nov 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/pfldnet10-minion-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -174,7 +174,7 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Mon, 04 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/dissent-abs/</guid>
-      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award  17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract:  Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
+      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award 17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract: Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
     </item>
     
     <item>
@@ -183,8 +183,8 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Mon, 01 Feb 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5684-abs/</guid>
-      <description>Pyda Srisuresh and Bryan Ford   IETF RFC 5684
-February 2010  Abstract: This document identifies two deployment scenarios that have arisen from the unconventional network topologies formed using Network Address Translator (NAT) devices. First, the simplicity of administering networks through the combination of NAT and DHCP has increasingly lead to the deployment of multi-level inter-connected private networks involving overlapping private IP address spaces. Second, the proliferation of private networks in enterprises, hotels and conferences, and the wide-spread use of Virtual Private Networks (VPNs) to access an enterprise intranet from remote locations has increasingly lead to overlapping private IP address space between remote and corporate networks.</description>
+      <description>Pyda Srisuresh and Bryan Ford IETF RFC 5684
+February 2010 Abstract: This document identifies two deployment scenarios that have arisen from the unconventional network topologies formed using Network Address Translator (NAT) devices. First, the simplicity of administering networks through the combination of NAT and DHCP has increasingly lead to the deployment of multi-level inter-connected private networks involving overlapping private IP address spaces. Second, the proliferation of private networks in enterprises, hotels and conferences, and the wide-spread use of Virtual Private Networks (VPNs) to access an enterprise intranet from remote locations has increasingly lead to overlapping private IP address space between remote and corporate networks.</description>
     </item>
     
     <item>
@@ -194,8 +194,8 @@ February 2010  Abstract: This document identifies two deployment scenarios that 
       
       <guid>https://bford.info/pub/net/nego-abs/</guid>
       <description>Bryan Ford
-	Janardhan Iyengar
-	Yale University 	Franklin &amp;amp; Marshall College  Published in Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII) October 22-23, 2009, New York City, NY, USA Abstract: Internet evolution often depends on either inserting new protocol layers or upgrading existing layers to new protocols, but both of these evolutionary paths are obstructed by the difficulty and inefficiency of determining which protocols a pair of hosts mutually support and prefer.</description>
+Janardhan Iyengar
+Yale University Franklin &amp;amp; Marshall College Published in Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII) October 22-23, 2009, New York City, NY, USA Abstract: Internet evolution often depends on either inserting new protocol layers or upgrading existing layers to new protocols, but both of these evolutionary paths are obstructed by the difficulty and inefficiency of determining which protocols a pair of hosts mutually support and prefer.</description>
     </item>
     
     <item>
@@ -204,8 +204,8 @@ February 2010  Abstract: This document identifies two deployment scenarios that 
       <pubDate>Wed, 01 Apr 2009 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5508-abs/</guid>
-      <description>Pyda Srisuresh, Bryan Ford, Senthil Sivakumar, and Saikat Guha   IETF RFC 5508
-April 2009  Abstract: This document specifies the behavioral properties required of the Network Address Translator (NAT) devices in conjunction with the Internet Control Message Protocol (ICMP). The objective of this memo is to make NAT devices more predictable and compatible with diverse application protocols that traverse the devices. Companion documents provide behavioral recommendations specific to TCP, UDP, and other protocols.</description>
+      <description>Pyda Srisuresh, Bryan Ford, Senthil Sivakumar, and Saikat Guha IETF RFC 5508
+April 2009 Abstract: This document specifies the behavioral properties required of the Network Address Translator (NAT) devices in conjunction with the Internet Control Message Protocol (ICMP). The objective of this memo is to make NAT devices more predictable and compatible with diverse application protocols that traverse the devices. Companion documents provide behavioral recommendations specific to TCP, UDP, and other protocols.</description>
     </item>
     
     <item>
@@ -215,8 +215,8 @@ April 2009  Abstract: This document specifies the behavioral properties required
       
       <guid>https://bford.info/pub/net/logjam-abs/</guid>
       <description>Bryan Ford
-	Janardhan Iyengar
-	Massachusetts Institute of Technology 	Franklin &amp;amp; Marshall College  Published in Seventh ACM Workshop on Hot Topics in Networks (HotNets-VII) October 6-7, 2008, Calgary, Alberta, Canada Abstract: Current Internet transports conflate transport semantics with endpoint addressing and flow regulation, creating roadblocks to Internet evolution that we propose to address with a new layering model. Factoring endpoint addressing (port numbers) into a separate Endpoint Layer permits incremental rollout of new or improved transports at OS or application level, enables transport-oblivious firewall/NAT traversal, improves transport negotiation efficiency, and simplifies endpoint address space administration.</description>
+Janardhan Iyengar
+Massachusetts Institute of Technology Franklin &amp;amp; Marshall College Published in Seventh ACM Workshop on Hot Topics in Networks (HotNets-VII) October 6-7, 2008, Calgary, Alberta, Canada Abstract: Current Internet transports conflate transport semantics with endpoint addressing and flow regulation, creating roadblocks to Internet evolution that we propose to address with a new layering model. Factoring endpoint addressing (port numbers) into a separate Endpoint Layer permits incremental rollout of new or improved transports at OS or application level, enables transport-oblivious firewall/NAT traversal, improves transport negotiation efficiency, and simplifies endpoint address space administration.</description>
     </item>
     
     <item>
@@ -225,8 +225,8 @@ April 2009  Abstract: This document specifies the behavioral properties required
       <pubDate>Wed, 01 Oct 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5382-abs/</guid>
-      <description>   Saikat Guha, Kaushik Biswas, Bryan Ford, Senthil Sivakumar, and Pyda Srisuresh   IETF RFC 5382
-October 2008  Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Final RFC: Plain text  Early drafts:   IETF working group draft versions: 06 05 04 03 02 01 00  Individual draft versions: 02 01 00  </description>
+      <description> Saikat Guha, Kaushik Biswas, Bryan Ford, Senthil Sivakumar, and Pyda Srisuresh IETF RFC 5382
+October 2008 Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Final RFC: Plain text Early drafts: IETF working group draft versions: 06 05 04 03 02 01 00 Individual draft versions: 02 01 00 </description>
     </item>
     
     <item>
@@ -236,7 +236,7 @@ October 2008  Abstract: This document defines a set of requirements for NATs tha
       
       <guid>https://bford.info/pub/net/phd-abs/</guid>
       <description>Bryan Ford
-Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications.  Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
+Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract: The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications. Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
     </item>
     
     <item>
@@ -245,8 +245,8 @@ Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  
       <pubDate>Sat, 01 Mar 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5128-abs/</guid>
-      <description>Pyda Srisuresh, Bryan Ford, and Dan Kegel   IETF RFC 5128
-March 2008  Abstract: This memo documents the various methods known to be in use by applications to establish direct communication in the presence of Network Address Translators (NATs) at the current time. Although this memo is intended to be mainly descriptive, the Security Considerations section makes some purely advisory recommendations about how to deal with security vulnerabilities the applications could inadvertently create when using the methods described.</description>
+      <description>Pyda Srisuresh, Bryan Ford, and Dan Kegel IETF RFC 5128
+March 2008 Abstract: This memo documents the various methods known to be in use by applications to establish direct communication in the presence of Network Address Translators (NATs) at the current time. Although this memo is intended to be mainly descriptive, the Security Considerations section makes some purely advisory recommendations about how to deal with security vulnerabilities the applications could inadvertently create when using the methods described.</description>
     </item>
     
     <item>
@@ -255,7 +255,7 @@ March 2008  Abstract: This memo documents the various methods known to be in use
       <pubDate>Sat, 01 Dec 2007 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/transport-ietf-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -265,7 +265,7 @@ March 2008  Abstract: This memo documents the various methods known to be in use
       
       <guid>https://bford.info/pub/net/alpaca-abs/</guid>
       <description>Chris Lesniewski-Laas, Bryan Ford, Jacob Strauss, Robert Morris, and M. Frans Kaashoek
-Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract:  Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
+Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract: Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
     </item>
     
     <item>
@@ -275,7 +275,7 @@ Massachusetts Institute of Technology Published in 14th ACM Conference on Comput
       
       <guid>https://bford.info/pub/net/sst-abs/</guid>
       <description>Bryan Ford
-Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract:  Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
+Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract: Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
     </item>
     
     <item>
@@ -285,8 +285,8 @@ Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-3
       
       <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
       <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
- Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
-November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
+November 6-8, 2006 Abstract: The Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
     </item>
     
     <item>
@@ -295,8 +295,8 @@ November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provide
       <pubDate>Mon, 27 Feb 2006 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/uia-iptps-abs/</guid>
-      <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, and Robert Morris Massachusetts Institute of Technology   5th International Workshop on Peer-to-Peer Systems
-February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a peer-to-peer connectivity architecture that provides users a simple, intuitive, and secure way to share information and services between personal devices by assigning ad hoc names that act like &amp;ldquo;virtual cables.</description>
+      <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, and Robert Morris Massachusetts Institute of Technology 5th International Workshop on Peer-to-Peer Systems
+February 27-28, 2006 Abstract The User Information Architecture, or UIA, is a peer-to-peer connectivity architecture that provides users a simple, intuitive, and secure way to share information and services between personal devices by assigning ad hoc names that act like &amp;ldquo;virtual cables.&amp;rdquo; Users assign names by &amp;ldquo;introducing&amp;rdquo; devices to each other on a common network.</description>
     </item>
     
     <item>
@@ -305,7 +305,7 @@ February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a p
       <pubDate>Sun, 10 Apr 2005 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/p2pnat-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com   Presented at the USENIX Annual Technical Conference, April 10-15, 2005. Abstract:  Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com Presented at the USENIX Annual Technical Conference, April 10-15, 2005. Abstract: Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer.</description>
     </item>
     
     <item>
@@ -314,7 +314,7 @@ February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a p
       <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2005/02/01/behave-app/</guid>
-      <description>Bryan Ford, Pyda Srisuresh, and Dan Kegel   draft-ford-behave-app  Abstract: This document defines guidelines by which application designers can create applications that communicate reliably and efficiently in the presence of Network Address Translators (NATs), particularly when the application has a need for &#34;peer-to-peer&#34; (P2P) type of communication. The guidelines allow a P2P application to work reliably across a majority of existing NATs, as well as all future NATs that conform to the behave requirements specified in companion documents.</description>
+      <description>Bryan Ford, Pyda Srisuresh, and Dan Kegel draft-ford-behave-app Abstract: This document defines guidelines by which application designers can create applications that communicate reliably and efficiently in the presence of Network Address Translators (NATs), particularly when the application has a need for &#34;peer-to-peer&#34; (P2P) type of communication. The guidelines allow a P2P application to work reliably across a majority of existing NATs, as well as all future NATs that conform to the behave requirements specified in companion documents.</description>
     </item>
     
     <item>
@@ -323,8 +323,8 @@ February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a p
       <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2005/02/01/behave-gen/</guid>
-      <description>Bryan Ford and Pyda Srisuresh   draft-ford-behave-gen
- Abstract: This document discusses the operating principles of Network Address Translator (NAT) devices and the behavioral properties required to make NAT more predictable and compatible with diverse application protocols. First, this document presents an architectural model for NAT devices and defines important terms used in conjunction with NAT operation. The architectural model sets the stage for a set of concrete recommendations for NAT implementers.</description>
+      <description>Bryan Ford and Pyda Srisuresh draft-ford-behave-gen
+Abstract: This document discusses the operating principles of Network Address Translator (NAT) devices and the behavioral properties required to make NAT more predictable and compatible with diverse application protocols. First, this document presents an architectural model for NAT devices and defines important terms used in conjunction with NAT operation. The architectural model sets the stage for a set of concrete recommendations for NAT implementers.</description>
     </item>
     
     <item>
@@ -333,8 +333,8 @@ February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a p
       <pubDate>Thu, 20 Nov 2003 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/uip-case-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology   Second Workshop on Hot Topics in Networks
-November 20-21, 2003  Abstract: Though appropriate for core Internet infrastructure, the Internet Protocol is unsuited to routing within and between emerging ad-hoc edge networks due to its dependence on hierarchical, administratively assigned addresses. Existing ad-hoc routing protocols address the management problem but do not scale to Internet-wide networks. The promise of ubiquitous network computing cannot be fulfilled until we develop an Unmanaged Internet Protocol (UIP), a scalable routing protocol that manages itself automatically.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology Second Workshop on Hot Topics in Networks
+November 20-21, 2003 Abstract: Though appropriate for core Internet infrastructure, the Internet Protocol is unsuited to routing within and between emerging ad-hoc edge networks due to its dependence on hierarchical, administratively assigned addresses. Existing ad-hoc routing protocols address the management problem but do not scale to Internet-wide networks. The promise of ubiquitous network computing cannot be fulfilled until we develop an Unmanaged Internet Protocol (UIP), a scalable routing protocol that manages itself automatically.</description>
     </item>
     
     <item>
@@ -343,8 +343,8 @@ November 20-21, 2003  Abstract: Though appropriate for core Internet infrastruct
       <pubDate>Fri, 31 Oct 2003 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/uip-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology   Technical Report MIT-LCS-TR-926
-October 31, 2003  Abstract: Unmanaged Internet Protocol (UIP) is a fully self-organizing network-layer protocol that implements scalable identity-based routing. In contrast with address-based routing protocols, which depend for scalability on centralized hierarchical address management, UIP nodes use a flat namespace of cryptographic node identifiers. Node identities can be created locally on demand and remain stable across network changes.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology Technical Report MIT-LCS-TR-926
+October 31, 2003 Abstract: Unmanaged Internet Protocol (UIP) is a fully self-organizing network-layer protocol that implements scalable identity-based routing. In contrast with address-based routing protocols, which depend for scalability on centralized hierarchical address management, UIP nodes use a flat namespace of cryptographic node identifiers. Node identities can be created locally on demand and remain stable across network changes. Unlike location-independent name services, the UIP routing protocol can stitch together many conventional address-based networks with disjoint or discontinuous address domains, providing connectivity between any pair of participating nodes even when no underlying network provides direct connectivity.</description>
     </item>
     
   </channel>

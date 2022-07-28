@@ -23,7 +23,7 @@ I generally like the direction this proposal is going, with one significant rese
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/gpufs-cacm/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -32,8 +32,8 @@ I generally like the direction this proposal is going, with one significant rese
       <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/maple-abs/</guid>
-      <description>Andreas Voellmy, Junchang Wang, Y. Richard Yang, Bryan Ford, and Paul Hudak   ACM SIGCOMM 2013
-August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a simple, centralized programming model for managing complex networks. However, challenges in managing low-level details, such as setting up and maintaining correct and efficient forwarding tables on distributed switches, often compromise this conceptual simplicity. In this paper, we present Maple, a system that simplifies SDN programming by (1) allowing a programmer to use a standard programming language to design an arbitrary, centralized algorithm, which we call an algorithmic policy, to decide the behaviors of an entire network, and (2) providing an abstraction that the programmer-defined, centralized policy runs, conceptually, &amp;ldquo;afresh&amp;rdquo; on every packet entering a network, and hence is oblivious to the challenge of translating a high-level policy into sets of rules on distributed individual switches.</description>
+      <description>Andreas Voellmy, Junchang Wang, Y. Richard Yang, Bryan Ford, and Paul Hudak ACM SIGCOMM 2013
+August 12-16, 2013 Abstract: Software-Defined Networking offers the appeal of a simple, centralized programming model for managing complex networks. However, challenges in managing low-level details, such as setting up and maintaining correct and efficient forwarding tables on distributed switches, often compromise this conceptual simplicity. In this paper, we present Maple, a system that simplifies SDN programming by (1) allowing a programmer to use a standard programming language to design an arbitrary, centralized algorithm, which we call an algorithmic policy, to decide the behaviors of an entire network, and (2) providing an abstraction that the programmer-defined, centralized policy runs, conceptually, &amp;ldquo;afresh&amp;rdquo; on every packet entering a network, and hence is oblivious to the challenge of translating a high-level policy into sets of rules on distributed individual switches.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Mon, 29 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/lazy-tree-mapping/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Wed, 20 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/gpufs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -60,8 +60,8 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Thu, 20 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2012-aviram/</guid>
-      <description>Amittai F. Aviram  Ph.D. thesis advised by Bryan Ford
-September 20, 2012  Abstract: Researchers widely agree that determinism in parallel programs is desirable. Although experimental parallel programming languages have long featured deterministic semantics, in mainstream parallel environments, developers still build on non-deterministic constructs such as mutexes, leading to time- or schedule-dependent heisenbugs. To make deterministic programming more accessible, we introduce DOMP, a deterministic extension to OpenMP, preserving the familiarity of traditional languages such as C and Fortran, and maintaining source-compatibility with much of the existing OpenMP standard.</description>
+      <description>Amittai F. Aviram Ph.D. thesis advised by Bryan Ford
+September 20, 2012 Abstract: Researchers widely agree that determinism in parallel programs is desirable. Although experimental parallel programming languages have long featured deterministic semantics, in mainstream parallel environments, developers still build on non-deterministic constructs such as mutexes, leading to time- or schedule-dependent heisenbugs. To make deterministic programming more accessible, we introduce DOMP, a deterministic extension to OpenMP, preserving the familiarity of traditional languages such as C and Fortran, and maintaining source-compatibility with much of the existing OpenMP standard.</description>
     </item>
     
     <item>
@@ -71,8 +71,8 @@ September 20, 2012  Abstract: Researchers widely agree that determinism in paral
       
       <guid>https://bford.info/pub/os/scaling-sdn-abs/</guid>
       <description>Andreas Voellmy, Bryan Ford, Paul Hudak, and Y. Richard Yang Yale University Department of Computer Science
-  Technical Report YALEU/DCS/TR-1468
-July 2012  Abstract: Software defined networks (SDN) introduce centralized controllers to drastically increase network programmability. The simplicity of a logical centralized controller, however, can come at the cost of controller programming complexity and scalability. In this paper, we present McNettle, an extensible SDN controller system whose control event processing throughput scales with the number of system CPU cores and which supports control algorithms requiring globally visible state changes occurring at flow arrival rates.</description>
+Technical Report YALEU/DCS/TR-1468
+July 2012 Abstract: Software defined networks (SDN) introduce centralized controllers to drastically increase network programmability. The simplicity of a logical centralized controller, however, can come at the cost of controller programming complexity and scalability. In this paper, we present McNettle, an extensible SDN controller system whose control event processing throughput scales with the number of system CPU cores and which supports control algorithms requiring globally visible state changes occurring at flow arrival rates.</description>
     </item>
     
     <item>
@@ -81,7 +81,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Thu, 26 May 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-openmp/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -90,7 +90,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/workspace-consistency/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -100,7 +100,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       
       <guid>https://bford.info/pub/net/alpaca-abs/</guid>
       <description>Chris Lesniewski-Laas, Bryan Ford, Jacob Strauss, Robert Morris, and M. Frans Kaashoek
-Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract:  Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
+Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract: Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
     </item>
     
     <item>
@@ -110,7 +110,7 @@ Massachusetts Institute of Technology Published in 14th ACM Conference on Comput
       
       <guid>https://bford.info/pub/lang/peg/</guid>
       <description>Bryan Ford
-Massachusetts Institute of Technology  Symposium on Principles of Programming Languages, January 14-16, 2004, Venice, Italy   Abstract For decades we have been using Chomsky&#39;s generative system of grammars, particularly context-free grammars (CFGs) and regular expressions (REs), to express the syntax of programming languages and protocols. The power of generative grammars to express ambiguity is crucial to their original purpose of modelling natural languages, but this very power makes it unnecessarily difficult both to express and to parse machine-oriented languages using CFGs.</description>
+Massachusetts Institute of Technology Symposium on Principles of Programming Languages, January 14-16, 2004, Venice, Italy Abstract For decades we have been using Chomsky&#39;s generative system of grammars, particularly context-free grammars (CFGs) and regular expressions (REs), to express the syntax of programming languages and protocols. The power of generative grammars to express ambiguity is crucial to their original purpose of modelling natural languages, but this very power makes it unnecessarily difficult both to express and to parse machine-oriented languages using CFGs.</description>
     </item>
     
     <item>
@@ -120,7 +120,7 @@ Massachusetts Institute of Technology  Symposium on Principles of Programming La
       
       <guid>https://bford.info/pub/lang/packrat-icfp02/</guid>
       <description>Bryan Ford
-Massachusetts Institute of Technology  International Conference on Functional Programming, October 4-6, 2002, Pittsburgh   Abstract Packrat parsing is a novel technique for implementing parsers in a lazy functional programming language. A packrat parser provides the power and flexibility of top-down parsing with backtracking and unlimited lookahead, but nevertheless guarantees linear parse time. Any language defined by an LL(k) or LR(k) grammar can be recognized by a packrat parser, in addition to many languages that conventional linear-time algorithms do not support.</description>
+Massachusetts Institute of Technology International Conference on Functional Programming, October 4-6, 2002, Pittsburgh Abstract Packrat parsing is a novel technique for implementing parsers in a lazy functional programming language. A packrat parser provides the power and flexibility of top-down parsing with backtracking and unlimited lookahead, but nevertheless guarantees linear parse time. Any language defined by an LL(k) or LR(k) grammar can be recognized by a packrat parser, in addition to many languages that conventional linear-time algorithms do not support.</description>
     </item>
     
     <item>
@@ -131,7 +131,7 @@ Massachusetts Institute of Technology  International Conference on Functional Pr
       <guid>https://bford.info/pub/lang/thesis/</guid>
       <description>Bryan Ford
 Master&#39;s Thesis
-Massachusetts Institute of Technology   Abstract  Packrat parsing is a novel and practical method for implementing linear-time parsers for grammars defined in Top-Down Parsing Language (TDPL). While TDPL was originally created as a formal model for top-down parsers with backtracking capability, this thesis extends TDPL into a powerful general-purpose notation for describing language syntax, providing a compelling alternative to traditional context-free grammars (CFGs).</description>
+Massachusetts Institute of Technology Abstract Packrat parsing is a novel and practical method for implementing linear-time parsers for grammars defined in Top-Down Parsing Language (TDPL). While TDPL was originally created as a formal model for top-down parsers with backtracking capability, this thesis extends TDPL into a powerful general-purpose notation for describing language syntax, providing a compelling alternative to traditional context-free grammars (CFGs). Common syntactic idioms that cannot be represented concisely in a CFG are easily expressed in TDPL, such as longest-match disambiguation and &#34;</description>
     </item>
     
     <item>
@@ -140,8 +140,8 @@ Massachusetts Institute of Technology   Abstract  Packrat parsing is a novel and
       <pubDate>Sun, 15 Jun 1997 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/flick-pldi97-abs/</guid>
-      <description>Eric Eide, Kevin Frei, Bryan Ford, Jay Lepreau, and Gary Lindstrom University of Utah, Department of Computer Science   ACM SIGPLAN Conference on Programming Language Design and Implementation
-June 15-18, 1997.  Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance. Systems like Mach provide a set of general abstractions and attempt to handle every situation, which can lead to poor performance for common cases.</description>
+      <description>Eric Eide, Kevin Frei, Bryan Ford, Jay Lepreau, and Gary Lindstrom University of Utah, Department of Computer Science ACM SIGPLAN Conference on Programming Language Design and Implementation
+June 15-18, 1997. Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance. Systems like Mach provide a set of general abstractions and attempt to handle every situation, which can lead to poor performance for common cases.</description>
     </item>
     
     <item>
@@ -150,8 +150,8 @@ June 15-18, 1997.  Abstract: Modern operating systems must support a wide variet
       <pubDate>Wed, 01 Mar 1995 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/presint3-abs/</guid>
-      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science   Technical Report UUCS-95-014
-March 1995.  Abstract: In RPC-based communication, it is useful to distinguish the RPC interface, which is the “network contract” be- tween the client and the server, from the presentation, which is the “programmer’s contract” between the RPC stubs and the code that calls or is called by them.</description>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science Technical Report UUCS-95-014
+March 1995. Abstract: In RPC-based communication, it is useful to distinguish the RPC interface, which is the “network contract” be- tween the client and the server, from the presentation, which is the “programmer’s contract” between the RPC stubs and the code that calls or is called by them. Presentation is usually a fixed function of the RPC interface, but some RPC systems, such as DCE and Concert, support the notion of a flexible presentation or endpoint modifier, allowing controlled modification of the behavior of the stubs on each side without affecting the contract between the client and the server.</description>
     </item>
     
     <item>
@@ -160,8 +160,8 @@ March 1995.  Abstract: In RPC-based communication, it is useful to distinguish t
       <pubDate>Thu, 01 Dec 1994 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/presint2-abs/</guid>
-      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science   Technical Report UUCS-95-018
-December 1994.  Abstract: In RPC-based communication, we term the interface the set of remote procedures and the types of their arguments; the presentation is the way these procedures and types are mapped to the target language environment in a particular client or server, including semantic requirements. For example, presentation includes the local names assigned to RPC stubs, the physical representation of a logical block of data (e.</description>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science Technical Report UUCS-95-018
+December 1994. Abstract: In RPC-based communication, we term the interface the set of remote procedures and the types of their arguments; the presentation is the way these procedures and types are mapped to the target language environment in a particular client or server, including semantic requirements. For example, presentation includes the local names assigned to RPC stubs, the physical representation of a logical block of data (e.</description>
     </item>
     
     <item>
@@ -170,8 +170,8 @@ December 1994.  Abstract: In RPC-based communication, we term the interface the 
       <pubDate>Thu, 09 Dec 1993 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/passive-abs/</guid>
-      <description>Bryan Ford and Jay Lepreau  Department of Computer Science, University of Utah  International Workshop on Object Orientation in Operating Systems (IWOOOS)
-December 9-10, 1993  Abstract: We believe that a passive object model, in which the active entities or threads migrate between passive objects, is more appropriate than an active object model, as the basic structure of a microkernel-based operating system. A passive object model provides enhanced performance and simplicity because it is more closely matched to the basic nature of microprocessors and the requirements of applications.</description>
+      <description>Bryan Ford and Jay Lepreau Department of Computer Science, University of Utah International Workshop on Object Orientation in Operating Systems (IWOOOS)
+December 9-10, 1993 Abstract: We believe that a passive object model, in which the active entities or threads migrate between passive objects, is more appropriate than an active object model, as the basic structure of a microkernel-based operating system. A passive object model provides enhanced performance and simplicity because it is more closely matched to the basic nature of microprocessors and the requirements of applications.</description>
     </item>
     
     <item>
@@ -180,9 +180,9 @@ December 9-10, 1993  Abstract: We believe that a passive object model, in which 
       <pubDate>Wed, 01 Apr 1992 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/call-lists/</guid>
-      <description> &amp;ldquo;CallLists is a refreshing way to keep your interactive programs up to date.&amp;rdquo;  Bryan Ford
- AmigaWorld Tech Journal
-Volume 2 Number 2, April 1992   Article: PDF  </description>
+      <description> &amp;ldquo;CallLists is a refreshing way to keep your interactive programs up to date.&amp;rdquo; Bryan Ford
+AmigaWorld Tech Journal
+Volume 2 Number 2, April 1992 Article: PDF </description>
     </item>
     
   </channel>

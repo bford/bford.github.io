@@ -13,7 +13,7 @@
       <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/certikos-apsys11/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -22,8 +22,8 @@
       <pubDate>Thu, 15 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/certified-kernels-abs/</guid>
-      <description>Zhong Shao and Bryan Ford Department of Computer Science, Yale University   Yale University Technical Report TR1436
-July 15, 2010  Abstract: Operating System (OS) kernels form the bedrock of all system software&amp;mdash;they can have the greatest impact on the resilience, extensibility, and security of today’s computing hosts. A single kernel bug can easily wreck the entire system’s integrity and protection. We propose to apply new advances in certified software to the development of a novel OS kernel.</description>
+      <description>Zhong Shao and Bryan Ford Department of Computer Science, Yale University Yale University Technical Report TR1436
+July 15, 2010 Abstract: Operating System (OS) kernels form the bedrock of all system software&amp;mdash;they can have the greatest impact on the resilience, extensibility, and security of today’s computing hosts. A single kernel bug can easily wreck the entire system’s integrity and protection. We propose to apply new advances in certified software to the development of a novel OS kernel.</description>
     </item>
     
   </channel>

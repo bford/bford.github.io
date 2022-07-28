@@ -6,16 +6,24 @@
     <description>Recent content in Voting on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Voting/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Voting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TRIP: Trustless Coercion-Resistant In-Person Voter Registration</title>
+      <link>https://bford.info/pub/sec/trip/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/trip/</guid>
+      <description>Louis-Henri Merino, Simone Colombo, Jeff Allen, Vero Estrada-Galiñanes, and Bryan Ford arXiv preprint Abstract: Most existing remote electronic voting systems are vulnerable to voter coercion and vote buying. While coercion-resistant voting systems address this challenge, current schemes assume that the voter has access to an untappable, incorruptible device during voter registration. We present TRIP, an in-person voter registration scheme enabling voters to create verifiable and indistinguishable real and fake credentials using an untrusted kiosk inside a privacy booth at a supervised location, e.</description>
+    </item>
+    
     <item>
       <title>Technologizing Democracy or Democratizing Technology? A Layered-Architecture Perspective on Potentials and Challenges</title>
       <link>https://bford.info/pub/soc/dt2-chapter-abs/</link>
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/dt2-chapter-abs/</guid>
-      <description>Bryan Ford
-Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press 
-Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way?</description>
+      <description>Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press
+Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way? We explore how technology has failed to support robust democracy – but could do better – in the context of four basic social processes: collective deliberation and choice, information distribution and filtering, economic commerce, and identity.</description>
     </item>
     
     <item>
@@ -24,8 +32,8 @@ Abstract While technology is often claimed to be “democratizing”, the techno
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/personhood/</guid>
-      <description>Bryan Ford  November 2020 (first draft)  arXiv preprint
- Abstract: Digital identity seems at first like a prerequisite for digital democracy: how can we ensure &amp;ldquo;one person, one vote&amp;rdquo; online without identifying voters? But the full gamut of digital identity solutions &amp;ndash; e.g., online ID checking, biometrics, self-sovereign identity, and social/trust networks &amp;ndash; all present severe flaws in security, privacy, and transparency, leaving users vulnerable to exclusion, identity loss or theft, and coercion.</description>
+      <description>Bryan Ford November 2020 (first draft) arXiv preprint
+Abstract: Digital identity seems at first like a prerequisite for digital democracy: how can we ensure &amp;ldquo;one person, one vote&amp;rdquo; online without identifying voters? But the full gamut of digital identity solutions &amp;ndash; e.g., online ID checking, biometrics, self-sovereign identity, and social/trust networks &amp;ndash; all present severe flaws in security, privacy, and transparency, leaving users vulnerable to exclusion, identity loss or theft, and coercion.</description>
     </item>
     
     <item>
@@ -44,8 +52,8 @@ It is important to understand in this light the context of the Swiss e-voting pr
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/liquid/</guid>
-      <description>Bryan Ford  November 2018 (first draft)  arXiv preprint
- Abstract: The idea of liquid democracy responds to a widely-felt desire to make democracy more &#34;fluid&#34; and continuously participatory. Its central premise is to enable users to employ networked technologies to control and delegate voting power, to approximate the ideal of direct democracy in a scalable fashion that accounts for time and attention limits. There are many potential definitions, meanings, and ways to implement liquid democracy, however, and many distinct purposes to which it might be deployed.</description>
+      <description>Bryan Ford November 2018 (first draft) arXiv preprint
+Abstract: The idea of liquid democracy responds to a widely-felt desire to make democracy more &#34;fluid&#34; and continuously participatory. Its central premise is to enable users to employ networked technologies to control and delegate voting power, to approximate the ideal of direct democracy in a scalable fashion that accounts for time and attention limits. There are many potential definitions, meanings, and ways to implement liquid democracy, however, and many distinct purposes to which it might be deployed.</description>
     </item>
     
     <item>
@@ -72,7 +80,7 @@ It is important to understand in this light the context of the Swiss e-voting pr
       <pubDate>Mon, 16 Aug 2004 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2004/08/16/wiki-democracy/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -81,7 +89,7 @@ It is important to understand in this light the context of the Swiss e-voting pr
       <pubDate>Mon, 21 Oct 2002 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2002/10/21/deleg-voting/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -90,7 +98,7 @@ It is important to understand in this light the context of the Swiss e-voting pr
       <pubDate>Wed, 15 May 2002 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2002/05/15/deleg/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
   </channel>

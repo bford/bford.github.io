@@ -14,7 +14,7 @@
       
       <guid>https://bford.info/pub/lang/peg/</guid>
       <description>Bryan Ford
-Massachusetts Institute of Technology  Symposium on Principles of Programming Languages, January 14-16, 2004, Venice, Italy   Abstract For decades we have been using Chomsky&#39;s generative system of grammars, particularly context-free grammars (CFGs) and regular expressions (REs), to express the syntax of programming languages and protocols. The power of generative grammars to express ambiguity is crucial to their original purpose of modelling natural languages, but this very power makes it unnecessarily difficult both to express and to parse machine-oriented languages using CFGs.</description>
+Massachusetts Institute of Technology Symposium on Principles of Programming Languages, January 14-16, 2004, Venice, Italy Abstract For decades we have been using Chomsky&#39;s generative system of grammars, particularly context-free grammars (CFGs) and regular expressions (REs), to express the syntax of programming languages and protocols. The power of generative grammars to express ambiguity is crucial to their original purpose of modelling natural languages, but this very power makes it unnecessarily difficult both to express and to parse machine-oriented languages using CFGs.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@ Massachusetts Institute of Technology  Symposium on Principles of Programming La
       
       <guid>https://bford.info/pub/lang/packrat-icfp02/</guid>
       <description>Bryan Ford
-Massachusetts Institute of Technology  International Conference on Functional Programming, October 4-6, 2002, Pittsburgh   Abstract Packrat parsing is a novel technique for implementing parsers in a lazy functional programming language. A packrat parser provides the power and flexibility of top-down parsing with backtracking and unlimited lookahead, but nevertheless guarantees linear parse time. Any language defined by an LL(k) or LR(k) grammar can be recognized by a packrat parser, in addition to many languages that conventional linear-time algorithms do not support.</description>
+Massachusetts Institute of Technology International Conference on Functional Programming, October 4-6, 2002, Pittsburgh Abstract Packrat parsing is a novel technique for implementing parsers in a lazy functional programming language. A packrat parser provides the power and flexibility of top-down parsing with backtracking and unlimited lookahead, but nevertheless guarantees linear parse time. Any language defined by an LL(k) or LR(k) grammar can be recognized by a packrat parser, in addition to many languages that conventional linear-time algorithms do not support.</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@ Massachusetts Institute of Technology  International Conference on Functional Pr
       <guid>https://bford.info/pub/lang/thesis/</guid>
       <description>Bryan Ford
 Master&#39;s Thesis
-Massachusetts Institute of Technology   Abstract  Packrat parsing is a novel and practical method for implementing linear-time parsers for grammars defined in Top-Down Parsing Language (TDPL). While TDPL was originally created as a formal model for top-down parsers with backtracking capability, this thesis extends TDPL into a powerful general-purpose notation for describing language syntax, providing a compelling alternative to traditional context-free grammars (CFGs).</description>
+Massachusetts Institute of Technology Abstract Packrat parsing is a novel and practical method for implementing linear-time parsers for grammars defined in Top-Down Parsing Language (TDPL). While TDPL was originally created as a formal model for top-down parsers with backtracking capability, this thesis extends TDPL into a powerful general-purpose notation for describing language syntax, providing a compelling alternative to traditional context-free grammars (CFGs). Common syntactic idioms that cannot be represented concisely in a CFG are easily expressed in TDPL, such as longest-match disambiguation and &#34;</description>
     </item>
     
   </channel>

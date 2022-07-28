@@ -13,8 +13,8 @@
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2019-kokoris-kogias/</guid>
-      <description>Eleftherios Kokoris Kogias  Ph.D. thesis advised by Bryan Ford
-September 27, 2019  Abstract:  One of the core promises of blockchain technology is that of enabling trustworthy data dissemination in a trustless environment. What current blockchain systems deliver, however, is slow dissemination of public data, rendering blockchain technology unusable in settings where latency, transaction capacity or data confidentiality is important. In this thesis, we focus on providing solutions on two of the most pressing problems blockchain technology currently faces: scalability and data confidentiality.</description>
+      <description>Eleftherios Kokoris Kogias Ph.D. thesis advised by Bryan Ford
+September 27, 2019 Abstract: One of the core promises of blockchain technology is that of enabling trustworthy data dissemination in a trustless environment. What current blockchain systems deliver, however, is slow dissemination of public data, rendering blockchain technology unusable in settings where latency, transaction capacity or data confidentiality is important. In this thesis, we focus on providing solutions on two of the most pressing problems blockchain technology currently faces: scalability and data confidentiality.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@ September 27, 2019  Abstract:  One of the core promises of blockchain technology
       
       <guid>https://bford.info/pub/dec/omniledger-abs/</guid>
       <description>Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, Ewa Syta, and Bryan Ford
-  IEEE Security &amp; Privacy (IEEE S&amp;P)
+IEEE Security &amp; Privacy (IEEE S&amp;P)
 May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blockchain) that performs on par with centralized payment processors, such as Visa, is a challenging task. Most existing distributed ledgers are unable to scale-out, i.e., to grow their total processing capacity with the number of validators; and those that do, compromise security or decentralization.</description>
     </item>
     
@@ -35,7 +35,7 @@ May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blo
       
       <guid>https://bford.info/pub/dec/random-abs/</guid>
       <description>Ewa Syta, Philipp Jovanovic, Eleftherios Kokoris Kogias, Nicolas Gailly, Linus Gasser, Ismail Khoffi, Michael J. Fischer, and Bryan Ford
-  IEEE Security &amp; Privacy (IEEE S&amp;P)
+IEEE Security &amp; Privacy (IEEE S&amp;P)
 May 23, 2017 Abstract: Bias-resistant public randomness is a critical component in many (distributed) protocols. Generating public randomness is hard, however, because active adversaries may behave dishonestly to bias public random choices toward their advantage. Existing solutions do not scale to hundreds or thousands of participants, as is needed in many decentralized systems.</description>
     </item>
     
@@ -45,7 +45,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/randomness-keygen/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
   </channel>

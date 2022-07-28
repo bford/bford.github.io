@@ -6,16 +6,24 @@
     <description>Recent content in Identity on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Identity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Identity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TRIP: Trustless Coercion-Resistant In-Person Voter Registration</title>
+      <link>https://bford.info/pub/sec/trip/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/trip/</guid>
+      <description>Louis-Henri Merino, Simone Colombo, Jeff Allen, Vero Estrada-Galiñanes, and Bryan Ford arXiv preprint Abstract: Most existing remote electronic voting systems are vulnerable to voter coercion and vote buying. While coercion-resistant voting systems address this challenge, current schemes assume that the voter has access to an untappable, incorruptible device during voter registration. We present TRIP, an in-person voter registration scheme enabling voters to create verifiable and indistinguishable real and fake credentials using an untrusted kiosk inside a privacy booth at a supervised location, e.</description>
+    </item>
+    
     <item>
       <title>Technologizing Democracy or Democratizing Technology? A Layered-Architecture Perspective on Potentials and Challenges</title>
       <link>https://bford.info/pub/soc/dt2-chapter-abs/</link>
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/dt2-chapter-abs/</guid>
-      <description>Bryan Ford
-Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press 
-Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way?</description>
+      <description>Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press
+Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way? We explore how technology has failed to support robust democracy – but could do better – in the context of four basic social processes: collective deliberation and choice, information distribution and filtering, economic commerce, and identity.</description>
     </item>
     
     <item>
@@ -24,8 +32,8 @@ Abstract While technology is often claimed to be “democratizing”, the techno
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/personhood/</guid>
-      <description>Bryan Ford  November 2020 (first draft)  arXiv preprint
- Abstract: Digital identity seems at first like a prerequisite for digital democracy: how can we ensure &amp;ldquo;one person, one vote&amp;rdquo; online without identifying voters? But the full gamut of digital identity solutions &amp;ndash; e.g., online ID checking, biometrics, self-sovereign identity, and social/trust networks &amp;ndash; all present severe flaws in security, privacy, and transparency, leaving users vulnerable to exclusion, identity loss or theft, and coercion.</description>
+      <description>Bryan Ford November 2020 (first draft) arXiv preprint
+Abstract: Digital identity seems at first like a prerequisite for digital democracy: how can we ensure &amp;ldquo;one person, one vote&amp;rdquo; online without identifying voters? But the full gamut of digital identity solutions &amp;ndash; e.g., online ID checking, biometrics, self-sovereign identity, and social/trust networks &amp;ndash; all present severe flaws in security, privacy, and transparency, leaving users vulnerable to exclusion, identity loss or theft, and coercion.</description>
     </item>
     
     <item>
@@ -34,9 +42,9 @@ Abstract While technology is often claimed to be “democratizing”, the techno
       <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/cbdc/</guid>
-      <description>Sarah Allen, Srdjan Capkun, Ittay Eyal, Giulia Fanti, Bryan Ford, James Grimmelmann, Ari Juels, Kari Kostiainen, Sarah Meiklejohn, Andrew Miller, Eswar Prasad, Karl Wüst, and Fan Zhang   Global Economy &amp; Development Working Paper 140,
+      <description>Sarah Allen, Srdjan Capkun, Ittay Eyal, Giulia Fanti, Bryan Ford, James Grimmelmann, Ari Juels, Kari Kostiainen, Sarah Meiklejohn, Andrew Miller, Eswar Prasad, Karl Wüst, and Fan Zhang Global Economy &amp; Development Working Paper 140,
 Brookings Institution,
-July 23, 2020. Abstract:  Central banks around the world are exploring and in some cases even piloting central bank digital currencies (CBDCs). CBDCs promise to realize a broad range of new capabilities, including direct government disbursements to citizens, frictionless consumer payment and money-transfer systems, and a range of new financial instruments and monetary policy levers.</description>
+July 23, 2020. Abstract: Central banks around the world are exploring and in some cases even piloting central bank digital currencies (CBDCs). CBDCs promise to realize a broad range of new capabilities, including direct government disbursements to citizens, frictionless consumer payment and money-transfer systems, and a range of new financial instruments and monetary policy levers.</description>
     </item>
     
     <item>
@@ -55,8 +63,8 @@ The problem of identity has become a hot topic, with the idea of self-sovereign 
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/liquid/</guid>
-      <description>Bryan Ford  November 2018 (first draft)  arXiv preprint
- Abstract: The idea of liquid democracy responds to a widely-felt desire to make democracy more &#34;fluid&#34; and continuously participatory. Its central premise is to enable users to employ networked technologies to control and delegate voting power, to approximate the ideal of direct democracy in a scalable fashion that accounts for time and attention limits. There are many potential definitions, meanings, and ways to implement liquid democracy, however, and many distinct purposes to which it might be deployed.</description>
+      <description>Bryan Ford November 2018 (first draft) arXiv preprint
+Abstract: The idea of liquid democracy responds to a widely-felt desire to make democracy more &#34;fluid&#34; and continuously participatory. Its central premise is to enable users to employ networked technologies to control and delegate voting power, to approximate the ideal of direct democracy in a scalable fashion that accounts for time and attention limits. There are many potential definitions, meanings, and ways to implement liquid democracy, however, and many distinct purposes to which it might be deployed.</description>
     </item>
     
     <item>
@@ -65,8 +73,8 @@ The problem of identity has become a hot topic, with the idea of self-sovereign 
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/money/</guid>
-      <description>Bryan Ford  June 2018 (first draft)  arXiv preprint
- Abstract: Classical monetary systems regularly subject the most vulnerable majority of the world&#39;s population to debilitating financial shocks, and have manifestly allowed uncontrolled global inequality over the long term. Given these basic failures, how can we avoid asking whether mainstream macroeconomic principles are actually compatible with democratic principles such as equality or the protection of human rights and dignity?</description>
+      <description>Bryan Ford June 2018 (first draft) arXiv preprint
+Abstract: Classical monetary systems regularly subject the most vulnerable majority of the world&#39;s population to debilitating financial shocks, and have manifestly allowed uncontrolled global inequality over the long term. Given these basic failures, how can we avoid asking whether mainstream macroeconomic principles are actually compatible with democratic principles such as equality or the protection of human rights and dignity? This idea paper takes a constructive look at this question, by exploring how alternate monetary principles might result in a form of money more compatible with democratic principles -- dare we call it &#34;</description>
     </item>
     
     <item>
@@ -76,7 +84,7 @@ The problem of identity has become a hot topic, with the idea of self-sovereign 
       
       <guid>https://bford.info/pub/dec/pop-abs/</guid>
       <description>Maria Borge, Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, and Bryan Ford
-EPFL   IEEE Security &amp; Privacy on the Blockchain (IEEE S&amp;B)
+EPFL IEEE Security &amp; Privacy on the Blockchain (IEEE S&amp;B)
 April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies commonly use proof-of-work (PoW) or proof-of-stake (PoS) to ensure their security, e.g. to prevent double spending attacks. However, both approaches have disadvantages: PoW leads to massive amounts of wasted electricity and re-centralization, whereas major stakeholders in PoS might be able to create a monopoly.</description>
     </item>
     
@@ -86,7 +94,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/cosi/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -95,7 +103,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/anonrep-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -104,7 +112,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/crypto-book-codaspy/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -113,7 +121,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Tue, 20 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2015-10-20-cosi-ct/</guid>
-      <description>Bryan Ford   draft-ford-trans-witness-00  Abstract: This document proposes a backward-compatible extension to CT enabling log servers to obtain compact collective signatures from any number of well-known &#34;witness&#34; servers, which clients can check without gossip to verify that log server records have been widely witnessed. Collective signatures proactively protect clients from man-in-the- middle attackers who may have stolen the private keys of one or more log servers, even if the attacker controls the client&#39;s network access, the client is unwilling to gossip for privacy reasons, or the client does not wish to incur the network bandwidth and/or latency costs of gossip.</description>
+      <description>Bryan Ford draft-ford-trans-witness-00 Abstract: This document proposes a backward-compatible extension to CT enabling log servers to obtain compact collective signatures from any number of well-known &#34;witness&#34; servers, which clients can check without gossip to verify that log server records have been widely witnessed. Collective signatures proactively protect clients from man-in-the- middle attackers who may have stolen the private keys of one or more log servers, even if the attacker controls the client&#39;s network access, the client is unwilling to gossip for privacy reasons, or the client does not wish to incur the network bandwidth and/or latency costs of gossip.</description>
     </item>
     
     <item>
@@ -132,8 +140,8 @@ While I support anonymity and have spent years working to strengthen it, terrori
       <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-syta/</guid>
-      <description>Ewa Syta  Ph.D. thesis advised by Bryan Ford
-August 11, 2015  Abstract:  Maintaining privacy on the Internet is increasingly difficult in this ever-connected world. In most cases, our online interactions are a highly personalized experience and require some form of identity verification, most commonly, logging into an account. Unfortunately, people frequently give away a lot of information while obtaining accounts, reuse usernames and passwords across different services, or link their accounts to take advantage of single sign-on to avoid retyping passwords.</description>
+      <description>Ewa Syta Ph.D. thesis advised by Bryan Ford
+August 11, 2015 Abstract: Maintaining privacy on the Internet is increasingly difficult in this ever-connected world. In most cases, our online interactions are a highly personalized experience and require some form of identity verification, most commonly, logging into an account. Unfortunately, people frequently give away a lot of information while obtaining accounts, reuse usernames and passwords across different services, or link their accounts to take advantage of single sign-on to avoid retyping passwords.</description>
     </item>
     
     <item>
@@ -142,8 +150,8 @@ August 11, 2015  Abstract:  Maintaining privacy on the Internet is increasingly 
       <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/private-eyes-abs/</guid>
-      <description>Ewa Syta, Michael J. Fischer, David Wolinsky, Abraham Silberschatz, Gina Gallegos-García, and Bryan Ford   12th International Conference on Security and Cryptography (SECRYPT)
-July 2015.  Abstract: We propose an efficient remote biometric authentication protocol that gives strong protection to the user’s biometric data in case of two common kinds of security breaches: (1) loss or theft of the user’s token (smart card, handheld device, etc.), giving the attacker full access to any secrets embedded within it; (2) total penetration of the server.</description>
+      <description>Ewa Syta, Michael J. Fischer, David Wolinsky, Abraham Silberschatz, Gina Gallegos-García, and Bryan Ford 12th International Conference on Security and Cryptography (SECRYPT)
+July 2015. Abstract: We propose an efficient remote biometric authentication protocol that gives strong protection to the user’s biometric data in case of two common kinds of security breaches: (1) loss or theft of the user’s token (smart card, handheld device, etc.), giving the attacker full access to any secrets embedded within it; (2) total penetration of the server.</description>
     </item>
     
     <item>
@@ -152,7 +160,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/certco/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -161,8 +169,8 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Wed, 24 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-maheswaran/</guid>
-      <description>John Maheswaran  Ph.D. thesis advised by Bryan Ford
-June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflow allow users to log in through a federated identity provider such as Facebook (Log in with Facebook), Google+ or Twitter. This process is called federated authentication. Examples of federated identity providers include social networks as well as other non-social network identity providers such as PayPal.  Federated identity providers have gained widespread popularity among users as a way to manage their online identity across the web.</description>
+      <description>John Maheswaran Ph.D. thesis advised by Bryan Ford
+June 24, 2015 Abstract: Third-party applications such as Quora or StackOverflow allow users to log in through a federated identity provider such as Facebook (Log in with Facebook), Google+ or Twitter. This process is called federated authentication. Examples of federated identity providers include social networks as well as other non-social network identity providers such as PayPal. Federated identity providers have gained widespread popularity among users as a way to manage their online identity across the web.</description>
     </item>
     
     <item>
@@ -171,7 +179,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/nymboxes/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -180,7 +188,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/crypto-book/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -189,7 +197,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/biometric-auth/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -198,7 +206,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 24 Dec 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/druid-abs/</guid>
-      <description>Joe Touch, Ilia Baldine, Rudra Dutta, Gregory G. Finn, Bryan Ford, Scott Jordan, Dan Massey, Abraham Matta, Christos Papadopoulos, Peter Reiher, George Rouskas   Computer Networks December 24, 2010 Abstract: The Dynamic Recursive Unified Internet Design (DRUID) is a future Internet design that unifies overlay networks with conventional layered network architectures. DRUID is based on the fundamental concept of recursion, enabling a simple and direct network architecture that unifies the data, control, management, and security aspects of the current Internet, leading to a more trustworthy network.</description>
+      <description>Joe Touch, Ilia Baldine, Rudra Dutta, Gregory G. Finn, Bryan Ford, Scott Jordan, Dan Massey, Abraham Matta, Christos Papadopoulos, Peter Reiher, George Rouskas Computer Networks December 24, 2010 Abstract: The Dynamic Recursive Unified Internet Design (DRUID) is a future Internet design that unifies overlay networks with conventional layered network architectures. DRUID is based on the fundamental concept of recursion, enabling a simple and direct network architecture that unifies the data, control, management, and security aspects of the current Internet, leading to a more trustworthy network.</description>
     </item>
     
     <item>
@@ -208,8 +216,8 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       
       <guid>https://bford.info/pub/net/nego-abs/</guid>
       <description>Bryan Ford
-	Janardhan Iyengar
-	Yale University 	Franklin &amp;amp; Marshall College  Published in Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII) October 22-23, 2009, New York City, NY, USA Abstract: Internet evolution often depends on either inserting new protocol layers or upgrading existing layers to new protocols, but both of these evolutionary paths are obstructed by the difficulty and inefficiency of determining which protocols a pair of hosts mutually support and prefer.</description>
+Janardhan Iyengar
+Yale University Franklin &amp;amp; Marshall College Published in Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII) October 22-23, 2009, New York City, NY, USA Abstract: Internet evolution often depends on either inserting new protocol layers or upgrading existing layers to new protocols, but both of these evolutionary paths are obstructed by the difficulty and inefficiency of determining which protocols a pair of hosts mutually support and prefer.</description>
     </item>
     
     <item>
@@ -219,7 +227,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       
       <guid>https://bford.info/pub/net/phd-abs/</guid>
       <description>Bryan Ford
-Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications.  Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
+Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract: The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications. Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
     </item>
     
     <item>
@@ -228,9 +236,8 @@ Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  
       <pubDate>Tue, 01 Apr 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/sybil-abs/</guid>
-      <description>Bryan Ford and Jacob Strauss 
-Massachusetts Institute of Technology First Workshop on Social Network Systems
-April 1, 2008 Abstract:  Online anonymity often appears to undermine accountability, offering little incentive for civil behavior, but accountability failures usually result not from anonymity itself but from the disposability of virtual identities. A user banned for misbehavior&amp;mdash;e.g., spamming from a free E-mail account or stuffing an online ballot box&amp;mdash;can simply open other accounts or connect from other IP addresses.</description>
+      <description>Bryan Ford and Jacob Strauss Massachusetts Institute of Technology First Workshop on Social Network Systems
+April 1, 2008 Abstract: Online anonymity often appears to undermine accountability, offering little incentive for civil behavior, but accountability failures usually result not from anonymity itself but from the disposability of virtual identities. A user banned for misbehavior&amp;mdash;e.g., spamming from a free E-mail account or stuffing an online ballot box&amp;mdash;can simply open other accounts or connect from other IP addresses.</description>
     </item>
     
     <item>
@@ -240,7 +247,7 @@ April 1, 2008 Abstract:  Online anonymity often appears to undermine accountabil
       
       <guid>https://bford.info/pub/net/alpaca-abs/</guid>
       <description>Chris Lesniewski-Laas, Bryan Ford, Jacob Strauss, Robert Morris, and M. Frans Kaashoek
-Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract:  Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
+Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract: Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
     </item>
     
     <item>
@@ -250,8 +257,8 @@ Massachusetts Institute of Technology Published in 14th ACM Conference on Comput
       
       <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
       <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
- Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
-November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
+November 6-8, 2006 Abstract: The Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
     </item>
     
     <item>
@@ -260,7 +267,7 @@ November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provide
       <pubDate>Sun, 24 Sep 2006 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/log/2006/0924-SybilParties.html</guid>
-      <description>Bryan Ford - September 24, 2006 Preliminary draft: see here for the final published paper  The Human Recognition Problem  Today&#39;s online ecosphere continually suffers from its inability to tell who is a genuine, unique human and who isn&#39;t. Because open-access messaging systems cannot isolate or authenticate the human source of messages for the purpose of suppressing abuses, spam has already relegated USENET to historical obscurity [Templeton01], threatens the usability of E-mail [Wouters05], and is even advancing on Skype.</description>
+      <description>Bryan Ford - September 24, 2006 Preliminary draft: see here for the final published paper The Human Recognition Problem Today&#39;s online ecosphere continually suffers from its inability to tell who is a genuine, unique human and who isn&#39;t. Because open-access messaging systems cannot isolate or authenticate the human source of messages for the purpose of suppressing abuses, spam has already relegated USENET to historical obscurity [Templeton01], threatens the usability of E-mail [Wouters05], and is even advancing on Skype.</description>
     </item>
     
     <item>
@@ -269,8 +276,8 @@ November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provide
       <pubDate>Mon, 27 Feb 2006 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/uia-iptps-abs/</guid>
-      <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, and Robert Morris Massachusetts Institute of Technology   5th International Workshop on Peer-to-Peer Systems
-February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a peer-to-peer connectivity architecture that provides users a simple, intuitive, and secure way to share information and services between personal devices by assigning ad hoc names that act like &amp;ldquo;virtual cables.</description>
+      <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, and Robert Morris Massachusetts Institute of Technology 5th International Workshop on Peer-to-Peer Systems
+February 27-28, 2006 Abstract The User Information Architecture, or UIA, is a peer-to-peer connectivity architecture that provides users a simple, intuitive, and secure way to share information and services between personal devices by assigning ad hoc names that act like &amp;ldquo;virtual cables.&amp;rdquo; Users assign names by &amp;ldquo;introducing&amp;rdquo; devices to each other on a common network.</description>
     </item>
     
     <item>
@@ -279,8 +286,8 @@ February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a p
       <pubDate>Thu, 20 Nov 2003 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/uip-case-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology   Second Workshop on Hot Topics in Networks
-November 20-21, 2003  Abstract: Though appropriate for core Internet infrastructure, the Internet Protocol is unsuited to routing within and between emerging ad-hoc edge networks due to its dependence on hierarchical, administratively assigned addresses. Existing ad-hoc routing protocols address the management problem but do not scale to Internet-wide networks. The promise of ubiquitous network computing cannot be fulfilled until we develop an Unmanaged Internet Protocol (UIP), a scalable routing protocol that manages itself automatically.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology Second Workshop on Hot Topics in Networks
+November 20-21, 2003 Abstract: Though appropriate for core Internet infrastructure, the Internet Protocol is unsuited to routing within and between emerging ad-hoc edge networks due to its dependence on hierarchical, administratively assigned addresses. Existing ad-hoc routing protocols address the management problem but do not scale to Internet-wide networks. The promise of ubiquitous network computing cannot be fulfilled until we develop an Unmanaged Internet Protocol (UIP), a scalable routing protocol that manages itself automatically.</description>
     </item>
     
     <item>
@@ -289,8 +296,8 @@ November 20-21, 2003  Abstract: Though appropriate for core Internet infrastruct
       <pubDate>Fri, 31 Oct 2003 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/uip-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology   Technical Report MIT-LCS-TR-926
-October 31, 2003  Abstract: Unmanaged Internet Protocol (UIP) is a fully self-organizing network-layer protocol that implements scalable identity-based routing. In contrast with address-based routing protocols, which depend for scalability on centralized hierarchical address management, UIP nodes use a flat namespace of cryptographic node identifiers. Node identities can be created locally on demand and remain stable across network changes.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology Technical Report MIT-LCS-TR-926
+October 31, 2003 Abstract: Unmanaged Internet Protocol (UIP) is a fully self-organizing network-layer protocol that implements scalable identity-based routing. In contrast with address-based routing protocols, which depend for scalability on centralized hierarchical address management, UIP nodes use a flat namespace of cryptographic node identifiers. Node identities can be created locally on demand and remain stable across network changes. Unlike location-independent name services, the UIP routing protocol can stitch together many conventional address-based networks with disjoint or discontinuous address domains, providing connectivity between any pair of participating nodes even when no underlying network provides direct connectivity.</description>
     </item>
     
   </channel>

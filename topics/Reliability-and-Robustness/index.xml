@@ -13,7 +13,7 @@
       <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/limix/</guid>
-      <description>Cristina Băsescu and Bryan Ford  Twentieth ACM Workshop on Hot Topics in Networks (HotNets)
+      <description>Cristina Băsescu and Bryan Ford Twentieth ACM Workshop on Hot Topics in Networks (HotNets)
 November 10-12, 2021 Abstract: Failures far away from a user should intuitively be less likely to affect that user. Today&#39;s ecosystem miserably fails this test, however, despite high-availability best practices. Correlated and cascading failures &amp;ndash; triggered by misconfigurations, bugs, and network partitions &amp;ndash; often invalidate assumptions of failure independence. We propose that distributed services need not and should not expose local activities to distant failures or partitions, no matter how severe.</description>
     </item>
     
@@ -24,8 +24,8 @@ November 10-12, 2021 Abstract: Failures far away from a user should intuitively 
       
       <guid>https://bford.info/pub/net/qsc/</guid>
       <description>Bryan Ford, Philipp Jovanovic, and Ewa Syta
- March 4, 2020  arXiv preprint
- Abstract: It is commonly held that asynchronous consensus is much more complex, difficult, and costly than partially-synchronous algorithms, especially without using common coins. This paper challenges that conventional wisdom with que sera consensus QSC, an approach to consensus that cleanly decomposes the agreement problem from that of network asynchrony. QSC uses only private coins and reaches consensus in O(1) expected communication rounds.</description>
+March 4, 2020 arXiv preprint
+Abstract: It is commonly held that asynchronous consensus is much more complex, difficult, and costly than partially-synchronous algorithms, especially without using common coins. This paper challenges that conventional wisdom with que sera consensus QSC, an approach to consensus that cleanly decomposes the agreement problem from that of network asynchrony. QSC uses only private coins and reaches consensus in O(1) expected communication rounds.</description>
     </item>
     
     <item>
@@ -34,8 +34,8 @@ November 10-12, 2021 Abstract: Failures far away from a user should intuitively 
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/tlc/</guid>
-      <description>Bryan Ford  July 16, 2019  arXiv preprint
- Abstract: Consensus protocols for asynchronous networks are usually complex and inefficient, leading practical systems to rely on synchronous protocols. This paper attempts to simplify asynchronous consensus by building atop a novel threshold logical clock abstraction, which enables upper layers to operate as if on a synchronous network. This approach yields an asynchronous consensus protocol for fail-stop nodes that may be simpler and more robust than Paxos and its leader-based variants, requiring no common coins and achieving consensus in a constant expected number of rounds.</description>
+      <description>Bryan Ford July 16, 2019 arXiv preprint
+Abstract: Consensus protocols for asynchronous networks are usually complex and inefficient, leading practical systems to rely on synchronous protocols. This paper attempts to simplify asynchronous consensus by building atop a novel threshold logical clock abstraction, which enables upper layers to operate as if on a synchronous network. This approach yields an asynchronous consensus protocol for fail-stop nodes that may be simpler and more robust than Paxos and its leader-based variants, requiring no common coins and achieving consensus in a constant expected number of rounds.</description>
     </item>
     
     <item>
@@ -44,8 +44,8 @@ November 10-12, 2021 Abstract: Failures far away from a user should intuitively 
       <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-zhai/</guid>
-      <description>Ennan Zhai  Ph.D. thesis advised by Bryan Ford
-August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely on redundancy techniques to enhance reliability and availability. In complex multi-layered hardware/software stacks, however, seemingly independent components used redundantly might share deep, hidden dependencies. These common dependencies may potentially result in unexpected correlated failures, thus undermining redundancy efforts.  Heading off correlated failures is extremely challenging in cloud-scale systems for the following three reasons.</description>
+      <description>Ennan Zhai Ph.D. thesis advised by Bryan Ford
+August 11, 2015 Abstract: Today’s cloud computing systems pervasively rely on redundancy techniques to enhance reliability and availability. In complex multi-layered hardware/software stacks, however, seemingly independent components used redundantly might share deep, hidden dependencies. These common dependencies may potentially result in unexpected correlated failures, thus undermining redundancy efforts. Heading off correlated failures is extremely challenging in cloud-scale systems for the following three reasons.</description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/cloud-indaas/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -63,7 +63,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/cloud-psra/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -72,7 +72,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Sun, 03 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/irec/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -81,7 +81,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/icebergs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -90,7 +90,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/certikos-apsys11/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -99,8 +99,8 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Thu, 15 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/certified-kernels-abs/</guid>
-      <description>Zhong Shao and Bryan Ford Department of Computer Science, Yale University   Yale University Technical Report TR1436
-July 15, 2010  Abstract: Operating System (OS) kernels form the bedrock of all system software&amp;mdash;they can have the greatest impact on the resilience, extensibility, and security of today’s computing hosts. A single kernel bug can easily wreck the entire system’s integrity and protection. We propose to apply new advances in certified software to the development of a novel OS kernel.</description>
+      <description>Zhong Shao and Bryan Ford Department of Computer Science, Yale University Yale University Technical Report TR1436
+July 15, 2010 Abstract: Operating System (OS) kernels form the bedrock of all system software&amp;mdash;they can have the greatest impact on the resilience, extensibility, and security of today’s computing hosts. A single kernel bug can easily wreck the entire system’s integrity and protection. We propose to apply new advances in certified software to the development of a novel OS kernel.</description>
     </item>
     
   </channel>

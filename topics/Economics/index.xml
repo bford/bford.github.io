@@ -13,9 +13,8 @@
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/dt2-chapter-abs/</guid>
-      <description>Bryan Ford
-Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press 
-Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way?</description>
+      <description>Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press
+Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way? We explore how technology has failed to support robust democracy – but could do better – in the context of four basic social processes: collective deliberation and choice, information distribution and filtering, economic commerce, and identity.</description>
     </item>
     
     <item>
@@ -24,9 +23,9 @@ Abstract While technology is often claimed to be “democratizing”, the techno
       <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/cbdc/</guid>
-      <description>Sarah Allen, Srdjan Capkun, Ittay Eyal, Giulia Fanti, Bryan Ford, James Grimmelmann, Ari Juels, Kari Kostiainen, Sarah Meiklejohn, Andrew Miller, Eswar Prasad, Karl Wüst, and Fan Zhang   Global Economy &amp; Development Working Paper 140,
+      <description>Sarah Allen, Srdjan Capkun, Ittay Eyal, Giulia Fanti, Bryan Ford, James Grimmelmann, Ari Juels, Kari Kostiainen, Sarah Meiklejohn, Andrew Miller, Eswar Prasad, Karl Wüst, and Fan Zhang Global Economy &amp; Development Working Paper 140,
 Brookings Institution,
-July 23, 2020. Abstract:  Central banks around the world are exploring and in some cases even piloting central bank digital currencies (CBDCs). CBDCs promise to realize a broad range of new capabilities, including direct government disbursements to citizens, frictionless consumer payment and money-transfer systems, and a range of new financial instruments and monetary policy levers.</description>
+July 23, 2020. Abstract: Central banks around the world are exploring and in some cases even piloting central bank digital currencies (CBDCs). CBDCs promise to realize a broad range of new capabilities, including direct government disbursements to citizens, frictionless consumer payment and money-transfer systems, and a range of new financial instruments and monetary policy levers.</description>
     </item>
     
     <item>
@@ -35,7 +34,7 @@ July 23, 2020. Abstract:  Central banks around the world are exploring and in so
       <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2019/09/23/rational/</guid>
-      <description>by Bryan Ford and Rainer Böhme &amp;mdash; PDF preprint version available    Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
+      <description>by Bryan Ford and Rainer Böhme &amp;mdash; PDF preprint version available Many blockchain and cryptocurrency fans seem to prefer building and analyzing decentralized systems in a rational or &amp;ldquo;greedy behavior&amp;rdquo; failure model, rather than a Byzantine or &amp;ldquo;arbitrary behavior&amp;rdquo; failure model. Many of the same blockchain and cryptocurrency fans also like open, permissionless systems like Bitcoin and Ethereum, which anyone can join and participate in using weak identities such as anonymous cryptography key pairs.</description>
     </item>
     
     <item>
@@ -44,8 +43,8 @@ July 23, 2020. Abstract:  Central banks around the world are exploring and in so
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/money/</guid>
-      <description>Bryan Ford  June 2018 (first draft)  arXiv preprint
- Abstract: Classical monetary systems regularly subject the most vulnerable majority of the world&#39;s population to debilitating financial shocks, and have manifestly allowed uncontrolled global inequality over the long term. Given these basic failures, how can we avoid asking whether mainstream macroeconomic principles are actually compatible with democratic principles such as equality or the protection of human rights and dignity?</description>
+      <description>Bryan Ford June 2018 (first draft) arXiv preprint
+Abstract: Classical monetary systems regularly subject the most vulnerable majority of the world&#39;s population to debilitating financial shocks, and have manifestly allowed uncontrolled global inequality over the long term. Given these basic failures, how can we avoid asking whether mainstream macroeconomic principles are actually compatible with democratic principles such as equality or the protection of human rights and dignity? This idea paper takes a constructive look at this question, by exploring how alternate monetary principles might result in a form of money more compatible with democratic principles -- dare we call it &#34;</description>
     </item>
     
     <item>
@@ -54,9 +53,7 @@ July 23, 2020. Abstract:  Central banks around the world are exploring and in so
       <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/10/25/mining/</guid>
-      <description>--  
-As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&amp;rsquo;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining.
-In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
+      <description>As the first widely-deployed cryptocurrency, Bitcoin has proven hugely successful and inspired a blockchain fever (or is it a bubble?). Bitcoin&#39;s security and economic assumptions are showing significant fractures, however. Following previously-identified selfish mining and stubborn mining attacks, new research from Princeton being presented at CCS identifies further incentive weaknesses that appear as transaction fees supplant block rewards as the primary incentive for mining. In short, miners motivated by transaction fees have even greater incentive to deviate strategically from the standard Bitcoin protocol in selfish and potentially destructive ways.</description>
     </item>
     
     <item>
@@ -65,7 +62,7 @@ In short, miners motivated by transaction fees have even greater incentive to de
       <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/torcoin/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -74,7 +71,7 @@ In short, miners motivated by transaction fees have even greater incentive to de
       <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/onions-to-shallots/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
   </channel>

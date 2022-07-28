@@ -41,118 +41,109 @@
 
     
   <h1>JSON Binary Schema</h1>
-  
-
-<p>JBS allows the specification of customized binary representations
+  <p>JBS allows the specification of customized binary representations
 via extensions to the JSON Schema language.</p>
-
 <p>(or JBIN? or BINSON?)</p>
-
 <p>XXX allow specifying BESO (or CBOR or &hellip;) as a default binary encoding</p>
-
 <p>XXX related: <a href="https://kaitai.io">Katai Struct</a>,
 <a href="https://dl.acm.org/doi/pdf/10.1145/1667053.1667059">The Next 700 Data Description Languages</a>,
 <a href="http://www.icsi.berkeley.edu/pubs/networking/binpacIMC06.pdf">binpac</a>,
 <a href="https://dl.acm.org/doi/pdf/10.1145/1929529.1929536">IDRIS</a>, etc.</p>
-
 <h3 id="variable-width-unsigned-integers">Variable-width unsigned integers</h3>
-
 <p>When the scheme <code>type</code> is <code>integer</code>,
 an <code>encoding</code> property of <code>unsigned</code> indicates
 that values greater than or equal to zero are to be encoded
 in a variable-length binary representation:</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;integer&#34;,
-    &#34;encoding&#34;: &#34;binary&#34;
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;binary&quot;
+}
+</code></pre>
 <p>A <code>byteOrder</code> property may specify
 the byte order for the encoded integer,
 either <code>bigEndian</code> (most-significant byte first)
 or <code>littleEndian</code> (least-significant byte first).</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;integer&#34;,
-    &#34;encoding&#34;: &#34;binary&#34;,
-    &#34;byteOrder&#34;: &#34;littleEndian&#34;
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;binary&quot;,
+	&quot;byteOrder&quot;: &quot;littleEndian&quot;
+}
+</code></pre>
 <p>In this encoding, the integer 65 is encoded
 as the one-byte stream [0x41],
 while the integer 256 is encoded as the byte-stream [0x00,0x01].</p>
-
 <p>In strict schema validation,
 the byteOrder property is required.
 In permissive scheme validation,
 the byteOrder property is optional
 and defaults to <code>bigEndian</code> (network byte order).</p>
-
 <h3 id="variable-width-signed-integers">Variable-width signed integers</h3>
-
 <p>When the scheme <code>type</code> is <code>integer</code>,
 an <code>encoding</code> property of <code>zigzag</code> indicates
 that signed integer values are to be zigzag-encoded first
 into unsigned integer values,
 then the latter encoded as a binary unsigned integer
 as described above.</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;integer&#34;,
-    &#34;encoding&#34;: &#34;zigzag&#34;,
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;zigzag&quot;,
+}
+</code></pre>
 <p>In zigzag encoding,
 a positive integer value <em>v</em> is encoded as the unsigned integer 2<em>v</em>,
 while negative integer values <em>v</em> are encoded as -2<em>v</em> - 1.
 That is:</p>
-<pre tabindex="0"><code>0   0
--1  1
-1   2
--2  3
-2   4
--2  5
-etc.</code></pre>
+<pre><code>0	0
+-1	1
+1	2
+-2	3
+2	4
+-2	5
+etc.
+</code></pre>
 <h2 id="unsigned-integers">Unsigned integers</h2>
-
 <p>When the scheme <code>type</code> is <code>integer</code>
 and has a <code>minimum</code> value greater than or equal to zero,
 the scheme represents an unsigned integer or natural number.</p>
-
 <h3 id="fixed-length-unsigned-integers">Fixed-length unsigned integers</h3>
-
 <p>An <code>encoding</code> of <code>unsigned</code> indicates that an integer
 is to be encoded in unsigned binary representation
 a given number of bits wide.
 For example, this type indicates an integer
 encoded in exactly one byte as an unsigned integer:</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;integer&#34;,
-    &#34;encoding&#34;: &#34;unsigned&#34;,
-    &#34;bits&#34;: 8
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;unsigned&quot;,
+	&quot;bits&quot;: 8
+}
+</code></pre>
 <p>The `bits&rsquo; property&rsquo;s value must be a nonnegative integer
 indicating the bit-width of this representation.</p>
-
 <p>If <code>bits</code> is greater than 8,
 then the <code>encoding</code> property must also have a <code>byteOrder</code> property
 specifying the endianness of the representation:
 either <code>bigEndian</code> (network byte order) or <code>littleEndian</code>.</p>
-
 <p>XXX or should <code>encoding</code> default to network byte order (<code>bigEndian</code>)?
 Perhaps it should for purposes of defining new formats,
 but a strict-specification mode for schema validators
 should require endianness to be specified?</p>
-
 <p>An example of a 32-bit unsigned integer encoding in network byte-order:</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;integer&#34;,
-    &#34;encoding&#34;: &#34;unsigned&#34;,
-    &#34;byteOrder&#34;: &#34;bigEndian&#34;,
-    &#34;bits&#34;: 32
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;unsigned&quot;,
+	&quot;byteOrder&quot;: &quot;bigEndian&quot;,
+	&quot;bits&quot;: 32
+}
+</code></pre>
 <p>The <code>bits</code> field need not be a power of two.
 For example, this integer is encoded in three bytes:</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;integer&#34;,
-    &#34;encoding&#34;: &#34;unsigned&#34;,
-    &#34;byteOrder&#34;: &#34;littleEndian&#34;,
-    &#34;bits&#34;: 24
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;unsigned&quot;,
+	&quot;byteOrder&quot;: &quot;littleEndian&quot;,
+	&quot;bits&quot;: 24
+}
+</code></pre>
 <p>Note that the above examples did not specify a semantic value range
 via <code>minimum</code> or <code>maximum</code>,
 although the specified encoding can represent only a certain range of values.
@@ -168,18 +159,18 @@ bad practice for designing new formats and schemas, however,
 so schema validators may want to provide a configuration option
 that yields warnings or errors when a fixed-length representation is specified
 without a specified <code>minimum</code> and <code>maximum</code> that is representable.</p>
-
 <p>The following variant of the above 24-bit integer example
 restricts the semantic value to a range of 1 through 16,000,000,
 a subset of the representable value range of 0 through 16,777,215 (2^24-1).</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;integer&#34;,
-    &#34;minimum&#34;: 1,
-    &#34;maximum&#34;: 16000000
-    &#34;encoding&#34;: &#34;unsigned&#34;,
-    &#34;byteOrder&#34;: &#34;littleEndian&#34;,
-    &#34;bits&#34;: 24
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;minimum&quot;: 1,
+	&quot;maximum&quot;: 16000000
+	&quot;encoding&quot;: &quot;unsigned&quot;,
+	&quot;byteOrder&quot;: &quot;littleEndian&quot;,
+	&quot;bits&quot;: 24
+}
+</code></pre>
 <p>For now, <code>bits</code> must be a multiple of 8.
 We might later want to relax this to support
 packed bit fields and bit streams.
@@ -187,9 +178,7 @@ But then we will probably also need to define a <code>bitOrder</code> property
 specifying the bit order within bytes
 (i.e., whether we start filling bytes
 from the most-significant or the least-significant bit).</p>
-
 <h3 id="fixed-length-signed-integers">Fixed-length signed integers</h3>
-
 <p>An <code>encoding</code> property of <code>unsigned</code> indicates
 that an integer is to be encoded as a fixed-width integer
 in standard binary two&rsquo;s-complement encoding,
@@ -197,35 +186,36 @@ with the most-significant bit serving as the sign bit.
 As with unsigned integers,
 a <code>bits</code> property is required and must be a multiple of 8 for now,
 and a <code>byteOrder</code> property is required if <code>bits</code> is greater than 8.</p>
-
 <p>An example of an 8-bit signed integer:</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;integer&#34;,
-    &#34;encoding&#34;: &#34;signed&#34;,
-    &#34;bits&#34;: 8
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;signed&quot;,
+	&quot;bits&quot;: 8
+}
+</code></pre>
 <p>Similarly, a 64-bit little-endian signed integer:</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;integer&#34;,
-    &#34;encoding&#34;: &#34;signed&#34;,
-    &#34;bits&#34;: 64,
-    &#34;byteOrder&#34;: &#34;littleEndian&#34;
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;encoding&quot;: &quot;signed&quot;,
+	&quot;bits&quot;: 64,
+	&quot;byteOrder&quot;: &quot;littleEndian&quot;
+}
+</code></pre>
 <h3 id="offset-encoded-integers">Offset-encoded integers</h3>
-
 <p>Integers may have an <code>offset</code> property to indicate
 that the semantic value is the offset plus the encoded value.
 For example, this schema type represents semantic values
 between 200 through 300 inclusive,
 encoded as single-byte values from 0 through 100:</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;integer&#34;,
-    &#34;minimum&#34;: 200,
-    &#34;maximum&#34;: 300,
-    &#34;offset&#34;: 200,
-    &#34;encoding&#34;: &#34;unsigned/bigEndian&#34;,
-    &#34;bits&#34;: 8
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;minimum&quot;: 200,
+	&quot;maximum&quot;: 300,
+	&quot;offset&quot;: 200,
+	&quot;encoding&quot;: &quot;unsigned/bigEndian&quot;,
+	&quot;bits&quot;: 8
+}
+</code></pre>
 <p>When an <code>offset</code> is specified and is less than or equal to the <code>minimum</code>,
 an unsigned-integer representation may be used
 even if <code>minimum</code> is less than or equal to zero.
@@ -233,18 +223,17 @@ This example encodes values from -100 through 100 in one byte,
 with byte value 0 representing semantic value -100,
 100 representing 0,
 and 200 representing 100:</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;integer&#34;,
-    &#34;minimum&#34;: -100,
-    &#34;maximum&#34;: 100,
-    &#34;offset&#34;: -100,
-    &#34;encoding&#34;: &#34;unsigned&#34;,
-    &#34;bits&#34;: 8
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;integer&quot;,
+	&quot;minimum&quot;: -100,
+	&quot;maximum&quot;: 100,
+	&quot;offset&quot;: -100,
+	&quot;encoding&quot;: &quot;unsigned&quot;,
+	&quot;bits&quot;: 8
+}
+</code></pre>
 <h2 id="floating-point-numbers">Floating-point numbers</h2>
-
 <h3 id="fixed-length-binary-floating-point-numbers">Fixed-length binary floating-point numbers</h3>
-
 <p>When the scheme type is <code>number</code>,
 an associated `encoding&rsquo; property may name one of the
 <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a>
@@ -252,10 +241,11 @@ standard fixed-length floating-point number representations
 to indicate that representation be used
 as the binary encoding of this number.
 For example:</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;number&#34;,
-    &#34;encoding&#34;: &#34;binary32&#34;,
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;number&quot;,
+	&quot;encoding&quot;: &quot;binary32&quot;,
+}
+</code></pre>
 <p>The floating-point representations currently defined in
 <a href="https://en.wikipedia.org/wiki/IEEE_754-2008_revision">IEEE 754-2008</a>
 are <code>binary16</code>, <code>binary32</code>, <code>binary64</code>, and <code>binary128</code>
@@ -264,34 +254,28 @@ and <code>decimal32</code>, <code>decimal64</code>, and <code>decimal128</code>
 for decimal floating-point representations.
 More standard floating-point encodings may be defined in the future,
 of course.</p>
-
 <h3 id="variable-length-binary-floating-point-numbers">Variable-length binary floating-point numbers</h3>
-
 <h2 id="variable-length-strings">Variable-length strings</h2>
-
 <h2 id="packed-arrays-with-fixed-length-items">Packed arrays with fixed-length items</h2>
-
 <p>A schema of type <code>array</code> may specify an <code>encoding</code> of <code>packed</code>
 to indicate a packed array of fixed-length elements.
 This example expresses a packed array of 8-bit unsigned integers:</p>
-<pre tabindex="0"><code>{
-    &#34;type&#34;: &#34;array&#34;,
-    &#34;items&#34;: {
-        &#34;type&#34;: &#34;integer&#34;,
-        &#34;encoding&#34;: &#34;unsigned&#34;,
-        &#34;bits&#34;: 8
-    }
-}</code></pre>
+<pre><code>{
+	&quot;type&quot;: &quot;array&quot;,
+	&quot;items&quot;: {
+		&quot;type&quot;: &quot;integer&quot;,
+		&quot;encoding&quot;: &quot;unsigned&quot;,
+		&quot;bits&quot;: 8
+	}
+}
+</code></pre>
 <p>The array element schema specified in the <code>items</code> property
 <em>must</em> have a fixed-length binary representation for packed array encoding.</p>
-
 <p>If the array also has a fixed length,
 i.e., <code>minItems</code> and <code>maxItems</code> values both specified and equal,
 then the resulting packed array has a fixed-length binary representation,
 which is exactly the element type length times the array length.</p>
-
 <h2 id="cbe-encoded-arrays-with-variable-length-items">CBE-encoded arrays with variable-length items</h2>
-
 <p>A schema of type <code>array</code> with an <code>encoding</code> of <code>cbe</code>
 indicates that the array has a binary representation consisting of
 a sequence of variable-length items, each individually CBE-encoded.</p>

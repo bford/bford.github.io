@@ -6,15 +6,24 @@
     <description>Recent content in Transparency on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Transparency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Transparency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TRIP: Trustless Coercion-Resistant In-Person Voter Registration</title>
+      <link>https://bford.info/pub/sec/trip/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/trip/</guid>
+      <description>Louis-Henri Merino, Simone Colombo, Jeff Allen, Vero Estrada-Galiñanes, and Bryan Ford arXiv preprint Abstract: Most existing remote electronic voting systems are vulnerable to voter coercion and vote buying. While coercion-resistant voting systems address this challenge, current schemes assume that the voter has access to an untappable, incorruptible device during voter registration. We present TRIP, an in-person voter registration scheme enabling voters to create verifiable and indistinguishable real and fake credentials using an untrusted kiosk inside a privacy booth at a supervised location, e.</description>
+    </item>
+    
     <item>
       <title>Integrity and Metadata Protection in Data Retrieval</title>
       <link>https://bford.info/thesis/2021-nikitin/</link>
       <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2021-nikitin/</guid>
-      <description>Kirill Nikitin  Ph.D. thesis advised by Bryan Ford
-November 26, 2021  Abstract: Secure retrieval of data requires integrity, confidentially, transparency, and metadata-privacy of the process. Existing protection mechanisms, however, provide only partially these properties: encryption schemes still expose cleartext metadata, protocols for private information retrieval neglect data integrity, and data-distribution architectures forego transparency. In this dissertation, by designing new cryptographic primitives and security architectures that provide a more comprehensive protection, we improve on the current security and privacy practices in data retrieval.</description>
+      <description>Kirill Nikitin Ph.D. thesis advised by Bryan Ford
+November 26, 2021 Abstract: Secure retrieval of data requires integrity, confidentially, transparency, and metadata-privacy of the process. Existing protection mechanisms, however, provide only partially these properties: encryption schemes still expose cleartext metadata, protocols for private information retrieval neglect data integrity, and data-distribution architectures forego transparency. In this dissertation, by designing new cryptographic primitives and security architectures that provide a more comprehensive protection, we improve on the current security and privacy practices in data retrieval.</description>
     </item>
     
     <item>
@@ -23,8 +32,8 @@ November 26, 2021  Abstract: Secure retrieval of data requires integrity, confid
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/post/2020-11-18-ai-governance/</guid>
-      <description>AI in Policy?   This post contains an address delivered at the IRGC conference on Governance Of and By Digital Technology.
- The separation of mechanism and policy Computer science has a well-established design principle known as separation of mechanism and policy. I think this principle may be equally applicable to human governance &amp;ndash; especially in considering the question of where AI does and does not belong.
+      <description>This post contains an address delivered at the IRGC conference on Governance Of and By Digital Technology.
+The separation of mechanism and policy Computer science has a well-established design principle known as separation of mechanism and policy. I think this principle may be equally applicable to human governance &amp;ndash; especially in considering the question of where AI does and does not belong.
 I believe the cautious use of today&amp;rsquo;s powerful AI technologies based on machine learning can justifiably play many useful roles in implementing low-level mechanisms used in governance.</description>
     </item>
     
@@ -34,8 +43,8 @@ I believe the cautious use of today&amp;rsquo;s powerful AI technologies based o
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/personhood/</guid>
-      <description>Bryan Ford  November 2020 (first draft)  arXiv preprint
- Abstract: Digital identity seems at first like a prerequisite for digital democracy: how can we ensure &amp;ldquo;one person, one vote&amp;rdquo; online without identifying voters? But the full gamut of digital identity solutions &amp;ndash; e.g., online ID checking, biometrics, self-sovereign identity, and social/trust networks &amp;ndash; all present severe flaws in security, privacy, and transparency, leaving users vulnerable to exclusion, identity loss or theft, and coercion.</description>
+      <description>Bryan Ford November 2020 (first draft) arXiv preprint
+Abstract: Digital identity seems at first like a prerequisite for digital democracy: how can we ensure &amp;ldquo;one person, one vote&amp;rdquo; online without identifying voters? But the full gamut of digital identity solutions &amp;ndash; e.g., online ID checking, biometrics, self-sovereign identity, and social/trust networks &amp;ndash; all present severe flaws in security, privacy, and transparency, leaving users vulnerable to exclusion, identity loss or theft, and coercion.</description>
     </item>
     
     <item>
@@ -44,7 +53,7 @@ I believe the cautious use of today&amp;rsquo;s powerful AI technologies based o
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/morphit-abs/</guid>
-      <description>Georgia Fragkouli, Katerina Argyraki, and Bryan Ford EPFL Winner of Applied Networking Research Prize (ANRP)  Proceedings on Privacy Enhancing Technologies
+      <description>Georgia Fragkouli, Katerina Argyraki, and Bryan Ford EPFL Winner of Applied Networking Research Prize (ANRP) Proceedings on Privacy Enhancing Technologies
 May 4, 2019. Abstract: Can we improve Internet transparency without worsening user anonymity? For a long time, researchers have been proposing transparency systems, where traffic reports produced at strategic network points help assess network behavior and verify service-level agreements or neutrality compliance. However, such reports necessarily reveal when certain traffic appeared at a certain network point, and this information could, in principle, be used to compromise low-latency anonymity networks like Tor.</description>
     </item>
     
@@ -54,7 +63,7 @@ May 4, 2019. Abstract: Can we improve Internet transparency without worsening us
       <pubDate>Fri, 18 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/chainiac-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -63,9 +72,7 @@ May 4, 2019. Abstract: Can we improve Internet transparency without worsening us
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2017/08/01/skipchain/</guid>
-      <description>A blockchain, or distributed ledger, is a log maintained collectively by a distributed group of participants who agree on and record transactions without relying for security on any single trusted party. While initially popularized by Bitcoin and its derivatives, the blockchain abstraction is not specific to currencies, and there is exploding industry interest in many non-currency uses.
- 
-Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
+      <description>A blockchain, or distributed ledger, is a log maintained collectively by a distributed group of participants who agree on and record transactions without relying for security on any single trusted party. While initially popularized by Bitcoin and its derivatives, the blockchain abstraction is not specific to currencies, and there is exploding industry interest in many non-currency uses. Many of these diverse use-cases, however, require users to be able to verify whether or not some transaction has been committed to a blockchain.</description>
     </item>
     
     <item>
@@ -74,8 +81,8 @@ Many of these diverse use-cases, however, require users to be able to verify whe
       <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/unlynx-abs/</guid>
-      <description>David Froelicher, Patricia Egger, Jo&amp;atilde;o S&amp;aacute; Sousa, Jean Louis Raisaro, Zhicong Huang, Christian Mouchet, Bryan Ford, and Jean-Pierre Hubaux   Privacy Enhancing Technologies Symposium (PETS)
-July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing among multiple parties either depend on a centralized authority that must be trusted and provides only weakest-link security (e.g., the entity that manages private/secret cryptographic keys), or leverage on decentralized but impractical approaches (e.</description>
+      <description>David Froelicher, Patricia Egger, Jo&amp;atilde;o S&amp;aacute; Sousa, Jean Louis Raisaro, Zhicong Huang, Christian Mouchet, Bryan Ford, and Jean-Pierre Hubaux Privacy Enhancing Technologies Symposium (PETS)
+July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing among multiple parties either depend on a centralized authority that must be trusted and provides only weakest-link security (e.g., the entity that manages private/secret cryptographic keys), or leverage on decentralized but impractical approaches (e.g., secure multi-party computation).</description>
     </item>
     
     <item>
@@ -84,7 +91,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/cosi/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -93,8 +100,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/03/10/apple/</guid>
-      <description>This post originally appeared on the Freedom to Tinker blog by the Center for Information Technology Policy at Princeton University. 
-The Apple versus FBI showdown has quickly become a crucial flashpoint of the &amp;ldquo;new Crypto War.&amp;rdquo; On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters.</description>
+      <description>The Apple versus FBI showdown has quickly become a crucial flashpoint of the “new Crypto War.” On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters. The fact that the FBI allowed Apple to disclose the order publicly, on the same day, represents a rare exception to the government&amp;rsquo;s normal penchant for secrecy.</description>
     </item>
     
     <item>
@@ -103,7 +109,7 @@ The Apple versus FBI showdown has quickly become a crucial flashpoint of the &am
       <pubDate>Tue, 20 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2015-10-20-cosi-ct/</guid>
-      <description>Bryan Ford   draft-ford-trans-witness-00  Abstract: This document proposes a backward-compatible extension to CT enabling log servers to obtain compact collective signatures from any number of well-known &#34;witness&#34; servers, which clients can check without gossip to verify that log server records have been widely witnessed. Collective signatures proactively protect clients from man-in-the- middle attackers who may have stolen the private keys of one or more log servers, even if the attacker controls the client&#39;s network access, the client is unwilling to gossip for privacy reasons, or the client does not wish to incur the network bandwidth and/or latency costs of gossip.</description>
+      <description>Bryan Ford draft-ford-trans-witness-00 Abstract: This document proposes a backward-compatible extension to CT enabling log servers to obtain compact collective signatures from any number of well-known &#34;witness&#34; servers, which clients can check without gossip to verify that log server records have been widely witnessed. Collective signatures proactively protect clients from man-in-the- middle attackers who may have stolen the private keys of one or more log servers, even if the attacker controls the client&#39;s network access, the client is unwilling to gossip for privacy reasons, or the client does not wish to incur the network bandwidth and/or latency costs of gossip.</description>
     </item>
     
     <item>
@@ -112,8 +118,8 @@ The Apple versus FBI showdown has quickly become a crucial flashpoint of the &am
       <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-zhai/</guid>
-      <description>Ennan Zhai  Ph.D. thesis advised by Bryan Ford
-August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely on redundancy techniques to enhance reliability and availability. In complex multi-layered hardware/software stacks, however, seemingly independent components used redundantly might share deep, hidden dependencies. These common dependencies may potentially result in unexpected correlated failures, thus undermining redundancy efforts.  Heading off correlated failures is extremely challenging in cloud-scale systems for the following three reasons.</description>
+      <description>Ennan Zhai Ph.D. thesis advised by Bryan Ford
+August 11, 2015 Abstract: Today’s cloud computing systems pervasively rely on redundancy techniques to enhance reliability and availability. In complex multi-layered hardware/software stacks, however, seemingly independent components used redundantly might share deep, hidden dependencies. These common dependencies may potentially result in unexpected correlated failures, thus undermining redundancy efforts. Heading off correlated failures is extremely challenging in cloud-scale systems for the following three reasons.</description>
     </item>
     
     <item>
@@ -122,7 +128,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/certco/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -131,7 +137,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/cloud-indaas/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -140,7 +146,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/cloud-psra/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -149,7 +155,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Sun, 03 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/irec/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -159,12 +165,12 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       
       <guid>https://bford.info/pub/net/devtransp-abs/</guid>
       <description>Jacob Strauss
-	Chris Lesniewski-Laas
-	Justin Mazzola Paluska
-	Bryan Ford
-	Robert Morris
-	Frans Kaashoek
- Published in SOSP Workshop on Hot Topics in Storage and File Systems (HotStorage &#39;09) October 11, 2009, Big Sky, MT, USA Abstract: This paper proposes a new storage model, device transparency, in which users view and manage their entire data collection from any of their devices, even from disconnected storage-limited devices holding only a subset of the entire collection.</description>
+Chris Lesniewski-Laas
+Justin Mazzola Paluska
+Bryan Ford
+Robert Morris
+Frans Kaashoek
+Published in SOSP Workshop on Hot Topics in Storage and File Systems (HotStorage &#39;09) October 11, 2009, Big Sky, MT, USA Abstract: This paper proposes a new storage model, device transparency, in which users view and manage their entire data collection from any of their devices, even from disconnected storage-limited devices holding only a subset of the entire collection.</description>
     </item>
     
   </channel>

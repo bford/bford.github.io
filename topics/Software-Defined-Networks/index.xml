@@ -13,8 +13,8 @@
       <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/maple-abs/</guid>
-      <description>Andreas Voellmy, Junchang Wang, Y. Richard Yang, Bryan Ford, and Paul Hudak   ACM SIGCOMM 2013
-August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a simple, centralized programming model for managing complex networks. However, challenges in managing low-level details, such as setting up and maintaining correct and efficient forwarding tables on distributed switches, often compromise this conceptual simplicity. In this paper, we present Maple, a system that simplifies SDN programming by (1) allowing a programmer to use a standard programming language to design an arbitrary, centralized algorithm, which we call an algorithmic policy, to decide the behaviors of an entire network, and (2) providing an abstraction that the programmer-defined, centralized policy runs, conceptually, &amp;ldquo;afresh&amp;rdquo; on every packet entering a network, and hence is oblivious to the challenge of translating a high-level policy into sets of rules on distributed individual switches.</description>
+      <description>Andreas Voellmy, Junchang Wang, Y. Richard Yang, Bryan Ford, and Paul Hudak ACM SIGCOMM 2013
+August 12-16, 2013 Abstract: Software-Defined Networking offers the appeal of a simple, centralized programming model for managing complex networks. However, challenges in managing low-level details, such as setting up and maintaining correct and efficient forwarding tables on distributed switches, often compromise this conceptual simplicity. In this paper, we present Maple, a system that simplifies SDN programming by (1) allowing a programmer to use a standard programming language to design an arbitrary, centralized algorithm, which we call an algorithmic policy, to decide the behaviors of an entire network, and (2) providing an abstraction that the programmer-defined, centralized policy runs, conceptually, &amp;ldquo;afresh&amp;rdquo; on every packet entering a network, and hence is oblivious to the challenge of translating a high-level policy into sets of rules on distributed individual switches.</description>
     </item>
     
     <item>
@@ -24,8 +24,8 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       
       <guid>https://bford.info/pub/os/scaling-sdn-abs/</guid>
       <description>Andreas Voellmy, Bryan Ford, Paul Hudak, and Y. Richard Yang Yale University Department of Computer Science
-  Technical Report YALEU/DCS/TR-1468
-July 2012  Abstract: Software defined networks (SDN) introduce centralized controllers to drastically increase network programmability. The simplicity of a logical centralized controller, however, can come at the cost of controller programming complexity and scalability. In this paper, we present McNettle, an extensible SDN controller system whose control event processing throughput scales with the number of system CPU cores and which supports control algorithms requiring globally visible state changes occurring at flow arrival rates.</description>
+Technical Report YALEU/DCS/TR-1468
+July 2012 Abstract: Software defined networks (SDN) introduce centralized controllers to drastically increase network programmability. The simplicity of a logical centralized controller, however, can come at the cost of controller programming complexity and scalability. In this paper, we present McNettle, an extensible SDN controller system whose control event processing throughput scales with the number of system CPU cores and which supports control algorithms requiring globally visible state changes occurring at flow arrival rates.</description>
     </item>
     
   </channel>

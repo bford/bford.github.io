@@ -13,8 +13,8 @@
       <pubDate>Mon, 01 Feb 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5684-abs/</guid>
-      <description>Pyda Srisuresh and Bryan Ford   IETF RFC 5684
-February 2010  Abstract: This document identifies two deployment scenarios that have arisen from the unconventional network topologies formed using Network Address Translator (NAT) devices. First, the simplicity of administering networks through the combination of NAT and DHCP has increasingly lead to the deployment of multi-level inter-connected private networks involving overlapping private IP address spaces. Second, the proliferation of private networks in enterprises, hotels and conferences, and the wide-spread use of Virtual Private Networks (VPNs) to access an enterprise intranet from remote locations has increasingly lead to overlapping private IP address space between remote and corporate networks.</description>
+      <description>Pyda Srisuresh and Bryan Ford IETF RFC 5684
+February 2010 Abstract: This document identifies two deployment scenarios that have arisen from the unconventional network topologies formed using Network Address Translator (NAT) devices. First, the simplicity of administering networks through the combination of NAT and DHCP has increasingly lead to the deployment of multi-level inter-connected private networks involving overlapping private IP address spaces. Second, the proliferation of private networks in enterprises, hotels and conferences, and the wide-spread use of Virtual Private Networks (VPNs) to access an enterprise intranet from remote locations has increasingly lead to overlapping private IP address space between remote and corporate networks.</description>
     </item>
     
     <item>
@@ -23,8 +23,8 @@ February 2010  Abstract: This document identifies two deployment scenarios that 
       <pubDate>Wed, 01 Apr 2009 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5508-abs/</guid>
-      <description>Pyda Srisuresh, Bryan Ford, Senthil Sivakumar, and Saikat Guha   IETF RFC 5508
-April 2009  Abstract: This document specifies the behavioral properties required of the Network Address Translator (NAT) devices in conjunction with the Internet Control Message Protocol (ICMP). The objective of this memo is to make NAT devices more predictable and compatible with diverse application protocols that traverse the devices. Companion documents provide behavioral recommendations specific to TCP, UDP, and other protocols.</description>
+      <description>Pyda Srisuresh, Bryan Ford, Senthil Sivakumar, and Saikat Guha IETF RFC 5508
+April 2009 Abstract: This document specifies the behavioral properties required of the Network Address Translator (NAT) devices in conjunction with the Internet Control Message Protocol (ICMP). The objective of this memo is to make NAT devices more predictable and compatible with diverse application protocols that traverse the devices. Companion documents provide behavioral recommendations specific to TCP, UDP, and other protocols.</description>
     </item>
     
     <item>
@@ -34,8 +34,8 @@ April 2009  Abstract: This document specifies the behavioral properties required
       
       <guid>https://bford.info/pub/net/logjam-abs/</guid>
       <description>Bryan Ford
-	Janardhan Iyengar
-	Massachusetts Institute of Technology 	Franklin &amp;amp; Marshall College  Published in Seventh ACM Workshop on Hot Topics in Networks (HotNets-VII) October 6-7, 2008, Calgary, Alberta, Canada Abstract: Current Internet transports conflate transport semantics with endpoint addressing and flow regulation, creating roadblocks to Internet evolution that we propose to address with a new layering model. Factoring endpoint addressing (port numbers) into a separate Endpoint Layer permits incremental rollout of new or improved transports at OS or application level, enables transport-oblivious firewall/NAT traversal, improves transport negotiation efficiency, and simplifies endpoint address space administration.</description>
+Janardhan Iyengar
+Massachusetts Institute of Technology Franklin &amp;amp; Marshall College Published in Seventh ACM Workshop on Hot Topics in Networks (HotNets-VII) October 6-7, 2008, Calgary, Alberta, Canada Abstract: Current Internet transports conflate transport semantics with endpoint addressing and flow regulation, creating roadblocks to Internet evolution that we propose to address with a new layering model. Factoring endpoint addressing (port numbers) into a separate Endpoint Layer permits incremental rollout of new or improved transports at OS or application level, enables transport-oblivious firewall/NAT traversal, improves transport negotiation efficiency, and simplifies endpoint address space administration.</description>
     </item>
     
     <item>
@@ -44,8 +44,8 @@ April 2009  Abstract: This document specifies the behavioral properties required
       <pubDate>Wed, 01 Oct 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5382-abs/</guid>
-      <description>   Saikat Guha, Kaushik Biswas, Bryan Ford, Senthil Sivakumar, and Pyda Srisuresh   IETF RFC 5382
-October 2008  Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Final RFC: Plain text  Early drafts:   IETF working group draft versions: 06 05 04 03 02 01 00  Individual draft versions: 02 01 00  </description>
+      <description> Saikat Guha, Kaushik Biswas, Bryan Ford, Senthil Sivakumar, and Pyda Srisuresh IETF RFC 5382
+October 2008 Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Final RFC: Plain text Early drafts: IETF working group draft versions: 06 05 04 03 02 01 00 Individual draft versions: 02 01 00 </description>
     </item>
     
     <item>
@@ -54,8 +54,8 @@ October 2008  Abstract: This document defines a set of requirements for NATs tha
       <pubDate>Sat, 01 Mar 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5128-abs/</guid>
-      <description>Pyda Srisuresh, Bryan Ford, and Dan Kegel   IETF RFC 5128
-March 2008  Abstract: This memo documents the various methods known to be in use by applications to establish direct communication in the presence of Network Address Translators (NATs) at the current time. Although this memo is intended to be mainly descriptive, the Security Considerations section makes some purely advisory recommendations about how to deal with security vulnerabilities the applications could inadvertently create when using the methods described.</description>
+      <description>Pyda Srisuresh, Bryan Ford, and Dan Kegel IETF RFC 5128
+March 2008 Abstract: This memo documents the various methods known to be in use by applications to establish direct communication in the presence of Network Address Translators (NATs) at the current time. Although this memo is intended to be mainly descriptive, the Security Considerations section makes some purely advisory recommendations about how to deal with security vulnerabilities the applications could inadvertently create when using the methods described.</description>
     </item>
     
     <item>
@@ -64,7 +64,7 @@ March 2008  Abstract: This memo documents the various methods known to be in use
       <pubDate>Sun, 10 Apr 2005 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/p2pnat-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com   Presented at the USENIX Annual Technical Conference, April 10-15, 2005. Abstract:  Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com Presented at the USENIX Annual Technical Conference, April 10-15, 2005. Abstract: Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer.</description>
     </item>
     
     <item>
@@ -73,7 +73,7 @@ March 2008  Abstract: This memo documents the various methods known to be in use
       <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2005/02/01/behave-app/</guid>
-      <description>Bryan Ford, Pyda Srisuresh, and Dan Kegel   draft-ford-behave-app  Abstract: This document defines guidelines by which application designers can create applications that communicate reliably and efficiently in the presence of Network Address Translators (NATs), particularly when the application has a need for &#34;peer-to-peer&#34; (P2P) type of communication. The guidelines allow a P2P application to work reliably across a majority of existing NATs, as well as all future NATs that conform to the behave requirements specified in companion documents.</description>
+      <description>Bryan Ford, Pyda Srisuresh, and Dan Kegel draft-ford-behave-app Abstract: This document defines guidelines by which application designers can create applications that communicate reliably and efficiently in the presence of Network Address Translators (NATs), particularly when the application has a need for &#34;peer-to-peer&#34; (P2P) type of communication. The guidelines allow a P2P application to work reliably across a majority of existing NATs, as well as all future NATs that conform to the behave requirements specified in companion documents.</description>
     </item>
     
     <item>
@@ -82,8 +82,8 @@ March 2008  Abstract: This memo documents the various methods known to be in use
       <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2005/02/01/behave-gen/</guid>
-      <description>Bryan Ford and Pyda Srisuresh   draft-ford-behave-gen
- Abstract: This document discusses the operating principles of Network Address Translator (NAT) devices and the behavioral properties required to make NAT more predictable and compatible with diverse application protocols. First, this document presents an architectural model for NAT devices and defines important terms used in conjunction with NAT operation. The architectural model sets the stage for a set of concrete recommendations for NAT implementers.</description>
+      <description>Bryan Ford and Pyda Srisuresh draft-ford-behave-gen
+Abstract: This document discusses the operating principles of Network Address Translator (NAT) devices and the behavioral properties required to make NAT more predictable and compatible with diverse application protocols. First, this document presents an architectural model for NAT devices and defines important terms used in conjunction with NAT operation. The architectural model sets the stage for a set of concrete recommendations for NAT implementers.</description>
     </item>
     
   </channel>

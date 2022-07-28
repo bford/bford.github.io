@@ -14,7 +14,7 @@
       
       <guid>https://bford.info/pub/net/tlsmeta-abs/</guid>
       <description>Bryan Ford
-EPFL   TLS 1.3 Ready or Not (TRON) Workshop
+EPFL TLS 1.3 Ready or Not (TRON) Workshop
 February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both performance and security, so far offers little protection against traffic analysis or fingerprinting using unencrypted metadata or other side-channels such as transmission lengths and timings. This paper explores metadata protection mechanisms for TLS, including already-included provisions (e.g., record padding), provisions not yet included but potentially feasible in TLS 1.</description>
     </item>
     
@@ -24,7 +24,7 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       <pubDate>Mon, 14 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/taq-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/tor-unordered/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/non-linear/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       <pubDate>Fri, 27 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/nsdi12-minion-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -60,7 +60,7 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       <pubDate>Sun, 28 Nov 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/pfldnet10-minion-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -70,8 +70,8 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       
       <guid>https://bford.info/pub/net/nego-abs/</guid>
       <description>Bryan Ford
-	Janardhan Iyengar
-	Yale University 	Franklin &amp;amp; Marshall College  Published in Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII) October 22-23, 2009, New York City, NY, USA Abstract: Internet evolution often depends on either inserting new protocol layers or upgrading existing layers to new protocols, but both of these evolutionary paths are obstructed by the difficulty and inefficiency of determining which protocols a pair of hosts mutually support and prefer.</description>
+Janardhan Iyengar
+Yale University Franklin &amp;amp; Marshall College Published in Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII) October 22-23, 2009, New York City, NY, USA Abstract: Internet evolution often depends on either inserting new protocol layers or upgrading existing layers to new protocols, but both of these evolutionary paths are obstructed by the difficulty and inefficiency of determining which protocols a pair of hosts mutually support and prefer.</description>
     </item>
     
     <item>
@@ -81,8 +81,8 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       
       <guid>https://bford.info/pub/net/logjam-abs/</guid>
       <description>Bryan Ford
-	Janardhan Iyengar
-	Massachusetts Institute of Technology 	Franklin &amp;amp; Marshall College  Published in Seventh ACM Workshop on Hot Topics in Networks (HotNets-VII) October 6-7, 2008, Calgary, Alberta, Canada Abstract: Current Internet transports conflate transport semantics with endpoint addressing and flow regulation, creating roadblocks to Internet evolution that we propose to address with a new layering model. Factoring endpoint addressing (port numbers) into a separate Endpoint Layer permits incremental rollout of new or improved transports at OS or application level, enables transport-oblivious firewall/NAT traversal, improves transport negotiation efficiency, and simplifies endpoint address space administration.</description>
+Janardhan Iyengar
+Massachusetts Institute of Technology Franklin &amp;amp; Marshall College Published in Seventh ACM Workshop on Hot Topics in Networks (HotNets-VII) October 6-7, 2008, Calgary, Alberta, Canada Abstract: Current Internet transports conflate transport semantics with endpoint addressing and flow regulation, creating roadblocks to Internet evolution that we propose to address with a new layering model. Factoring endpoint addressing (port numbers) into a separate Endpoint Layer permits incremental rollout of new or improved transports at OS or application level, enables transport-oblivious firewall/NAT traversal, improves transport negotiation efficiency, and simplifies endpoint address space administration.</description>
     </item>
     
     <item>
@@ -91,8 +91,8 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       <pubDate>Wed, 01 Oct 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5382-abs/</guid>
-      <description>   Saikat Guha, Kaushik Biswas, Bryan Ford, Senthil Sivakumar, and Pyda Srisuresh   IETF RFC 5382
-October 2008  Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Final RFC: Plain text  Early drafts:   IETF working group draft versions: 06 05 04 03 02 01 00  Individual draft versions: 02 01 00  </description>
+      <description> Saikat Guha, Kaushik Biswas, Bryan Ford, Senthil Sivakumar, and Pyda Srisuresh IETF RFC 5382
+October 2008 Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Final RFC: Plain text Early drafts: IETF working group draft versions: 06 05 04 03 02 01 00 Individual draft versions: 02 01 00 </description>
     </item>
     
     <item>
@@ -101,8 +101,8 @@ October 2008  Abstract: This document defines a set of requirements for NATs tha
       <pubDate>Sat, 01 Mar 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5128-abs/</guid>
-      <description>Pyda Srisuresh, Bryan Ford, and Dan Kegel   IETF RFC 5128
-March 2008  Abstract: This memo documents the various methods known to be in use by applications to establish direct communication in the presence of Network Address Translators (NATs) at the current time. Although this memo is intended to be mainly descriptive, the Security Considerations section makes some purely advisory recommendations about how to deal with security vulnerabilities the applications could inadvertently create when using the methods described.</description>
+      <description>Pyda Srisuresh, Bryan Ford, and Dan Kegel IETF RFC 5128
+March 2008 Abstract: This memo documents the various methods known to be in use by applications to establish direct communication in the presence of Network Address Translators (NATs) at the current time. Although this memo is intended to be mainly descriptive, the Security Considerations section makes some purely advisory recommendations about how to deal with security vulnerabilities the applications could inadvertently create when using the methods described.</description>
     </item>
     
     <item>
@@ -111,7 +111,7 @@ March 2008  Abstract: This memo documents the various methods known to be in use
       <pubDate>Sat, 01 Dec 2007 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/transport-ietf-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -121,7 +121,7 @@ March 2008  Abstract: This memo documents the various methods known to be in use
       
       <guid>https://bford.info/pub/net/sst-abs/</guid>
       <description>Bryan Ford
-Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract:  Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
+Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract: Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
     </item>
     
     <item>
@@ -130,7 +130,7 @@ Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-3
       <pubDate>Sun, 10 Apr 2005 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/p2pnat-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com   Presented at the USENIX Annual Technical Conference, April 10-15, 2005. Abstract:  Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com Presented at the USENIX Annual Technical Conference, April 10-15, 2005. Abstract: Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer.</description>
     </item>
     
   </channel>

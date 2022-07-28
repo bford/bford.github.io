@@ -13,8 +13,8 @@
       <pubDate>Mon, 01 Feb 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5684-abs/</guid>
-      <description>Pyda Srisuresh and Bryan Ford   IETF RFC 5684
-February 2010  Abstract: This document identifies two deployment scenarios that have arisen from the unconventional network topologies formed using Network Address Translator (NAT) devices. First, the simplicity of administering networks through the combination of NAT and DHCP has increasingly lead to the deployment of multi-level inter-connected private networks involving overlapping private IP address spaces. Second, the proliferation of private networks in enterprises, hotels and conferences, and the wide-spread use of Virtual Private Networks (VPNs) to access an enterprise intranet from remote locations has increasingly lead to overlapping private IP address space between remote and corporate networks.</description>
+      <description>Pyda Srisuresh and Bryan Ford IETF RFC 5684
+February 2010 Abstract: This document identifies two deployment scenarios that have arisen from the unconventional network topologies formed using Network Address Translator (NAT) devices. First, the simplicity of administering networks through the combination of NAT and DHCP has increasingly lead to the deployment of multi-level inter-connected private networks involving overlapping private IP address spaces. Second, the proliferation of private networks in enterprises, hotels and conferences, and the wide-spread use of Virtual Private Networks (VPNs) to access an enterprise intranet from remote locations has increasingly lead to overlapping private IP address space between remote and corporate networks.</description>
     </item>
     
     <item>
@@ -23,8 +23,8 @@ February 2010  Abstract: This document identifies two deployment scenarios that 
       <pubDate>Wed, 01 Apr 2009 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5508-abs/</guid>
-      <description>Pyda Srisuresh, Bryan Ford, Senthil Sivakumar, and Saikat Guha   IETF RFC 5508
-April 2009  Abstract: This document specifies the behavioral properties required of the Network Address Translator (NAT) devices in conjunction with the Internet Control Message Protocol (ICMP). The objective of this memo is to make NAT devices more predictable and compatible with diverse application protocols that traverse the devices. Companion documents provide behavioral recommendations specific to TCP, UDP, and other protocols.</description>
+      <description>Pyda Srisuresh, Bryan Ford, Senthil Sivakumar, and Saikat Guha IETF RFC 5508
+April 2009 Abstract: This document specifies the behavioral properties required of the Network Address Translator (NAT) devices in conjunction with the Internet Control Message Protocol (ICMP). The objective of this memo is to make NAT devices more predictable and compatible with diverse application protocols that traverse the devices. Companion documents provide behavioral recommendations specific to TCP, UDP, and other protocols.</description>
     </item>
     
     <item>
@@ -33,8 +33,8 @@ April 2009  Abstract: This document specifies the behavioral properties required
       <pubDate>Wed, 01 Oct 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5382-abs/</guid>
-      <description>   Saikat Guha, Kaushik Biswas, Bryan Ford, Senthil Sivakumar, and Pyda Srisuresh   IETF RFC 5382
-October 2008  Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Final RFC: Plain text  Early drafts:   IETF working group draft versions: 06 05 04 03 02 01 00  Individual draft versions: 02 01 00  </description>
+      <description> Saikat Guha, Kaushik Biswas, Bryan Ford, Senthil Sivakumar, and Pyda Srisuresh IETF RFC 5382
+October 2008 Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Final RFC: Plain text Early drafts: IETF working group draft versions: 06 05 04 03 02 01 00 Individual draft versions: 02 01 00 </description>
     </item>
     
     <item>
@@ -43,8 +43,8 @@ October 2008  Abstract: This document defines a set of requirements for NATs tha
       <pubDate>Sat, 01 Mar 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5128-abs/</guid>
-      <description>Pyda Srisuresh, Bryan Ford, and Dan Kegel   IETF RFC 5128
-March 2008  Abstract: This memo documents the various methods known to be in use by applications to establish direct communication in the presence of Network Address Translators (NATs) at the current time. Although this memo is intended to be mainly descriptive, the Security Considerations section makes some purely advisory recommendations about how to deal with security vulnerabilities the applications could inadvertently create when using the methods described.</description>
+      <description>Pyda Srisuresh, Bryan Ford, and Dan Kegel IETF RFC 5128
+March 2008 Abstract: This memo documents the various methods known to be in use by applications to establish direct communication in the presence of Network Address Translators (NATs) at the current time. Although this memo is intended to be mainly descriptive, the Security Considerations section makes some purely advisory recommendations about how to deal with security vulnerabilities the applications could inadvertently create when using the methods described.</description>
     </item>
     
     <item>
@@ -53,8 +53,8 @@ March 2008  Abstract: This memo documents the various methods known to be in use
       <pubDate>Mon, 27 Feb 2006 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/uia-iptps-abs/</guid>
-      <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, and Robert Morris Massachusetts Institute of Technology   5th International Workshop on Peer-to-Peer Systems
-February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a peer-to-peer connectivity architecture that provides users a simple, intuitive, and secure way to share information and services between personal devices by assigning ad hoc names that act like &amp;ldquo;virtual cables.</description>
+      <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, and Robert Morris Massachusetts Institute of Technology 5th International Workshop on Peer-to-Peer Systems
+February 27-28, 2006 Abstract The User Information Architecture, or UIA, is a peer-to-peer connectivity architecture that provides users a simple, intuitive, and secure way to share information and services between personal devices by assigning ad hoc names that act like &amp;ldquo;virtual cables.&amp;rdquo; Users assign names by &amp;ldquo;introducing&amp;rdquo; devices to each other on a common network.</description>
     </item>
     
     <item>
@@ -63,7 +63,7 @@ February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a p
       <pubDate>Sun, 10 Apr 2005 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/p2pnat-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com   Presented at the USENIX Annual Technical Conference, April 10-15, 2005. Abstract:  Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com Presented at the USENIX Annual Technical Conference, April 10-15, 2005. Abstract: Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer.</description>
     </item>
     
     <item>
@@ -72,7 +72,7 @@ February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a p
       <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2005/02/01/behave-app/</guid>
-      <description>Bryan Ford, Pyda Srisuresh, and Dan Kegel   draft-ford-behave-app  Abstract: This document defines guidelines by which application designers can create applications that communicate reliably and efficiently in the presence of Network Address Translators (NATs), particularly when the application has a need for &#34;peer-to-peer&#34; (P2P) type of communication. The guidelines allow a P2P application to work reliably across a majority of existing NATs, as well as all future NATs that conform to the behave requirements specified in companion documents.</description>
+      <description>Bryan Ford, Pyda Srisuresh, and Dan Kegel draft-ford-behave-app Abstract: This document defines guidelines by which application designers can create applications that communicate reliably and efficiently in the presence of Network Address Translators (NATs), particularly when the application has a need for &#34;peer-to-peer&#34; (P2P) type of communication. The guidelines allow a P2P application to work reliably across a majority of existing NATs, as well as all future NATs that conform to the behave requirements specified in companion documents.</description>
     </item>
     
     <item>
@@ -81,8 +81,8 @@ February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a p
       <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2005/02/01/behave-gen/</guid>
-      <description>Bryan Ford and Pyda Srisuresh   draft-ford-behave-gen
- Abstract: This document discusses the operating principles of Network Address Translator (NAT) devices and the behavioral properties required to make NAT more predictable and compatible with diverse application protocols. First, this document presents an architectural model for NAT devices and defines important terms used in conjunction with NAT operation. The architectural model sets the stage for a set of concrete recommendations for NAT implementers.</description>
+      <description>Bryan Ford and Pyda Srisuresh draft-ford-behave-gen
+Abstract: This document discusses the operating principles of Network Address Translator (NAT) devices and the behavioral properties required to make NAT more predictable and compatible with diverse application protocols. First, this document presents an architectural model for NAT devices and defines important terms used in conjunction with NAT operation. The architectural model sets the stage for a set of concrete recommendations for NAT implementers.</description>
     </item>
     
     <item>
@@ -91,8 +91,8 @@ February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a p
       <pubDate>Thu, 20 Nov 2003 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/uip-case-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology   Second Workshop on Hot Topics in Networks
-November 20-21, 2003  Abstract: Though appropriate for core Internet infrastructure, the Internet Protocol is unsuited to routing within and between emerging ad-hoc edge networks due to its dependence on hierarchical, administratively assigned addresses. Existing ad-hoc routing protocols address the management problem but do not scale to Internet-wide networks. The promise of ubiquitous network computing cannot be fulfilled until we develop an Unmanaged Internet Protocol (UIP), a scalable routing protocol that manages itself automatically.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology Second Workshop on Hot Topics in Networks
+November 20-21, 2003 Abstract: Though appropriate for core Internet infrastructure, the Internet Protocol is unsuited to routing within and between emerging ad-hoc edge networks due to its dependence on hierarchical, administratively assigned addresses. Existing ad-hoc routing protocols address the management problem but do not scale to Internet-wide networks. The promise of ubiquitous network computing cannot be fulfilled until we develop an Unmanaged Internet Protocol (UIP), a scalable routing protocol that manages itself automatically.</description>
     </item>
     
     <item>
@@ -101,8 +101,8 @@ November 20-21, 2003  Abstract: Though appropriate for core Internet infrastruct
       <pubDate>Fri, 31 Oct 2003 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/uip-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology   Technical Report MIT-LCS-TR-926
-October 31, 2003  Abstract: Unmanaged Internet Protocol (UIP) is a fully self-organizing network-layer protocol that implements scalable identity-based routing. In contrast with address-based routing protocols, which depend for scalability on centralized hierarchical address management, UIP nodes use a flat namespace of cryptographic node identifiers. Node identities can be created locally on demand and remain stable across network changes.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology Technical Report MIT-LCS-TR-926
+October 31, 2003 Abstract: Unmanaged Internet Protocol (UIP) is a fully self-organizing network-layer protocol that implements scalable identity-based routing. In contrast with address-based routing protocols, which depend for scalability on centralized hierarchical address management, UIP nodes use a flat namespace of cryptographic node identifiers. Node identities can be created locally on demand and remain stable across network changes. Unlike location-independent name services, the UIP routing protocol can stitch together many conventional address-based networks with disjoint or discontinuous address domains, providing connectivity between any pair of participating nodes even when no underlying network provides direct connectivity.</description>
     </item>
     
     <item>
@@ -111,7 +111,7 @@ October 31, 2003  Abstract: Unmanaged Internet Protocol (UIP) is a fully self-or
       <pubDate>Thu, 24 Jul 2003 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2003/07/24/service-duality/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
   </channel>

@@ -52,60 +52,67 @@
       <h1>How Do You Know It&#39;s On the Blockchain? With a SkipChain.</h1>
 
       
-
-<p>A <a href="https://en.wikipedia.org/wiki/Blockchain">blockchain</a>,
+A <a href="https://en.wikipedia.org/wiki/Blockchain">blockchain</a>,
 or distributed ledger,
 is a log maintained collectively by a distributed group of participants
 who agree on and record transactions without relying for security on
 any single trusted party.
-While initially popularized by <a href="https://en.wikipedia.org/wiki/Bitcoin">Bitcoin</a>
+While initially popularized by
+<a href="https://en.wikipedia.org/wiki/Bitcoin">Bitcoin</a>
 and its derivatives,
 the blockchain abstraction is not specific to currencies,
-and there is exploding industry interest in many non-currency uses.</p>
+and there is exploding industry interest in many non-currency uses.
 
-<p><center>
+<p>
+<center>
 <img src="blockchain.svg" alt="Blockchain">
-</center></p>
+</center>
 
-<p>Many of these diverse use-cases, however,
-require users to be able to <em>verify</em> whether or not
+<p>
+Many of these diverse use-cases, however,
+require users to be able to <i>verify</i> whether or not
 some transaction has been committed to a blockchain.
 With currently-deployed blockchains, however,
-securely verifying transactions unfortunately requires the user&rsquo;s device
+securely verifying transactions unfortunately requires the user's device
 to be online and connected to the Internet,
 and to pay the bandwidth and power costs of maintaining connectivity
-with multiple (perhaps many) nodes on the blockchain&rsquo;s overlay network.</p>
+with multiple (perhaps many) nodes on the blockchain's overlay network.
 
-<p><img src="verified.jpg" style="float:right;width:20%"></p>
+<p>
+<img src="verified.jpg" style="float:right;width:20%">
 
-<p>This blog post explores the challenges this verification problem
-presents for important blockchain applications such as
+<p>
+This blog post explores the challenges this verification problem
+presents for important blockchain applications such as 
 document <a href="https://en.wikipedia.org/wiki/Notary">notarization</a>.
-We then explore one possible solution: <em>SkipChains</em>,
+We then explore one possible solution: <i>SkipChains</i>,
 a cryptographically-traversable, offline- and peer-to-peer-verifiable
 blockchain structure.
-SkipChains were introduced by the
+SkipChains were introduced by the 
 <a href="https://dedis.epfl.ch/">Decentralized/Destributed Systems (DEDIS) lab</a>
 at <a href="https://www.epfl.ch/">EPFL</a>
-as part of <a href="https://eprint.iacr.org/2017/648">Chainiac</a>,
+as part of <a href="https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/nikitin">Chainiac</a>,
 a blockchain-based software update system to be presented at
-<a href="https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/nikitin">USENIX Security &lsquo;17</a>.
+<a href="https://www.usenix.org/conference/usenixsecurity17/">USENIX Security '17</a>.
 While introduced in the context of a software update system,
 this blog post focuses not on software updates
-but other potential applications of blockchains and SkipChains.</p>
+but other potential applications of blockchains and SkipChains.
 
-<h1 id="using-blockchains-in-document-notarization">Using Blockchains in Document Notarization</h1>
+<h2>Using Blockchains in Document Notarization</h2>
 
-<p>One attractive and widely-discussed non-currency use-case for blockchains is
+<p>
+One attractive and widely-discussed non-currency use-case for blockchains is
 in electronically timestamping and notarizing documents
 such as <a href="https://link.springer.com/chapter/10.1007/978-3-319-45153-4_48/fulltext.html">academic degrees</a>
-or <a href="https://www.ubitquity.io/home/resources/worldbank_land_paper_ubitquity_march_2016.pdf">land records</a>.
-The essence of the idea is to use a blockchain&rsquo;s tamper-resistance property
-to make it harder to forge, back-date, or modify important records.</p>
+or <a href="https://cadasta.org/resources/white-papers/bitcoin-blockchain-land/">land records</a>.
+The essence of the idea is to use a blockchain's tamper-resistance property
+to make it harder to forge, back-date, or modify important records.
 
-<p><img src="award-certificate.jpg" style="border:10px solid white;float:right;width:30%"></p>
+<p>
+<img src="award-certificate.jpg" style="border:10px solid white;float:right;width:30%">
 
-<p>While a promising application,
+<p>
+While a promising application,
 current blockchain approaches to document notarization suffer from
 several important caveats and limitations.
 Some are already well-known:
@@ -114,96 +121,107 @@ for example, that
 Further,
 in this use-case the blockchain itself
 really provides only one narrow security property:
-proof that a particular electronic document <em>existed</em> at some time.
+proof that a particular electronic document <i>existed</i> at some time.
 A blockchain does not automatically provide
-<a href="https://decentralize.today/does-notarization-on-the-blockchain-actually-work-d8006443c0b9">other important security properties</a>
+<a href="https://www.fintechfutures.com/2018/08/blockchain-and-the-notaries-the-services-wont-be-replaced-but-transformed/">other important security properties</a>
 that we traditionally depend on notaries for,
-such as to verify the <em>identities</em> of the parties signing a document,
+such as to verify the <i>identities</i> of the parties signing a document,
 and to attest that this signing was done freely and not under duress.
 Blockchains are certainly useful and can improve the security of notarization,
-but are not an automatic replacement.</p>
+but are not an automatic replacement.
 
-<h1 id="how-do-you-know-it-s-on-the-blockchain">How Do You Know It&rsquo;s On the Blockchain?</h1>
+<h2>How Do You Know It's On the Blockchain?</h2>
 
-<p>Current blockchains have another important limitation,
+<p>
+Current blockchains have another important limitation,
 not yet widely recognized,
 that severely affects their usefulness for notarization applications.
 If someone shows you an electronic document,
 stating they hold a particular academic degree or land title for example,
-and they claim this document is &ldquo;on the blockchain,&rdquo;
+and they claim this document is "on the blockchain,"
 how do you use your favorite personal mobile device
 (smart phone, laptop, etc.)
-to verify that the claimed document actually <em>is on the blockhchain</em>?
+to verify that the claimed document actually <i>is on the blockhchain</i>?
 With current public blockchains such as
 <a href="https://en.wikipedia.org/wiki/Bitcoin">Bitcoin</a> and
 <a href="https://www.ethereum.org/">Ethereum</a>,
 securely verifying that a document is indeed on the blockchain
-requires your device to:</p>
+requires your device to:
 
 <ol>
-<li>Be online with a working connection to the Internet,</li>
-<li>Be well-connected with multiple &ldquo;full nodes&rdquo;
-on the blockchain&rsquo;s overlay network, and</li>
-<li>Regularly &ndash; and ideally continually &ndash; invest the bandwidth
-and power costs of &ldquo;following&rdquo; the blockchain.</li>
+<li>
+Be online with a working connection to the Internet,
+<li>
+Be well-connected with multiple "full nodes"
+   on the blockchain's overlay network, and
+<li>
+Regularly -- and ideally continually -- invest the bandwidth
+   and power costs of "following" the blockchain.
 </ol>
 
-<p>For example, suppose Alice is a certified electrician
-who shows up for a job at Bob&rsquo;s home,
-but Bob asks for verifiable proof of Alice&rsquo;s professional credentials.
-Assume that Alice&rsquo;s &ldquo;electrician&rdquo; certificate is a digital credential
+<p>
+For example, suppose Alice is a certified electrician
+who shows up for a job at Bob's home,
+but Bob asks for verifiable proof of Alice's professional credentials.
+Assume that Alice's "electrician" certificate is a digital credential
 that was issued by an academic or government organization that Bob trusts,
 and was encoded in an open format
 such as <a href="https://www.blockcerts.org/">Blockcerts</a>,
-and &ldquo;notarized&rdquo; by attaching it to
+and "notarized" by attaching it to
 a blockchain transaction at the time Alice earned the credential.
 Alice might have obtained this credential months or even years
-before Bob calls Alice to work on his home.</p>
+before Bob calls Alice to work on his home.
 
-<p>When Alice shows up to the appointment,
+<p>
+When Alice shows up to the appointment,
 she can use her smart phone to send her credential,
-along with a
+along with a 
 <a href="https://en.wikipedia.org/wiki/Merkle_tree">cryptographic proof of its inclusion</a>
 in some blockchain transaction,
-to Bob&rsquo;s smart phone for verification.
-For example, Alice might send her credential to Bob&rsquo;s device
-via Bluetooth or Wifi, or by displaying a
+to Bob's smart phone for verification.
+For example, Alice might send her credential to Bob's device
+via Bluetooth or Wifi, or by displaying a 
 <a href="https://en.wikipedia.org/wiki/QR_code">QR code</a>
-for Bob&rsquo;s device to scan.
-But then what, precisely, does Bob&rsquo;s device <em>do</em> to verify that
-Alice&rsquo;s credential is indeed on the blockchain?
+for Bob's device to scan.
+But then what, precisely, does Bob's device <i>do</i> to verify that
+Alice's credential is indeed on the blockchain?
 Without this critical verification step,
 Alice could be showing Bob a forged certificate
 that was never actually notarized,
 or a tampered certificate with the name or date changed.
-Returning briefly to <a href="https://eprint.iacr.org/2017/648">Chainiac</a>&rsquo;s
+Returning briefly to <a href="https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/nikitin">Chainiac</a>'s 
 motivating use-case,
-Alice might be asking Bob to install an application or OS update &ndash;
+Alice might be asking Bob to install an application or OS update --
 but without verifying that this update is indeed on the blockchain,
 Alice could give Bob a secretly backdoored image that the software vendor
 <a href="https://freedom-to-tinker.com/2016/03/10/apple-fbi-and-software-transparency/">was coerced into signing</a>.
 Bob might never know that the document or software Alice gave her
-was not the official, notarized version
-that everyone else sees on the public blockchain.</p>
+was not the official, notarized version 
+that everyone else sees on the public blockchain.
 
-<h2 id="bad-solution-just-trust-someone">Bad Solution: Just Trust Someone</h2>
+<h2>Bad Solution: Just Trust Someone</h2>
 
-<p>The Blockcerts <a href="https://github.com/blockchain-certificates/cert-verifier-js#verification-process">verification process</a> documentation specifies that:</p>
+<p>
+The Blockcerts <a href="https://github.com/blockchain-certificates/cert-verifier-js#verification-process">verification process</a> documentation specifies that:
 
 <blockquote>
-<p>A Blockchain Certificate must have a <code>certificate.signature.anchors</code> field, which must contain at least one anchor to a blockchain transaction.</p>
+A Blockchain Certificate must have a `certificate.signature.anchors` field, which must contain at least one anchor to a blockchain transaction.
 
-<p>[&hellip;]</p>
+<p>
+[...]
 
-<p>Supplied with the blockchain identifier and transaction id, the transaction can be obtained from a service like <a href="http://blockchain.info">blockchain.info</a>.</p>
+<p>
+Supplied with the blockchain identifier and transaction id, the transaction can be obtained from a service like <a href="http://blockchain.info">blockchain.info</a>.
 </blockquote>
 
-<p>There are two crucial unstated and unaddressed issues here,
+<p>
+There are two crucial unstated and unaddressed issues here,
 and in similar blockchain-based notarization schemes.
 These issues are not in any way specific to Blockcerts, however,
-but arise from basic limitations of current blockchains.</p>
+but arise from basic limitations of current blockchains.
 
-<p>First, in order for Bob to retrieve the transaction from
+<p>
+First, in order for Bob to retrieve the transaction from
 <a href="http://blockchain.info">blockchain.info</a>
 and verify that it indeed anchors the certificate Alice presented,
 both Bob and <a href="http://blockchain.info">blockchain.info</a>
@@ -211,53 +229,57 @@ must be online and able to communicate with each other.
 If Bob lives in a remote village in the developing world
 where Internet connectivity is slow and expensive,
 online verification might not be so practical.
-Bob may then just have to take Alice&rsquo;s word &ndash;
+Bob may then just have to take Alice's word --
 not exactly the security advancement we hoped for,
 especially since poor, disconnected communities already
 tend to be vulnerable to fraud and criminal attack.
-Alternatively, Bob&rsquo;s Internet access might be temporarily unavailable &ndash;
-perhaps because that&rsquo;s what Alice showed up to fix.
-Or perhaps Alice is the captain of a
+Alternatively, Bob's Internet access might be temporarily unavailable --
+perhaps because that's what Alice showed up to fix.
+Or perhaps Alice is the captain of a 
 <a href="https://www.nytimes.com/2017/03/04/business/dealbook/blockchain-ibm-bitcoin.html">container ship</a>
-that just arrived in Bob&rsquo;s port,
+that just arrived in Bob's port,
 in which case Bob needs to verify thousands of bills of lading.
 This online verification incurs substantial communication costs
-even when it works reliably &ndash;
+even when it works reliably --
 and the entire port may have to shut down
-during a temporary Internet outage.</p>
+during a temporary Internet outage.
 
-<p>Second, the basic security purpose of the blockchain concept
-is to <em>distribute trust</em> so that your security is not dependent
+<p>
+Second, the basic security purpose of the blockchain concept
+is to <i>distribute trust</i> so that your security is not dependent
 on any one central authority or trusted third party.
 But any Web-based transaction query service like
 <a href="http://blockchain.info">blockchain.info</a>
 is just such an authority or trusted party.
 If the service is compromised or malicious, its HTTPS private key is stolen,
-its <a href="https://www.gohacking.com/dns-hijacking/">domain name is hijacked</a>,
-or if <em>any</em> Web certificate authority
+its <a href="https://web.archive.org/web/20220228163340/https://www.gohacking.com/dns-hijacking/">domain name is hijacked</a>,
+or if <i>any</i> Web certificate authority
 <a href="https://arstechnica.com/information-technology/2017/03/google-takes-symantec-to-the-woodshed-for-mis-issuing-30000-https-certs/">mis-issues an HTTPS certificate for it</a>,
-then the attacker can collude with Alice to convince Bob
-that any arbitrary document is &ldquo;on the blockchain&rdquo; when it isn&rsquo;t.</p>
+then the attacker can collude with Alice to convince Bob 
+that any arbitrary document is "on the blockchain" when it isn't.
 
-<p>The transaction query service becomes a single point of failure or compromise,
+<p>
+The transaction query service becomes a single point of failure or compromise,
 exactly what the blockchain concept was supposed to eliminate.
-And if you&rsquo;re going to have single points of failure or compromise,
-you&rsquo;ll be much better off using vastly cheaper and more mature technology
-such as Oracle databases or Amazon cloud services.</p>
+And if you're going to have single points of failure or compromise,
+you'll be much better off using vastly cheaper and more mature technology
+such as Oracle databases or Amazon cloud services.
 
-<h1 id="mediocre-solution-simplified-payment-validation-spv">Mediocre Solution: Simplified Payment Validation (SPV)</h1>
+<h2>Mediocre Solution: Simplified Payment Validation (SPV)</h2>
 
-<p>Bob could in principle run a
+<p>
+Bob could in principle run a
 <a href="https://bitcoin.org/en/full-node#what-is-a-full-node">Bitcoin full node</a>,
 thereby maintaining a mirror copy of the entire blockchain.
 Having a full local copy of the blockchain would make it quick and easy
-for Bob to verify Alice&rsquo;s certificate, and quite secure.
+for Bob to verify Alice's certificate, and quite secure.
 But the sheer size of the blockchain and the continual bandwidth requirements
 of downloading every block is already impractical even for most users
 with desktop PCs and fast Internet connections,
-let alone people with only a low-power smartphone and limited network bandwidth.</p>
+let alone people with only a low-power smartphone and limited network bandwidth.
 
-<p>This verification efficiency problem is precisely what motivates
+<p>
+This verification efficiency problem is precisely what motivates
 <a href="https://bitcoin.org/en/developer-guide#simplified-payment-verification-spv">Simplified Payment Verification (SPV)</a>,
 a common technique in mobile Bitcoin clients.
 In short, an SPV client maintains connections
@@ -268,18 +290,19 @@ While vastly more economical than running a full node,
 an SPV client must still be online to verify transactions,
 and still consumes substantial precious bandwidth and power
 to follow the blockchain.
-The bandwidth an SPV client must consume to &ldquo;catch up&rdquo; with the blockchain
+The bandwidth an SPV client must consume to "catch up" with the blockchain
 is linearly proportional to the time since the client was last run,
-which can be megabytes if the app hasn&rsquo;t synced for several months &ndash;
+which can be megabytes if the app hasn't synced for several months --
 and much more on a faster blockchain such as Ethereum,
 which produces new blocks
-<a href="https://etherscan.io/chart/blocktime">every 15 seconds</a>.</p>
+<a href="https://etherscan.io/chart/blocktime">every 15 seconds</a>.
 
-<p>SPV also introduces security weaknesses.
+<p>
+SPV also introduces security weaknesses.
 If the client downloads the blockchain from only a single full node,
 then that full node again becomes a single point of failure or compromise.
 This full node could isolate the client from the rest of the network
-and present the client with a fake &ldquo;view&rdquo; of the blockchain &ndash;
+and present the client with a fake "view" of the blockchain --
 e.g., a fork of the public blockchain with much less work,
 containing a secretly forged certificate that Alice wants Bob to accept.
 If the SPV client adopts the more secure practice of syncing against
@@ -290,178 +313,196 @@ remain vulnerable to
 <a href="http://vanbever.eu/pdfs/vanbever_bitcoin_routing_attacks_oakland_2017.pdf">routing-based hijacking and isolation attacks</a>.
 In addition, SPV may not scale to large number of thin clients
 without a specialized
-<a href="https://people.csail.mit.edu/alinush/papers/catena-sp2017.pdf">header relay network</a>.</p>
+<a href="https://people.csail.mit.edu/alinush/papers/catena-sp2017.pdf">header relay network</a>.
 
-<p>The fundamental problem is that in a conventional proof-of-work blockchain
+<p>
+The fundamental problem is that in a conventional proof-of-work blockchain
 like Bitcoin or Ethereum,
 there is no cryptographic means for anyone
-to distinguish the <em>real</em> public blockchain from a fake one,
+to distinguish the <i>real</i> public blockchain from a fake one,
 except by comparing the amount of work invested in two competing views.
 In other words, current blockchains
 can never be validated in any absolute sense,
-but only <em>relative</em> to the perspectives of other active communication partners.
+but only <i>relative</i> to the perspectives of other active communication partners.
 Because all verification is relativistic,
 anyone who is not online,
 or who an attacker can isolate from the rest of the network even temporarily,
 can be tricked into accepting a secret, fake blockchain
 forked from the real blockchain at an arbitrary time in the past
-with relatively modest proof-of-work effort by the attacker.</p>
+with relatively modest proof-of-work effort by the attacker.
 
-<p>In summary, verifying a transaction on a current public blockchain
+<p>
+In summary, verifying a transaction on a current public blockchain
 such as Bitcoin or Ethereum
-fundamentally requires the verifier to be <em>online</em> and <em>well-connected</em>.
+fundamentally requires the verifier to be <i>online</i> and <i>well-connected</i>.
 Absent either of these requirements,
-verification of a transaction &ndash; or a certificate anchored in a transaction &ndash;
-is either impossible or insecure.</p>
+verification of a transaction -- or a certificate anchored in a transaction --
+is either impossible or insecure.
 
-<h1 id="better-solution-collectively-signed-transactions">Better Solution: Collectively Signed Transactions</h1>
+<h2>Better Solution: Collectively Signed Transactions</h2>
 
-<p>In a <a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/kogias">paper at USENIX Security &lsquo;16</a>
+<p>
+In a <a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/kogias">paper at USENIX Security '16</a>
 we introduced
 <a href="http://hackingdistributed.com/2016/08/04/byzcoin/">ByzCoin</a>,
-a next-generation blockchain architecture developed by the
+a next-generation blockchain architecture developed by the 
 <a href="https://dedis.epfl.ch/">Decentralized/Destributed Systems (DEDIS) lab</a>
 at <a href="https://www.epfl.ch/">EPFL</a>.
 In summary, ByzCoin offers immediate transaction finality
 through scalable
 <a href="https://en.wikipedia.org/wiki/Byzantine_fault_tolerance">Byzantine consensus</a>,
-improves on Bitcoin&rsquo;s transaction throughput by two orders of magnitude
+improves on Bitcoin's transaction throughput by two orders of magnitude
 (from ~7 to ~900 transactions per second),
-and similarly improves on Bitcoin&rsquo;s transaction latency by
+and similarly improves on Bitcoin's transaction latency by
 an order magnitude
-(from ~10 minutes to 1&ndash;2 minutes).</p>
+(from ~10 minutes to 1--2 minutes).
 
-<p>One of the tools ByzCoin uses to make Byzantine consensus scale well
-is to leverage <em>collective signing</em> or <em>CoSi</em>,
+<p>
+One of the tools ByzCoin uses to make Byzantine consensus scale well
+is to leverage <i>collective signing</i> or <i>CoSi</i>,
 an efficient digital signature aggregation protocol
 that we introuced in
 <a href="https://dedis.cs.yale.edu/dissent/papers/witness-abs">an earlier paper</a>
 we presented at
-<a href="http://www.ieee-security.org/TC/SP2016/program.html">IEEE Security &amp; Privacy &lsquo;16</a>
-(a top security/privacy conference still affectionately known as &ldquo;Oakland&rdquo;
+<a href="http://www.ieee-security.org/TC/SP2016/program.html">IEEE Security & Privacy '16</a>
+(a top security/privacy conference still affectionately known as "Oakland"
 even though the conference is no longer actually held in Oakland).
 To enable the use of Byzantine consensus in a proof-of-work blockchain,
-ByzCoin forms a <em>consensus group</em>
-from a sample of recently-successful proof-of-work miners &ndash;
+ByzCoin forms a <i>consensus group</i>
+from a sample of recently-successful proof-of-work miners --
 e.g., from the past day or the past week of mining effort.
 This consensus group then executes the classic
 <a href="http://www.pmg.csail.mit.edu/papers/bft-tocs.pdf">PBFT</a>
-consensus algorithm to commit transactions securely with immediate finality.</p>
+consensus algorithm to commit transactions securely with immediate finality.
 
-<p>The <em>Prepare</em> and <em>Commit</em> phases of in the PBFT protocol
-traditionally uses unscalable &ldquo;all-to-all&rdquo; communication, however,
-as illustrated below.</p>
+<p>
+The <i>Prepare</i> and <i>Commit</i> phases of in the PBFT protocol
+traditionally uses unscalable "all-to-all" communication, however,
+as illustrated below.
 
-<p><center>
+<center>
 <img src="bft-tocs.svg" alt="Phases of Castro-Liskov PBFT protocol" style="width:80%">
+<p>
 <a href="http://www.pmg.csail.mit.edu/papers/bft-tocs.pdf">Castro and Liskov, Fig. 1</a>
-</center></p>
+</center>
 
-<p>In place of all-to-all communication,
+<p>
+In place of all-to-all communication,
 ByzCoin instead employs CoSi during each of these phases.
 Each run of CoSi produces
 a single compact, efficiently-verifiable collective signature
 cryptographically attesting that a sufficient fraction of the consensus group
-has &ldquo;signed off&rdquo; on preparing, or committing, each new block.</p>
+has "signed off" on preparing, or committing, each new block.
 
-<p><center>
+<center>
 <img src="cosi-blocks.svg" alt="Collectively signed blockchain as in ByzCoin" style="width:50%">
+<p>
 <a href="https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_kokoris-kogias.pdf">Kokoris et al, Fig. 1</a>
-</center></p>
+</center>
 
-<p>While ByzCoin&rsquo;s collective signatures were mainly intended
+<p>
+While ByzCoin's collective signatures were mainly intended
 for the consumption of other miners in the consensus group,
-in principle <em>anyone</em> can check these collective signatures
+in principle <i>anyone</i> can check these collective signatures
 to determine whether a block has been committed to the blockchain.
 The verifier can be a low-power device with little or no Internet connectivity,
-and doesn&rsquo;t need to maintain connections with many other network nodes,
+and doesn't need to maintain connections with many other network nodes,
 because the collective signature itself contains cryptographic evidence
-that a sufficient threshold of miners have validated and committed the block.</p>
+that a sufficient threshold of miners have validated and committed the block.
 
-<h1 id="following-an-evolving-consensus-group">Following an Evolving Consensus Group</h1>
+<h2>Following an Evolving Consensus Group</h2>
 
-<p>So does ByzCoin already solve the offline transaction verification problem?
+<p>
+So does ByzCoin already solve the offline transaction verification problem?
 Not quite.
 To check a collective signature,
-the verifier needs to know the correct <em>public keys</em>
+the verifier needs to know the correct <i>public keys</i>
 representing the set of miners comprising the consensus group
 at the moment in time when the block in question was committed.
 Because ByzCoin forms this consensus group from a constantly-rotating sample
 of miners who recently solved proof-of-work puzzles,
-this set of public keys may continually change &ndash;
-up to once every few minutes.</p>
+this set of public keys may continually change --
+up to once every few minutes.
 
-<p>If Bob wants to verify a certificate Alice notarized on the blockchain
+<p>
+If Bob wants to verify a certificate Alice notarized on the blockchain
 a year or two ago,
 that block might have been committed and collectively signed
 by a completely different set of miners, with different public keys,
-from the set of miners who are <em>currently</em> committing transactions &ndash;
+from the set of miners who are <i>currently</i> committing transactions --
 or who were committing transactions
-as of the last time Bob&rsquo;s personal device caught up with the blockchain.
-If Bob&rsquo;s device is online now or synced recently,
-then Alice&rsquo;s certificate may be long in the past
-with respect to Bob&rsquo;s latest reference point on the blockchain.
+as of the last time Bob's personal device caught up with the blockchain.
+If Bob's device is online now or synced recently,
+then Alice's certificate may be long in the past
+with respect to Bob's latest reference point on the blockchain.
 In this case,
-Bob&rsquo;s device can in principle &ldquo;walk backwards&rdquo; on the blockchain
-from his reference point to the block containing Alice&rsquo;s certificate,
+Bob's device can in principle "walk backwards" on the blockchain
+from his reference point to the block containing Alice's certificate,
 following the hash links from each block to the immediately prior one,
 provided Bob has stored (or otherwise has access to)
-all the relevant block headers.</p>
+all the relevant block headers.
 
-<p>If Bob&rsquo;s device has been offline for a long time, however,
-then Bob&rsquo;s reference point on the blockchain may be behind Alice&rsquo;s in time.
-In this case, Bob&rsquo;s device must <em>walk forward</em> in time on the blockchain
-from his reference point to the block containing Alice&rsquo;s certificate.
-Bob obviously won&rsquo;t have the relevant block headers yet,
-since he was offline when they were committed &ndash;
-but <em>Alice</em> might have copies of those intervening block headers,
+<p>
+If Bob's device has been offline for a long time, however,
+then Bob's reference point on the blockchain may be behind Alice's in time.
+In this case, Bob's device must <i>walk forward</i> in time on the blockchain
+from his reference point to the block containing Alice's certificate.
+Bob obviously won't have the relevant block headers yet,
+since he was offline when they were committed --
+but <i>Alice</i> might have copies of those intervening block headers,
 which she can simply send to Bob via peer-to-peer communication.
 How does Bob know these more recent block headers Alice supplied him
-represent correct blocks from &ldquo;the one true blockchain&rdquo;
+represent correct blocks from "the one true blockchain"
 and not a fake blockchain that Alice concocted to mislead Bob?
-With conventional blockchains, he can&rsquo;t tell the difference &ndash;
-but with ByzCoin or Chainiac, he simply checks the collective signatures.</p>
+With conventional blockchains, he can't tell the difference --
+but with ByzCoin or Chainiac, he simply checks the collective signatures.
 
-<p>Given that the consensus group changes over time, however,
+<p>
+Given that the consensus group changes over time, however,
 what set of public keys does Bob check the collective signatures against?
-This is where Chainiac&rsquo;s first key feature comes into play.
+This is where Chainiac's first key feature comes into play.
 Whenever the consensus group changes,
-a threshold of the <em>previous</em> consensus group
-collectively signs a &ldquo;forward link&rdquo;
-containing two pieces of information:</p>
+a threshold of the <i>previous</i> consensus group
+collectively signs a "forward link"
+containing two pieces of information:
 
 <ol>
-<li>A secure hash-pointer to the first block committed by
-the <em>next</em> consensus group, and</li>
-<li>A description of how the consensus group changed;
-i.e., which miners&rsquo; public keys were added and/or removed.</li>
+<li>
+A secure hash-pointer to the first block committed by
+   the <i>next</i> consensus group, and
+<li>
+A description of how the consensus group changed;
+   i.e., which miners' public keys were added and/or removed.
 </ol>
 
-<p>The following figure illustrates how backward and forward links
-work in Chainiac.</p>
+<p>
+The following figure illustrates how backward and forward links
+work in Chainiac.
 
-<p><center>
+<center>
 <img src="signed-chain.svg" alt="Blockchain with collectively-signed forward links" style="width:70%">
-</center></p>
+</center>
 
-<p>All committed blocks contain back links represented by hashes,
+<p>
+All committed blocks contain back links represented by hashes,
 as in a conventional blockchain.
-However, once the <em>successor</em> to a given block is committed,
+However, once the <i>successor</i> to a given block is committed,
 the consensus group responsible for the previous block
-creates and collectively signs a forward link &ndash;
-a bit like securely issuing an informational &ldquo;addendum&rdquo;
+creates and collectively signs a forward link --
+a bit like securely issuing an informational "addendum"
 for the prior, already-committed block.
-This new addendum is not covered by the next block&rsquo;s backward hash link &ndash;
-it can&rsquo;t be, because that would create
+This new addendum is not covered by the next block's backward hash link --
+it can't be, because that would create
 a cryptographically impossible circular dependency.
-The forward link&rsquo;s security is instead assured by a collective signature,
+The forward link's security is instead assured by a collective signature,
 which encapsulates efficient evidence that a large number of miners
-have witnessed, verified, and signed off on this forward link&rsquo;s correctness.</p>
+have witnessed, verified, and signed off on this forward link's correctness.
 
-<p>Using these collectively signed forward links
+<p>
+Using these collectively signed forward links
 supplied by Alice along with the block headers,
 Bob can securely walk forward in time from his last blockchain reference point
-to Alice&rsquo;s,
+to Alice's,
 without actually having to trust Alice at all.
 Bob learns about all relevant consensus group changes along the way,
 so that he always knows exactly the correct set of public keys
@@ -469,82 +510,89 @@ against which to check each collective signature in the chain.
 Since all of these forward links are collectively signed by many miners,
 Alice cannot create a fake blockchain that Bob will accept
 unless she compromises or colludes with a large number of miners
-during the time period since Bob last synced with the blockchain.</p>
+during the time period since Bob last synced with the blockchain.
 
-<h1 id="leaping-through-time-with-skipchains">Leaping Through Time with SkipChains</h1>
+<h2>Leaping Through Time with SkipChains</h2>
 
-<p>Between the back links that are already standard in blockchains,
+<p>
+Between the back links that are already standard in blockchains,
 and the collectively-signed forward links that Chainiac introduces,
-any party can securely &ldquo;catch up&rdquo; on a Chainiac blockchain
-via peer-to-peer communication with anyone else who is more up-to-date &ndash;
+any party can securely "catch up" on a Chainiac blockchain
+via peer-to-peer communication with anyone else who is more up-to-date --
 provided the latter party has actually stored and can forward
-<em>all</em> the intervening block headers and forward links.
+<i>all</i> the intervening block headers and forward links.
 As with the SPV approach, however,
-even just downloading and storing all block <em>headers</em>
+even just downloading and storing all block <i>headers</i>
 can impose a significant bandwidth, power, and storage burden
-on low-power mobile devices.</p>
+on low-power mobile devices.
 
-<p>For this reason, Chainiac introduces <em>SkipChains</em>,
+<p>
+For this reason, Chainiac introduces <i>SkipChains</i>, 
 a novel cryptographic blockchain structure loosely inspired by
 <a href="https://en.wikipedia.org/wiki/Skip_list">skip lists</a>.
 The fundamental idea of a skip list is to augment a conventional
 <a href="https://en.wikipedia.org/wiki/Linked_list">singly-linked</a> or
 <a href="https://en.wikipedia.org/wiki/Doubly_linked_list">doubly-linked list</a>
-with additional <em>long-distance</em> links,
+with additional <i>long-distance</i> links,
 which are structurally redundant,
 but allow much more efficient traversal and search
 across arbitrary distances along the timeline
-in a logarithmic, rather than linear, number of steps.</p>
+in a logarithmic, rather than linear, number of steps.
 
-<p>Chainiac adapts the skip list idea to blockchains
+<p>
+Chainiac adapts the skip list idea to blockchains
 by adding long-distance links both forward and backward in time,
-as illustrated below.</p>
+as illustrated below.
 
-<p><center>
+<center>
 <img src="skipchain.svg" alt="SkipChain with long-distance forward and backward links" style="width:70%">
-</center></p>
+</center>
 
-<p>When Chainiac creates a new block,
+<p>
+When Chainiac creates a new block,
 that block includes not just one hash link to the immediately prior block,
 but also additional hash links to that point farther backward in time.
 This way, any party can find, or prove the integrity of,
-an old transaction anywhere in a blockchain&rsquo;s prior history
+an old transaction anywhere in a blockchain's prior history
 with a small (logarithmic) number of hash-link steps.
 This long-distance back-link refinement is not new or unique to Chainiac;
 other blockchain and hash-chain designs have incorporated this idea
-for backward links.</p>
+for backward links.
 
-<p>What <em>is</em> new and unique to Chainiac is
-to provide long-distance <em>forward</em> links as well
+<p>
+What <i>is</i> new and unique to Chainiac is
+to provide long-distance <i>forward</i> links as well
 via collective signatures.
 With both long-distance forward and backward links,
 a SkipChain becomes cryptographically traversable in both directions,
 such that one party can efficiently prove the correctness of a transaction
 anywhere in time with respect to
-the other party&rsquo;s reference point on the blockchain,
+the other party's reference point on the blockchain,
 in a logarithmic number of steps,
-regardless of which party has a more up-to-date view of the blockchain.</p>
+regardless of which party has a more up-to-date view of the blockchain.
 
-<p>If Alice wishes to show her professional certificate to Bob, for example,
-but Bob&rsquo;s personal device last synced with the blockchain
+<p>
+If Alice wishes to show her professional certificate to Bob, for example,
+but Bob's personal device last synced with the blockchain
 months or years before when Alice received her certificate,
-Alice&rsquo;s device simply sends Bob&rsquo;s device
+Alice's device simply sends Bob's device
 a small (logarithmic) number of collectively signed forward links
-to prove securely that Alice&rsquo;s certificate is indeed on the blockchain.
+to prove securely that Alice's certificate is indeed on the blockchain.
 Through this peer-to-peer interaction,
-Bob&rsquo;s device has now obtained a more recent blockchain reference point
-from which he can not only validate Alice&rsquo;s certificate,
+Bob's device has now obtained a more recent blockchain reference point
+from which he can not only validate Alice's certificate,
 but also validate future blockchain updates more securely.
 Even if a particularly strong attacker
 eventually cracks or steals the private keys
 of a threshold number of members of an old consensus group,
-the attacker cannot get Bob &ndash;
-or any other party with a more recent reference point &ndash;
-to accept a fake version of the blockchain.</p>
+the attacker cannot get Bob --
+or any other party with a more recent reference point --
+to accept a fake version of the blockchain.
 
-<h1 id="secure-key-evolution-and-management-in-skipchains">Secure Key Evolution and Management in SkipChains</h1>
+<h2>Secure Key Evolution and Management in SkipChains</h2>
 
-<p>Like single-block forward links,
+<p>
+Like single-block forward links,
 long-distance forward links in Chainiac
 include metadata summarizing any changes in the public keys
 of consensus group members between the source and destination points in time.
@@ -554,28 +602,31 @@ across all the one-hop forward links the long-distance link skips over.
 The size of such an update is limited
 to the total number of public keys in the consensus group,
 regardless of the distance in time or number of blocks the link represents,
-in the worst-case where the consensus group &ldquo;rolls over&rdquo; completely
-during that time period.</p>
+in the worst-case where the consensus group "rolls over" completely
+during that time period.
 
-<p>Since a long-distance forward link cannot actually be formed and signed
+<p>
+Since a long-distance forward link cannot actually be formed and signed
 until the (future) block it points to has been committed to the blockchain,
-Chainiac keeps a subset of &ldquo;old&rdquo; consensus groups alive and active
+Chainiac keeps a subset of "old" consensus groups alive and active
 for longer than they might otherwise be,
-&ldquo;watching&rdquo; for the blockchain to grow long enough
+"watching" for the blockchain to grow long enough
 to create and collectively sign the desired forward link.
-This extension of the &ldquo;signing lifetimes&rdquo; of old consensus groups
+This extension of the "signing lifetimes" of old consensus groups
 can create a risk of marginally weakening security,
 by giving a potential attacker more time to crack or steal
 the private keys of a threshold number of members of that consensus group.
 The collective signatures still ensure that the attacker
-would have to compromise <em>many</em> such members&rsquo; private keys and not just one,
-but even so, we would prefer to minimize the blockchain&rsquo;s potential weakness
-to a powerful, patient, and persistent attacker.</p>
+would have to compromise <i>many</i> such members' private keys and not just one,
+but even so, we would prefer to minimize the blockchain's potential weakness
+to a powerful, patient, and persistent attacker.
 
-<p>We can bolster Chainiac&rsquo;s security against long-term persistent attacks
-in at least two ways.</p>
+<p>
+We can bolster Chainiac's security against long-term persistent attacks
+in at least two ways.
 
-<p>First, Chainiac can enforce a maximum forward-link distance:
+<p>
+First, Chainiac can enforce a maximum forward-link distance:
 one year, for example.
 Under such a policy, all honest consensus group members
 securely erase their private keys after at most one year,
@@ -583,13 +634,14 @@ limiting the time window an attacker has to compromise
 a threshold number of private keys from an old consensus group.
 This forward-link distance limit implies that extremely out-of-date
 devices needing to catch up with the blockchain after multiple years
-will need to catch up &ldquo;one year at a time&rdquo; &ndash;
+will need to catch up "one year at a time" --
 at a cost linear rather than logarithmic in the number of years.
 This is probably not much of a problem in practice,
 since few electronic devices tend to remain in use
-after <em>that</em> many years anyway.</p>
+after <i>that</i> many years anyway.
 
-<p>A second way to strengthen a SkipChain&rsquo;s forward security,
+<p>
+A second way to strengthen a SkipChain's forward security,
 which we have not yet implemented but plan to,
 is for consensus group members to use distinct, fresh key pairs
 when collectively signing each successive level of long-distance forward links.
@@ -609,27 +661,29 @@ that sync with the blockchain extremely rarely.
 Devices that sync more regularly,
 either by going online or via peer-to-peer updates,
 remain immune to such an attacker
-because they only ever follow shorter-distance forward links.</p>
+because they only ever follow shorter-distance forward links.
 
-<p>Note that even devices that sync regularly with the blockchain
-may sometimes still have to follow long-distance <em>backward</em> links,
+<p>
+Note that even devices that sync regularly with the blockchain
+may sometimes still have to follow long-distance <i>backward</i> links,
 e.g., if Alice obtained her certificate several years
 before she needs to show it to Bob.
 Long-distance backward links are less of a security concern, however,
 because they are represented by hashes rather than collective signatures,
 and a hash has no private key that might be stolen or coerced.
-The cryptographic hash <em>algorithm</em> might still eventually be compromised,
+The cryptographic hash <i>algorithm</i> might still eventually be compromised,
 but by then hopefully the blockchain has migrated to
 a stronger hash algorithm with a wider output.
 At this point, assuming the migration is handled carefully,
 all devices with reasonably up-to-date software
 need rely only on the new, stronger hashes
 and become invulnerable even to an outright break
-in the original hash algorithm.</p>
+in the original hash algorithm.
 
-<h1 id="summary">Summary</h1>
+<h2>Summary</h2>
 
-<p>Current blockchains such as Bitcoin or Ethereum,
+<p>
+Current blockchains such as Bitcoin or Ethereum,
 while showing great promise for notarization applications
 such as academic credentials or professional certificates,
 present the serious problem of not supporting secure
@@ -646,7 +700,7 @@ that SkipChains provide
 will substantially extend the effective applicability
 of future blockchain technology,
 as well as increase their robustness and resilience
-to communication failures or routing-based attacks.</p>
+to communication failures or routing-based attacks.
 
 <!--
 ---
@@ -654,6 +708,7 @@ to communication failures or routing-based attacks.</p>
 *I wish to thank ...
 for helpful feedback on early drafts of this post.*
 -->
+
 
     </div>
 

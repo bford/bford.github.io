@@ -13,7 +13,7 @@
       <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/limix/</guid>
-      <description>Cristina Băsescu and Bryan Ford  Twentieth ACM Workshop on Hot Topics in Networks (HotNets)
+      <description>Cristina Băsescu and Bryan Ford Twentieth ACM Workshop on Hot Topics in Networks (HotNets)
 November 10-12, 2021 Abstract: Failures far away from a user should intuitively be less likely to affect that user. Today&#39;s ecosystem miserably fails this test, however, despite high-availability best practices. Correlated and cascading failures &amp;ndash; triggered by misconfigurations, bugs, and network partitions &amp;ndash; often invalidate assumptions of failure independence. We propose that distributed services need not and should not expose local activities to distant failures or partitions, no matter how severe.</description>
     </item>
     
@@ -23,8 +23,8 @@ November 10-12, 2021 Abstract: Failures far away from a user should intuitively 
       <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-zhai/</guid>
-      <description>Ennan Zhai  Ph.D. thesis advised by Bryan Ford
-August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely on redundancy techniques to enhance reliability and availability. In complex multi-layered hardware/software stacks, however, seemingly independent components used redundantly might share deep, hidden dependencies. These common dependencies may potentially result in unexpected correlated failures, thus undermining redundancy efforts.  Heading off correlated failures is extremely challenging in cloud-scale systems for the following three reasons.</description>
+      <description>Ennan Zhai Ph.D. thesis advised by Bryan Ford
+August 11, 2015 Abstract: Today’s cloud computing systems pervasively rely on redundancy techniques to enhance reliability and availability. In complex multi-layered hardware/software stacks, however, seemingly independent components used redundantly might share deep, hidden dependencies. These common dependencies may potentially result in unexpected correlated failures, thus undermining redundancy efforts. Heading off correlated failures is extremely challenging in cloud-scale systems for the following three reasons.</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/cloud-indaas/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/cloud-psra/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Sun, 03 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/irec/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -60,7 +60,7 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/icebergs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -70,8 +70,8 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       
       <guid>https://bford.info/pub/os/timing-abs/</guid>
       <description>Amittai Aviram, Sen Hu, Bryan Ford
-	Ramakrishna Gummadi
-	Yale University 	University of Massachusetts Amherst  The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
+Ramakrishna Gummadi
+Yale University University of Massachusetts Amherst The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
     </item>
     
   </channel>

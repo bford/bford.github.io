@@ -13,7 +13,7 @@
       <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/medco-abs/</guid>
-      <description>Jean Louis Raisaro, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Micka&amp;euml;l Misbach, Jo&amp;atilde;o S&amp;aacute; Sousa, Sylvain Pradervand, Edoardo Missiaglia, Olivier Michielin, Bryan Ford, and Jean-Pierre Hubaux   IEEE/ACM Transactions on Computational Biology and Bioinformatics,
+      <description>Jean Louis Raisaro, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Micka&amp;euml;l Misbach, Jo&amp;atilde;o S&amp;aacute; Sousa, Sylvain Pradervand, Edoardo Missiaglia, Olivier Michielin, Bryan Ford, and Jean-Pierre Hubaux IEEE/ACM Transactions on Computational Biology and Bioinformatics,
 July 13, 2018. Abstract: The increasing number of health-data breaches is creating a complicated environment for medical-data sharing and, consequently, for medical progress. Therefore, the development of new solutions that can reassure clinical sites by enabling privacy-preserving sharing of sensitive medical data in compliance with stringent regulations (e.</description>
     </item>
     
@@ -24,11 +24,11 @@ July 13, 2018. Abstract: The increasing number of health-data breaches is creati
       
       <guid>https://bford.info/pub/dec/atom-abs/</guid>
       <description>Albert Kwon
-MIT  Henry Corrigan-Gibbs
-Stanford  Srinivas Devadas
-MIT  Bryan Ford
-EPFL    26th ACM Symposium on Operating Systems Principles (SOSP)
-October 30, 2017 Abstract: Atom is an anonymous messaging system that protects against traffic-analysis attacks. Unlike many prior systems, each Atom server touches only a small fraction of the total messages routed through the network. As a result, the system’s capacity scales near-linearly with the number of servers.</description>
+MIT Henry Corrigan-Gibbs
+Stanford Srinivas Devadas
+MIT Bryan Ford
+EPFL 26th ACM Symposium on Operating Systems Principles (SOSP)
+October 30, 2017 Abstract: Atom is an anonymous messaging system that protects against traffic-analysis attacks. Unlike many prior systems, each Atom server touches only a small fraction of the total messages routed through the network. As a result, the system’s capacity scales near-linearly with the number of servers. At the same time, each Atom user benefits from &amp;ldquo;best possible&amp;rdquo; anonymity: a user is anonymous among all honest users of the system, even against an active adversary who monitors the entire network, a portion of the system’s servers, and any number of malicious users.</description>
     </item>
     
     <item>
@@ -37,8 +37,8 @@ October 30, 2017 Abstract: Atom is an anonymous messaging system that protects a
       <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/unlynx-abs/</guid>
-      <description>David Froelicher, Patricia Egger, Jo&amp;atilde;o S&amp;aacute; Sousa, Jean Louis Raisaro, Zhicong Huang, Christian Mouchet, Bryan Ford, and Jean-Pierre Hubaux   Privacy Enhancing Technologies Symposium (PETS)
-July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing among multiple parties either depend on a centralized authority that must be trusted and provides only weakest-link security (e.g., the entity that manages private/secret cryptographic keys), or leverage on decentralized but impractical approaches (e.</description>
+      <description>David Froelicher, Patricia Egger, Jo&amp;atilde;o S&amp;aacute; Sousa, Jean Louis Raisaro, Zhicong Huang, Christian Mouchet, Bryan Ford, and Jean-Pierre Hubaux Privacy Enhancing Technologies Symposium (PETS)
+July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing among multiple parties either depend on a centralized authority that must be trusted and provides only weakest-link security (e.g., the entity that manages private/secret cryptographic keys), or leverage on decentralized but impractical approaches (e.g., secure multi-party computation).</description>
     </item>
     
     <item>
@@ -47,7 +47,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/riffle/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -56,7 +56,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/panopticon-cacm/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -65,7 +65,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/dissent-analysis/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -74,7 +74,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/conscript/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -83,7 +83,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/verdict/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -92,7 +92,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/dissent-in-numbers/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -101,7 +101,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/anytrust/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -110,7 +110,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Mon, 04 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/dissent-abs/</guid>
-      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award  17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract:  Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
+      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award 17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract: Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
     </item>
     
   </channel>

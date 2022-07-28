@@ -13,8 +13,8 @@
       <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2021-nikitin/</guid>
-      <description>Kirill Nikitin  Ph.D. thesis advised by Bryan Ford
-November 26, 2021  Abstract: Secure retrieval of data requires integrity, confidentially, transparency, and metadata-privacy of the process. Existing protection mechanisms, however, provide only partially these properties: encryption schemes still expose cleartext metadata, protocols for private information retrieval neglect data integrity, and data-distribution architectures forego transparency. In this dissertation, by designing new cryptographic primitives and security architectures that provide a more comprehensive protection, we improve on the current security and privacy practices in data retrieval.</description>
+      <description>Kirill Nikitin Ph.D. thesis advised by Bryan Ford
+November 26, 2021 Abstract: Secure retrieval of data requires integrity, confidentially, transparency, and metadata-privacy of the process. Existing protection mechanisms, however, provide only partially these properties: encryption schemes still expose cleartext metadata, protocols for private information retrieval neglect data integrity, and data-distribution architectures forego transparency. In this dissertation, by designing new cryptographic primitives and security architectures that provide a more comprehensive protection, we improve on the current security and privacy practices in data retrieval.</description>
     </item>
     
     <item>
@@ -23,8 +23,8 @@ November 26, 2021  Abstract: Secure retrieval of data requires integrity, confid
       <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2021-barman/</guid>
-      <description>Ludovic Barman  Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
-September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instant messengers, VPNs) use encryption to prevent third parties from learning sensitive information. However, encrypted communications protect the contents but often leak metadata: the amount of data sent and the time it was sent, the way the data should be decrypted, the identity of the sender and the recipient.</description>
+      <description>Ludovic Barman Ph.D. thesis advised by Jean-Pierre Hubaux and Bryan Ford
+September 17, 2021 Abstract: Most communication systems (e.g., e-mails, instant messengers, VPNs) use encryption to prevent third parties from learning sensitive information. However, encrypted communications protect the contents but often leak metadata: the amount of data sent and the time it was sent, the way the data should be decrypted, the identity of the sender and the recipient. These metadata are a pervasive threat to privacy: They enable a variety of attacks that range from recovering plaintext contents from encrypted communications to inferring communicating parties.</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@ September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instan
       <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-timing/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -42,8 +42,8 @@ September 17, 2021  Abstract:  Most communication systems (e.g., e-mails, instan
       <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-wu/</guid>
-      <description>   Weiyi Wu  Ph.D. thesis advised by Bryan Ford
-August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
+      <description> Weiyi Wu Ph.D. thesis advised by Bryan Ford
+August 10, 2015 Abstract: XXX Ph.D. Thesis: PDF </description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@ August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
       <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/tifc-hotcloud12/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -62,8 +62,8 @@ August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
       
       <guid>https://bford.info/pub/os/timing-abs/</guid>
       <description>Amittai Aviram, Sen Hu, Bryan Ford
-	Ramakrishna Gummadi
-	Yale University 	University of Massachusetts Amherst  The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
+Ramakrishna Gummadi
+Yale University University of Massachusetts Amherst The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
     </item>
     
   </channel>

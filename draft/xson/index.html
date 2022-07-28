@@ -41,10 +41,7 @@
 
     
   <h1>eXtensible Syntax Object Notation (XSON)</h1>
-  
-
-<p>Goals:</p>
-
+  <p>Goals:</p>
 <ul>
 <li>Consistent with and easily convertible to and from JSON</li>
 <li>Support syntactic and semantic extensions for expressiveness</li>
@@ -52,118 +49,89 @@
 <li>Baseline even more minimalistic than JSON (&ldquo;minXSON&rdquo;)</li>
 <li>All elements have both human-readable and compact binary representations</li>
 </ul>
-
 <h1 id="the-xson-header">The XSON header</h1>
-
 <p>An XSON stream starts with <code>xson[</code><em>imports</em><code>]</code>,
 where <em>imports</em> is a comma-separated list of syntax imports.
 These can be simple identifiers for extensions defined in this document,
 or may (how?) refer to external syntax extensions by URI/CRI.</p>
-
 <h1 id="decoding-xson">Decoding XSON</h1>
-
 <p>If multiple syntax extensions &ldquo;claim&rdquo; the same shorthand notation
 and neither of them builds on the other to provide a disambiguation rule,
 then the text is considered a syntax error
 as if it had not matched any extension.</p>
-
 <h1 id="encoding-xson">Encoding XSON</h1>
-
 <p>Syntax extensions may have and attempt to encode using shorthand forms,
 which are convenient for concise expressiveness.
 Extensions cannot know if their shorthand will be ambiguous with
 the shorthand syntax of other extensions that may be in use, however,</p>
-
 <p>Therefore, whenever an extension produces an untagged shorthand form,
 the XSON encoder framework immediately re-decodes the encoded text
 in order to check for syntactic collisions.
 If no syntactic collision occurs, the framework uses the shorthand.
 If a collision does occur, the element is re-encoded in syntax-tagged form,
 which is guaranteed to be unambiguously decodable.</p>
-
 <h2 id="minxson">minXSON</h2>
-
 <p>Only two primitives providing minimal structure: strings and arrays.</p>
-
 <p>JSON actually corresponds to a particular XSON format
 with a certain set of well-defined extensions on top of minXSON:
 namely <code>null</code>, <code>bool</code>, <code>number</code>, and <code>object</code>.</p>
-
 <p>By design, any data conforming to any XSON format
 can be converted to or from JSON or minXSON.</p>
-
 <p>Perhaps minXSON is so minimal that nothing is representable?</p>
-
 <p>An XSON stream is a <a href="XXX">CTS</a> text string
 containing hierarchical tree of <em>elements</em>.
 Each element has a general <em>syntax-tagged</em> form of <em>tag</em><code>[</code><em>content</em><code>]</code>.
 The <em>tag</em> names the syntactic extension invoked by this element,
 while the <em>content</em> has a syntax entirely defined by that extension,
 aside from obeying the global CTS rule that &ldquo;matchers must match.&rdquo;</p>
-
 <h1 id="json-equivalent-syntax-extensions">JSON-Equivalent Syntax Extensions</h1>
-
 <h2 id="null">Null</h2>
-
 <ul>
 <li>Extension: <code>null</code></li>
 <li>Syntax-tagged: <code>null[]</code></li>
 <li>Shorthand: <code>null</code></li>
 <li>Binary: the empty string</li>
 </ul>
-
 <h2 id="boolean">Boolean</h2>
-
 <ul>
 <li>Extension: <code>boolean</code></li>
 <li>Syntax-tagged: <code>boolean[true]</code> or <code>boolean[false]</code></li>
 <li>Shorthand: <code>true</code> or <code>false</code></li>
 <li>Binary: a single byte 0 or 1</li>
 </ul>
-
 <p>The full syntax of a boolean value is either
 <code>bool[true]</code> or <code>bool[false]</code>,
 which may be abbreviated to simply <code>true</code> or <code>false</code>
 when there is no potential ambiguity that requires syntax tagging.</p>
-
 <h2 id="natural">Natural</h2>
-
 <ul>
 <li>Extension: <code>natural</code></li>
 <li>Syntax-tagged: <code>integer[</code><em>digits</em><code>]</code> where <em>digits</em> is a sequence of decimal digits</li>
 <li>Shorthand: <em>digits</em></li>
 <li>Binary: serialized binary unsigned integer in big-endian byte order</li>
 </ul>
-
 <h2 id="integer">Integer</h2>
-
 <ul>
 <li>Extension: <code>integer</code></li>
 <li>Syntax-tagged: <code>integer[</code><em>sign</em> <em>digits</em><code>]</code> where <em>sign</em> is an optional <code>-</code> sign and <em>digits</em> is a sequence of decimal digits.</li>
 <li>Shorthand: <em>sign</em> <em>digits</em></li>
 <li>Binary: zigzag-encoded then serialized as a natural number</li>
 </ul>
-
 <h2 id="number">Number</h2>
-
 <ul>
 <li>Extension: <code>number</code></li>
 <li>Builds on: <code>integer</code></li>
 <li>Syntax-tagged: <code>number[</code><em>opt-minus</em> <em>digits</em> <code>e</code> <em>plus-minus</em> <em>expdigits</em><code>]</code></li>
 </ul>
-
 <h2 id="string">String</h2>
-
 <ul>
 <li>Extension: <code>string</code></li>
 <li>Syntax-tagged: <code>string[abcdef]</code></li>
 <li>Shorthand: <code>&quot;abcdef&quot;</code></li>
 </ul>
-
 <p>Supports the standard JSON-defined character escapes
 <code>\&quot;</code>, <code>\\</code>, <code>\/</code>, <code>\b</code> backspace, <code>\f</code> form feed, <code>\n</code> line feed,
 <code>\r</code> carriage return, <code>\t</code> tab.</p>
-
 <p>Unicode character escapes have the form <code>\u[</code><em>hex</em><code>]</code>
 where <em>hex</em> is the Unicode code point in hexadecimal.
 <a href="https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID293">Learning from Swift</a>,
@@ -171,43 +139,32 @@ this notation avoids JSON&rsquo;s need to use surrogate pairs
 to express code points above 0xffff,
 and the need to have two separate forms
 like the 4-digit <code>\u</code> and 8-digit <code>\U</code> as in Go.</p>
-
 <h2 id="array">Array</h2>
-
 <ul>
 <li>Extension: <code>array</code></li>
 <li>Tagged: <code>array[</code><em>item1</em><code>,</code><em>item2</em><code>,</code>&hellip;<code>]</code></li>
 </ul>
-
 <h2 id="map">Map</h2>
-
 <ul>
 <li>Extension: <code>map</code></li>
 <li>Tagged: <code>map{k1:v2, k2:v2, ...}</code></li>
 <li>Shorthand: <code>{k1:v1, k2:v2, ...}</code></li>
 </ul>
-
 <p>Maps may in principle have any values as keys, not just strings.
 However, JSON restricts map keys to be strings.</p>
-
 <h1 id="further-syntax-extensions">Further Syntax Extensions</h1>
-
 <h2 id="binary-integer">Binary integer</h2>
-
 <ul>
 <li>Extension: <code>binary</code></li>
 <li>Syntax-tagged: <code>binary[0110101001]</code></li>
 <li>Shorthand: <code>0b0110101001</code></li>
 </ul>
-
 <h2 id="octal-integer">Octal Integer</h2>
-
 <ul>
 <li>Extension: <code>octal</code></li>
 <li>Syntax-tagged: <code>octal[1234567]</code></li>
 <li>Shorthand: <code>0o1234567</code></li>
 </ul>
-
 <p>This syntax is defined for consistency with the octal notation
 supported in many programming languages such as
 <a href="https://www.python.org/dev/peps/pep-3127/">Python</a>,
@@ -219,34 +176,25 @@ supported in many programming languages such as
 It consciously avoids the C language tradition of using a single leading <code>0</code>
 to indicate octal,
 which is easily confused with a decimal number with leading zeros.</p>
-
 <h2 id="hexadecimal-integer">Hexadecimal Integer</h2>
-
 <ul>
 <li>Extension: <code>hexadecimal</code></li>
 <li>Syntax-tagged: <code>hexadecimal[abcdef]</code></li>
 <li>Shorthand: <code>0xabcdef</code></li>
 </ul>
-
 <p>This definition is compatible with that proposed in
 <a href="https://json5.org">JSON5</a>.</p>
-
-<h2 id="infinity-nan">Infinity/NaN</h2>
-
+<h2 id="infinitynan">Infinity/NaN</h2>
 <p>The <code>infinithy-nan</code> extension builds on <code>number</code> to add support for
 the special infinity and not-a-number (NaN) values
 that the IEEE 754 floating-point standard defines but JSON omits.</p>
-
 <ul>
 <li>[+/-] &ldquo;Infinity&rdquo;</li>
 <li>[+/-] &ldquo;NaN&rdquo;</li>
 </ul>
-
 <p>This definition is compatible with that proposed in
 <a href="https://json5.org">JSON5</a>.</p>
-
 <h2 id="rational-numbers">Rational numbers</h2>
-
 <ul>
 <li>number &ldquo;/&rdquo; number</li>
 </ul>

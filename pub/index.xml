@@ -13,8 +13,17 @@
       <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/f3b/</guid>
-      <description>Haoqian Zhang, Louis-Henri Merino, Vero Estrada-Galiñanes, and Bryan Ford  Decentralized Internet, Networks, Protocols, and Systems (DINPS)
+      <description>Haoqian Zhang, Louis-Henri Merino, Vero Estrada-Galiñanes, and Bryan Ford Decentralized Internet, Networks, Protocols, and Systems (DINPS)
 Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice of benefiting from advanced knowledge of pending transactions, has proliferated in the cryptocurrency space with the emergence of decentralized finance. Front-running causes devastating losses to honest participants—estimated at $280M each month—and endangers the fairness of the ecosystem. We present Flash Freezing Flash Boys (F3B), an architecture to address front-running attacks by relying on a commit-and-reveal scheme where the contents of a transaction are encrypted and later revealed by a decentralized secret-management committee (SMC) when the transaction has been committed by the underlying consensus layer.</description>
+    </item>
+    
+    <item>
+      <title>TRIP: Trustless Coercion-Resistant In-Person Voter Registration</title>
+      <link>https://bford.info/pub/sec/trip/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/trip/</guid>
+      <description>Louis-Henri Merino, Simone Colombo, Jeff Allen, Vero Estrada-Galiñanes, and Bryan Ford arXiv preprint Abstract: Most existing remote electronic voting systems are vulnerable to voter coercion and vote buying. While coercion-resistant voting systems address this challenge, current schemes assume that the voter has access to an untappable, incorruptible device during voter registration. We present TRIP, an in-person voter registration scheme enabling voters to create verifiable and indistinguishable real and fake credentials using an untrusted kiosk inside a privacy booth at a supervised location, e.</description>
     </item>
     
     <item>
@@ -23,7 +32,7 @@ Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice o
       <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/limix/</guid>
-      <description>Cristina Băsescu and Bryan Ford  Twentieth ACM Workshop on Hot Topics in Networks (HotNets)
+      <description>Cristina Băsescu and Bryan Ford Twentieth ACM Workshop on Hot Topics in Networks (HotNets)
 November 10-12, 2021 Abstract: Failures far away from a user should intuitively be less likely to affect that user. Today&#39;s ecosystem miserably fails this test, however, despite high-availability best practices. Correlated and cascading failures &amp;ndash; triggered by misconfigurations, bugs, and network partitions &amp;ndash; often invalidate assumptions of failure independence. We propose that distributed services need not and should not expose local activities to distant failures or partitions, no matter how severe.</description>
     </item>
     
@@ -33,7 +42,7 @@ November 10-12, 2021 Abstract: Failures far away from a user should intuitively 
       <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/calypso/</guid>
-      <description>Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford  47th International Conference on Very Large Data Bases (VLDB 2021)
+      <description>Eleftherios Kokoris-Kogias, Enis Ceyhun Alp, Linus Gasser, Philipp Jovanovic, Ewa Syta, and Bryan Ford 47th International Conference on Very Large Data Bases (VLDB 2021)
 Copenhagen, Denmark &amp;ndash; August 16-20, 2021 Abstract: Distributed ledgers provide high availability and integrity, making them a key enabler for practical and secure computation of distributed workloads among mutually distrustful parties. Many practical applications also require strong confidentiality, however, the third pillar of the CIA triad.</description>
     </item>
     
@@ -43,9 +52,8 @@ Copenhagen, Denmark &amp;ndash; August 16-20, 2021 Abstract: Distributed ledgers
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/dt2-chapter-abs/</guid>
-      <description>Bryan Ford
-Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press 
-Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way?</description>
+      <description>Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press
+Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way? We explore how technology has failed to support robust democracy – but could do better – in the context of four basic social processes: collective deliberation and choice, information distribution and filtering, economic commerce, and identity.</description>
     </item>
     
     <item>
@@ -54,8 +62,8 @@ Abstract While technology is often claimed to be “democratizing”, the techno
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/personhood/</guid>
-      <description>Bryan Ford  November 2020 (first draft)  arXiv preprint
- Abstract: Digital identity seems at first like a prerequisite for digital democracy: how can we ensure &amp;ldquo;one person, one vote&amp;rdquo; online without identifying voters? But the full gamut of digital identity solutions &amp;ndash; e.g., online ID checking, biometrics, self-sovereign identity, and social/trust networks &amp;ndash; all present severe flaws in security, privacy, and transparency, leaving users vulnerable to exclusion, identity loss or theft, and coercion.</description>
+      <description>Bryan Ford November 2020 (first draft) arXiv preprint
+Abstract: Digital identity seems at first like a prerequisite for digital democracy: how can we ensure &amp;ldquo;one person, one vote&amp;rdquo; online without identifying voters? But the full gamut of digital identity solutions &amp;ndash; e.g., online ID checking, biometrics, self-sovereign identity, and social/trust networks &amp;ndash; all present severe flaws in security, privacy, and transparency, leaving users vulnerable to exclusion, identity loss or theft, and coercion.</description>
     </item>
     
     <item>
@@ -64,9 +72,9 @@ Abstract While technology is often claimed to be “democratizing”, the techno
       <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/cbdc/</guid>
-      <description>Sarah Allen, Srdjan Capkun, Ittay Eyal, Giulia Fanti, Bryan Ford, James Grimmelmann, Ari Juels, Kari Kostiainen, Sarah Meiklejohn, Andrew Miller, Eswar Prasad, Karl Wüst, and Fan Zhang   Global Economy &amp; Development Working Paper 140,
+      <description>Sarah Allen, Srdjan Capkun, Ittay Eyal, Giulia Fanti, Bryan Ford, James Grimmelmann, Ari Juels, Kari Kostiainen, Sarah Meiklejohn, Andrew Miller, Eswar Prasad, Karl Wüst, and Fan Zhang Global Economy &amp; Development Working Paper 140,
 Brookings Institution,
-July 23, 2020. Abstract:  Central banks around the world are exploring and in some cases even piloting central bank digital currencies (CBDCs). CBDCs promise to realize a broad range of new capabilities, including direct government disbursements to citizens, frictionless consumer payment and money-transfer systems, and a range of new financial instruments and monetary policy levers.</description>
+July 23, 2020. Abstract: Central banks around the world are exploring and in some cases even piloting central bank digital currencies (CBDCs). CBDCs promise to realize a broad range of new capabilities, including direct government disbursements to citizens, frictionless consumer payment and money-transfer systems, and a range of new financial instruments and monetary policy levers.</description>
     </item>
     
     <item>
@@ -75,9 +83,9 @@ July 23, 2020. Abstract:  Central banks around the world are exploring and in so
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/prifi/</guid>
-      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum   Privacy Enhancing Technologies Symposium
-July 13, 2020  Proceedings on Privacy Enhancing Technologies
-Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
+      <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum Privacy Enhancing Technologies Symposium
+July 13, 2020 Proceedings on Privacy Enhancing Technologies
+Volume 2020, Issue 4. Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
     </item>
     
     <item>
@@ -87,8 +95,8 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       
       <guid>https://bford.info/pub/net/qsc/</guid>
       <description>Bryan Ford, Philipp Jovanovic, and Ewa Syta
- March 4, 2020  arXiv preprint
- Abstract: It is commonly held that asynchronous consensus is much more complex, difficult, and costly than partially-synchronous algorithms, especially without using common coins. This paper challenges that conventional wisdom with que sera consensus QSC, an approach to consensus that cleanly decomposes the agreement problem from that of network asynchrony. QSC uses only private coins and reaches consensus in O(1) expected communication rounds.</description>
+March 4, 2020 arXiv preprint
+Abstract: It is commonly held that asynchronous consensus is much more complex, difficult, and costly than partially-synchronous algorithms, especially without using common coins. This paper challenges that conventional wisdom with que sera consensus QSC, an approach to consensus that cleanly decomposes the agreement problem from that of network asynchrony. QSC uses only private coins and reaches consensus in O(1) expected communication rounds.</description>
     </item>
     
     <item>
@@ -97,9 +105,9 @@ Volume 2020, Issue 4.  Abstract: Organizational networks are vulnerable to traff
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/purb-abs/</guid>
-      <description>Kirill Nikitin, Ludovic Barman, Wouter Lueks, Matthew Underwood, Jean-Pierre Hubaux and Bryan Ford EPFL - IC - DEDIS   Privacy Enhancing Technologies Symposium
-July 2019.  Proceedings on Privacy Enhancing Technologies
-Volume 2019, Issue 4.  Abstract: Most encrypted data formats leak metadata via their plaintext headers, such as format version, encryption schemes used, number of recipients who can decrypt the data, and even the recipients’ identities.</description>
+      <description>Kirill Nikitin, Ludovic Barman, Wouter Lueks, Matthew Underwood, Jean-Pierre Hubaux and Bryan Ford EPFL - IC - DEDIS Privacy Enhancing Technologies Symposium
+July 2019. Proceedings on Privacy Enhancing Technologies
+Volume 2019, Issue 4. Abstract: Most encrypted data formats leak metadata via their plaintext headers, such as format version, encryption schemes used, number of recipients who can decrypt the data, and even the recipients’ identities. This leakage can pose security and privacy risks to users, e.</description>
     </item>
     
     <item>
@@ -108,8 +116,8 @@ Volume 2019, Issue 4.  Abstract: Most encrypted data formats leak metadata via t
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/tlc/</guid>
-      <description>Bryan Ford  July 16, 2019  arXiv preprint
- Abstract: Consensus protocols for asynchronous networks are usually complex and inefficient, leading practical systems to rely on synchronous protocols. This paper attempts to simplify asynchronous consensus by building atop a novel threshold logical clock abstraction, which enables upper layers to operate as if on a synchronous network. This approach yields an asynchronous consensus protocol for fail-stop nodes that may be simpler and more robust than Paxos and its leader-based variants, requiring no common coins and achieving consensus in a constant expected number of rounds.</description>
+      <description>Bryan Ford July 16, 2019 arXiv preprint
+Abstract: Consensus protocols for asynchronous networks are usually complex and inefficient, leading practical systems to rely on synchronous protocols. This paper attempts to simplify asynchronous consensus by building atop a novel threshold logical clock abstraction, which enables upper layers to operate as if on a synchronous network. This approach yields an asynchronous consensus protocol for fail-stop nodes that may be simpler and more robust than Paxos and its leader-based variants, requiring no common coins and achieving consensus in a constant expected number of rounds.</description>
     </item>
     
     <item>
@@ -118,8 +126,8 @@ Volume 2019, Issue 4.  Abstract: Most encrypted data formats leak metadata via t
       <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/two-round-multisig-abs/</guid>
-      <description>Manu Drijvers, Kasra Edalatnejad, Bryan Ford, Eike Kiltz, Julian Loss, Gregory Neven, and Igors Stepanovs   40th IEEE Symposium on Security and Privacy
-May 2019  Abstract: A multi-signature scheme allows a group of signers to collaboratively sign a message, creating a single signature that convinces a verifier that every individual signer approved the message. The increased interest in technologies to decentralize trust has triggered the proposal of highly efficient two-round Schnorr-based multi-signature schemes designed to scale up to thousands of signers, namely BCJ by Bagherzandi et al.</description>
+      <description>Manu Drijvers, Kasra Edalatnejad, Bryan Ford, Eike Kiltz, Julian Loss, Gregory Neven, and Igors Stepanovs 40th IEEE Symposium on Security and Privacy
+May 2019 Abstract: A multi-signature scheme allows a group of signers to collaboratively sign a message, creating a single signature that convinces a verifier that every individual signer approved the message. The increased interest in technologies to decentralize trust has triggered the proposal of highly efficient two-round Schnorr-based multi-signature schemes designed to scale up to thousands of signers, namely BCJ by Bagherzandi et al.</description>
     </item>
     
     <item>
@@ -128,8 +136,8 @@ May 2019  Abstract: A multi-signature scheme allows a group of signers to collab
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/protean-abs/</guid>
-      <description>Enis Ceyhun Alp, Eleftherios Kokoris-Kogias, Georgia Fragkouli, and Bryan Ford EPFL - IC - DEDIS   17th Workshop on Hot Topics in Operating Systems (HotOS XVII)
-May 12-15, 2019.  Abstract: While showing great promise, smart contracts are difficult to program correctly, as they need a deep understanding of cryptography and distributed algorithms, and offer limited functionality, as they have to be deterministic and cannot operate on secret data.</description>
+      <description>Enis Ceyhun Alp, Eleftherios Kokoris-Kogias, Georgia Fragkouli, and Bryan Ford EPFL - IC - DEDIS 17th Workshop on Hot Topics in Operating Systems (HotOS XVII)
+May 12-15, 2019. Abstract: While showing great promise, smart contracts are difficult to program correctly, as they need a deep understanding of cryptography and distributed algorithms, and offer limited functionality, as they have to be deterministic and cannot operate on secret data. In this paper we present Protean, a general-purpose decentralized computing platform that addresses these limitations by moving from a monolithic execution model, where all participating nodes store all the state and execute every computation, to a modular execution model.</description>
     </item>
     
     <item>
@@ -138,7 +146,7 @@ May 12-15, 2019.  Abstract: While showing great promise, smart contracts are dif
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/morphit-abs/</guid>
-      <description>Georgia Fragkouli, Katerina Argyraki, and Bryan Ford EPFL Winner of Applied Networking Research Prize (ANRP)  Proceedings on Privacy Enhancing Technologies
+      <description>Georgia Fragkouli, Katerina Argyraki, and Bryan Ford EPFL Winner of Applied Networking Research Prize (ANRP) Proceedings on Privacy Enhancing Technologies
 May 4, 2019. Abstract: Can we improve Internet transparency without worsening user anonymity? For a long time, researchers have been proposing transparency systems, where traffic reports produced at strategic network points help assess network behavior and verify service-level agreements or neutrality compliance. However, such reports necessarily reveal when certain traffic appeared at a certain network point, and this information could, in principle, be used to compromise low-latency anonymity networks like Tor.</description>
     </item>
     
@@ -148,7 +156,7 @@ May 4, 2019. Abstract: Can we improve Internet transparency without worsening us
       <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/medchain/</guid>
-      <description>Juan Ram&amp;oacute;n Troncoso-Pastoriza, Jean Louis Raisaro, Linus Gasser, Bryan Ford, and Jean-Pierre Hubaux   AMIA Informatics Summit,
+      <description>Juan Ram&amp;oacute;n Troncoso-Pastoriza, Jean Louis Raisaro, Linus Gasser, Bryan Ford, and Jean-Pierre Hubaux AMIA Informatics Summit,
 March 25&amp;mdash;28, 2019. Abstract: The current trend towards personalized medicine creates an urgent need to share data among different hospitals and health institutions, which endangers the privacy of the data subjects if not done with the appropriate precautions. Conversely, the frequency of data breaches in the healthcare industry has been rising since 2010, severely holding back health institutions from exposing and sharing their data for the fear of being the next target of cyberattacks.</description>
     </item>
     
@@ -158,8 +166,8 @@ March 25&amp;mdash;28, 2019. Abstract: The current trend towards personalized me
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/liquid/</guid>
-      <description>Bryan Ford  November 2018 (first draft)  arXiv preprint
- Abstract: The idea of liquid democracy responds to a widely-felt desire to make democracy more &#34;fluid&#34; and continuously participatory. Its central premise is to enable users to employ networked technologies to control and delegate voting power, to approximate the ideal of direct democracy in a scalable fashion that accounts for time and attention limits. There are many potential definitions, meanings, and ways to implement liquid democracy, however, and many distinct purposes to which it might be deployed.</description>
+      <description>Bryan Ford November 2018 (first draft) arXiv preprint
+Abstract: The idea of liquid democracy responds to a widely-felt desire to make democracy more &#34;fluid&#34; and continuously participatory. Its central premise is to enable users to employ networked technologies to control and delegate voting power, to approximate the ideal of direct democracy in a scalable fashion that accounts for time and attention limits. There are many potential definitions, meanings, and ways to implement liquid democracy, however, and many distinct purposes to which it might be deployed.</description>
     </item>
     
     <item>
@@ -168,7 +176,7 @@ March 25&amp;mdash;28, 2019. Abstract: The current trend towards personalized me
       <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/medco-abs/</guid>
-      <description>Jean Louis Raisaro, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Micka&amp;euml;l Misbach, Jo&amp;atilde;o S&amp;aacute; Sousa, Sylvain Pradervand, Edoardo Missiaglia, Olivier Michielin, Bryan Ford, and Jean-Pierre Hubaux   IEEE/ACM Transactions on Computational Biology and Bioinformatics,
+      <description>Jean Louis Raisaro, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Micka&amp;euml;l Misbach, Jo&amp;atilde;o S&amp;aacute; Sousa, Sylvain Pradervand, Edoardo Missiaglia, Olivier Michielin, Bryan Ford, and Jean-Pierre Hubaux IEEE/ACM Transactions on Computational Biology and Bioinformatics,
 July 13, 2018. Abstract: The increasing number of health-data breaches is creating a complicated environment for medical-data sharing and, consequently, for medical progress. Therefore, the development of new solutions that can reassure clinical sites by enabling privacy-preserving sharing of sensitive medical data in compliance with stringent regulations (e.</description>
     </item>
     
@@ -178,8 +186,8 @@ July 13, 2018. Abstract: The increasing number of health-data breaches is creati
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/money/</guid>
-      <description>Bryan Ford  June 2018 (first draft)  arXiv preprint
- Abstract: Classical monetary systems regularly subject the most vulnerable majority of the world&#39;s population to debilitating financial shocks, and have manifestly allowed uncontrolled global inequality over the long term. Given these basic failures, how can we avoid asking whether mainstream macroeconomic principles are actually compatible with democratic principles such as equality or the protection of human rights and dignity?</description>
+      <description>Bryan Ford June 2018 (first draft) arXiv preprint
+Abstract: Classical monetary systems regularly subject the most vulnerable majority of the world&#39;s population to debilitating financial shocks, and have manifestly allowed uncontrolled global inequality over the long term. Given these basic failures, how can we avoid asking whether mainstream macroeconomic principles are actually compatible with democratic principles such as equality or the protection of human rights and dignity? This idea paper takes a constructive look at this question, by exploring how alternate monetary principles might result in a form of money more compatible with democratic principles -- dare we call it &#34;</description>
     </item>
     
     <item>
@@ -189,7 +197,7 @@ July 13, 2018. Abstract: The increasing number of health-data breaches is creati
       
       <guid>https://bford.info/pub/dec/omniledger-abs/</guid>
       <description>Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, Ewa Syta, and Bryan Ford
-  IEEE Security &amp; Privacy (IEEE S&amp;P)
+IEEE Security &amp; Privacy (IEEE S&amp;P)
 May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blockchain) that performs on par with centralized payment processors, such as Visa, is a challenging task. Most existing distributed ledgers are unable to scale-out, i.e., to grow their total processing capacity with the number of validators; and those that do, compromise security or decentralization.</description>
     </item>
     
@@ -200,8 +208,8 @@ May 22, 2018 Abstract: Designing a secure permissionless distributed ledger (blo
       
       <guid>https://bford.info/pub/dec/immunity-abs/</guid>
       <description>Stevens Le Blond, Alejandro Cuevas, Juan Ram&amp;oacute;n Troncoso-Pastoriza, Philipp Jovanovic, Bryan Ford, and Jean-Pierre Hubaux
-EPFL Winner of Distinguished Paper Award  IEEE Security &amp; Privacy (IEEE S&amp;P)
-May 22, 2018 Abstract: Humanitarian action, the process of aiding individuals in situations of crises, poses unique information-security challenges due to natural or manmade disasters, the adverse environments in which it takes place, and the scale and multidisciplinary nature of the problems.</description>
+EPFL Winner of Distinguished Paper Award IEEE Security &amp; Privacy (IEEE S&amp;P)
+May 22, 2018 Abstract: Humanitarian action, the process of aiding individuals in situations of crises, poses unique information-security challenges due to natural or manmade disasters, the adverse environments in which it takes place, and the scale and multidisciplinary nature of the problems. Despite these challenges, humanitarian organizations are transitioning towards a strong reliance on the digitization of collected data and digital tools, which improves their effectiveness but also exposes them to computer-security threats.</description>
     </item>
     
     <item>
@@ -211,11 +219,11 @@ May 22, 2018 Abstract: Humanitarian action, the process of aiding individuals in
       
       <guid>https://bford.info/pub/dec/atom-abs/</guid>
       <description>Albert Kwon
-MIT  Henry Corrigan-Gibbs
-Stanford  Srinivas Devadas
-MIT  Bryan Ford
-EPFL    26th ACM Symposium on Operating Systems Principles (SOSP)
-October 30, 2017 Abstract: Atom is an anonymous messaging system that protects against traffic-analysis attacks. Unlike many prior systems, each Atom server touches only a small fraction of the total messages routed through the network. As a result, the system’s capacity scales near-linearly with the number of servers.</description>
+MIT Henry Corrigan-Gibbs
+Stanford Srinivas Devadas
+MIT Bryan Ford
+EPFL 26th ACM Symposium on Operating Systems Principles (SOSP)
+October 30, 2017 Abstract: Atom is an anonymous messaging system that protects against traffic-analysis attacks. Unlike many prior systems, each Atom server touches only a small fraction of the total messages routed through the network. As a result, the system’s capacity scales near-linearly with the number of servers. At the same time, each Atom user benefits from &amp;ldquo;best possible&amp;rdquo; anonymity: a user is anonymous among all honest users of the system, even against an active adversary who monitors the entire network, a portion of the system’s servers, and any number of malicious users.</description>
     </item>
     
     <item>
@@ -224,7 +232,7 @@ October 30, 2017 Abstract: Atom is an anonymous messaging system that protects a
       <pubDate>Fri, 18 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/chainiac-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -233,8 +241,8 @@ October 30, 2017 Abstract: Atom is an anonymous messaging system that protects a
       <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/unlynx-abs/</guid>
-      <description>David Froelicher, Patricia Egger, Jo&amp;atilde;o S&amp;aacute; Sousa, Jean Louis Raisaro, Zhicong Huang, Christian Mouchet, Bryan Ford, and Jean-Pierre Hubaux   Privacy Enhancing Technologies Symposium (PETS)
-July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing among multiple parties either depend on a centralized authority that must be trusted and provides only weakest-link security (e.g., the entity that manages private/secret cryptographic keys), or leverage on decentralized but impractical approaches (e.</description>
+      <description>David Froelicher, Patricia Egger, Jo&amp;atilde;o S&amp;aacute; Sousa, Jean Louis Raisaro, Zhicong Huang, Christian Mouchet, Bryan Ford, and Jean-Pierre Hubaux Privacy Enhancing Technologies Symposium (PETS)
+July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing among multiple parties either depend on a centralized authority that must be trusted and provides only weakest-link security (e.g., the entity that manages private/secret cryptographic keys), or leverage on decentralized but impractical approaches (e.g., secure multi-party computation).</description>
     </item>
     
     <item>
@@ -244,7 +252,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       
       <guid>https://bford.info/pub/dec/random-abs/</guid>
       <description>Ewa Syta, Philipp Jovanovic, Eleftherios Kokoris Kogias, Nicolas Gailly, Linus Gasser, Ismail Khoffi, Michael J. Fischer, and Bryan Ford
-  IEEE Security &amp; Privacy (IEEE S&amp;P)
+IEEE Security &amp; Privacy (IEEE S&amp;P)
 May 23, 2017 Abstract: Bias-resistant public randomness is a critical component in many (distributed) protocols. Generating public randomness is hard, however, because active adversaries may behave dishonestly to bias public random choices toward their advantage. Existing solutions do not scale to hundreds or thousands of participants, as is needed in many decentralized systems.</description>
     </item>
     
@@ -255,7 +263,7 @@ May 23, 2017 Abstract: Bias-resistant public randomness is a critical component 
       
       <guid>https://bford.info/pub/dec/pop-abs/</guid>
       <description>Maria Borge, Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, and Bryan Ford
-EPFL   IEEE Security &amp; Privacy on the Blockchain (IEEE S&amp;B)
+EPFL IEEE Security &amp; Privacy on the Blockchain (IEEE S&amp;B)
 April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies commonly use proof-of-work (PoW) or proof-of-stake (PoS) to ensure their security, e.g. to prevent double spending attacks. However, both approaches have disadvantages: PoW leads to massive amounts of wasted electricity and re-centralization, whereas major stakeholders in PoS might be able to create a monopoly.</description>
     </item>
     
@@ -265,7 +273,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/lawful-surveillance/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -274,7 +282,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/contact-chaining/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -283,7 +291,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/byzcoin-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -292,7 +300,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/riffle/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -301,7 +309,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/open-surveillance/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -310,7 +318,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/cosi/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -319,7 +327,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/anonrep-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -328,7 +336,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/crypto-book-codaspy/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -338,7 +346,7 @@ April 29, 2017 Abstract: Permissionless blockchain-based cryptocurrencies common
       
       <guid>https://bford.info/pub/net/tlsmeta-abs/</guid>
       <description>Bryan Ford
-EPFL   TLS 1.3 Ready or Not (TRON) Workshop
+EPFL TLS 1.3 Ready or Not (TRON) Workshop
 February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both performance and security, so far offers little protection against traffic analysis or fingerprinting using unencrypted metadata or other side-channels such as transmission lengths and timings. This paper explores metadata protection mechanisms for TLS, including already-included provisions (e.g., record padding), provisions not yet included but potentially feasible in TLS 1.</description>
     </item>
     
@@ -348,7 +356,7 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-timing/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -357,7 +365,7 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/panopticon-cacm/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -366,8 +374,8 @@ February 21, 2016 Abstract: TLS 1.3 takes important steps to improve both perfor
       <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/private-eyes-abs/</guid>
-      <description>Ewa Syta, Michael J. Fischer, David Wolinsky, Abraham Silberschatz, Gina Gallegos-García, and Bryan Ford   12th International Conference on Security and Cryptography (SECRYPT)
-July 2015.  Abstract: We propose an efficient remote biometric authentication protocol that gives strong protection to the user’s biometric data in case of two common kinds of security breaches: (1) loss or theft of the user’s token (smart card, handheld device, etc.), giving the attacker full access to any secrets embedded within it; (2) total penetration of the server.</description>
+      <description>Ewa Syta, Michael J. Fischer, David Wolinsky, Abraham Silberschatz, Gina Gallegos-García, and Bryan Ford 12th International Conference on Security and Cryptography (SECRYPT)
+July 2015. Abstract: We propose an efficient remote biometric authentication protocol that gives strong protection to the user’s biometric data in case of two common kinds of security breaches: (1) loss or theft of the user’s token (smart card, handheld device, etc.), giving the attacker full access to any secrets embedded within it; (2) total penetration of the server.</description>
     </item>
     
     <item>
@@ -376,7 +384,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/certco/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -385,7 +393,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/gpufs-cacm/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -394,7 +402,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/cloud-indaas/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -403,7 +411,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Mon, 18 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/bandits/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -412,7 +420,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/nymboxes/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -421,7 +429,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/dissent-analysis/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -430,7 +438,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/torcoin/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -439,7 +447,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/onions-to-shallots/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -448,7 +456,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Mon, 14 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/taq-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -457,7 +465,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/crypto-book/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -466,7 +474,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/cloud-psra/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -475,7 +483,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/conscript/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -484,7 +492,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/randomness-keygen/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -493,7 +501,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/buddies/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -502,7 +510,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Sun, 03 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/irec/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -511,7 +519,7 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/verdict/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -520,8 +528,8 @@ July 2015.  Abstract: We propose an efficient remote biometric authentication pr
       <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/maple-abs/</guid>
-      <description>Andreas Voellmy, Junchang Wang, Y. Richard Yang, Bryan Ford, and Paul Hudak   ACM SIGCOMM 2013
-August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a simple, centralized programming model for managing complex networks. However, challenges in managing low-level details, such as setting up and maintaining correct and efficient forwarding tables on distributed switches, often compromise this conceptual simplicity. In this paper, we present Maple, a system that simplifies SDN programming by (1) allowing a programmer to use a standard programming language to design an arbitrary, centralized algorithm, which we call an algorithmic policy, to decide the behaviors of an entire network, and (2) providing an abstraction that the programmer-defined, centralized policy runs, conceptually, &amp;ldquo;afresh&amp;rdquo; on every packet entering a network, and hence is oblivious to the challenge of translating a high-level policy into sets of rules on distributed individual switches.</description>
+      <description>Andreas Voellmy, Junchang Wang, Y. Richard Yang, Bryan Ford, and Paul Hudak ACM SIGCOMM 2013
+August 12-16, 2013 Abstract: Software-Defined Networking offers the appeal of a simple, centralized programming model for managing complex networks. However, challenges in managing low-level details, such as setting up and maintaining correct and efficient forwarding tables on distributed switches, often compromise this conceptual simplicity. In this paper, we present Maple, a system that simplifies SDN programming by (1) allowing a programmer to use a standard programming language to design an arbitrary, centralized algorithm, which we call an algorithmic policy, to decide the behaviors of an entire network, and (2) providing an abstraction that the programmer-defined, centralized policy runs, conceptually, &amp;ldquo;afresh&amp;rdquo; on every packet entering a network, and hence is oblivious to the challenge of translating a high-level policy into sets of rules on distributed individual switches.</description>
     </item>
     
     <item>
@@ -530,7 +538,7 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/tor-unordered/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -539,7 +547,7 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Mon, 29 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/lazy-tree-mapping/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -548,8 +556,8 @@ August 12-16, 2013  Abstract: Software-Defined Networking offers the appeal of a
       <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/human-rights-abs/</guid>
-      <description>   Henry Corrigan-Gibbs and Bryan Ford Yale University   Cyber-security Research Ethics Dialog &amp; Strategy Workshop (CREDS 2013)
-May 23, 2013  Abstract: We draw an ethical analogy between Internet freedom efforts and humanitarian aid work. This parallel motivates a number of ethical questions relating to anonymity and censorship-circumvention research. Paper: PDF  </description>
+      <description> Henry Corrigan-Gibbs and Bryan Ford Yale University Cyber-security Research Ethics Dialog &amp; Strategy Workshop (CREDS 2013)
+May 23, 2013 Abstract: We draw an ethical analogy between Internet freedom efforts and humanitarian aid work. This parallel motivates a number of ethical questions relating to anonymity and censorship-circumvention research. Paper: PDF </description>
     </item>
     
     <item>
@@ -558,7 +566,7 @@ May 23, 2013  Abstract: We draw an ethical analogy between Internet freedom effo
       <pubDate>Wed, 20 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/gpufs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -567,8 +575,8 @@ May 23, 2013  Abstract: We draw an ethical analogy between Internet freedom effo
       <pubDate>Mon, 03 Dec 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/middleware12-abs/</guid>
-      <description>Nuno Santos, Rodrigo Rodrigues, and Bryan Ford   ACM/IFIP/USENIX 13th International Conference on Middleware
-December 2012  Abstract: The consequences of security breaches due to system administrator errors can be catastrophic. Software systems in general, and OSes in particular, ultimately depend on a fully trusted administrator whom is granted superuser privileges that allow him to fully control the system. Consequently, an administrator acting negligently or unethically can easily compromise user data in irreversible ways by leaking, modifying, or deleting data.</description>
+      <description>Nuno Santos, Rodrigo Rodrigues, and Bryan Ford ACM/IFIP/USENIX 13th International Conference on Middleware
+December 2012 Abstract: The consequences of security breaches due to system administrator errors can be catastrophic. Software systems in general, and OSes in particular, ultimately depend on a fully trusted administrator whom is granted superuser privileges that allow him to fully control the system. Consequently, an administrator acting negligently or unethically can easily compromise user data in irreversible ways by leaking, modifying, or deleting data.</description>
     </item>
     
     <item>
@@ -577,7 +585,7 @@ December 2012  Abstract: The consequences of security breaches due to system adm
       <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/dissent-in-numbers/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -586,7 +594,7 @@ December 2012  Abstract: The consequences of security breaches due to system adm
       <pubDate>Mon, 09 Jul 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/blogdrop/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -596,8 +604,8 @@ December 2012  Abstract: The consequences of security breaches due to system adm
       
       <guid>https://bford.info/pub/os/scaling-sdn-abs/</guid>
       <description>Andreas Voellmy, Bryan Ford, Paul Hudak, and Y. Richard Yang Yale University Department of Computer Science
-  Technical Report YALEU/DCS/TR-1468
-July 2012  Abstract: Software defined networks (SDN) introduce centralized controllers to drastically increase network programmability. The simplicity of a logical centralized controller, however, can come at the cost of controller programming complexity and scalability. In this paper, we present McNettle, an extensible SDN controller system whose control event processing throughput scales with the number of system CPU cores and which supports control algorithms requiring globally visible state changes occurring at flow arrival rates.</description>
+Technical Report YALEU/DCS/TR-1468
+July 2012 Abstract: Software defined networks (SDN) introduce centralized controllers to drastically increase network programmability. The simplicity of a logical centralized controller, however, can come at the cost of controller programming complexity and scalability. In this paper, we present McNettle, an extensible SDN controller system whose control event processing throughput scales with the number of system CPU cores and which supports control algorithms requiring globally visible state changes occurring at flow arrival rates.</description>
     </item>
     
     <item>
@@ -606,7 +614,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/non-linear/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -615,7 +623,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/tifc-hotcloud12/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -624,7 +632,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/icebergs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -633,7 +641,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/biometric-auth/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -642,7 +650,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Fri, 27 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/nsdi12-minion-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -651,8 +659,8 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/faceless-abs/</guid>
-      <description>Xiaoxiao Song, David Isaac Wolinsky, and Bryan Ford Yale University   5th Workshop on Social Network Systems
-April 10, 2012  Abstract: Social networks (SNs) enable physically distributed groups to communicate seamlessly. Unfortunately such communi- cation can be easily mined by adversaries in attempts to breach users’ privacy or suppress open discussion on sensi- tive topics. While anonymous posting can help protect users by hiding the link between individuals and the messages they post, existing anonymization schemes are centralized or vul- nerable to well-known attacks.</description>
+      <description>Xiaoxiao Song, David Isaac Wolinsky, and Bryan Ford Yale University 5th Workshop on Social Network Systems
+April 10, 2012 Abstract: Social networks (SNs) enable physically distributed groups to communicate seamlessly. Unfortunately such communi- cation can be easily mined by adversaries in attempts to breach users’ privacy or suppress open discussion on sensi- tive topics. While anonymous posting can help protect users by hiding the link between individuals and the messages they post, existing anonymization schemes are centralized or vul- nerable to well-known attacks.</description>
     </item>
     
     <item>
@@ -661,7 +669,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/anytrust/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -670,7 +678,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-vm/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -679,7 +687,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/certikos-apsys11/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -689,7 +697,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       
       <guid>https://bford.info/pub/net/eyo-usenix-abs/</guid>
       <description>Jacob Strauss, Justin Mazzola Paluska, Chris Lesniewski-Laas, Bryan Ford, Robert Morris, and Frans Kaashoek
- 2011 USENIX Annual Technical Conference June 15-17, 2011, Portland, OR, USA Abstract: Users increasingly store data collections such as digital photographs on multiple personal devices, each of which typically offers a storage management interface oblivious to the contents of the user’s other devices. As a result, collections become disorganized and drift out of sync.</description>
+2011 USENIX Annual Technical Conference June 15-17, 2011, Portland, OR, USA Abstract: Users increasingly store data collections such as digital photographs on multiple personal devices, each of which typically offers a storage management interface oblivious to the contents of the user’s other devices. As a result, collections become disorganized and drift out of sync. This paper presents Eyo, a novel personal storage system that provides device transparency: a user can think in terms of &amp;ldquo;file X&amp;rdquo;, rather than &amp;ldquo;file X on device Y&amp;rdquo;, and will see the same set of files on all personal devices.</description>
     </item>
     
     <item>
@@ -698,7 +706,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Thu, 26 May 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-openmp/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -707,7 +715,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/workspace-consistency/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -716,7 +724,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Fri, 24 Dec 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/druid-abs/</guid>
-      <description>Joe Touch, Ilia Baldine, Rudra Dutta, Gregory G. Finn, Bryan Ford, Scott Jordan, Dan Massey, Abraham Matta, Christos Papadopoulos, Peter Reiher, George Rouskas   Computer Networks December 24, 2010 Abstract: The Dynamic Recursive Unified Internet Design (DRUID) is a future Internet design that unifies overlay networks with conventional layered network architectures. DRUID is based on the fundamental concept of recursion, enabling a simple and direct network architecture that unifies the data, control, management, and security aspects of the current Internet, leading to a more trustworthy network.</description>
+      <description>Joe Touch, Ilia Baldine, Rudra Dutta, Gregory G. Finn, Bryan Ford, Scott Jordan, Dan Massey, Abraham Matta, Christos Papadopoulos, Peter Reiher, George Rouskas Computer Networks December 24, 2010 Abstract: The Dynamic Recursive Unified Internet Design (DRUID) is a future Internet design that unifies overlay networks with conventional layered network architectures. DRUID is based on the fundamental concept of recursion, enabling a simple and direct network architecture that unifies the data, control, management, and security aspects of the current Internet, leading to a more trustworthy network.</description>
     </item>
     
     <item>
@@ -725,7 +733,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Sun, 28 Nov 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/pfldnet10-minion-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -735,8 +743,8 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       
       <guid>https://bford.info/pub/os/timing-abs/</guid>
       <description>Amittai Aviram, Sen Hu, Bryan Ford
-	Ramakrishna Gummadi
-	Yale University 	University of Massachusetts Amherst  The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
+Ramakrishna Gummadi
+Yale University University of Massachusetts Amherst The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
     </item>
     
     <item>
@@ -745,7 +753,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Tue, 05 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-osdi10/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -754,7 +762,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Mon, 04 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/dissent-abs/</guid>
-      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award  17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract:  Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
+      <description>Henry Corrigan-Gibbs and Bryan Ford Yale University Winner of ACM CCS Test-of-Time Award 17th ACM Conference on Computer and Communications Security (CCS 2010) October 4-8, 2010, Chicago, IL, USA Abstract: Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group&#39;s communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.</description>
     </item>
     
     <item>
@@ -763,8 +771,8 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       <pubDate>Thu, 15 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/certified-kernels-abs/</guid>
-      <description>Zhong Shao and Bryan Ford Department of Computer Science, Yale University   Yale University Technical Report TR1436
-July 15, 2010  Abstract: Operating System (OS) kernels form the bedrock of all system software&amp;mdash;they can have the greatest impact on the resilience, extensibility, and security of today’s computing hosts. A single kernel bug can easily wreck the entire system’s integrity and protection. We propose to apply new advances in certified software to the development of a novel OS kernel.</description>
+      <description>Zhong Shao and Bryan Ford Department of Computer Science, Yale University Yale University Technical Report TR1436
+July 15, 2010 Abstract: Operating System (OS) kernels form the bedrock of all system software&amp;mdash;they can have the greatest impact on the resilience, extensibility, and security of today’s computing hosts. A single kernel bug can easily wreck the entire system’s integrity and protection. We propose to apply new advances in certified software to the development of a novel OS kernel.</description>
     </item>
     
     <item>
@@ -773,8 +781,8 @@ July 15, 2010  Abstract: Operating System (OS) kernels form the bedrock of all s
       <pubDate>Mon, 01 Feb 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5684-abs/</guid>
-      <description>Pyda Srisuresh and Bryan Ford   IETF RFC 5684
-February 2010  Abstract: This document identifies two deployment scenarios that have arisen from the unconventional network topologies formed using Network Address Translator (NAT) devices. First, the simplicity of administering networks through the combination of NAT and DHCP has increasingly lead to the deployment of multi-level inter-connected private networks involving overlapping private IP address spaces. Second, the proliferation of private networks in enterprises, hotels and conferences, and the wide-spread use of Virtual Private Networks (VPNs) to access an enterprise intranet from remote locations has increasingly lead to overlapping private IP address space between remote and corporate networks.</description>
+      <description>Pyda Srisuresh and Bryan Ford IETF RFC 5684
+February 2010 Abstract: This document identifies two deployment scenarios that have arisen from the unconventional network topologies formed using Network Address Translator (NAT) devices. First, the simplicity of administering networks through the combination of NAT and DHCP has increasingly lead to the deployment of multi-level inter-connected private networks involving overlapping private IP address spaces. Second, the proliferation of private networks in enterprises, hotels and conferences, and the wide-spread use of Virtual Private Networks (VPNs) to access an enterprise intranet from remote locations has increasingly lead to overlapping private IP address space between remote and corporate networks.</description>
     </item>
     
     <item>
@@ -784,8 +792,8 @@ February 2010  Abstract: This document identifies two deployment scenarios that 
       
       <guid>https://bford.info/pub/net/nego-abs/</guid>
       <description>Bryan Ford
-	Janardhan Iyengar
-	Yale University 	Franklin &amp;amp; Marshall College  Published in Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII) October 22-23, 2009, New York City, NY, USA Abstract: Internet evolution often depends on either inserting new protocol layers or upgrading existing layers to new protocols, but both of these evolutionary paths are obstructed by the difficulty and inefficiency of determining which protocols a pair of hosts mutually support and prefer.</description>
+Janardhan Iyengar
+Yale University Franklin &amp;amp; Marshall College Published in Eighth ACM Workshop on Hot Topics in Networks (HotNets-VIII) October 22-23, 2009, New York City, NY, USA Abstract: Internet evolution often depends on either inserting new protocol layers or upgrading existing layers to new protocols, but both of these evolutionary paths are obstructed by the difficulty and inefficiency of determining which protocols a pair of hosts mutually support and prefer.</description>
     </item>
     
     <item>
@@ -795,12 +803,12 @@ February 2010  Abstract: This document identifies two deployment scenarios that 
       
       <guid>https://bford.info/pub/net/devtransp-abs/</guid>
       <description>Jacob Strauss
-	Chris Lesniewski-Laas
-	Justin Mazzola Paluska
-	Bryan Ford
-	Robert Morris
-	Frans Kaashoek
- Published in SOSP Workshop on Hot Topics in Storage and File Systems (HotStorage &#39;09) October 11, 2009, Big Sky, MT, USA Abstract: This paper proposes a new storage model, device transparency, in which users view and manage their entire data collection from any of their devices, even from disconnected storage-limited devices holding only a subset of the entire collection.</description>
+Chris Lesniewski-Laas
+Justin Mazzola Paluska
+Bryan Ford
+Robert Morris
+Frans Kaashoek
+Published in SOSP Workshop on Hot Topics in Storage and File Systems (HotStorage &#39;09) October 11, 2009, Big Sky, MT, USA Abstract: This paper proposes a new storage model, device transparency, in which users view and manage their entire data collection from any of their devices, even from disconnected storage-limited devices holding only a subset of the entire collection.</description>
     </item>
     
     <item>
@@ -809,8 +817,8 @@ February 2010  Abstract: This document identifies two deployment scenarios that 
       <pubDate>Wed, 01 Apr 2009 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5508-abs/</guid>
-      <description>Pyda Srisuresh, Bryan Ford, Senthil Sivakumar, and Saikat Guha   IETF RFC 5508
-April 2009  Abstract: This document specifies the behavioral properties required of the Network Address Translator (NAT) devices in conjunction with the Internet Control Message Protocol (ICMP). The objective of this memo is to make NAT devices more predictable and compatible with diverse application protocols that traverse the devices. Companion documents provide behavioral recommendations specific to TCP, UDP, and other protocols.</description>
+      <description>Pyda Srisuresh, Bryan Ford, Senthil Sivakumar, and Saikat Guha IETF RFC 5508
+April 2009 Abstract: This document specifies the behavioral properties required of the Network Address Translator (NAT) devices in conjunction with the Internet Control Message Protocol (ICMP). The objective of this memo is to make NAT devices more predictable and compatible with diverse application protocols that traverse the devices. Companion documents provide behavioral recommendations specific to TCP, UDP, and other protocols.</description>
     </item>
     
     <item>
@@ -820,8 +828,8 @@ April 2009  Abstract: This document specifies the behavioral properties required
       
       <guid>https://bford.info/pub/net/logjam-abs/</guid>
       <description>Bryan Ford
-	Janardhan Iyengar
-	Massachusetts Institute of Technology 	Franklin &amp;amp; Marshall College  Published in Seventh ACM Workshop on Hot Topics in Networks (HotNets-VII) October 6-7, 2008, Calgary, Alberta, Canada Abstract: Current Internet transports conflate transport semantics with endpoint addressing and flow regulation, creating roadblocks to Internet evolution that we propose to address with a new layering model. Factoring endpoint addressing (port numbers) into a separate Endpoint Layer permits incremental rollout of new or improved transports at OS or application level, enables transport-oblivious firewall/NAT traversal, improves transport negotiation efficiency, and simplifies endpoint address space administration.</description>
+Janardhan Iyengar
+Massachusetts Institute of Technology Franklin &amp;amp; Marshall College Published in Seventh ACM Workshop on Hot Topics in Networks (HotNets-VII) October 6-7, 2008, Calgary, Alberta, Canada Abstract: Current Internet transports conflate transport semantics with endpoint addressing and flow regulation, creating roadblocks to Internet evolution that we propose to address with a new layering model. Factoring endpoint addressing (port numbers) into a separate Endpoint Layer permits incremental rollout of new or improved transports at OS or application level, enables transport-oblivious firewall/NAT traversal, improves transport negotiation efficiency, and simplifies endpoint address space administration.</description>
     </item>
     
     <item>
@@ -830,8 +838,8 @@ April 2009  Abstract: This document specifies the behavioral properties required
       <pubDate>Wed, 01 Oct 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5382-abs/</guid>
-      <description>   Saikat Guha, Kaushik Biswas, Bryan Ford, Senthil Sivakumar, and Pyda Srisuresh   IETF RFC 5382
-October 2008  Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Final RFC: Plain text  Early drafts:   IETF working group draft versions: 06 05 04 03 02 01 00  Individual draft versions: 02 01 00  </description>
+      <description> Saikat Guha, Kaushik Biswas, Bryan Ford, Senthil Sivakumar, and Pyda Srisuresh IETF RFC 5382
+October 2008 Abstract: This document defines a set of requirements for NATs that handle TCP that would allow many applications, such as peer-to-peer applications and online games to work consistently. Developing NATs that meet this set of requirements will greatly increase the likelihood that these applications will function properly. Final RFC: Plain text Early drafts: IETF working group draft versions: 06 05 04 03 02 01 00 Individual draft versions: 02 01 00 </description>
     </item>
     
     <item>
@@ -841,7 +849,7 @@ October 2008  Abstract: This document defines a set of requirements for NATs tha
       
       <guid>https://bford.info/pub/net/phd-abs/</guid>
       <description>Bryan Ford
-Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications.  Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
+Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract: The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications. Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
     </item>
     
     <item>
@@ -851,8 +859,8 @@ Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  
       
       <guid>https://bford.info/pub/os/vx32-abs/</guid>
       <description>Bryan Ford and Russ Cox
-Massachusetts Institute of Technology  Winnder of Best Student Paper Award  USENIX Annual Technical Conference
-June 22-27, 2008, Boston, Massachusetts. Abstract:  Code sandboxing is useful for many purposes, but most sandboxing techniques require kernel modifications, do not completely isolate guest code, or incur substantial performance costs. Vx32 is a multipurpose user-level sandbox that enables any application to load and safely execute one or more guest plug-ins, confining each guest to a system call API controlled by the host application and to a restricted memory region within the host&amp;rsquo;s address space.</description>
+Massachusetts Institute of Technology Winnder of Best Student Paper Award USENIX Annual Technical Conference
+June 22-27, 2008, Boston, Massachusetts. Abstract: Code sandboxing is useful for many purposes, but most sandboxing techniques require kernel modifications, do not completely isolate guest code, or incur substantial performance costs. Vx32 is a multipurpose user-level sandbox that enables any application to load and safely execute one or more guest plug-ins, confining each guest to a system call API controlled by the host application and to a restricted memory region within the host&amp;rsquo;s address space.</description>
     </item>
     
     <item>
@@ -861,9 +869,8 @@ June 22-27, 2008, Boston, Massachusetts. Abstract:  Code sandboxing is useful fo
       <pubDate>Tue, 01 Apr 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/sybil-abs/</guid>
-      <description>Bryan Ford and Jacob Strauss 
-Massachusetts Institute of Technology First Workshop on Social Network Systems
-April 1, 2008 Abstract:  Online anonymity often appears to undermine accountability, offering little incentive for civil behavior, but accountability failures usually result not from anonymity itself but from the disposability of virtual identities. A user banned for misbehavior&amp;mdash;e.g., spamming from a free E-mail account or stuffing an online ballot box&amp;mdash;can simply open other accounts or connect from other IP addresses.</description>
+      <description>Bryan Ford and Jacob Strauss Massachusetts Institute of Technology First Workshop on Social Network Systems
+April 1, 2008 Abstract: Online anonymity often appears to undermine accountability, offering little incentive for civil behavior, but accountability failures usually result not from anonymity itself but from the disposability of virtual identities. A user banned for misbehavior&amp;mdash;e.g., spamming from a free E-mail account or stuffing an online ballot box&amp;mdash;can simply open other accounts or connect from other IP addresses.</description>
     </item>
     
     <item>
@@ -872,8 +879,8 @@ April 1, 2008 Abstract:  Online anonymity often appears to undermine accountabil
       <pubDate>Sat, 01 Mar 2008 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/rfc5128-abs/</guid>
-      <description>Pyda Srisuresh, Bryan Ford, and Dan Kegel   IETF RFC 5128
-March 2008  Abstract: This memo documents the various methods known to be in use by applications to establish direct communication in the presence of Network Address Translators (NATs) at the current time. Although this memo is intended to be mainly descriptive, the Security Considerations section makes some purely advisory recommendations about how to deal with security vulnerabilities the applications could inadvertently create when using the methods described.</description>
+      <description>Pyda Srisuresh, Bryan Ford, and Dan Kegel IETF RFC 5128
+March 2008 Abstract: This memo documents the various methods known to be in use by applications to establish direct communication in the presence of Network Address Translators (NATs) at the current time. Although this memo is intended to be mainly descriptive, the Security Considerations section makes some purely advisory recommendations about how to deal with security vulnerabilities the applications could inadvertently create when using the methods described.</description>
     </item>
     
     <item>
@@ -882,7 +889,7 @@ March 2008  Abstract: This memo documents the various methods known to be in use
       <pubDate>Sat, 01 Dec 2007 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/transport-ietf-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -892,7 +899,7 @@ March 2008  Abstract: This memo documents the various methods known to be in use
       
       <guid>https://bford.info/pub/net/alpaca-abs/</guid>
       <description>Chris Lesniewski-Laas, Bryan Ford, Jacob Strauss, Robert Morris, and M. Frans Kaashoek
-Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract:  Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
+Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract: Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
     </item>
     
     <item>
@@ -902,7 +909,7 @@ Massachusetts Institute of Technology Published in 14th ACM Conference on Comput
       
       <guid>https://bford.info/pub/net/sst-abs/</guid>
       <description>Bryan Ford
-Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract:  Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
+Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-31, 2007, Kyoto, Japan. Abstract: Internet applications currently have a choice between stream and datagram transport abstractions. Datagrams efficiently support small transactions and streams are suited for long-running conversations, but neither abstraction adequately supports applications like HTTP that exhibit a mixture of transaction sizes, or applications like FTP and SIP that use multiple transport instances. Structured Stream Transport (SST) enhances the traditional stream abstraction with a hierarchical hereditary structure, allowing applications to create lightweight child streams from any existing stream.</description>
     </item>
     
     <item>
@@ -912,7 +919,7 @@ Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-3
       
       <guid>https://bford.info/pub/net/uia-osdi/</guid>
       <description>Persistent Personal Names for Globally Connected Mobile Devices Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
-	Massachusetts Institute of Technology Published in 7th USENIX Symposium on Operating Systems Design and Implementation, November 6-8, 2006.   Abstract:   The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation.</description>
+Massachusetts Institute of Technology Published in 7th USENIX Symposium on Operating Systems Design and Implementation, November 6-8, 2006. Abstract: The Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
     </item>
     
     <item>
@@ -922,8 +929,8 @@ Massachusetts Institute of Technology Published in ACM SIGCOMM 2007, August 27-3
       
       <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
       <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
- Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
-November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
+November 6-8, 2006 Abstract: The Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
     </item>
     
     <item>
@@ -932,7 +939,7 @@ November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provide
       <pubDate>Sun, 24 Sep 2006 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/log/2006/0924-SybilParties.html</guid>
-      <description>Bryan Ford - September 24, 2006 Preliminary draft: see here for the final published paper  The Human Recognition Problem  Today&#39;s online ecosphere continually suffers from its inability to tell who is a genuine, unique human and who isn&#39;t. Because open-access messaging systems cannot isolate or authenticate the human source of messages for the purpose of suppressing abuses, spam has already relegated USENET to historical obscurity [Templeton01], threatens the usability of E-mail [Wouters05], and is even advancing on Skype.</description>
+      <description>Bryan Ford - September 24, 2006 Preliminary draft: see here for the final published paper The Human Recognition Problem Today&#39;s online ecosphere continually suffers from its inability to tell who is a genuine, unique human and who isn&#39;t. Because open-access messaging systems cannot isolate or authenticate the human source of messages for the purpose of suppressing abuses, spam has already relegated USENET to historical obscurity [Templeton01], threatens the usability of E-mail [Wouters05], and is even advancing on Skype.</description>
     </item>
     
     <item>
@@ -941,8 +948,8 @@ November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provide
       <pubDate>Mon, 27 Feb 2006 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/uia-iptps-abs/</guid>
-      <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, and Robert Morris Massachusetts Institute of Technology   5th International Workshop on Peer-to-Peer Systems
-February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a peer-to-peer connectivity architecture that provides users a simple, intuitive, and secure way to share information and services between personal devices by assigning ad hoc names that act like &amp;ldquo;virtual cables.</description>
+      <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, and Robert Morris Massachusetts Institute of Technology 5th International Workshop on Peer-to-Peer Systems
+February 27-28, 2006 Abstract The User Information Architecture, or UIA, is a peer-to-peer connectivity architecture that provides users a simple, intuitive, and secure way to share information and services between personal devices by assigning ad hoc names that act like &amp;ldquo;virtual cables.&amp;rdquo; Users assign names by &amp;ldquo;introducing&amp;rdquo; devices to each other on a common network.</description>
     </item>
     
     <item>
@@ -953,7 +960,7 @@ February 27-28, 2006  Abstract The User Information Architecture, or UIA, is a p
       <guid>https://bford.info/pub/os/vxa-abs/</guid>
       <description>Bryan Ford
 Massachusetts Institute of Technology 4th USENIX Conference on File and Storage Technologies (FAST &#39;05)
-December 16, 2005, San Francisco, California, USA. Abstract:  Data compression algorithms change frequently, and obsolete decoders do not always run on new hardware and operating systems, threatening the long-term usability of content archived using those algorithms. Re-encoding content into new formats is cumbersome, and highly undesirable when lossy compression is involved. Processor architectures, in contrast, have remained comparatively stable over recent decades.</description>
+December 16, 2005, San Francisco, California, USA. Abstract: Data compression algorithms change frequently, and obsolete decoders do not always run on new hardware and operating systems, threatening the long-term usability of content archived using those algorithms. Re-encoding content into new formats is cumbersome, and highly undesirable when lossy compression is involved. Processor architectures, in contrast, have remained comparatively stable over recent decades.</description>
     </item>
     
     <item>
@@ -962,7 +969,7 @@ December 16, 2005, San Francisco, California, USA. Abstract:  Data compression a
       <pubDate>Sun, 10 Apr 2005 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/p2pnat-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com   Presented at the USENIX Annual Technical Conference, April 10-15, 2005. Abstract:  Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com Presented at the USENIX Annual Technical Conference, April 10-15, 2005. Abstract: Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer.</description>
     </item>
     
     <item>
@@ -971,7 +978,7 @@ December 16, 2005, San Francisco, California, USA. Abstract:  Data compression a
       <pubDate>Thu, 17 Feb 2005 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/net/p2pnat/</guid>
-      <description>Peer-to-Peer Communication Across Network Address Translators Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com    J&#39;fais des trous, des petits troustoujours des petits trous &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; - S. Gainsbourg  Abstract:  Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address.</description>
+      <description>Peer-to-Peer Communication Across Network Address Translators Bryan Ford Massachusetts Institute of Technology baford (at) mit.edu Pyda Srisuresh Caymas Systems, Inc. srisuresh (at) yahoo.com Dan Kegel dank (at) kegel.com J&#39;fais des trous, des petits trous toujours des petits trous &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; - S. Gainsbourg Abstract: Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer.</description>
     </item>
     
     <item>
@@ -981,7 +988,7 @@ December 16, 2005, San Francisco, California, USA. Abstract:  Data compression a
       
       <guid>https://bford.info/pub/lang/peg/</guid>
       <description>Bryan Ford
-Massachusetts Institute of Technology  Symposium on Principles of Programming Languages, January 14-16, 2004, Venice, Italy   Abstract For decades we have been using Chomsky&#39;s generative system of grammars, particularly context-free grammars (CFGs) and regular expressions (REs), to express the syntax of programming languages and protocols. The power of generative grammars to express ambiguity is crucial to their original purpose of modelling natural languages, but this very power makes it unnecessarily difficult both to express and to parse machine-oriented languages using CFGs.</description>
+Massachusetts Institute of Technology Symposium on Principles of Programming Languages, January 14-16, 2004, Venice, Italy Abstract For decades we have been using Chomsky&#39;s generative system of grammars, particularly context-free grammars (CFGs) and regular expressions (REs), to express the syntax of programming languages and protocols. The power of generative grammars to express ambiguity is crucial to their original purpose of modelling natural languages, but this very power makes it unnecessarily difficult both to express and to parse machine-oriented languages using CFGs.</description>
     </item>
     
     <item>
@@ -990,8 +997,8 @@ Massachusetts Institute of Technology  Symposium on Principles of Programming La
       <pubDate>Thu, 20 Nov 2003 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/uip-case-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology   Second Workshop on Hot Topics in Networks
-November 20-21, 2003  Abstract: Though appropriate for core Internet infrastructure, the Internet Protocol is unsuited to routing within and between emerging ad-hoc edge networks due to its dependence on hierarchical, administratively assigned addresses. Existing ad-hoc routing protocols address the management problem but do not scale to Internet-wide networks. The promise of ubiquitous network computing cannot be fulfilled until we develop an Unmanaged Internet Protocol (UIP), a scalable routing protocol that manages itself automatically.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology Second Workshop on Hot Topics in Networks
+November 20-21, 2003 Abstract: Though appropriate for core Internet infrastructure, the Internet Protocol is unsuited to routing within and between emerging ad-hoc edge networks due to its dependence on hierarchical, administratively assigned addresses. Existing ad-hoc routing protocols address the management problem but do not scale to Internet-wide networks. The promise of ubiquitous network computing cannot be fulfilled until we develop an Unmanaged Internet Protocol (UIP), a scalable routing protocol that manages itself automatically.</description>
     </item>
     
     <item>
@@ -1000,8 +1007,8 @@ November 20-21, 2003  Abstract: Though appropriate for core Internet infrastruct
       <pubDate>Fri, 31 Oct 2003 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/uip-abs/</guid>
-      <description>Bryan Ford Massachusetts Institute of Technology   Technical Report MIT-LCS-TR-926
-October 31, 2003  Abstract: Unmanaged Internet Protocol (UIP) is a fully self-organizing network-layer protocol that implements scalable identity-based routing. In contrast with address-based routing protocols, which depend for scalability on centralized hierarchical address management, UIP nodes use a flat namespace of cryptographic node identifiers. Node identities can be created locally on demand and remain stable across network changes.</description>
+      <description>Bryan Ford Massachusetts Institute of Technology Technical Report MIT-LCS-TR-926
+October 31, 2003 Abstract: Unmanaged Internet Protocol (UIP) is a fully self-organizing network-layer protocol that implements scalable identity-based routing. In contrast with address-based routing protocols, which depend for scalability on centralized hierarchical address management, UIP nodes use a flat namespace of cryptographic node identifiers. Node identities can be created locally on demand and remain stable across network changes. Unlike location-independent name services, the UIP routing protocol can stitch together many conventional address-based networks with disjoint or discontinuous address domains, providing connectivity between any pair of participating nodes even when no underlying network provides direct connectivity.</description>
     </item>
     
     <item>
@@ -1011,7 +1018,7 @@ October 31, 2003  Abstract: Unmanaged Internet Protocol (UIP) is a fully self-or
       
       <guid>https://bford.info/pub/lang/packrat-icfp02/</guid>
       <description>Bryan Ford
-Massachusetts Institute of Technology  International Conference on Functional Programming, October 4-6, 2002, Pittsburgh   Abstract Packrat parsing is a novel technique for implementing parsers in a lazy functional programming language. A packrat parser provides the power and flexibility of top-down parsing with backtracking and unlimited lookahead, but nevertheless guarantees linear parse time. Any language defined by an LL(k) or LR(k) grammar can be recognized by a packrat parser, in addition to many languages that conventional linear-time algorithms do not support.</description>
+Massachusetts Institute of Technology International Conference on Functional Programming, October 4-6, 2002, Pittsburgh Abstract Packrat parsing is a novel technique for implementing parsers in a lazy functional programming language. A packrat parser provides the power and flexibility of top-down parsing with backtracking and unlimited lookahead, but nevertheless guarantees linear parse time. Any language defined by an LL(k) or LR(k) grammar can be recognized by a packrat parser, in addition to many languages that conventional linear-time algorithms do not support.</description>
     </item>
     
     <item>
@@ -1022,7 +1029,7 @@ Massachusetts Institute of Technology  International Conference on Functional Pr
       <guid>https://bford.info/pub/lang/thesis/</guid>
       <description>Bryan Ford
 Master&#39;s Thesis
-Massachusetts Institute of Technology   Abstract  Packrat parsing is a novel and practical method for implementing linear-time parsers for grammars defined in Top-Down Parsing Language (TDPL). While TDPL was originally created as a formal model for top-down parsers with backtracking capability, this thesis extends TDPL into a powerful general-purpose notation for describing language syntax, providing a compelling alternative to traditional context-free grammars (CFGs).</description>
+Massachusetts Institute of Technology Abstract Packrat parsing is a novel and practical method for implementing linear-time parsers for grammars defined in Top-Down Parsing Language (TDPL). While TDPL was originally created as a formal model for top-down parsers with backtracking capability, this thesis extends TDPL into a powerful general-purpose notation for describing language syntax, providing a compelling alternative to traditional context-free grammars (CFGs). Common syntactic idioms that cannot be represented concisely in a CFG are easily expressed in TDPL, such as longest-match disambiguation and &#34;</description>
     </item>
     
     <item>
@@ -1031,9 +1038,8 @@ Massachusetts Institute of Technology   Abstract  Packrat parsing is a novel and
       <pubDate>Wed, 24 Feb 1999 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/atomic-osdi99-abs/</guid>
-      <description>Bryan Ford, Mike Hibler, Jay Lepreau, Roland McGrath, and Patrick Tullmann 
-Department of Computer Science, University of Utah  3rd Symposium on Operating Systems Design and Implementation
-February 22-25, 1999 Abstract:  We have defined and implemented a kernel API that makes every exported operation fully interruptible and restartable, thereby appearing atomic to the user. To achieve interruptibility, all possible kernel states in which a thread may become blocked for a &amp;ldquo;long&amp;rdquo; time are represented as kernel system calls, without requiring the kernel to retain any unexposable internal state.</description>
+      <description>Bryan Ford, Mike Hibler, Jay Lepreau, Roland McGrath, and Patrick Tullmann Department of Computer Science, University of Utah 3rd Symposium on Operating Systems Design and Implementation
+February 22-25, 1999 Abstract: We have defined and implemented a kernel API that makes every exported operation fully interruptible and restartable, thereby appearing atomic to the user. To achieve interruptibility, all possible kernel states in which a thread may become blocked for a &amp;ldquo;long&amp;rdquo; time are represented as kernel system calls, without requiring the kernel to retain any unexposable internal state.</description>
     </item>
     
     <item>
@@ -1042,9 +1048,8 @@ February 22-25, 1999 Abstract:  We have defined and implemented a kernel API tha
       <pubDate>Mon, 06 Oct 1997 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/oskit-sosp16-abs/</guid>
-      <description>Bryan Ford, Godmar Back, Greg Benson, Jay Lepreau, Albert Lin, and Olin Shivers 
- Proceedings of the 16th ACM Symposium on Operating System Principles
-October 5-8, 1997 Abstract:  Implementing new operating systems is tedious, costly, and often impractical except for large projects. The Flux OSKit addresses this problem in a novel way by providing clean, well-documented OS components designed to be reused in a wide variety of other environments, rather than defining a new OS structure.</description>
+      <description>Bryan Ford, Godmar Back, Greg Benson, Jay Lepreau, Albert Lin, and Olin Shivers Proceedings of the 16th ACM Symposium on Operating System Principles
+October 5-8, 1997 Abstract: Implementing new operating systems is tedious, costly, and often impractical except for large projects. The Flux OSKit addresses this problem in a novel way by providing clean, well-documented OS components designed to be reused in a wide variety of other environments, rather than defining a new OS structure.</description>
     </item>
     
     <item>
@@ -1053,8 +1058,8 @@ October 5-8, 1997 Abstract:  Implementing new operating systems is tedious, cost
       <pubDate>Sun, 15 Jun 1997 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/flick-pldi97-abs/</guid>
-      <description>Eric Eide, Kevin Frei, Bryan Ford, Jay Lepreau, and Gary Lindstrom University of Utah, Department of Computer Science   ACM SIGPLAN Conference on Programming Language Design and Implementation
-June 15-18, 1997.  Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance. Systems like Mach provide a set of general abstractions and attempt to handle every situation, which can lead to poor performance for common cases.</description>
+      <description>Eric Eide, Kevin Frei, Bryan Ford, Jay Lepreau, and Gary Lindstrom University of Utah, Department of Computer Science ACM SIGPLAN Conference on Programming Language Design and Implementation
+June 15-18, 1997. Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance. Systems like Mach provide a set of general abstractions and attempt to handle every situation, which can lead to poor performance for common cases.</description>
     </item>
     
     <item>
@@ -1065,7 +1070,7 @@ June 15-18, 1997.  Abstract: Modern operating systems must support a wide variet
       <guid>https://bford.info/pub/os/oskit-hotos6-abs/</guid>
       <description>Bryan Ford, Kevin Van Maren, Jay Lepreau, Stephen Clawson, Bart Robinson, and Jeff Turner
 University of Utah 6th Workshop on Hot Topics in Operating Systems (HotOS-VI)
-May 5-6, 1997 Abstract:  To an unappreciated degree, research both in operating systems and their programming languages has been severely hampered by the lack of cleanly reusable code providing mundane low-level OS infrastructure such as bootstrap code and device drivers. The Flux OS Toolkit solves this problem by providing a set of clean, well-documented components.</description>
+May 5-6, 1997 Abstract: To an unappreciated degree, research both in operating systems and their programming languages has been severely hampered by the lack of cleanly reusable code providing mundane low-level OS infrastructure such as bootstrap code and device drivers. The Flux OS Toolkit solves this problem by providing a set of clean, well-documented components.</description>
     </item>
     
     <item>
@@ -1074,8 +1079,8 @@ May 5-6, 1997 Abstract:  To an unappreciated degree, research both in operating 
       <pubDate>Wed, 30 Oct 1996 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/inherit-sched-abs/</guid>
-      <description>Bryan Ford and Sai R. Susarla  Department of Computer Science, University of Utah  Proceedings of the Second Symposium on Operating Systems Design and Implementation
-October 28-31, 1996  Abstract: Traditional processor scheduling mechanisms in operating systems are fairly rigid, often supporting only one fixed scheduling policy, or, at most, a few &amp;ldquo;scheduling classes&amp;rdquo; whose implementations are closely tied together in the OS kernel. This paper presents CPU inheritance scheduling, a novel processor scheduling framework in which arbitrary threads can act as schedulers for other threads.</description>
+      <description>Bryan Ford and Sai R. Susarla Department of Computer Science, University of Utah Proceedings of the Second Symposium on Operating Systems Design and Implementation
+October 28-31, 1996 Abstract: Traditional processor scheduling mechanisms in operating systems are fairly rigid, often supporting only one fixed scheduling policy, or, at most, a few &amp;ldquo;scheduling classes&amp;rdquo; whose implementations are closely tied together in the OS kernel. This paper presents CPU inheritance scheduling, a novel processor scheduling framework in which arbitrary threads can act as schedulers for other threads.</description>
     </item>
     
     <item>
@@ -1086,7 +1091,7 @@ October 28-31, 1996  Abstract: Traditional processor scheduling mechanisms in op
       <guid>https://bford.info/pub/os/fluke-rvm-abs/</guid>
       <description>Bryan Ford, Mike Hibler, Jay Lepreau, Patrick Tullmann, Godmar Back, and Stephen Clawson
 University of Utah USENIX 2nd Symposium on OS Design and Implementation (OSDI &#39;96)
-October 28-31, 1996, Seattle, Washington, USA. Abstract:  This paper describes a novel approach to providing modular and extensible operating system functionality and encapsulated environments based on a synthesis of microkernel and virtual machine concepts. We have developed a software-based virtualizable architecture called Fluke that allows recursive virtual machines (virtual machines running on other virtual machines) to be implemented efficiently by a microkernel running on generic hardware.</description>
+October 28-31, 1996, Seattle, Washington, USA. Abstract: This paper describes a novel approach to providing modular and extensible operating system functionality and encapsulated environments based on a synthesis of microkernel and virtual machine concepts. We have developed a software-based virtualizable architecture called Fluke that allows recursive virtual machines (virtual machines running on other virtual machines) to be implemented efficiently by a microkernel running on generic hardware.</description>
     </item>
     
     <item>
@@ -1095,8 +1100,8 @@ October 28-31, 1996, Seattle, Washington, USA. Abstract:  This paper describes a
       <pubDate>Sun, 27 Oct 1996 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/iwooos96-flobs-abs/</guid>
-      <description>Patrick Tullmann, Jay Lepreau, Bryan Ford, and Mike Hibler  Department of Computer Science, University of Utah  Proceedings of the Fifth IEEE International Workshop on Object Orientation in Operating Systems (IWOOOS)
-October 27-28, 1996  Abstract: Checkpointing, process migration, and similar services need to have access not only to the memory of the constituent processes, but also to the complete state of all kernel provided objects (e.</description>
+      <description>Patrick Tullmann, Jay Lepreau, Bryan Ford, and Mike Hibler Department of Computer Science, University of Utah Proceedings of the Fifth IEEE International Workshop on Object Orientation in Operating Systems (IWOOOS)
+October 27-28, 1996 Abstract: Checkpointing, process migration, and similar services need to have access not only to the memory of the constituent processes, but also to the complete state of all kernel provided objects (e.g., threads and ports) involved. Traditionally, a major stumbling block in these operations is acquiring and re-creating the state in the operating system.</description>
     </item>
     
     <item>
@@ -1105,8 +1110,8 @@ October 27-28, 1996  Abstract: Checkpointing, process migration, and similar ser
       <pubDate>Mon, 09 Sep 1996 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/dist-vs-local-abs/</guid>
-      <description>Jay Lepreau, Bryan Ford, and Mike Hibler  Department of Computer Science, University of Utah  Proceedings of the Seventh ACM SIGOPS European Workshop
-September 9-11, 1996  Abstract: The growth and popularity of loosely-coupled distributed systems such as the World Wide Web and the touting of Java-based systems as the solution to the issues of software maintenance, flexibility, and security are changing the research emphasis away from traditional single node operating system issues.</description>
+      <description>Jay Lepreau, Bryan Ford, and Mike Hibler Department of Computer Science, University of Utah Proceedings of the Seventh ACM SIGOPS European Workshop
+September 9-11, 1996 Abstract: The growth and popularity of loosely-coupled distributed systems such as the World Wide Web and the touting of Java-based systems as the solution to the issues of software maintenance, flexibility, and security are changing the research emphasis away from traditional single node operating system issues.</description>
     </item>
     
     <item>
@@ -1115,8 +1120,8 @@ September 9-11, 1996  Abstract: The growth and popularity of loosely-coupled dis
       <pubDate>Wed, 01 Mar 1995 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/presint3-abs/</guid>
-      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science   Technical Report UUCS-95-014
-March 1995.  Abstract: In RPC-based communication, it is useful to distinguish the RPC interface, which is the “network contract” be- tween the client and the server, from the presentation, which is the “programmer’s contract” between the RPC stubs and the code that calls or is called by them.</description>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science Technical Report UUCS-95-014
+March 1995. Abstract: In RPC-based communication, it is useful to distinguish the RPC interface, which is the “network contract” be- tween the client and the server, from the presentation, which is the “programmer’s contract” between the RPC stubs and the code that calls or is called by them. Presentation is usually a fixed function of the RPC interface, but some RPC systems, such as DCE and Concert, support the notion of a flexible presentation or endpoint modifier, allowing controlled modification of the behavior of the stubs on each side without affecting the contract between the client and the server.</description>
     </item>
     
     <item>
@@ -1125,8 +1130,8 @@ March 1995.  Abstract: In RPC-based communication, it is useful to distinguish t
       <pubDate>Thu, 01 Dec 1994 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/presint2-abs/</guid>
-      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science   Technical Report UUCS-95-018
-December 1994.  Abstract: In RPC-based communication, we term the interface the set of remote procedures and the types of their arguments; the presentation is the way these procedures and types are mapped to the target language environment in a particular client or server, including semantic requirements. For example, presentation includes the local names assigned to RPC stubs, the physical representation of a logical block of data (e.</description>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science Technical Report UUCS-95-018
+December 1994. Abstract: In RPC-based communication, we term the interface the set of remote procedures and the types of their arguments; the presentation is the way these procedures and types are mapped to the target language environment in a particular client or server, including semantic requirements. For example, presentation includes the local names assigned to RPC stubs, the physical representation of a logical block of data (e.</description>
     </item>
     
     <item>
@@ -1135,8 +1140,8 @@ December 1994.  Abstract: In RPC-based communication, we term the interface the 
       <pubDate>Mon, 17 Jan 1994 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/thread-migrate-abs/</guid>
-      <description>Bryan Ford and Jay Lepreau  Department of Computer Science, University of Utah  Proceedings of the Winter 1994 USENIX Technical Conference
-January 17-21, 1994  Abstract: We have modified Mach 3.0 to treat cross-domain remote procedure call (RPC) as a single entity, instead of a sequence of message passing operations. With RPC thus elevated, we improved the transfer of control during RPC by changing the thread model.</description>
+      <description>Bryan Ford and Jay Lepreau Department of Computer Science, University of Utah Proceedings of the Winter 1994 USENIX Technical Conference
+January 17-21, 1994 Abstract: We have modified Mach 3.0 to treat cross-domain remote procedure call (RPC) as a single entity, instead of a sequence of message passing operations. With RPC thus elevated, we improved the transfer of control during RPC by changing the thread model. Like most operating systems, Mach views threads as statically associated with a single task, with two threads involved in an RPC.</description>
     </item>
     
     <item>
@@ -1145,8 +1150,8 @@ January 17-21, 1994  Abstract: We have modified Mach 3.0 to treat cross-domain r
       <pubDate>Thu, 09 Dec 1993 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/passive-abs/</guid>
-      <description>Bryan Ford and Jay Lepreau  Department of Computer Science, University of Utah  International Workshop on Object Orientation in Operating Systems (IWOOOS)
-December 9-10, 1993  Abstract: We believe that a passive object model, in which the active entities or threads migrate between passive objects, is more appropriate than an active object model, as the basic structure of a microkernel-based operating system. A passive object model provides enhanced performance and simplicity because it is more closely matched to the basic nature of microprocessors and the requirements of applications.</description>
+      <description>Bryan Ford and Jay Lepreau Department of Computer Science, University of Utah International Workshop on Object Orientation in Operating Systems (IWOOOS)
+December 9-10, 1993 Abstract: We believe that a passive object model, in which the active entities or threads migrate between passive objects, is more appropriate than an active object model, as the basic structure of a microkernel-based operating system. A passive object model provides enhanced performance and simplicity because it is more closely matched to the basic nature of microprocessors and the requirements of applications.</description>
     </item>
     
     <item>
@@ -1155,8 +1160,8 @@ December 9-10, 1993  Abstract: We believe that a passive object model, in which 
       <pubDate>Thu, 14 Oct 1993 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/flex-wwos4-abs/</guid>
-      <description>John B. Carter, Bryan Ford, Mike Hibler, Ravindra Kuramkote, Jeffrey Law, Jay Lepreau, Douglas B. Orr, Leigh Stoller, and Mark Swanson University of Utah, Department of Computer Science   4th IEEE Workshop on Workstation Operating Systems (WWOS)
-October 14-15, 1993.  Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance.</description>
+      <description>John B. Carter, Bryan Ford, Mike Hibler, Ravindra Kuramkote, Jeffrey Law, Jay Lepreau, Douglas B. Orr, Leigh Stoller, and Mark Swanson University of Utah, Department of Computer Science 4th IEEE Workshop on Workstation Operating Systems (WWOS)
+October 14-15, 1993. Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance. Systems like Mach provide a set of general abstractions and attempt to handle every situation, which can lead to poor performance for common cases.</description>
     </item>
     
     <item>
@@ -1165,8 +1170,8 @@ October 14-15, 1993.  Abstract: Modern operating systems must support a wide var
       <pubDate>Mon, 19 Apr 1993 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/inks-abs/</guid>
-      <description>Jay Lepreau, Mike Hibler, Bryan Ford, and Jeffrey Law  Department of Computer Science, University of Utah  Proceedings of the Third USENIX Mach Symposium
-April 1993  Abstract: The advantages in modularity and power of microkernel-based operating systems such as Mach 3.0 are well known. The existing performance problems of these systems, however, are significant. Much of the performance degradation is due to the cost of maintaining separate protection domains, traversing software layers, and using a semantically rich inter-process communication mechanism.</description>
+      <description>Jay Lepreau, Mike Hibler, Bryan Ford, and Jeffrey Law Department of Computer Science, University of Utah Proceedings of the Third USENIX Mach Symposium
+April 1993 Abstract: The advantages in modularity and power of microkernel-based operating systems such as Mach 3.0 are well known. The existing performance problems of these systems, however, are significant. Much of the performance degradation is due to the cost of maintaining separate protection domains, traversing software layers, and using a semantically rich inter-process communication mechanism.</description>
     </item>
     
     <item>
@@ -1175,8 +1180,8 @@ April 1993  Abstract: The advantages in modularity and power of microkernel-base
       <pubDate>Thu, 01 Apr 1993 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/threadmodel-93-abs/</guid>
-      <description>Bryan Ford, Mike Hibler, and Jay Lepreau Department of Computer Science, University of Utah   Technical Report UUCS-93-012
-April 1993  Abstract: During the Mach In-Kernel Servers work, we explored two alternate thread models that could be used to support traps to in-kernel servers. In the &amp;ldquo;migrating threads&amp;rdquo; model we used, the client&#39;s thread temporarily moves into the server&#39;s task for the duration of the call. In the &amp;ldquo;thread switching&amp;rdquo; model, an actual server thread is dispatched to handle client traps.</description>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau Department of Computer Science, University of Utah Technical Report UUCS-93-012
+April 1993 Abstract: During the Mach In-Kernel Servers work, we explored two alternate thread models that could be used to support traps to in-kernel servers. In the &amp;ldquo;migrating threads&amp;rdquo; model we used, the client&#39;s thread temporarily moves into the server&#39;s task for the duration of the call. In the &amp;ldquo;thread switching&amp;rdquo; model, an actual server thread is dispatched to handle client traps.</description>
     </item>
     
     <item>
@@ -1185,8 +1190,8 @@ April 1993  Abstract: During the Mach In-Kernel Servers work, we explored two al
       <pubDate>Sat, 01 Aug 1992 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/datenpresse/</guid>
-      <description>  Urban D. Mueller, Christian Schneider, and Bryan Ford
- AmigaPlus, August 1992.   Article: unavailable online to my knowledge ☹️  </description>
+      <description> Urban D. Mueller, Christian Schneider, and Bryan Ford
+AmigaPlus, August 1992. Article: unavailable online to my knowledge ☹️ </description>
     </item>
     
     <item>
@@ -1195,9 +1200,9 @@ April 1993  Abstract: During the Mach In-Kernel Servers work, we explored two al
       <pubDate>Wed, 01 Apr 1992 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/call-lists/</guid>
-      <description> &amp;ldquo;CallLists is a refreshing way to keep your interactive programs up to date.&amp;rdquo;  Bryan Ford
- AmigaWorld Tech Journal
-Volume 2 Number 2, April 1992   Article: PDF  </description>
+      <description> &amp;ldquo;CallLists is a refreshing way to keep your interactive programs up to date.&amp;rdquo; Bryan Ford
+AmigaWorld Tech Journal
+Volume 2 Number 2, April 1992 Article: PDF </description>
     </item>
     
     <item>
@@ -1206,7 +1211,7 @@ Volume 2 Number 2, April 1992   Article: PDF  </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/vx32/</guid>
-      <description>Vx32: Lightweight, User-level Sandboxing on the x86    Vx32: Lightweight, User-level Sandboxing on the x86  Bryan Ford and Russ Cox Massachusetts Institute of Technology {baford,rsc}@pdos.csail.mit.edu  Abstract Code sandboxing is useful for many purposes, but most sandboxing techniques require kernel modifications, do not completely isolate guest code, or incur substantial performance costs. Vx32 is a multipurpose user-level sandbox that enables any application to load and safely execute one or more guest plug-ins, confining each guest to a system call API controlled by the host application and to a restricted memory region within the host&amp;rsquo;s address space.</description>
+      <description>Vx32: Lightweight, User-level Sandboxing on the x86 Vx32: Lightweight, User-level Sandboxing on the x86 Bryan Ford and Russ Cox Massachusetts Institute of Technology {baford,rsc}@pdos.csail.mit.edu Abstract Code sandboxing is useful for many purposes, but most sandboxing techniques require kernel modifications, do not completely isolate guest code, or incur substantial performance costs. Vx32 is a multipurpose user-level sandbox that enables any application to load and safely execute one or more guest plug-ins, confining each guest to a system call API controlled by the host application and to a restricted memory region within the host&amp;rsquo;s address space.</description>
     </item>
     
     <item>
@@ -1215,7 +1220,7 @@ Volume 2 Number 2, April 1992   Article: PDF  </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/vxa/</guid>
-      <description>VXA: A Virtual Architecture for Durable Compressed Archives Bryan Ford 	Computer Science and Artificial Intelligence Laboratory 	Massachusetts Institute of Technology   Abstract:  Data compression algorithms change frequently, and obsolete decoders do not always run on new hardware and operating systems, threatening the long-term usability of content archived using those algorithms. Re-encoding content into new formats is cumbersome, and highly undesirable when lossy compression is involved. Processor architectures, in contrast, have remained comparatively stable over recent decades.</description>
+      <description>VXA: A Virtual Architecture for Durable Compressed Archives Bryan Ford Computer Science and Artificial Intelligence Laboratory Massachusetts Institute of Technology Abstract: Data compression algorithms change frequently, and obsolete decoders do not always run on new hardware and operating systems, threatening the long-term usability of content archived using those algorithms. Re-encoding content into new formats is cumbersome, and highly undesirable when lossy compression is involved. Processor architectures, in contrast, have remained comparatively stable over recent decades.</description>
     </item>
     
   </channel>

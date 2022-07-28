@@ -13,8 +13,8 @@
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/protean-abs/</guid>
-      <description>Enis Ceyhun Alp, Eleftherios Kokoris-Kogias, Georgia Fragkouli, and Bryan Ford EPFL - IC - DEDIS   17th Workshop on Hot Topics in Operating Systems (HotOS XVII)
-May 12-15, 2019.  Abstract: While showing great promise, smart contracts are difficult to program correctly, as they need a deep understanding of cryptography and distributed algorithms, and offer limited functionality, as they have to be deterministic and cannot operate on secret data.</description>
+      <description>Enis Ceyhun Alp, Eleftherios Kokoris-Kogias, Georgia Fragkouli, and Bryan Ford EPFL - IC - DEDIS 17th Workshop on Hot Topics in Operating Systems (HotOS XVII)
+May 12-15, 2019. Abstract: While showing great promise, smart contracts are difficult to program correctly, as they need a deep understanding of cryptography and distributed algorithms, and offer limited functionality, as they have to be deterministic and cannot operate on secret data. In this paper we present Protean, a general-purpose decentralized computing platform that addresses these limitations by moving from a monolithic execution model, where all participating nodes store all the state and execute every computation, to a modular execution model.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@ May 12-15, 2019.  Abstract: While showing great promise, smart contracts are dif
       <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-timing/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -32,8 +32,8 @@ May 12-15, 2019.  Abstract: While showing great promise, smart contracts are dif
       <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-zhai/</guid>
-      <description>Ennan Zhai  Ph.D. thesis advised by Bryan Ford
-August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely on redundancy techniques to enhance reliability and availability. In complex multi-layered hardware/software stacks, however, seemingly independent components used redundantly might share deep, hidden dependencies. These common dependencies may potentially result in unexpected correlated failures, thus undermining redundancy efforts.  Heading off correlated failures is extremely challenging in cloud-scale systems for the following three reasons.</description>
+      <description>Ennan Zhai Ph.D. thesis advised by Bryan Ford
+August 11, 2015 Abstract: Today’s cloud computing systems pervasively rely on redundancy techniques to enhance reliability and availability. In complex multi-layered hardware/software stacks, however, seemingly independent components used redundantly might share deep, hidden dependencies. These common dependencies may potentially result in unexpected correlated failures, thus undermining redundancy efforts. Heading off correlated failures is extremely challenging in cloud-scale systems for the following three reasons.</description>
     </item>
     
     <item>
@@ -42,8 +42,8 @@ August 11, 2015  Abstract:  Today’s cloud computing systems pervasively rely o
       <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-wu/</guid>
-      <description>   Weiyi Wu  Ph.D. thesis advised by Bryan Ford
-August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
+      <description> Weiyi Wu Ph.D. thesis advised by Bryan Ford
+August 10, 2015 Abstract: XXX Ph.D. Thesis: PDF </description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@ August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/gpufs-cacm/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@ August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
       <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/cloud-indaas/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -70,7 +70,7 @@ August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/nymboxes/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -79,7 +79,7 @@ August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
       <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/cloud-psra/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -88,7 +88,7 @@ August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
       <pubDate>Sun, 03 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/irec/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -97,7 +97,7 @@ August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
       <pubDate>Mon, 29 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/lazy-tree-mapping/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -106,7 +106,7 @@ August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
       <pubDate>Wed, 20 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/gpufs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -115,8 +115,8 @@ August 10, 2015  Abstract: XXX Ph.D. Thesis: PDF  </description>
       <pubDate>Mon, 03 Dec 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/middleware12-abs/</guid>
-      <description>Nuno Santos, Rodrigo Rodrigues, and Bryan Ford   ACM/IFIP/USENIX 13th International Conference on Middleware
-December 2012  Abstract: The consequences of security breaches due to system administrator errors can be catastrophic. Software systems in general, and OSes in particular, ultimately depend on a fully trusted administrator whom is granted superuser privileges that allow him to fully control the system. Consequently, an administrator acting negligently or unethically can easily compromise user data in irreversible ways by leaking, modifying, or deleting data.</description>
+      <description>Nuno Santos, Rodrigo Rodrigues, and Bryan Ford ACM/IFIP/USENIX 13th International Conference on Middleware
+December 2012 Abstract: The consequences of security breaches due to system administrator errors can be catastrophic. Software systems in general, and OSes in particular, ultimately depend on a fully trusted administrator whom is granted superuser privileges that allow him to fully control the system. Consequently, an administrator acting negligently or unethically can easily compromise user data in irreversible ways by leaking, modifying, or deleting data.</description>
     </item>
     
     <item>
@@ -125,8 +125,8 @@ December 2012  Abstract: The consequences of security breaches due to system adm
       <pubDate>Thu, 20 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2012-aviram/</guid>
-      <description>Amittai F. Aviram  Ph.D. thesis advised by Bryan Ford
-September 20, 2012  Abstract: Researchers widely agree that determinism in parallel programs is desirable. Although experimental parallel programming languages have long featured deterministic semantics, in mainstream parallel environments, developers still build on non-deterministic constructs such as mutexes, leading to time- or schedule-dependent heisenbugs. To make deterministic programming more accessible, we introduce DOMP, a deterministic extension to OpenMP, preserving the familiarity of traditional languages such as C and Fortran, and maintaining source-compatibility with much of the existing OpenMP standard.</description>
+      <description>Amittai F. Aviram Ph.D. thesis advised by Bryan Ford
+September 20, 2012 Abstract: Researchers widely agree that determinism in parallel programs is desirable. Although experimental parallel programming languages have long featured deterministic semantics, in mainstream parallel environments, developers still build on non-deterministic constructs such as mutexes, leading to time- or schedule-dependent heisenbugs. To make deterministic programming more accessible, we introduce DOMP, a deterministic extension to OpenMP, preserving the familiarity of traditional languages such as C and Fortran, and maintaining source-compatibility with much of the existing OpenMP standard.</description>
     </item>
     
     <item>
@@ -136,8 +136,8 @@ September 20, 2012  Abstract: Researchers widely agree that determinism in paral
       
       <guid>https://bford.info/pub/os/scaling-sdn-abs/</guid>
       <description>Andreas Voellmy, Bryan Ford, Paul Hudak, and Y. Richard Yang Yale University Department of Computer Science
-  Technical Report YALEU/DCS/TR-1468
-July 2012  Abstract: Software defined networks (SDN) introduce centralized controllers to drastically increase network programmability. The simplicity of a logical centralized controller, however, can come at the cost of controller programming complexity and scalability. In this paper, we present McNettle, an extensible SDN controller system whose control event processing throughput scales with the number of system CPU cores and which supports control algorithms requiring globally visible state changes occurring at flow arrival rates.</description>
+Technical Report YALEU/DCS/TR-1468
+July 2012 Abstract: Software defined networks (SDN) introduce centralized controllers to drastically increase network programmability. The simplicity of a logical centralized controller, however, can come at the cost of controller programming complexity and scalability. In this paper, we present McNettle, an extensible SDN controller system whose control event processing throughput scales with the number of system CPU cores and which supports control algorithms requiring globally visible state changes occurring at flow arrival rates.</description>
     </item>
     
     <item>
@@ -146,7 +146,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/non-linear/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -155,7 +155,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/tifc-hotcloud12/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -164,7 +164,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/icebergs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -173,7 +173,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-vm/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -182,7 +182,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/certikos-apsys11/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -192,7 +192,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       
       <guid>https://bford.info/pub/net/eyo-usenix-abs/</guid>
       <description>Jacob Strauss, Justin Mazzola Paluska, Chris Lesniewski-Laas, Bryan Ford, Robert Morris, and Frans Kaashoek
- 2011 USENIX Annual Technical Conference June 15-17, 2011, Portland, OR, USA Abstract: Users increasingly store data collections such as digital photographs on multiple personal devices, each of which typically offers a storage management interface oblivious to the contents of the user’s other devices. As a result, collections become disorganized and drift out of sync.</description>
+2011 USENIX Annual Technical Conference June 15-17, 2011, Portland, OR, USA Abstract: Users increasingly store data collections such as digital photographs on multiple personal devices, each of which typically offers a storage management interface oblivious to the contents of the user’s other devices. As a result, collections become disorganized and drift out of sync. This paper presents Eyo, a novel personal storage system that provides device transparency: a user can think in terms of &amp;ldquo;file X&amp;rdquo;, rather than &amp;ldquo;file X on device Y&amp;rdquo;, and will see the same set of files on all personal devices.</description>
     </item>
     
     <item>
@@ -201,7 +201,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Thu, 26 May 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-openmp/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -210,7 +210,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/workspace-consistency/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -220,8 +220,8 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       
       <guid>https://bford.info/pub/os/timing-abs/</guid>
       <description>Amittai Aviram, Sen Hu, Bryan Ford
-	Ramakrishna Gummadi
-	Yale University 	University of Massachusetts Amherst  The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
+Ramakrishna Gummadi
+Yale University University of Massachusetts Amherst The ACM Cloud Computing Security Workshop (CCSW 2010) October 8, 2010, Chicago, IL, USA Abstract: Timing side-channels represent an insidious security challenge for cloud computing, because: (a) massive parallelism in the cloud makes timing channels pervasive and hard to control; (b) timing channels enable one customer to steal information from another without leaving a trail or raising alarms; (c) only the cloud provider can feasibly detect and report such attacks, but the provider&#39;s incentives are not to; and (d) resource partitioning schemes for timing channel control undermine statistical sharing efficiency, and, with it, the cloud computing business model.</description>
     </item>
     
     <item>
@@ -230,7 +230,7 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Tue, 05 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/determ-osdi10/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -239,8 +239,8 @@ July 2012  Abstract: Software defined networks (SDN) introduce centralized contr
       <pubDate>Thu, 15 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/certified-kernels-abs/</guid>
-      <description>Zhong Shao and Bryan Ford Department of Computer Science, Yale University   Yale University Technical Report TR1436
-July 15, 2010  Abstract: Operating System (OS) kernels form the bedrock of all system software&amp;mdash;they can have the greatest impact on the resilience, extensibility, and security of today’s computing hosts. A single kernel bug can easily wreck the entire system’s integrity and protection. We propose to apply new advances in certified software to the development of a novel OS kernel.</description>
+      <description>Zhong Shao and Bryan Ford Department of Computer Science, Yale University Yale University Technical Report TR1436
+July 15, 2010 Abstract: Operating System (OS) kernels form the bedrock of all system software&amp;mdash;they can have the greatest impact on the resilience, extensibility, and security of today’s computing hosts. A single kernel bug can easily wreck the entire system’s integrity and protection. We propose to apply new advances in certified software to the development of a novel OS kernel.</description>
     </item>
     
     <item>
@@ -250,12 +250,12 @@ July 15, 2010  Abstract: Operating System (OS) kernels form the bedrock of all s
       
       <guid>https://bford.info/pub/net/devtransp-abs/</guid>
       <description>Jacob Strauss
-	Chris Lesniewski-Laas
-	Justin Mazzola Paluska
-	Bryan Ford
-	Robert Morris
-	Frans Kaashoek
- Published in SOSP Workshop on Hot Topics in Storage and File Systems (HotStorage &#39;09) October 11, 2009, Big Sky, MT, USA Abstract: This paper proposes a new storage model, device transparency, in which users view and manage their entire data collection from any of their devices, even from disconnected storage-limited devices holding only a subset of the entire collection.</description>
+Chris Lesniewski-Laas
+Justin Mazzola Paluska
+Bryan Ford
+Robert Morris
+Frans Kaashoek
+Published in SOSP Workshop on Hot Topics in Storage and File Systems (HotStorage &#39;09) October 11, 2009, Big Sky, MT, USA Abstract: This paper proposes a new storage model, device transparency, in which users view and manage their entire data collection from any of their devices, even from disconnected storage-limited devices holding only a subset of the entire collection.</description>
     </item>
     
     <item>
@@ -265,8 +265,8 @@ July 15, 2010  Abstract: Operating System (OS) kernels form the bedrock of all s
       
       <guid>https://bford.info/pub/os/vx32-abs/</guid>
       <description>Bryan Ford and Russ Cox
-Massachusetts Institute of Technology  Winnder of Best Student Paper Award  USENIX Annual Technical Conference
-June 22-27, 2008, Boston, Massachusetts. Abstract:  Code sandboxing is useful for many purposes, but most sandboxing techniques require kernel modifications, do not completely isolate guest code, or incur substantial performance costs. Vx32 is a multipurpose user-level sandbox that enables any application to load and safely execute one or more guest plug-ins, confining each guest to a system call API controlled by the host application and to a restricted memory region within the host&amp;rsquo;s address space.</description>
+Massachusetts Institute of Technology Winnder of Best Student Paper Award USENIX Annual Technical Conference
+June 22-27, 2008, Boston, Massachusetts. Abstract: Code sandboxing is useful for many purposes, but most sandboxing techniques require kernel modifications, do not completely isolate guest code, or incur substantial performance costs. Vx32 is a multipurpose user-level sandbox that enables any application to load and safely execute one or more guest plug-ins, confining each guest to a system call API controlled by the host application and to a restricted memory region within the host&amp;rsquo;s address space.</description>
     </item>
     
     <item>
@@ -276,7 +276,7 @@ June 22-27, 2008, Boston, Massachusetts. Abstract:  Code sandboxing is useful fo
       
       <guid>https://bford.info/pub/net/alpaca-abs/</guid>
       <description>Chris Lesniewski-Laas, Bryan Ford, Jacob Strauss, Robert Morris, and M. Frans Kaashoek
-Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract:  Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
+Massachusetts Institute of Technology Published in 14th ACM Conference on Computer and Communications Security, Oct 29-Nov 2, 2007, Alexandria, VA. Abstract: Traditional Public Key Infrastructures (PKI) have not lived up to their promise because there are too many ways to define PKIs, too many cryptographic primitives to build them with, and too many administrative domains with incompatible roots of trust.</description>
     </item>
     
     <item>
@@ -286,8 +286,8 @@ Massachusetts Institute of Technology Published in 14th ACM Conference on Comput
       
       <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
       <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
- Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
-November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
+November 6-8, 2006 Abstract: The Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
     </item>
     
     <item>
@@ -298,7 +298,7 @@ November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provide
       <guid>https://bford.info/pub/os/vxa-abs/</guid>
       <description>Bryan Ford
 Massachusetts Institute of Technology 4th USENIX Conference on File and Storage Technologies (FAST &#39;05)
-December 16, 2005, San Francisco, California, USA. Abstract:  Data compression algorithms change frequently, and obsolete decoders do not always run on new hardware and operating systems, threatening the long-term usability of content archived using those algorithms. Re-encoding content into new formats is cumbersome, and highly undesirable when lossy compression is involved. Processor architectures, in contrast, have remained comparatively stable over recent decades.</description>
+December 16, 2005, San Francisco, California, USA. Abstract: Data compression algorithms change frequently, and obsolete decoders do not always run on new hardware and operating systems, threatening the long-term usability of content archived using those algorithms. Re-encoding content into new formats is cumbersome, and highly undesirable when lossy compression is involved. Processor architectures, in contrast, have remained comparatively stable over recent decades.</description>
     </item>
     
     <item>
@@ -307,7 +307,7 @@ December 16, 2005, San Francisco, California, USA. Abstract:  Data compression a
       <pubDate>Mon, 19 Jul 2004 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/cachedir/</guid>
-      <description>Version 0.6 (Changes)  Proposed by Bryan Ford  Abstract Many applications create and manage directories containing cached information about content stored elsewhere, such as cached Web content or thumbnail-size versions of images or movies. For speed and storage efficiency we would often like to avoid backing up, archiving, or otherwise unnecessarily copying such directories around, but it is a pain to identify and individually exclude each such directory during data transfer operations.</description>
+      <description>Version 0.6 (Changes) Proposed by Bryan Ford Abstract Many applications create and manage directories containing cached information about content stored elsewhere, such as cached Web content or thumbnail-size versions of images or movies. For speed and storage efficiency we would often like to avoid backing up, archiving, or otherwise unnecessarily copying such directories around, but it is a pain to identify and individually exclude each such directory during data transfer operations.</description>
     </item>
     
     <item>
@@ -316,7 +316,7 @@ December 16, 2005, San Francisco, California, USA. Abstract:  Data compression a
       <pubDate>Thu, 28 Aug 2003 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2003/08/28/fx86/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -325,9 +325,8 @@ December 16, 2005, San Francisco, California, USA. Abstract:  Data compression a
       <pubDate>Wed, 24 Feb 1999 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/atomic-osdi99-abs/</guid>
-      <description>Bryan Ford, Mike Hibler, Jay Lepreau, Roland McGrath, and Patrick Tullmann 
-Department of Computer Science, University of Utah  3rd Symposium on Operating Systems Design and Implementation
-February 22-25, 1999 Abstract:  We have defined and implemented a kernel API that makes every exported operation fully interruptible and restartable, thereby appearing atomic to the user. To achieve interruptibility, all possible kernel states in which a thread may become blocked for a &amp;ldquo;long&amp;rdquo; time are represented as kernel system calls, without requiring the kernel to retain any unexposable internal state.</description>
+      <description>Bryan Ford, Mike Hibler, Jay Lepreau, Roland McGrath, and Patrick Tullmann Department of Computer Science, University of Utah 3rd Symposium on Operating Systems Design and Implementation
+February 22-25, 1999 Abstract: We have defined and implemented a kernel API that makes every exported operation fully interruptible and restartable, thereby appearing atomic to the user. To achieve interruptibility, all possible kernel states in which a thread may become blocked for a &amp;ldquo;long&amp;rdquo; time are represented as kernel system calls, without requiring the kernel to retain any unexposable internal state.</description>
     </item>
     
     <item>
@@ -336,9 +335,8 @@ February 22-25, 1999 Abstract:  We have defined and implemented a kernel API tha
       <pubDate>Mon, 06 Oct 1997 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/oskit-sosp16-abs/</guid>
-      <description>Bryan Ford, Godmar Back, Greg Benson, Jay Lepreau, Albert Lin, and Olin Shivers 
- Proceedings of the 16th ACM Symposium on Operating System Principles
-October 5-8, 1997 Abstract:  Implementing new operating systems is tedious, costly, and often impractical except for large projects. The Flux OSKit addresses this problem in a novel way by providing clean, well-documented OS components designed to be reused in a wide variety of other environments, rather than defining a new OS structure.</description>
+      <description>Bryan Ford, Godmar Back, Greg Benson, Jay Lepreau, Albert Lin, and Olin Shivers Proceedings of the 16th ACM Symposium on Operating System Principles
+October 5-8, 1997 Abstract: Implementing new operating systems is tedious, costly, and often impractical except for large projects. The Flux OSKit addresses this problem in a novel way by providing clean, well-documented OS components designed to be reused in a wide variety of other environments, rather than defining a new OS structure.</description>
     </item>
     
     <item>
@@ -347,8 +345,8 @@ October 5-8, 1997 Abstract:  Implementing new operating systems is tedious, cost
       <pubDate>Sun, 15 Jun 1997 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/flick-pldi97-abs/</guid>
-      <description>Eric Eide, Kevin Frei, Bryan Ford, Jay Lepreau, and Gary Lindstrom University of Utah, Department of Computer Science   ACM SIGPLAN Conference on Programming Language Design and Implementation
-June 15-18, 1997.  Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance. Systems like Mach provide a set of general abstractions and attempt to handle every situation, which can lead to poor performance for common cases.</description>
+      <description>Eric Eide, Kevin Frei, Bryan Ford, Jay Lepreau, and Gary Lindstrom University of Utah, Department of Computer Science ACM SIGPLAN Conference on Programming Language Design and Implementation
+June 15-18, 1997. Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance. Systems like Mach provide a set of general abstractions and attempt to handle every situation, which can lead to poor performance for common cases.</description>
     </item>
     
     <item>
@@ -359,7 +357,7 @@ June 15-18, 1997.  Abstract: Modern operating systems must support a wide variet
       <guid>https://bford.info/pub/os/oskit-hotos6-abs/</guid>
       <description>Bryan Ford, Kevin Van Maren, Jay Lepreau, Stephen Clawson, Bart Robinson, and Jeff Turner
 University of Utah 6th Workshop on Hot Topics in Operating Systems (HotOS-VI)
-May 5-6, 1997 Abstract:  To an unappreciated degree, research both in operating systems and their programming languages has been severely hampered by the lack of cleanly reusable code providing mundane low-level OS infrastructure such as bootstrap code and device drivers. The Flux OS Toolkit solves this problem by providing a set of clean, well-documented components.</description>
+May 5-6, 1997 Abstract: To an unappreciated degree, research both in operating systems and their programming languages has been severely hampered by the lack of cleanly reusable code providing mundane low-level OS infrastructure such as bootstrap code and device drivers. The Flux OS Toolkit solves this problem by providing a set of clean, well-documented components.</description>
     </item>
     
     <item>
@@ -368,8 +366,8 @@ May 5-6, 1997 Abstract:  To an unappreciated degree, research both in operating 
       <pubDate>Wed, 30 Oct 1996 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/inherit-sched-abs/</guid>
-      <description>Bryan Ford and Sai R. Susarla  Department of Computer Science, University of Utah  Proceedings of the Second Symposium on Operating Systems Design and Implementation
-October 28-31, 1996  Abstract: Traditional processor scheduling mechanisms in operating systems are fairly rigid, often supporting only one fixed scheduling policy, or, at most, a few &amp;ldquo;scheduling classes&amp;rdquo; whose implementations are closely tied together in the OS kernel. This paper presents CPU inheritance scheduling, a novel processor scheduling framework in which arbitrary threads can act as schedulers for other threads.</description>
+      <description>Bryan Ford and Sai R. Susarla Department of Computer Science, University of Utah Proceedings of the Second Symposium on Operating Systems Design and Implementation
+October 28-31, 1996 Abstract: Traditional processor scheduling mechanisms in operating systems are fairly rigid, often supporting only one fixed scheduling policy, or, at most, a few &amp;ldquo;scheduling classes&amp;rdquo; whose implementations are closely tied together in the OS kernel. This paper presents CPU inheritance scheduling, a novel processor scheduling framework in which arbitrary threads can act as schedulers for other threads.</description>
     </item>
     
     <item>
@@ -380,7 +378,7 @@ October 28-31, 1996  Abstract: Traditional processor scheduling mechanisms in op
       <guid>https://bford.info/pub/os/fluke-rvm-abs/</guid>
       <description>Bryan Ford, Mike Hibler, Jay Lepreau, Patrick Tullmann, Godmar Back, and Stephen Clawson
 University of Utah USENIX 2nd Symposium on OS Design and Implementation (OSDI &#39;96)
-October 28-31, 1996, Seattle, Washington, USA. Abstract:  This paper describes a novel approach to providing modular and extensible operating system functionality and encapsulated environments based on a synthesis of microkernel and virtual machine concepts. We have developed a software-based virtualizable architecture called Fluke that allows recursive virtual machines (virtual machines running on other virtual machines) to be implemented efficiently by a microkernel running on generic hardware.</description>
+October 28-31, 1996, Seattle, Washington, USA. Abstract: This paper describes a novel approach to providing modular and extensible operating system functionality and encapsulated environments based on a synthesis of microkernel and virtual machine concepts. We have developed a software-based virtualizable architecture called Fluke that allows recursive virtual machines (virtual machines running on other virtual machines) to be implemented efficiently by a microkernel running on generic hardware.</description>
     </item>
     
     <item>
@@ -389,8 +387,8 @@ October 28-31, 1996, Seattle, Washington, USA. Abstract:  This paper describes a
       <pubDate>Sun, 27 Oct 1996 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/iwooos96-flobs-abs/</guid>
-      <description>Patrick Tullmann, Jay Lepreau, Bryan Ford, and Mike Hibler  Department of Computer Science, University of Utah  Proceedings of the Fifth IEEE International Workshop on Object Orientation in Operating Systems (IWOOOS)
-October 27-28, 1996  Abstract: Checkpointing, process migration, and similar services need to have access not only to the memory of the constituent processes, but also to the complete state of all kernel provided objects (e.</description>
+      <description>Patrick Tullmann, Jay Lepreau, Bryan Ford, and Mike Hibler Department of Computer Science, University of Utah Proceedings of the Fifth IEEE International Workshop on Object Orientation in Operating Systems (IWOOOS)
+October 27-28, 1996 Abstract: Checkpointing, process migration, and similar services need to have access not only to the memory of the constituent processes, but also to the complete state of all kernel provided objects (e.g., threads and ports) involved. Traditionally, a major stumbling block in these operations is acquiring and re-creating the state in the operating system.</description>
     </item>
     
     <item>
@@ -399,8 +397,8 @@ October 27-28, 1996  Abstract: Checkpointing, process migration, and similar ser
       <pubDate>Mon, 09 Sep 1996 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/dist-vs-local-abs/</guid>
-      <description>Jay Lepreau, Bryan Ford, and Mike Hibler  Department of Computer Science, University of Utah  Proceedings of the Seventh ACM SIGOPS European Workshop
-September 9-11, 1996  Abstract: The growth and popularity of loosely-coupled distributed systems such as the World Wide Web and the touting of Java-based systems as the solution to the issues of software maintenance, flexibility, and security are changing the research emphasis away from traditional single node operating system issues.</description>
+      <description>Jay Lepreau, Bryan Ford, and Mike Hibler Department of Computer Science, University of Utah Proceedings of the Seventh ACM SIGOPS European Workshop
+September 9-11, 1996 Abstract: The growth and popularity of loosely-coupled distributed systems such as the World Wide Web and the touting of Java-based systems as the solution to the issues of software maintenance, flexibility, and security are changing the research emphasis away from traditional single node operating system issues.</description>
     </item>
     
     <item>
@@ -409,8 +407,8 @@ September 9-11, 1996  Abstract: The growth and popularity of loosely-coupled dis
       <pubDate>Wed, 01 Mar 1995 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/presint3-abs/</guid>
-      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science   Technical Report UUCS-95-014
-March 1995.  Abstract: In RPC-based communication, it is useful to distinguish the RPC interface, which is the “network contract” be- tween the client and the server, from the presentation, which is the “programmer’s contract” between the RPC stubs and the code that calls or is called by them.</description>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science Technical Report UUCS-95-014
+March 1995. Abstract: In RPC-based communication, it is useful to distinguish the RPC interface, which is the “network contract” be- tween the client and the server, from the presentation, which is the “programmer’s contract” between the RPC stubs and the code that calls or is called by them. Presentation is usually a fixed function of the RPC interface, but some RPC systems, such as DCE and Concert, support the notion of a flexible presentation or endpoint modifier, allowing controlled modification of the behavior of the stubs on each side without affecting the contract between the client and the server.</description>
     </item>
     
     <item>
@@ -419,8 +417,8 @@ March 1995.  Abstract: In RPC-based communication, it is useful to distinguish t
       <pubDate>Thu, 01 Dec 1994 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/presint2-abs/</guid>
-      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science   Technical Report UUCS-95-018
-December 1994.  Abstract: In RPC-based communication, we term the interface the set of remote procedures and the types of their arguments; the presentation is the way these procedures and types are mapped to the target language environment in a particular client or server, including semantic requirements. For example, presentation includes the local names assigned to RPC stubs, the physical representation of a logical block of data (e.</description>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau University of Utah, Department of Computer Science Technical Report UUCS-95-018
+December 1994. Abstract: In RPC-based communication, we term the interface the set of remote procedures and the types of their arguments; the presentation is the way these procedures and types are mapped to the target language environment in a particular client or server, including semantic requirements. For example, presentation includes the local names assigned to RPC stubs, the physical representation of a logical block of data (e.</description>
     </item>
     
     <item>
@@ -429,8 +427,8 @@ December 1994.  Abstract: In RPC-based communication, we term the interface the 
       <pubDate>Mon, 17 Jan 1994 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/thread-migrate-abs/</guid>
-      <description>Bryan Ford and Jay Lepreau  Department of Computer Science, University of Utah  Proceedings of the Winter 1994 USENIX Technical Conference
-January 17-21, 1994  Abstract: We have modified Mach 3.0 to treat cross-domain remote procedure call (RPC) as a single entity, instead of a sequence of message passing operations. With RPC thus elevated, we improved the transfer of control during RPC by changing the thread model.</description>
+      <description>Bryan Ford and Jay Lepreau Department of Computer Science, University of Utah Proceedings of the Winter 1994 USENIX Technical Conference
+January 17-21, 1994 Abstract: We have modified Mach 3.0 to treat cross-domain remote procedure call (RPC) as a single entity, instead of a sequence of message passing operations. With RPC thus elevated, we improved the transfer of control during RPC by changing the thread model. Like most operating systems, Mach views threads as statically associated with a single task, with two threads involved in an RPC.</description>
     </item>
     
     <item>
@@ -439,8 +437,8 @@ January 17-21, 1994  Abstract: We have modified Mach 3.0 to treat cross-domain r
       <pubDate>Thu, 09 Dec 1993 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/passive-abs/</guid>
-      <description>Bryan Ford and Jay Lepreau  Department of Computer Science, University of Utah  International Workshop on Object Orientation in Operating Systems (IWOOOS)
-December 9-10, 1993  Abstract: We believe that a passive object model, in which the active entities or threads migrate between passive objects, is more appropriate than an active object model, as the basic structure of a microkernel-based operating system. A passive object model provides enhanced performance and simplicity because it is more closely matched to the basic nature of microprocessors and the requirements of applications.</description>
+      <description>Bryan Ford and Jay Lepreau Department of Computer Science, University of Utah International Workshop on Object Orientation in Operating Systems (IWOOOS)
+December 9-10, 1993 Abstract: We believe that a passive object model, in which the active entities or threads migrate between passive objects, is more appropriate than an active object model, as the basic structure of a microkernel-based operating system. A passive object model provides enhanced performance and simplicity because it is more closely matched to the basic nature of microprocessors and the requirements of applications.</description>
     </item>
     
     <item>
@@ -449,8 +447,8 @@ December 9-10, 1993  Abstract: We believe that a passive object model, in which 
       <pubDate>Thu, 14 Oct 1993 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/flex-wwos4-abs/</guid>
-      <description>John B. Carter, Bryan Ford, Mike Hibler, Ravindra Kuramkote, Jeffrey Law, Jay Lepreau, Douglas B. Orr, Leigh Stoller, and Mark Swanson University of Utah, Department of Computer Science   4th IEEE Workshop on Workstation Operating Systems (WWOS)
-October 14-15, 1993.  Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance.</description>
+      <description>John B. Carter, Bryan Ford, Mike Hibler, Ravindra Kuramkote, Jeffrey Law, Jay Lepreau, Douglas B. Orr, Leigh Stoller, and Mark Swanson University of Utah, Department of Computer Science 4th IEEE Workshop on Workstation Operating Systems (WWOS)
+October 14-15, 1993. Abstract: Modern operating systems must support a wide variety of services for a diverse set of users. Designers of these systems face a tradeoff between functionality and performance. Systems like Mach provide a set of general abstractions and attempt to handle every situation, which can lead to poor performance for common cases.</description>
     </item>
     
     <item>
@@ -459,8 +457,8 @@ October 14-15, 1993.  Abstract: Modern operating systems must support a wide var
       <pubDate>Mon, 19 Apr 1993 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/inks-abs/</guid>
-      <description>Jay Lepreau, Mike Hibler, Bryan Ford, and Jeffrey Law  Department of Computer Science, University of Utah  Proceedings of the Third USENIX Mach Symposium
-April 1993  Abstract: The advantages in modularity and power of microkernel-based operating systems such as Mach 3.0 are well known. The existing performance problems of these systems, however, are significant. Much of the performance degradation is due to the cost of maintaining separate protection domains, traversing software layers, and using a semantically rich inter-process communication mechanism.</description>
+      <description>Jay Lepreau, Mike Hibler, Bryan Ford, and Jeffrey Law Department of Computer Science, University of Utah Proceedings of the Third USENIX Mach Symposium
+April 1993 Abstract: The advantages in modularity and power of microkernel-based operating systems such as Mach 3.0 are well known. The existing performance problems of these systems, however, are significant. Much of the performance degradation is due to the cost of maintaining separate protection domains, traversing software layers, and using a semantically rich inter-process communication mechanism.</description>
     </item>
     
     <item>
@@ -469,8 +467,8 @@ April 1993  Abstract: The advantages in modularity and power of microkernel-base
       <pubDate>Thu, 01 Apr 1993 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/threadmodel-93-abs/</guid>
-      <description>Bryan Ford, Mike Hibler, and Jay Lepreau Department of Computer Science, University of Utah   Technical Report UUCS-93-012
-April 1993  Abstract: During the Mach In-Kernel Servers work, we explored two alternate thread models that could be used to support traps to in-kernel servers. In the &amp;ldquo;migrating threads&amp;rdquo; model we used, the client&#39;s thread temporarily moves into the server&#39;s task for the duration of the call. In the &amp;ldquo;thread switching&amp;rdquo; model, an actual server thread is dispatched to handle client traps.</description>
+      <description>Bryan Ford, Mike Hibler, and Jay Lepreau Department of Computer Science, University of Utah Technical Report UUCS-93-012
+April 1993 Abstract: During the Mach In-Kernel Servers work, we explored two alternate thread models that could be used to support traps to in-kernel servers. In the &amp;ldquo;migrating threads&amp;rdquo; model we used, the client&#39;s thread temporarily moves into the server&#39;s task for the duration of the call. In the &amp;ldquo;thread switching&amp;rdquo; model, an actual server thread is dispatched to handle client traps.</description>
     </item>
     
     <item>
@@ -479,8 +477,8 @@ April 1993  Abstract: During the Mach In-Kernel Servers work, we explored two al
       <pubDate>Sat, 01 Aug 1992 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/os/datenpresse/</guid>
-      <description>  Urban D. Mueller, Christian Schneider, and Bryan Ford
- AmigaPlus, August 1992.   Article: unavailable online to my knowledge ☹️  </description>
+      <description> Urban D. Mueller, Christian Schneider, and Bryan Ford
+AmigaPlus, August 1992. Article: unavailable online to my knowledge ☹️ </description>
     </item>
     
     <item>
@@ -489,9 +487,9 @@ April 1993  Abstract: During the Mach In-Kernel Servers work, we explored two al
       <pubDate>Wed, 01 Apr 1992 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/call-lists/</guid>
-      <description> &amp;ldquo;CallLists is a refreshing way to keep your interactive programs up to date.&amp;rdquo;  Bryan Ford
- AmigaWorld Tech Journal
-Volume 2 Number 2, April 1992   Article: PDF  </description>
+      <description> &amp;ldquo;CallLists is a refreshing way to keep your interactive programs up to date.&amp;rdquo; Bryan Ford
+AmigaWorld Tech Journal
+Volume 2 Number 2, April 1992 Article: PDF </description>
     </item>
     
   </channel>

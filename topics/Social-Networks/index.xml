@@ -13,8 +13,8 @@
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/personhood/</guid>
-      <description>Bryan Ford  November 2020 (first draft)  arXiv preprint
- Abstract: Digital identity seems at first like a prerequisite for digital democracy: how can we ensure &amp;ldquo;one person, one vote&amp;rdquo; online without identifying voters? But the full gamut of digital identity solutions &amp;ndash; e.g., online ID checking, biometrics, self-sovereign identity, and social/trust networks &amp;ndash; all present severe flaws in security, privacy, and transparency, leaving users vulnerable to exclusion, identity loss or theft, and coercion.</description>
+      <description>Bryan Ford November 2020 (first draft) arXiv preprint
+Abstract: Digital identity seems at first like a prerequisite for digital democracy: how can we ensure &amp;ldquo;one person, one vote&amp;rdquo; online without identifying voters? But the full gamut of digital identity solutions &amp;ndash; e.g., online ID checking, biometrics, self-sovereign identity, and social/trust networks &amp;ndash; all present severe flaws in security, privacy, and transparency, leaving users vulnerable to exclusion, identity loss or theft, and coercion.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/anonrep-abs/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
       <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/crypto-book-codaspy/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -41,8 +41,8 @@
       <pubDate>Wed, 24 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/thesis/2015-maheswaran/</guid>
-      <description>John Maheswaran  Ph.D. thesis advised by Bryan Ford
-June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflow allow users to log in through a federated identity provider such as Facebook (Log in with Facebook), Google+ or Twitter. This process is called federated authentication. Examples of federated identity providers include social networks as well as other non-social network identity providers such as PayPal.  Federated identity providers have gained widespread popularity among users as a way to manage their online identity across the web.</description>
+      <description>John Maheswaran Ph.D. thesis advised by Bryan Ford
+June 24, 2015 Abstract: Third-party applications such as Quora or StackOverflow allow users to log in through a federated identity provider such as Facebook (Log in with Facebook), Google+ or Twitter. This process is called federated authentication. Examples of federated identity providers include social networks as well as other non-social network identity providers such as PayPal. Federated identity providers have gained widespread popularity among users as a way to manage their online identity across the web.</description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/crypto-book/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -60,8 +60,8 @@ June 24, 2015  Abstract:  Third-party applications such as Quora or StackOverflo
       <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/faceless-abs/</guid>
-      <description>Xiaoxiao Song, David Isaac Wolinsky, and Bryan Ford Yale University   5th Workshop on Social Network Systems
-April 10, 2012  Abstract: Social networks (SNs) enable physically distributed groups to communicate seamlessly. Unfortunately such communi- cation can be easily mined by adversaries in attempts to breach users’ privacy or suppress open discussion on sensi- tive topics. While anonymous posting can help protect users by hiding the link between individuals and the messages they post, existing anonymization schemes are centralized or vul- nerable to well-known attacks.</description>
+      <description>Xiaoxiao Song, David Isaac Wolinsky, and Bryan Ford Yale University 5th Workshop on Social Network Systems
+April 10, 2012 Abstract: Social networks (SNs) enable physically distributed groups to communicate seamlessly. Unfortunately such communi- cation can be easily mined by adversaries in attempts to breach users’ privacy or suppress open discussion on sensi- tive topics. While anonymous posting can help protect users by hiding the link between individuals and the messages they post, existing anonymization schemes are centralized or vul- nerable to well-known attacks.</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@ April 10, 2012  Abstract: Social networks (SNs) enable physically distributed gr
       
       <guid>https://bford.info/pub/net/phd-abs/</guid>
       <description>Bryan Ford
-Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications.  Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
+Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract: The Internet&#39;s architecture, designed in the days of large, stationary computers tended by technically savvy and accountable administrators, fails to meet the demands of the emerging ubiquitous computing era. Nontechnical users now routinely own multiple personal devices, many of them mobile, and need to share information securely among them using interactive, delay-sensitive applications. Unmanaged Internet Architecture (UIA) is a novel, incrementally deployable network architecture for modern personal devices, which reconsiders three architectural cornerstones: naming, routing, and transport.</description>
     </item>
     
     <item>
@@ -81,8 +81,8 @@ Ph.D. thesis, Massachusetts Institute of Technology, September 2008. Abstract:  
       
       <guid>https://bford.info/pub/net/uia-osdi-abs/</guid>
       <description>Bryan Ford, Jacob Strauss, Chris Lesniewski-Laas, Sean Rhea, Frans Kaashoek, Robert Morris
- Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
-November 6-8, 2006 Abstract:  The  Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
+Massachusetts Institute of Technology 7th USENIX Symposium on Operating Systems Design and Implementation
+November 6-8, 2006 Abstract: The Unmanaged Internet Architecture (UIA) provides zero-configuration connectivity among mobile devices through personal names. Users assign personal names through an ad hoc device introduction process requiring no central allocation. Once assigned, names bind securely to the global identities of their target devices independent of network location.</description>
     </item>
     
   </channel>
