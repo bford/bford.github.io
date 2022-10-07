@@ -17,7 +17,13 @@
     <loc>https://bford.info/selforg/choice/</loc>
   </url><url>
     <loc>https://bford.info/</loc>
-    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/draft/</loc>
+    <lastmod>2022-10-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/pub/lang/matchertext/</loc>
+    <lastmod>2022-10-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Blockchain/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
@@ -160,6 +166,9 @@
     <loc>https://bford.info/topics/Programming-Languages/</loc>
     <lastmod>2019-07-29T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://bford.info/topics/Syntax/</loc>
+    <lastmod>2019-07-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://bford.info/pub/sec/purb-abs/</loc>
     <lastmod>2019-07-18T00:00:00+00:00</lastmod>
   </url><url>
@@ -189,9 +198,6 @@
   </url><url>
     <loc>https://bford.info/2019/02/08/identity/</loc>
     <lastmod>2019-02-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/draft/</loc>
-    <lastmod>2019-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/draft/biometric-id/</loc>
     <lastmod>2019-02-06T00:00:00+00:00</lastmod>
