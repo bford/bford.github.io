@@ -6,7 +6,17 @@
     <description>Recent content in Theses on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/thesis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/thesis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Toward Internet Performance Transparency</title>
+      <link>https://bford.info/thesis/2022-fragkouli/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2022-fragkouli/</guid>
+      <description>Georgia Fragkouli Ph.D. thesis co-advised by Katerina Argyraki and Bryan Ford
+August 29, 2022 Abstract: From medical support to education and remote work, our everyday lives increasingly depend on Internet performance. When users experience poor performance, however, the decentralization of the Internet allows limited visibility into which network is responsible. As a result, users are promised Service Level Agreements (SLAs) they cannot verify, regulators make rules they cannot enforce, and networks with competitive performance cannot reliably showcase it to attract new customers.</description>
+    </item>
+    
     <item>
       <title>Integrity and Metadata Protection in Data Retrieval</title>
       <link>https://bford.info/thesis/2021-nikitin/</link>

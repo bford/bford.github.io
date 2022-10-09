@@ -80,6 +80,16 @@
     </item>
     
     <item>
+      <title>Toward Internet Performance Transparency</title>
+      <link>https://bford.info/thesis/2022-fragkouli/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2022-fragkouli/</guid>
+      <description>Georgia Fragkouli Ph.D. thesis co-advised by Katerina Argyraki and Bryan Ford
+August 29, 2022 Abstract: From medical support to education and remote work, our everyday lives increasingly depend on Internet performance. When users experience poor performance, however, the decentralization of the Internet allows limited visibility into which network is responsible. As a result, users are promised Service Level Agreements (SLAs) they cannot verify, regulators make rules they cannot enforce, and networks with competitive performance cannot reliably showcase it to attract new customers.</description>
+    </item>
+    
+    <item>
       <title>Flash Freezing Flash Boys: Countering Blockchain Front-Running</title>
       <link>https://bford.info/pub/sec/f3b/</link>
       <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
@@ -154,7 +164,7 @@ Copenhagen, Denmark &amp;ndash; August 16-20, 2021 Abstract: Distributed ledgers
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/soc/dt2-chapter-abs/</guid>
-      <description>Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press
+      <description>Bryan Ford Appears in Digital Technology and Democratic Theory by Lucy Bernholz, Hélène Landemore, and Rob Reich (editors) published by the University of Chicago Press
 Abstract While technology is often claimed to be “democratizing”, the technologizing of society has more often yielded undemocratic or even anti-democratic outcomes. Is technology fundamentally at odds with democracy, or is it merely a rich and infinitely-adaptable toolbox that we’re using the wrong way? We explore how technology has failed to support robust democracy – but could do better – in the context of four basic social processes: collective deliberation and choice, information distribution and filtering, economic commerce, and identity.</description>
     </item>
     
@@ -164,7 +174,7 @@ Abstract While technology is often claimed to be “democratizing”, the techno
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/post/2020-11-18-ai-governance/</guid>
-      <description>This post contains an address delivered at the IRGC conference on Governance Of and By Digital Technology.
+      <description>AI in Policy? This post contains an address delivered at the IRGC conference on Governance Of and By Digital Technology.
 The separation of mechanism and policy Computer science has a well-established design principle known as separation of mechanism and policy. I think this principle may be equally applicable to human governance &amp;ndash; especially in considering the question of where AI does and does not belong.
 I believe the cautious use of today&amp;rsquo;s powerful AI technologies based on machine learning can justifiably play many useful roles in implementing low-level mechanisms used in governance.</description>
     </item>
@@ -470,7 +480,7 @@ July 19, 2017 Abstract: Current solutions for privacy-preserving data sharing am
       <pubDate>Fri, 23 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2017/06/23/turing50/</guid>
-      <description>We now live in a world in which the rules coded into the technology we use plays as important a role in governing our lives as the formal laws written in the public law books. Code is law already, for better or worse. Unfortunately both the technology and policy communities still tend to treat technology as a simple set of tools, like a mechanical watch, home appliance, or automobile, which always unquestioningly serves its operator.</description>
+      <description>This blog post is a transcript of my opening remarks on the panel &#34;Restoring Personal Privacy without Compromising National Security&#34; at the 50 Years of the ACM Turing Award Celebration. We now live in a world in which the rules coded into the technology we use plays as important a role in governing our lives as the formal laws written in the public law books. Code is law already, for better or worse.</description>
     </item>
     
     <item>
@@ -596,7 +606,7 @@ if you withhold a block, you can&amp;rsquo;t get a collective signature on it; w
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/2016/03/10/apple/</guid>
-      <description>The Apple versus FBI showdown has quickly become a crucial flashpoint of the “new Crypto War.” On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters. The fact that the FBI allowed Apple to disclose the order publicly, on the same day, represents a rare exception to the government&amp;rsquo;s normal penchant for secrecy.</description>
+      <description>*This post [originally appeared](https://freedom-to-tinker.com/blog/bford/apple-fbi-and-software-transparency/) on the [Freedom to Tinker](https://freedom-to-tinker.com/) blog by the [Center for Information Technology Policy](https://citp.princeton.edu) at [Princeton University](http://www.princeton.edu/).* The Apple versus FBI showdown has quickly become a crucial flashpoint of the “new Crypto War.” On February 16 the FBI invoked the All Writs Act of 1789, a catch-all authority for assistance of law enforcement, demanding that Apple create a custom version of its iOS to help the FBI decrypt an iPhone used by one of the San Bernardino shooters.</description>
     </item>
     
     <item>
@@ -1852,8 +1862,10 @@ BESO Generic does not modify the JSON Schema language at all.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/cmark/</guid>
-      <description>Hyphen X	[-]	Optional line-breaking hyphen??? &amp;ndash;	–	[&amp;ndash;]	En-dash or numeric range &amp;mdash;	—	[&amp;mdash;]	Em-dash &amp;hellip;	…	[&amp;hellip;]	Ellipsis &amp;ldquo;&amp;hellip;&amp;rdquo;	Quoted string: quotes become left/right
-⏎	[br]	Line break ␍	[r]	Carriage return character mark ␤	[n]	Newline character mark ¶	[p]	Paragraph mark X	[o&#39;]	Open single quote X	[c&#39;]	Close single quote X	[o&amp;quot;]	Open double quote X	[c&amp;quot;]	Close double quote X	[o&amp;lt;&amp;gt;]	Open angle bracket X	[c&amp;lt;&amp;gt;]	Close angle bracket X	[o&amp;lt;&amp;lt;&amp;gt;&amp;gt;]	Open double angle bracket X	[c&amp;lt;&amp;lt;&amp;gt;&amp;gt;]	Close double angle bracket Spacing: &amp;quot; &amp;quot;	[mq_]	Em quad space &amp;quot; &amp;quot;	[nq_]	En quad space &amp;quot; &amp;quot;	[m_]	Em space &amp;quot; &amp;quot;	[n_]	En space &amp;quot; &amp;quot;	[3m_]	Three-per-Em space &amp;quot; &amp;quot;	[4m_]	Four-per-Em space &amp;quot; &amp;quot;	[6m_]	Six-per-Em space &amp;quot; &amp;quot;	[d_]	Figure (digit) space &amp;quot; &amp;quot;	[.</description>
+      <description>Matchup? (matchertext markup)
+Some goals:
+Matchertext: rigorously nested, verbatim embeddable Quick and easy to type More concise than SGML-derived markup languages More uniform and systematic than Markdown or Latex Rendering to HTML, Latex Aware text editors are welcome to recognize and convert directives into Unicode when feasible: eg for character sequences, single/double quoted text, etc.
+Hyphen X	[-]	Optional line-breaking hyphen??? &amp;ndash;	–	[&amp;ndash;]	En-dash or numeric range &amp;mdash;	—	[&amp;mdash;]	Em-dash &amp;hellip;	…	[&amp;hellip;]	Ellipsis &amp;ldquo;&amp;hellip;&amp;rdquo;	Quoted string: quotes become left/right</description>
     </item>
     
     <item>
@@ -1863,7 +1875,7 @@ BESO Generic does not modify the JSON Schema language at all.</description>
       
       <guid>https://bford.info/draft/cmath/</guid>
       <description>Symbols Arithmetic Basic:
-Plus sign −	[-]	Minus sign ×	Multiplication ÷	[d]	Division /	⁄	[/]	Fraction slash Technical: ±	[+-]	Plus-minus sign ∕	[d/]	Division slash ⋅	[.]	Multiplication or dot product √	[root]	Square root ∛	[3root]	Cube root ∜	[4root]	Fourth root ∞	[inf]	Infinity ∶	[:]	Ratio ∷	[::]	Proportion sum	∑	[sum]	Sum prod	∏	[prod]	Product 𝔼	[expect] Expected value pi	π	[pi]	Mathematical value pi (3.</description>
+Plus sign −	[-]	Minus sign ×	Multiplication ÷	[d]	Division /	⁄	[/]	Fraction slash Technical: ±	[+-]	Plus-minus sign ∕	[d/]	Division slash ⋅	[.]	Multiplication or dot product √	[root]	Square root	- or [2rt]? ∛	[3root]	Cube root	- or [3rt]? ∜	[4root]	Fourth root	- or [4rt]? ∞	[inf]	Infinity ∶	[:]	Ratio ∷	[::]	Proportion sum	∑	[sum]	Sum prod	∏	[prod]	Product 𝔼	[expect] Expected value pi	π	[pi]	Mathematical value pi (3.</description>
     </item>
     
     <item>
@@ -1942,12 +1954,12 @@ An old problem in data format design is embedding an arbitrary variable-length b
     </item>
     
     <item>
-      <title>Escaping Escaping Hell with Composable Resource Identifiers</title>
-      <link>https://bford.info/draft/cri/</link>
+      <title>Escaping Escaping Hell with Matchertext Resource Identifiers</title>
+      <link>https://bford.info/draft/mri/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.info/draft/cri/</guid>
-      <description>Uniform resource identifiers or URIs were a genuinely great idea and have rightfully become the ubiquitous way to &amp;ldquo;name things&amp;rdquo; on the Internet. As the basis of web addresses or URLs, they are human readable (to varying degrees), manually transcribable, cut-and-pasteable, and have proven incrementally extensible to a vast multitude of schemes. Their later extension to internationalized resource identifiers or IRIs allow people whose native language is not English to type, and view, non-ASCII Unicode characters in web addresses.</description>
+      <guid>https://bford.info/draft/mri/</guid>
+      <description>Uniform resource identifiers or URIs were a genuinely great idea and have rightfully become the ubiquitous way to name things on the Internet. As the basis of web addresses or URLs, they are human readable (to varying degrees), manually transcribable, cut-and-pasteable, and have proven incrementally extensible to a vast multitude of schemes. Their later extension to internationalized resource identifiers or IRIs allow people whose native language is not English to type, and view, non-ASCII Unicode characters in web addresses.</description>
     </item>
     
     <item>
@@ -2033,12 +2045,35 @@ Eglise St. Victor &amp;nbsp; &amp;nbsp; &amp;nbsp; The much older crypt below St
     </item>
     
     <item>
+      <title>MaxML: Matchertext-friendly XML Syntax</title>
+      <link>https://bford.info/draft/maxml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/maxml/</guid>
+      <description>Goal: extend XML as conservatively as possible to provide basic support for matchertext hosting and embedding. Other than that, remain as consistent as possible with XML syntax.
+Hosting:
+matchertext content tags: &amp;lt;name attrs [matchertext]&amp;gt; matchertext attributes: attrname=[matchertext] matchertext sections: &amp;lt;![MDATA[matchertext]]&amp;gt; Embedding:
+new character entity syntax &amp;amp;o[]; &amp;amp;c{}; etc. </description>
+    </item>
+    
+    <item>
       <title>Midsummer&#39;s Eve at Zebediah&#39;s</title>
       <link>https://bford.info/album/2002/0713-MidsummersEve/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/album/2002/0713-MidsummersEve/</guid>
       <description>Midsummer&#39;s Eve at Zebediah&#39;s (July 13, 2002) Our gracious host industriously overseeing the preparations... Think we&#39;ll have enough firewood? Zeb is a master at constructing fun toys involving swinging or flying. Here&#39;s his latest: a zip line across his back yard! The neighborhood folk trio Full Cold Moon treated us to some great music during the afternoon. One of those rare occasions when I feel almost conservative in comparison with others.</description>
+    </item>
+    
+    <item>
+      <title>MinML: A Concise Matchertext XML Syntax</title>
+      <link>https://bford.info/draft/minml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/minml/</guid>
+      <description>Could you use a markup syntax that supports the full expressive power and richness of HTML or XML, but is more terse, easier to type, and less frankly ugly? would it be nice to write just code[+[em[phasis]]], for example, instead of code[+[phasis]], for example? If so, read on.
+h2[The quest for writer-friendly {ndash} but general {ndash} markup]
+Markup languages derived from SGML, like HTML and XML, have many uses but are verbose and often a pain to write or edit manually.</description>
     </item>
     
     <item>

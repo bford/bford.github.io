@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Escaping Escaping Hell with Matchertext Resource Identifiers &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Escaping Escaping Hell with Matchertext Resource Identifiers</h1>
+  
+<a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier"
+	>Uniform resource identifiers</a>
+or URIs
+were a genuinely great idea and have rightfully become the ubiquitous way
+to name things on the Internet.
+As the basis of web addresses or
+<a href="https://en.wikipedia.org/wiki/URL">URLs</a>,
+they are human readable (to varying degrees),
+manually transcribable, 
+cut-and-pasteable, 
+and have proven incrementally extensible to a
+<a href="https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml"
+	>vast multitude of schemes</a>.
+Their later extension to
+<a href="https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier"
+	>internationalized resource identifiers</a>
+or IRIs
+allow people whose native language is not English
+to type, and view, non-ASCII Unicode characters in web addresses.
+
+<p>
+URIs and IRIs have two major usability flaws, however.
+First,
+<a href="https://blog.codinghorror.com/the-problem-with-urls/"
+	>you can't reliably tell where they end</a>
+in surrounding text.
+Suppose I type or paste into an E-mail:
+
+<pre>
+	My site is https://bford.info/index.html.
+</pre>
+
+<p>
+Rich text editors often notice the URI
+and helpfully turn it into a hyperlink &ndash;
+but is the final period part of the link or the surrounding sentence?
+It could be either, since periods are valid and
+<a href="https://tools.ietf.org/html/rfc3986#section-2.3">unreserved</a>
+URI characters,
+and a wrong heuristic guess yields a broken link.
+Suppose I try to &ldquo;armor&rdquo; the URI using parentheses, like this:
+
+<pre>
+	See my website (https://bford.info/).
+</pre>
+
+<p>
+This doesn't really help because parentheses are valid in URIs too,
+and heavily used by Wikipedia for example &ndash; as in
+this cruel joke of a URI:
+
+<pre>
+	https://en.wikipedia.org/wiki/URL_(disambiguation)
+</pre>
+
+<p>
+The URI specification recommends,
+<a href="https://tools.ietf.org/html/rfc3986#appendix-C"
+	>in an obscure appendix</a>,
+delimiting URIs with angle brackets,
+as in <code>&lt;https://bford.info/&gt;</code>.
+But how many users are even aware of this suggestion,
+let alone consistently follow it?
+
+<p>
+A second major usability flaw is that URIs are not cleanly <em>composable</em>
+without sucking users and developers alike into what I call Escaping Hell.
+When we need to compose a URI that contains other URIs &ndash;
+or bits of text with any other nontrivial syntactic structure,
+for that matter &ndash;
+we must <em>escape</em> reserved or forbidden characters,
+by <a href="https://en.wikipedia.org/wiki/Percent-encoding"
+	>percent-encoding</a>
+the embedded string into an ugly, obfuscated, unfriendly mess
+like <code>https%3A%2F%2Fbford.info%2F</code>.
+
+<p>
+This post suggests a possible fix to both flaws
+and a path out of Escaping Hell:
+an incrementally-deployable alternative syntax
+I call a <dfn>matchertext resource identifier</dfn> or MRI.
+<a href="/pub/lang/matchertext/">Matchertext</a> is,
+in brief,
+a language-neutral syntactic discipline
+that allows any compliant string in one syntax to be embedded verbatim
+into any other compliant syntax,
+via simple "copy-and-paste" – with no escaping or other transformation.
+
+<p>
+To create a matchertext resource identifier,
+we in essence simply rewrite any URI of the form
+<code><i>scheme</i>:<i>body</i></code>
+into MRI syntax of the form
+<code><i>scheme</i>[<i>body</i>]</code>.
+Any URI like <code>https://bford.info/</code> has
+an equivalent MRI syntax like <code>https[//bford.info/]</code>,
+and vice versa.
+(&ldquo;MRI&rdquo; may be pronounced
+like &ldquo;murrie&rdquo; to avoid confusion with medical procedures.)
+
+<p>
+The key benefit of this alternative syntax is that
+any valid MRI can be embedded into any other MRI, <i>verbatim</i>,
+via copy-and-paste or manual transcription for example,
+with no mangling.
+A query to translate my home page, for example,
+might look like this:
+
+<pre>
+	https[//translator.org/web?page=https[//bford.info/];lang=fr]
+</pre>
+
+Just copy the target MRI into the query field and we're done.
+
+<p>
+There's no free lunch, of course.
+There is one key syntactic &ldquo;cost&rdquo;:
+MRIs must conform to the
+<a href="/pub/lang/matchertext/"><dfn>matchertext discipline</dfn></a>,
+which in brief means that the ASCII <dfn>matcher</dfn> characters &ndash;
+namely parentheses <code>()</code>,
+square brackets <code>[]</code>,
+and curly braces <code>{}</code> &ndash;
+must strictly match up in pairs.
+We will examine the implications of this syntactic discipline below.
+
+<p>
+Just as
+<a href="https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier">IRIs</a>
+already liberalized resource identifiers to admit non-ASCII characters,
+MRIs similarly liberalize resource identifiers to allow
+<i>all</i> graphical Unicode characters within the body &ndash;
+provided only that matchers match.
+Any MRI may be converted to an equivalent URI or IRI
+and vice versa.
+New applications, protocols, formats, and versions
+can start accepting MRIs from users
+alongside URIs and IRIs while preserving backward compatibility
+through automatic conversions.
+Let's de-obfuscate the web &ndash; or at least web addresses.
+
+
+<h2> Welcome to Escaping Hell </h2>
+
+<p>
+Since the end-finding flaw mentioned above is simple and well-known,
+let's focus a bit more on the problem of Escaping Hell.
+
+<p>
+We often wish to embed URIs within URIs for many reasons.
+Many web-based services operate on other web pages,
+for example,
+such as
+<a href="https://archive.org/web/">archival</a>,
+<a href="http://itools.com/tool/google-translate-web-page-translator">translation</a>,
+<a href="https://www.webpagetest.org">performance testing</a>,
+<a href="https://validator.w3.org">syntax checking</a>, and
+<a href="https://www.brokenlinkcheck.com">link checking</a>.
+Such services need to accept URIs containing arbitrary other URIs,
+either in their pathname components
+(like <code>https://archiver.org/<i>date</i>/<i>target-URI</i></code>),
+or in query strings
+(like <code>https://checker.org/check?page=<i>target-URI</i></code>).
+But because the outer URI treats many characters as special,
+those characters must be
+<a href="https://en.wikipedia.org/wiki/Escape_character"
+	><i>escaped</i></a> or
+<a href="https://en.wikipedia.org/wiki/Percent-encoding"
+	><i>percent-encoded</i></a>
+in the nested URI.
+Entering a simple target URI like <code>https://bford.info/</code>
+into the <a href="https://www.w3.org">W3C</a>'s official
+<a href="https://validator.w3.org"
+	>markup validation service</a>,
+for example,
+mangles the target URI into this
+obscure percent-encoded query string:
+
+<pre>
+	https://validator.w3.org/nu/?doc=https%3A%2F%2Fbford.info%2F
+</pre>
+
+<p>
+So much for URIs being &ldquo;human-readable&rdquo;,
+at least in these contexts.
+Of course interactive web users don't need to do this mangling themselves
+because the service's front-page web form tooling does it for them,
+and developers who generate queries to the service programmatically
+are expected to percent-encode the target URI as part of the process.
+This is why we have managed to slog through Escaping Hell so far.
+
+But from a usability perspective,
+it's sad that target URIs
+must become nearly unrecognizable when embedded into other URIs.
+It's also sad
+that less-sophisticated users can't reasonably be expected to 
+write or edit such a query string manually,
+or to copy-and-paste a target URI into a query field of another URI template,
+without thoroughly understanding URI syntax and poring over an
+<a href="https://en.wikipedia.org/wiki/ASCII">ASCII table</a>.
+
+<p>
+Besides embedded URIs,
+many other bits of text we often want to embed
+in URI pathname components or queries 
+must commonly be mangled via percent-encoding,
+because they contain characters that are either <i>reserved</i>
+or forbidden entirely within URIs.
+For example, a query to a calculator service to evaluate
+a simple expression like <code>6/2+1</code>
+gets mangled into a query
+like <code>https://calc.org/eval?expr=6%2F2%2B1</code>.
+A query for a C++ or Java-style parameterized type
+like <code>Box&lt;Integer&gt;</code>
+gets mangled
+like <code>https://dev-docs.org/search?type=Box%3CInteger%3E</code>.
+A query involving a Unix-style pathname like <code>/a/b/c</code>
+gets mangled
+like <code>https://unarchiver.org/extract?path=%2Fa%2Fb%2Fc</code>.
+
+<p>
+Experience suggests that one of the most critical components of URIs &ndash;
+the <dfn>authority</dfn> field containing the host name &ndash;
+really &ldquo;wants&rdquo; the flexibility and modularity of an embedded URI.
+The authority component
+internally needs multiple &ldquo;schemes&rdquo;
+to name hosts in different ways,
+such as DNS names like <code>bford.info</code>
+versus IP addresses like <code>1.2.3.4</code>.
+It has non-trivial internal syntactic structure,
+such as optional <code><var>user</var>@</code> prefix
+and <code>:<var>port</var></code> suffix.
+It has repeatedly proven to need extensibility,
+to handle <a href="https://en.wikipedia.org/wiki/IPv6">IPv6</a> addresses 
+like <code>[aaaa:bbbb:cccc:dddd::]</code> for example.
+In short, the authority component of the base URI syntax has grown
+<a href="https://noncombatant.org/2017/11/07/problems-of-urls/"
+	>complex and syntaxy</a>
+with many details and variations,
+exacerbating
+<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=661005"
+	>security issues</a>.
+Supporting different schemes, internal structure, and extensibility
+are precisely what the whole URI naming paradigm is supposed to handle &ndash;
+but it <em>can't</em> do so for authority naming because of broken syntax.
+
+<p>
+Extending IPv6 addresses to support
+<a href="https://tools.ietf.org/html/rfc4007">zone indexes</a>
+like <code>fe80::1234%1</code> or <code>fe80::1234%eth0</code>
+created a further syntactic conflict between this use of
+the percent (<code>&lsquo;%&rsquo;</code>) character
+and its use in URIs for percent-encoded escapes.
+This conflict then required 
+<a href="https://tools.ietf.org/html/rfc6874"
+	>a whole additional RFC</a>
+just to say that the percent sign in a zoned IPv6 address
+needs to be escaped as <code>%25</code> in a URI host field,
+producing outstandingly-clear URIs like
+<code>http://[fe80::1234%251]/</code>. (Is the zone index 1 or 251?)
+
+<p>
+The <a href="https://multiformats.io/multiaddr/">multiaddr</a> project,
+while well-intentioned,
+threatens to dig us even deeper into Escaping Hell
+as we try to figure out how to shoehorn a pathname-like address
+like <code>/ip4/127.0.0.1/udp/9090/quic</code>
+into the hostname field of a URI.
+How would a parser figure out what's what in a string like
+<code>http://ip4/127.0.0.1/udp/9090/quic/index.html</code>?
+Alternatively, how is a <em>user</em> to understand an escaped embedding like
+<code>http://%2Fip4%2f127.0.0.1%2fudp%2f9090%2fquic/index.html</code>?
+Current multiaddr examples suggest restructuring URIs
+to move the scheme or protocol name
+into the multiaddr itself, as in
+<code>/ip4/127.0.0.1/tcp/80/http/baz.jpg</code> &ndash;
+but is such a fundamental reworking of how URIs are structured and parsed
+really going to fly on the established web?
+
+<h2> Composable Resource Identifiers </h2>
+
+<p>
+As a composition-friendly and backward-compatible approach
+to making URIs more usable,
+I propose <i>matchertext resource identifiers</i> or MRIs.
+To a first approximation,
+a MRI merely replaces the colon <code>:</code>
+following the scheme name
+in a URI or IRI with an open bracket <code>[</code>,
+and adds a close bracket <code>]</code> at the end.
+The URI <code>https://bford.info/</code> is equivalent
+to the MRI <code>https[//bford.info/]</code>, for example.
+
+<p>
+Everything within a MRI's outermost pair of square brackets
+we will call its <dfn>body</dfn>,
+i.e., <code>//bford.info/</code> in this example.
+A MRI may be viewed abstractly as a
+<a href="https://en.wikipedia.org/wiki/Attribute–value_pair">key/value pair</a>
+whose scheme name is the key
+and whose body is the value.
+
+<p>
+This use of matched brackets
+gives MRIs two fundamental advantages over URIs.
+
+<p>
+First, MRIs are cleanly <i>self-delimiting</i>,
+meaning it is always clear and unambiguous where any valid MRI ends
+when embedded in surrounding text such as a document.
+Consider these two contrasting URI and corresponding MRI examples:
+
+
+<pre>
+	My site is https://bford.info/index.html.
+	My site is https[//bford.info/index.html].
+</pre>
+
+As mentioned earlier, the first example (URI) leaves it ambiguous
+and only heuristically guessable
+whether the final period is part of the URI
+or the surrounding English sentence.
+The second example (MRI) leaves no such ambiguity.
+
+<p>
+The real power of MRIs, however, comes from their <em>composability</em>.
+Provided that matchers like square brackets match,
+it is syntactically unproblematic for a valid MRI to appear
+anywhere in the body of another MRI,
+without requiring escaping or percent-encoding.
+To form an MRI to a web service that operates on other web pages,
+such as 
+<a href="http://itools.com/tool/google-translate-web-page-translator"
+	>translation</a> and
+<a href="https://validator.w3.org"
+	>checking</a> services for example,
+a user merely needs to copy-and-paste the target MRI
+into a suitable template to form
+a clean and readable query MRI such as:
+
+<pre>
+	https[//validator.w3.org/nu/?doc=https[//bford.info/]]
+</pre>
+
+<p>
+This property extends to multiple nesting levels,
+with no percent-encoding or progressive text expansion for successive levels.
+If the web page checker I wish to use is available only in English
+and I would like to translate its results to French, for example,
+then I currently end up with a delightfully-obfuscated URI
+with two levels of percent-encoding, like this:
+
+<pre>
+	https://translate.google.com/translate?hl=en&sl=auto&tl=fr&u=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fbford.info%252F
+</pre>
+
+With MRIs, in contrast,
+such a multi-level query becomes both shorter and more comprehensible:
+
+<pre>
+	https[//translate.google.com/translate?hl=en&sl=auto&tl=fr&u=https[//validator.w3.org/nu/?doc=https[//bford.info/]]]
+</pre>
+
+<p>
+Composability is not limited to query strings,
+but may also be used in other MRI components.
+A web-based service for browsing 
+<a href="https://en.wikipedia.org/wiki/Zip_(file_format)"
+	>Zip files</a>
+and other archives hosted on other websites, for example,
+might wish to treat the target MRI as a pathname component 
+in the service's MRI.
+To use the service <code>unarchiver.org</code> to open a Zip file hosted at
+<code>https[//bford.info/stuff.zip]</code>
+and browse into the subdirectory <code>/dest/path</code>
+within the archive, for example,
+we might use a MRI like this:
+
+<pre>
+	https[//unarchiver.org/unzip/https[//bford.info/stuff.zip]/dest/path/]
+</pre>
+
+<p>
+Finally, the ugly and problematic need for the base URI format
+to know about IP addresses and port number syntax in their many variants
+can be deprecated and replaced with use of suitable embedded MRIs
+in authority and host fields.
+For example,
+<code>http://1.2.3.4/</code> might be deprecated
+in favor of <code>http[//ip4[1.2.3.4]/]</code>,
+and <code>http[//[aaaa:bbbb:cccc:dddd::]/]</code>
+might become <code>http://ip6[aaaa:bbbb:cccc:dddd::]/</code>.
+Each case generically uses a nested MRI instead of special-case base syntax.
+
+<p>
+This approach could in principle be extended even to DNS host names
+via the already-existing
+<a href="https://tools.ietf.org/html/rfc4501">dns URI scheme</a>,
+so that <code>https://bford.info/</code> becomes
+<code>https[//dns[bford.info]/]</code>.
+The fact that DNS names are by far the common case on the web, however,
+probably justifies retaining their special-case base syntax.
+
+
+<h2> Percent Encoding in MRIs </h2>
+
+<p>
+MRI syntax reduces but does not eliminate the need for percent-encoding,
+which presents some manageable subtleties.
+Embedding spaces or raw binary data containing
+control characters into components, for example,
+still requires percent-encoding in MRIs exactly as in URIs.
+In addition, any <i>unmatched</i> matcher characters in a MRI's body 
+must similarly be escaped.
+A query to search for a literal open bracket <code>[</code> &ndash;
+ASCII code 0x5B &ndash;
+on a target web page, for example,
+must still be percent-encoded like this:
+
+<pre>
+	https[//search.org/page?string=%5B;page=https[//bford.info/]]
+</pre>
+
+<p>
+Within any <i>inner</i> pair of square brackets nested within a MRI's body,
+all reserved URI characters including the percent character <code>%</code>
+lose their special meanings, becoming ordinary literal characters
+from the perspective of the outer MRI &ndash;
+again provided only that matchers match.
+For example, while the MRI 
+<code>https[//bford.info/~user/]</code> is equivalent to
+<code>https[//bford.info/%7Euser/]</code>,
+the following two MRIs are <em>not</em> equivalent
+because they represent queries for different <em>literal</em> query strings
+(which happen to be MRIs in this case but need not necessarily be):
+
+<pre>
+	https[//checker.org/web?page=https[//bford.info/~user/]]
+	https[//checker.org/web?page=https[//bford.info/%7Euser/]]
+</pre>
+
+<p>
+The inner bracket pair essentially quotes special characters
+such as percent signs,
+protecting them as literals and ensuring that they are &ldquo;owned&rdquo;
+exclusively by the inner MRI.
+Viewed another way,
+MRI syntax protects the syntactic <dfn>territorial integrity</dfn>
+of each level of embedding.
+Percent-escapes outside the embedded MRI belong exclusively to the host MRI,
+while escapes within it belong exclusively to the embedded MRI.
+
+<p>
+For the same reason, the percent character denoting an IPv6 zone index
+need not and <em>must not</em> be percent-encoded in a MRI's host field,
+in contrast with
+<a href="https://tools.ietf.org/html/rfc6874"
+	>standard practice for legacy URIs</a>.
+For example, the IPv6 address 
+<code>fe80::1234%eth0</code> appears in a URI percent-encoded as
+<code>http://[fe80::1234%25eth0]</code>,
+but in a MRI becomes
+<code>http[//ip6[fe80::1234%eth0]]</code>.
+The inner percent sign is none of the (outer) MRI's business
+because it is protected by the nested square brackets.
+
+<p>
+Because nested brackets make percent signs literal characters
+from the outer MRI's perspective,
+if a query string or other MRI component needs to use percent-encoding
+to represent control characters that occur <i>between</i>
+an inner literal bracket pair,
+then those bracket characters must be percent-encoded too.
+For example, to encode a search query for the three-character string
+<code>[</code>&rsquo;,NUL,&lsquo;<code>]</code>,
+all three characters must be percent-encoded as 
+<code>%5B%00%5D</code>.
+Percent-encoding only the inner NUL byte as
+<code>[%00]</code>
+would yield a search for the 5-character string
+<code>[%00]</code>,
+because the brackets protect the percent sign as a literal.
+
+<p>
+In URIs, only the
+<a href="https://tools.ietf.org/html/rfc3986#section-2.3"
+	>unreserved characters</a>
+are considered equivalent in their percent-encoded and unencoded forms
+and thus may be
+<a href="https://tools.ietf.org/html/rfc3986#section-2.4"
+	>coded or encoded at any time</a>.
+In MRIs, bracketed substrings nested within the MRI's body
+may also be percent-encoded and decoded at any time,
+provided that the substring contains no forbidden characters,
+and provided that <i>all reserved characters</i>
+in the substring including brackets
+are encoded or decoded together.
+For example, the substring '<code>[a[b]c]</code>' in a MRI's body
+is equivalent to '<code>%5Ba%5Bb%5Dc%5D</code>',
+but is <i>not</i> equivalent to '<code>[a%5Bb%5Dc]</code>'
+or '<code>%5Ba[b]c%5D</code>'.
+Further, this equivalence applies only to complete substrings nested
+<i>immediately</i> within the MRI's body, not to substrings more deeply nested.
+
+<p>
+To illustrate, because both unreserved characters
+and complete bracketed substrings may be percent-encoded and decoded in MRIs
+without changing the meaning of a MRI,
+the following URI and three MRIs are all equivalent:
+
+<pre>
+	https://checker.org/web?page=https%5B%2F%2Fbford%2Einfo%2F%5D
+	https[//checker.org/web?page=https%5B%2F%2Fbford%2Einfo%2F%5D]
+	https[//checker.org/web?page=https%5B%2F%2Fbford.info%2F%5D]
+	https[//checker.org/web?page=https[//bford.info/]]
+</pre>
+
+<p>
+The following MRIs, however, are <i>not</i> equivalent to those above
+but represent different literal query strings:
+
+<pre>
+	https[//checker.org/web?page=https[//bford%2Einfo/]]
+	https[//checker.org/web?page=https[%2F%2Fbford%2Einfo%2F]]
+</pre>
+
+<p>
+URIs and IRIs already constrain
+<a href="https://tools.ietf.org/html/rfc3986#section-3.1"
+	>scheme names</a>
+to an extremely restricted character set
+that does not include percent-encoded characters,
+and MRIs retain this rule.
+This means that percent-encoding is &ldquo;a thing&rdquo;
+only within the bracketed body of a MRI.
+Percent-encodings can never appear at all
+in the schame name before the opening square bracket.
+
+
+<h2> The MRI Character Set </h2>
+
+<p>
+The original <a href="https://tools.ietf.org/html/rfc3986"
+	>URI format</a>
+allows only a subset of the ASCII character set to appear directly in URIs
+without percent-encoding,
+forbidding spaces and punctuation characters such as:
+
+<pre>
+	&lt; &gt; &quot; { } | &bsol; ^ `
+</pre>
+
+The introduction of
+<a href="https://tools.ietf.org/html/rfc3987#page-10"
+	>internationalized resource identifiers or IRIs</a>,
+which most browsers now support,
+extended the limited URI character set to allow most Unicode characters
+representable in
+<a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8 encoding</a> &ndash;
+but IRIs still conservatively require the above forbidden ASCII characters
+to be percent-encoded.
+
+<p>
+The successful introduction of IRIs demonstrated empirically that
+the character set available to resource identifiers <em>can</em> be expanded
+smoothly in a backward-compatible fashion.
+In the interest of
+further extricating ourselves from Escaping Hell,
+MRIs build on the IRI experience by further liberalizing
+the allowed character set to include
+<i>all</i> valid UTF-8 characters apart from spaces and
+<a href="https://en.wikipedia.org/wiki/C0_and_C1_control_codes"
+	>control codes</a>.
+This means that MRI queries and other components
+could contain such strings as
+arithmetic expressions like <code>2^8</code>,
+logical expressions like <code>(x&lt;y)&amp;(y&lt;z)</code>,
+C++ or Java-style parameterized type like <code>Box&lt;Integer&gt;</code>,
+or even code blocks in C-like languages
+such as <code>{printf("hello\n");}</code>,
+without percent-encoding.
+
+<p>
+The URI specification recommends
+<a href="https://tools.ietf.org/html/rfc3986#appendix-C"
+	>delimiting URIs with angle brackets in surrounding text</a>,
+which is why angle brackets were
+<a href="https://tools.ietf.org/html/rfc1738#section-2.2"
+	>defined as &ldquo;unsafe&rdquo; in the original specification</a>.
+Because this usage of angle brackets was never
+a formally required part of URL syntax,
+however,
+this recommendation was never reliably followed,
+and relatively few ordinary users even seem to be aware of it.
+MRIs never need to be delimited with surrounding angle brackets
+because MRI syntax solves the delimiting problem more reliably
+<em>within the MRI syntax itself</em>,
+via a mandatory syntactic rule (matchers must match)
+rather than an optional and easily-neglected recommendation in an appendix.
+It's always syntactically clear where a MRI embedded in running text ends,
+otherwise it's not a (valid) MRI.
+And because MRIs never need be surrounded by angle brackets in text,
+it is no longer problematic for them to <i>contain</i> unescaped angle brackets.
+
+
+<h3> Embedding MRIs in popular protocols and data formats </h3>
+
+<p>
+Further character set liberalization presents tradeoffs of course.
+Specific applications, protocols, and formats wishing to support MRIs
+will either have to support the expanded MRI character set,
+or provide their own escaping mechanisms to handle problematic characters.
+A fallback solution always available
+is simply to down-convert MRIs to traditional URIs
+for embedding in legacy formats as described later.
+
+<p>
+Consider the common case of embedding MRIs into
+<a href="https://en.wikipedia.org/wiki/XML">XML</a> or
+<a href="https://en.wikipedia.org/wiki/HTML">HTML</a> documents,
+for example.
+<a href="https://stackoverflow.com/questions/7381974/which-characters-need-to-be-escaped-in-html"
+	>XML and HTML escaping rules</a>
+require literal uses of the 
+angle brackets <code>&lt;</code>
+and <code>&gt;</code>,
+the ampersand <code>&</code>,
+and sometimes single and double quotes,
+to be escaped using XML entity codes
+(<code>&amp;lt;</code>, <code>&amp;gt;</code>,
+<code>&amp;amp;</code>)
+whenever they appear in text or attributes.
+
+<p>
+Since URIs forbid angle brackets while MRIs do not,
+embedding MRIs containing angle brackets within an XML or HTML file
+requires either percent-encoding the angle brackets in the MRI
+or escaping them at XML level using entity codes.
+This is not a fundamentally new burden, however,
+because URIs already allowed
+ampersand <code>&amp;</code> characters,
+which already must be entity-coded
+in order to insert a URI into XML or HTML safely.
+
+
+<h3> Why not spaces and control codes? </h3>
+
+<p>
+We could in principle liberalize the MRI character set
+&ldquo;the rest of the way&rdquo;
+by allowing <em>all</em> Unicode characters including spaces and control codes.
+Just as in URIs, however,
+allowing spaces, line breaks, or tabs to be significant characters in MRIs
+would compromise the basic philosophy that resource identifiers
+should be readily transcribeable.
+Resource identifiers are often long and need to be wrapped when printed;
+if spaces were significant then it would be impossible to tell
+on reading or transcription whether there were zero, one, or more spaces
+originally at the position where the MRI was wrapped.
+Allowing other control codes
+would break languages like C that have trouble with NUL bytes in strings,
+would make MRIs impossible to embed reliably in text formats like XML
+that offer no escape codes for control characters,
+and would generally seem to undermine the basic philosophy
+of resource identifiers as moderately-compact, single-line,
+and nominally human-readable strings.
+
+
+<h3> Why square brackets? </h3>
+
+<p>
+Why do MRIs use square brackets to delimit the body,
+instead of some other matching pair of punctation characters?
+Square brackets are the only matching punctuation already in the
+<a href="https://tools.ietf.org/html/rfc3986#section-2.2"
+	><code>gen-delims</code></a> category
+used as <i>generic delimiters</i> in the base URI syntax (for IPv6 addresses),
+which means that most URI parsing software is already prepared
+to see brackets in URIs, if only rarely.
+Further, because brackets are reserved for delimiting URI base syntax components
+and are formally not allowed to appear <i>within</i> components,
+we limit the risk that particular URI schemes
+might assign conflicting uses to these characters.
+
+<p>
+Parentheses <code>()</code>
+seem likely to be confused, by users and URL recognizers alike,
+with parenthetical expressions in surrounding natural-language text.
+Further, since parentheses are in the
+<a href="https://tools.ietf.org/html/rfc3986#section-2.2"
+	><code>sub-delims</code></a> category,
+pre-existing uses in particular URI schemes may conflict
+with any new base syntax use.
+Angle brackets <code>&lt;&gt;</code>)
+and curly braces <code>{}</code>
+were forbidden in URIs and IRIs,
+so transitioning them directly from <em>forbidden</em> to <em>required</em>
+seems like a bit of a leap.
+Finally, using non-ASCII matching delimeters
+just seems like even more of a leap.
+
+
+<h2> Converting MRIs to URIs or IRIs </h2>
+
+<p>
+To enable incremental deployment while preserving backward compatibility
+with the existing URI and IRI ecosystem,
+applications that support MRIs
+must be able to &ldquo;down-convert&rdquo; them to URIs or IRIs
+in contexts not known to support MRI syntax.
+Since IRIs already liberalized URIs to support Unicode characters,
+it is easiest simply to define a conversion from MRIs to IRIs,
+then use the existing
+<a href="https://tools.ietf.org/html/rfc3987#section-3.1"
+	>mapping of IRIs to URIs</a>
+as needed.
+
+<p>
+A MRI may be mapped to an IRI as follows.
+
+<ol>
+<li>	As with IRIs, if the MRI is not already represented
+	as a Unicode-based character sequence,
+	first convert it to one using
+	<a href="http://www.unicode.org/reports/tr15/tr15-23.html"
+		>normalization form C</a>.
+<li>	If the MRI's host component is an IP address using a nested
+	<code>ip4[&hellip;]</code> or <code>ip6[&hellip;]</code> MRI,
+	convert it to legacy URI syntax for IP addresses.
+<li>	Percent-encode all square-bracketed substrings in the MRI's body
+	apart from any IPv6 host address,
+	by UTF-8 encoding then percent-encoding all characters in the substring
+	that are reserved or forbidden in an IRI.
+<li>	For each remaining character in the MRI that is forbidden in an IRI,
+	convert it to a UTF-8 byte sequence, then percent-encode each byte.
+<li>	Replace the MRI body's opening square bracket with a colon
+	<code>:</code>
+	and drop its closing square bracket.
+</ol>
+
+<p>
+Here are a few examples before and after conversion from MRI to IRI/URI:
+
+<pre>
+	https[//bford.info/]
+	https://bford.info/
+
+	https[//ip4[1.2.3.4]/find?set={a,b,c};page=https[//bford.info/]]
+	https://1.2.3.4/find?set=%7Ba%2Cb%2Cc%7D;page=https%5B%2F%2Fbford.info%2F%5D
+
+	https[//ip6[fe80::1234%eth0]/unzip/https[//bford.info/stuff.zip]/dest/path/]
+	https://[fe80::1234%25eth0]/unzip/https%5B%2F%2Fbford.info%2Fstuff.zip%5D/dest/path/
+</pre>
+
+
+<h2> Converting URIs and IRIs to MRIs </h2>
+
+<p>
+The reverse conversion is possible too, of course.
+If MRIs retain support for legacy IP address syntax,
+then a minimal IRI to MRI conversion is simply to
+replace the colon after the scheme name with an open bracket
+and add a closing bracket at the end.
+Since brackets are forbidden from IRIs apart from IPv6 addresses,
+and MRIs handle the already-allowed characters and percent-encodings
+in the same way as IRIs,
+a percent-encoded IRI body also serves as a valid MRI body.
+
+<p>
+To improve usability and readability, however,
+we would like an IRI-to-MRI encoding
+that simplifies the resulting MRIs and extricates us from Escaping Hell
+as well as feasible.
+To this end, we can convert IRIs as follows:
+
+<ol>
+<li>
+	Decode any unreserved characters that are percent-encoded in the URI.
+<li>
+	If the IRI's host component is a legacy IP address,
+	rewrite it into a nested <code>ip4[&hellip;]</code>
+	or <code>ip6[&hellip;]</code> MRI.
+<li>
+	For each maximum-length substring that starts and ends with
+	a matching pair of percent-encoded square brackets,
+	and contains no percent-encoded characters forbidden in MRIs,
+	decode all percent-encoded characters in the substring.
+<li>
+	Replace the colon following the scheme name
+	with an opening bracket,
+	and append a closing bracket.
+</ol>
+
+<p>
+These rules will always successfully percent-decode
+all nested MRIs contained in the outer MRI's body,
+because valid nested MRIs percent-encoded in the original URI
+will have matching brackets and will not contain forbidden characters.
+If the original URI contains unmatched brackets,
+or matched brackets containing forbidden characters,
+these sequences are left percent-encoded in the resulting MRI.
+
+<p>
+Here is an illustrative example of a conversion from IRI/URI to MRI:
+
+<pre>
+	https://search.org/find?chr=%5B;str=%5Ba%5B%5Bb%5D%5D%20%5D;page=https%5B%2F%2Fbford.info%2F%5D
+	https[//search.org/find?chr=%5B;str=%5Ba[[b]]%20%5D;page=https[//bford.info/]]
+</pre>
+
+<p>
+Notice that while the nested MRI in the <code>page</code> parameter
+is fully decoded,
+the unbalanced open bracket passed to the <code>chr</code> parameter
+is not decoded.
+Further, only the <i>inner</i> two pairs of matched brackets
+in the <code>str</code> parameter are decoded,
+because the outer bracket pair contains a space character (<code>%20</code>),
+which is forbidden in MRIs.
+
+
+<h2> Mutual Embedding of URIs, IRIs, and MRIs </h2>
+
+<p>
+It should be clear already
+that MRIs may be embedded in URIs and IRIs, and vice versa.
+This will be essential to enabling incremental deployment of MRIs,
+and presents many potential short-term opportunities.
+
+<p>
+Operators of web services that take URIs in query strings,
+for example,
+can unilaterally upgrade their sites to accept MRIs in query strings,
+and can upgrade their web forms and client-side JavaScript
+to produce such MRI-encoded queries,
+without asking anyone's permission
+or waiting for web browsers or protocols like HTTP to catch up.
+These MRIs will for now be embedded within legacy URIs
+on their way from browser to web server, of course,
+and hence will still be embedded in one level of percent-encoding,
+just as embedded URIs would be.
+With a small amount of tooling, however,
+server-side web logging and statistics scripts
+can be upgraded to convert the logged outer URIs into MRIs as described above,
+which will render <i>both</i> nesting levels de-obfuscated in script outputs.
+
+<p>
+Web browsers can start supporting MRI syntax at any time
+as an alternative syntax in their address bars,
+even initially only as an experimental option.
+This way, early adopters and developers of web sites like those discussed above
+can obtain the convenience of being able to cut-and-paste one MRI
+directly into another without having to mess with so much percent-encoding.
+Ideally the user would be able to select whether to paste a MRI
+or down-convert it to a URI or IRI first.
+Firefox already approximates such a choice
+by down-converting to a URI when copying the whole web address,
+but preserving international characters from IRIs when copying only part.
+The browser will for now always convert the MRI to a URI
+for transmission over HTTP, but that's fine.
+
+<p>
+In short, since MRIs are both readily convertible
+to and from URIs and IRIs,
+and easily mutually embeddable with them,
+it should not be difficult to get them to &ldquo;play along&rdquo;
+in many useful ways even in the short term.
+
+
+<h2> Conclusion </h2>
+
+<p>
+This post is intended merely to outline and explore
+a possible solution to some of the usability problems of URIs and IRIs.
+We have not, of course, defined a fully-precise syntax for MRIs
+or answered all the detailed questions needed to deploy them.
+However, I hope this preliminary exploration is adequate
+to offer an impression of the potential benefits
+of delimited resource identifiers,
+as well as the realistic challenges of implementing them
+and making them interoperable and backward-compatible with URIs and IRIs.
+For now, this sketch hopefully provides a basis
+from which we may experiment with MRIs
+and see if they can fulfill their potential in practice.
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

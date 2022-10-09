@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  MinML: A Concise Matchertext XML Syntax &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table bgcolor="black" cellspacing=1 cellpadding=4>
+<tr><td bgcolor="white">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>MinML: A Concise Matchertext XML Syntax</h1>
+  <p>Could you use a markup syntax
+that supports the full expressive power and richness of HTML or XML,
+but is more terse, easier to type, and less frankly ugly?
+would it be nice to write just code[+[em[phasis]]],
+for example,
+instead of code[+[<em>phasis</em>]],
+for example?
+If so, read on.</p>
+<p>h2[The quest for writer-friendly {ndash} but general {ndash} markup]</p>
+<p>Markup languages derived from SGML, like HTML and XML,
+have many uses but are verbose and often a pain to write or edit manually.
+While XML was substantially a reaction to the complexity and bloat of SGML,
+terseness was always considered
+a{href=[https://www.schematron.com/document/467.html]}[&gt;
+of minimal importance]
+in XML.</p>
+<p>Reactions to XML&rsquo;s verbosity and awkwardness
+brought us formats like
+a{href=[https://www.json.org/json-en.html]}[JSON]
+and
+a{href=[https://en.wikipedia.org/wiki/Markdown]}[Markdown].
+But while JSON is useful for automated data interchange,
+it is not a markup language {ndash}
+and its strict and minimal syntax required extensions like
+a{href=[https://yaml.org]}[YAML] and
+a{href=[https://github.com/toml-lang/toml]}[TOML]
+even to get, say, a notation for comments.</p>
+<p>Markdown em[is] a markup language,
+and vastly improves terseness and quick typeability
+for the most common and simple markup constructs.
+But its expressiveness is limited to a small subset of, say, HTML,
+and the quirky special-case syntax it uses for each construct
+makes its syntax difficult to {ldquo}scale{rdquo} to richer functionality
+without getting into a mess of syntax conflicts and ambiguities.
+Further, it is not easy to standardize or even specify rigorously {ndash}
+not to say this
+a{href=[https://commonmark.org]}[hasn&rsquo;t been tried].</p>
+<p>On a{href=[/]}[my web site],
+I used to embed HTML tags in code[.md] files
+to escape Markdown&rsquo;s limitations {ndash}
+but when an {ldquo}upgrade{rdquo}
+to a{href=[https://gohugo.io]}[Hugo]
+silently corrupted the entire website
+by suddenly disabling all markdown-embedded HTML,
+I realized the essential fragility of this solution.
+Even if markdown-embedded HTML
+a{href=[https://flaviocopes.com/hugo-embed-html-markdown/]}[can be re-enabled],
+I do not want all my past writing being silently corrupted on a regular basis
+by the latest evolution in the markdown parser or its default configuration.
+There em[is] value in relying on stable, highly-standardized,
+general-purpose markup formats like HTML or XML {ndash}
+but do I em[really] have to keep typing all those stupid start and end tags?</p>
+<p>h2[Introducing MinML]</p>
+<p>MinML
+(which I pronounce like {ldquo}minimal{rdquo})
+is a more concise or {ldquo}minified{rdquo} syntax
+for markup languages like HTML and XML.
+It is designed to be automatically cross-convertible
+both to and from the base markup syntax,
+and to preserve the full expressiveness of the underlying markup.
+Unlike Markdown, there is nothing you can write in HTML but not in MinML.
+MinML might be described as
+merely a new {ldquo}skin{rdquo} for the base markup language.
+It changes em[only] the way you write element tags,
+attributes, or character references,
+without affecting (or even knowing or caring about)
+em[which] element tags, attributes, or references you use.</p>
+<p>Let us start with a brief tour of MinML syntax.</p>
+<p>h3[Basic markup elements]</p>
+<p>In place of start/end tag pairs,
+MinML uses the basic syntax code[var[tag][var[content]]],
+as illustrated in the following table:</p>
+<p>table{style=width:100%}[
+tr[
+th[HTML]
+th[MinML]
+th[Output]
+]
+tr[
+td[code[<em>emphasis</em>]]
+td[code[+[em[emphasis]]]]
+td[em[emphasis]]
+]
+tr[
+td[code[<kbd>typewriter</kbd>]]
+td[code[+[kbd[typewriter]]]]
+td[kbd[typewriter]]
+]
+tr[
+td[code[<var>x</var><sup>2</sup>]]
+td[code[+[var[x]sup[2]]]]
+td[var[x]sup[2]]
+]
+]</p>
+<p>An element with no content,
+like code[<hr>] in HRML or code[<hr/>] in XML,
+becomes code[+[hr[]]] in MinML.</p>
+<p>h3[Elements with attributes]</p>
+<p>In MinML, we attach attributes to elements
+by inserting them in curly braces between the tag
+and square-bracketed content, like this:</p>
+<p>pre[+[	img{src=pic.jpg}[]
+hr{style=width:50%}[]
+a{href=http://bford.info/}[my home page]
+]]</p>
+<p>If an attribute value needs to contain spaces,
+we quote it with square brackets:</p>
+<p>pre[+[	img{src=pic.jpg alt=[a pretty picture]}[]
+]]</p>
+<p>h3[Character references]</p>
+<p>MinML uses curly braces
+in place of SGML&rsquo;s bizarre \code[&amp;]{hellip}\code[;] syntax
+to delimit character references.
+Thus,
+you write code[+[{reg}]] instead of code[+[®]]
+to get a registered trademark sign {reg}.
+You write code[+[{ldquo}quote{rdquo}]]
+instead of code[+[“quote”]]
+to get a properly-typeset {ldquo}quote{rdquo}.</p>
+<p>You can use numeric character references too,
+of course,
+like code[+[{#174}]] in decimarl or code[+[{#x00AE}]] for {reg}.</p>
+<p>h3[Managing whitespace]</p>
+<p>MinML expects
+any HTML/XML name followd by an open square bracket or curly brace
+to be the start of a markup element.
+To insert an element into text with no intervening whitespace,
+you can prepend a less-than sign code[+[&lt;]]
+to consume all whitespace before the element,
+and/or append a greater-than sign code[+[&gt;]]
+to consume all whitespace following the element:</p>
+<p>table{style=width:100%}[
+tr[
+td[code[+[bee &lt;em[yoo]&gt; tiful]]]
+td[Output: bee &lt;em[yoo]&gt; tiful]
+]
+]</p>
+<p>These whitespace-sucking symbols need not be paired:
+you can use one only at the beginning or at the end but not both:</p>
+<p>table{style=width:100%}[
+tr[
+td[code[+[mark &lt;em[up]]]]
+td[Output: mark &lt;em[up]]
+]
+tr[
+td[code[+[em[mark]&gt; up&gt;]]]
+td[Output: em[mark]&gt; up]
+]
+]</p>
+<p>You can also use space-suckers at the beginning and/or end
+of the content contained within an element:</p>
+<p>table{style=width:100%}[
+tr[
+td[code[+[a &lt;b[&gt; b &lt;]&gt; c]]]
+td[Output: a &lt;b[&gt; b &lt;]&gt; c]
+]
+]</p>
+<p>If you need square brackets or curly braces in literal text
+immediately following what could be an element name,
+you can place a space and a space-sucker between them:</p>
+<p>table{style=width:100%}[
+tr[
+td[code[+[b[2]]]]
+td[Output: b[2]]
+]
+tr[
+td[code[+[b &lt;[2]]]]
+td[Output: b &lt;[2]]
+]
+]</p>
+<p>The same is true if you need a literal curly-brace pair
+surrounding what could be mistaken for a character reference:</p>
+<p>table{style=width:100%}[
+tr[
+td[code[+[{star}]]]
+td[Output: {star}]
+]
+tr[
+td[code[+[{&gt; star &lt;}]]]
+td[Output: {&gt; star &lt;}]
+]
+]</p>
+<p>h3[Comments in markup]</p>
+<p>You can include comments in markup
+with code[- &lt;[var[c]]], like this:</p>
+<p>table{style=width:100%}[
+tr[
+th[HTML]
+th[MinML]
+]
+tr[
+td[code[+[<!-- comment -->]]]
+td[code[+[-[comment]]]]
+]
+]</p>
+<p>h3[Matchertext literal sequences]</p>
+<p>MinML builds on the
+a{href=/pub/lang/matchertext/}[matchertext]
+syntactic discipline.
+Matchertext makes it possible
+to embed one text string into another unambiguously {ndash}
+within a language or even across languages {ndash}
+without having to {ldquo}escape{rdquo}
+or otherwise transform the embedded text.
+The cost of this syntactic discipline
+is that the ASCII dfn[matcher] characters {ndash}
+namely the parentheses code[()],
+square brackets code[[]],
+and curly braces code[{}] {ndash}
+must appear em[only] in properly-nesting matched pairs throughout matchertext.</p>
+<p>Let&rsquo;s first look at one of the benefits of matchertext in MinML.
+You can use the sequence code[+ &lt;[var[m]]]
+to include any matchertext string var[m] into the markup
+as a raw string literal, which is uninterpreted except to find its end.
+You can use this to include verbatim examples of markup or other code
+in your text, for example.
+The code[+ &lt;[{hellip}]] sequence
+is thus a more concise analog to XML&rsquo;s clunky CDATA sections:</p>
+<p>table{style=width:100%}[
+tr[
+th[XHTML]
+th[MinML]
+th[Output]
+]
+tr[
+td[code[+[<![CDATA[example <b>bold</b> markup]]>]]]
+td[code[+[+[example <b>bold</b> in XHTML]]]]
+td[+[example <b>bold</b> in XHTML]]
+]
+tr[
+td[code[+[<![CDATA[example b[bold] in MinML]]>]]]
+td[code[+[+[example b[bold] in MinML]]]]
+td[+[example b[bold] in MinML]]
+]
+]</p>
+<p>Unlike CDATA sections,
+matchertext literals nest.
+Including a literal example of a CDATA section in XML markup,
+for example,
+is
+a{href=https://en.wikipedia.org/wiki/CDATA}[mind-meltingly painful]:</p>
+<p>table{style=width:100%}[
+tr[
+td[XHTML:]
+td[code[+[<![CDATA[example <![CDATA[character data]]]]><![CDATA[> section]]>]]]
+]
+tr[
+td[Output:]
+td[+[example <![CDATA[character data]]> section]]
+]
+]</p>
+<p>Expressing a literal example of a code[+ &lt;[{hellip}]] construct in MinML
+is less painful:</p>
+<p>table{style=width:100%}[
+tr[
+td[MinML:]
+td[code[+[+[example +[matchertext] literal]]]]
+]
+tr[
+td[Output:]
+td[+[example +[matchertext] literal]]
+]
+]</p>
+<p>h3[Unmatched matchers in literal text]</p>
+<p>The matchertext discipline has a cost, of course:
+if you want to include an em[unmatched] literal
+parenthesis, bracket, or curly brace in your text,
+you must use a character reference.
+You can use standard named or numeric character references,
+like code[+[{lparen}]] or code[+[{#x28}]]
+for an unmatched left parentheses.
+However,
+MinML also provides an alternative syntax for matcher characters
+in which you just use a matched pair
+and the letter code{o} or code{c} to indicate
+whether you want the opener or the closer of the pair
+such as code[+[{o()}]] for an open parenthesis.
+The following table shows several ways to express
+unmatched literal instances of each of the matcher characters.</p>
+<p>table{style=width:100%}[
+tr[
+th[]
+th{colspan=3}[Open]
+th{colspan=3}[Close]
+]
+tr[
+td[Parentheses code[()]]
+td[code[+[{lpar}]]]
+td[code[+[{#x28}]]]
+td[code[+[{o()}]]]
+td[code[+[{rpar}]]]
+td[code[+[{#x29}]]]
+td[code[+[{c()}]]]
+]
+tr[
+td[Square brackets code[[]]]
+td[code[+[{lbrack}]]]
+td[code[+[{#x5B}]]]
+td[code[+[{o[]}]]]
+td[code[+[{rbrack}]]]
+td[code[+[{#x5D}]]]
+td[code[+[{c[]}]]]
+]
+tr[
+td[Curly braces code[{}]]
+td[code[+[{lbrace}]]]
+td[code[+[{#x7B}]]]
+td[code[+[{o{}}]]]
+td[code[+[{rbrace}]]]
+td[code[+[{#x7D}]]]
+td[code[+[{c{}}]]]
+]
+]</p>
+<p>While having to {ldquo}escape{rdquo} unmatched matchers
+by replacing them with character references
+might seem cumbersome,
+unmatched matchers tend not to be used often anyway in most text
+(mainly in text that is em[talking about] characters or syntax).
+Independent of the benefits for text embedding,
+another compensation for this trouble is that you may find
+that your smart text editor or integrated development environment (IDE)
+no longer ever guesses wrong
+which parenthesis, bracket, or brace character
+matches which other one in your source file.</p>
+<p>h3[Metasyntax and processing instructions]</p>
+<p>SGML-derived markup can contain metasyntactivc dfn[declarations]
+of the form code[&lt;!{hellip}&gt;],
+and dfn[processing instructions]
+of the form code[<?{hellip}?>].
+MiniML provides the syntax
+code[! &lt;[{hellip}]] and
+code[? &lt;[{hellip}]], respectively,
+for expressing these constructs if needed.</p>
+<p>Since these constructs are typically used
+in only a few lines at the beginning of most markup files,
+if at all,
+improving their syntax is not a high-priority goal for MinML.
+Further,
+the syntax of {ndash} and processing rules for {ndash}
+document type definitions is frighteningly complex,
+even in the {ldquo}simplified{rdquo} XML.</p>
+<p>MiniML therefore leaves the legacy syntax of the underlying markup language
+unmodified within the context of these directives.
+For example, a MiniML document based on XML
+with a document type declaration might look like:</p>
+<p>pre[	?[xml version=&ldquo;1.0&rdquo;]
+![DOCTYPE greeting SYSTEM &ldquo;hello.dtd&rdquo;]
+greeting[Hello, world!]
+]</p>
+<p>-[ XXX prototype implementation, Hugo ]</p>
+<p>h2[Conclusion]</p>
+<p>MinML is a new {ldquo}outer{rdquo} syntax
+for SGML-derived markup languages such as HTML and XML
+that preserves all of the base language&rsquo;s power and expressiveness,
+but just makes markup a bit more concise
+and (at least in this author&rsquo;s opinion)
+less annoying to write, read, or edit.
+Elements never need end tags, in particular,
+only a final close bracket.
+-[
+Because MinML builds on the
+a{href=/pub/lang/matchertext/}[matchertext],
+all constructs including raw literals naturally nest,
+and can contain verbatim embedded strings in any compliant language
+without escaping or other syntactic contortions.
+While this discipline requires unmatched matchers
+to be replaced with character references,
+&hellip;
+]</p>
+<p>-[	Old notes:</p>
+<p>Global character rules:
+For strict compliance with the standard matchertext configuration,
+ALL UCS characters are allowed, unlike XML,
+though use of non-whitespace control codes (especially NUL)
+are strongly discouraged in working text.</p>
+<p>Syntax summary:</p>
+<p>tag[content]
+simple tag with nested content but no attributes.
+content can be empty.
+tag{attrs}[content] tag with at least one name=val attribute and nested content.</p>
+<p>&lt;tag[content]&gt;
+sucks outer whitespace before and after element
+&lt;tag[content]
+sucks outer whitespace before only
+tag[content]&gt;
+sucks outer whitespace after only
+tag[&gt; content &lt;]
+sucks inner whitespace before and after content
+tag[&gt; content]
+sucks inner whitespace before content
+tag[content &lt;]
+sucks inner whitespace after content</p>
+<p>{reference}
+named entity reference
+{#&hellip;}
+numeric character reference</p>
+<p>literal braces around a name that could be mistaken for a reference:
+{&gt; name &lt;}
+{&gt; name}
+{name &lt;}</p>
+<p>-[text]
+comment: contents are ignored
++[text]
+raw matchertext: contents uninterpreted except to find the end</p>
+<p>![text]
+metasyntax tag like <!DOCTYPE ...>.
+content of DOCTYPE - and all external entities -
+are considered to be in legacy XML syntax
+(if interpreted at all other than to find the end).
+?[text]
+system processing tag like <?xml ... ?>
+same raw interpretation as above for ?.</p>
+<p>&ndash;</p>
+<p>NameStartChar and NameChar classes: exactly follows XML.</p>
+<p>EntityValue, AttValue: uses bracket quotes rather than single/double quotes.</p>
+<p>SystemLiteral: a slight problem inp rinciple, because in XML disallows
+either single or double quotes and doesn&rsquo;t support markup.
+But SystemLiteral is to be used to contain a URI,
+which has much more restrictive syntax.
+Uses URI escaping if escaping is needed.</p>
+<p>PubidLiteral: same restricted ASCII-only character set as XML</p>
+<p>CharData: removes stilly restriction of no &lsquo;{c[]}{c[]}&gt;&rsquo; sequence</p>
+<p>Comments: -[&hellip;]? or ![&hellip;]? or [- &hellip; ]?
+Drops the restriction that &lsquo;&ndash;&rsquo; must not appear within comments.
+Allows character references to appear for escaping or doc-comment purposes.
+When converting to XML, &lsquo;&ndash;&rsquo; gets escaped with character reference..
+If comment text ends in &lsquo;-&rsquo;, XML writer appends a space
+to avoid producing an illegal &lsquo;&mdash;&gt;&rsquo; terminator.</p>
+<p>entity:
+tag[content]
+tag{attrs}[content]</p>
+<p>!tag[content] or somesuch when tag needs to follow
+name characters with no intervening whitespace?
+Or S -tag[&hellip;] to consume the preceding whitespace?  conflict: comment syntax
+Or &lt;tag[&hellip;] to eat left-side whitespace,
+tag[&hellip;]&gt; to eat right-side whitespace,
+&lt;tag[&hellip;]&gt; to eat both?
+If a literal &lt; is needed immediately before,
+it can be done as &lt; &lt;tag[&hellip;]; similarly for a literal &gt; immediately after.</p>
+<p>or:
+[tag content]
+[tag{attrs} foo]
+?</p>
+<p>An open bracket that does not immediately follow a Name
+is just treated as a literal open brace.</p>
+<p>Processing instructions:
+?[&hellip;]
+Same PITarget syntax.</p>
+<p>PI containing &lsquo;?&gt;&rsquo; cannot be converted to standard XML
+(or would have to be escaped via unknown application escaping syntax).
+Converting to MaML must escape unmatched matchers.
+Or perhaps just cause a conversion error,
+given that the embedded PITarget syntax is effectively unknown
+but its constraints are the constraints of the host syntax.</p>
+<p>CDATA sections:
+get converted to matchertext sections,
+massaging the corner cases as needed.
+(Both can be broken/combined.)</p>
+<p>For example:
+#[&hellip;]?  @[&hellip;]?
++[&hellip;]? (symmetry with -[&hellip;] for comments?)</p>
+<p>Just disable DTDs entirely?
+Protect against XXE attacks <a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html</a>
+Billion Laughs attack <a href="https://en.wikipedia.org/wiki/Billion_laughs_attack">https://en.wikipedia.org/wiki/Billion_laughs_attack</a></p>
+<p>Another strictly-backward-compatible approach would be
+to process all DTDs including internal/external entity references
+strictly in legacy XML syntax,
+even when used (referred to in) MinML syntax.
+Thus, recursive entity expansion works, in XML syntax.
+MinXML files are thus processed as if first converted to legacy XML
+(without doing any entity expansion at all),
+then processed as legacy XML source.</p>
+<p>XML is not just a markup language but a way-too-powerful macro language&hellip;</p>
+<p>Some XML dataset sources for testing:
+<a href="https://catalog.data.gov/dataset/?res_format=XML">https://catalog.data.gov/dataset/?res_format=XML</a>
+<a href="http://aiweb.cs.washington.edu/research/projects/xmltk/xmldata/">http://aiweb.cs.washington.edu/research/projects/xmltk/xmldata/</a>
+<a href="https://data.world/datasets/xml">https://data.world/datasets/xml</a></p>
+<p>Just convert ![&hellip;] to &lt;!&hellip;&gt; and handle as legacy XML?</p>
+<p>Conditional sections:
+INCLUDE is only processed as part of the DTD.  Skip.
+IGNORE is ignored.  Skip.</p>
+<p>]</p>
+
+
+
+    
+      <br clear=all>
+<hr>
+<table width="100%"><tr>
+
+<td align="left">
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

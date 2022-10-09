@@ -76,12 +76,12 @@ In other types of files, can be in a comment etc toward the beginning.</p>
 need to have a root-level robots.txt-like indication for readers
 to consider DUG specs to be authoritative?</p>
 <p>Example full VID reference:</p>
-<p>vid[<!-- raw HTML omitted -->:<!-- raw HTML omitted -->/<!-- raw HTML omitted -->]
-vid[sha256:<!-- raw HTML omitted -->/foo/bar/#blah]</p>
+<p>vid[<vid-scheme>:<version-hash>/<path-within-version>]
+vid[sha256:<base64>/foo/bar/#blah]</p>
 <p>Alternatively, for agility, make VIDs a list of alternate sub-CRIs
 with different schemes/ciphersuites?</p>
 <p>Example:</p>
-<p>vid[1[<!-- raw HTML omitted -->/<!-- raw HTML omitted -->],2[<!-- raw HTML omitted -->/<!-- raw HTML omitted -->]]</p>
+<p>vid[1[<version-hash>/<path-within-version>],2[<version-hash>/<path>]]</p>
 <p>Proto-VID marker:</p>
 <p>vid[]</p>
 <p>This just requests the content/version control system to replace this marker

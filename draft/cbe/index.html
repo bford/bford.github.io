@@ -53,7 +53,9 @@ keeping space overheads low and predictable
 for both small and large embedded strings,
 and allowing for stream processing in which an encoder
 must start writing an embedded sequence before knowing how long it will be.</p>
-<!-- raw HTML omitted -->
+<center>
+<img src="find-the-end.svg" alt="finding the end of an embedded binary string" width="400px">
+</center>
 <p>This post proposes a scheme I&rsquo;ll call <em>composable binary encoding</em> or <em>CBE</em>,
 which represents a point in this vast design space
 with a combination of properties that I find particularly attractive.
@@ -208,12 +210,39 @@ until it produces the one <em>final</em> chunk.</p>
 <p>Each chunk consists of a CBE blob
 contains a <em>header</em> of 1–4 bytes
 and a <em>payload</em> of up to 4,210,751 bytes
-(2<!-- raw HTML omitted -->6<!-- raw HTML omitted -->+2<!-- raw HTML omitted -->14<!-- raw HTML omitted -->+2<!-- raw HTML omitted -->22<!-- raw HTML omitted -->-1).
+(2<sup>6</sup>+2<sup>14</sup>+2<sup>22</sup>-1).
 The payload immediately follows the header,
 except in the case of 1-byte payloads,
 which are part of the header itself.
 There are seven header encodings total, as follows:</p>
-<!-- raw HTML omitted -->
+<table align="center" style="border-spacing: 20px 0;">
+<tr align="left"><th> Header encoding <th> Description		<th> Payload
+<tr><td> <tt>0b10000000</tt>	<td> 0-byte empty final chunk	<td> none
+<tr><td> <tt>0b0<i>vvvvvvv</i></tt>
+		<td> 1-byte final chunk with payload <tt>0b0<i>vvvvvvv</i></tt> (0-127)
+				<td> 1 byte within header
+<tr><td> <tt>0b10000001,1<i>vvvvvvv</i></tt>
+		<td> 1-byte final chunk with payload <tt>0b1<i>vvvvvvv</i></tt> (128-255) &nbsp;
+				<td> 1 byte within header
+<tr><td> <tt>0b10<i>nnnnnn</i></tt>
+		<td> final chunk of payload length <i>n</i>
+			with 6-bit <i>n</i>
+				<td> 2&ndash;63 bytes following header
+<tr><td> <tt>0b11<i>nnnnnn</i>,<i>nnnnnnnn</i></tt>
+		<td> final chunk of payload length 64+<i>n</i>
+			with 14-bit <i>n</i>
+				<td> 64&ndash;16447 bytes following header
+<tr><td> <tt>0b10000001,00<i>nnnnnn</i>,<i>nnnnnnnn</i>,<i>nnnnnnnn</i></tt>
+		<td> final chunk of payload length 16448+<i>n</i>
+			with 22-bit <i>n</i>
+				<td> 16448&ndash;4,210,751 bytes
+					following header
+<tr><td> <tt>0b10000001,01<i>nnnnnn</i>,<i>nnnnnnnn</i>,<i>nnnnnnnn</i></tt> &nbsp;
+		<td> partial chunk of payload length 16448+<i>n</i>
+			with 22-bit <i>n</i>
+				<td> 16448&ndash;4,210,751 bytes
+					following header
+</table>
 <p>In the last three header encodings,
 the bits comprising the value <em>n</em> are in big-endian byte order,
 with the most-significant bits in the second header byte.</p>
@@ -326,7 +355,7 @@ for a particular format or protocol using CBE,
 that protocol can further constrain the range of allowed chunk sizes
 in that particular context.
 A protocol using CBE could restrict chunks to be strict powers of two
-between 2<!-- raw HTML omitted -->15<!-- raw HTML omitted --> (32KiB) and 2<!-- raw HTML omitted -->22<!-- raw HTML omitted --> (4MiB), for example,
+between 2<sup>15</sup> (32KiB) and 2<sup>22</sup> (4MiB), for example,
 or a more restrictive range.</p>
 <p>Unlike small blobs,
 the encodings of large blobs are no longer automatically canonical,

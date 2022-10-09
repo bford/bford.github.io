@@ -25,6 +25,30 @@
     <loc>https://bford.info/pub/lang/matchertext/</loc>
     <lastmod>2022-10-07T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://bford.info/topics/Anonymity/</loc>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Metadata/</loc>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Networks/</loc>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Privacy/</loc>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/thesis/</loc>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/thesis/2022-fragkouli/</loc>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Transparency/</loc>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/</loc>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://bford.info/topics/Blockchain/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -43,12 +67,6 @@
     <loc>https://bford.info/topics/Security/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/</loc>
-    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Anonymity/</loc>
-    <lastmod>2022-02-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/topics/Democracy/</loc>
     <lastmod>2022-02-14T00:00:00+00:00</lastmod>
   </url><url>
@@ -56,12 +74,6 @@
     <lastmod>2022-02-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Personhood/</loc>
-    <lastmod>2022-02-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Privacy/</loc>
-    <lastmod>2022-02-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Transparency/</loc>
     <lastmod>2022-02-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/pub/sec/trip/</loc>
@@ -73,22 +85,13 @@
     <loc>https://bford.info/thesis/2021-nikitin/</loc>
     <lastmod>2021-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/Metadata/</loc>
-    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/topics/Side-Channels/</loc>
-    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/thesis/</loc>
     <lastmod>2021-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Cloud-Computing/</loc>
     <lastmod>2021-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/pub/net/limix/</loc>
-    <lastmod>2021-11-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Networks/</loc>
     <lastmod>2021-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Peer-to-Peer/</loc>
@@ -741,7 +744,7 @@
   </url><url>
     <loc>https://bford.info/draft/cbe/</loc>
   </url><url>
-    <loc>https://bford.info/draft/cri/</loc>
+    <loc>https://bford.info/draft/mri/</loc>
   </url><url>
     <loc>https://bford.info/draft/xson/</loc>
   </url><url>
@@ -761,7 +764,11 @@
   </url><url>
     <loc>https://bford.info/album/2005/0304-Marseille/</loc>
   </url><url>
+    <loc>https://bford.info/draft/maxml/</loc>
+  </url><url>
     <loc>https://bford.info/album/2002/0713-MidsummersEve/</loc>
+  </url><url>
+    <loc>https://bford.info/draft/minml/</loc>
   </url><url>
     <loc>https://bford.info/album/Cats.html</loc>
   </url><url>

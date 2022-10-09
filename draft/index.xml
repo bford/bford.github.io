@@ -106,8 +106,10 @@ BESO Generic does not modify the JSON Schema language at all.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/cmark/</guid>
-      <description>Hyphen X	[-]	Optional line-breaking hyphen??? &amp;ndash;	–	[&amp;ndash;]	En-dash or numeric range &amp;mdash;	—	[&amp;mdash;]	Em-dash &amp;hellip;	…	[&amp;hellip;]	Ellipsis &amp;ldquo;&amp;hellip;&amp;rdquo;	Quoted string: quotes become left/right
-⏎	[br]	Line break ␍	[r]	Carriage return character mark ␤	[n]	Newline character mark ¶	[p]	Paragraph mark X	[o&#39;]	Open single quote X	[c&#39;]	Close single quote X	[o&amp;quot;]	Open double quote X	[c&amp;quot;]	Close double quote X	[o&amp;lt;&amp;gt;]	Open angle bracket X	[c&amp;lt;&amp;gt;]	Close angle bracket X	[o&amp;lt;&amp;lt;&amp;gt;&amp;gt;]	Open double angle bracket X	[c&amp;lt;&amp;lt;&amp;gt;&amp;gt;]	Close double angle bracket Spacing: &amp;quot; &amp;quot;	[mq_]	Em quad space &amp;quot; &amp;quot;	[nq_]	En quad space &amp;quot; &amp;quot;	[m_]	Em space &amp;quot; &amp;quot;	[n_]	En space &amp;quot; &amp;quot;	[3m_]	Three-per-Em space &amp;quot; &amp;quot;	[4m_]	Four-per-Em space &amp;quot; &amp;quot;	[6m_]	Six-per-Em space &amp;quot; &amp;quot;	[d_]	Figure (digit) space &amp;quot; &amp;quot;	[.</description>
+      <description>Matchup? (matchertext markup)
+Some goals:
+Matchertext: rigorously nested, verbatim embeddable Quick and easy to type More concise than SGML-derived markup languages More uniform and systematic than Markdown or Latex Rendering to HTML, Latex Aware text editors are welcome to recognize and convert directives into Unicode when feasible: eg for character sequences, single/double quoted text, etc.
+Hyphen X	[-]	Optional line-breaking hyphen??? &amp;ndash;	–	[&amp;ndash;]	En-dash or numeric range &amp;mdash;	—	[&amp;mdash;]	Em-dash &amp;hellip;	…	[&amp;hellip;]	Ellipsis &amp;ldquo;&amp;hellip;&amp;rdquo;	Quoted string: quotes become left/right</description>
     </item>
     
     <item>
@@ -117,7 +119,7 @@ BESO Generic does not modify the JSON Schema language at all.</description>
       
       <guid>https://bford.info/draft/cmath/</guid>
       <description>Symbols Arithmetic Basic:
-Plus sign −	[-]	Minus sign ×	Multiplication ÷	[d]	Division /	⁄	[/]	Fraction slash Technical: ±	[+-]	Plus-minus sign ∕	[d/]	Division slash ⋅	[.]	Multiplication or dot product √	[root]	Square root ∛	[3root]	Cube root ∜	[4root]	Fourth root ∞	[inf]	Infinity ∶	[:]	Ratio ∷	[::]	Proportion sum	∑	[sum]	Sum prod	∏	[prod]	Product 𝔼	[expect] Expected value pi	π	[pi]	Mathematical value pi (3.</description>
+Plus sign −	[-]	Minus sign ×	Multiplication ÷	[d]	Division /	⁄	[/]	Fraction slash Technical: ±	[+-]	Plus-minus sign ∕	[d/]	Division slash ⋅	[.]	Multiplication or dot product √	[root]	Square root	- or [2rt]? ∛	[3root]	Cube root	- or [3rt]? ∜	[4root]	Fourth root	- or [4rt]? ∞	[inf]	Infinity ∶	[:]	Ratio ∷	[::]	Proportion sum	∑	[sum]	Sum prod	∏	[prod]	Product 𝔼	[expect] Expected value pi	π	[pi]	Mathematical value pi (3.</description>
     </item>
     
     <item>
@@ -187,12 +189,12 @@ An old problem in data format design is embedding an arbitrary variable-length b
     </item>
     
     <item>
-      <title>Escaping Escaping Hell with Composable Resource Identifiers</title>
-      <link>https://bford.info/draft/cri/</link>
+      <title>Escaping Escaping Hell with Matchertext Resource Identifiers</title>
+      <link>https://bford.info/draft/mri/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.info/draft/cri/</guid>
-      <description>Uniform resource identifiers or URIs were a genuinely great idea and have rightfully become the ubiquitous way to &amp;ldquo;name things&amp;rdquo; on the Internet. As the basis of web addresses or URLs, they are human readable (to varying degrees), manually transcribable, cut-and-pasteable, and have proven incrementally extensible to a vast multitude of schemes. Their later extension to internationalized resource identifiers or IRIs allow people whose native language is not English to type, and view, non-ASCII Unicode characters in web addresses.</description>
+      <guid>https://bford.info/draft/mri/</guid>
+      <description>Uniform resource identifiers or URIs were a genuinely great idea and have rightfully become the ubiquitous way to name things on the Internet. As the basis of web addresses or URLs, they are human readable (to varying degrees), manually transcribable, cut-and-pasteable, and have proven incrementally extensible to a vast multitude of schemes. Their later extension to internationalized resource identifiers or IRIs allow people whose native language is not English to type, and view, non-ASCII Unicode characters in web addresses.</description>
     </item>
     
     <item>
@@ -229,6 +231,29 @@ Side-channel leak control: PURBs
 Indexing and counting for divide-and-conquer algorithms. Example: binary search (works) vs linear search (breaks quickly); quick/merge sorts (works) vs naive sorts (breaks); &amp;hellip;
 Related: summary data for large-scale data for parallel processing
 Efficient memory allocation with fragmentation control Use next mag to bucket allocation units; allocation can scavenge and split a larger bucket and (proof?) remainder will also fall into a valid bucket (subtraction closure: mag minus a mag is a mag if no underflow)</description>
+    </item>
+    
+    <item>
+      <title>MaxML: Matchertext-friendly XML Syntax</title>
+      <link>https://bford.info/draft/maxml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/maxml/</guid>
+      <description>Goal: extend XML as conservatively as possible to provide basic support for matchertext hosting and embedding. Other than that, remain as consistent as possible with XML syntax.
+Hosting:
+matchertext content tags: &amp;lt;name attrs [matchertext]&amp;gt; matchertext attributes: attrname=[matchertext] matchertext sections: &amp;lt;![MDATA[matchertext]]&amp;gt; Embedding:
+new character entity syntax &amp;amp;o[]; &amp;amp;c{}; etc. </description>
+    </item>
+    
+    <item>
+      <title>MinML: A Concise Matchertext XML Syntax</title>
+      <link>https://bford.info/draft/minml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/draft/minml/</guid>
+      <description>Could you use a markup syntax that supports the full expressive power and richness of HTML or XML, but is more terse, easier to type, and less frankly ugly? would it be nice to write just code[+[em[phasis]]], for example, instead of code[+[phasis]], for example? If so, read on.
+h2[The quest for writer-friendly {ndash} but general {ndash} markup]
+Markup languages derived from SGML, like HTML and XML, have many uses but are verbose and often a pain to write or edit manually.</description>
     </item>
     
     <item>

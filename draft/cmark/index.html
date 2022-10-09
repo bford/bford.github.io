@@ -41,7 +41,19 @@
 
     
   <h1>Composable Markup (CMark)</h1>
-  <ul>
+  <p>Matchup?  (matchertext markup)</p>
+<p>Some goals:</p>
+<ul>
+<li>Matchertext: rigorously nested, verbatim embeddable</li>
+<li>Quick and easy to type</li>
+<li>More concise than SGML-derived markup languages</li>
+<li>More uniform and systematic than Markdown or Latex</li>
+<li>Rendering to HTML, Latex</li>
+</ul>
+<p>Aware text editors are welcome to recognize
+and convert directives into Unicode when feasible:
+eg for character sequences, single/double quoted text, etc.</p>
+<ul>
 <li>
 <pre><code>  	Hyphen
 </code></pre>
@@ -56,10 +68,10 @@ X	[-]	Optional line-breaking hyphen???
 ␤	[n]	Newline character mark
 ¶	[p]	Paragraph mark
 
-X	[o']	Open single quote
-X	[c']	Close single quote
-X	[o&quot;]	Open double quote
-X	[c&quot;]	Close double quote
+X	[o']	Open single quote in language-dependent style
+X	[c']	Close single quote in language-dependent style
+X	[o&quot;]	Open double quote in language-dependent style
+X	[c&quot;]	Close double quote in language-dependent style
 
 X	[o&lt;&gt;]	Open angle bracket
 X	[c&lt;&gt;]	Close angle bracket
@@ -84,25 +96,52 @@ X	[c&lt;&lt;&gt;&gt;]	Close double angle bracket
 \ufeff	[~0_]	Zero-width no-break space
 </code></pre>
 <h2 id="character-markup">Character markup</h2>
-<p>a(uri)[&hellip;]		Link to uri/cri</p>
-<p>i[&hellip;]			Italics
-b[&hellip;]			Bold
-_[&hellip;]			Underline</p>
+<p>a(uri)[&hellip;]		Link to uri/cri
+uri[&hellip;]		Show a literal URI (as a link)</p>
+<p>t[&hellip;] or m[&hellip;]?	Raw text, interpreted literally (no markup)
+u[&hellip;]			Unicode character reference - hex number or name?</p>
+<p>&lsquo;[&hellip;]			Single-quoted text
+&ldquo;[&hellip;]			Double-quoted text</p>
+<p>e[&hellip;]			Emphasis - usually italicized
+s[&hellip;]			Strong - usually bold</p>
+<p>k[&hellip;]			Keyboard-entered text - usually typewriter font
+d[&hellip;]?			Displayed sample output - usually typewriter font</p>
+<p>i[&hellip;]?			Italics		- no?
+b[&hellip;]?			Bold		- no?
+_[&hellip;]?			Underline	- no?
+-[&hellip;]?			Strikeout	- no?</p>
 <p>sub[&hellip;]		Subscript
 sup[&hellip;]		Superscript</p>
-<p>sq[&hellip;]			Single-quoted text
-dq[&hellip;]			Double-quoted text
+<p>sq[&hellip;]	 or &lsquo;[&hellip;]?	Single-quoted text
+dq[&hellip;]	 or &ldquo;[&hellip;]?	Double-quoted text
 [sq][&hellip;]		Single-quoted text, Unicode symbolization requested
-[dq][&hellip;]		Double-quoted text, Unicode symbolization requested</p>
-<p>o()			Open parenthesis
-c()			Close parenthesis
-o[]			Open square bracket
-c[]			Close square bracket
-o{}			Open curly brace
-c{}			Close curly brace</p>
-<p>[entity]		HTML entity by name
-[#n]			HTML entity by number</p>
-<p>![&hellip;]			markup comment?</p>
+[dq][&hellip;]		Double-quoted text, Unicode symbolization requested
+saq[&hellip;]		Single-angle-quoted text? (or sq w/ language config?)
+daq[&hellip;]		Double-angle-quoted text</p>
+<p>del[&hellip;]		Mark deleted text, usually with strikeout
+ins[&hellip;]		Mark inserted text, usually with underline</p>
+<p>[o()]			Open parenthesis (unmatched)
+[c()]			Close parenthesis
+[o[]]			Open square bracket
+[c[]]			Close square bracket
+[o{}]			Open curly brace
+[c{}]			Close curly brace
+[o&lt;&gt;]			Open angle bracket ⟨
+[c&lt;&gt;]			Close angle bracket ⟩
+[o&laquo;&raquo;]			Open double-angle bracket
+[c&laquo;&raquo;]			Close double-angle bracket</p>
+<p>code[&hellip;]		Computer code
+kbd[&hellip;] or k[&hellip;]	Keyboard input
+samp[&hellip;]		Sample output
+var[&hellip;] or v[&hellip;]	Variable name
+pre[&hellip;]		Preformatted multiline text</p>
+<p>dfn[&hellip;] or def[&hellip;]?	Definition - usually italicized
+cite[&hellip;]		Citation of title of a creative work - italicized</p>
+<p>mark[&hellip;]		Marked or highlighted text - black-on-yellow</p>
+<p>[entity]?		HTML entity by name - maybe no (HTML-specific)
+[#n]?			HTML entity by number - maybe no (HTML-specific)</p>
+<p>![&hellip;] or -[&hellip;]	markup comment?
+?(flag)[&hellip;]		conditionally-included text?</p>
 <h2 id="block-markup">Block markup</h2>
 <p>span[&hellip;]		Text span element
 div[&hellip;]		Block division element</p>
