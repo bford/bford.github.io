@@ -252,7 +252,7 @@ new character entity syntax &amp;amp;o[]; &amp;amp;c{}; etc. </description>
       
       <guid>https://bford.info/draft/minml/</guid>
       <description>Could you use a markup syntax that supports the full expressive power and richness of HTML or XML, but is more terse, easier to type, and less frankly ugly? would it be nice to write just code[+[em[phasis]]], for example, instead of code[+[phasis]], for example? If so, read on.
-h2[The quest for writer-friendly {ndash} but general {ndash} markup]
+h2[The quest for writer-friendly [ndash] but general [ndash] markup]
 Markup languages derived from SGML, like HTML and XML, have many uses but are verbose and often a pain to write or edit manually.</description>
     </item>
     

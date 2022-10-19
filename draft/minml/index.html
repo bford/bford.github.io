@@ -49,7 +49,7 @@ for example,
 instead of code[+[<em>phasis</em>]],
 for example?
 If so, read on.</p>
-<p>h2[The quest for writer-friendly {ndash} but general {ndash} markup]</p>
+<p>h2[The quest for writer-friendly [ndash] but general [ndash] markup]</p>
 <p>Markup languages derived from SGML, like HTML and XML,
 have many uses but are verbose and often a pain to write or edit manually.
 While XML was substantially a reaction to the complexity and bloat of SGML,
@@ -63,7 +63,7 @@ a{href=[https://www.json.org/json-en.html]}[JSON]
 and
 a{href=[https://en.wikipedia.org/wiki/Markdown]}[Markdown].
 But while JSON is useful for automated data interchange,
-it is not a markup language {ndash}
+it is not a markup language [ndash]
 and its strict and minimal syntax required extensions like
 a{href=[https://yaml.org]}[YAML] and
 a{href=[https://github.com/toml-lang/toml]}[TOML]
@@ -73,15 +73,15 @@ and vastly improves terseness and quick typeability
 for the most common and simple markup constructs.
 But its expressiveness is limited to a small subset of, say, HTML,
 and the quirky special-case syntax it uses for each construct
-makes its syntax difficult to {ldquo}scale{rdquo} to richer functionality
+makes its syntax difficult to &ldquo;[scale] to richer functionality
 without getting into a mess of syntax conflicts and ambiguities.
-Further, it is not easy to standardize or even specify rigorously {ndash}
+Further, it is not easy to standardize or even specify rigorously [ndash]
 not to say this
 a{href=[https://commonmark.org]}[hasn&rsquo;t been tried].</p>
 <p>On a{href=[/]}[my web site],
 I used to embed HTML tags in code[.md] files
-to escape Markdown&rsquo;s limitations {ndash}
-but when an {ldquo}upgrade{rdquo}
+to escape Markdown&rsquo;s limitations [ndash]
+but when an &ldquo;[upgrade]
 to a{href=[https://gohugo.io]}[Hugo]
 silently corrupted the entire website
 by suddenly disabling all markdown-embedded HTML,
@@ -91,19 +91,19 @@ a{href=[https://flaviocopes.com/hugo-embed-html-markdown/]}[can be re-enabled],
 I do not want all my past writing being silently corrupted on a regular basis
 by the latest evolution in the markdown parser or its default configuration.
 There em[is] value in relying on stable, highly-standardized,
-general-purpose markup formats like HTML or XML {ndash}
+general-purpose markup formats like HTML or XML [ndash]
 but do I em[really] have to keep typing all those stupid start and end tags?</p>
 <p>h2[Introducing MinML]</p>
 <p>MinML
-(which I pronounce like {ldquo}minimal{rdquo})
-is a more concise or {ldquo}minified{rdquo} syntax
+(which I pronounce like &ldquo;[minimal])
+is a more concise or &ldquo;[minified] syntax
 for markup languages like HTML and XML.
 It is designed to be automatically cross-convertible
 both to and from the base markup syntax,
 and to preserve the full expressiveness of the underlying markup.
 Unlike Markdown, there is nothing you can write in HTML but not in MinML.
 MinML might be described as
-merely a new {ldquo}skin{rdquo} for the base markup language.
+merely a new &ldquo;[skin] for the base markup language.
 It changes em[only] the way you write element tags,
 attributes, or character references,
 without affecting (or even knowing or caring about)
@@ -151,18 +151,30 @@ we quote it with square brackets:</p>
 <p>pre[+[	img{src=pic.jpg alt=[a pretty picture]}[]
 ]]</p>
 <p>h3[Character references]</p>
-<p>MinML uses curly braces
+<p>MinML also uses square brackets
 in place of SGML&rsquo;s bizarre \code[&amp;]{hellip}\code[;] syntax
 to delimit character references.
 Thus,
-you write code[+[{reg}]] instead of code[+[®]]
-to get a registered trademark sign {reg}.
-You write code[+[{ldquo}quote{rdquo}]]
-instead of code[+[“quote”]]
-to get a properly-typeset {ldquo}quote{rdquo}.</p>
-<p>You can use numeric character references too,
+you write code[+[[reg]]] instead of code[+[®]]
+to get a registered trademark sign [reg].</p>
+<p>p[]
+You can use numeric character references too,
 of course,
-like code[+[{#174}]] in decimarl or code[+[{#x00AE}]] for {reg}.</p>
+like code[+[[#174]]] in decimarl or code[+[[#x00AE]]] for [reg].</p>
+<p>h3[Quoted strings]</p>
+<p>You can of course use the directed (left and right)
+single- and double-quote character references
+to typeset quoted strings properly.
+Writing code[+[[ldquo]quote[rdquo]]] in MinML,
+as opposed to code[+[“quote”]] in XML,
+already seems like an improved way to express a &ldquo;[quote].</p>
+<p>p[]
+Because quoted strings are such an important common case, however,
+MinML provides an even shorter alternative for expressing matching quotes.
+You can write code[+[&quot;[quote]]] to express
+a string delimited by matching left and right double quotes,
+or code[+[&rsquo;[quote]]]
+for a string delimited by matching single quotes.</p>
 <p>h3[Managing whitespace]</p>
 <p>MinML expects
 any HTML/XML name followd by an open square bracket or curly brace
@@ -241,15 +253,15 @@ td[code[+[-[comment]]]]
 a{href=/pub/lang/matchertext/}[matchertext]
 syntactic discipline.
 Matchertext makes it possible
-to embed one text string into another unambiguously {ndash}
-within a language or even across languages {ndash}
-without having to {ldquo}escape{rdquo}
+to embed one text string into another unambiguously [ndash]
+within a language or even across languages [ndash]
+without having to &ldquo;[escape]
 or otherwise transform the embedded text.
 The cost of this syntactic discipline
-is that the ASCII dfn[matcher] characters {ndash}
+is that the ASCII dfn[matcher] characters [ndash]
 namely the parentheses code[()],
 square brackets code[[]],
-and curly braces code[{}] {ndash}
+and curly braces code[{}] [ndash]
 must appear em[only] in properly-nesting matched pairs throughout matchertext.</p>
 <p>Let&rsquo;s first look at one of the benefits of matchertext in MinML.
 You can use the sequence code[+ &lt;[var[m]]]
@@ -354,7 +366,7 @@ td[code[+[{#x7D}]]]
 td[code[+[{c{}}]]]
 ]
 ]</p>
-<p>While having to {ldquo}escape{rdquo} unmatched matchers
+<p>While having to &ldquo;[escape] unmatched matchers
 by replacing them with character references
 might seem cumbersome,
 unmatched matchers tend not to be used often anyway in most text
@@ -379,9 +391,9 @@ in only a few lines at the beginning of most markup files,
 if at all,
 improving their syntax is not a high-priority goal for MinML.
 Further,
-the syntax of {ndash} and processing rules for {ndash}
+the syntax of [ndash] and processing rules for [ndash]
 document type definitions is frighteningly complex,
-even in the {ldquo}simplified{rdquo} XML.</p>
+even in the &ldquo;[simplified] XML.</p>
 <p>MiniML therefore leaves the legacy syntax of the underlying markup language
 unmodified within the context of these directives.
 For example, a MiniML document based on XML
@@ -392,7 +404,7 @@ greeting[Hello, world!]
 ]</p>
 <p>-[ XXX prototype implementation, Hugo ]</p>
 <p>h2[Conclusion]</p>
-<p>MinML is a new {ldquo}outer{rdquo} syntax
+<p>MinML is a new &ldquo;[outer] syntax
 for SGML-derived markup languages such as HTML and XML
 that preserves all of the base language&rsquo;s power and expressiveness,
 but just makes markup a bit more concise
