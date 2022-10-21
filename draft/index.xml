@@ -251,7 +251,7 @@ new character entity syntax &amp;amp;o[]; &amp;amp;c{}; etc. </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/minml/</guid>
-      <description>Could you use a markup syntax that supports the full expressive power and richness of HTML or XML, but is more terse, easier to type, and less frankly ugly? To emphasize text, for example, would it be nice just to write em[emphasize] instead of &amp;lt;em&amp;gt;emphasize&amp;lt;/em&amp;gt;? If so, pleae read on. The tussle between generality and writer-friendliness Markup languages derived from SGML, like HTML and XML, have many uses but are verbose and often a pain to write or edit manually.</description>
+      <description>Could you use a markup syntax that supports the full expressive power and richness of HTML or XML, but is more terse, easier to type, and less frankly ugly? To emphasize text, for example, would it be nice just to write em[emphasize] instead of &amp;lt;em&amp;gt;emphasize&amp;lt;/em&amp;gt;? If so, pleae read on. The tussle between generality and writer-friendliness Markup languages derived from SGML, like HTML and XML, are powerful and have many uses but are verbose and often a pain to write or edit manually.</description>
     </item>
     
     <item>
