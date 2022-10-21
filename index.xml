@@ -2076,14 +2076,12 @@ new character entity syntax &amp;amp;o[]; &amp;amp;c{}; etc. </description>
     </item>
     
     <item>
-      <title>MinML: A Concise Matchertext XML Syntax</title>
+      <title>MinML: concise but general markup syntax</title>
       <link>https://bford.info/draft/minml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/draft/minml/</guid>
-      <description>Could you use a markup syntax that supports the full expressive power and richness of HTML or XML, but is more terse, easier to type, and less frankly ugly? would it be nice to write just code[+[em[phasis]]], for example, instead of code[+[phasis]], for example? If so, read on.
-h2[The quest for writer-friendly [ndash] but general [ndash] markup]
-Markup languages derived from SGML, like HTML and XML, have many uses but are verbose and often a pain to write or edit manually.</description>
+      <description>Could you use a markup syntax that supports the full expressive power and richness of HTML or XML, but is more terse, easier to type, and less frankly ugly? To emphasize text, for example, would it be nice just to write em[emphasize] instead of &amp;lt;em&amp;gt;emphasize&amp;lt;/em&amp;gt;? If so, pleae read on. The tussle between generality and writer-friendliness Markup languages derived from SGML, like HTML and XML, have many uses but are verbose and often a pain to write or edit manually.</description>
     </item>
     
     <item>
