@@ -6,7 +6,16 @@
     <description>Recent content in Democracy on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Democracy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Democracy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Auditing the Swiss Post E-voting System: An Architectural Perspective</title>
+      <link>https://bford.info/pub/sec/swisspost-evoting/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/swisspost-evoting/</guid>
+      <description>Bryan Ford Swiss Federal Chancellery – Independent examination of Swiss Post system 2021 Scopes 1, 2 and 3 Final Report – April 4, 2022 Abstract: Switzerland is one of the few countries globally that has a national program for electronic voting (E-voting), which has been evolving in several stages for well over a decade. For the past several years, the program’s most recent stage has focused on introducing strong cryptographic verifiability into the system, together with security features such as trust splitting and a software implementation open to public inspection.</description>
+    </item>
+    
     <item>
       <title>TRIP: Trustless Coercion-Resistant In-Person Voter Registration</title>
       <link>https://bford.info/pub/sec/trip/</link>

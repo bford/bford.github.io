@@ -91,9 +91,36 @@
     <item>
       <title>Democracy</title>
       <link>https://bford.info/topics/Democracy/</link>
-      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Democracy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Law</title>
+      <link>https://bford.info/topics/Law/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Law/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Operating Systems</title>
+      <link>https://bford.info/topics/Operating-Systems/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Operating-Systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Verifiable Shuffles</title>
+      <link>https://bford.info/topics/Verifiable-Shuffles/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Verifiable-Shuffles/</guid>
       <description></description>
     </item>
     
@@ -188,15 +215,6 @@
     </item>
     
     <item>
-      <title>Law</title>
-      <link>https://bford.info/topics/Law/</link>
-      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Law/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Surveillance</title>
       <link>https://bford.info/topics/Surveillance/</link>
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
@@ -265,24 +283,6 @@
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Modularity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Operating Systems</title>
-      <link>https://bford.info/topics/Operating-Systems/</link>
-      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Operating-Systems/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Verifiable Shuffles</title>
-      <link>https://bford.info/topics/Verifiable-Shuffles/</link>
-      <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Verifiable-Shuffles/</guid>
       <description></description>
     </item>
     

@@ -67,11 +67,23 @@
     <loc>https://bford.info/topics/Security/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/pub/sec/moby/</loc>
-    <lastmod>2022-03-16T00:00:00+00:00</lastmod>
+    <loc>https://bford.info/pub/sec/swisspost-evoting/</loc>
+    <lastmod>2022-04-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Democracy/</loc>
-    <lastmod>2022-02-14T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Law/</loc>
+    <lastmod>2022-04-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Operating-Systems/</loc>
+    <lastmod>2022-04-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Verifiable-Shuffles/</loc>
+    <lastmod>2022-04-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/pub/sec/moby/</loc>
+    <lastmod>2022-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Identity/</loc>
     <lastmod>2022-02-14T00:00:00+00:00</lastmod>
@@ -130,9 +142,6 @@
     <loc>https://bford.info/post/</loc>
     <lastmod>2020-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/Law/</loc>
-    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/topics/Surveillance/</loc>
     <lastmod>2020-11-18T00:00:00+00:00</lastmod>
   </url><url>
@@ -187,9 +196,6 @@
     <loc>https://bford.info/topics/Modularity/</loc>
     <lastmod>2019-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/Operating-Systems/</loc>
-    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/pub/os/protean-abs/</loc>
     <lastmod>2019-05-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -215,9 +221,6 @@
     <lastmod>2018-09-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/pub/dec/medco-abs/</loc>
-    <lastmod>2018-07-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Verifiable-Shuffles/</loc>
     <lastmod>2018-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/2018/06/27/muslim-ban/</loc>

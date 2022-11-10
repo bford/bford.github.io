@@ -92,6 +92,10 @@ without getting into a mess of syntax conflicts and ambiguities.
 It is not easy to standardize, or even to specify rigorously –
 not to say that this
 <a href="https://commonmark.org">hasn't been tried</a>.
+To see just how fragile Markdown syntax is,
+try to understand – or correctly implement –
+<a href="https://spec.commonmark.org/0.30/#emphasis-and-strong-emphasis">the 17 rules for parsing emphasis
+	and the 131 associated examples</a> in Commonmark.
 
 <p></p>
 There are numerous extensions and alternative variants of Markdown-style syntax
@@ -353,6 +357,10 @@ you can separate them with whitespace and a space-sucker:
 	<tr>
 		<td><code>b &lt;[1 &lt;[hellip]&gt; 10]</code></td>
 		<td>b[1…10]</td>
+	</tr>
+	<tr>
+		<td><code>set &lt;{a,b,c}</code></td>
+		<td>set{a,b,c}</td>
 	</tr>
 </table>
 
