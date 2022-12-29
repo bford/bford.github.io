@@ -6,7 +6,16 @@
     <description>Recent content in Parsing on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jan 2004 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Parsing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Parsing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Matchertext: Towards Verbatim Interlanguage Embedding</title>
+      <link>https://bford.info/pub/lang/matchertext/</link>
+      <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/matchertext/</guid>
+      <description>Bryan Ford Abstract: Embedding text in one language within text of another is commonplace for numerous purposes, but usually requires tedious and error-prone “escaping” transformations on the embedded string. We propose a simple cross-language syntactic discipline, matchertext, which enables the safe embedding a string in any compliant language into a string in any other language via simple “copy-and-paste” – in particular with no escaping, obfuscation, or expansion of embedded strings.</description>
+    </item>
+    
     <item>
       <title>Parsing Expression Grammars: A Recognition-Based Syntactic Foundation</title>
       <link>https://bford.info/pub/lang/peg/</link>

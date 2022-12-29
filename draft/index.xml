@@ -6,16 +6,7 @@
     <description>Recent content on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/draft/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Matchertext: Towards Verbatim Interlanguage Embedding</title>
-      <link>https://bford.info/pub/lang/matchertext/</link>
-      <pubDate>Fri, 07 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/pub/lang/matchertext/</guid>
-      <description>Bryan Ford Abstract: Embedding text in one language within text of another is commonplace for numerous purposes, but usually requires tedious and error-prone “escaping” transformations on the embedded string. We propose a simple cross-language syntactic discipline, matchertext, which enables the safe embedding a string in any compliant language into a string in any other language via simple “copy-and-paste” – in particular with no escaping, obfuscation, or expansion of embedded strings.</description>
-    </item>
-    
+    <lastBuildDate>Wed, 06 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/draft/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Are Biometrics a Good Test for Real Unique Personhood?</title>
       <link>https://bford.info/draft/biometric-id/</link>
@@ -243,15 +234,6 @@ Efficient memory allocation with fragmentation control Use next mag to bucket al
 Hosting:
 matchertext content tags: &amp;lt;name attrs [matchertext]&amp;gt; matchertext attributes: attrname=[matchertext] matchertext sections: &amp;lt;![MDATA[matchertext]]&amp;gt; Embedding:
 new character entity syntax &amp;amp;o[]; &amp;amp;c{}; etc. </description>
-    </item>
-    
-    <item>
-      <title>MinML: concise but general markup syntax</title>
-      <link>https://bford.info/draft/minml/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/draft/minml/</guid>
-      <description>Could you use a markup syntax that supports the full expressive power and richness of HTML or XML, but is more terse, easier to type, and less frankly ugly? To emphasize text, for example, would it be nice just to write em[emphasize] instead of &amp;lt;em&amp;gt;emphasize&amp;lt;/em&amp;gt;? If so, pleae read on. The tussle between generality and writer-friendliness Markup languages derived from SGML, like HTML and XML, are powerful and have many uses but are verbose and often a pain to write or edit manually.</description>
     </item>
     
     <item>
