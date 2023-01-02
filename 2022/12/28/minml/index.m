@@ -559,6 +559,8 @@ a{href=https://gohugo.io}[Hugo] website builder,
 you can use MinML source files
 with extension code[.minml] or code[.m] in your website.
 This blog post was written in MinML and published using Hugo this way.
+Feel free to check out
+a{href=index.m}[the MinML source for this post].
 
 p[]
 If you implement MinML in other languages or applications,
@@ -592,14 +594,7 @@ to be replaced with character references,
 
 -[	Old notes:
 
-Global character rules:
-For strict compliance with the standard matchertext configuration,
-ALL UCS characters are allowed, unlike XML,
-though use of non-whitespace control codes (especially NUL)
-are strongly discouraged in working text.
-
-
-SystemLiteral: a slight problem inp rinciple, because in XML disallows
+SystemLiteral: a slight problem in principle, because in XML disallows
 either single or double quotes and doesn't support markup.
 But SystemLiteral is to be used to contain a URI,
 which has much more restrictive syntax.
@@ -616,12 +611,6 @@ When converting to XML, '--' gets escaped with character reference..
 If comment text ends in '-', XML writer appends a space
 to avoid producing an illegal '--->' terminator.
 
-
-entity:
-tag[content]
-tag{attrs}[content]
-
-
 Processing instructions:
 ?[...]
 Same PITarget syntax.
@@ -632,7 +621,6 @@ Converting to MaML must escape unmatched matchers.
 Or perhaps just cause a conversion error,
 given that the embedded PITarget syntax is effectively unknown
 but its constraints are the constraints of the host syntax.
-
 
 Just disable DTDs entirely?
 Protect against XXE attacks https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html
@@ -646,8 +634,6 @@ Thus, recursive entity expansion works, in XML syntax.
 MinXML files are thus processed as if first converted to legacy XML
 (without doing any entity expansion at all),
 then processed as legacy XML source.
-
-XML is not just a markup language but a way-too-powerful macro language...
 
 Some XML dataset sources for testing:
 https://catalog.data.gov/dataset/?res_format=XML
