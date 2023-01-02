@@ -6,14 +6,32 @@
     <description>Recent content in Programming Languages on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Programming-Languages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Programming-Languages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Matchertext: an escape route from language-embedding hell?</title>
+      <link>https://bford.info/2023/01/02/matchertext/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2023/01/02/matchertext/</guid>
+      <description>We often need to embed strings written in one programming language into code written in another. For example, we routinely embed regular expressions and SQL queries within shell scripts or string literals in C-like languages. HTML pages routinely contain embedded JavaScript and CSS code fragments. We often need to embed one URI into another, such as to formulate a query to a Web service that validates, archives, translates, or otherwise refers to other websites.</description>
+    </item>
+    
     <item>
       <title>Matchertext: Towards Verbatim Interlanguage Embedding</title>
       <link>https://bford.info/pub/lang/matchertext/</link>
-      <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/lang/matchertext/</guid>
       <description>Bryan Ford Abstract: Embedding text in one language within text of another is commonplace for numerous purposes, but usually requires tedious and error-prone “escaping” transformations on the embedded string. We propose a simple cross-language syntactic discipline, matchertext, which enables the safe embedding a string in any compliant language into a string in any other language via simple “copy-and-paste” – in particular with no escaping, obfuscation, or expansion of embedded strings.</description>
+    </item>
+    
+    <item>
+      <title>MinML: concise but general markup syntax</title>
+      <link>https://bford.info/2022/12/28/minml/</link>
+      <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/2022/12/28/minml/</guid>
+      <description>Could you use a markup syntax that supports the full expressive power and richness of HTML or XML, but is more terse, easier to type, and less frankly ugly? To emphasize text, for example, would it be nice just to write em[emphasize] instead of &amp;lt;em&amp;gt;emphasize&amp;lt;/em&amp;gt;? If so, pleae read on. The tussle between generality and writer-friendliness Markup languages derived from SGML, like HTML and XML, are powerful and have many uses but are verbose and often a pain to write or edit manually.</description>
     </item>
     
     <item>

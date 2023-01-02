@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Matchertext: an escape route from language-embedding hell? &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table style="background:white;padding:1px;border-spacing:5px">
+<tr><td style="text-align:center">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+
+  <div style="display: flex">
+    <div style="flex: 2 5 20px">
+    </div>
+
+    <div style="flex: 1 1 500px">
+
+      <h2 align="right"><i>January 2, 2023</i></h2>
+
+      <h1>Matchertext: an escape route from language-embedding hell?</h1>
+
+      
+<style>
+table	{ width:75%;padding:10pt;margin-left:auto;margin-right:auto }
+tr	{ text-align:left }
+</style>
+
+We often need to embed strings written in one programming language
+into code written in another.
+For example,
+we routinely embed
+<a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a>
+and
+<a href="https://en.wikipedia.org/wiki/SQL">SQL queries</a>
+within shell scripts
+or string literals in C-like languages.
+<a href="https://html.spec.whatwg.org/multipage/">HTML</a> pages
+routinely contain embedded
+<a href="https://www.w3schools.com/js/">JavaScript</a>
+and
+<a href="https://www.w3.org/Style/CSS/">CSS</a>
+code fragments.
+We often need to embed one
+<a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI</a>
+into another,
+such as to formulate a query to a Web service
+that
+<a href="https://validator.w3.org">validates</a>,
+<a href="https://archive.org/web/">archives</a>,
+<a href="https://translate.google.com/?op=websites">translates</a>,
+or otherwise refers to other websites.
+
+<p></p>
+Whenever we embed strings, however,
+we traditionally encounter numerous flavors
+of a general problem I call <em>language-embedding hell</em>.
+The host language must have a way to find the end of the embedded string,
+which implies constraining the embedded string's syntax.
+Quoted string literals in C-like languages, for example,
+require any quote or backslash characters within the embedded string to be
+<a href="https://en.wikipedia.org/wiki/Escape_character">backslash-escaped</a>.
+Escaping increases the length of the embedded string,
+is annoying and error-prone when we must do it manually,
+and yields critical security flaws
+like
+<a href="https://en.wikipedia.org/wiki/SQL_injection">SQL injection</a>
+and
+<a href="https://en.wikipedia.org/wiki/Cross-site_scripting">cross-site scripting</a>
+when automated incorrectly.
+
+<h2>The ideal of verbatim cross-language embedding</h2>
+
+Imagine for the moment an ideal world in which all programming languages were
+embeddable <em>verbatim</em> within each other.
+In this fictional world,
+<em>any</em> valid string in <em>any</em> programming language
+could be embedded within the same or any other language,
+without any escaping, obfuscation, or length expansion.
+To embed a string, you ideally would just “copy-and-paste” it
+into any suitable context,
+such as a quoted string in the host language.
+Wouldn't that be nice?
+
+<p></p>
+Our tradition of expressing programming languages as 
+<a href="https://en.wikipedia.org/wiki/Plain_text">plain text</a> strings —
+arbitrary “flat” sequences of 
+<a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> or
+<a href="https://en.wikipedia.org/wiki/Universal_Coded_Character_Set">UCS</a>
+characters —
+unfortunately renders this ideal of verbatim embedding
+impossible in its pure form.
+To find the end of an embedded plain text string unambiguously,
+a host language must either escape or outright forbid
+certain character sequences (e.g., the designated closing quote or end tag),
+or else must prefix each embedded string with its precise length.
+The latter practice works fine in machine-to-machine protocols,
+but would be unbearably tedious and error-prone in a language
+intended for humans to write.
+
+<!--
+HTML's code[<script>] element syntax, for example,
+permissively allows any text within the script element [mdash]
+em[except for] the end-tag sequence code[</script],
+which cannot be escaped but must simply be avoided in any embedded script.
+-->
+
+<h2>Matchertext: a pragmatic path out of embedding hell</h2>
+
+What if we could design and gradually deploy
+a not-too-painful “upgrade” to our traditional plain text foundation
+for programming languages,
+which would eventually allow us to achieve a reasonable approximation
+to the above ideal of verbatim, “copy-and-paste” embedding?
+This goal is the essence of <em>matchertext</em>,
+an idea detailed in
+<a href="/pub/lang/matchertext/">a new preprint</a>.
+
+<p></p>
+The pragmatic essence of the matchertext idea is simple.
+First, we define six particular ASCII characters as <em>matchers</em>:
+namely the open and close parentheses <code>()</code>,
+the square brackets <code>[]</code>,
+and the curly braces <code>{}</code>.
+We call these characters matchers
+because their traditional, already-ubiquitous purpose
+is to be used in matching pairs to surround and delimit other text.
+
+<p></p>
+Now we define <em>matchertext</em> as any plain text string
+conforming to one additional rule or “syntactic discipline”:
+namely that <em>matchers must match</em>,
+throughout any matchertext string, without exception.
+Nesting is allowed, but must use corresponding matchers.
+For example, the string ‘<code>([{foo}])</code>’ is valid matchertext,
+but strings like ‘<code>(foo</code>’, ‘<code>bar}</code>’,
+or ‘<code>(]</code>’ are not matchertext.
+
+<p></p>
+Most of today's programming languages are already “matchertext-compatible”,
+in the sense that many (perhaps most) of the strings we already tend to write,
+and might want to embed,
+will already happen to conform to this syntactic discipline.
+Strings in today's languages that aren't matchertext —
+i.e., strings containing unmatched matchers —
+can usually be rewritten with a bit of effort
+to conform to this discipline.
+
+<p></p>
+Why should we bother?
+Because by following a few simple language-neutral rules,
+any “matchertext-aware” language can host embedded strings
+written in <em>any other</em> matchertext-compatible syntax,
+without escaping, expansion, or other obfuscation of embedded strings.
+Embedded matchertext strings can nest to any depth,
+and there are no disallowed character sequences or other constraints,
+<em>other than</em> the basic rule that matchers must match.
+As long as you know (or your tooling can check) that a string is matchertext,
+you can just “copy-and-paste” it into any matchertext embedding context,
+with no escaping or other fuss, as in the ideal world above.
+
+<p></p>
+While the matchertext idea was motivated by the embedding problem,
+I have already noticed at least one side benefit —
+or “icing on the cake” —
+to adopting this discipline.
+When writing matchertext,
+I find it convenient that highlighting text editors like 
+<a href="https://www.vim.org">Vim</a> no longer <em>ever</em> guess wrong
+about which open matcher is associated with which close matcher,
+even when the editor has no specific knowledge of the language in question.
+Matchertext is merely about <em>strictly</em> enforce an existing discipline
+that we already <em>mostly</em> follow anyway,
+and rigorously enforcing a useful programming discipline
+often has unanticipated benefits of this kind.
+
+
+<h2>Incremental language extensions for matchertext</h2>
+
+Of course, matchertext will never be useful
+unless at least some language designers and developers
+are willing to “take the plunge” and try implementing and using it.
+The
+<a href="/pub/lang/matchertext/">matchertext preprint</a>
+explores what this could mean in the context of various popular languages,
+including C-like languages, 
+SGML-derived languages such as HTML and XML,
+and embedding-oriented “little languages”
+like regular expressions and URIs.
+
+<p></p>
+In general, today's languages can be evolved gracefully and incrementally
+to become more “matchertext-aware”,
+via two main classes of language extensions:
+<em>hosting extensions</em> and <em>embedding extensions</em>.
+Both classes of extensions can readily be designed and deployed
+so as to preserve backward compatibility with existing code.
+
+<ul>
+<li><p>
+<b>Hosting extensions</b> make matchertext useful
+by allowing the verbatim embedding of any matchertext string
+in a suitable host-language construct such as a string literal.
+In C-like languages, for example,
+I suggest new backslash-escape sequences like <code>\m[<var>matchertext</var>]</code>,
+where <var>matchertext</var> is an arbitrary matchertext string.
+SGML-derived markup languages might be enhanced
+with backward-compatible syntax extensions such as
+<code>&lt;<var>name</var> <var>attributes</var> [<var>matchertext</var>]&gt;</code>
+for a tag containing arbitrary <var>matchertext</var> content.
+
+</p></li>
+
+<li><p>
+<b>Embedding extensions</b> reduce the (hopefully already-modest) pain
+of writing matchertext-compliant code,
+particularly by providing new alternative ways to escape unmatched matchers.
+A statement like <code>printf("[")</code> is invalid matchertext,
+for example,
+and simple backslash-escaping as in <code>printf("\[")</code> does not work
+because the matchertext discipline
+is oblivious to language-specific escaping rules.
+Numeric escaping like <code>printf("\x5B")</code> solves the problem
+and already works fine,
+but is a bit cumbersome.
+Thus, I suggest potential new backward-compatble escapes
+that are more visual while being matchertext-compliant:
+e.g., <code>\o[]</code> and <code>\c[]</code> for unmatched open and close brackets
+in C-like languages,
+or <code>[&lt;]</code> and <code>[&gt;]</code> for unmatched brackets
+in regular expressions or SGML-style markup languages.
+</p></li>
+</ul>
+
+<h2>Practical experimentation with matchertext</h2>
+
+<p></p>
+As of this writing,
+most of the work of implementing and experimenting with the matchertext idea
+remains to be done.
+To succeed it will need plenty of time (years at least, if not decades),
+and will eventually require effort from interested people across
+many programming languages.
+The current preprint is intended to be only a modest initial starting point,
+to be updated occasionally if and when interest materializes
+and we gain further experience worth reflecting in the paper.
+
+<p></p>
+As a concrete initial experiment,
+I have made the matchertext idea central to the design of
+<a href="/2022/12/28/minml/">MinML</a>,
+a more concise alternative to HTML or XML syntax.
+MinML attempts to bring HTML-style syntax
+closer to the convenience of Markdown and its many variants,
+while preserving the full power and generality of HTML or XML.
+MinML embodies the matchertext discipline
+and uses it to handle nested “example code” constructs
+more cleanly and sanely than in existing markup languages.
+Since MinML is only a single matchertext-aware language,
+however,
+it can by no means unlock the full potential of the matchertext idea alone.
+
+<p></p>
+I hope that others — maybe you —
+will try proposing, implementing, and using the matchertext idea
+in new or existing programming languages of your choice.
+If you do,
+then well-considered pull requests to the
+<a href="https://github.com/dedis/matchertext">matchertext paper source</a>
+are welcome,
+and significant contributions to future versions of the paper
+will be acknowledged appropriately.
+Thanks for reading!
+
+
+    </div>
+
+    <div style="flex: 2 5 20px">
+    </div>
+  </div>
+
+
+
+    
+      <br clear=all>
+<hr>
+<table style="width:100%;padding:10pt"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Syntax/">Syntax</a>
+	
+		<a href="/topics/Parsing/">Parsing</a>
+	
+		<a href="/topics/Programming-Languages/">Programming Languages</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>
