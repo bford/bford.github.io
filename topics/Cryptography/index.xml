@@ -27,6 +27,15 @@ Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice o
     </item>
     
     <item>
+      <title>3PBCS: A Privacy-Preserving, Personhood-Based Credential System</title>
+      <link>https://bford.info/thesis/2022-apostoli/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2022-apostoli/</guid>
+      <description>Ksandros Apostoli M.S. thesis advised by Simone Colombo and Bryan Ford March 22, 2022 Abstract Recent anonymous credential schemes present major advances in the way digital identities are treated, empowering users with fine-grained control over their personal data. While limiting the amount of user-data that is accessible to third parties paves the way to stronger privacy guarantees, it also leads to new challenges in preserving accountability and Sybil-Resistance. In this work, we present 3PBCS, a novel credential system, which integrates existing anonymous credential schemes with the notion of Proof-of-Personhood to achieve privacy, accountability and Sybil-Protection.</description>
+    </item>
+    
+    <item>
       <title>TRIP: Trustless Coercion-Resistant In-Person Voter Registration</title>
       <link>https://bford.info/pub/sec/trip/</link>
       <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
