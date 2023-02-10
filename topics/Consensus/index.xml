@@ -6,7 +6,17 @@
     <description>Recent content in Consensus on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Consensus/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Consensus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Strongly-Consistent Systems Resilient to Failures, Partitions, and Slowdowns</title>
+      <link>https://bford.info/thesis/2022-basescu/</link>
+      <pubDate>Wed, 30 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2022-basescu/</guid>
+      <description>Cristina Băsescu Ph.D. thesis advised by Bryan Ford
+November 30, 2022 Abstract: Distributed systems designers typically strive to improve performance and preserve availability despite failures or attacks; but, when strong consistency is also needed, they encounter fundamental limitations. The bottleneck is in replica coordination, which is impacted by partitions and slowdowns that can occur anywhere. We believe the present ecosystem fails to recognize that not all failures and partitions are supposed to be equal — at least from a user-centric performance and availability standpoint.</description>
+    </item>
+    
     <item>
       <title>Flash Freezing Flash Boys: Countering Blockchain Front-Running</title>
       <link>https://bford.info/pub/sec/f3b/</link>
