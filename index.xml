@@ -6,7 +6,7 @@
     <description>Recent content on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction: Promise, Failures, and Future of Self-Organizing Technologies</title>
       <link>https://bford.info/selforg/intro/</link>
@@ -71,6 +71,25 @@
     </item>
     
     <item>
+      <title>Authenticated Private Information Retrieval</title>
+      <link>https://bford.info/pub/sec/apir/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/apir/</guid>
+      <description>Bryan Ford 32nd USENIX Security Symposium August 10, 2023 Abstract: This paper introduces protocols for authenticated private information retrieval. These schemes enable a client to fetch a record from a remote database server such that (a) the server does not learn which record the client reads, and (b) the client either obtains the “authentic” record or detects server misbehavior and safely aborts. Both properties are crucial for many applications. Standard private-information-retrieval schemes either do not ensure this form of output authenticity, or they require multiple database replicas with an honest majority.</description>
+    </item>
+    
+    <item>
+      <title>Building Strongly-Consistent Systems Resilient to Failures, Partitions, and Slowdowns</title>
+      <link>https://bford.info/thesis/2023-basescu/</link>
+      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2023-basescu/</guid>
+      <description>Cristina Băsescu Ph.D. thesis advised by Bryan Ford
+May 26, 2023 Abstract: Distributed systems designers typically strive to improve performance and preserve availability despite failures or attacks; but, when strong consistency is also needed, they encounter fundamental limitations. The bottleneck is in replica coordination, which is impacted by partitions and slowdowns that can occur anywhere. We believe the present ecosystem fails to recognize that not all failures and partitions are supposed to be equal — at least from a user-centric performance and availability standpoint.</description>
+    </item>
+    
+    <item>
       <title>Matchertext: an escape route from language-embedding hell?</title>
       <link>https://bford.info/2023/01/02/matchertext/</link>
       <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
@@ -95,16 +114,6 @@
       
       <guid>https://bford.info/2022/12/28/minml/</guid>
       <description>Could you use a markup syntax that supports the full expressive power and richness of HTML or XML, but is more terse, easier to type, and less frankly ugly? To emphasize text, for example, would it be nice just to write em[emphasize] instead of &amp;lt;em&amp;gt;emphasize&amp;lt;/em&amp;gt;? If so, pleae read on. The tussle between generality and writer-friendliness Markup languages derived from SGML, like HTML and XML, are powerful and have many uses but are verbose and often a pain to write or edit manually.</description>
-    </item>
-    
-    <item>
-      <title>Building Strongly-Consistent Systems Resilient to Failures, Partitions, and Slowdowns</title>
-      <link>https://bford.info/thesis/2022-basescu/</link>
-      <pubDate>Wed, 30 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/thesis/2022-basescu/</guid>
-      <description>Cristina Băsescu Ph.D. thesis advised by Bryan Ford
-November 30, 2022 Abstract: Distributed systems designers typically strive to improve performance and preserve availability despite failures or attacks; but, when strong consistency is also needed, they encounter fundamental limitations. The bottleneck is in replica coordination, which is impacted by partitions and slowdowns that can occur anywhere. We believe the present ecosystem fails to recognize that not all failures and partitions are supposed to be equal — at least from a user-centric performance and availability standpoint.</description>
     </item>
     
     <item>

@@ -65,10 +65,10 @@ underlying asynchronous network. This combination is arguably simpler than
 partially-synchronous consensus approaches like (Multi-)Paxos or Raft with
 leader election, and is more robust to slow leaders or targeted network
 denial-of-service attacks. The simplest formulations of QSC atop TLC incur
-expected O(n2) messages and O(n4) bits per agreement, or O(n3) bits with
+expected O(n<sup>2</sup>) messages and O(n<sup>4</sup>) bits per agreement, or O(n<sup>3</sup>) bits with
 straightforward optimizations. An on-demand implementation, in which clients
 act as "natural leaders" to execute the protocol atop stateful servers that
-merely implement passive key-value stores, can achieve O(n2) expected
+merely implement passive key-value stores, can achieve O(n<sup>2</sup>) expected
 communication bits per client-driven agreement.
 
 <h3>Preprint:

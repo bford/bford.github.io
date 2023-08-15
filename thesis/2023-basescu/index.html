@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Building Strongly-Consistent Systems Resilient to Failures, Partitions, and Slowdowns &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table style="background:white;padding:1px;border-spacing:5px">
+<tr><td style="text-align:center">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Building Strongly-Consistent Systems Resilient to Failures, Partitions, and Slowdowns</h1>
+  
+<center>
+<strong>
+Cristina Băsescu
+</strong>
+<br>
+Ph.D. thesis advised by Bryan Ford<br>
+
+May 26, 2023
+</p>
+</center>
+
+<H3>Abstract:</H3>
+
+<p>
+Distributed systems designers typically strive to improve performance and
+preserve availability despite failures or attacks; but, when strong consistency
+is also needed, they encounter fundamental limitations. The bottleneck is in
+replica coordination, which is impacted by partitions and slowdowns that can
+occur anywhere. We believe the present ecosystem fails to recognize that not
+all failures and partitions are supposed to be equal — at least from a
+user-centric performance and availability standpoint. Failures distant from a
+user should intuitively be less likely to affect that user. Today’s ecosystem
+fails this test, however, despite high-availability best practices. For
+example, correlated and cascading failures, caused by misconfiguration, bugs,
+and network partitions, often invalidate the cloud’s assumptions of failure
+independence. Likewise, large-scale or accurately targeted routing or denial of
+service attacks can slow or halt a distributed ledger or compromise its
+security. 
+
+<p>
+We believe that distributed systems designers and practitioners can and should
+build reliable, responsive systems by making Lamport exposure and asynchrony
+central design considerations. We propose that distributed services need not
+and should not expose local activities to distant failures or partitions, no
+matter how severe. Limix is the first exposure-limiting metadata configuration
+service that addresses this problem. Limix insulates global strongly-consistent
+data-plane services and objects from remote failures and partitions by ensuring
+that the definitive, strongly-consistent metadata for every object is always
+confined to the same zone as the object itself. Nyle is a trust-but-verify
+distributed ledger architecture that limits transaction exposure. While
+employing similar design principles as Limix, Nyle additionally supports an
+environment with Byzantine nodes and potentially compromised regions with an
+elevated presence of attackers, and enables asymmetric user trust preferences.
+Both Limix and Nyle outperform related work in terms of availability, at a
+manageable overhead. We also demonstrate, through the design of QSC, that
+consensus protocols can deal with network asynchrony without relying on common
+coins, having the potential to make consensus more responsive and more
+practical.
+
+<h3>Ph.D. Thesis:
+<a href="basescu-thesis.pdf">PDF</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table style="width:100%;padding:10pt"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Blockchain/">Blockchain</a>
+	
+		<a href="/topics/Consensus/">Consensus</a>
+	
+		<a href="/topics/Reliability-and-Robustness/">Reliability and Robustness</a>
+	
+		<a href="/topics/Networks/">Networks</a>
+	
+		<a href="/topics/Storage/">Storage</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>
