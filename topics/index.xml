@@ -6,7 +6,43 @@
     <description>Recent content in Writings by Topic – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Consensus</title>
+      <link>https://bford.info/topics/Consensus/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Consensus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networks</title>
+      <link>https://bford.info/topics/Networks/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Operating Systems</title>
+      <link>https://bford.info/topics/Operating-Systems/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Operating-Systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reliability and Robustness</title>
+      <link>https://bford.info/topics/Reliability-and-Robustness/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Reliability-and-Robustness/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Anonymity</title>
       <link>https://bford.info/topics/Anonymity/</link>
@@ -71,33 +107,6 @@
     </item>
     
     <item>
-      <title>Consensus</title>
-      <link>https://bford.info/topics/Consensus/</link>
-      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Consensus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Networks</title>
-      <link>https://bford.info/topics/Networks/</link>
-      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Networks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reliability and Robustness</title>
-      <link>https://bford.info/topics/Reliability-and-Robustness/</link>
-      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Reliability-and-Robustness/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Storage</title>
       <link>https://bford.info/topics/Storage/</link>
       <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
@@ -157,15 +166,6 @@
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Law/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Operating Systems</title>
-      <link>https://bford.info/topics/Operating-Systems/</link>
-      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Operating-Systems/</guid>
       <description></description>
     </item>
     

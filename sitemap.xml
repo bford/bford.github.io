@@ -17,7 +17,28 @@
     <loc>https://bford.info/selforg/choice/</loc>
   </url><url>
     <loc>https://bford.info/</loc>
-    <lastmod>2023-08-10T00:00:00+00:00</lastmod>
+    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Consensus/</loc>
+    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Networks/</loc>
+    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Operating-Systems/</loc>
+    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/pub/</loc>
+    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/pub/os/quepaxa/</loc>
+    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Reliability-and-Robustness/</loc>
+    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/</loc>
+    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Anonymity/</loc>
     <lastmod>2023-08-10T00:00:00+00:00</lastmod>
@@ -31,9 +52,6 @@
     <loc>https://bford.info/topics/Identity/</loc>
     <lastmod>2023-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/pub/</loc>
-    <lastmod>2023-08-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/topics/Privacy/</loc>
     <lastmod>2023-08-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -43,22 +61,10 @@
     <loc>https://bford.info/topics/Transparency/</loc>
     <lastmod>2023-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/</loc>
-    <lastmod>2023-08-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/topics/Blockchain/</loc>
     <lastmod>2023-05-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/thesis/2023-basescu/</loc>
-    <lastmod>2023-05-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Consensus/</loc>
-    <lastmod>2023-05-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Networks/</loc>
-    <lastmod>2023-05-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Reliability-and-Robustness/</loc>
     <lastmod>2023-05-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Storage/</loc>
@@ -104,9 +110,6 @@
     <lastmod>2022-04-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Law/</loc>
-    <lastmod>2022-04-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Operating-Systems/</loc>
     <lastmod>2022-04-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Verifiable-Shuffles/</loc>

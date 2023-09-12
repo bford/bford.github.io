@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  QuePaxa: Escaping the Tyranny of Timeouts in Consensus &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table style="background:white;padding:1px;border-spacing:5px">
+<tr><td style="text-align:center">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>QuePaxa: Escaping the Tyranny of Timeouts in Consensus</h1>
+  
+<p align="center">
+<strong>Pasindu Tennage, Cristina Basescu, Eleftherios Kokoris-Kogias,
+	Ewa Syta, Philipp Jovanovic, Vero Estrada-Galiñanes, and Bryan Ford</strong><br/>
+<a href="https://sosp2023.mpi-sws.org">29th ACM Symposium on Operating Systems Principles</a><br/>
+	October 23-26, 2023
+</p>
+
+<h3>Abstract:</h3>
+Leader-based consensus algorithms are fast and efficient under normal
+conditions, but lack robustness to adverse conditions due to their reliance
+on timeouts for liveness. We present QuePaxa, the first protocol offering
+state-of-the-art normal-case efficiency without depending on timeouts. QuePaxa
+uses a novel randomized asynchronous consensus core to tolerate adverse
+conditions such as denial-of-service (DoS) attacks, while a one-round-trip fast
+path preserves the normal-case efficiency of Multi-Paxos or Raft. By allowing
+simultaneous proposers without destructive interference, and using short
+hedging delays instead of conservative timeouts to limit redundant effort,
+QuePaxa permits rapid recovery after leader failure without risking costly view
+changes due to false timeouts. By treating leader choice and hedging delay as
+a multi-armed-bandit optimization, QuePaxa achieves responsiveness to
+prevalent conditions, and can choose the best leader even if the current one
+has not failed. Experiments with a prototype confirm that QuePaxa achieves
+normal-case LAN and WAN performance of 600k and 250k cmd/sec in throughput,
+respectively, comparable to Multi-Paxos. Under conditions such as DoS
+attacks, misconfigurations, or slow leaders that severely impact existing
+protocols, we find that QuePaxa remains live with median latency under 380ms in
+WAN experiments.
+
+<h3>Paper:
+<a href="quepaxa.pdf">PDF</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table style="width:100%;padding:10pt"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Consensus/">Consensus</a>
+	
+		<a href="/topics/Reliability-and-Robustness/">Reliability and Robustness</a>
+	
+		<a href="/topics/Operating-Systems/">Operating Systems</a>
+	
+		<a href="/topics/Networks/">Networks</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

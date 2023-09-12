@@ -6,7 +6,7 @@
     <description>Recent content on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction: Promise, Failures, and Future of Self-Organizing Technologies</title>
       <link>https://bford.info/selforg/intro/</link>
@@ -68,6 +68,15 @@
       
       <guid>https://bford.info/selforg/choice/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>QuePaxa: Escaping the Tyranny of Timeouts in Consensus</title>
+      <link>https://bford.info/pub/os/quepaxa/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/os/quepaxa/</guid>
+      <description>Pasindu Tennage, Cristina Basescu, Eleftherios Kokoris-Kogias, Ewa Syta, Philipp Jovanovic, Vero Estrada-Galiñanes, and Bryan Ford 29th ACM Symposium on Operating Systems Principles October 23-26, 2023 Abstract: Leader-based consensus algorithms are fast and efficient under normal conditions, but lack robustness to adverse conditions due to their reliance on timeouts for liveness. We present QuePaxa, the first protocol offering state-of-the-art normal-case efficiency without depending on timeouts. QuePaxa uses a novel randomized asynchronous consensus core to tolerate adverse conditions such as denial-of-service (DoS) attacks, while a one-round-trip fast path preserves the normal-case efficiency of Multi-Paxos or Raft.</description>
     </item>
     
     <item>
