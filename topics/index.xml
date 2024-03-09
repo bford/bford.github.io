@@ -6,7 +6,79 @@
     <description>Recent content in Writings by Topic – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cryptography</title>
+      <link>https://bford.info/topics/Cryptography/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Cryptography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Democracy</title>
+      <link>https://bford.info/topics/Democracy/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Democracy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Identity</title>
+      <link>https://bford.info/topics/Identity/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Identity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy</title>
+      <link>https://bford.info/topics/Privacy/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Privacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://bford.info/topics/Security/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transparency</title>
+      <link>https://bford.info/topics/Transparency/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Transparency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Usability</title>
+      <link>https://bford.info/topics/Usability/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Usability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Voting</title>
+      <link>https://bford.info/topics/Voting/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Voting/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Blockchain</title>
       <link>https://bford.info/topics/Blockchain/</link>
@@ -22,24 +94,6 @@
       <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Economics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Privacy</title>
-      <link>https://bford.info/topics/Privacy/</link>
-      <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Privacy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://bford.info/topics/Security/</link>
-      <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Security/</guid>
       <description></description>
     </item>
     
@@ -89,33 +143,6 @@
     </item>
     
     <item>
-      <title>Cryptography</title>
-      <link>https://bford.info/topics/Cryptography/</link>
-      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Cryptography/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Identity</title>
-      <link>https://bford.info/topics/Identity/</link>
-      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Identity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Transparency</title>
-      <link>https://bford.info/topics/Transparency/</link>
-      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Transparency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Storage</title>
       <link>https://bford.info/topics/Storage/</link>
       <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
@@ -161,15 +188,6 @@
     </item>
     
     <item>
-      <title>Democracy</title>
-      <link>https://bford.info/topics/Democracy/</link>
-      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Democracy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Law</title>
       <link>https://bford.info/topics/Law/</link>
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
@@ -202,15 +220,6 @@
       <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Social-Networks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Voting</title>
-      <link>https://bford.info/topics/Voting/</link>
-      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Voting/</guid>
       <description></description>
     </item>
     

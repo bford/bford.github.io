@@ -6,7 +6,16 @@
     <description>Recent content in Cryptography on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Cryptography/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Cryptography/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>E-Vote Your Conscience: Perceptions of Coercion and Vote Buying, and the Usability of Fake Credentials in Online Voting</title>
+      <link>https://bford.info/pub/sec/trip-usability/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/trip-usability/</guid>
+      <description>Louis-Henri Merino, Alaleh Azhir, Haoqian Zhang, Simone Colombo, Bernhard Tellenbach, Vero Estrada-Galiñanes, Bryan Ford To appear in 45th IEEE Symposium on Security and Privacy May 20-23, 2024 Abstract: Online voting is attractive for convenience and accessibility, but is more susceptible to voter coercion and vote buying than in-person voting. One mitigation is to give voters fake voting credentials that they can yield to a coercer. Fake credentials appear identical to real ones, but cast votes that are silently omitted from the final tally.</description>
+    </item>
+    
     <item>
       <title>Authenticated Private Information Retrieval</title>
       <link>https://bford.info/pub/sec/apir/</link>
