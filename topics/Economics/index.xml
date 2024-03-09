@@ -6,7 +6,16 @@
     <description>Recent content in Economics on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Economics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Economics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ZeroAuction: Zero-Deposit Sealed-bid Auction via Delayed Execution</title>
+      <link>https://bford.info/pub/dec/zeroauction/</link>
+      <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/dec/zeroauction/</guid>
+      <description>Haoqian Zhang, Michelle Yeo, Vero Estrada-Galinanes, and Bryan Ford 8th Workshop on Trusted Smart Contracts (WTSC) March 8, 2024 Abstract: Auctions, a long-standing method of trading goods and services, are a promising use case for decentralized finance. However, due to the inherent transparency property of blockchains, current sealed-bid auction implementations on smart contracts requires a bidder to send at least two transactions to the underlying blockchain: a bidder must first commit their bid in the first transaction during the bidding period and reveal their bid in the second transaction once the revealing period starts.</description>
+    </item>
+    
     <item>
       <title>Technologizing Democracy or Democratizing Technology? A Layered-Architecture Perspective on Potentials and Challenges</title>
       <link>https://bford.info/pub/soc/dt2-chapter-abs/</link>
