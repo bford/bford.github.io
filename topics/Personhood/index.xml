@@ -6,7 +6,61 @@
     <description>Recent content in Personhood on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Personhood/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Personhood/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coercion-Resistant E-voting and Proof of Personhood</title>
+      <link>https://bford.info/talk/2025-01-06-coercion-resistance/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2025-01-06-coercion-resistance/</guid>
+      <description> Keynote at IC3 Winter Retreat 2025 January 6, 2025 – Engelberg, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Towards Real Democratic DAOs</title>
+      <link>https://bford.info/talk/2024-11-28-democratic-dao/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2024-11-28-democratic-dao/</guid>
+      <description> Invited talk at DAO Symposium 2024 November 28, 2024 – Zürich, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Can decentralized systems be truly “democratizing” – and how?</title>
+      <link>https://bford.info/talk/2024-04-05-democratizing/</link>
+      <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2024-04-05-democratizing/</guid>
+      <description> Keynote at ChainScience 2024 April 5, 2024 – Zürich, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>What Distributed Infrastructure Could Save the Planet?</title>
+      <link>https://bford.info/talk/2023-12-12-dicg/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2023-12-12-dicg/</guid>
+      <description> Keynote at 4th International Workshop on Distributed Infrastructure for Common Good (DICG) December 12, 2023 – Bologna, Italy Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Privacy-Preserving Personhood-Based Credentials</title>
+      <link>https://bford.info/talk/2023-01-16-personhood-credentials/</link>
+      <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2023-01-16-personhood-credentials/</guid>
+      <description> Talk at IC3 Winter Retreat 2023 January 16, 2023 – Les Diablerets, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Who – Or What – Will Our Distributed Metaverse Serve?</title>
+      <link>https://bford.info/talk/2022-07-06-metaverse/</link>
+      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2022-07-06-metaverse/</guid>
+      <description> Invited talk at INRIA prospective seminar on Distributed Systems and Middleware July 6, 2022 – Rungis, France Slides: PDF </description>
+    </item>
+    
     <item>
       <title>3PBCS: A Privacy-Preserving, Personhood-Based Credential System</title>
       <link>https://bford.info/thesis/2022-apostoli/</link>
@@ -14,6 +68,15 @@
       
       <guid>https://bford.info/thesis/2022-apostoli/</guid>
       <description>Ksandros Apostoli M.S. thesis advised by Simone Colombo and Bryan Ford March 22, 2022 Abstract Recent anonymous credential schemes present major advances in the way digital identities are treated, empowering users with fine-grained control over their personal data. While limiting the amount of user-data that is accessible to third parties paves the way to stronger privacy guarantees, it also leads to new challenges in preserving accountability and Sybil-Resistance. In this work, we present 3PBCS, a novel credential system, which integrates existing anonymous credential schemes with the notion of Proof-of-Personhood to achieve privacy, accountability and Sybil-Protection.</description>
+    </item>
+    
+    <item>
+      <title>Digital Personhood: Towards Technology that Securely Serves People</title>
+      <link>https://bford.info/talk/2022-02-17-personhood/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2022-02-17-personhood/</guid>
+      <description> Invited talk at SI Summit 2022 February 17, 2022 – Virtual Slides: PDF </description>
     </item>
     
     <item>

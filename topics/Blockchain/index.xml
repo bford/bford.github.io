@@ -6,7 +6,34 @@
     <description>Recent content in Blockchain on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coercion-Resistant E-voting and Proof of Personhood</title>
+      <link>https://bford.info/talk/2025-01-06-coercion-resistance/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2025-01-06-coercion-resistance/</guid>
+      <description> Keynote at IC3 Winter Retreat 2025 January 6, 2025 – Engelberg, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Towards Real Democratic DAOs</title>
+      <link>https://bford.info/talk/2024-11-28-democratic-dao/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2024-11-28-democratic-dao/</guid>
+      <description> Invited talk at DAO Symposium 2024 November 28, 2024 – Zürich, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Can decentralized systems be truly “democratizing” – and how?</title>
+      <link>https://bford.info/talk/2024-04-05-democratizing/</link>
+      <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2024-04-05-democratizing/</guid>
+      <description> Keynote at ChainScience 2024 April 5, 2024 – Zürich, Switzerland Slides: PDF </description>
+    </item>
+    
     <item>
       <title>ZeroAuction: Zero-Deposit Sealed-bid Auction via Delayed Execution</title>
       <link>https://bford.info/pub/dec/zeroauction/</link>
@@ -17,6 +44,15 @@
     </item>
     
     <item>
+      <title>What Distributed Infrastructure Could Save the Planet?</title>
+      <link>https://bford.info/talk/2023-12-12-dicg/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2023-12-12-dicg/</guid>
+      <description> Keynote at 4th International Workshop on Distributed Infrastructure for Common Good (DICG) December 12, 2023 – Bologna, Italy Slides: PDF </description>
+    </item>
+    
+    <item>
       <title>Building Strongly-Consistent Systems Resilient to Failures, Partitions, and Slowdowns</title>
       <link>https://bford.info/thesis/2023-basescu/</link>
       <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
@@ -24,6 +60,15 @@
       <guid>https://bford.info/thesis/2023-basescu/</guid>
       <description>Cristina Băsescu Ph.D. thesis advised by Bryan Ford
 May 26, 2023 Abstract: Distributed systems designers typically strive to improve performance and preserve availability despite failures or attacks; but, when strong consistency is also needed, they encounter fundamental limitations. The bottleneck is in replica coordination, which is impacted by partitions and slowdowns that can occur anywhere. We believe the present ecosystem fails to recognize that not all failures and partitions are supposed to be equal — at least from a user-centric performance and availability standpoint.</description>
+    </item>
+    
+    <item>
+      <title>Privacy-Preserving Personhood-Based Credentials</title>
+      <link>https://bford.info/talk/2023-01-16-personhood-credentials/</link>
+      <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2023-01-16-personhood-credentials/</guid>
+      <description> Talk at IC3 Winter Retreat 2023 January 16, 2023 – Les Diablerets, Switzerland Slides: PDF </description>
     </item>
     
     <item>

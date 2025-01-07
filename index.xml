@@ -6,7 +6,7 @@
     <description>Recent content on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction: Promise, Failures, and Future of Self-Organizing Technologies</title>
       <link>https://bford.info/selforg/intro/</link>
@@ -71,6 +71,33 @@
     </item>
     
     <item>
+      <title>Coercion-Resistant E-voting and Proof of Personhood</title>
+      <link>https://bford.info/talk/2025-01-06-coercion-resistance/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2025-01-06-coercion-resistance/</guid>
+      <description> Keynote at IC3 Winter Retreat 2025 January 6, 2025 – Engelberg, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Towards Real Democratic DAOs</title>
+      <link>https://bford.info/talk/2024-11-28-democratic-dao/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2024-11-28-democratic-dao/</guid>
+      <description> Invited talk at DAO Symposium 2024 November 28, 2024 – Zürich, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Towards practical and efficient performance robustness: QuePaxa and beyond</title>
+      <link>https://bford.info/talk/2024-09-04-quepaxa/</link>
+      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2024-09-04-quepaxa/</guid>
+      <description> Talk at Seminar 24362 – Next-Generation Secure Distributed Computing September 4, 2024 – Schloss Dagstuhl, Germany Slides: PDF </description>
+    </item>
+    
+    <item>
       <title>E-Vote Your Conscience: Perceptions of Coercion and Vote Buying, and the Usability of Fake Credentials in Online Voting</title>
       <link>https://bford.info/pub/sec/trip-usability/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
@@ -80,12 +107,30 @@
     </item>
     
     <item>
+      <title>Can decentralized systems be truly “democratizing” – and how?</title>
+      <link>https://bford.info/talk/2024-04-05-democratizing/</link>
+      <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2024-04-05-democratizing/</guid>
+      <description> Keynote at ChainScience 2024 April 5, 2024 – Zürich, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
       <title>ZeroAuction: Zero-Deposit Sealed-bid Auction via Delayed Execution</title>
       <link>https://bford.info/pub/dec/zeroauction/</link>
       <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/dec/zeroauction/</guid>
       <description>Haoqian Zhang, Michelle Yeo, Vero Estrada-Galinanes, and Bryan Ford 8th Workshop on Trusted Smart Contracts (WTSC) March 8, 2024 Abstract: Auctions, a long-standing method of trading goods and services, are a promising use case for decentralized finance. However, due to the inherent transparency property of blockchains, current sealed-bid auction implementations on smart contracts requires a bidder to send at least two transactions to the underlying blockchain: a bidder must first commit their bid in the first transaction during the bidding period and reveal their bid in the second transaction once the revealing period starts.</description>
+    </item>
+    
+    <item>
+      <title>What Distributed Infrastructure Could Save the Planet?</title>
+      <link>https://bford.info/talk/2023-12-12-dicg/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2023-12-12-dicg/</guid>
+      <description> Keynote at 4th International Workshop on Distributed Infrastructure for Common Good (DICG) December 12, 2023 – Bologna, Italy Slides: PDF </description>
     </item>
     
     <item>
@@ -114,6 +159,15 @@
       <guid>https://bford.info/thesis/2023-basescu/</guid>
       <description>Cristina Băsescu Ph.D. thesis advised by Bryan Ford
 May 26, 2023 Abstract: Distributed systems designers typically strive to improve performance and preserve availability despite failures or attacks; but, when strong consistency is also needed, they encounter fundamental limitations. The bottleneck is in replica coordination, which is impacted by partitions and slowdowns that can occur anywhere. We believe the present ecosystem fails to recognize that not all failures and partitions are supposed to be equal — at least from a user-centric performance and availability standpoint.</description>
+    </item>
+    
+    <item>
+      <title>Privacy-Preserving Personhood-Based Credentials</title>
+      <link>https://bford.info/talk/2023-01-16-personhood-credentials/</link>
+      <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2023-01-16-personhood-credentials/</guid>
+      <description> Talk at IC3 Winter Retreat 2023 January 16, 2023 – Les Diablerets, Switzerland Slides: PDF </description>
     </item>
     
     <item>
@@ -164,6 +218,15 @@ Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice o
     </item>
     
     <item>
+      <title>Who – Or What – Will Our Distributed Metaverse Serve?</title>
+      <link>https://bford.info/talk/2022-07-06-metaverse/</link>
+      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2022-07-06-metaverse/</guid>
+      <description> Invited talk at INRIA prospective seminar on Distributed Systems and Middleware July 6, 2022 – Rungis, France Slides: PDF </description>
+    </item>
+    
+    <item>
       <title>Auditing the Swiss Post E-voting System: An Architectural Perspective</title>
       <link>https://bford.info/pub/sec/swisspost-evoting/</link>
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
@@ -189,6 +252,15 @@ Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice o
       <guid>https://bford.info/pub/sec/moby/</guid>
       <description>Amogh Pradeep, Hira Javaid, Ryan Williams, Antoine Rault, David Choffnes, Stevens Le Blond, and Bryan Ford Proceedings on Privacy Enhancing Technologies
 March 16, 2022 Abstract: Internet blackouts are challenging environments for anonymity and censorship resistance. Existing popular anonymity networks (e.g., Freenet, I2P, Tor) rely on Internet connectivity to function, making them impracticable during such blackouts. In such a setting, mobile ad-hoc networks can provide connectivity, but prior communication protocols for ad-hoc networks are not designed for anonymity and attack resilience.</description>
+    </item>
+    
+    <item>
+      <title>Digital Personhood: Towards Technology that Securely Serves People</title>
+      <link>https://bford.info/talk/2022-02-17-personhood/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2022-02-17-personhood/</guid>
+      <description> Invited talk at SI Summit 2022 February 17, 2022 – Virtual Slides: PDF </description>
     </item>
     
     <item>

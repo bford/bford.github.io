@@ -35,6 +35,15 @@
     </item>
     
     <item>
+      <title>Privacy-Preserving Personhood-Based Credentials</title>
+      <link>https://bford.info/talk/2023-01-16-personhood-credentials/</link>
+      <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2023-01-16-personhood-credentials/</guid>
+      <description> Talk at IC3 Winter Retreat 2023 January 16, 2023 – Les Diablerets, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
       <title>Toward Internet Performance Transparency</title>
       <link>https://bford.info/thesis/2022-fragkouli/</link>
       <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
@@ -42,6 +51,15 @@
       <guid>https://bford.info/thesis/2022-fragkouli/</guid>
       <description>Georgia Fragkouli Ph.D. thesis co-advised by Katerina Argyraki and Bryan Ford
 August 29, 2022 Abstract: From medical support to education and remote work, our everyday lives increasingly depend on Internet performance. When users experience poor performance, however, the decentralization of the Internet allows limited visibility into which network is responsible. As a result, users are promised Service Level Agreements (SLAs) they cannot verify, regulators make rules they cannot enforce, and networks with competitive performance cannot reliably showcase it to attract new customers.</description>
+    </item>
+    
+    <item>
+      <title>Who – Or What – Will Our Distributed Metaverse Serve?</title>
+      <link>https://bford.info/talk/2022-07-06-metaverse/</link>
+      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2022-07-06-metaverse/</guid>
+      <description> Invited talk at INRIA prospective seminar on Distributed Systems and Middleware July 6, 2022 – Rungis, France Slides: PDF </description>
     </item>
     
     <item>
@@ -70,6 +88,15 @@ August 29, 2022 Abstract: From medical support to education and remote work, our
       <guid>https://bford.info/pub/sec/moby/</guid>
       <description>Amogh Pradeep, Hira Javaid, Ryan Williams, Antoine Rault, David Choffnes, Stevens Le Blond, and Bryan Ford Proceedings on Privacy Enhancing Technologies
 March 16, 2022 Abstract: Internet blackouts are challenging environments for anonymity and censorship resistance. Existing popular anonymity networks (e.g., Freenet, I2P, Tor) rely on Internet connectivity to function, making them impracticable during such blackouts. In such a setting, mobile ad-hoc networks can provide connectivity, but prior communication protocols for ad-hoc networks are not designed for anonymity and attack resilience.</description>
+    </item>
+    
+    <item>
+      <title>Digital Personhood: Towards Technology that Securely Serves People</title>
+      <link>https://bford.info/talk/2022-02-17-personhood/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2022-02-17-personhood/</guid>
+      <description> Invited talk at SI Summit 2022 February 17, 2022 – Virtual Slides: PDF </description>
     </item>
     
     <item>

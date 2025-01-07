@@ -6,7 +6,16 @@
     <description>Recent content in Consensus on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Consensus/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Consensus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Towards practical and efficient performance robustness: QuePaxa and beyond</title>
+      <link>https://bford.info/talk/2024-09-04-quepaxa/</link>
+      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2024-09-04-quepaxa/</guid>
+      <description> Talk at Seminar 24362 – Next-Generation Secure Distributed Computing September 4, 2024 – Schloss Dagstuhl, Germany Slides: PDF </description>
+    </item>
+    
     <item>
       <title>QuePaxa: Escaping the Tyranny of Timeouts in Consensus</title>
       <link>https://bford.info/pub/os/quepaxa/</link>

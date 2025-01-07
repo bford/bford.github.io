@@ -6,7 +6,25 @@
     <description>Recent content in Democracy on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Democracy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Democracy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coercion-Resistant E-voting and Proof of Personhood</title>
+      <link>https://bford.info/talk/2025-01-06-coercion-resistance/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2025-01-06-coercion-resistance/</guid>
+      <description> Keynote at IC3 Winter Retreat 2025 January 6, 2025 – Engelberg, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Towards Real Democratic DAOs</title>
+      <link>https://bford.info/talk/2024-11-28-democratic-dao/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2024-11-28-democratic-dao/</guid>
+      <description> Invited talk at DAO Symposium 2024 November 28, 2024 – Zürich, Switzerland Slides: PDF </description>
+    </item>
+    
     <item>
       <title>E-Vote Your Conscience: Perceptions of Coercion and Vote Buying, and the Usability of Fake Credentials in Online Voting</title>
       <link>https://bford.info/pub/sec/trip-usability/</link>
@@ -17,12 +35,48 @@
     </item>
     
     <item>
+      <title>Can decentralized systems be truly “democratizing” – and how?</title>
+      <link>https://bford.info/talk/2024-04-05-democratizing/</link>
+      <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2024-04-05-democratizing/</guid>
+      <description> Keynote at ChainScience 2024 April 5, 2024 – Zürich, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>What Distributed Infrastructure Could Save the Planet?</title>
+      <link>https://bford.info/talk/2023-12-12-dicg/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2023-12-12-dicg/</guid>
+      <description> Keynote at 4th International Workshop on Distributed Infrastructure for Common Good (DICG) December 12, 2023 – Bologna, Italy Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Who – Or What – Will Our Distributed Metaverse Serve?</title>
+      <link>https://bford.info/talk/2022-07-06-metaverse/</link>
+      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2022-07-06-metaverse/</guid>
+      <description> Invited talk at INRIA prospective seminar on Distributed Systems and Middleware July 6, 2022 – Rungis, France Slides: PDF </description>
+    </item>
+    
+    <item>
       <title>Auditing the Swiss Post E-voting System: An Architectural Perspective</title>
       <link>https://bford.info/pub/sec/swisspost-evoting/</link>
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/swisspost-evoting/</guid>
       <description>Bryan Ford Swiss Federal Chancellery – Independent examination of Swiss Post system 2021 Scopes 1, 2 and 3 Final Report – April 4, 2022 Abstract: Switzerland is one of the few countries globally that has a national program for electronic voting (E-voting), which has been evolving in several stages for well over a decade. For the past several years, the program’s most recent stage has focused on introducing strong cryptographic verifiability into the system, together with security features such as trust splitting and a software implementation open to public inspection.</description>
+    </item>
+    
+    <item>
+      <title>Digital Personhood: Towards Technology that Securely Serves People</title>
+      <link>https://bford.info/talk/2022-02-17-personhood/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2022-02-17-personhood/</guid>
+      <description> Invited talk at SI Summit 2022 February 17, 2022 – Virtual Slides: PDF </description>
     </item>
     
     <item>
