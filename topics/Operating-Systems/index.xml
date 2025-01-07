@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Towards General-Purpose Decentralized Computing with Permissionless Extensibility</title>
+      <link>https://bford.info/thesis/2024-alp/</link>
+      <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2024-alp/</guid>
+      <description>Enis Ceyhun Alp Ph.D. thesis advised by Bryan Ford January 19, 2024 Abstract: Smart contracts have emerged as the most promising foundations for applications of the blockchain technology. Even though smart contracts are expected to serve as the backbone of the next-generation web, they have several limitations that hinder their widespread adoption, namely limited computational functionality, restricted programmability, and lack of data confidentiality. Moreover, addressing these challenges manually in application-specific ways requires a lot of developer effort and time due to the monolithic architecture of smart contracts.</description>
+    </item>
+    
+    <item>
       <title>QuePaxa: Escaping the Tyranny of Timeouts in Consensus</title>
       <link>https://bford.info/pub/os/quepaxa/</link>
       <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>

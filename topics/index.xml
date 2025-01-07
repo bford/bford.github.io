@@ -152,6 +152,24 @@
     </item>
     
     <item>
+      <title>Smart Contracts</title>
+      <link>https://bford.info/topics/Smart-Contracts/</link>
+      <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Smart-Contracts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Determinism</title>
+      <link>https://bford.info/topics/Determinism/</link>
+      <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Determinism/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Anonymity</title>
       <link>https://bford.info/topics/Anonymity/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
@@ -346,15 +364,6 @@
       <pubDate>Sun, 21 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Transport-Layer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Determinism</title>
-      <link>https://bford.info/topics/Determinism/</link>
-      <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Determinism/</guid>
       <description></description>
     </item>
     
