@@ -34,6 +34,12 @@
     <loc>https://bford.info/topics/Personhood/</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://bford.info/topics/Privacy/</loc>
+    <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Security/</loc>
+    <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://bford.info/talk/</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -71,12 +77,6 @@
     <lastmod>2024-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/pub/</loc>
-    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Privacy/</loc>
-    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Security/</loc>
     <lastmod>2024-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Transparency/</loc>
@@ -199,6 +199,24 @@
     <loc>https://bford.info/topics/Peer-to-Peer/</loc>
     <lastmod>2021-11-10T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://bford.info/talk/2021-11-05-defi/</loc>
+    <lastmod>2021-11-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Humanitarian/</loc>
+    <lastmod>2021-11-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/talk/2021-10-25-consensus/</loc>
+    <lastmod>2021-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Randomness/</loc>
+    <lastmod>2021-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Scalability/</loc>
+    <lastmod>2021-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/talk/2021-10-13-personhood/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://bford.info/thesis/2021-froelicher/</loc>
     <lastmod>2021-10-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -214,6 +232,12 @@
     <loc>https://bford.info/pub/sec/calypso/</loc>
     <lastmod>2021-08-16T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://bford.info/talk/2021-07-28-votegral/</loc>
+    <lastmod>2021-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/talk/2021-07-27-personhood/</loc>
+    <lastmod>2021-07-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://bford.info/pub/soc/dt2-chapter-abs/</loc>
     <lastmod>2021-02-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -223,11 +247,17 @@
     <loc>https://bford.info/topics/Surveillance/</loc>
     <lastmod>2020-11-18T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://bford.info/talk/2020-11-05-personhood/</loc>
+    <lastmod>2020-11-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://bford.info/pub/soc/personhood/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Rights/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/talk/2020-07-30-randomness/</loc>
+    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/pub/dec/cbdc/</loc>
     <lastmod>2020-07-23T00:00:00+00:00</lastmod>
@@ -238,11 +268,20 @@
     <loc>https://bford.info/pub/net/qsc/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/Randomness/</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+    <loc>https://bford.info/talk/2020-01-29-blockchain/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/Scalability/</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+    <loc>https://bford.info/talk/2020-01-23-fintech/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/talk/2020-01-22-trust/</loc>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Liquid-Democracy/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/talk/2020-01-20-voting/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/thesis/2019-kokoris-kogias/</loc>
     <lastmod>2019-09-27T00:00:00+00:00</lastmod>
@@ -306,9 +345,6 @@
   </url><url>
     <loc>https://bford.info/pub/soc/money/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Humanitarian/</loc>
-    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/pub/dec/omniledger-abs/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>

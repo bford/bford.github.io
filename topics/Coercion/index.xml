@@ -79,5 +79,50 @@
       <description>Louis-Henri Merino, Simone Colombo, Jeff Allen, Vero Estrada-Galiñanes, and Bryan Ford arXiv preprint Abstract: Most existing remote electronic voting systems are vulnerable to voter coercion and vote buying. While coercion-resistant voting systems address this challenge, current schemes assume that the voter has access to an untappable, incorruptible device during voter registration. We present TRIP, an in-person voter registration scheme enabling voters to create verifiable and indistinguishable real and fake credentials using an untrusted kiosk inside a privacy booth at a supervised location, e.</description>
     </item>
     
+    <item>
+      <title>Digital Personhood: Towards Technology that Securely Serves People</title>
+      <link>https://bford.info/talk/2021-10-13-personhood/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2021-10-13-personhood/</guid>
+      <description> Distinguished Lecture at Vienna CyberSecurity and Privacy Research Cluster October 13, 2021 – Virtual Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Votegral: Coercion-Resistant E-voting Without Trusted Hardware</title>
+      <link>https://bford.info/talk/2021-07-28-votegral/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2021-07-28-votegral/</guid>
+      <description> Talk at IC3 Blockchain Summer Camp July 28, 2021 – Virtual Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Proof of Personhood: Introduction and Challenges</title>
+      <link>https://bford.info/talk/2021-07-27-personhood/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2021-07-27-personhood/</guid>
+      <description> Keynote at Internet of Humans Workshop #1 July 27, 2021 – Virtual Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Personhood Online: Privacy, Transparency, and Inclusion for Digital Democracy</title>
+      <link>https://bford.info/talk/2020-11-05-personhood/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2020-11-05-personhood/</guid>
+      <description> Talk at Digital Democracy Workshop November 5, 2020 – Virtual Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Voting and Blockchain: Promise and Challenges</title>
+      <link>https://bford.info/talk/2020-01-20-voting/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2020-01-20-voting/</guid>
+      <description> Talk at Geneva Blockchain Congress 2020 January 20, 2020 – Geneva, Switzerland Slides: PDF </description>
+    </item>
+    
   </channel>
 </rss>

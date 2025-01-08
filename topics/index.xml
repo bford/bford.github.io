@@ -44,6 +44,24 @@
     </item>
     
     <item>
+      <title>Privacy</title>
+      <link>https://bford.info/topics/Privacy/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Privacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://bford.info/topics/Security/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Voting</title>
       <link>https://bford.info/topics/Voting/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
@@ -103,24 +121,6 @@
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Identity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Privacy</title>
-      <link>https://bford.info/topics/Privacy/</link>
-      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Privacy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://bford.info/topics/Security/</link>
-      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Security/</guid>
       <description></description>
     </item>
     
@@ -278,6 +278,33 @@
     </item>
     
     <item>
+      <title>Humanitarian</title>
+      <link>https://bford.info/topics/Humanitarian/</link>
+      <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Humanitarian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Randomness</title>
+      <link>https://bford.info/topics/Randomness/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Randomness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scalability</title>
+      <link>https://bford.info/topics/Scalability/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Scalability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Research</title>
       <link>https://bford.info/topics/Research/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
@@ -314,20 +341,11 @@
     </item>
     
     <item>
-      <title>Randomness</title>
-      <link>https://bford.info/topics/Randomness/</link>
-      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      <title>Liquid Democracy</title>
+      <link>https://bford.info/topics/Liquid-Democracy/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bford.info/topics/Randomness/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scalability</title>
-      <link>https://bford.info/topics/Scalability/</link>
-      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Scalability/</guid>
+      <guid>https://bford.info/topics/Liquid-Democracy/</guid>
       <description></description>
     </item>
     
@@ -346,15 +364,6 @@
       <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Tourism/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Humanitarian</title>
-      <link>https://bford.info/topics/Humanitarian/</link>
-      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Humanitarian/</guid>
       <description></description>
     </item>
     

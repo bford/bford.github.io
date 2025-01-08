@@ -46,6 +46,15 @@ Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice o
     </item>
     
     <item>
+      <title>Consensus for Decentralized Ledgers</title>
+      <link>https://bford.info/talk/2021-10-25-consensus/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2021-10-25-consensus/</guid>
+      <description> Talk at Seminar 21431 – Rigorous Methods for Smart Contracts October 25, 2021 – Schloss Dagstuhl, Germany Slides: PDF </description>
+    </item>
+    
+    <item>
       <title>Que Sera Consensus: Simple Asynchronous Agreement with Private Coins and Threshold Logical Clocks</title>
       <link>https://bford.info/pub/net/qsc/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
@@ -54,6 +63,15 @@ Bologna, Italy &amp;ndash; July 10, 2022 Abstract: Front-running, the practice o
       <description>Bryan Ford, Philipp Jovanovic, and Ewa Syta
 March 4, 2020 arXiv preprint
 Abstract: It is commonly held that asynchronous consensus is much more complex, difficult, and costly than partially-synchronous algorithms, especially without using common coins. This paper challenges that conventional wisdom with que sera consensus QSC, an approach to consensus that cleanly decomposes the agreement problem from that of network asynchrony. QSC uses only private coins and reaches consensus in O(1) expected communication rounds.</description>
+    </item>
+    
+    <item>
+      <title>Blockchain: Between Hype and Reality</title>
+      <link>https://bford.info/talk/2020-01-29-blockchain/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2020-01-29-blockchain/</guid>
+      <description> Guest lecture at TransformTech January 29, 2020 – Lausanne, Switzerland Slides: PDF </description>
     </item>
     
     <item>

@@ -89,6 +89,33 @@
     </item>
     
     <item>
+      <title>Digital Personhood: Towards Technology that Securely Serves People</title>
+      <link>https://bford.info/talk/2021-10-13-personhood/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2021-10-13-personhood/</guid>
+      <description> Distinguished Lecture at Vienna CyberSecurity and Privacy Research Cluster October 13, 2021 – Virtual Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Votegral: Coercion-Resistant E-voting Without Trusted Hardware</title>
+      <link>https://bford.info/talk/2021-07-28-votegral/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2021-07-28-votegral/</guid>
+      <description> Talk at IC3 Blockchain Summer Camp July 28, 2021 – Virtual Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Proof of Personhood: Introduction and Challenges</title>
+      <link>https://bford.info/talk/2021-07-27-personhood/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2021-07-27-personhood/</guid>
+      <description> Keynote at Internet of Humans Workshop #1 July 27, 2021 – Virtual Slides: PDF </description>
+    </item>
+    
+    <item>
       <title>Technologizing Democracy or Democratizing Technology? A Layered-Architecture Perspective on Potentials and Challenges</title>
       <link>https://bford.info/pub/soc/dt2-chapter-abs/</link>
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
@@ -110,6 +137,15 @@ I believe the cautious use of today&amp;rsquo;s powerful AI technologies based o
     </item>
     
     <item>
+      <title>Personhood Online: Privacy, Transparency, and Inclusion for Digital Democracy</title>
+      <link>https://bford.info/talk/2020-11-05-personhood/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2020-11-05-personhood/</guid>
+      <description> Talk at Digital Democracy Workshop November 5, 2020 – Virtual Slides: PDF </description>
+    </item>
+    
+    <item>
       <title>Identity and Personhood in Digital Democracy: Evaluating Inclusion, Equality, Security, and Privacy in Pseudonym Parties and Other Proofs of Personhood</title>
       <link>https://bford.info/pub/soc/personhood/</link>
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
@@ -117,6 +153,15 @@ I believe the cautious use of today&amp;rsquo;s powerful AI technologies based o
       <guid>https://bford.info/pub/soc/personhood/</guid>
       <description>Bryan Ford November 2020 (first draft) arXiv preprint
 Abstract: Digital identity seems at first like a prerequisite for digital democracy: how can we ensure &amp;ldquo;one person, one vote&amp;rdquo; online without identifying voters? But the full gamut of digital identity solutions &amp;ndash; e.g., online ID checking, biometrics, self-sovereign identity, and social/trust networks &amp;ndash; all present severe flaws in security, privacy, and transparency, leaving users vulnerable to exclusion, identity loss or theft, and coercion.</description>
+    </item>
+    
+    <item>
+      <title>Voting and Blockchain: Promise and Challenges</title>
+      <link>https://bford.info/talk/2020-01-20-voting/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2020-01-20-voting/</guid>
+      <description> Talk at Geneva Blockchain Congress 2020 January 20, 2020 – Geneva, Switzerland Slides: PDF </description>
     </item>
     
     <item>

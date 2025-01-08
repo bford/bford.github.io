@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Liquid Democracy on Bryan Ford&#39;s Home Page</title>
+    <link>https://bford.info/topics/Liquid-Democracy/</link>
+    <description>Recent content in Liquid Democracy on Bryan Ford&#39;s Home Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Liquid-Democracy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Voting and Blockchain: Promise and Challenges</title>
+      <link>https://bford.info/talk/2020-01-20-voting/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2020-01-20-voting/</guid>
+      <description> Talk at Geneva Blockchain Congress 2020 January 20, 2020 – Geneva, Switzerland Slides: PDF </description>
+    </item>
+    
+  </channel>
+</rss>

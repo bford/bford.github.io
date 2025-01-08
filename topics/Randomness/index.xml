@@ -6,7 +6,25 @@
     <description>Recent content in Randomness on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Randomness/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Randomness/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Consensus for Decentralized Ledgers</title>
+      <link>https://bford.info/talk/2021-10-25-consensus/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2021-10-25-consensus/</guid>
+      <description> Talk at Seminar 21431 – Rigorous Methods for Smart Contracts October 25, 2021 – Schloss Dagstuhl, Germany Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Distributed Randomness</title>
+      <link>https://bford.info/talk/2020-07-30-randomness/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2020-07-30-randomness/</guid>
+      <description> Talk at IC3 Blockchain Camp July 30, 2020 – Virtual Slides: PDF </description>
+    </item>
+    
     <item>
       <title>Secure, Confidential Blockchains Providing High Throughput and Low Latency</title>
       <link>https://bford.info/thesis/2019-kokoris-kogias/</link>

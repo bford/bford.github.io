@@ -6,7 +6,16 @@
     <description>Recent content in Security on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coercion-Resistant E-voting and Proof of Personhood</title>
+      <link>https://bford.info/talk/2025-01-06-coercion-resistance/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2025-01-06-coercion-resistance/</guid>
+      <description> Keynote at IC3 Winter Retreat 2025 January 6, 2025 – Engelberg, Switzerland Slides: PDF </description>
+    </item>
+    
     <item>
       <title>E-Vote Your Conscience: Perceptions of Coercion and Vote Buying, and the Usability of Fake Credentials in Online Voting</title>
       <link>https://bford.info/pub/sec/trip-usability/</link>
@@ -103,6 +112,15 @@ Copenhagen, Denmark &amp;ndash; August 16-20, 2021 Abstract: Distributed ledgers
     </item>
     
     <item>
+      <title>Votegral: Coercion-Resistant E-voting Without Trusted Hardware</title>
+      <link>https://bford.info/talk/2021-07-28-votegral/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2021-07-28-votegral/</guid>
+      <description> Talk at IC3 Blockchain Summer Camp July 28, 2021 – Virtual Slides: PDF </description>
+    </item>
+    
+    <item>
       <title>Technologizing Democracy or Democratizing Technology? A Layered-Architecture Perspective on Potentials and Challenges</title>
       <link>https://bford.info/pub/soc/dt2-chapter-abs/</link>
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
@@ -120,6 +138,15 @@ Abstract While technology is often claimed to be “democratizing”, the techno
       <guid>https://bford.info/pub/soc/personhood/</guid>
       <description>Bryan Ford November 2020 (first draft) arXiv preprint
 Abstract: Digital identity seems at first like a prerequisite for digital democracy: how can we ensure &amp;ldquo;one person, one vote&amp;rdquo; online without identifying voters? But the full gamut of digital identity solutions &amp;ndash; e.g., online ID checking, biometrics, self-sovereign identity, and social/trust networks &amp;ndash; all present severe flaws in security, privacy, and transparency, leaving users vulnerable to exclusion, identity loss or theft, and coercion.</description>
+    </item>
+    
+    <item>
+      <title>Distributed Randomness</title>
+      <link>https://bford.info/talk/2020-07-30-randomness/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2020-07-30-randomness/</guid>
+      <description> Talk at IC3 Blockchain Camp July 30, 2020 – Virtual Slides: PDF </description>
     </item>
     
     <item>
@@ -142,6 +169,42 @@ July 23, 2020. Abstract: Central banks around the world are exploring and in som
       <description>Ludovic Barman, Italo Dacosta, Mahdi Zamani, Ennan Zhai, Apostolos Pyrgelis, Bryan Ford, Jean-Pierre Hubaux, and Joan Feigenbaum Privacy Enhancing Technologies Symposium
 July 13, 2020 Proceedings on Privacy Enhancing Technologies
 Volume 2020, Issue 4. Abstract: Organizational networks are vulnerable to traffic-analysis attacks that enable adversaries to infer sensitive information from the network traffic &amp;ndash; even if encryption is used. Typical anonymous communication networks are tailored to the Internet and are poorly suited for organizational networks.</description>
+    </item>
+    
+    <item>
+      <title>Blockchain: Between Hype and Reality</title>
+      <link>https://bford.info/talk/2020-01-29-blockchain/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2020-01-29-blockchain/</guid>
+      <description> Guest lecture at TransformTech January 29, 2020 – Lausanne, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Blockchain, Privacy, and Accountability</title>
+      <link>https://bford.info/talk/2020-01-23-fintech/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2020-01-23-fintech/</guid>
+      <description> Talk at Caspian Week, World Economic Forum 2020 January 23, 2020 – Davos, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Digital Architecture for Trust in the 21st Century</title>
+      <link>https://bford.info/talk/2020-01-22-trust/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2020-01-22-trust/</guid>
+      <description> Talk at House of Switzerland, World Economic Forum 2020 January 22, 2020 – Davos, Switzerland Slides: PDF </description>
+    </item>
+    
+    <item>
+      <title>Voting and Blockchain: Promise and Challenges</title>
+      <link>https://bford.info/talk/2020-01-20-voting/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2020-01-20-voting/</guid>
+      <description> Talk at Geneva Blockchain Congress 2020 January 20, 2020 – Geneva, Switzerland Slides: PDF </description>
     </item>
     
     <item>
