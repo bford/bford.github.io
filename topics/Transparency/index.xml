@@ -6,14 +6,24 @@
     <description>Recent content in Transparency on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Transparency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Transparency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TRIP: Coercion-resistant Registration for E-Voting with Verifiability and Usability in Votegral</title>
+      <link>https://bford.info/pub/sec/trip/</link>
+      <pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/sec/trip/</guid>
+      <description>Louis-Henri Merino, Simone Colombo, Rene Reyes, Alaleh Azhir, Shailesh Mishra, Pasindu Tennage, Mohammad Amin Raeisi, Haoqian Zhang, Jeff Allen, Bernhard Tellenbach, Vero Estrada-Galiñanes, and Bryan Ford To appear in SOSP 2025: The 31st Symposium on Operating Systems Principles
+October 13&amp;ndash;16, 2025 Abstract: Online voting is convenient and flexible, but amplifies the risks of voter coercion and vote buying. One promising mitigation strategy enables voters to give a coercer fake voting credentials, which silently cast votes that do not count.</description>
+    </item>
+    
     <item>
       <title>E-Vote Your Conscience: Perceptions of Coercion and Vote Buying, and the Usability of Fake Credentials in Online Voting</title>
       <link>https://bford.info/pub/sec/trip-usability/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/trip-usability/</guid>
-      <description>Louis-Henri Merino, Alaleh Azhir, Haoqian Zhang, Simone Colombo, Bernhard Tellenbach, Vero Estrada-Galiñanes, Bryan Ford To appear in 45th IEEE Symposium on Security and Privacy May 20-23, 2024 Abstract: Online voting is attractive for convenience and accessibility, but is more susceptible to voter coercion and vote buying than in-person voting. One mitigation is to give voters fake voting credentials that they can yield to a coercer. Fake credentials appear identical to real ones, but cast votes that are silently omitted from the final tally.</description>
+      <description>Louis-Henri Merino, Alaleh Azhir, Haoqian Zhang, Simone Colombo, Bernhard Tellenbach, Vero Estrada-Galiñanes, Bryan Ford 45th IEEE Symposium on Security and Privacy May 20-23, 2024 Abstract: Online voting is attractive for convenience and accessibility, but is more susceptible to voter coercion and vote buying than in-person voting. One mitigation is to give voters fake voting credentials that they can yield to a coercer. Fake credentials appear identical to real ones, but cast votes that are silently omitted from the final tally.</description>
     </item>
     
     <item>
@@ -42,15 +52,6 @@ August 29, 2022 Abstract: From medical support to education and remote work, our
       
       <guid>https://bford.info/pub/sec/swisspost-evoting/</guid>
       <description>Bryan Ford Swiss Federal Chancellery – Independent examination of Swiss Post system 2021 Scopes 1, 2 and 3 Final Report – April 4, 2022 Abstract: Switzerland is one of the few countries globally that has a national program for electronic voting (E-voting), which has been evolving in several stages for well over a decade. For the past several years, the program’s most recent stage has focused on introducing strong cryptographic verifiability into the system, together with security features such as trust splitting and a software implementation open to public inspection.</description>
-    </item>
-    
-    <item>
-      <title>TRIP: Trustless Coercion-Resistant In-Person Voter Registration</title>
-      <link>https://bford.info/pub/sec/trip/</link>
-      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/pub/sec/trip/</guid>
-      <description>Louis-Henri Merino, Simone Colombo, Jeff Allen, Vero Estrada-Galiñanes, and Bryan Ford arXiv preprint Abstract: Most existing remote electronic voting systems are vulnerable to voter coercion and vote buying. While coercion-resistant voting systems address this challenge, current schemes assume that the voter has access to an untappable, incorruptible device during voter registration. We present TRIP, an in-person voter registration scheme enabling voters to create verifiable and indistinguishable real and fake credentials using an untrusted kiosk inside a privacy booth at a supervised location, e.</description>
     </item>
     
     <item>
