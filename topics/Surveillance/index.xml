@@ -6,7 +6,16 @@
     <description>Recent content in Surveillance on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Surveillance/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Surveillance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beyond the ratchet: practical challenges in secure messaging</title>
+      <link>https://bford.info/thesis/2025-colombo/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2025-colombo/</guid>
+      <description>Simone Maria Stefano Colombo Ph.D. thesis advised by Bryan Ford January 10, 2025 Abstract: Secure messaging systems are essential for ensuring privacy and confidentiality in today’s digital communication. Thanks to the widespread adoption of end-to-end encryption, messages are accessible only to intended users, and advancements in protocol resilience against secret compromise have enhanced messaging systems’ protection guarantees. However, several open challenges remain. This thesis investigates three of these challenges—active attack detection, metadata protection during key retrieval, and real-world deniability—and presents cryptographic and system-level solutions to strengthen the security and privacy of modern secure messaging systems.</description>
+    </item>
+    
     <item>
       <title>AI for Governance Belongs in Mechanism, Not Policy</title>
       <link>https://bford.info/post/2020-11-18-ai-governance/</link>

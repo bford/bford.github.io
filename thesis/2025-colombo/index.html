@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Beyond the ratchet: practical challenges in secure messaging &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table style="background:white;padding:1px;border-spacing:5px">
+<tr><td style="text-align:center">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/talk"><font color=blue>Talks</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Beyond the ratchet: practical challenges in secure messaging</h1>
+  
+<center>
+<strong>Simone Maria Stefano Colombo</strong><br/>
+Ph.D. thesis advised by Bryan Ford<br/>
+January 10, 2025
+<p></p>
+</center>
+
+<h3>Abstract:</h3>
+
+<p></p>
+Secure messaging systems are essential for ensuring privacy and confidentiality
+in today’s digital communication. Thanks to the widespread adoption of
+end-to-end encryption, messages are accessible only to
+intended users, and advancements in protocol resilience against secret
+compromise have enhanced messaging systems’ protection guarantees. However,
+several open challenges remain. This thesis investigates three of these
+challenges—active attack detection, metadata protection during key retrieval,
+and real-world deniability—and presents cryptographic and system-level
+solutions to strengthen the security and privacy of modern secure messaging
+systems.
+
+<p></p>
+The first contribution of this thesis addresses active attack detection in
+messaging. We address scenarios where the network can delay and drop messages,
+and where adversaries can impersonate parties and inject forged messages. We
+propose out-of-band detection mechanisms that always detect active attacks, and
+in-band mechanisms that detect attacks as soon as an honest message goes
+through. Optimizing these schemes, we also explore how active attack detection
+can be practically achieved.
+
+<p></p>
+The second contribution addresses challenges in distributing cryptographic keys
+that enable parties to establish secure messaging channels. Metadata protection
+is crucial to safeguard users’ social graphs, and security issues arise from
+potentially malicious service providers distributing adversarially-controlled
+keys. To address these challenges, we introduce authenticated private
+information retrieval, a cryptographic primitive that ensures clients 1)
+do not reveal their social graph to the messaging service and 2) either
+retrieve the correct key or abort. We implement and evaluate all our schemes,
+assessing the practicality of multi-server authenticated private information
+retrieval with Keyd, a PGP key-directory server we develop.
+
+<p></p>
+Finally, we analyze cryptographic deniability in secure messaging systems and
+its practical relevance from technical and legal perspectives. Although often
+presented as a key feature in protocols like Signal, our technical modeling,
+which incorporates real-world factors, along with legal analysis of 140 court
+cases in Switzerland, reveals that deniability typically fails in practice.
+Based on these findings, we discuss whether deniability is desirable and
+explore the challenges of designing systems that offer practical deniability.
+Together, these contributions advance the resilience, privacy and practical
+applicability of secure messaging systems in the face of real-world
+adversaries.
+
+<h3>Ph.D. Thesis:
+<a href="colombo-thesis.pdf">PDF</a>
+</h3>
+
+
+
+    
+      <br clear=all>
+<hr>
+<table style="width:100%;padding:10pt"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Networks/">Networks</a>
+	
+		<a href="/topics/Privacy/">Privacy</a>
+	
+		<a href="/topics/Anonymity/">Anonymity</a>
+	
+		<a href="/topics/Cryptography/">Cryptography</a>
+	
+		<a href="/topics/Metadata/">Metadata</a>
+	
+		<a href="/topics/Security/">Security</a>
+	
+		<a href="/topics/Social-Networks/">Social Networks</a>
+	
+		<a href="/topics/Surveillance/">Surveillance</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

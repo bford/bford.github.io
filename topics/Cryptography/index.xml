@@ -18,6 +18,15 @@ October 13&amp;ndash;16, 2025 Abstract: Online voting is convenient and flexible
     </item>
     
     <item>
+      <title>Beyond the ratchet: practical challenges in secure messaging</title>
+      <link>https://bford.info/thesis/2025-colombo/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2025-colombo/</guid>
+      <description>Simone Maria Stefano Colombo Ph.D. thesis advised by Bryan Ford January 10, 2025 Abstract: Secure messaging systems are essential for ensuring privacy and confidentiality in today’s digital communication. Thanks to the widespread adoption of end-to-end encryption, messages are accessible only to intended users, and advancements in protocol resilience against secret compromise have enhanced messaging systems’ protection guarantees. However, several open challenges remain. This thesis investigates three of these challenges—active attack detection, metadata protection during key retrieval, and real-world deniability—and presents cryptographic and system-level solutions to strengthen the security and privacy of modern secure messaging systems.</description>
+    </item>
+    
+    <item>
       <title>E-Vote Your Conscience: Perceptions of Coercion and Vote Buying, and the Usability of Fake Credentials in Online Voting</title>
       <link>https://bford.info/pub/sec/trip-usability/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>

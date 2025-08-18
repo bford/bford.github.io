@@ -100,7 +100,7 @@
     <item>
       <title>Blockchain</title>
       <link>https://bford.info/topics/Blockchain/</link>
-      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Blockchain/</guid>
       <description></description>
@@ -109,7 +109,7 @@
     <item>
       <title>Consensus</title>
       <link>https://bford.info/topics/Consensus/</link>
-      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Consensus/</guid>
       <description></description>
@@ -118,9 +118,63 @@
     <item>
       <title>Networks</title>
       <link>https://bford.info/topics/Networks/</link>
-      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Randomness</title>
+      <link>https://bford.info/topics/Randomness/</link>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Randomness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reliability and Robustness</title>
+      <link>https://bford.info/topics/Reliability-and-Robustness/</link>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Reliability-and-Robustness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scalability</title>
+      <link>https://bford.info/topics/Scalability/</link>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Scalability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Metadata</title>
+      <link>https://bford.info/topics/Metadata/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Metadata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Social Networks</title>
+      <link>https://bford.info/topics/Social-Networks/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Social-Networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Surveillance</title>
+      <link>https://bford.info/topics/Surveillance/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Surveillance/</guid>
       <description></description>
     </item>
     
@@ -130,15 +184,6 @@
       <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Operating-Systems/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reliability and Robustness</title>
-      <link>https://bford.info/topics/Reliability-and-Robustness/</link>
-      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Reliability-and-Robustness/</guid>
       <description></description>
     </item>
     
@@ -215,15 +260,6 @@
     </item>
     
     <item>
-      <title>Metadata</title>
-      <link>https://bford.info/topics/Metadata/</link>
-      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Metadata/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Law</title>
       <link>https://bford.info/topics/Law/</link>
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
@@ -238,15 +274,6 @@
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Verifiable-Shuffles/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Social Networks</title>
-      <link>https://bford.info/topics/Social-Networks/</link>
-      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Social-Networks/</guid>
       <description></description>
     </item>
     
@@ -287,24 +314,6 @@
     </item>
     
     <item>
-      <title>Randomness</title>
-      <link>https://bford.info/topics/Randomness/</link>
-      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Randomness/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scalability</title>
-      <link>https://bford.info/topics/Scalability/</link>
-      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Scalability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Research</title>
       <link>https://bford.info/topics/Research/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
@@ -319,15 +328,6 @@
       <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Dining-Cryptographers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Surveillance</title>
-      <link>https://bford.info/topics/Surveillance/</link>
-      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Surveillance/</guid>
       <description></description>
     </item>
     

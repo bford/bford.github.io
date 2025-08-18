@@ -18,6 +18,24 @@ October 13&amp;ndash;16, 2025 Abstract: Online voting is convenient and flexible
     </item>
     
     <item>
+      <title>Robust and High-Performance Wide-Area Consensus Protocols</title>
+      <link>https://bford.info/thesis/2025-tennage/</link>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2025-tennage/</guid>
+      <description>Pasindu Nivanthaka Tennage Ph.D. thesis advised by Bryan Ford August 15, 2025 Abstract: Deploying consensus protocols in the wide-area is challenging due to unpredictable and adversarial nature of wide-area networks. This thesis explores five critical challenges that affect the operation of consensus protocols in the wide-area networks; (1) performance vulnerability of leader-based protocols to leader-targeted attacks, (2) losing liveness under adversarial network conditions, (3) throughput bottlenecks caused by leader overload, (4) recovery time versus liveness trade-off caused by sub-optimal manually configured timeouts, and (5) high commit latency in DAG-based asynchronous byzantine fault tolerant protocols.</description>
+    </item>
+    
+    <item>
+      <title>Beyond the ratchet: practical challenges in secure messaging</title>
+      <link>https://bford.info/thesis/2025-colombo/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2025-colombo/</guid>
+      <description>Simone Maria Stefano Colombo Ph.D. thesis advised by Bryan Ford January 10, 2025 Abstract: Secure messaging systems are essential for ensuring privacy and confidentiality in today’s digital communication. Thanks to the widespread adoption of end-to-end encryption, messages are accessible only to intended users, and advancements in protocol resilience against secret compromise have enhanced messaging systems’ protection guarantees. However, several open challenges remain. This thesis investigates three of these challenges—active attack detection, metadata protection during key retrieval, and real-world deniability—and presents cryptographic and system-level solutions to strengthen the security and privacy of modern secure messaging systems.</description>
+    </item>
+    
+    <item>
       <title>Coercion-Resistant E-voting and Proof of Personhood</title>
       <link>https://bford.info/talk/2025-01-06-coercion-resistance/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>

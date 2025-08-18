@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Robust and High-Performance Wide-Area Consensus Protocols &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table style="background:white;padding:1px;border-spacing:5px">
+<tr><td style="text-align:center">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/talk"><font color=blue>Talks</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Robust and High-Performance Wide-Area Consensus Protocols</h1>
+  
+<center>
+<strong>Pasindu Nivanthaka Tennage</strong><br/>
+Ph.D. thesis advised by Bryan Ford<br/>
+August 15, 2025
+<p></p>
+</center>
+
+<h3>Abstract:</h3>
+
+<p></p>
+Deploying consensus protocols in the wide-area is challenging due to
+unpredictable and adversarial nature of wide-area networks. This thesis
+explores five critical challenges that affect the operation of consensus
+protocols in the wide-area networks; (1) performance vulnerability of
+leader-based protocols to leader-targeted attacks, (2) losing liveness under
+adversarial network conditions, (3) throughput bottlenecks caused by leader
+overload, (4) recovery time versus liveness trade-off caused by sub-optimal
+manually configured timeouts, and (5) high commit latency in DAG-based
+asynchronous byzantine fault tolerant protocols.
+
+<p></p>
+To address these five challenges, this thesis proposes five novel protocols
+spread across four chapters. We first propose <b>Baxos</b>, a novel extension of
+the Paxos protocol, which replaces the traditional leader election in
+Multi-Paxos with a novel Random Exponential Backoff scheme.  Baxos enables all
+nodes to propose, while handling contention using random exponential backoff,
+and enhances resilience against leader-targeted attacks. Second, we propose
+<b>SADL-RACS</b>, a novel modular state machine replication protocol. SADL-RACS
+overcomes the challenges of network asynchrony and leader performance
+bottleneck. <b>RACS</b> is a novel randomized crash fault-tolerant consensus
+protocol that guarantees liveness under network asynchrony. <b>SADL</b> eliminates
+the leader bottleneck by decoupling request dissemination from the critical
+path, distributing the load evenly across participating nodes. Third, we
+present <b>QuePaxa</b>, a novel randomized consensus algorithm that replaces
+manually configured timeouts in leader-based protocols with adaptive hedging
+delays.  QuePaxa reduces recovery time during replica crashes or intermittent
+slowdowns while improving liveness under adversarial network conditions.
+Finally, we present <b>Mahi-Mahi</b>, a novel asynchronous DAG-based BFT protocol
+that achieves high throughput with sub-second commit latency. Unlike the
+certified DAG-based protocols, Mahi-Mahi employs an uncertified DAG to commit
+blocks, significantly reducing the number of network hops required per
+commitment.
+
+<p></p>
+Through protocol design, security proofs, prototype implementation, and
+extensive evaluation, this thesis demonstrates that each proposed solution
+delivers substantial improvements in performance and robustness. First, we show
+that Baxos improves throughput by up to 128% under leader-targeted attacks
+compared to Multi-Paxos and Raft. Second, we show that SADL-RACS ensures
+liveness under adversarial network conditions by providing a throughput of
+196,000 requests per second. Third, we demonstrate that QuePaxa significantly
+outperforms the existing leader-based protocols under adversarial network
+conditions, achieving at least 75,000 requests per second with a median latency
+of 380ms in wide-area deployments, while maintaining low recovery time, despite
+the choice of timeout value. Finally, Mahi-Mahi achieves over 100,000
+transactions per second with sub-second average latency in wide-area
+deployments, setting a new milestone in asynchronous BFT protocol performance.
+These contributions transform high-performance wide-area consensus from a
+theoretical concept into a practical reality.
+
+<h3>Ph.D. Thesis:
+<a href="tennage-thesis.pdf">PDF</a>
+</h3>
+
+
+
+    
+      <br clear=all>
+<hr>
+<table style="width:100%;padding:10pt"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Consensus/">Consensus</a>
+	
+		<a href="/topics/Networks/">Networks</a>
+	
+		<a href="/topics/Blockchain/">Blockchain</a>
+	
+		<a href="/topics/Randomness/">Randomness</a>
+	
+		<a href="/topics/Reliability-and-Robustness/">Reliability and Robustness</a>
+	
+		<a href="/topics/Scalability/">Scalability</a>
+	
+		<a href="/topics/Security/">Security</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>
