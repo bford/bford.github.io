@@ -6,7 +6,25 @@
     <description>Recent content in Programming Languages on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Programming-Languages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Programming-Languages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Formalizing Grounded Arithmetic atop Isabelle/Pure</title>
+      <link>https://bford.info/thesis/2025-kehrli/</link>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2025-kehrli/</guid>
+      <description>Sascha Kehrli B.Sc. thesis advised by Bryan Ford and Roger Wattenhofer September 30, 2025 Abstract: This thesis presents a foundational formalization of Grounded Arithmetic (GA), a first-order arithmetic based on the principles of Grounded Deduction (GD), directly within the Isabelle/Pure framework. Unlike classical and constructive logics, which impose strict termination requirements on definitions to preserve consistency, GD admits arbitrary recursion at the definitional level. To remain consistent, GA weakens other inference rules, many of which demand explicit habeas quid termination proofs of subexpressions as premises.</description>
+    </item>
+    
+    <item>
+      <title>Reasoning Around Paradox with Grounded Deduction</title>
+      <link>https://bford.info/pub/lang/gd/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/gd/</guid>
+      <description>Bryan Ford arXiv preprint 2409.08243 September 12, 2024 (first version) Abstract: How can we reason around logical paradoxes without falling into them? This paper introduces grounded deduction or GD, a Kripke-inspired approach to first-order logic and arithmetic that is neither classical nor intuitionistic, but nevertheless appears both pragmatically usable and intuitively justifiable. GD permits the direct expression of unrestricted recursive definitions -- including paradoxical ones such as &#39;L := not L&#39; -- while adding dynamic typing premises to certain inference rules so that such paradoxes do not lead to inconsistency.</description>
+    </item>
+    
     <item>
       <title>Matchertext: an escape route from language-embedding hell?</title>
       <link>https://bford.info/2023/01/02/matchertext/</link>

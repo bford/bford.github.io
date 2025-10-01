@@ -6,7 +6,16 @@
     <description>Recent content in Theses on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/thesis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/thesis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Formalizing Grounded Arithmetic atop Isabelle/Pure</title>
+      <link>https://bford.info/thesis/2025-kehrli/</link>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2025-kehrli/</guid>
+      <description>Sascha Kehrli B.Sc. thesis advised by Bryan Ford and Roger Wattenhofer September 30, 2025 Abstract: This thesis presents a foundational formalization of Grounded Arithmetic (GA), a first-order arithmetic based on the principles of Grounded Deduction (GD), directly within the Isabelle/Pure framework. Unlike classical and constructive logics, which impose strict termination requirements on definitions to preserve consistency, GD admits arbitrary recursion at the definitional level. To remain consistent, GA weakens other inference rules, many of which demand explicit habeas quid termination proofs of subexpressions as premises.</description>
+    </item>
+    
     <item>
       <title>Robust and High-Performance Wide-Area Consensus Protocols</title>
       <link>https://bford.info/thesis/2025-tennage/</link>

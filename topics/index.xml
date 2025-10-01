@@ -98,6 +98,42 @@
     </item>
     
     <item>
+      <title>Formal Verification</title>
+      <link>https://bford.info/topics/Formal-Verification/</link>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Formal-Verification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grounded Deduction</title>
+      <link>https://bford.info/topics/Grounded-Deduction/</link>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Grounded-Deduction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logic</title>
+      <link>https://bford.info/topics/Logic/</link>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Logic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming Languages</title>
+      <link>https://bford.info/topics/Programming-Languages/</link>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Programming-Languages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Blockchain</title>
       <link>https://bford.info/topics/Blockchain/</link>
       <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
@@ -238,15 +274,6 @@
       <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Parsing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming Languages</title>
-      <link>https://bford.info/topics/Programming-Languages/</link>
-      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Programming-Languages/</guid>
       <description></description>
     </item>
     
@@ -436,15 +463,6 @@
       <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Compression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Formal Verification</title>
-      <link>https://bford.info/topics/Formal-Verification/</link>
-      <pubDate>Mon, 11 Jul 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Formal-Verification/</guid>
       <description></description>
     </item>
     

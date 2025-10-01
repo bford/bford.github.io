@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Formalizing Grounded Arithmetic atop Isabelle/Pure &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table style="background:white;padding:1px;border-spacing:5px">
+<tr><td style="text-align:center">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/talk"><font color=blue>Talks</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Formalizing Grounded Arithmetic atop Isabelle/Pure</h1>
+  
+<center>
+<strong>Sascha Kehrli</strong><br/>
+B.Sc. thesis advised by Bryan Ford and Roger Wattenhofer<br/>
+September 30, 2025
+</center>
+
+<h3>Abstract:</h3>
+
+<p></p>
+This thesis presents a foundational formalization of Grounded Arithmetic (GA),
+a first-order arithmetic based on the principles of Grounded Deduction (GD),
+directly within the Isabelle/Pure framework. Unlike classical and constructive
+logics, which impose strict termination requirements on definitions to preserve
+consistency, GD admits arbitrary recursion at the definitional level. To remain
+consistent, GA weakens other inference rules, many of which demand explicit
+<i>habeas quid</i> termination proofs of subexpressions as premises. The goal of this
+thesis is to investigate the feasibility of GA as a practical basis for
+mathematical and computational reasoning by fully axiomatizing it in Pure.
+
+<p></p>
+The formalization, Isabelle/GA, achieves three main contributions. It provides
+a complete axiomatization of GA in Pure, together with definitions of core
+arithmetic functions using the native recursive definitional mechanism of GA,
+and proofs of their fundamental properties. It develops a suite of reasoning
+tools, such as subgoal solvers, syntactic extensions, and methods for case
+analysis and induction, automating many of GA’s habeas quid proof obligations
+and moving away from axiom-level proofs. Finally, it shows GA’s expressive
+power by encoding inductive datatypes via Cantor tuples and proving their
+essential properties, demonstrated by a fully verified List datatype.
+
+<p></p>
+The resulting system demonstrates that GA “works”, despite many weakened
+inference rules: one can reason productively in it, prove termination of
+functions beyond primitive recursion such as Ackermann’s function, and encode
+arbitrary inductive datatypes. While the implementation of a fully general
+definitional mechanism for inductive datatypes remains future work, the
+foundations developed here provide the necessary basis. Altogether, this thesis
+shows that grounded reasoning is practical and that GA has the potential to
+mature into a serious alternative foundation for reasoning about computation.
+
+<h3>B.Sc. Thesis:
+<a href="kehrli-thesis.pdf">PDF</a>
+</h3>
+
+<h3>Implementation:
+<a href="https://github.com/dedis/gd-pure">GitHub</a>
+</h3>
+
+<h3>See also:</h3>
+<ul>
+<li>	<a href="/pub/lang/gd/">Reasoning Around Paradox with Grounded Deduction</a>
+</li>
+</ul>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table style="width:100%;padding:10pt"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Logic/">Logic</a>
+	
+		<a href="/topics/Programming-Languages/">Programming Languages</a>
+	
+		<a href="/topics/Formal-Verification/">Formal Verification</a>
+	
+		<a href="/topics/Grounded-Deduction/">Grounded Deduction</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

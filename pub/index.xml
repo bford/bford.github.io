@@ -18,6 +18,15 @@ October 13&amp;ndash;16, 2025 Abstract: Online voting is convenient and flexible
     </item>
     
     <item>
+      <title>Reasoning Around Paradox with Grounded Deduction</title>
+      <link>https://bford.info/pub/lang/gd/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/gd/</guid>
+      <description>Bryan Ford arXiv preprint 2409.08243 September 12, 2024 (first version) Abstract: How can we reason around logical paradoxes without falling into them? This paper introduces grounded deduction or GD, a Kripke-inspired approach to first-order logic and arithmetic that is neither classical nor intuitionistic, but nevertheless appears both pragmatically usable and intuitively justifiable. GD permits the direct expression of unrestricted recursive definitions -- including paradoxical ones such as &#39;L := not L&#39; -- while adding dynamic typing premises to certain inference rules so that such paradoxes do not lead to inconsistency.</description>
+    </item>
+    
+    <item>
       <title>E-Vote Your Conscience: Perceptions of Coercion and Vote Buying, and the Usability of Fake Credentials in Online Voting</title>
       <link>https://bford.info/pub/sec/trip-usability/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
