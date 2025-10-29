@@ -76,8 +76,8 @@
       <pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/pub/sec/trip/</guid>
-      <description>Louis-Henri Merino, Simone Colombo, Rene Reyes, Alaleh Azhir, Shailesh Mishra, Pasindu Tennage, Mohammad Amin Raeisi, Haoqian Zhang, Jeff Allen, Bernhard Tellenbach, Vero Estrada-Galiñanes, and Bryan Ford To appear in SOSP 2025: The 31st Symposium on Operating Systems Principles
-October 13&amp;ndash;16, 2025 Abstract: Online voting is convenient and flexible, but amplifies the risks of voter coercion and vote buying. One promising mitigation strategy enables voters to give a coercer fake voting credentials, which silently cast votes that do not count.</description>
+      <description>Louis-Henri Merino, Simone Colombo, Rene Reyes, Alaleh Azhir, Shailesh Mishra, Pasindu Tennage, Mohammad Amin Raeisi, Haoqian Zhang, Jeff Allen, Bernhard Tellenbach, Vero Estrada-Galiñanes, and Bryan Ford SOSP 2025: The 31st Symposium on Operating Systems Principles
+October 13&amp;ndash;16, 2025 Online voting is convenient and flexible, but amplifies the risks of voter coercion and vote buying. One promising mitigation strategy enables voters to give a coercer fake voting credentials, which silently cast votes that do not count.</description>
     </item>
     
     <item>

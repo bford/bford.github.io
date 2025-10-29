@@ -50,50 +50,47 @@ Louis-Henri Merino, Simone Colombo, Rene Reyes, Alaleh Azhir, Shailesh Mishra, P
 </p>
 
 <p align="center">
-To appear in
 <a href="https://sigops.org/s/conferences/sosp/2025/"
 	>SOSP 2025: The 31st Symposium on Operating Systems Principles</a><br>
 October 13&ndash;16, 2025
 </p>
 
-<h3>Abstract:</h3>
-Online voting is convenient and flexible, but amplifies the
-risks of voter coercion and vote buying. One promising mitigation
-strategy enables voters to give a coercer fake voting
-credentials, which silently cast votes that do not count. Current
-proposals along these lines make problematic assumptions
-about credential issuance, however, such as strong trust
-in a registrar and/or in voter-controlled hardware, or expecting
-voters to interact with multiple registrars. Votegral is
-the first coercion-resistant voting architecture that leverages
-the physical security of in-person registration to address
-these credential-issuance challenges, amortizing the convenience
-costs of in-person registration by reusing credentials
-across successive elections. Votegral’s registration component,
-TRIP, gives voters a kiosk in a privacy booth with
-which to print real and fake credentials on paper, eliminating
-dependence on trusted hardware in credential issuance.
-The voter learns and can verify in the privacy booth which
-credential is real, but real and fake credentials thereafter
-appear indistinguishable to others. Only voters actually under
-coercion, a hopefully-rare case, need to trust the kiosk.
-To achieve verifiability, each paper credential encodes an
-interactive zero-knowledge proof, which is sound in real
-credentials but unsound in fake credentials. Voters observe
-the difference in the order of printing steps, but need not
-understand the technical details. Experimental results with
-our prototype suggest that Votegral is practical and sufficiently
-scalable for real-world elections. User-visible latency
-of credential issuance in TRIP is at most 19.7 seconds even
-on resource-constrained kiosk hardware, making it suitable
-for registration at remote locations or on battery power. A
-companion usability study indicates that TRIP’s usability
-is competitive with other E-voting systems including some
-lacking coercion resistance, and formal proofs support TRIP’s
-combination of coercion-resistance and verifiability.
+Online voting is convenient and flexible, but amplifies the risks of voter
+coercion and vote buying. One promising mitigation strategy enables voters to
+give a coercer fake voting credentials, which silently cast votes that do not
+count. Current systems along these lines make problematic assumptions about
+credential issuance, however, such as strong trust in a registrar and/or in
+voter-controlled hardware, or expecting voters to interact with multiple
+registrars. Votegral is the first coercion-resistant voting architecture that
+leverages the physical security of in-person registration to address these
+credential-issuance challenges, amortizing the convenience costs of in-person
+registration by reusing credentials across successive elections. Votegral’s
+registration component, TRIP, gives voters a kiosk in a privacy booth with
+which to print real and fake credentials on paper, eliminating dependence on
+trusted hardware in credential issuance.  The voter learns and can verify in
+the privacy booth which credential is real, but real and fake credentials
+thereafter appear indistinguishable to others. Only voters actually under
+coercion, a hopefully-rare case, need to trust the kiosk.  To achieve
+verifiability, each paper credential encodes an interactive zero-knowledge
+proof, which is sound in real credentials but unsound in fake credentials.
+Voters observe the difference in the order of printing steps, but need not
+understand the technical details. Experimental results with our prototype
+suggest that Votegral is practical and sufficiently scalable for real-world
+elections. User-visible latency of credential issuance in TRIP is at most 19.7
+seconds even on resource-constrained kiosk hardware, making it suitable for
+registration at remote locations or on battery power. A companion usability
+study indicates that TRIP’s usability is competitive with other e-voting
+systems including some lacking coercion resistance, and formal proofs support
+TRIP’s combination of coercion-resistance and verifiability.
 
-<h3>Preliminary draft:
+<h3>Published version:
+<a href="https://dl.acm.org/doi/pdf/10.1145/3731569.3764837">PDF</a>
+<a href="https://dl.acm.org/doi/10.1145/3731569.3764837">ACM</a>
+</h3>
+
+<h3>Extended version:
 <a href="trip-sosp25.pdf">PDF</a>
+<a href="https://arxiv.org/abs/2202.06692">arXiv</a>
 </h3>
 
 <h3>Prototype code:
