@@ -6,7 +6,43 @@
     <description>Recent content in Writings by Topic – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Formal Verification</title>
+      <link>https://bford.info/topics/Formal-Verification/</link>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Formal-Verification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grounded Deduction</title>
+      <link>https://bford.info/topics/Grounded-Deduction/</link>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Grounded-Deduction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logic</title>
+      <link>https://bford.info/topics/Logic/</link>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Logic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming Languages</title>
+      <link>https://bford.info/topics/Programming-Languages/</link>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Programming-Languages/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Anonymity</title>
       <link>https://bford.info/topics/Anonymity/</link>
@@ -103,42 +139,6 @@
       <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Blockchain/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Formal Verification</title>
-      <link>https://bford.info/topics/Formal-Verification/</link>
-      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Formal-Verification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Grounded Deduction</title>
-      <link>https://bford.info/topics/Grounded-Deduction/</link>
-      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Grounded-Deduction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Logic</title>
-      <link>https://bford.info/topics/Logic/</link>
-      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Logic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming Languages</title>
-      <link>https://bford.info/topics/Programming-Languages/</link>
-      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Programming-Languages/</guid>
       <description></description>
     </item>
     

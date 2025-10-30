@@ -6,7 +6,16 @@
     <description>Recent content in Papers – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/pub/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/pub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Have a thing? Reasoning around recursion with dynamic typing in grounded arithmetic</title>
+      <link>https://bford.info/pub/lang/ga/</link>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/ga/</guid>
+      <description>Elliot Bobrow, Bryan Ford, and Stefan Milenković arXiv preprint 2510.25369 October 29, 2025 (first version) Abstract: Neither the classical nor intuitionistic logic traditions are perfectly-aligned with the purpose of reasoning about computation, in that neither logical tradition can normally permit the direct expression of arbitrary general-recursive functions without inconsistency. We introduce grounded arithmetic or GA, a minimalistic but nonetheless powerful foundation for formal reasoning that allows the direct expression of arbitrary recursive definitions.</description>
+    </item>
+    
     <item>
       <title>TRIP: Coercion-resistant Registration for E-Voting with Verifiability and Usability in Votegral</title>
       <link>https://bford.info/pub/sec/trip/</link>
