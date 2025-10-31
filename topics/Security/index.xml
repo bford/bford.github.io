@@ -6,7 +6,16 @@
     <description>Recent content in Security on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TRIP: Coercion-Resistant Registration for E-Voting with Verifiability and Usability in Votegral</title>
+      <link>https://bford.info/talk/2025-10-31-e-voting/</link>
+      <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2025-10-31-e-voting/</guid>
+      <description> Talk at Swiss Crypto Day 2025 - Halloween Edition October 31, 2025 – EPFL, Lausanne, Switzerland Slides: PDF Related: TRIP system paper TRIP usability paper </description>
+    </item>
+    
     <item>
       <title>TRIP: Coercion-resistant Registration for E-Voting with Verifiability and Usability in Votegral</title>
       <link>https://bford.info/pub/sec/trip/</link>

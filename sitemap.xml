@@ -17,7 +17,31 @@
     <loc>https://bford.info/selforg/choice/</loc>
   </url><url>
     <loc>https://bford.info/</loc>
-    <lastmod>2025-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Coercion/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Democracy/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Privacy/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Security/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/talk/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/talk/2025-10-31-e-voting/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/Voting/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bford.info/topics/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Formal-Verification/</loc>
     <lastmod>2025-10-29T00:00:00+00:00</lastmod>
@@ -37,19 +61,10 @@
     <loc>https://bford.info/topics/Programming-Languages/</loc>
     <lastmod>2025-10-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/</loc>
-    <lastmod>2025-10-29T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/topics/Anonymity/</loc>
     <lastmod>2025-10-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/Coercion/</loc>
-    <lastmod>2025-10-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/topics/Cryptography/</loc>
-    <lastmod>2025-10-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Democracy/</loc>
     <lastmod>2025-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Identity/</loc>
@@ -58,28 +73,16 @@
     <loc>https://bford.info/topics/Personhood/</loc>
     <lastmod>2025-10-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/Privacy/</loc>
-    <lastmod>2025-10-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/topics/Security/</loc>
-    <lastmod>2025-10-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/topics/Transparency/</loc>
     <lastmod>2025-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/pub/sec/trip/</loc>
     <lastmod>2025-10-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bford.info/topics/Voting/</loc>
-    <lastmod>2025-10-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bford.info/talk/2025-10-08-democracy/</loc>
     <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/topics/Blockchain/</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bford.info/talk/</loc>
     <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bford.info/talk/2025-10-07-e-voting/</loc>
