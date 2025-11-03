@@ -45,6 +45,15 @@ October 13&amp;ndash;16, 2025 Online voting is convenient and flexible, but ampl
     </item>
     
     <item>
+      <title>Exploring the Resolution of Delegations in Liquid Democracy with Fractional Delegation</title>
+      <link>https://bford.info/thesis/2025-holzwarth/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2025-holzwarth/</guid>
+      <description>David Nicolaus Matthäus Holzwarth B.Sc. thesis advised by Bryan Ford and Pramod Bhatotia August 28, 2025 Abstract: This thesis explores fractional delegation in Liquid Democracy, where voters can split their vote among multiple delegates, aiming to reduce vote concentration and improve representational fairness. We formalize the mode and a method of resolving the final voting power of each participant. We then present and evaluate three implementations of this method: using a solver for systems of linear equations, a linear programming solver, and an iterative implementation.</description>
+    </item>
+    
+    <item>
       <title>Coercion-Resistant E-voting and Proof of Personhood</title>
       <link>https://bford.info/talk/2025-01-06-coercion-resistance/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
