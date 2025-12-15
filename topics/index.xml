@@ -6,29 +6,56 @@
     <description>Recent content in Writings by Topic – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anonymity</title>
+      <link>https://bford.info/topics/Anonymity/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Anonymity/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Coercion</title>
       <link>https://bford.info/topics/Coercion/</link>
-      <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Coercion/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Cryptography</title>
+      <link>https://bford.info/topics/Cryptography/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Cryptography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Democracy</title>
       <link>https://bford.info/topics/Democracy/</link>
-      <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Democracy/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Identity</title>
+      <link>https://bford.info/topics/Identity/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Identity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Privacy</title>
       <link>https://bford.info/topics/Privacy/</link>
-      <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Privacy/</guid>
       <description></description>
@@ -37,16 +64,25 @@
     <item>
       <title>Security</title>
       <link>https://bford.info/topics/Security/</link>
-      <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Security/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Transparency</title>
+      <link>https://bford.info/topics/Transparency/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Transparency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Voting</title>
       <link>https://bford.info/topics/Voting/</link>
-      <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Voting/</guid>
       <description></description>
@@ -89,47 +125,11 @@
     </item>
     
     <item>
-      <title>Anonymity</title>
-      <link>https://bford.info/topics/Anonymity/</link>
-      <pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Anonymity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cryptography</title>
-      <link>https://bford.info/topics/Cryptography/</link>
-      <pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Cryptography/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Identity</title>
-      <link>https://bford.info/topics/Identity/</link>
-      <pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Identity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Personhood</title>
       <link>https://bford.info/topics/Personhood/</link>
       <pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Personhood/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Transparency</title>
-      <link>https://bford.info/topics/Transparency/</link>
-      <pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Transparency/</guid>
       <description></description>
     </item>
     

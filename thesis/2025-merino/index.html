@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Votegral: Towards Usable, End-to-End Verifiable, Coercion-Resistant Online Voting &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table style="background:white;padding:1px;border-spacing:5px">
+<tr><td style="text-align:center">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/talk"><font color=blue>Talks</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Votegral: Towards Usable, End-to-End Verifiable, Coercion-Resistant Online Voting</h1>
+  
+<center>
+<strong>Louis-Henri Manuel Jakob Merino</strong><br/>
+Ph.D. thesis advised by Bryan Ford<br/>
+December 5, 2025
+<p></p>
+</center>
+
+<h3>Abstract:</h3>
+
+<p></p>
+Online voting promises greater convenience and accessibility, but moving from
+supervised polling places to unsupervised settings magnifies the risk of
+coercion and vote buying. A compelling strategy is to give voters fake
+credentials: credentials that look and behave like real voting credentials but
+whose ballots are silently excluded from the tally. Despite its conceptual
+appeal, practical realizations and usability evidence for fake credentials have
+remained limited.
+
+<p></p>
+This dissertation presents Votegral, the first end-to-end verifiable,
+coercion-resistant online voting system with empirical evidence towards
+practical usability. Votegral has two components: TRIP and VLT. TRIP is a
+trust-limited, in-person registration scheme that issues voters a real
+credential and any number of fake credentials on paper, without trusted
+hardware. TRIP embeds an interactive zero-knowledge proof into the physical
+printing process so that real credentials carry sound proof transcripts while
+fake credentials carry identically formatted but unsound proof transcripts —
+distinguishable only by the voter during issuance and not transferable
+thereafter.
+
+<p></p>
+VLT is a tallying scheme that constrains ballots to registrar-issued
+credentials to enable linear-time filtering of fake ballots. VLT also
+introduces standing votes: a voter facing extreme coercion can, at
+registration, delegate their voting rights to a publicly registered political
+party and leave the booth with only fake credentials. Tallying then credits the
+party’s ballot by the number of such delegations and publishes publicly
+auditable proofs, resulting in both transparency and coercion evidence —
+evidence that an aggregate number of voters felt unsafe to leave the registrar
+with a real credential.
+
+<p></p>
+Our prototype tallies 1 million ballots in about 14 hours on a 128-core, 256 GB
+RAM machine; this puts Votegral on par with modern end-to-end verifiable
+systems such as Swiss Post, while significantly outperforming prior JCJ-style
+systems such as Civitas. TRIP’s end-to-end, voter-observable registration
+session completes in under 20 seconds on resource-constrained hardware. In our
+main user study with 150 demographically diverse participants recruited in
+Boston, Massachusetts, 83% successfully registered and cast a ballot in our
+mock election. Among the 120 participants exposed to fake credentials, 96%
+correctly understood the purpose of fake credentials. These promising results
+suggest a path for practical viability of coercion-resistant, end-to-end
+verifiable online voting using fake credentials.
+
+
+<h3>Ph.D. thesis:
+<a href="merino-thesis.pdf">PDF</a>
+</h3>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table style="width:100%;padding:10pt"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Security/">Security</a>
+	
+		<a href="/topics/Privacy/">Privacy</a>
+	
+		<a href="/topics/Cryptography/">Cryptography</a>
+	
+		<a href="/topics/Anonymity/">Anonymity</a>
+	
+		<a href="/topics/Democracy/">Democracy</a>
+	
+		<a href="/topics/Identity/">Identity</a>
+	
+		<a href="/topics/Transparency/">Transparency</a>
+	
+		<a href="/topics/Voting/">Voting</a>
+	
+		<a href="/topics/Coercion/">Coercion</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

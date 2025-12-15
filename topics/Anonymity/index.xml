@@ -6,7 +6,16 @@
     <description>Recent content in Anonymity on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Anonymity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Anonymity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Votegral: Towards Usable, End-to-End Verifiable, Coercion-Resistant Online Voting</title>
+      <link>https://bford.info/thesis/2025-merino/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2025-merino/</guid>
+      <description>Louis-Henri Manuel Jakob Merino Ph.D. thesis advised by Bryan Ford December 5, 2025 Abstract: Online voting promises greater convenience and accessibility, but moving from supervised polling places to unsupervised settings magnifies the risk of coercion and vote buying. A compelling strategy is to give voters fake credentials: credentials that look and behave like real voting credentials but whose ballots are silently excluded from the tally. Despite its conceptual appeal, practical realizations and usability evidence for fake credentials have remained limited.</description>
+    </item>
+    
     <item>
       <title>TRIP: Coercion-resistant Registration for E-Voting with Verifiability and Usability in Votegral</title>
       <link>https://bford.info/pub/sec/trip/</link>
