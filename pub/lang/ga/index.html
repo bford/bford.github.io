@@ -52,26 +52,28 @@
 <h3>Abstract:</h3>
 
 Neither the classical nor intuitionistic logic traditions are perfectly-aligned
-with the purpose of reasoning about computation, in that neither logical
-tradition can normally permit the direct expression of arbitrary
-general-recursive functions without inconsistency. We introduce grounded
-arithmetic or GA, a minimalistic but nonetheless powerful foundation for formal
-reasoning that allows the direct expression of arbitrary recursive definitions.
-GA adjusts the traditional inference rules such that terms that express
-nonterminating computations harmlessly denote no semantic value (i.e.,
-⊥) instead of leading into logical paradox or inconsistency. Recursive
-functions may be proven terminating in GA essentially by "dynamically typing"
-terms, or equivalently, symbolically reverse-executing the computations they
-denote via GA's inference rules. Once recursive functions have been proven
-terminating, logical reasoning about their results reduce to the familiar
-classical rules. A mechanically-checked consistency proof in Isabelle/HOL
-exists for the basic quantifier-free fragment of GA. Quantifiers may be added
-atop this foundation as ordinary computations, whose inference rules are thus
-admissible and do not introduce new inconsistency risks. While GA is only a
-first step towards richly-typed grounded deduction practical for everyday use
-in manual or automated computational reasoning, it shows the promise that the
-expressive freedom of arbitrary recursive definition can in principle be
-incorporated into formal systems.
+with the purpose of reasoning about computation, in that neither tradition can
+permit unconstrained recursive definitions without inconsistency: recursive
+logical definitions must normally be proven terminating before admission and
+use. We introduce grounded arithmetic or GA, a formal-reasoning foundation
+allowing direct expression of arbitrary recursive definitions. GA adjusts
+traditional inference rules so that terms that express nonterminating
+computations harmlessly denote no semantic value (i.e., ⊥) instead of
+yielding inconsistency. Recursive functions may be proven terminating in GA
+essentially by “dynamically typing” terms, or equivalently, symbolically
+reverse-executing the computations they denote via GA's inference rules. Once
+recursive functions have been proven terminating, logical reasoning about their
+results reduce to the familiar classical rules. A mechanically-checked formal
+development of basic grounded arithmetic or BGA – a minimal kernel for GA –
+shows that BGA simultaneously exhibits the useful metalogical properties of
+being (a) semantically and syntactically consistent, (b) semantically complete,
+and (c) sufficiently powerful to express and prove the termination of arbitrary
+closed Turing-complete computations. This combination is impossible in
+classical logic due to Göel's incompleteness theorems, but our results do not
+contradict Gödel's theorems because BGA is paracomplete, not classical.
+Leveraging BGA's power of computation and reflection, we find that grounded
+logical operators including quantifiers are definable as non-primitive
+computations in BGA, despite not being included as primitives
 
 
 <h3>Preprint:
