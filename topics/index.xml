@@ -6,7 +6,52 @@
     <description>Recent content in Writings by Topic – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Computing</title>
+      <link>https://bford.info/topics/Cloud-Computing/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Cloud-Computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Consensus</title>
+      <link>https://bford.info/topics/Consensus/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Consensus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networks</title>
+      <link>https://bford.info/topics/Networks/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Peer-to-Peer</title>
+      <link>https://bford.info/topics/Peer-to-Peer/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Peer-to-Peer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reliability and Robustness</title>
+      <link>https://bford.info/topics/Reliability-and-Robustness/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Reliability-and-Robustness/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Anonymity</title>
       <link>https://bford.info/topics/Anonymity/</link>
@@ -152,38 +197,11 @@
     </item>
     
     <item>
-      <title>Consensus</title>
-      <link>https://bford.info/topics/Consensus/</link>
-      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Consensus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Networks</title>
-      <link>https://bford.info/topics/Networks/</link>
-      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Networks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Randomness</title>
       <link>https://bford.info/topics/Randomness/</link>
       <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Randomness/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reliability and Robustness</title>
-      <link>https://bford.info/topics/Reliability-and-Robustness/</link>
-      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Reliability-and-Robustness/</guid>
       <description></description>
     </item>
     
@@ -319,24 +337,6 @@
       <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Side-Channels/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cloud Computing</title>
-      <link>https://bford.info/topics/Cloud-Computing/</link>
-      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Cloud-Computing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Peer-to-Peer</title>
-      <link>https://bford.info/topics/Peer-to-Peer/</link>
-      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Peer-to-Peer/</guid>
       <description></description>
     </item>
     

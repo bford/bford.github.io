@@ -6,7 +6,16 @@
     <description>Recent content in Papers – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/pub/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/pub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Limix: Limiting Lamport Exposure to Distant Failures in Globally-Managed Distributed Systems</title>
+      <link>https://bford.info/pub/net/limix-full/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/net/limix-full/</guid>
+      <description>Cristina Băsescua, Georgia Fragkouli, Enis Ceyhun Alp, Jose M. Faleiro, Kelong Cong, Vero Estrada-Galiñanes, Michael F. Nowlan, Gaylor Bosson, Pierluca Borsò-Tan, Bryan Ford New Ideas in Networked Systems (NINES) February 10, 2026 Abstract: Globalized computing infrastructures offer the convenience and elasticity of globally managed objects and services, but lack the resilience to distant failures that localized infrastructures such as private clouds provide. Providing both global management and resilience to distant failures, however, poses a fundamental problem for configuration services: How to discover a possibly migratory, strongly-consistent service/object in a globalized infrastructure without dependencies on globalized state?</description>
+    </item>
+    
     <item>
       <title>Have a thing? Reasoning around recursion with dynamic typing in grounded arithmetic</title>
       <link>https://bford.info/pub/lang/ga/</link>
