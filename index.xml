@@ -80,6 +80,15 @@
     </item>
     
     <item>
+      <title>Paracomplete logic and the Aymara language</title>
+      <link>https://bford.info/post/2026-02-09-aymara/</link>
+      <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2026-02-09-aymara/</guid>
+      <description>Last week my EPFL colleague Martin Rohrmeier (Digital and Cognitive Musicology) pointed out to me the truly fascinating Aymara people and their language, which can directly express 3-valued logic (true, false, uncertain). Aymara is an “existence proof” that the rules of human reasoning are elastic and need not necessarily be dominated exclusively by the classical 2-valued Aristotelian standard. Paracomplete or “gappy” reasoning can be natural and intuitive; it depends on what you&#39;re accustomed to.</description>
+    </item>
+    
+    <item>
       <title>Votegral: Towards Usable, End-to-End Verifiable, Coercion-Resistant Online Voting</title>
       <link>https://bford.info/thesis/2025-merino/</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
