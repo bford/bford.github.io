@@ -6,7 +6,16 @@
     <description>Recent content in Programming Languages on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Programming-Languages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Programming-Languages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inhabiting Kripke’s truth via a working paracomplete formal arithmetic</title>
+      <link>https://bford.info/talk/2026-03-23-kripke-paradox/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2026-03-23-kripke-paradox/</guid>
+      <description> Talk at Saul Kripke Center, CUNY March 23, 2026 – CUNY Graduate Center, New York, NY, USA Slides: PDF Related: Reasoning Around Paradox with Grounded Deduction Have a thing? Reasoning around recursion with dynamic typing in grounded arithmetic Formalizing Grounded Arithmetic atop Isabelle/Pure – B.Sc. thesis, Sascha Kehrli </description>
+    </item>
+    
     <item>
       <title>Paracomplete logic and the Aymara language</title>
       <link>https://bford.info/post/2026-02-09-aymara/</link>

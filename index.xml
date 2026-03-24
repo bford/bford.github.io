@@ -6,7 +6,7 @@
     <description>Recent content on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction: Promise, Failures, and Future of Self-Organizing Technologies</title>
       <link>https://bford.info/selforg/intro/</link>
@@ -68,6 +68,24 @@
       
       <guid>https://bford.info/selforg/choice/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Inhabiting Kripke’s truth via a working paracomplete formal arithmetic</title>
+      <link>https://bford.info/talk/2026-03-23-kripke-paradox/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2026-03-23-kripke-paradox/</guid>
+      <description> Talk at Saul Kripke Center, CUNY March 23, 2026 – CUNY Graduate Center, New York, NY, USA Slides: PDF Related: Reasoning Around Paradox with Grounded Deduction Have a thing? Reasoning around recursion with dynamic typing in grounded arithmetic Formalizing Grounded Arithmetic atop Isabelle/Pure – B.Sc. thesis, Sascha Kehrli </description>
+    </item>
+    
+    <item>
+      <title>PopNet project: history layer</title>
+      <link>https://bford.info/post/2026-02-24-history/</link>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/post/2026-02-24-history/</guid>
+      <description>The core purpose of this architectural layer is digital preservation: to maintain a highly resilient, tamper-resistant, and transparent record or history of events. Events recorded in the history may be of all kinds, but the primary emphisis is on recording human-initiated events and processes: the organization and in-person meetups typically including PoP parties, and asynchronous posts, discussions, votes, and other participatory processes occurring sporadically or continuously in the meantime. Key goals of the history layer include: Human centric: a history by, for, and about human participants Inclusive: anyone anywhere should be able to participate at low cost Resilient to failure, delay, disruption, and censorship Transparent by default but privacy-preserving as needed Autonomy and (self-)sovereignty: users and groups organize bottom-up Compatibility: browsable and transferable via web protocols This history layer is intended to be first and foremoest a human process, starting from and grounded in a commitment by human users of the process to the best-effort and good-faith preservation of human history.</description>
     </item>
     
     <item>

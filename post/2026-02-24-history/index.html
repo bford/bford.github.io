@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  PopNet project: history layer &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table style="background:white;padding:1px;border-spacing:5px">
+<tr><td style="text-align:center">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/talk"><font color=blue>Talks</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+
+  <div style="display: flex">
+    <div style="flex: 2 5 20px">
+    </div>
+
+    <div style="flex: 1 1 500px">
+
+      <h2 align="right"><i>February 24, 2026</i></h2>
+
+      <h1>PopNet project: history layer</h1>
+
+      
+<!--h1[History layer]-->
+
+<p></p>
+The core purpose of this architectural layer is digital preservation:
+to maintain a highly resilient, tamper-resistant, and transparent record
+or <em>history</em> of events.
+Events recorded in the history may be of all kinds,
+but the primary emphisis is on recording <em>human-initiated</em> events and processes:
+the organization and in-person meetups typically including PoP parties,
+and asynchronous posts, discussions, votes, and other participatory processes
+occurring sporadically or continuously in the meantime.
+
+<p></p>
+Key goals of the history layer include:
+<ul>
+<li>Human centric: a history by, for, and about human participants</li>
+<li>Inclusive: anyone anywhere should be able to participate at low cost</li>
+<li>Resilient to failure, delay, disruption, and censorship</li>
+<li>Transparent by default but privacy-preserving as needed</li>
+<li>Autonomy and (self-)sovereignty: users and groups organize bottom-up</li>
+<li>Compatibility: browsable and transferable via web protocols</li>
+</ul>
+
+<p></p>
+This history layer is intended to be first and foremoest a <em>human</em> process,
+starting from and grounded in a commitment by <em>human</em> users of the process
+to the best-effort and good-faith preservation of <em>human</em> history.
+The associated technical specifications and tools below
+are secondary, intended only to support this human-centric process. 
+
+<p></p>
+The central goal is to maintain a record of
+whatever the human participants consider important,
+for both the short and long term,
+including to their future generations.
+Over time,
+the accumulation of evidence in this history and its decentralized redundancy
+should leave no reasonable room for doubt
+that the historical record is reliable,
+that events actually occurred as recorded,
+that human participants (whether identified or anonymous) were real humans,
+and that recorded actions they took and artifacts they created in public
+(or otherwise via some verifiable process)
+were genuinely <em>human</em> actions and products.
+
+<p></p>
+The history necessarily has a partial-order or directed acyclic graph (DAG) structure,
+avoiding reliance on strong global consensus (agreement) as is common in blockchains.
+This property is necessary
+to ensure inclusiveness of those with poor, intermittent,
+or expensive global connectivity.
+Consensus maybe useful and relevant in <em>local</em> contexts, however,
+such as within a particular local group or well-connected region.
+Globally, the history architecture (as well as the layers above it)
+must tolerate arbitrary communication delays,
+including those created by successful long-term attacks on connectivity
+(see Iran's history of government-imposed outages),
+or those resulting from an economic needed to handle bulk data updates
+by slow methods including “sneakernet”
+(e.g., humans pnysically ferrying data between locations on USB sticks).
+
+
+<h2>Web-based protocols augmented for history resilience</h2>
+
+<p></p>
+For reasons of transparency, backwards compatibility, and deployability,
+the history layer builds on standard Web protocols and tooling.
+Participating individuals and groups create and maintain <em>sites</em>,
+which to a first approximation are nothing but conventional web sites.
+Sites may as usual represent individuals, pseudonyms of individuals,
+ad-hoc group, organized institutions, open-source projects, etc.
+As a starting point,
+the history layer merely augments ordinary web sites
+with additional disciplines and supporting technical tooling,
+again grounded ultimately in human users' commitment to digital preservation.
+
+<p></p>
+All content on a site is logically mutable
+and ultimately under the site owner's control,
+as usual.
+By adopting the history layer process, however,
+the site owner makes a social (human) commitment
+to including <em>some</em> (not necessarily all)
+site content in an subsequently-immutable historical record –
+first locally on the site itself,
+then globally via communication with other interconnected sites.
+Including content in this history-layer log represents
+a good-faith, best-effort promise both to preserve the logged content
+and all changes to it locally,
+as well as to assist other sites in the decentralized preservation of content.
+
+<p></p>
+Each site's history-layer metadata is a local append-only log
+consisting of a normally-linear series of <em>updates</em>.
+Each update is represented by a Web object (file) in a format specified below.
+The site owner creates and publishes a new update
+after any set of content changes logged by the history layer.
+The latest update is always available at a standard URL prefix in the site,
+with other updates available by traversing from it.
+As such, history-layer metadata effectively augments a site's existing web content,
+“declaring” the owner's commitment to digital preservation of the logged content,
+but otherwise does not inherently constrain or affect the site's content
+when retrieved and viewed by conventional browsers.
+The history-layer tooling
+is designed to be agnostic to the precise web authoring and publishing workflow
+in use by a particular site,
+although optional plug-ins supporting particular workflows may be useful.
+
+
+<h2>Observations and cooperative preservation</h2>
+
+<p></p>
+History-layer communication occurs when some observer –
+such as (most importantly) the maintainer of another site –
+retrieves or <em>observes</em> the site's latest logged update(s).
+At least initially,
+the expectation is that observations will normally occur highly asynchronously,
+at long time-scales initiated by human activity,
+such as an update to another site that links to the site in question.
+Tooling to support more regular period observations of peer sites,
+or even proactively “watching” other sites of interest for updates
+via low-latency notification channels,
+are mechanisms worth considering and potentially developing but strictly optional.
+All communication is and must be latency-tolerant by default anyway, on principle.
+
+<p></p>
+Beyond the traditional web practice of passively browsing a site,
+a history-layer observation is an <em>active</em> event
+that normally produces observer activity,
+including the inclusion of <em>observation metadata</em>
+in the observer's own local log.
+This observation metadata most importantly contains the directed edges
+that globally form the directed acycling graph (DAG) of recorded history.
+Updating or refeshing an observer's site provides a natural human-driven opportunity
+for the observer's tooling to check that link targets still exist and,
+if logged in the target site's history,
+that the target site is following its promised digital-preservation disciplines –
+such as not changing logged content other than via properly-recorded updates.
+
+<p></p>
+The observer-target relationship also provides a natural opportunity
+to increase the resilience logged data by making <em>mirroring</em>
+an automatic and standard practice.
+A key part of the human-level “social contract” of the history layer
+is that observers commit to limited and policy-controlled archiving
+of content that the observer site links to,
+and target sites in turn –
+at least for content logged in the history layer –
+consent to and commit to assisting in this decentralized content preservation.
+An expectation is that whenever an observer updates her site to include a new link,
+the observer's tooling normally makes and keeps a local archival snapshot at least
+the target page that the link refers to,
+preferably including content embedded on that page (e.g., images)
+and ideally including content “under” the target page
+(transitively reachable via URLs having the original target URL as a prefix) –
+provided of course the target content is not "too large"
+by suitable observer-controlled metrics.
+
+<p></p>
+The observer's tooling should ideally make these automatic archival snapshots
+available to third parties who might be unable
+to reach the target content immediately themselves,
+whether due to the target site's failure,
+a short- or long-term communication outage or asymmetry,
+or perhaps just because it is faster or cheaper
+to obtain the content from a “nearby neighbor” than from the original target site.
+The conditions under which an observer site makes snapshots available
+will necessarily need to vary depending on factors such as target-site policy.
+But the basical goal is to establish decentralized archivion and preservation
+as an automatic, standard, and expected practice
+rather than a rare and difficult exception case.
+
+<p></p>
+The history layer is conceptually agnostic to the specific <em>transport</em>
+by which an observer discovers and retrieves an update from a site of interest.
+While the initial starting point and default case
+will be ordinary web-style retrieval over HTTP and TLS,
+the expectation is to incorporate other “plug-in” transports into the architecture.
+For example, for privacy or connectivity reasons
+some sites might sometimes or always be available “peer-to-peer”
+over a particular local-area network,
+and rarely or never via the global Internet.
+Some sites may be reachable (perhaps only) as a Tor hidden service
+or via other specialized anonymous and/or censorship-resistant channels.
+Some sites may be reachable (sometimes, only, or most cost-effectively)
+via manual, periodic human-driven “sneakernet” ferrying of bulk data
+via USB sticks for example.
+
+
+<h2>Update record format</h2>
+
+To be filled in.
+<!--
+Matchertext-enhanced JSON?
+Perhaps with optional MinML human-readable content like a commit log or announcement?
+
+decide on standard latest-update prefix: e.g., '/popnet'?
+-->
+
+
+<h2>Observation record format</h2>
+
+To be filled in.
+
+
+<h2>History content indexing</h2>
+
+To be filled in.
+
+<!--
+Index metadata is normally not part of the logged content
+to which the site owner makes a long-term preservation commitment.
+Index metadata may have an explicit expiration date, in fact.
+New indexes might entirely replace old indexes [-&#45;]
+though preferably through a gradual process
+to avoid race conditions around transition times.
+
+Since actual update records are immutable,
+any hash-identifiers they contain are similarly immutable,
+and hence not refreshable or upgradeable "[in place].
+Hash links in updates must therefore be considered
+at least eventually untrustworthy from a cryptographic security perspective.
+Indexes built from update records, however,
+are upgradeable to new hash algorithms
+as old ones become obsolete and suspect or broken.
+-->
+
+
+    </div>
+
+    <div style="flex: 2 5 20px">
+    </div>
+  </div>
+
+
+
+    
+      <br clear=all>
+<hr>
+<table style="width:100%;padding:10pt"><tr>
+
+<td align="left">
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

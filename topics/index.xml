@@ -6,7 +6,34 @@
     <description>Recent content in Writings by Topic – Bryan Ford on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grounded Deduction</title>
+      <link>https://bford.info/topics/Grounded-Deduction/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Grounded-Deduction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logic</title>
+      <link>https://bford.info/topics/Logic/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Logic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming Languages</title>
+      <link>https://bford.info/topics/Programming-Languages/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/topics/Programming-Languages/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Cloud Computing</title>
       <link>https://bford.info/topics/Cloud-Computing/</link>
@@ -49,24 +76,6 @@
       <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Reliability-and-Robustness/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Logic</title>
-      <link>https://bford.info/topics/Logic/</link>
-      <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Logic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming Languages</title>
-      <link>https://bford.info/topics/Programming-Languages/</link>
-      <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Programming-Languages/</guid>
       <description></description>
     </item>
     
@@ -157,15 +166,6 @@
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/topics/Formal-Verification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Grounded Deduction</title>
-      <link>https://bford.info/topics/Grounded-Deduction/</link>
-      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://bford.info/topics/Grounded-Deduction/</guid>
       <description></description>
     </item>
     
