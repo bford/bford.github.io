@@ -13,7 +13,7 @@
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
       
       <guid>https://bford.info/talk/2026-03-23-kripke-paradox/</guid>
-      <description> Talk at Saul Kripke Center, CUNY March 23, 2026 – CUNY Graduate Center, New York, NY, USA Slides: PDF Related: Reasoning Around Paradox with Grounded Deduction Have a thing? Reasoning around recursion with dynamic typing in grounded arithmetic Formalizing Grounded Arithmetic atop Isabelle/Pure – B.Sc. thesis, Sascha Kehrli </description>
+      <description>Talk at Saul Kripke Center, CUNY March 23, 2026 – CUNY Graduate Center, New York, NY, USA Abstract: While Kripke inspired numerous alternative approaches to truth and paradox, could we accomplish something like ordinary “working mathematical reasoning” in any of them? Yes. Grounded arithmetic (GA) combines paracomplete reasoning and computational semantics into a concrete, usable, and powerful Peano-esque formal theory of natural numbers and computation. GA weakens key classical inference rules with “habeas quid” preconditions: obligations to prove we “have a thing” before using it in subsequent reasoning.</description>
     </item>
     
     <item>
