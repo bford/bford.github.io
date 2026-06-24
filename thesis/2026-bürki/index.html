@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Grounded Verification of Recursive Trace Systems &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table style="background:white;padding:1px;border-spacing:5px">
+<tr><td style="text-align:center">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/talk"><font color=blue>Talks</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Grounded Verification of Recursive Trace Systems</h1>
+  
+<center>
+<strong>Benjamin Bürki</strong><br/>
+M.Sc. thesis in Cyber <Security<br></Security<br>
+June 23, 2026
+</center>
+
+<h3>Abstract:</h3>
+
+<p></p>
+This project is situated in formal verification and studies how Grounded
+Deduction can be used to reason about recursive, trace-producing computations.
+The focus is a small HRM-style machine whose processor, input device, and
+output device are defined by mutually recursive functions and whose execution
+produces observable event traces.
+
+<p></p>
+The main difficulty is that before proving safety or liveness of such traces,
+we must first justify that the recursively defined execution actually produces
+a well-defined object. Classical verification frameworks can reason about
+program correctness, but definedness, termination, and trace-level behaviour
+are often handled as separate proof obligations or encoded indirectly.
+
+<p></p>
+The high-level idea of this work is to use the GD principle of <i>habeas quid</i>:
+before using a computed object in a proof, we first prove that it is grounded.
+The verification is therefore organized in layers: first prove that finite
+observations of execution produce grounded finite traces, then reason about
+safety and liveness on those traces.
+
+<p></p>
+A key design decision is to make execution produce explicit events. The
+processor delegates input and output actions to separate device functions,
+which append their own events to the trace and return control through
+first-order continuation tags. This keeps the model recursive and modular while
+making the observable behaviour explicit.
+
+<p></p>
+The evaluation shows that the design supports the intended proof pattern.
+Finite executions yield grounded finite traces, trace-processing functions
+terminate on finite traces, and finite safety is a grounded predicate. Infinite
+safety is obtained by checking all finite prefixes, while liveness is stated on
+infinite traces and inherited by finite traces through prefix reasoning.
+
+<h3>M.Sc. Thesis:
+<a href="bürki-thesis.pdf">PDF</a>
+</h3>
+
+<h3>See also:</h3>
+<ul>
+<li>	<a href="/pub/lang/gd/">Reasoning Around Paradox with Grounded Deduction</a>
+</li>
+<li>	<a href="/pub/lang/ga/">Have a thing? Reasoning around recursion with dynamic typing
+		in grounded arithmetic</a>
+</li>
+</ul>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table style="width:100%;padding:10pt"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Formal-Verification/">Formal Verification</a>
+	
+		<a href="/topics/Grounded-Deduction/">Grounded Deduction</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

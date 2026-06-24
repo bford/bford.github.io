@@ -6,7 +6,16 @@
     <description>Recent content in Formal Verification on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Formal-Verification/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Formal-Verification/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grounded Verification of Recursive Trace Systems</title>
+      <link>https://bford.info/thesis/2026-b%C3%BCrki/</link>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/thesis/2026-b%C3%BCrki/</guid>
+      <description> Benjamin Bürki M.Sc. thesis in Cyber </description>
+    </item>
+    
     <item>
       <title>Have a thing? Reasoning around recursion with dynamic typing in grounded arithmetic</title>
       <link>https://bford.info/pub/lang/ga/</link>
