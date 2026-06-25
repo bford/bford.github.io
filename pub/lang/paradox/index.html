@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="Author" content="Bryan Ford">
+    
+    <title>
+  Formalizing Paradoxes in Grounded Arithmetic using Isabelle/HOL &ndash; Bryan Ford&#39;s Home Page
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"
+	type="image/x-icon" />
+    
+    
+    
+  </head>
+
+  <body 
+  	
+  	>
+    
+      <center>
+<table style="background:white;padding:1px;border-spacing:5px">
+<tr><td style="text-align:center">
+<font color=black>
+<a href="/"><font color=blue>Home</font></a> -
+<a href="/topics"><font color=blue>Topics</font></a> -
+<a href="/pub"><font color=blue>Papers</font></a> -
+<a href="/talk"><font color=blue>Talks</font></a> -
+<a href="/thesis"><font color=blue>Theses</font></a> -
+<a href="/post"><font color=blue>Blog</font></a> -
+<a href="/cv.pdf"><font color=blue>CV</font></a> -
+<a href="/album/"><font color=blue>Photos</font></a> -
+<a href="/funny/"><font color=blue>Funny</font></a>
+</font>
+</td></tr></table>
+</center>
+<p>
+
+    
+
+    
+  <h1>Formalizing Paradoxes in Grounded Arithmetic using Isabelle/HOL</h1>
+  
+<p align="center">
+<strong>Ananthajit Srikanth and Bryan Ford</strong><br/>
+<a href="https://sketis.net/isabelle/isabelle-workshop-2026">Isabelle Workshop 2026</a><br/>
+	June 24–25, 2026 <br/>
+	Lisbon, Portugal
+</p>
+
+<h3>Abstract:</h3>
+
+<p></p>
+Standard logical foundations in theorem proving constrain the set of recursive
+functions that are directly expressible to avoid inconsistencies.  However,
+this prevents us from expressing all Turing-complete computations via direct
+recursive definitions. We consider Grounded Arithmetic, a reasoning framework
+that avoids inconsistency from unconstrained recursive definitions by
+“dynamically type-checking” terms. Using the formalization of GA in
+Isabelle/HOL, we prove three self-referential statements to be nonterminating
+computation: the Liar Paradox, the Truthteller sentence, and Curry’s paradox.
+To do so, we model each statement in GA as a function taking a certain number
+of steps of computation, and metalogically derive a contradiction if these
+terms were to terminate. In turn, this allows us to show that these statements
+have no concrete value in our framework. Using our non-standard inference
+rules, terms with no concrete value cannot be used in a proof by contradiction,
+and thus are inert when reasoning about other computations. We then discuss the
+accessibility of our approach, and how it permits us to avoid common
+inconsistencies that would otherwise occur when removing constraints from
+direct recursive definitions in other formal systems.
+
+
+<h3>Paper:
+<a href="paradox.pdf">PDF</a>
+</h3>
+
+<h3>See also:</h3>
+<ul>
+<li>	<a href="/pub/lang/gd">Reasoning Around Paradox with Grounded Deduction</a>
+</li>
+<li>	<a href="/pub/lang/ga">Have a thing? Reasoning around recursion with dynamic typing
+		in grounded arithmetic</a>
+</li>
+</ul>
+
+
+
+
+    
+      <br clear=all>
+<hr>
+<table style="width:100%;padding:10pt"><tr>
+
+<td align="left">
+
+	Topics:
+	
+		<a href="/topics/Logic/">Logic</a>
+	
+		<a href="/topics/Programming-Languages/">Programming Languages</a>
+	
+		<a href="/topics/Formal-Verification/">Formal Verification</a>
+	
+		<a href="/topics/Grounded-Deduction/">Grounded Deduction</a>
+	
+
+</td>
+
+<td align="right">
+<a href="https://bford.info/">Bryan Ford</a>
+</td>
+
+</tr></table>
+
+    
+  </body>
+</html>

@@ -6,7 +6,16 @@
     <description>Recent content in Grounded Deduction on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Grounded-Deduction/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Grounded-Deduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Formalizing Paradoxes in Grounded Arithmetic using Isabelle/HOL</title>
+      <link>https://bford.info/pub/lang/paradox/</link>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/paradox/</guid>
+      <description>Ananthajit Srikanth and Bryan Ford Isabelle Workshop 2026 June 24–25, 2026 Lisbon, Portugal Abstract: Standard logical foundations in theorem proving constrain the set of recursive functions that are directly expressible to avoid inconsistencies. However, this prevents us from expressing all Turing-complete computations via direct recursive definitions. We consider Grounded Arithmetic, a reasoning framework that avoids inconsistency from unconstrained recursive definitions by “dynamically type-checking” terms. Using the formalization of GA in Isabelle/HOL, we prove three self-referential statements to be nonterminating computation: the Liar Paradox, the Truthteller sentence, and Curry’s paradox.</description>
+    </item>
+    
     <item>
       <title>Grounded Verification of Recursive Trace Systems</title>
       <link>https://bford.info/thesis/2026-b%C3%BCrki/</link>
