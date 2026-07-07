@@ -6,7 +6,16 @@
     <description>Recent content in Democracy on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Democracy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Democracy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Democratic Voting in DAOs</title>
+      <link>https://bford.info/talk/2026-07-06-democratic-dao/</link>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/talk/2026-07-06-democratic-dao/</guid>
+      <description> Invited keynote at DAO Symposium 2026 July 7, 2026 – Winterthur, Switzerland Slides: PDF </description>
+    </item>
+    
     <item>
       <title>Votegral: Towards Usable, End-to-End Verifiable, Coercion-Resistant Online Voting</title>
       <link>https://bford.info/thesis/2025-merino/</link>
