@@ -6,7 +6,7 @@
     <description>Recent content on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction: Promise, Failures, and Future of Self-Organizing Technologies</title>
       <link>https://bford.info/selforg/intro/</link>
@@ -68,6 +68,24 @@
       
       <guid>https://bford.info/selforg/choice/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Internalized Truth in Reflective Grounded Arithmetic</title>
+      <link>https://bford.info/pub/lang/irga/</link>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/irga/</guid>
+      <description>Bryan Ford arXiv preprint 2608.16140 August 17, 2026 Abstract: By Tarski&#39;s undefinability theorem, no consistent classical formal system that includes arithmetic can define its own truth predicate. Reflective Grounded Arithmetic (RGA) is a powerful arithmetic whose universal quantifier is grounded in its own reflected proof search, and whose paracompleteness circumvents Tarski&#39;s theorem. This paper presents a machine-checked Isabelle/HOL development that defines a truth predicate for RGA&#39;s full language, quantifiers included, as an internal term of RGA itself.</description>
+    </item>
+    
+    <item>
+      <title>Computable Quantification in Reflective Grounded Arithmetic</title>
+      <link>https://bford.info/pub/lang/rga/</link>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/rga/</guid>
+      <description>Bryan Ford arXiv preprint 2607.25533 July 28, 2026 Abstract: Informal statements of Gödel&#39;s incompleteness theorems often run: “no consistent formal system with arithmetic can be complete” - omitting the fact that the theorems as proved assume classical logic. This paper presents reflective grounded arithmetic (RGA), a paracomplete arithmetic in which truth is grounded in computation rather than assumed by classical fiat, and in which universal quantification is grounded reflectively: a universal statement is true when the system&#39;s own proof search certifies its schematic instance, and false when it refutes a particular numeral instance.</description>
     </item>
     
     <item>
