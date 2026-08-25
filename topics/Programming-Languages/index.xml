@@ -6,7 +6,25 @@
     <description>Recent content in Programming Languages on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Programming-Languages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Programming-Languages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fact and Fiction in Grounded Set Theory</title>
+      <link>https://bford.info/pub/lang/gset/</link>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/gset/</guid>
+      <description>Bryan Ford Submitted to arXiv on August 19, 2026 Abstract: Classical set theory buys its power on credit: its axioms assert totalities no computation could survey. This paper asks what set theory looks like when truth must be earned – when, following the discipline of grounded arithmetic (GA), a statement may be asserted only when a terminating computation backs it, so that paradoxes harmlessly denote nothing rather than exploding. Developing set theory mechanically, in Isabelle/HOL, across the four GA proof systems, we find that the classical axioms sort into a precise anatomy.</description>
+    </item>
+    
+    <item>
+      <title>Idealizing Useful Fictions in Omega Grounded Arithmetic</title>
+      <link>https://bford.info/pub/lang/oga/</link>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/oga/</guid>
+      <description>Bryan Ford arXiv preprint 2607.25533 August 18, 2026 Abstract: Grounded arithmetic is a family of formal systems for reasoning about computation in which a statement may be asserted only when a terminating computation backs it; the logics are paracomplete – for a sentence whose backing computation never settles, neither the sentence nor its negation is derivable, so paradoxes like the Liar are harmless rather than explosive. The reflective member of the family, RGA, can quantify over its own computations, but cannot certify that its own unbounded searches have definite yes-or-no answers.</description>
+    </item>
+    
     <item>
       <title>Internalized Truth in Reflective Grounded Arithmetic</title>
       <link>https://bford.info/pub/lang/irga/</link>
