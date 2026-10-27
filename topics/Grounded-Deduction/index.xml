@@ -6,7 +6,16 @@
     <description>Recent content in Grounded Deduction on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Grounded-Deduction/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Grounded-Deduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inductive Grounded Arithmetic: Goodstein, the Hydra, and Γ0</title>
+      <link>https://bford.info/pub/lang/iga/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/iga/</guid>
+      <description>Bryan Ford arXiv preprint 2610.34548 October 25, 2026 Abstract: What does a recursive definition mean when the logic is grounded, so that a sentence is true only if a terminating process makes it so? Kripke’s answer for the special case of truth was the least fixed point. This paper takes that answer as a rule. Reflective Grounded Arithmetic (RGA) already writes any recursive definition as one self-referential term, paradoxes included.</description>
+    </item>
+    
     <item>
       <title>Fact and Fiction in Grounded Set Theory</title>
       <link>https://bford.info/pub/lang/gset/</link>
