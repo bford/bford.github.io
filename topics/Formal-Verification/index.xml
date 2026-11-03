@@ -6,7 +6,16 @@
     <description>Recent content in Formal Verification on Bryan Ford&#39;s Home Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Formal-Verification/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://bford.info/topics/Formal-Verification/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coinduction in Grounded Arithmetic</title>
+      <link>https://bford.info/pub/lang/coind/</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://bford.info/pub/lang/coind/</guid>
+      <description>Bryan Ford arXiv preprint 2611.00176 October 30, 2026 Abstract: A grounded arithmetic counts a sentence as true only when a terminating process establishes it; a sentence no such process settles has no value. Such a logic can state that an event happens, but not that it never happens under unbounded choice. This paper extends such a logic so that it can. The base is Reflective Grounded Arithmetic (RGA) with Inductive Grounded Arithmetic (IGA)&#39;s least-fixed-point reading and ground induction.</description>
+    </item>
+    
     <item>
       <title>Inductive Grounded Arithmetic: Goodstein, the Hydra, and Γ0</title>
       <link>https://bford.info/pub/lang/iga/</link>
